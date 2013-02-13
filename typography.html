@@ -22,6 +22,12 @@
   <link rel="stylesheet" href="stylesheets/foundation-override.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
+
+<style type="text/css">
+.link-hover-navigation:hover {color:#925d01 !important;}
+.link-hover-paragraph:hover {color:#00466e !important; text-decoration: underline;}
+</style>
+
 </head>
 <body>
 
@@ -86,20 +92,114 @@
        <h2>Typography</h2>
           <!-- <h5 class="subheader">Whether you are using Scss or CSS, we've made it easy to start a project so that you can help take over the world one responsive site at a time.</h5> -->
           <p>The entire website utilizes <strong>Verdana</strong> for all body copy except the company logo. It is the primary brand typeface and is more legible at smaller sizes.</p>
-          <h3>Examples</h3>
-          <h3 style="font-family:Verdana; font-weight:normal;">Verdana – Regular</h3>
-          <h4 style="font-family:Verdana; font-weight:normal;">123ABCabc</h4>
-          <h3 style="font-family:Verdana;">Verdana – Bold</h3>
-          <h4 style="font-family:Verdana;">123ABCabc</h4>
-          <h4>Logo</h4>          
-          <p><img src="http://placehold.it/960x160"></p>
-          <p>The font used in all PetroSkills products is Franklin Gothic Bold. The logo should resemble very close to the above image. Please do not distort or adjust the spacing or size in any way to preserve brand and identity of PetroSkills.</p>
-          <br>
-          <h4>Global Styles</h4>
-          <p><img src="images/typography.jpg" alt="Typography" style="border: 1px solid #717171;"></p>
+            <hr>
+
+              <h4>Font</h4>
+              <div class="row" style="margin-top:-15px; margin-bottom:-15px;">
+                <div class="four columns">
+                  <h3 style="font-family:Verdana; font-weight:normal;">Verdana – Regular</h3>
+                  <h4 style="font-family:Verdana; font-weight:normal;">123ABCabc</h4>
+                </div>
+                <div class="eight columns">
+                  <h3 style="font-family:Verdana;">Verdana – Bold</h3>
+                  <h4 style="font-family:Verdana;">123ABCabc</h4>
+                </div>
+              </div>
+            <hr>
+
+              <h4>Headers</h4>
+              <h1 style="font-family:Verdana; font-size:18px;">h1 header - For page titles</h1>
+              <h2 style="font-family:Verdana; font-size:16px;">h2 header - For page subtitles</h2>
+              <h3 style="font-family:Verdana; font-size:14px;">h3 header - For panel titles</h3>
+            <hr>
+
+              <h4>Paragraphs</h4>
+              <p style="font-family:Verdana; font-size:14px;">This paragraph is set in Verdana Regular at 14pt size. This is <b>bold text</b> to add emphasis. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <hr>
+
+              <h4>Links</h4>
+              <a href="#" class="link-hover-navigation" style="color:#333; font-family:Verdana; font-size:14px; font-weight:bold;">This is a Main Navigation link</a><br><br>
+              <a href="#" style="color:#925d01; font-family:Verdana; font-size:14px; font-weight:bold;">This is an active Main Navigation link</a><br><br>
+              <a href="#" class="link-hover-paragraph" style="color:#01669f; font-family:Verdana; font-size:14px;">This is an inline Paragraph link</a> 
+            <hr>
+
+              <h4>Logo</h4>          
+              <p><img src="http://placehold.it/960x160"></p>
+              <p>The font used in all PetroSkills products is Franklin Gothic Bold. The logo should resemble very close to the above image. Please do not distort or adjust the spacing or size in any way to preserve brand and identity of PetroSkills.</p>
+              <br>
+              <h4>Global Styles</h4>
+              <p><img src="images/typography.jpg" alt="Typography" style="border: 1px solid #717171;"></p>
+            <hr>
+
+              <h4>Lists ---- WORK IN PROGRESS</h4>
+<!-- Disc Lists -->
+<h5>ul.disc</h5>
+<ul class="disc">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+
+<!-- Circle Lists -->
+<h5>ul.circle</h5>
+<ul class="circle">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+
+<!-- Square Lists -->
+<h5>ul.square</h5>
+<ul class="square">
+  <li>List item with a much longer description or more content.</li>
+  <li>List item</li>
+  <li>List item
+    <ul>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+      <li>Nested List Item</li>
+    </ul>
+  </li>
+  <li>List item</li>
+  <li>List item</li>
+  <li>List item</li>
+</ul>
+
+<!-- Ordered Lists -->
+<ol>
+  <li>Ordered List Item</li>
+  <li>Ordered List Item</li>
+  <li>Ordered List Item</li>
+  <li>Ordered List Item</li>
+</ol>
+
+<!-- Definition Lists -->
+<dl>
+  <dt>Definition Title</dt>
+  <dd>Definition text, you can add as many of these as you need. The line-height matches paragraphs.</dd>
+</dl>
+
+            </div>
           
 
-          
 
     </div>
   </div>
