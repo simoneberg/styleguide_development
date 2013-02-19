@@ -89,6 +89,11 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	color:#d9d9d9;
 }
 
+@media only screen and (max-width: 1920px) and (min-width: 768px) {
+	.dropdown-profile {
+		display:none;
+	}
+}
 
 @media only screen and (max-width: 960px) {
 	.top-bar ul > li {
@@ -107,35 +112,62 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 		width:194px;
 		margin-top:3px;
 		background-image: url("../images/logo-phone.png");
-/*		display:block;
+		display:block;
 		margin-left: auto;
 		margin-right: auto;
-		position: relative;
-		float:left;*/
+		float:none;
 	}
 
 	.profile-container {
-		display:none;
+		float:right;
+		height:30px;
+		width:50px;
+		margin-top:-34px;
 	}
-}
 
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
- 
-.clearfix {
-	display: inline-block;
-}
- 
-html[xmlns] .clearfix {
-	display: block;
-}
- 
-* html .clearfix {
-	height: 1%;
+	.avatar {
+		height:30px;
+		width:30px;
+		float:left;
+		margin-right: 7px;
+		background-color: white;
+		border: 1px solid #27435a;
+	}
+
+	.top-nav{
+		display: none;
+	}
+
+	.dropdown-profile {
+		margin-top:-10px;
+		cursor: pointer;
+	}
+
+	.toggle-nav {
+		width:48px;
+		height:44px;
+		background-image: url("../images/toggle-nav-bgrd.png");
+		float:left;
+		border-right: 1px solid #717172;
+	}
+
+	.toggle-btn {
+		height:26px;
+		width:36px;
+		margin-top: 9px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		background-image: url("../images/toggle-btn.png");
+	}
+
+	.toggle-btn:active{
+		height:26px;
+		width:36px;
+		margin-top: 9px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		background-image: url("../images/toggle-btn-active.png");
+	}
 }
