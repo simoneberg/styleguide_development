@@ -1,0 +1,141 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.top-bar {
+	/*background: #48779f;
+	background: -moz-linear-gradient(top,  #48779f 0%, #487da4 46%, #8fb1c3 91%, #769ebf 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48779f), color-stop(46%,#487da4), color-stop(91%,#8fb1c3), color-stop(100%,#769ebf));
+	background: -webkit-linear-gradient(top,  #48779f 0%,#487da4 46%,#8fb1c3 91%,#769ebf 100%);
+	background: -o-linear-gradient(top,  #48779f 0%,#487da4 46%,#8fb1c3 91%,#769ebf 100%);
+	background: -ms-linear-gradient(top,  #48779f 0%,#487da4 46%,#8fb1c3 91%,#769ebf 100%);
+	background: linear-gradient(to bottom,  #48779f 0%,#487da4 46%,#8fb1c3 91%,#769ebf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48779f', endColorstr='#769ebf',GradientType=0 );*/
+	background-image: url("../images/header-bg.png");
+	height: 86px;
+}
+
+.logo {
+	height:66px;
+	width:288px;
+	float:left;
+	margin-top:8px;
+	background-image: url("../images/logo.png");
+}
+
+.profile-container {
+	height:50px;
+	width:410px;
+	float:right;
+	margin-top:18px;
+}
+
+.avatar {
+	height:50px;
+	width:50px;
+	float:left;
+	margin-right: 7px;
+	background-color: white;
+	border: 1px solid #27435a;
+}
+
+.top-nav {
+	height:50px;
+	width:410px;
+}
+
+.top-nav-links {
+	margin:0px 8px 0px 8px;
+	color:#fff;
+}
+
+.top-bar ul > li {
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+}
+
+.top-bar ul > li a:not(.button) {
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	font-weight: normal;
+	height: 50px;
+	line-height: 50px;
+	padding: 0px;
+}
+
+.top-bar ul > li a:not(.button).username {
+	font-size:14px;
+	font-weight: bold;
+	color:#fff;
+}
+
+.bar {
+	color:#fff;
+	margin-top:14px;
+}
+
+.top-bar ul {
+	height: 50px;
+	display: block;
+}
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus {
+	background:none;
+}
+
+.top-bar ul > li:not(.name):hover a.username, .top-bar ul > li:not(.name).active a.username, .top-bar ul > li:not(.name):focus a.username {
+	color:#d9d9d9;
+}
+
+
+@media only screen and (max-width: 960px) {
+	.top-bar ul > li {
+		float: left;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.top-bar {
+		height:44px;
+		background-image: url("../images/header-bg-phone.png");
+	}
+
+	.logo {
+		height:38px;
+		width:194px;
+		margin-top:3px;
+		background-image: url("../images/logo-phone.png");
+/*		display:block;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		float:left;*/
+	}
+
+	.profile-container {
+		display:none;
+	}
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
