@@ -171,3 +171,152 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 		background-image: url("../images/toggle-btn-active.png");
 	}
 }
+
+
+
+/*-------- CHEVRON STYLES --------*/
+
+
+.top-bar-chevron {
+	height: 120px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	border-top: 1px solid rgb(221, 221, 221);
+	border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.logo-grey-chevron {
+	height:66px;
+	width:288px;
+	float:left;
+	margin-top:8px;
+	background-image: url("../images/logo-grey.png");
+}
+
+.top-nav-chevron {
+	height:20px;
+	width:100%;
+	margin-left:12px;
+	margin-top: 9px;
+	margin-bottom: 12px;
+}
+
+.top-bar-chevron ul > li {
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+}
+.top-bar-chevron ul > li {
+	float: left;
+}
+
+.top-bar-chevron ul {
+	height: 20px;
+	display: block;
+	margin-left: 0;
+	display: inline;
+	height: 45px;
+	line-height: 45px;
+	list-style: none;
+}
+
+.top-bar-chevron ul > li a:not(.button) {
+	color: #333333;
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	height: 50px;
+	line-height: 20px;
+	padding: 0px;
+}
+
+.top-bar-chevron ul > li a:not(.button).username {
+	font-size:13px;
+	font-weight: bold;
+	color:#333333;
+}
+
+.top-bar-chevron .bar {
+	color:#dddddd;
+	margin-top:-2px;
+}
+
+.profile-container-chevron {
+	height:62px;
+	width:56px;
+	float:right;
+	margin-top:3px;
+	margin-right: 20px;
+}
+
+.avatar-chevron {
+	height:62px;
+	width:56px;
+	float:left;
+	margin-right: 20px;
+	background-image: url("../images/chevron-logo.png");
+}
+
+.top-bar-chevron ul > li a:not(.button):hover {
+	color:#009dd9;
+}
+
+.top-bar-chevron ul > li:not(.name):hover a.username, .top-bar-chevron ul > li:not(.name).active a.username, .top-bar-chevron ul > li:not(.name):focus a.username {
+	color:#009dd9;
+}
+
+
+@media only screen and (max-width: 1920px) and (min-width: 768px) {
+	.dropdown-profile-chevron {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.top-bar-chevron {
+		height:44px;
+		background-image: url("../images/header-bg-phone.png");
+		border-top: none;
+		border-bottom: none;
+	}
+
+	.top-nav-chevron {
+		display:none;
+	}
+
+
+	.logo-grey-chevron {
+		height:40px;
+		width:194px;
+		margin-top:0px;
+		background-image: url("../images/logo-phone-chevron.png");
+		display:block;
+		margin-left: auto;
+		margin-right: auto;
+		float:none;
+	}
+
+	.avatar-chevron {
+		height:34px;
+		width:34px;
+		background-image: url("../images/chevron-logo-small.png");
+		margin-top: -1px;
+		margin-right: 4px;
+		float:left;
+	}
+
+	.profile-container-chevron {
+		float: right;
+		height: 30px;
+		width: 53px;
+		margin-top: -34px;
+		margin-right: 0px;
+	}
+
+	.dropdown-profile-chevron {
+		margin-top:7px;
+		cursor: pointer;
+	}
+}
