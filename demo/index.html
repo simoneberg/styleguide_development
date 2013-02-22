@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -9,7 +8,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>PetroSkills Online Style Guide</title>
+  <title>PetroCore Compass Login</title>
   
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -20,244 +19,55 @@
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
   <link rel="stylesheet" href="../stylesheets/app.css">
   <link rel="stylesheet" href="../stylesheets/foundation-override.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/app-styles.css">
+  <link rel="stylesheet" href="../demo/login.css">
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
-<body>
+<body class="page-login">
 
-  <!-- NAVIGATION -->
-  <nav class="top-bar">
-    <ul>
-      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
-      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
-    </ul>
-    <!-- <section>
-      <ul class="left">
-        <li><a href="#">Link</a></li>
-      </ul>
 
-      <ul class="right">
-        <li><a href="#">Link</a></li>
-      </ul>
-    </section> -->
-  </nav>
-  <!-- END NAVIGATION -->
+<div class="row">
+  <div class="three columns centered">
 
-  <!-- PAGE TITLE -->
-  <div class="row">
-    <div class="twelve columns">
-      <h2>PetroSkills Online Style Guide</h2>
-      <p>A front-end framework and reference point for designing PetroSkills apps.</p>
+    <div class="row">
+      <img class="login_logo centered" src="http://placehold.it/283x150">
     </div>
-  </div>
-  <!-- END PAGE TITLE -->
 
-  <!-- CONTENT AREA -->
-  <div class="row">
-    <div class="three columns">
-    <!-- SIDE BAR -->
-  <ul class="tabs vertical">
-    <li class="active"><a href="index.html">Getting Started</a></li>
-    <li><a href="grids.html">Foundations</a></li>
-    <li><a href="building-blocks.html">Building Blocks</a></li>
-    <li><a href="tables.html">Patterns</a></li>
-    <li><a href="design-examples.html">Design Examples</a></li>
-    <!-- <li class="active"><a href="#">Item 6</a>
-        <ul class="subitems">
-          <li class="active"><a href="#">Subitem 1</a></li>
-          <li><a href="#">Subitem 2</a></li>
-          <li><a href="#">Subitem 3</a></li>
-          <li><a href="#">Subitem 4</a></li>
-          <li><a href="#">Subitem 5</a></li>
-        </ul>
-    </li> -->
-    <li><a href="support.html">Support</a></li>
-  </ul>
-    <!-- END SIDE BAR -->
-
-  </div>
-    <div class="nine columns">
-       <h2>Getting Started</h2>
-          <!-- <h5 class="subheader">Whether you are using Scss or CSS, we've made it easy to start a project so that you can help take over the world one responsive site at a time.</h5> -->
-          <p>This online style guide is intended for anyone producing page designs for PetroSkills online products. It explains the design rules used to establish the look and feel of the site and will help deliver high quality, consistent online communication.</p>
-          <p>Please refer to this guide when creating new sections and pages for the website.</p>
-
-          <hr>
-
-          <h3>Design Language</h3>
-          <p>The site has been designed to support and extend the core brand values into an online graphic and interactive visual language. We have developed a simple, uncomplicated design language that incorporates clear signposting for content, navigation and task-based zoning through typography, composition and colour. The language delivers a strong, unique look and supports best-in-class usability and functionality.</p>
-
-          <hr>
-
-          <h3>What's being covered</h3>
-
-          <div class="row">
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="grids.html">The Grid</a></h5></dt>
-                <dd>Having a durable and flexible grid at the core of your work can make development much simpler. Use our built-in grid classes to speed up layout code development.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="grids.html#thelayout">Layout</a></h5></dt>
-                <dd>This section demonstrates the general layout principles used on the site. It also includes examples of how to carry the same design language across different sites.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="navigation.html">Navigation</a></h5></dt>
-                <dd>We show you how the navigation was designed and how to apply the same designs onto your sites.</dd>
-              </dl>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="typography.html">Typography</a></h5></dt>
-                <dd>The core typefaces, sizes, leading, and colors used throughout the site. We also show the headings, paragraphs, lists, and other inline type elements.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="icons.html">Iconography</a></h5></dt>
-                <dd>We show the icons that are used throughout the interface. How to use them and where.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="forms.html">Forms</a></h5></dt>
-                <dd>You can create simple or complicated forms quickly and easily— validation states, custom select, radio buttons and more.</dd>
-              </dl>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="tables.html">UI Elements</a></h5></dt>
-                <dd>We showcase common UI elements that are used throughout the site such as buttons, labels, alerts, and a lot more.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="charts.html">Widgets</a></h5></dt>
-                <dd>We discussed the various types of widgets being used throughout the site. Great for displaying various content types.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><a href="design-examples.html">Examples</a></h5></dt>
-                <dd>Finally, we show you examples of how the whole design comes together. </dd>
-              </dl>
-            </div>
-          </div>
-
-          <!-- <hr>
-
-          <h3>How is a project structured?</h3>
-          <h5 class="subheader">We follow common patterns for directory structure that are logical and easily maintained. Below is an explanation of each file you'll get when you create a project using our gem or download via our <a href="/download.php">customizer</a>.</h5>
-
-          <div class="row">
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-folder"></i> stylesheets</h5></dt>
-                <dd>Includes <code>foundation.css</code> and <code>foundation.min.css</code> so you can choose which to use. We've also included <code>app.css</code> that you can use for custom styles that will sit on top of the Foundation core as overrides.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-folder"></i> javascripts</h5></dt>
-                <dd>All of our plugins and the necessary Javascript to make Foundation work properly. The most important file here is <code>app.js</code>, which is used to initialize the various plugins that you might want to use. <strong>All JS is initiated by default</strong>.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-folder"></i> images</h5></dt>
-                <dd>This directory includes all the images needed for Foundation, which actually aren't many. The only images included by default are used for Orbit. If you don't use Orbit, you may get rid of them.</dd>
-              </dl>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-page"></i> index.html</h5></dt>
-                <dd>A sample structure for page content, giving you something to use as a basic structural template for the rest of the pages in your project.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-page"></i> humans.txt</h5></dt>
-                <dd>A way to tell the world about the people that worked on the sites you build, giving them kudos they deserve.</dd>
-              </dl>
-            </div>
-            <div class="four columns">
-              <dl>
-                <dt><h5><i class="foundicon-page"></i> robots.txt</h5></dt>
-                <dd>Give instructions to web robots so search engines know what to do when they crawl your site for content.</dd>
-              </dl>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="twelve columns">
-              <div class="panel">
-                <h6 class="subheader"><strong>Using the Gem?</strong> You'll see a couple extra pieces in your project upon creation. These are:</h6>
-                <dl>
-                  <dt><i class="foundicon-folder"></i> sass/</dt>
-                  <dd>Your main style folder is named <strong>sass/</strong> and contains <code>app.scss</code>, which imports Foundation (or the parts you want). Your custom styles go below the <code>@imports</code>. You can see the compiled CSS in your stylesheets directory after you manually <span class="has-tip top" title="$ compass compile <filename>">compile</span> or <span class="has-tip top" title="$ compass watch <directory>">watch</span>. This directory also includes <code>_settings.scss</code>, which is used to control variables that help easily style Foundation.</dd>
-                  <dt><i class="foundicon-settings"></i> config.rb</dt>
-                  <dd>This file is used by <a href="http://compass.style.org">Compass</a> to compile your project. Here you can control the output style of your CSS, the structure of your directories and other useful settings.</dd>
-                </dl>
-              </div>
-            </div>
-          </div> -->
-
-          <hr>
-
+    <div class="row">
+      <h2>Login to track your competencies</h2>
     </div>
+
+    <div class="row collapse">
+      <div class="two mobile-one columns">
+        <span class="prefix"><i class="icon-user"></i></span>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="text" placeholder="User ID">
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="two mobile-one columns">
+        <span class="prefix"><i class="icon-lock"></i></span>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="password" placeholder="Password">
+      </div>
+    </div>
+    <div class="end-border"></div>
+
+    <a class="radius button twelve mobile-four" href="#">Login</a>
+    <p class="centered"><a href="#" class="forgot_pw_link">Forgot your User ID or Password?</a></p>
+    <p class="centered faded">1.5.7.152 - 8/15/2012</p>
   </div>
-  <!-- CONTENT AREA -->
+</div>
 
-  
-  
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
 
-  
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script> 
-  
+<!-- Initialize JS Plugins -->
+<script src="../javascripts/app.js"></script>
+
 </body>
 </html>
