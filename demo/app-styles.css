@@ -1,3 +1,17 @@
+.row {
+	/*width: 1260px;*/
+	width:100%;
+}
+
+.columns {
+	padding:0px;
+}
+
+.top-bar {
+	margin: 0 0 0px 0;
+}
+
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
 }
@@ -318,5 +332,193 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	.dropdown-profile-chevron {
 		margin-top:7px;
 		cursor: pointer;
+	}
+}
+
+/*-------- SEARCH STYLES --------*/
+
+.left-split-container {
+	height:auto;
+	background-color:greenyellow;
+}
+
+.search-container {
+	height:44px;
+	background: #c0c0c0;
+	background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+	background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+	-moz-box-shadow: inset 0px 1px 1px #d1d1d1;
+		-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
+			box-shadow: inset 0px 1px 1px #d1d1d1;
+	border-top:1px solid #717171;
+	border-right:1px solid #717171;
+	border-bottom:1px solid #717171;
+	}
+
+.left-nav-container {
+	height:500px;
+	background-color:#c2c2c2;
+	border-right: 1px solid #717171;
+}
+
+.breadcrumbs-container {
+	height:44px;
+	background: #eaeaea;
+	background: -moz-linear-gradient(top,  #eaeaea 0%, #dddddd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#dddddd));
+	background: -webkit-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
+	background: -o-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
+	background: -ms-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
+	background: linear-gradient(to bottom,  #eaeaea 0%,#dddddd 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
+	moz-box-shadow: inset 0px 1px 1px #f5f5f5;
+		-webkit-box-shadow: inset 0px 1px 1px #f5f5f5;
+			box-shadow: inset 0px 1px 1px #f5f5f5;
+	border-top:1px solid #717171;
+	border-bottom:1px solid #717171;
+	padding: 10px 0px 0px 20px;
+	}
+
+.content-container {
+	height:500px;
+	background-color:white;
+}
+
+
+/*-------- FOOTER STYLES --------*/
+
+.petrocore-footer {
+	height:44px;
+	background-color:#f3f3f3;
+	border-top:1px solid #8a8a8a;
+	border-bottom:1px solid #8a8a8a;
+}
+
+.footer-logo {
+	height:32px;
+	width:202px;
+/*	background-image: url("../images/logo-footer.png");
+*/	background-repeat:no-repeat;
+	margin-top:6px;
+	margin-left:16px;
+}
+
+
+.footer-logo-ipad {
+	display: none;
+}
+
+.footer-logo-iphone {
+	display: none;
+}
+
+.trademark {
+	margin-top:13px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+
+.trademark p{
+	color:#939393;
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.feedback {
+	margin-top:13px;
+	margin-right:15px;
+	float:right;
+}
+
+.feedback a{
+	color:#939393;
+	font-size: 11px;
+}
+
+.feedback a:hover{
+	color:#6f6f6f;
+}
+
+@media only screen and (max-width: 960px) {
+	.footer-logo {
+		display: none;
+	}
+
+	.footer-logo-iphone {
+		display: none;
+	}
+
+	.footer-logo-ipad {
+		height:29px;
+		width:180px;
+		display: block;
+		margin-top:8px;
+		margin-left:16px;
+	}
+
+	.trademark {
+		margin-top:4px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 325px;
+		text-align:center;
+}
+}
+
+@media only screen and (max-width: 767px) {
+	.left-split-container {
+		display: none;
+	}
+
+	.petrocore-footer {
+		height:auto;
+		background-color:#f3f3f3;
+		border-top:1px solid #8a8a8a;
+		border-bottom:1px solid #8a8a8a;
+	}	
+
+	.footer-logo {
+		display:none;
+	}
+
+	.footer-logo-iphone {
+		height:32px;
+		width:202px;
+		background-repeat:no-repeat;
+		margin-top:6px;
+		margin-left:16px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:5px;
+	}
+
+	.footer-logo-ipad {
+		display: none;
+	}
+
+	.trademark {
+		margin-top:4px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 325px;
+		text-align:center;
+	}
+
+	.feedback {
+		margin-top: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: 140px;
+		text-align: center;
+		float:none;
+		margin-bottom:10px;
 	}
 }
