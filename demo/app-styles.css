@@ -11,6 +11,9 @@
 	margin: 0 0 0px 0;
 }
 
+/*[class*="column"] + [class*="column"]:last-child {
+	float:none;
+}*/
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
@@ -199,6 +202,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	position: relative;
 	border-top: 1px solid rgb(221, 221, 221);
 	border-bottom: 1px solid rgb(221, 221, 221);
+	margin-bottom: -1px;
 }
 
 .logo-grey-chevron {
@@ -290,7 +294,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 @media only screen and (max-width: 767px) {
 	.top-bar-chevron {
-		height:44px;
+		height:45px;
 		background-image: url("../images/header-bg-phone.png");
 		border-top: none;
 		border-bottom: none;
@@ -390,7 +394,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 
-/*-------- FOOTER STYLES --------*/
+/*-------- PETROCORE FOOTER STYLES --------*/
 
 .petrocore-footer {
 	height:44px;
@@ -400,8 +404,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 .footer-logo {
-	height:32px;
-	width:202px;
+	height:30px;
+	width:180px;
 /*	background-image: url("../images/logo-footer.png");
 */	background-repeat:no-repeat;
 	margin-top:6px;
@@ -446,20 +450,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 @media only screen and (max-width: 960px) {
-	.footer-logo {
-		display: none;
-	}
-
 	.footer-logo-iphone {
 		display: none;
-	}
-
-	.footer-logo-ipad {
-		height:29px;
-		width:180px;
-		display: block;
-		margin-top:8px;
-		margin-left:16px;
 	}
 
 	.trademark {
@@ -476,6 +468,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 		display: none;
 	}
 
+	.breadcrumbs-container {
+		display: none;
+	}
+
 	.petrocore-footer {
 		height:auto;
 		background-color:#f3f3f3;
@@ -488,8 +484,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	}
 
 	.footer-logo-iphone {
-		height:32px;
-		width:202px;
+		height:30px;
+		width:180px;
 		background-repeat:no-repeat;
 		margin-top:6px;
 		margin-left:16px;
@@ -497,10 +493,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom:5px;
-	}
-
-	.footer-logo-ipad {
-		display: none;
 	}
 
 	.trademark {
@@ -522,3 +514,202 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 		margin-bottom:10px;
 	}
 }
+/*-------- PETROCORE FOOTER STYLES --------*/
+
+/*-------- CHEVRON FOOTER STYLES --------*/
+
+/*.chevron-footer {
+	height:107px;
+	background-color:white;
+	border-top:1px solid #8a8a8a;
+	border-bottom:1px solid #8a8a8a;
+	padding: 0px 20px 0px 20px;
+}
+
+.update {
+	margin-top: 40px;
+	background-color: pink;
+}
+
+.update p {
+	color: #333333;
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.chevron-corp {
+	margin-top: 40px;
+	background-color: yellowgreen;
+}
+
+.chevron-corp p {
+	color: #333333;
+	font-size: 11px;
+	margin-bottom: 0px;
+}
+
+.confidential {
+	margin-top: 40px;
+	background-color: aquamarine;
+}
+
+.confidential p {
+	color: #333333;
+	font-size: 11px;
+	margin-bottom: 0px;
+}
+
+.opco {
+	margin-top: 40px;
+	background-color: orange;
+}
+
+.opco p {
+	color: #333333;
+	font-size: 11px;
+	margin-bottom: 0px;
+}
+
+.opco a {
+	color: #009dd9;
+	font-size: 11px;
+	margin-bottom: 0px;
+}
+
+.opco a:hover {
+	text-decoration: underline;
+}
+
+.content-contact {
+	margin-top:0px;
+	width: 300px;
+	background-color: yellowgreen;
+	float:left;
+}
+
+.content-contact p{
+	color:#939393;
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.technical-contact {
+	margin-top:0px;
+	width: 300px;
+	background-color: pink;
+	float:left;
+}
+
+.technical-contact p{
+	color:#939393;
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.chevron-footer-hr {
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 8px 0 8px;
+	height: 0;
+}*/
+
+
+
+
+/*-------- CHEVRON FOOTER STYLES --------*/
+
+.chevron-footer {
+	height:115px;
+	background-color:white;
+	border-top:1px solid #8a8a8a;
+	border-bottom:1px solid #8a8a8a;
+	padding: 0px 20px 0px 20px;
+}
+
+.chevron-footer-hr {
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 8px 0 8px;
+	height: 0;
+}
+
+.footer-top {
+	width:auto;
+	height:13px;
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 8px;
+}
+
+.footer-top ul {
+	list-style-type: none;
+}
+
+.footer-top li {
+	float:left;
+	margin-right: 30px;
+	color:#939393;
+	font-size: 11px;
+}
+
+.footer-top li a {
+	color: #009dd9;
+}
+
+.footer-top li a:hover{
+	text-decoration: underline;
+}
+
+.footer-bottom {
+	width:auto;
+	height:20px;
+	float:left;
+}
+
+.footer-bottom ul {
+	list-style-type: none;
+}
+
+.footer-bottom li {
+	float:left;
+	margin-right: 30px;
+	color:#939393;
+	font-size: 11px;
+}
+
+.footer-bottom li a {
+	color: #009dd9;
+}
+
+.footer-bottom li a:hover{
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+	.chevron-footer {
+		height:130px;
+	}
+
+	.footer-top {
+		height: auto;
+		margin-top:5px;
+	}
+
+	.footer-top ul {
+		height:50px;
+	}
+
+	.footer-top li {
+		float:none;
+	}	
+
+	.footer-bottom li {
+		float:none;
+	}	
+}
+
+
+
+
