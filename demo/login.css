@@ -6,6 +6,10 @@ body {
 	margin-top: 20px;
 }
 
+.login_logo {
+	margin-bottom: 25px;
+}
+
 .page-login h2 {
 	background-color: #ddd;
 	border: 1px solid #ccc;
@@ -81,6 +85,3 @@ p.centered {
 	font-size: 12px;
 }
 
-.login_logo {
-	margin-left: 17px;
-}
