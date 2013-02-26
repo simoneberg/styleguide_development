@@ -385,8 +385,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 			box-shadow: inset 0px 1px 1px #f5f5f5;
 	border-top:1px solid #717171;
 	border-bottom:1px solid #717171;
-	padding: 10px 0px 0px 20px;
-	}
+	padding: 3px 10px 0px 10px;
+}
 
 .content-container {
 	height:500px;
@@ -871,3 +871,45 @@ width: 80%;
 position: relative;
 display: block;
 }*/
+
+
+/******BREADCRUMBS*******/
+.breadcrumbs {
+	height:30px;
+	width:100%;
+	padding:20px;
+}
+
+ul.breadcrumbs {
+	background: none;
+	border:none;
+}
+
+ul.breadcrumbs li:before {
+    content: "\f101"; 
+    font-family: FontAwesome;
+    color: #aaa;
+	font-size: 12px;
+}
+
+ul.breadcrumbs li a, ul.breadcrumbs li span {
+	text-transform: none;
+	font-size: 12px;
+	padding-left: 12px;
+	color:#767676;
+}
+
+ul.breadcrumbs li.current a {
+	color:#525252;
+}
+
+ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
+	text-decoration: none;
+	color:#525252;
+}
+
+.breadcrumbs-home.icon- {
+	font-size: 18px;
+	line-height: 24px;
+}
+
