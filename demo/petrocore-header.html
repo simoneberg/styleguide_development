@@ -87,7 +87,6 @@
   <div class="nine columns right-split-container">
       <div class="breadcrumbs-container">
           <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
-        
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
@@ -104,6 +103,8 @@
       <div class="content-container">
         <!--This will hold the content-->
           <!--***** BUTTONS *****-->
+            <h4>Buttons</h4>
+            <hr>
             <div class="button-gallery">
               <a class="primary radius button" href="#">Primary</a>
               <a class="secondary radius button" href="#">Secondary</a>
@@ -113,8 +114,10 @@
           <!--***** BUTTONS *****-->
 
           <!--***** MODAL *****-->
+          <h4>Pop-ups</h4>
+          <hr>
           <div class="modal-button-container">
-          <a href="#" data-reveal-id="myModal" class="primary radius button">My Modal</a>
+          <a href="#" data-reveal-id="myModal" class="primary radius button">Click for Pop-up</a>
           </div>
           <!--***** MODAL *****-->
       </div>      
@@ -154,13 +157,19 @@
   </div>
   <!-- CONTENT AREA -->
 
-<div id="myModal" class="reveal-modal [expand, xlarge, large, medium, small]">
+<div id="myModal" class="reveal-modal expand">
   <div class="modal-header">
     <h5>This is a Pop-up</h5>
+    <a class="close-reveal-modal">&#215;</a>
   </div>
+  <div class="popup-content-container">
     <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right" href="#">Cancel</a>
+  </div>
 </div>
   
   <!-- Included JS Files (Uncompressed) -->
