@@ -6,8 +6,38 @@ body {
 	margin-top: 20px;
 }
 
-.login_logo {
+.login-top, 
+.login-header, 
+.login-content, 
+.login-footer {
+	margin: 0 auto;
+	width: 350px;
+}
+
+.login-row {
+	clear: both;
+	overflow: hidden;
+	padding: 0 15px;
+	width: 350px;
+}
+
+.login-row .columns {
+	padding: 0;
+}
+
+.login-two {
+	width: 53px !important;
+}
+
+.login-ten {
+	width: 267px !important;
+}
+
+img.login_logo {
+	height: 70px;
 	margin-bottom: 25px;
+	max-width: inherit;
+	width: 350px;
 }
 
 .page-login h2 {
@@ -70,6 +100,10 @@ textarea {
 	margin: 0 0 15px 2px;
 }
 
+.login-button {
+	display: block;
+}
+
 p.centered {
 	margin: 12px 0;
 	text-align: center;
@@ -85,3 +119,10 @@ p.centered {
 	font-size: 12px;
 }
 
+@media only screen and (max-width: 767px) {
+
+	.column, .columns {
+		float: left !important;
+	}
+
+}
