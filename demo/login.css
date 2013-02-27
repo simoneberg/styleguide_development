@@ -116,6 +116,47 @@ p.centered {
 	font-size: 12px;
 }
 
+/******BUTTONS*******/
+
+.button-gallery {
+	padding: 20px;
+}
+
+.button.radius.primary {
+	background: #2f94ce
+}
+
+.button.radius.primary:hover {
+	background: #1a7eb7;
+}
+
+.button.radius.secondary {
+	background: #dddddd;
+	border:1px solid #aaaaaa;
+}
+
+.button.radius.secondary:hover {
+	background: #cccccc;
+}
+
+.button.radius.success {
+	background: #59a02e;
+	border:1px solid #347c09;
+}
+
+.button.radius.success:hover {
+	background: #47891f;
+}
+
+.button.radius.alert {
+	background: #e72828;
+	border:1px solid #ab0404;
+}
+
+.button.radius.alert:hover {
+	background: #d12525;
+}
+
 @media only screen and (max-width: 767px) {
 
 	.column, .columns {
