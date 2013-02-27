@@ -34,20 +34,17 @@ body {
 }
 
 img.login_logo {
-	height: 70px;
 	margin-bottom: 25px;
-	max-width: inherit;
-	width: 350px;
 }
 
 .page-login h2 {
 	background-color: #ddd;
 	border: 1px solid #ccc;
 	border-width: 1px 1px 0 1px;
-	margin: 0 15px 0 17px;
 	font-size: 13px;
-	text-align: center;
+	margin: 0 0 0 2px;
 	padding: 11px 5px;
+	text-align: center;
 }
 
 span.prefix {
@@ -123,6 +120,24 @@ p.centered {
 
 	.column, .columns {
 		float: left !important;
+	}
+
+	.login-top, 
+	.login-header, 
+	.login-content, 
+	.login-footer {
+		margin: 0 auto;
+		width: auto;
+	}
+
+	.login-row {
+		margin: 0 auto;
+	    padding: 0;
+	    width: 280px;
+	}
+
+	.login-ten {
+	    width: 227px !important;
 	}
 
 }
