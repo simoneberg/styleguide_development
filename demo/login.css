@@ -9,6 +9,7 @@ body {
 .login-top, 
 .login-header, 
 .login-content, 
+.login-info, 
 .login-footer {
 	margin: 0 auto;
 	width: 350px;
@@ -91,6 +92,20 @@ textarea {
 	outline: none;
 }
 
+.login-info-content input[type="text"], 
+.login-info-content input[type="password"], 
+.login-info-content input[type="date"], 
+.login-info-content input[type="datetime"], 
+.login-info-content input[type="email"], 
+.login-info-content input[type="number"], 
+.login-info-content input[type="search"], 
+.login-info-content input[type="tel"], 
+.login-info-content input[type="time"], 
+.login-info-content input[type="url"], 
+.login-info-content textarea {
+	border-width: 1px;
+}
+
 .end-border {
 	border-top: 1px solid #ddd;
 	height: 1px;
@@ -114,6 +129,26 @@ p.centered {
 .faded {
 	color: #ccc;
 	font-size: 12px;
+}
+
+.login-info-content {
+	border: 1px solid #ccc;
+	margin: 0 0 20px 2px;
+	padding: 10px 15px;
+}
+
+.login-info-content p {
+	font-size: 12px;
+}
+
+.or_label {
+	background-color: #fff;
+	color: #666;
+	font-weight: bold;
+	margin: -25px auto 8px;
+	position: relative;
+	text-align: center;
+	width: 30px;
 }
 
 /******BUTTONS*******/
