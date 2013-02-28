@@ -431,6 +431,7 @@ display:none;
 .left-split-container {
 	height:auto;
 	background-color:greenyellow;
+	white-space: nowrap;
 }
 
 .search-container {

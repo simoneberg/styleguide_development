@@ -35,4 +35,13 @@
     });
   }
 
+  // Slide out navigation
+  $(function(){
+      $(".toggle-btn").click(function(){
+          console.log('Clicked');  
+          $('.left-split-container').animate({ width: 0 }, 'slow').hide(0);  
+          $('.right-split-container').animate({ width: '100%' }, 'slow');
+      });            
+  });
+
 })(jQuery, this);
