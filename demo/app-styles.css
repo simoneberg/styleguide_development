@@ -142,11 +142,26 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }*/
 
 
-
+/* iPads (landscape) ----------- */
+@media only screen and (width : 1024px) {
+/* Styles */
+.row .left-split-container{
+	margin-left: 0% !important;	
+}
+.row .right-split-container{
+	width: 75% !important;
+} 
+}
 
 /*-------- TOGGLE BUTTON FOR IPAD PORTRAIT *ONLY* --------*/
 
 @media only screen and (width: 768px) {
+.left-split-container{
+	margin-left: -100%;	
+}
+.row .right-split-container{
+	width: 100%;
+} 
 .breadcrumbs-container {
 	padding:0px;
 }
@@ -431,7 +446,6 @@ display:none;
 .left-split-container {
 	height:auto;
 	background-color:greenyellow;
-	white-space: nowrap;
 }
 
 .search-container {
