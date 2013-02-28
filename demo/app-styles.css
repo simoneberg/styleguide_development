@@ -159,7 +159,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 
 /* iPads (landscape) ----------- */
-@media only screen and (width : 1024px) {
+@media only screen and (min-width : 769px) {
 /* Styles */
 .row .left-split-container{
 	margin-left: 0% !important;	
@@ -589,7 +589,9 @@ display:none;
 
 @media only screen and (max-width: 767px) {
 	.left-split-container {
-		display: none;
+		display: block;
+		float: left;
+		margin-left: -100%;
 	}
 
 	.breadcrumbs-container {
