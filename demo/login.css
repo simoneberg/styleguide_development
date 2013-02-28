@@ -97,6 +97,7 @@ textarea {
 	-o-transition: none;
 	transition: none;
 	outline: none;
+	-webkit-appearance: none;
 }
 
 .login-info-content input[type="text"], 
