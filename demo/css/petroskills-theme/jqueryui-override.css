@@ -1,0 +1,63 @@
+.ui-dialog {
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+	padding: 0;
+}
+
+.ui-widget-header {
+	border: 0;
+}
+
+.ui-dialog-title {
+	font-size: 18px;
+}
+
+.ui-dialog-titlebar {
+	background: #c0c0c0;
+	background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+	background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+	border-bottom:1px solid #717171;
+	-moz-box-shadow: inset 0px 1px 1px #d1d1d1;
+	-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
+	box-shadow: inset 0px 1px 1px #d1d1d1;
+	padding: .7em 1em !important;
+}
+
+.ui-dialog-content {
+	font-size: 13px;
+	line-height: 1.5;
+	padding: 1px 15px;
+}
+
+.ui-dialog-buttonpane {
+	background: #e3e3e3 !important;
+	background: -moz-linear-gradient(top,  #e3e3e3 0%, #d1d1d1 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#d1d1d1)) !important;
+	background: -webkit-linear-gradient(top,  #e3e3e3 0%,#d1d1d1 100%) !important;
+	background: -o-linear-gradient(top,  #e3e3e3 0%,#d1d1d1 100%) !important;
+	background: -ms-linear-gradient(top,  #e3e3e3 0%,#d1d1d1 100%) !important;
+	background: linear-gradient(to bottom,  #e3e3e3 0%,#d1d1d1 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#d1d1d1',GradientType=0 ) !important;
+	-moz-box-shadow: inset 0px 1px 1px #d1d1d1;
+	-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
+	box-shadow: inset 0px 1px 1px #d1d1d1;
+}
+
+.ui-button {
+	background: #eeeeee !important;
+	border:1px solid #aaaaaa !important;
+	font-size: 14px !important;
+	font-weight: bold !important;
+}
+
+
+.ui-dialog-titlebar-close {
+	background: none !important;
+	border: 0 !important;
+}
