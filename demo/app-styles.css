@@ -1413,8 +1413,9 @@ ul.accordion>li>div.title:after {
 }
 
 .panel-footer {
-	height:50px;
 	width:100%;
+	padding-bottom: 5px;
+	overflow: hidden;
 	clear: both;
 	margin-left: 0px;
 	margin-top: 10px;
