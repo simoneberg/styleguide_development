@@ -9,6 +9,7 @@
 
 .columns.left-split-container {
 	padding:0px;
+	height:0;
 }
 
 .petrocore-footer .columns {
@@ -38,9 +39,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
 }
 
-.content-container {
+/*.content-container {
 	overflow: scroll;
-}
+}*/
 
 .top-bar {
 	/*background: #48779f;
@@ -127,6 +128,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 .top-bar ul > li:not(.name):hover a.username, .top-bar ul > li:not(.name).active a.username, .top-bar ul > li:not(.name):focus a.username {
 	color:#d9d9d9;
+}
+
+.master-wrapper {
+	background-color: #c2c2c2;
 }
 
 /*.toggle-nav-tablet {
@@ -478,14 +483,12 @@ display:none;
 		-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
 			box-shadow: inset 0px 1px 1px #d1d1d1;
 	border-top:1px solid #717171;
-	border-right:1px solid #717171;
 	border-bottom:1px solid #717171;
 	}
 
 .left-nav-container {
-	height:680px;
+	height:auto;
 	background-color:#c2c2c2;
-	border-right: 1px solid #717171;
 }
 
 .breadcrumbs-container {
@@ -504,12 +507,14 @@ display:none;
 	border-top:1px solid #717171;
 	border-bottom:1px solid #717171;
 	padding: 3px 10px 0px 10px;
+	border-left: 1px solid #717171;
 }
 
 .content-container {
-	height:680px;
+	height:100%;
 	background-color:white;
 	padding:20px;
+	border-left: 1px solid #717171;
 }
 
 @media only screen and (width: 768px) {
@@ -1404,6 +1409,7 @@ ul.accordion>li>div.title:after {
 	-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
 	box-shadow: inset 0px 1px 1px #d1d1d1;
 	border-bottom:1px solid #717171;
+	cursor: move;
 }
 
 .panel-footer {
@@ -1458,6 +1464,7 @@ ul.accordion>li>div.title:after {
 	position: absolute;
 	right: 40px;
 	top:16px;
+	cursor:auto;
 }
 
 .panel-action-icons.icon- {
@@ -1481,6 +1488,35 @@ ul.accordion>li>div.title:after {
 
 .panel-footer .radius.button{
 	width:45%;
+}
+
+@media only screen and (max-width: 767px) {
+	
+	.panel-wrapper {
+		margin-bottom: 15px;
+	}
+
+	.panel-header{
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.panel-footer {
+		height:auto;
+		padding-bottom: 1px;
+	}
+
+	.panel-footer .radius.button{
+		width:100%;
+	}	
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.six.columns.visible-charts {
+	width: 100%;
+	float: left;
+	margin-bottom: 15px;
+}
 }
 
 /****** DASHBOARD *******/
@@ -1514,24 +1550,3 @@ table tbody tr:nth-child(even) {
 }
 
 /****** TABLE *******/
-
-@media only screen and (max-width: 767px) {
-	
-	.panel-wrapper {
-		margin-bottom: 15px;
-	}
-
-	.panel-header{
-		width: 100%;
-		margin-left: 0px;
-	}
-
-	.panel-footer {
-		height:auto;
-		padding-bottom: 1px;
-	}
-
-	.panel-footer .radius.button{
-		width:100%;
-	}	
-}
