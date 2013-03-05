@@ -16,9 +16,18 @@
 	padding:0px;
 }
 
-/*.columns {
-	padding:0px;
-}*/
+.master-wrapper .twelve.columns {
+	padding: 0;
+}
+
+.master-wrapper .twelve.columns .content-container {
+	border-left: 0;
+	height: auto;
+}
+
+.profile-container.lesser {
+	width: 275px;
+}
 
 .top-bar {
 	margin: 0 0 0px 0;
@@ -82,7 +91,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 .top-nav {
 	height:50px;
-	width:410px;
+	/*width:410px;*/
 }
 
 .top-nav-links {
