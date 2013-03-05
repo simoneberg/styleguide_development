@@ -8,7 +8,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
-  <title>PetroCore Compass Login</title>
+  <title>PetroCore Compass Login (Error page)</title>
   
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -55,7 +55,7 @@
       <span class="prefix"><i class="icon-user"></i></span>
     </div>
     <div class="login-ten columns">
-      <input type="text" placeholder="User ID">
+      <input class="error" type="text" placeholder="User ID">
     </div>
   </div><!-- /login-row -->
   <div class="login-row">
@@ -63,13 +63,25 @@
       <span class="prefix"><i class="icon-lock"></i></span>
     </div>
     <div class="login-ten columns">
-      <input type="password" placeholder="Password">
+      <input class="error" type="password" placeholder="Password">
     </div>
   </div><!-- /login-row -->
   <div class="login-row">
     <div class="end-border"></div>
   </div><!-- /login-row -->
 </div><!-- /login-content -->
+
+<div class="login-errors">
+  <div class="login-row">
+    <div class="login-errors-display">
+      <h3>Please fix the following above:</h3>
+      <ul class="square">
+        <li>Please provide a username.</li>
+        <li>Please provide a password.</li>
+      </ul>
+    </div>
+  </div>
+</div><!-- /login-errors -->
 
 <div class="login-footer">
   <div class="login-row">
