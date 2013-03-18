@@ -524,6 +524,7 @@ display:none;
 	background-color:white;
 	padding:20px;
 	border-left: 1px solid #717171;
+	min-height: 500px;
 }
 
 @media only screen and (width: 768px) {
