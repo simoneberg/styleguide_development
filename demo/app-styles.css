@@ -44,6 +44,10 @@ hr {
 	float:none;
 }*/
 
+.row .row {
+	margin: 0 0px;
+}
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
 }
@@ -1398,8 +1402,37 @@ ul.accordion>li>div.title:after {
 	border:1px solid #8a8a8a;
 }
 
+.panel-wrapper-grey {
+	border:1px solid #8a8a8a;
+	background-color: #e8e8e8;
+}
+
 .panel-header {
 	height:50px;
+	width:100%;
+	clear: both;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 2px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #c0c0c0;
+	background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+	background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+	-moz-box-shadow: inset 0px 1px 1px #d1d1d1;
+	-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
+	box-shadow: inset 0px 1px 1px #d1d1d1;
+	border-bottom:1px solid #717171;
+	cursor: move;
+}
+
+.panel-header-small {
+	height:30px;
 	width:100%;
 	clear: both;
 	margin-left: 0px;
@@ -1476,6 +1509,27 @@ ul.accordion>li>div.title:after {
 	right: 40px;
 	top:16px;
 	cursor:auto;
+}
+
+.panel-header-small h5:after {
+	content: "\f0d8";
+	font-family: FontAwesome;
+	font-size: 18px;
+    color: #666666;
+    text-shadow: 0px 1px #e5e5e5;
+	display: block;
+	width: 0;
+	height: 0;
+	border: none;
+	border-color: none;
+	position: absolute;
+	right: 22px;
+	top:6px;
+	cursor:auto;
+}
+
+.panel-header-small h5 {
+	margin-top: 4px;
 }
 
 .panel-action-icons.icon- {
@@ -1561,3 +1615,12 @@ table tbody tr:nth-child(even) {
 }
 
 /****** TABLE *******/
+
+
+.left-margin-clear {
+	margin-left: -15px;
+}
+
+li.horizontal-list {
+	float:left;
+}
