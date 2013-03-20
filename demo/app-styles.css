@@ -1874,6 +1874,7 @@ visibility: hidden;
 #step1 {
 	height:55px;
 	padding-top: 12px;
+	border:1px solid #717171;
 	background: #eaeaea;
 	background: -moz-linear-gradient(top,  #eaeaea 0%, #dddddd 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#dddddd));
@@ -1891,7 +1892,10 @@ visibility: hidden;
 	/*background-color: red;*/
 	position:relative;
 	float: left;
-	border-right: 1px solid black;
+	border-right: 1px solid #b6b6b6;
+	-moz-box-shadow: 1px 0px white;
+	-webkit-box-shadow: 1px 0px white;
+	box-shadow: 1px 0px white;
 }
 
 .step-number p {
@@ -1926,13 +1930,22 @@ visibility: hidden;
 	border-radius: 50%;
 	width: 24px;
 	height: 24px; 
-	background-color: red;
+	background-color: #d3d3d3;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 3px;
+	-moz-box-shadow: 0px -1px #888, inset 0px -1x white;
+	-webkit-box-shadow: 0px -1px #888, inset 0px -1px white;
+	box-shadow: 0px -1px #888, inset 0px -1px white;
 }
 
-
+.success-arrow {
+	height: 16px;
+	width: 18px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 4px;
+}
 
 
 
