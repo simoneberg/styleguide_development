@@ -35,30 +35,4 @@
     });
   }
 
-  // Slide out navigation
-  $(function(){
-      $(".toggle-btn").click(function(){
-          //console.log('Navigation clicked');
-          var navLeftMargin = parseInt($(".left-split-container").css("margin-left"));
-          if (navLeftMargin < 0) {
-              //console.log('Hidden --> Shown');
-              $(".right-split-container").animate({
-                width: '75%'
-              }, { duration: 200, queue: false });
-              $(".left-split-container").animate({
-                marginLeft: '0%'
-              }, { duration: 200, queue: false });
-          } else{
-              console.log('Shown --> Hidden');
-              $(".right-split-container").animate({
-                width: '100%'
-              }, { duration: 200, queue: false });
-              $(".left-split-container").animate({
-                marginLeft: '-100%'
-              }, { duration: 200, queue: false });
-          };
-
-      });            
-  });
-
 })(jQuery, this);

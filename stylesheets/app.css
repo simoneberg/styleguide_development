@@ -13,30 +13,7 @@
    Shared Styles
 ----------------------------------------- */
 
-body {
-	padding-bottom: 30px;
-}
 
-pre, code {
-font-family: 'Monaco', courier, monospace;
-line-height: 1.4;
-}
-
-pre {
-background: #0B1022;
-overflow: scroll;
-margin: 0px;
-padding: 0px;
-padding: 10px;
-padding-top: 0;
-padding-bottom: 12px;
-color: #fff;
-font-size: 13px;
-margin-bottom: 20px;
--webkit-box-sizing: content-box;
--moz-box-sizing: content-box;
-box-sizing: content-box;
-}
 
 /* -----------------------------------------
    Page Name 1
