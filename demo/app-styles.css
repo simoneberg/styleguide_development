@@ -2145,7 +2145,7 @@ margin-left: -4px;
 
 .step-name-short {
 	padding-left: 7px;
-	width: 59px;
+	width: 58px;
 }
 
 .step-number {
@@ -2290,6 +2290,9 @@ margin-left: -4px;
 
 /****** FORMS *******/
 
+form {
+margin: 0 0 0px;
+}
 
 fieldset {
 	border: solid 1px #ddd;
@@ -2298,7 +2301,7 @@ fieldset {
 	-ms-border-radius: 0px;
 	-o-border-radius: 0px;
 	border-radius: 0px;
-	margin: 18px 0;
+	margin: 10px 0;
 	border-top: 1px solid #e1e1e1;
 	border-right: none;
 	border-left: none;
@@ -2309,7 +2312,7 @@ fieldset {
 fieldset legend {
 	font-weight: bold;
 	background: #fff;
-	padding: 0 3px;
+	padding: 0 0px;
 	margin: 0;
 	margin-left: 0px;
 	padding-right: 12px;
@@ -2326,5 +2329,24 @@ fieldset legend {
 	width: auto;
 	float: left;
 }
+
+p.form-category-title {
+	margin-bottom: 5px;
+}
+
+p.form-category-title-bold {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.radio-float {
+	float:left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+
+}
+
+
+
 
 
