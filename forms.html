@@ -87,7 +87,119 @@
   </div>
     <div class="nine columns">
        <h2>Forms</h2>
-          <p>Coming soon.</p>
+<!-- Row Layout for forms -->
+<h3>Top-Aligned Form</h3>
+<div class="six">
+  <form>
+    <label>This is a label.</label>
+    <input type="text" placeholder="Standard Input" />
+    <label>Address</label>
+    <input type="text" class="twelve" placeholder="Street" />
+    <div class="row">
+      <div class="six columns">
+        <input type="text" placeholder="City" />
+      </div>
+      <div class="three columns">
+        <input type="text" placeholder="State" />
+      </div>
+      <div class="three columns">
+        <input type="text" placeholder="ZIP" />
+      </div>
+    </div>
+    <textarea placeholder="Message"></textarea>
+  </form>
+</div><!-- six columns -->
+
+<hr>
+
+<!-- Right aligned and inline labels -->
+<h3>Right-Aligned Form</h3>
+<div class="six">
+  <form>
+    <div class="row">
+      <div class="two mobile-one columns">
+        <label class="right inline">Address</label>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="text" placeholder="e.g. Home" class="eight" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="two mobile-one columns">
+        <label class="right inline">City:</label>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="text" class="eight" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="two mobile-one columns">
+        <label class="right inline">ZIP:</label>
+      </div>
+      <div class="ten mobile-three columns">
+        <input type="text" class="three" />
+      </div>
+    </div>
+  </form>
+</div>
+
+<hr>
+
+<!-- Fieldsets for forms -->
+<h3>Fieldsets</h3>
+<div class="six">
+  <form>
+    <fieldset>
+      <legend>Fieldset Name</legend>
+      <label>This is a label.</label>
+      <input type="text" placeholder="Standard Input" />
+      <label>Address</label>
+      <input type="text" />
+      <input type="text" class="six" />
+    </fieldset>
+  </form>
+</div><!-- six columns -->
+
+<hr>
+
+<h3>Error States</h3>
+<div class="six">
+  <form>
+    <label class="error">Label Name</label>
+    <input class="error" type="text" placeholder="Standard Input" />
+    <small class="error">Please provide a label.</small>
+    <label>Address</label>
+    <input type="text" class="twelve" placeholder="Street" />
+    <div class="row">
+      <div class="six columns">
+        <input type="text" placeholder="City" />
+      </div>
+      <div class="three columns">
+        <input type="text" placeholder="State" />
+      </div>
+      <div class="three columns">
+        <input type="text" placeholder="ZIP" />
+      </div>
+    </div>
+    <textarea placeholder="Message"></textarea>
+  </form>
+</div><!-- six columns -->
+
+<!-- Right aligned and inline labels -->
+<div class="six error">
+  <form>
+    <fieldset>
+      <legend>Fieldset Name</legend>
+      <p>Please fill in all of the required fields below:</p>
+      <label>This is a label.</label>
+      <input type="text" placeholder="Standard Input" />
+      <label>Address</label>
+      <input type="text" />
+      <input type="text" class="six" />
+    </fieldset>
+  </form>
+</div><!-- six columns -->
+
 
 
 
