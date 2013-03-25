@@ -205,10 +205,10 @@
           <div id="progress-indicator">
             
           <div class="row">
-              <div class="three columns" id="step1">
-                <div class="step-number"><p>1</p></div>
+              <div class="three columns active-step" id="step1">
+                <div class="step-number active-step-number"><p>1</p></div>
                 <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
               </div>
             
               <div class="three columns" id="step2">
@@ -273,11 +273,11 @@
             <legend>General Information</legend>
             <div class="row">
 
-                <div class="one mobile-one columns">
+                <div class="two mobile-one columns">
                   <label class="right inline">Name:</label>
                 </div>
-                <div class="eleven mobile-three columns">
-                  <input type="text" placeholder="e.g. Home" class="six" />
+                <div class="ten mobile-three columns">
+                  <input type="text" placeholder="" class="four" />
                 </div>
 
                 <!--<div style="width:100%; float:left;">
@@ -297,27 +297,30 @@
                   <span><a href="#">Bowen, Jenny (JBNX)</a></span>
                 </div>
                 </div>-->
+            </div>
 
-                <div style="margin-bottom:79px;">
-                  <div class="one mobile-one columns">
-                    <span class="right">Creator:</span>
+            <div class="row">
+                <div style="margin-bottom:34px;">
+                  <div class="two mobile-one columns">
+                    <span class="right custom-label">Creator:</span>
                   </div>
                     
-                  <div class="eleven mobile-three columns">
+                  <div class="ten mobile-three columns text-only-custom-field">
                     <span>Bowen, Jenny (JBNX)</span> 
                   </div>
                 </div>
-
-                <div class="one mobile-one columns">
-                  <span class="right">Owner:</span>
+            </div>
+  
+            <div class="row">
+                <div class="two mobile-one columns">
+                  <span class="right custom-label">Owner:</span>
                 </div>
                   
-                <div class="eleven mobile-three columns">
-                  <span><a href="#">Bowen, Jenny (JBNX)</a></span> 
+                <div class="ten mobile-three columns text-only-custom-field">
+                  <span><a href="#">Bowen, Jenny (JBNX)</a></span><a href="#"><p class="icon-" style="margin-left:10px; color: #cacaca;">&#xf08e;</p></a>
                 </div>
-
-
             </div>
+
             </fieldset>
           </form>
 <!--************** GENERAL INFORMATION FORM ****************-->
@@ -329,21 +332,22 @@
 
              <!-- <label for="customDropdown">Dropdown Label</label> -->  
              <select style="display:none;" id="customDropdown">
-                <option SELECTED>This is a dropdown</option>
-                <option>This is another option</option>
-                <option>Look, a third option</option>
+                <option SELECTED>Gap Analysis</option>
+                <option>Gap Analysis</option>
+                <option>Gap Analysis</option>
               </select>
               <div class="custom dropdown">
                 <a href="#" class="current">
-                  This is a dropdown
+                  Gap Analysis
                 </a>
                 <a href="#" class="selector"></a>
                 <ul>
-                  <li>This is a dropdown</li>
-                  <li>This is another option</li>
-                  <li>Look, a third option</li>
+                  <li>Gap Analysis</li>
+                  <li>Gap Analysis</li>
+                  <li>Gap Analysis</li>
                 </ul>
               </div>
+              <div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf05a;</p></a></div>
 
           </fieldset>
           </form>
@@ -378,8 +382,8 @@
               <form>
                 <div class="row">
                 <div class="twelve columns">
-                  <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1" style=""><span class="custom radio"></span> Radio Button 1</label></div>
-                  <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2" style=""><span class="custom radio checked"></span> Radio Button 2</label></div>
+                  <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1" style=""><span class="radio"></span> Enable Scheduling</label></div>
+                  <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2" style=""><span class="radio"></span> Disable Scheduling</label></div>
                 </div>
                 </div>
               </form>
@@ -390,23 +394,23 @@
               <div class="row">
 
                 <div class="two mobile-one columns">
-                  <label class="right inline">Start Date:</label>
+                  <label class="right inline custom-width-mobile-one">Start Date:</label>
                 </div>
                 <div class="ten mobile-three columns">
-                  <input type="text" placeholder="" class="six" />
+                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
 
                 <div class="two mobile-one columns">
                   <label class="right inline">End Date:</label>
                 </div>
                 <div class="ten mobile-three columns">
-                  <input type="text" placeholder="" class="six" />
+                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
                   
                 <div class="two mobile-one columns"></div>
                   
                 <div class="ten mobile-three columns">
-                <label for="checkbox10"><input type="checkbox"> Generate sections for each Position</label>
+                <label for="checkbox10"><input type="checkbox"> No end date</label>
                 </div>
 
               </div>
@@ -420,24 +424,24 @@
               <div class="row">
 
                 <div class="two mobile-one columns">
-                  <label for="customDropdown" class="right">Time:</label>  
+                  <label for="customDropdown" class="right custom-dropdown-label">Time:</label>  
                 </div>
 
                 <div class="ten mobile-three columns">
                   <select style="display:none;" id="customDropdown">
-                    <option SELECTED>This is a dropdown</option>
-                    <option>This is another option</option>
-                    <option>Look, a third option</option>
+                    <option SELECTED>12:00am</option>
+                    <option>1:00 am</option>
+                    <option>2:00 am</option>
                   </select>
                   <div class="custom dropdown">
                     <a href="#" class="current">
-                      This is a dropdown
+                      12:00am
                     </a>
                     <a href="#" class="selector"></a>
                     <ul>
-                      <li>This is a dropdown</li>
-                      <li>This is another option</li>
-                      <li>Look, a third option</li>
+                      <li>1:00 am</li>
+                      <li>2:00 am</li>
+                      <li>3:00 am</li>
                     </ul>
                   </div>
                 <div>
@@ -453,34 +457,107 @@
                   <span>(UTC - 7:00) MT (US &amp; Canada)</span>
                 </div>
 
-              </div>
+              </div></div>
 
             </form>
             <!--****** TIME CHUNK ******-->
 
             <!--****** RECURRING CHUNK ******-->
-            <form>
+            <form style="margin-bottom:-10px;">
 
               <div class="row">
 
               <div class="two mobile-one columns">
-                <span class="right">Recurring:</span>
+                <span class="right custom-label">Recurring:</span>
               </div>
 
               <div class="ten columns">
-                <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1" style=""><span class="custom radio"></span> Radio Button 1</label></div>
-                <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2" style=""><span class="custom radio checked"></span> Radio Button 2</label></div>
-                <div class="radio-float"><label for="radio3"><input name="radio1" type="radio" id="radio3" style=""><span class="custom radio"></span> Radio Button 3</label></div>
+                <div class="radio-float"><label for="radio3"><input name="radio2" type="radio" id="radio3" style=""><span class="radio"></span> Daily</label></div>
+                <div class="radio-float"><label for="radio4"><input name="radio2" type="radio" id="radio4" style=""><span class="radio"></span> Weekly</label></div>
+                <div class="radio-float"><label for="radio5"><input name="radio2" type="radio" id="radio5" style=""><span class="radio"></span> Monthly</label></div>
               </div>
 
+              </div>
+
+
+              <div class="row">
+
+                <div class="two mobile-one columns"></div>
+                  
+                <div class="ten mobile-three columns">
+                  <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
+                  <input type="text" placeholder="" class="" style="float:left; width:100px; margin-right:8px;"/>
+                  <span style="float:left; margin-top:8px;">day(s)</span>
+                </div>
+              </div>
               </div>
 
             </form>
             <!--****** RECURRING CHUNK ******-->
 
+            <!--****** NOTIFICATIONS CHUNK ******-->
+              
+              <form>
+              <div class="row">
+              
+              <div class="two mobile-one columns">
+                <span class="right custom-label" >Notifications:</span>
               </div>
+
+                <div class="ten mobile-three columns">
+                  <div class="label-float-mobile">
+                    <label for="checkbox11"><input type="checkbox"> Bowen, Jenny (JBNX)</label>
+                    <label for="checkbox12"><input type="checkbox"> Email</label>
+                  </div>
+                </div>
+              </div>
+              </form>
+
+
+
+
+              <form>
+              <div class="row">
+
+              <div class="two mobile-one columns">
+                <span class="right"></span>
+              </div>
+
+                <div class="ten mobile-three columns" id="add-names-container">
+                  <img src="../images/add-names.png">                  
+                  <img src="../images/recipients.png">
+                </div>
+
+              </div>
+              </form>
+
+
+              <form>
+              <div class="row">
+
+              <div class="two mobile-one columns">
+                <span class="right"></span>
+              </div>
+
+          
+                <div class="ten mobile-three columns">
+                  <span><p style="margin-bottom:6px;">Within the notification email include:</p></span>
+                <label for="checkbox13"><input type="checkbox"> A link to the report</label>
+                </div>
+
+              </div>
+              </form>
+
             </fieldset>
             </form>
+            <!--****** NOTIFICATIONS CHUNK ******-->
+            <br>
+            <a class="primary radius button" href="#">Next</a>
+
+            </div>
+
+
+
   </div>
 
 </div>         
