@@ -86,9 +86,20 @@
 
   </div>
     <div class="nine columns">
-       <h2>Forms</h2>
+      <h2>Forms</h2>
+      <p>Please refer to the instructions below how to design and structure your forms. They need to be consistent with Petroskills' digital brand and style guidelines.</p>
+      <p><strong>Inputs are full width by default</strong> and will run as wide as the column that contains them. However, you have two options to adjust the width of the input field:</p>
+      <ul class="square">
+        <li>You can size inputs using column sizes, like <strong>.six</strong>.</li>
+        <li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+      </ul>
+      <p>
+        Refer below to see more specific examples of form layouts.
+      </p>
+      <hr>
 <!-- Row Layout for forms -->
 <h3>Top-Aligned Form</h3>
+<p>Below is the default form layout. This is a top label aligned form, where the labels are placed above the input field. See below:</p>
 <div class="six">
   <form>
     <label>This is a label.</label>
@@ -114,6 +125,7 @@
 
 <!-- Right aligned and inline labels -->
 <h3>Right-Aligned Form</h3>
+<p>Sometimes you want a form with labels to the left of your inputs. You can add a class of <strong>.right</strong> to a label to have it align to the right, and if your label is next to an input (in another column) adding a class of <strong>.inline</strong> will have it vertically center against an input.</p>
 <div class="six">
   <form>
     <div class="row">
@@ -147,6 +159,7 @@
 
 <!-- Fieldsets for forms -->
 <h3>Fieldsets</h3>
+<p>Below is an example of a form placed inside a <strong>Fieldset</strong> element. This is used to create a division or space out forms from other elements or content.</p>
 <div class="six">
   <form>
     <fieldset>
@@ -163,6 +176,14 @@
 <hr>
 
 <h3>Error States</h3>
+<p>Every form and form field must specify and be visual to the user if there is an error to a form. </p>
+<p>Form errors must occur when it is required. Examples would be:</p>
+<ul class="square">
+<li>Your [form field] must not be blank.</li>
+<li>Your [form field] must have a name.</li>
+<li>Your [form field] must have a password.</li>
+</ul>
+<p>You can attach a class of <strong>.error</strong> either to the individual elements (label, input, small) or to a column/div.</p>
 <div class="six">
   <form>
     <label class="error">Label Name</label>
@@ -200,8 +221,58 @@
   </form>
 </div><!-- six columns -->
 
+<hr>
+
+<!-- Custom form field inputs -->
+<h3>Radio Buttons and Checkboxes</h3>
+<p>Below are extra input fields to help with designing forms. They have been customized to give a unique look and feel, and they are cross-browser and cross-device compatible.</p>
+<form class="custom">
+  <h6>Custom Radio Buttons and Checkboxes</h6>
+  <!-- Custom Radio -->
+  <div class="row">
+    <div class="four columns">
+      <label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Radio Button 1</label>
+      <label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> Radio Button 2</label>
+      <label for="radio3"><input name="radio1" type="radio" id="radio3" disabled style="display:none;"><span class="custom radio"></span> Radio Button 3</label>
+    </div>
+    <div class="four columns">
+      <label for="radio4"><input name="radio2" type="radio" id="radio4"> Radio Button 1</label>
+      <label for="radio5"><input name="radio2" CHECKED type="radio" id="radio5"> Radio Button 2</label>
+      <label for="radio6"><input name="radio2" type="radio" id="radio6"> Radio Button 3</label>
+    </div>
+
+    <!-- Custom Checkbox -->
+    <div class="four columns">
+      <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> Label for Checkbox</label>
+      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;"><span class="custom checkbox checked"></span> Label for Checkbox</label>
+      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3"> Label for Checkbox</label>
+    </div>
+  </div>
+<br>
+<br>
+  <!-- Custom Selects -->
+  <label for="customDropdown">Dropdown Label</label>
+  <select style="display:none;" id="customDropdown">
+    <option SELECTED>This is a dropdown</option>
+    <option>This is another option</option>
+    <option>Look, a third option</option>
+  </select>
+  <div class="custom dropdown">
+    <a href="#" class="current">
+      This is a dropdown
+    </a>
+    <a href="#" class="selector"></a>
+    <ul>
+      <li>This is a dropdown</li>
+      <li>This is another option</li>
+      <li>Look, a third option</li>
+    </ul>
+  </div>
+</form>
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
     </div>
   </div>
