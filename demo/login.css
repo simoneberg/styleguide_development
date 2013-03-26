@@ -192,32 +192,35 @@ p.centered {
 
 /* -- The following segment overwrites and reconfigures the dropdown control from foundation.min.css - by C.Zurita March 26th 2013 -- */
 form.custom div.custom.dropdown{
-	font-size:12px; /* This is the font-size for the TOP dropdown menu */
+	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
 }
 
 form.custom div.custom.dropdown a.current{
-    color:#999;  /* Font color gray to match the theme page */
+    	color:#999;  /* Font color gray to match theme page for the language once selected, English is the default  */
 }
 
-/* -- CZ This is the Language dropdown menu on the loggin page -- */
+/* -- CZ This is the actual dropdown menu on the login page -- */
 form.custom div.custom.dropdown ul{
-	border:solid 1px #999;  /* Line color gray to match the theme page */
+	border:solid 1px #999;  /* Dropdown menu border color to match theme page */
 }
 
-/* --  Language dropdown menu list on the loggin page -- */
+/* --  Dropdown item list -- */
 form.custom div.custom.dropdown ul li{
-	font-size:12px;	
-	color:#999;  /* Font color gray to match the theme page */	
+	font-size:12px;	 /* Dropdown menu items font size */
+	color:#999;  /* Dropdown menu items font color olor to match theme page */
 }
 
 form.custom div.custom.dropdown ul li.selected{
-color:#808080;  /* Darker gray font color when language is selected from menu */
+	color:#808080;  /* Darker gray font color when language is selected within the dropdown menu */
 }
 
 form.custom div.custom.dropdown ul li:hover{
-color:#808080;  /* Darker gray font color on hover on menu */
+	color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
 }
 
+form.custom div.custom.dropdown ul li.selected:hover{
+	color:#808080;  /* Darker gray font color on menu item already selected when mouse over */
+}
 /* -- End of overwriting and reconfiguring -- */
 
 .disclaimer > * {
