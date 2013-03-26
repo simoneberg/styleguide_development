@@ -34,7 +34,7 @@
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></li></div>
+    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
       <div class="top-nav">
         <ul>
           <li class="top-nav-links"><a href="#" class="username">John Doe</a></li>
@@ -208,25 +208,25 @@
               <div class="three columns active-step" id="step1">
                 <div class="step-number active-step-number"><p>1</p></div>
                 <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step2">
                 <div class="step-number"><p>2</p></div>
                 <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step3">
                 <div class="step-number"><p>3</p></div>
                 <div class="step-name-short alternate-step-number-3"><p>Share</p></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step4">
                 <div class="step-number"><p>4</p></div>
                 <div class="step-name-short alternate-step-numbe4"><p>Finish</p></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             </div>  
           </div>
@@ -347,7 +347,7 @@
                   <li>Gap Analysis</li>
                 </ul>
               </div>
-              <div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf05a;</p></a></div>
+              <div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf05a;</p></a></div>
 
           </fieldset>
           </form>
@@ -360,13 +360,13 @@
 
             <div>
               <p class="form-category-title">Display:</p>
-              <label for="checkbox5"><input type="checkbox"> Generate sections for each Group</label>
+              <label for="checkbox5"><input type="checkbox" id="checkbox5"> Generate sections for each Group</label>
               <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
-              <label for="checkbox6"><input type="checkbox"> Generate sections for each Person</label>
+              <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
               <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
-              <label for="checkbox7"><input type="checkbox"> Generate sections for each Position</label>
-              <label for="checkbox8"><input type="checkbox"> Show only high importance Skill Descriptions</label>
-              <label for="checkbox9"><input type="checkbox"> Grayscale</label>
+              <label for="checkbox7"><input type="checkbox" id="checkbox7"> Generate sections for each Position</label>
+              <label for="checkbox8"><input type="checkbox" id="checkbox8"> Show only high importance Skill Descriptions</label>
+              <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
             </div>
 
           </fieldset>
@@ -387,29 +387,30 @@
                 </div>
                 </div>
               </form>
+        </form>
               <!--****** ENABLE CHUNK ******-->
 
               <!--****** DATE CHUNK ******-->
               <form>
               <div class="row">
 
-                <div class="two mobile-one columns">
+                <div class="two mobile-one columns inline-input-override">
                   <label class="right inline custom-width-mobile-one">Start Date:</label>
                 </div>
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                   <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
 
-                <div class="two mobile-one columns">
+                <div class="two mobile-one columns inline-input-override">
                   <label class="right inline">End Date:</label>
                 </div>
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                   <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
                   
                 <div class="two mobile-one columns"></div>
                   
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                 <label for="checkbox10"><input type="checkbox"> No end date</label>
                 </div>
 
@@ -424,10 +425,10 @@
               <div class="row">
 
                 <div class="two mobile-one columns">
-                  <label for="customDropdown" class="right custom-dropdown-label">Time:</label>  
+                  <label for="customDropdown" class="right custom-dropdown-label inline-input-override">Time:</label>  
                 </div>
 
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                   <select style="display:none;" id="customDropdown">
                     <option SELECTED>12:00am</option>
                     <option>1:00 am</option>
@@ -453,8 +454,8 @@
                 
                 <div class="two mobile-one columns"></div>
                     
-                <div class="ten mobile-three columns">
-                  <span>(UTC - 7:00) MT (US &amp; Canada)</span>
+                <div class="ten mobile-three columns inline-input-override">
+                  <span><p style="margin-left:6px; margin-bottom: -15px; color:#333;">(UTC - 7:00) MT (US &amp; Canada)</p></span>
                 </div>
 
               </div></div>
@@ -467,11 +468,11 @@
 
               <div class="row">
 
-              <div class="two mobile-one columns">
+              <div class="two mobile-one columns inline-input-override">
                 <span class="right custom-label">Recurring:</span>
               </div>
 
-              <div class="ten columns">
+              <div class="ten columns inline-input-override recurring-radio-buttons">
                 <div class="radio-float"><label for="radio3"><input name="radio2" type="radio" id="radio3" style=""><span class="radio"></span> Daily</label></div>
                 <div class="radio-float"><label for="radio4"><input name="radio2" type="radio" id="radio4" style=""><span class="radio"></span> Weekly</label></div>
                 <div class="radio-float"><label for="radio5"><input name="radio2" type="radio" id="radio5" style=""><span class="radio"></span> Monthly</label></div>
@@ -484,7 +485,7 @@
 
                 <div class="two mobile-one columns"></div>
                   
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                   <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
                   <input type="text" placeholder="" class="" style="float:left; width:100px; margin-right:8px;"/>
                   <span style="float:left; margin-top:8px;">day(s)</span>
@@ -500,11 +501,11 @@
               <form>
               <div class="row">
               
-              <div class="two mobile-one columns">
+              <div class="two mobile-one columns inline-input-override">
                 <span class="right custom-label" >Notifications:</span>
               </div>
 
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override notifications-checkboxes">
                   <div class="label-float-mobile">
                     <label for="checkbox11"><input type="checkbox"> Bowen, Jenny (JBNX)</label>
                     <label for="checkbox12"><input type="checkbox"> Email</label>
@@ -523,7 +524,7 @@
                 <span class="right"></span>
               </div>
 
-                <div class="ten mobile-three columns" id="add-names-container">
+                <div class="ten mobile-three columns inline-input-override" id="add-names-container">
                   <img src="../images/add-names.png">                  
                   <img src="../images/recipients.png">
                 </div>
@@ -540,7 +541,7 @@
               </div>
 
           
-                <div class="ten mobile-three columns">
+                <div class="ten mobile-three columns inline-input-override">
                   <span><p style="margin-bottom:6px;">Within the notification email include:</p></span>
                 <label for="checkbox13"><input type="checkbox"> A link to the report</label>
                 </div>
@@ -557,7 +558,7 @@
             </div>
 
 
-
+</div>
   </div>
 
 </div>         
@@ -577,8 +578,8 @@
 
 <div class="row">
   <div class="twelve columns petrocore-footer">
-      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png"></div></div>
-      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
       <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
   </div>
 </div>
@@ -600,7 +601,7 @@
   
   <!-- END NAVIGATION -->
     </div>
-  </div>
+  <!--</div>-->
   <!-- CONTENT AREA -->
 
 <div id="myModal" class="reveal-modal expand">

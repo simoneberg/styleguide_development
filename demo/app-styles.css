@@ -298,6 +298,7 @@ display:none;
 	.dropdown-profile {
 		margin-top:-10px;
 		cursor: pointer;
+		float:left;
 	}
 
 	.toggle-nav-mobile {
@@ -535,6 +536,12 @@ display:none;
 	min-height: 500px;
 }
 
+@media only screen and (max-width: 768px) {
+.content-container {
+	border-left: none;
+}
+}
+
 @media only screen and (width: 768px) {
 .breadcrumbs-container {
 	padding:0px;
@@ -637,7 +644,6 @@ display:none;
 		width:180px;
 		background-repeat:no-repeat;
 		margin-top:6px;
-		margin-left:16px;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -648,7 +654,7 @@ display:none;
 		margin-top:4px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 325px;
+		width: 300px;
 		text-align:center;
 	}
 
@@ -2380,11 +2386,13 @@ p.form-category-title-bold {
 
 .custom-dropdown-label {
 	margin-top:8px;
+	margin-bottom: 8px;
 	font-weight: bold;
 }
 
 .custom-label {
 	margin-top:2px;
+	display: block;
 }
 
 label.inline {
@@ -2433,15 +2441,45 @@ form.custom div.custom.dropdown {
 
 @media only screen and (max-width: 767px) {
 .right.inline.custom-width-mobile-one {
-	width:100px;
+	width:280px;
+	/*background-color: orange;*/
+	float: left;
 }
 
-.label-float-mobile {
-	margin-left: 20px;
+.row .mobile-three {
+	width:100%;
+	float:left;
 }
+
+/*This makes form labels and fields float on top instead of left*/
+.ten.mobile-three.columns.inline-input-override {
+	width:100% !important;
+	float:left;
+	/*background-color: purple;*/
+}
+
+/*This makes form labels and fields float on top instead of left*/
+.two.mobile-one.columns.inline-input-override {
+	width:100% !important;
+	float:left;
+	margin-bottom: -12px;
+	/*background-color: green;*/
+}
+
+.recurring-radio-buttons {
+	margin-top: 26px;
+}
+
+.notifications-checkboxes {
+	margin-top: 26px;
+}
+
+/*.label-float-mobile {
+	margin-left: 20px;
+}*/
 
 input[type="text"].four.icon-after-input-field-float-mobile, .row input[type="text"].four.icon-after-input-field-float-mobile {
-width:86% !important;
+width:85% !important;
 }
 }
 
