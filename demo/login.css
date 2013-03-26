@@ -165,6 +165,61 @@ p.centered {
 	width: 30px;
 }
 
+/* -- Multi-Language selection dropdown box - by C.Zurita March 26th 2013 -- */
+#language-wrapper {
+	margin:0 auto;
+	width:218px;
+}
+
+#language-label {
+	position:relative;
+	top:23px;	
+	left:0px;
+	width:85px;
+	padding-right:4px;
+	font-size: 12px;
+	color: #999;
+	text-align:right;
+}
+
+#language-container {
+	position:relative;
+	top:0px;	
+	left:86px;
+	width:130px;
+	padding-left: 4px;
+}
+
+/* -- The following segment overwrites and reconfigures the dropdown control from foundation.min.css - by C.Zurita March 26th 2013 -- */
+form.custom div.custom.dropdown{
+	font-size:12px; /* This is the font-size for the TOP dropdown menu */
+}
+
+form.custom div.custom.dropdown a.current{
+    color:#999;  /* Font color gray to match the theme page */
+}
+
+/* -- CZ This is the Language dropdown menu on the loggin page -- */
+form.custom div.custom.dropdown ul{
+	border:solid 1px #999;  /* Line color gray to match the theme page */
+}
+
+/* --  Language dropdown menu list on the loggin page -- */
+form.custom div.custom.dropdown ul li{
+	font-size:12px;	
+	color:#999;  /* Font color gray to match the theme page */	
+}
+
+form.custom div.custom.dropdown ul li.selected{
+color:#808080;  /* Darker gray font color when language is selected from menu */
+}
+
+form.custom div.custom.dropdown ul li:hover{
+color:#808080;  /* Darker gray font color on hover on menu */
+}
+
+/* -- End of overwriting and reconfiguring -- */
+
 .disclaimer > * {
 	color: #aaa;
 	font-size: 12px;
