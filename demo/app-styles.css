@@ -3,6 +3,11 @@
 	width:100%;
 }
 
+	/*.six, .row .six {
+	width: 50%;
+	float: left;
+	}*/
+
 .columns.right-split-container {
 	padding:0px;
 }
@@ -1934,6 +1939,17 @@ visibility: hidden;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
 }
 
+#step2.active-step {
+	background: #bebebe;
+	background: -moz-linear-gradient(top,  #bebebe 0%, #d9d9d9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bebebe), color-stop(100%,#d9d9d9));
+	background: -webkit-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -o-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -ms-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: linear-gradient(to bottom,  #bebebe 0%,#d9d9d9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bebebe', endColorstr='#d9d9d9',GradientType=0 );	
+}
+
 #step3 {
 	height:55px;
 	width:23%;
@@ -1953,6 +1969,17 @@ visibility: hidden;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
 }
 
+#step3.active-step {
+	background: #bebebe;
+	background: -moz-linear-gradient(top,  #bebebe 0%, #d9d9d9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bebebe), color-stop(100%,#d9d9d9));
+	background: -webkit-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -o-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -ms-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: linear-gradient(to bottom,  #bebebe 0%,#d9d9d9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bebebe', endColorstr='#d9d9d9',GradientType=0 );	
+}
+
 #step4 {
 	height:55px;
 	width:23%;
@@ -1970,6 +1997,17 @@ visibility: hidden;
 	background: -ms-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
 	background: linear-gradient(to bottom,  #eaeaea 0%,#dddddd 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
+}
+
+#step4.active-step {
+	background: #bebebe;
+	background: -moz-linear-gradient(top,  #bebebe 0%, #d9d9d9 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bebebe), color-stop(100%,#d9d9d9));
+	background: -webkit-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -o-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: -ms-linear-gradient(top,  #bebebe 0%,#d9d9d9 100%);
+	background: linear-gradient(to bottom,  #bebebe 0%,#d9d9d9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bebebe', endColorstr='#d9d9d9',GradientType=0 );	
 }
 
 .step-number {
@@ -2407,6 +2445,9 @@ label.inline {
 	float:left;
 }
 
+
+
+
 .icon-after-input-field {
 	margin-left: 12px;
 	margin-top: 6px;
@@ -2424,8 +2465,27 @@ label.inline {
 	font-size: 16px;
 }
 
+.icon-after-dropdpwn-field {
+	margin-left: 2px;
+	margin-top: 16px;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+.icon-after-dropdown-field a {
+	color: #767676;
+	cursor: pointer;
+}
+
+.icon-after-dropdown-field p {
+	font-size: 16px;
+	margin-top: 7px;
+}
+
 form.custom div.custom.dropdown {
 	float:left;
+	margin-right:12px;
 }
 
 #add-names-container {
@@ -2438,6 +2498,10 @@ form.custom div.custom.dropdown {
 	width:20% !important;
 	float:left;
 }*/
+
+.form-description {
+	margin-top: -5px;
+}
 
 @media only screen and (max-width: 767px) {
 .right.inline.custom-width-mobile-one {
@@ -2482,4 +2546,51 @@ input[type="text"].four.icon-after-input-field-float-mobile, .row input[type="te
 width:85% !important;
 }
 }
+
+/*.custom-dropdown-large {
+	width:80px !important;
+}
+
+.custom-dropdown-medium {
+	width:80px !important;
+}*/
+
+.custom-dropdown-small {
+	width:80px !important;
+}
+
+.custom.no-margin-bottom {
+	margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+
+.custom-dropdown-large {
+	width:100% !important;
+	font-size: 12px;
+}
+
+.custom-dropdown-medium {
+	width:100% !important;
+	font-size: 12px;
+}
+
+.custom-dropdown-small {
+	width:100% !important;
+	font-size: 12px;
+}
+
+form.custom div.custom.dropdown {
+	float: left;
+	margin-right: 5px;
+}
+
+.icon-after-dropdown-field p {
+	margin-right: 10px;
+}
+}
+
+
+
+
 
