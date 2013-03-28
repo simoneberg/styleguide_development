@@ -200,23 +200,23 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>New Report Template</h4><div class="save-template-btn"><a class="success radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">View History</a></div>
             <hr>
           <div id="progress-indicator">
             
           <div class="row">
-              <div class="three columns" id="step1">
-                <a href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-new1.html" style="color:#222;">
-                <div class="step-number active-step-number"><p>1</p></div>
+              <div class="three columns active-step" id="step1">
+                <!-- <div class="step-number active-step-number"><p class="highlight-step">1</p></div> -->
                 <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
-              <div class="three columns active-step" id="step2">
-                <div class="step-number active-step-number"><p class="highlight-step">2</p></div>
+              <div class="three columns" id="step2">
+                <a href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-new2.html" style="color:#222;">
+                <div class="step-number"><p>2</p></div>
                 <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
-                <div class="step-completion"><div class="circle circle-active"><!--<div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div>--></div></div>
+                </a>
+                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
               </div>
             
               <div class="three columns" id="step3">
@@ -273,181 +273,293 @@
 
           <div class="form-container">
            
-          <form class="form-remove-margin-bottom">
-          <fieldset>
-          <legend>Select People</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
+<!--************** GENERAL INFORMATION FORM ****************-->
+           <form>  
+            <fieldset>
+            <legend>General Information</legend>
+            <div class="row">
+
+                <div class="two mobile-one columns">
+                  <label class="right inline">Name:</label>
                 </div>
-              </div>
-          </fieldset>
-          </form>
+                <div class="ten mobile-three columns">
+                  <input type="text" placeholder="" value="Template Name" class="four" />
+                </div>
+
+                <!--<div style="width:100%; float:left;">
+                <div class="one mobile-one columns">
+                  <label class="right inline">Creator:</label>
+                </div>
+                <div class="no-input-field">
+                  <span>Bowen, Jenny (JBNX)</span>
+                </div>
+                </div>
+
+                <div style="width:100%; float:left;">
+                <div class="one mobile-one columns">
+                  <label class="right inline">Owner:</label>
+                </div>
+                <div class="no-input-field">
+                  <span><a href="#">Bowen, Jenny (JBNX)</a></span>
+                </div>
+                </div>-->
+            </div>
 
             <div class="row">
-              <div class="four columns remove-padding">
-              <!--This is a dashboard panel-->
-                <div class="panel-wrapper-grey-tree">
-                  <div class="panel-header-small-static">
-                    <h5>Options</h5>
+                <div style="margin-bottom:34px;">
+                  <div class="two mobile-one columns">
+                    <span class="right custom-label">Creator:</span>
                   </div>
-                    <div class="panel-content-container">
-
-                      <div class="filters-checklist">
-                          <p class="options-description"><b>Include</b></p>
-                          <label for="checkbox1"><input type="checkbox" id="checkbox1"> Yourself</label>
-                          <label for="checkbox2"><input type="checkbox" id="checkbox2"> Others</label>                        
-                      </div>
-                      
-                      <hr class="petrocore-hr">              
                     
-                      <div class="filters-checklist">
-                          <p class="options-description"><b>Exclude</b></p>
-                          <label for="checkbox3"><input type="checkbox" id="checkbox3"> Supervisors</label>
-                          <label for="checkbox4"><input type="checkbox" id="checkbox4"> Mentors</label>
-                          <label for="checkbox5"><input type="checkbox" id="checkbox5"> Administrators</label>
-                          <label for="checkbox6"><input type="checkbox" id="checkbox6"> Managers</label>                          
-                      </div>
-                      
-                      <hr class="petrocore-hr"> 
-                          
-
-
-                    <p class="options-section"><b>Filter: </b><a href="#">Add a filter</a></p>
-
-
-
-                      <hr class="petrocore-hr"> 
-
-                      <div class="filter-list">
-                        <ul>
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                        </ul>
-                      </div>
-
-                    </div><!--Close panel wrapper grey-->
-
-                </div><!--Close panel content container-->
-
-              </div><!--Close row-->
-
-
-              <div class="eight columns remove-padding">
-                <div class="panel-wrapper-white-tree">
-
-                <div class="panel-header-small-static-action">
-                  <!-- <h5>Select all</h5> -->
-
-                  <label for="checkbox10" style="margin-top:4px;"><input type="checkbox" id="checkbox10"> Select All</label>
-                  <img src="../images/step2-tree.png" style="margin-left:-3px; margin-top:6px;">                  
-
+                  <div class="ten mobile-three columns text-only-custom-field">
+                    <span>Bowen, Jenny (JBNX)</span> 
+                  </div>
                 </div>
-              </div>
+            </div>
+  
+            <div class="row">
+                <div class="two mobile-one columns">
+                  <span class="right custom-label">Owner:</span>
+                </div>
+                  
+                <div class="ten mobile-three columns text-only-custom-field">
+                  <span><a href="#">Bowen, Jenny (JBNX)</a></span><a href="#"><p class="icon-" style="margin-left:10px; color: #cacaca;">&#xf08e;</p></a>
+                </div>
+            </div>
 
-              </div>
+            </fieldset>
+          </form>
+<!--************** GENERAL INFORMATION FORM ****************-->
 
-          </div><!--Close form container-->
-          
-
-
-
-
-          <div class="form-container" style="margin-top:25px;">
-           
-          <form class="form-remove-margin-bottom">
+<!--************** SELECT REPORT TYPE FORM ****************-->
+          <form class="custom">
           <fieldset>
-          <legend>Select People</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
-                </div>
+          <legend>Select Report Type</legend>
+
+             <!-- <label for="customDropdown">Dropdown Label</label> -->  
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>Gap Analysis</option>
+                <option>Gap Analysis</option>
+                <option>Gap Analysis</option>
+              </select>
+              <div class="custom dropdown">
+                <a href="#" class="current">
+                  Gap Analysis
+                </a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>Gap Analysis</li>
+                  <li>Gap Analysis</li>
+                  <li>Gap Analysis</li>
+                </ul>
               </div>
+              <div class="icon-after-dropdown-field"><a href="#"><p class="icon-">&#xf05a;</p></a></div>
+
           </fieldset>
           </form>
+<!--************** SELECT REPORT TYPE FORM ****************-->
 
-            <div class="row">
-              <div class="four columns remove-padding">
-              <!--This is a dashboard panel-->
-                <div class="panel-wrapper-grey-tree">
-                  <div class="panel-header-small-static">
-                    <h5>Options</h5>
-                  </div>
-                    <div class="panel-content-container">
+<!--************** OPTIONS FORM ****************-->
+          <form>
+          <fieldset>
+          <legend>Options</legend>
 
+            <div>
+              <p class="form-category-title">Display:</p>
+              <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
+              <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
+              <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
+              <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
+              <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
+              <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
+              <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
+            </div>
 
-              <form style="margin-top:10px;">
+          </fieldset>
+          </form>
+<!--************** OPTIONS FORM ****************-->
+
+<!--************** SCHEDULE FORM ****************-->
+         <form>
+          <fieldset>
+          <legend>Schedule</legend> 
+
+              <!--****** ENABLE CHUNK ******-->
+              <form>
                 <div class="row">
                 <div class="twelve columns">
-                  <div class="radio"><label for="radio1"><input name="radio1" type="radio" id="radio1" style="margin-bottom:13px;"><span class="radio"></span> Report on Assigned Position</label></div>
-                  <div class="radio"><label for="radio1"><input name="radio1" type="radio" id="radio1" style="margin-bottom:13px;"><span class="radio"></span> Report on people with the following Position(s) set as:</label></div>
-                  
-                  <form>
-                  <div class="radio"><label for="radio2"><input name="radio2" type="radio" id="radio1" style="margin-left:25px; margin-bottom:10px; margin-top:10px;"><span class="radio"></span> Assigned Position</label></div>
-                  <div class="radio"><label for="radio2"><input name="radio2" type="radio" id="radio1" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Growth Position</label></div>
-                  <div class="radio"><label for="radio2"><input name="radio2" type="radio" id="radio1" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Assigned or Growth Position</label></div>
-                  </form>
-
+                  <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1" style=""><span class="radio"></span> Enable Scheduling</label></div>
+                  <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2" style=""><span class="radio"></span> Disable Scheduling</label></div>
                 </div>
                 </div>
               </form>
+        </form>
+              <!--****** ENABLE CHUNK ******-->
 
-                  <hr class="petrocore-hr"> 
-                          
-                    <p class="options-section"><b>Filter: </b><a href="#">Add a filter</a></p>
+              <!--****** DATE CHUNK ******-->
+              <form>
+              <div class="row">
 
-                      <hr class="petrocore-hr"> 
+                <div class="two mobile-one columns inline-input-override">
+                  <label class="right inline custom-width-mobile-one">Start Date:</label>
+                </div>
+                <div class="ten mobile-three columns inline-input-override">
+                  <input type="text" placeholder="" value="03/28/2013" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
+                </div>
 
-                      <div class="filter-list">
-                        <ul>
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                <div class="two mobile-one columns inline-input-override">
+                  <label class="right inline">End Date:</label>
+                </div>
+                <div class="ten mobile-three columns inline-input-override">
+                  <input type="text" placeholder="" value="03/28/2014" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
+                </div>
+                  
+                <div class="two mobile-one columns"></div>
+                  
+                <div class="ten mobile-three columns inline-input-override">
+                <label for="checkbox10"><input type="checkbox"> No end date</label>
+                </div>
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+              </div>
+            </form>
+              <!--****** DATE CHUNK ******-->
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+        <!-- </form> -->
+            <!--****** TIME CHUNK ******-->
+            <form class="custom" >
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+              <div class="row">
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                <div class="two mobile-one columns">
+                  <label for="customDropdown" class="right custom-dropdown-label inline-input-override">Time:</label>  
+                </div>
 
-                        </ul>
-                      </div>
-
-                    </div><!--Close panel wrapper grey-->
-
-                </div><!--Close panel content container-->
-
-              </div><!--Close row-->
-
-
-              <div class="eight columns remove-padding">
-                <div class="panel-wrapper-white-tree">
-
-                <div class="panel-header-small-static-action">
-                  <!-- <h5>Select all</h5> -->
-
-                  <label for="checkbox10" style="margin-top:4px;"><input type="checkbox" id="checkbox10"> Select All</label>
-                  <img src="../images/step2-tree2.png" style="margin-left:-3px; margin-top:6px;">
+                <div class="ten mobile-three columns inline-input-override">
+                  <select style="display:none;" id="customDropdown">
+                    <option SELECTED>12:00am</option>
+                    <option>1:00 am</option>
+                    <option>2:00 am</option>
+                  </select>
+                  <div class="custom dropdown">
+                    <a href="#" class="current">
+                      12:00am
+                    </a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>1:00 am</li>
+                      <li>2:00 am</li>
+                      <li>3:00 am</li>
+                    </ul>
+                  </div>
+                <div>
 
                 </div>
+                </div>
+
+              <div class="row" style="margin-bottom:20px;">
+                
+                <div class="two mobile-one columns"></div>
+                    
+                <div class="ten mobile-three columns inline-input-override">
+                  <span><p style="margin-left:6px; margin-bottom: -15px; color:#333;">(UTC - 7:00) MT (US &amp; Canada)</p></span>
+                </div>
+
+              </div></div>
+
+            </form>
+            <!--****** TIME CHUNK ******-->
+
+            <!--****** RECURRING CHUNK ******-->
+            <form style="margin-bottom:-10px;">
+
+              <div class="row">
+
+              <div class="two mobile-one columns inline-input-override">
+                <span class="right custom-label">Recurring:</span>
+              </div>
+
+              <div class="ten columns inline-input-override recurring-radio-buttons">
+                <div class="radio-float"><label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3" style=""><span class="radio"></span> Daily</label></div>
+                <div class="radio-float"><label for="radio4"><input name="radio2" type="radio" id="radio4" style=""><span class="radio"></span> Weekly</label></div>
+                <div class="radio-float"><label for="radio5"><input name="radio2" type="radio" id="radio5" style=""><span class="radio"></span> Monthly</label></div>
               </div>
 
               </div>
 
-          </div><!--Close form container-->
+
+              <div class="row">
+
+                <div class="two mobile-one columns"></div>
+                  
+                <div class="ten mobile-three columns inline-input-override">
+                  <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
+                  <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
+                  <span style="float:left; margin-top:8px;">day(s)</span>
+                </div>
+              </div>
+              </div>
+
+            </form>
+            <!--****** RECURRING CHUNK ******-->
+
+            <!--****** NOTIFICATIONS CHUNK ******-->
+              
+              <form>
+              <div class="row">
+              
+              <div class="two mobile-one columns inline-input-override">
+                <span class="right custom-label" >Notifications:</span>
+              </div>
+
+                <div class="ten mobile-three columns inline-input-override notifications-checkboxes">
+                  <div class="label-float-mobile">
+                    <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+                    <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
+                  </div>
+                </div>
+              </div>
+              </form>
 
 
+
+
+              <form>
+              <div class="row">
+
+              <div class="two mobile-one columns">
+                <span class="right"></span>
+              </div>
+
+                <div class="ten mobile-three columns inline-input-override" id="add-names-container">
+                  <img src="../images/add-names.png">                  
+                  <img src="../images/recipients.png">
+                </div>
+
+              </div>
+              </form>
+
+
+              <form>
+              <div class="row">
+
+              <div class="two mobile-one columns">
+                <span class="right"></span>
+              </div>
+
+          
+                <div class="ten mobile-three columns inline-input-override">
+                  <span><p style="margin-bottom:6px;">Within the notification email include:</p></span>
+                <label for="checkbox13"><input type="checkbox"> A link to the report</label>
+                </div>
+
+              </div>
+              </form>
+
+            </fieldset>
+            </form>
+            <!--****** NOTIFICATIONS CHUNK ******-->
             <br>
-            <a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-new1.html">Back</a>
-            <a class="primary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-new3.html">Next</a>
+            <a class="primary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-new2.html">Next</a>
 
             </div>
 

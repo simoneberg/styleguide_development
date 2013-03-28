@@ -1422,6 +1422,22 @@ ul.accordion>li>div.title:after {
 	background-color: #f0f0f0;
 }
 
+.panel-wrapper-grey-tree {
+	border:1px solid #8a8a8a;
+	background-color: #f0f0f0;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10px;
+	min-height: 519px;
+}
+
+.panel-wrapper-white-tree {
+	border:1px solid #8a8a8a;
+	background-color: #fff;
+	min-height: 519px;
+	overflow: hidden;
+}
+
 .panel-header {
 	height:50px;
 	width:100%;
@@ -1468,6 +1484,43 @@ ul.accordion>li>div.title:after {
 	box-shadow: inset 0px 1px 1px #d1d1d1;
 	border-bottom:1px solid #717171;
 	cursor: move;
+}
+
+.panel-header-small-static {
+	height:30px;
+	width:100%;
+	clear: both;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 2px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #c0c0c0;
+	background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+	background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+	background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+	-moz-box-shadow: inset 0px 1px 1px #d1d1d1;
+	-webkit-box-shadow: inset 0px 1px 1px #d1d1d1;
+	box-shadow: inset 0px 1px 1px #d1d1d1;
+	border-bottom:1px solid #717171;
+}
+
+.panel-header-small-static-action {
+	height:30px;
+	width:100%;
+	clear: both;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding-top: 2px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #f0f0f0;
+
+	border-bottom:1px solid #717171;
 }
 
 .panel-footer {
@@ -1547,6 +1600,13 @@ ul.accordion>li>div.title:after {
 	margin-top: 4px;
 	margin-bottom: 0px;
 }
+
+.panel-header-small-static h5 {
+	margin-top: 4px;
+	margin-bottom: 0px;
+	font-size: 16px;
+}
+
 
 .panel-action-icons.icon- {
 	font-size: 16px;
@@ -2037,6 +2097,18 @@ visibility: hidden;
 	margin-top: -10px;
 }
 
+.highlight-step {
+	color:#48779f;
+}
+
+
+/*.step-number.active-step-number
+
+
+.step-number.active-step-number p .active{
+color:red;
+}*/
+
 .step-name {
 	height:30px;
 	width:100px;
@@ -2503,6 +2575,79 @@ form.custom div.custom.dropdown {
 	margin-top: -5px;
 }
 
+.form-description.remove-margin-bottom {
+	margin-bottom: 0px;
+}
+
+.form-remove-margin-bottom {
+	margin-bottom: 0px;
+}
+
+.options-description {
+	margin-top: 5px;
+	margin-bottom: 3px;
+}
+
+.options-section {
+	margin-top: -3px;
+	margin-bottom: 8px;
+}
+
+.filter-list ul {
+	list-style: none;
+}
+
+.filter-list li {
+	margin-bottom:6px;
+	float:left;
+}
+
+.filter-action-icons {
+	float:right;
+	height:23px;
+}
+
+.options-panel-fixed-width {
+	width:300px !important;
+	padding: 0px;
+	float:left;
+}
+
+.nine.columns.remove-padding {
+	padding:0px;
+	float:left;
+	margin-left:-1px;
+}
+
+.four.columns.remove-padding {
+	padding:0px;
+/*	float:left;*/
+	margin-left:-1px;
+}
+
+.eight.columns.remove-padding {
+	padding:0px;
+	float:left;
+	margin-left:-1px;
+}
+
+.filter-list-elements {
+	width:100%; 
+	background-color: #e7e7e7; 
+	padding: 5px 10px 5px 10px; 
+	clear:both;
+}
+
+.filter-edit-icon {
+	margin-left:10px;
+	margin-bottom:0px; 
+	color:#717171;
+}
+
+/*.icon-.filter-edit-icon {
+	color:#717171;
+}
+*/
 @media only screen and (max-width: 767px) {
 .right.inline.custom-width-mobile-one {
 	width:280px;
@@ -2591,6 +2736,53 @@ form.custom div.custom.dropdown {
 }
 
 
+@media only screen and (min-width: 769px) and (max-width: 1155px) {
+.filter-action-icons {
+	float:left;
+	height:23px;
+	/*background-color: red;*/
+	width:100%;
+}
 
+.filter-edit-icon {
+margin-left: 0px;
+}
+}
+
+
+@media only screen and (max-width: 767px) {
+.eight.columns.remove-padding {
+	width: 100.2% !important;
+	margin-top: -1px;
+}
+}
+
+
+@media only screen and (width: 768px) {
+.eight.columns.remove-padding {
+	width: 100% !important;
+	margin-top: -1px;
+}
+
+.four.columns.remove-padding {
+width: 100%;
+}
+}
+
+.save-template-btn {
+	float: right;
+	margin-top: -34px;
+	margin-bottom: 8px;
+}
+
+
+@media only screen and (max-width: 767px) {
+.save-template-btn {
+	float:none;
+	width:100%;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+}
 
 
