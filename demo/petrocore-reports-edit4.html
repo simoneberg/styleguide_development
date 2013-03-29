@@ -200,39 +200,39 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>New Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-history.html">View History</a></div>
             <hr>
           <div id="progress-indicator">
             
           <div class="row">
               <div class="three columns" id="step1">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new1.html" style="color:#222;">
-                <div class="step-number active-step-number"><p>1</p></div>
+                <a href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit1.html" style="color:#222;">
+                <!-- <div class="step-number active-step-number"><p>1</p></div> -->
                 <div class="step-name alternate-step-number-1"><p>Properties</p></div>
                 </a>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step2">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new2.html" style="color:#222;">
-                <div class="step-number active-step-number"><p>2</p></div>
+                <a href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit2.html" style="color:#222;">
+                <!-- <div class="step-number active-step-number"><p>2</p></div> -->
                 <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
                 </a>
                 <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
-              <div class="three columns active-step" id="step3">
-                <div class="step-number active-step-number"><p class="highlight-step">3</p></div>
+              <div class="three columns" id="step3">
+                <a href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit3.html" style="color:#222;">
+                <!-- <div class="step-number active-step-number"><p>3</p></div> -->
                 <div class="step-name-short alternate-step-number-3"><p>Share</p></div>
+                </a>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
-              <div class="three columns" id="step4">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new4.html" style="color:#222;">
-                <div class="step-number"><p>4</p></div>
-                <div class="step-name-short alternate-step-numbe4"><p>Finish</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+              <div class="three columns  active-step" id="step4">
+                <!-- <div class="step-number active-step-number"><p class="highlight-step">4</p></div> -->
+                <div class="step-name-short alternate-step-numbe4"><p>Reports</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             </div>  
           </div>
@@ -275,7 +275,7 @@
            
           <form class="form-remove-margin-bottom">
           <fieldset>
-          <legend>Share Report Template with Positions</legend>
+          <legend>Generated Reports</legend>
               <div class="row">
                 <div class="twelve columns">
                   <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
@@ -284,85 +284,108 @@
           </fieldset>
           </form>
 
-            <div class="row">
-
-              <div class="eight columns remove-padding">
-                <div class="panel-wrapper-white-tree">
-                  <img src="../images/step3-tree.png" style="margin-left:10px; margin-top:6px;">                  
-              </div>
-              </div>
-              <div class="four columns"></div>
-            
-            </div><!--Close row-->
-
-          </div><!--Close form container-->
           
 
 
+ <div class="panel-wrapper">
+                    
 
 
-          <div class="form-container" style="margin-top:25px;">
-           
-          <form class="form-remove-margin-bottom">
-          <fieldset>
-          <legend>Share Report Template with Groups</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
-                </div>
-              </div>
-          </fieldset>
-          </form>
 
-            <div class="row">
+                    <div class="table-header-action">
+                      <a class="primary radius button left" href="#">Generate Report</a>
+                    </div>
 
-              <div class="eight columns remove-padding">
-                <div class="panel-wrapper-white-tree">
-                  <img src="../images/step3-tree2.png" style="margin-left:10px; margin-top:6px;">                  
-              </div>
-              </div>
-              <div class="four columns"></div>
-            
-            </div><!--Close row-->
+          <!--***** TABLE *****-->
 
-          </div><!--Close form container-->
+          <table id="report-templates-table" class="twelve nested-table">
+            <thead>
+              <tr>
+                <th class="select-all-column"><i class="icon-">&#xf00c;</i></th>
+                <th>Name</th>
+                <th>Type</th>
+                <th># Generated</th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <tr>
+                <td>
+                  <label for="checkbox13"><input type="checkbox" id="checkbox13"></label>
+                </td>    
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Activity Profile</td>
+                <td>2 Reports</td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="checkbox14"><input type="checkbox" id="checkbox14"></label>
+                </td>                 
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Activity Profile</td>
+                <td>4 Reports</td>
+              </tr>
 
+              <tr>
+                <td>
+                  <label for="checkbox15"><input type="checkbox" id="checkbox15"></label>
+                </td>               
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Activity Profile</td>
+                <td>15 Reports</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="checkbox16"><input type="checkbox" id="checkbox16"></label>
+                </td>                 
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Competency Object</td>
+                <td>9 Reports</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="checkbox17"><input type="checkbox" id="checkbox17"></label>
+                </td>                 
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Competency Status Trending</td>
+                <td>1 Report</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="checkbox18"><input type="checkbox" id="checkbox18"></label>
+                </td>                
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Gap Analysis</td>
+                <td>3 Reports</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label for="checkbox19"><input type="checkbox" id="checkbox19"></label>
+                </td>                
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>Gap Analysis</td>
+                <td>6 Reports</td>
+              </tr>
+
+            </tbody>
+          </table>
           
 
 
+          <!--***** TABLE *****-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
 
 
             <br>
-            <a class="secondary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new2.html">Back</a>
-            <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new4.html">Next</a>
+            <!-- <a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit3.html">Back</a>
+            <a class="success radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">Finish</a> -->
 
             </div>
 
