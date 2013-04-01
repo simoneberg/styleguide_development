@@ -2648,6 +2648,18 @@ form.custom div.custom.dropdown {
 	color:#717171;
 }
 */
+
+.accordion > li > .title h6 a {
+	color: #333;
+	display: block;
+	line-height: inherit;
+}
+
+.accordion > li.no-dropdown > div.title:after {
+	content: "";
+}
+
+
 @media only screen and (max-width: 767px) {
 .right.inline.custom-width-mobile-one {
 	width:280px;
