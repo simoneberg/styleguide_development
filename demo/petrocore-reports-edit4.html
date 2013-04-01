@@ -34,7 +34,7 @@
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></li></div>
+    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
       <div class="top-nav">
         <ul>
           <li class="top-nav-links"><a href="#" class="username">John Doe</a></li>
@@ -200,70 +200,94 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Report Templates</h4>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-history.html">View History</a></div>
             <hr>
-  
-          <!--***** CHARTS *****-->
+          <div id="progress-indicator">
+            
+          <div class="row">
+              <div class="three columns" id="step1">
+                <!-- <div class="step-number active-step-number"><p>1</p></div> -->
+                <div class="step-name alternate-step-number-1"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html" style="color:#222;"><p>Properties</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            
+              <div class="three columns" id="step2">
+                <!-- <div class="step-number active-step-number"><p>2</p></div> -->
+                <div class="step-name-long alternate-step-number-2"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html" style="color:#222;"><p>People &amp; Position</p></a></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            
+              <div class="three columns" id="step3">
+                <!-- <div class="step-number active-step-number"><p>3</p></div> -->
+                <div class="step-name-short alternate-step-number-3"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit3.html" style="color:#222;"><p>Share</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            
+              <div class="three columns  active-step" id="step4">
+                <!-- <div class="step-number active-step-number"><p class="highlight-step">4</p></div> -->
+                <div class="step-name-short alternate-step-numbe4"><p>Reports</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            </div>  
+          </div>
 
-            <div class="row">
-              <div class="twelve columns visible-charts">
-              <!--This is a dashboard panel-->
-                <div class="panel-wrapper-grey">
-                  <div class="panel-header-small">
-                    <h5>Report Types Filter</h5>
-                  </div>
-                    <div class="panel-content-container">
-                      <div id="report-types-filter">
-                        <ul>
-                          <li class="horizontal-list">Select: </li>
-                          <li class="horizontal-list"><a href="#">All</a></li>
-                          <li class="horizontal-list"><a href="#">None</a></li>
-                        </ul>
-                      </div>
+          <br>
+          <!--
+          <div id="progress-indicator-test">
 
-                      <hr class="petrocore-hr">
+              <div id="step11">
+                <div class="step-number"><p>1</p></div>
+                <div class="step-name"><p>Properties</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+              </div>
+            
+              <div id="step22">
+                <div class="step-number"><p>2</p></div>
+                <div class="step-name-long"><p>People &amp; Position</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+              </div>
+            
+              <div id="step33">
+                <div class="step-number"><p>3</p></div>
+                <div class="step-name-short"><p>Share</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+              </div>
+            
+              <div id="step44">
+                <div class="step-number"><p>4</p></div>
+                <div class="step-name-short"><p>Finish</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
+              </div> 
+            
+            </div>
+          -->
 
-                      <div class="row filters-checklist">
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox1"><input type="checkbox" id="checkbox1"> Activity Profile</label>
-                          <label for="checkbox2"><input type="checkbox" id="checkbox2"> Activity Profile Excel</label>
-                          <label for="checkbox3"><input type="checkbox" id="checkbox3"> Assessment Status</label>
-                          <label for="checkbox4"><input type="checkbox" id="checkbox4"> Competency Inventory</label>
-                        </div>
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox5"><input type="checkbox" id="checkbox5"> Competency Object</label>
-                          <label for="checkbox6"><input type="checkbox" id="checkbox6"> Competency Status Trending</label>
-                          <label for="checkbox7"><input type="checkbox" id="checkbox7"> Development Plan</label>
-                          <label for="checkbox8"><input type="checkbox" id="checkbox8"> Export Development Data</label>
-                        </div>
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox9"><input type="checkbox" id="checkbox9"> Gap Analysis</label>
-                          <label for="checkbox10"><input type="checkbox" id="checkbox10"> Gap Analysis Excel</label>
-                          <label for="checkbox11"><input type="checkbox" id="checkbox11"> History/Activity</label>
-                          <label for="checkbox12"><input type="checkbox" id="checkbox12"> Qualified Persons</label>
-                        </div>
-                    </div>
-                  </div>
+
+  <!--***** FORMS *****-->
+
+          <div class="form-container">
+           
+          <form class="form-remove-margin-bottom">
+          <fieldset>
+          <legend>Generated Reports</legend>
+              <div class="row">
+                <div class="twelve columns">
+                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
                 </div>
               </div>
-          <hr>
-              <!--This is a dashboard panel-->
-                <div class="panel-wrapper">
+          </fieldset>
+          </form>
+
+          
+
+
+ <div class="panel-wrapper">
                     
 
 
 
                     <div class="table-header-action">
-                      <a class="success radius button left" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new1.html">New Report Template</a>
-                      <!--<ul class="button-group radius left">
-                        <li><a href="#" class="secondary button radius">Duplicate Template</a></li>
-                        <li><a href="#" class="secondary button radius">Delete Template</a></li>
-                      </ul> -->
-                      <a class="secondary radius button left" href="#">Duplicate Template</a>
-
-                      <a class="alert radius button left" href="#">Delete Template</a>
-
-                      <a class="primary radius button right" href="#">Generate Report</a>
+                      <a class="primary radius button left" href="#">Generate Report</a>
                     </div>
 
           <!--***** TABLE *****-->
@@ -273,8 +297,8 @@
               <tr>
                 <th class="select-all-column"><i class="icon-">&#xf00c;</i></th>
                 <th>Name</th>
-                <th>Type</th>
-                <th># Generated</th>
+                <th>Date Created</th>
+                <th>Date Updated</th>
               </tr>
             </thead>
             <tbody>
@@ -283,63 +307,63 @@
                 <td>
                   <label for="checkbox13"><input type="checkbox" id="checkbox13"></label>
                 </td>    
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Activity Profile</td>
-                <td>2 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
               
               <tr>
                 <td>
                   <label for="checkbox14"><input type="checkbox" id="checkbox14"></label>
                 </td>                 
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Activity Profile</td>
-                <td>4 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
               <tr>
                 <td>
                   <label for="checkbox15"><input type="checkbox" id="checkbox15"></label>
                 </td>               
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Activity Profile</td>
-                <td>15 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
               <tr>
                 <td>
                   <label for="checkbox16"><input type="checkbox" id="checkbox16"></label>
                 </td>                 
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Competency Object</td>
-                <td>9 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
               <tr>
                 <td>
                   <label for="checkbox17"><input type="checkbox" id="checkbox17"></label>
                 </td>                 
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Competency Status Trending</td>
-                <td>1 Report</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
               <tr>
                 <td>
                   <label for="checkbox18"><input type="checkbox" id="checkbox18"></label>
                 </td>                
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Gap Analysis</td>
-                <td>3 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
               <tr>
                 <td>
                   <label for="checkbox19"><input type="checkbox" id="checkbox19"></label>
                 </td>                
-                <td><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html">Template Lorem Ipsum Dolore Secum</a></td>
-                <td>Gap Analysis</td>
-                <td>6 Reports</td>
+                <td><a href="#">Template Lorem Ipsum Dolore Secum</a></td>
+                <td>05/12/2012</td>
+                <td>02/10/2013</td>
               </tr>
 
             </tbody>
@@ -349,15 +373,26 @@
 
           <!--***** TABLE *****-->
 
-                  </div>
-                </div>
-              </div>
-               <!--This is a dashboard panel-->
+</div>
+
+
+
+            <br>
+            <!-- <a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit3.html">Back</a>
+            <a class="success radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports.html">Finish</a> -->
+
+            </div>
+
+
+     
+
+
+
 
 
       </div><!--Close Content Container-->   
   </div>
-  <!-- </div> -->
+  </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -367,7 +402,7 @@
 <div class="row">
   <div class="twelve columns petrocore-footer">
       <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
-      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
       <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
   </div>
 </div>
@@ -389,7 +424,7 @@
   
   <!-- END NAVIGATION -->
     <!-- </div> -->
-  <!-- </div> -->
+  <!--</div>-->
   <!-- CONTENT AREA -->
 
 <div id="myModal" class="reveal-modal expand">

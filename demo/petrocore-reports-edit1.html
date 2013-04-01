@@ -200,39 +200,36 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>New Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-history.html">View History</a></div>
             <hr>
           <div id="progress-indicator">
             
           <div class="row">
               <div class="three columns active-step" id="step1">
-                <div class="step-number active-step-number"><p class="highlight-step">1</p></div>
-                <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-                <div class="step-completion"><div class="circle circle-active"><!--<div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div>--></div></div>
+                <!-- <div class="step-number active-step-number"><p class="highlight-step">1</p></div> -->
+                <div class="step-name alternate-step-number-1"><p>Properties</p></div>            
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step2">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new2.html" style="color:#222;">
-                <div class="step-number"><p>2</p></div>
-                <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+                <!-- <div class="step-number"><p>2</p></div> -->
+                <div class="step-name-long alternate-step-number-2"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html" style="color:#222;">
+<p>People &amp; Position</p></a></div>
+                
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step3">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new3.html" style="color:#222;">
-                <div class="step-number"><p>3</p></div>
-                <div class="step-name-short alternate-step-number-3"><p>Share</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+                <!-- <div class="step-number"><p>3</p></div> -->
+                <div class="step-name-short alternate-step-number-3"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit3.html" style="color:#222;"><p>Share</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step4">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new4.html" style="color:#222;">
-                <div class="step-number"><p>4</p></div>
-                <div class="step-name-short alternate-step-numbe4"><p>Finish</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+                <!-- <div class="step-number"><p>4</p></div> -->
+                <div class="step-name-short alternate-step-numbe4"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit4.html" style="color:#222;">
+<p>Reports</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             </div>  
           </div>
@@ -283,7 +280,7 @@
                   <label class="right inline">Name:</label>
                 </div>
                 <div class="ten mobile-three columns">
-                  <input type="text" placeholder="" class="four" />
+                  <input type="text" placeholder="" value="Template Name" class="four" />
                 </div>
 
                 <!--<div style="width:100%; float:left;">
@@ -366,12 +363,12 @@
 
             <div>
               <p class="form-category-title">Display:</p>
-              <label for="checkbox5"><input type="checkbox" id="checkbox5"> Generate sections for each Group</label>
+              <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
               <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
               <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
               <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
-              <label for="checkbox7"><input type="checkbox" id="checkbox7"> Generate sections for each Position</label>
-              <label for="checkbox8"><input type="checkbox" id="checkbox8"> Show only high importance Skill Descriptions</label>
+              <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
+              <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
               <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
             </div>
 
@@ -404,14 +401,14 @@
                   <label class="right inline custom-width-mobile-one">Start Date:</label>
                 </div>
                 <div class="ten mobile-three columns inline-input-override">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
+                  <input type="text" placeholder="" value="03/28/2013" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
 
                 <div class="two mobile-one columns inline-input-override">
                   <label class="right inline">End Date:</label>
                 </div>
                 <div class="ten mobile-three columns inline-input-override">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
+                  <input type="text" placeholder="" value="03/28/2014" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
                   
                 <div class="two mobile-one columns"></div>
@@ -479,7 +476,7 @@
               </div>
 
               <div class="ten columns inline-input-override recurring-radio-buttons">
-                <div class="radio-float"><label for="radio3"><input name="radio2" type="radio" id="radio3" style=""><span class="radio"></span> Daily</label></div>
+                <div class="radio-float"><label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3" style=""><span class="radio"></span> Daily</label></div>
                 <div class="radio-float"><label for="radio4"><input name="radio2" type="radio" id="radio4" style=""><span class="radio"></span> Weekly</label></div>
                 <div class="radio-float"><label for="radio5"><input name="radio2" type="radio" id="radio5" style=""><span class="radio"></span> Monthly</label></div>
               </div>
@@ -493,7 +490,7 @@
                   
                 <div class="ten mobile-three columns inline-input-override">
                   <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
-                  <input type="text" placeholder="" class="" style="float:left; width:100px; margin-right:8px;"/>
+                  <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
                   <span style="float:left; margin-top:8px;">day(s)</span>
                 </div>
               </div>
@@ -513,8 +510,8 @@
 
                 <div class="ten mobile-three columns inline-input-override notifications-checkboxes">
                   <div class="label-float-mobile">
-                    <label for="checkbox11"><input type="checkbox" id="checkbox11"> Bowen, Jenny (JBNX)</label>
-                    <label for="checkbox12"><input type="checkbox" id="checkbox12"> Email</label>
+                    <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+                    <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
                   </div>
                 </div>
               </div>
@@ -559,7 +556,7 @@
             </form>
             <!--****** NOTIFICATIONS CHUNK ******-->
             <br>
-            <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new2.html">Next</a>
+            <!-- <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html">Next</a> -->
 
             </div>
 

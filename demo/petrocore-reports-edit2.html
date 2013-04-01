@@ -200,39 +200,33 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>New Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-history.html">View History</a></div>
             <hr>
           <div id="progress-indicator">
             
           <div class="row">
               <div class="three columns" id="step1">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new1.html" style="color:#222;">
-                <div class="step-number active-step-number"><p>1</p></div>
-                <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-                </a>
+                <!-- <div class="step-number active-step-number"><p>1</p></div> -->
+                <div class="step-name alternate-step-number-1"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit1.html" style="color:#222;"><p>Properties</p></a></div>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns active-step" id="step2">
-                <div class="step-number active-step-number"><p class="highlight-step">2</p></div>
+                <!--<div class="step-number active-step-number"><p class="highlight-step">2</p></div>-->
                 <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
-                <div class="step-completion"><div class="circle circle-active"><!--<div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div>--></div></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step3">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new3.html" style="color:#222;">
-                <div class="step-number"><p>3</p></div>
-                <div class="step-name-short alternate-step-number-3"><p>Share</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+                <!-- <div class="step-number"><p>3</p></div> -->
+                <div class="step-name-short alternate-step-number-3"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit3.html" style="color:#222;"><p>Share</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step4">
-                <a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new4.html" style="color:#222;">
-                <div class="step-number"><p>4</p></div>
-                <div class="step-name-short alternate-step-numbe4"><p>Finish</p></div>
-                </a>
-                <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+                <!-- <div class="step-number"><p>4</p></div> -->
+                <div class="step-name-short alternate-step-numbe4"><a href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit4.html" style="color:#222;"><p>Reports</p></a></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             </div>  
           </div>
@@ -295,8 +289,8 @@
 
                       <div class="filters-checklist">
                           <p class="options-description"><b>Include</b></p>
-                          <label for="checkbox1"><input type="checkbox" id="checkbox1"> Yourself</label>
-                          <label for="checkbox2"><input type="checkbox" id="checkbox2"> Others</label>                        
+                          <label for="checkbox1"><input type="checkbox" CHECKED id="checkbox1"> Yourself</label>
+                          <label for="checkbox2"><input type="checkbox" CHECKED id="checkbox2"> Others</label>                        
                       </div>
                       
                       <hr class="petrocore-hr">              
@@ -304,7 +298,7 @@
                       <div class="filters-checklist">
                           <p class="options-description"><b>Exclude</b></p>
                           <label for="checkbox3"><input type="checkbox" id="checkbox3"> Supervisors</label>
-                          <label for="checkbox4"><input type="checkbox" id="checkbox4"> Mentors</label>
+                          <label for="checkbox4"><input type="checkbox" CHECKED id="checkbox4"> Mentors</label>
                           <label for="checkbox5"><input type="checkbox" id="checkbox5"> Administrators</label>
                           <label for="checkbox6"><input type="checkbox" id="checkbox6"> Managers</label>                          
                       </div>
@@ -321,15 +315,13 @@
 
                       <div class="filter-list">
                         <ul>
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                          <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
 
                           <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                          <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                         
 
                         </ul>
                       </div>
@@ -384,21 +376,23 @@
                     <div class="panel-content-container">
 
 
-              <form style="margin-top:10px;">
+              
                 <div class="row">
                 <div class="twelve columns">
-                  <div class="radio"><label for="radio1"><input name="radio1" type="radio" id="radio1" style="margin-bottom:13px;"><span class="radio"></span> Report on Assigned Position</label></div>
-                  <div class="radio"><label for="radio2"><input name="radio1" type="radio" id="radio2" style="margin-bottom:13px;"><span class="radio"></span> Report on people with the following Position(s) set as:</label></div>
-                  
+                  <form style="margin-top:10px;">
+                    <div class="radio"><label for="radio1"><input name="radio1" type="radio" id="radio1" style="margin-bottom:13px;"><span class="radio"></span> Report on Assigned Position</label></div>
+                    <div class="radio"><label for="radio2"><input name="radio2" type="radio" CHECKED id="radio2" style="margin-bottom:13px;"><span class="radio"></span> Report on people with the following Position(s) set as:</label></div>
+                  </form>
+
                   <form>
-                  <div class="radio"><label for="radio3"><input name="radio3" type="radio" id="radio3" style="margin-left:25px; margin-bottom:10px; margin-top:10px;"><span class="radio"></span> Assigned Position</label></div>
-                  <div class="radio"><label for="radio4"><input name="radio4" type="radio" id="radio4" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Growth Position</label></div>
-                  <div class="radio"><label for="radio5"><input name="radio5" type="radio" id="radio5" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Assigned or Growth Position</label></div>
+                    <div class="radio"><label for="radio3"><input name="radio3" type="radio" CHECKED id="radio3" style="margin-left:25px; margin-bottom:10px; margin-top:5px;"><span class="radio"></span> Assigned Position</label></div>
+                    <div class="radio"><label for="radio4"><input name="radio4" type="radio" id="radio4" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Growth Position</label></div>
+                    <div class="radio"><label for="radio5"><input name="radio5" type="radio" id="radio5" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Assigned or Growth Position</label></div>
                   </form>
 
                 </div>
                 </div>
-              </form>
+              <!-- </form> -->
 
                   <hr class="petrocore-hr"> 
                           
@@ -410,13 +404,7 @@
                         <ul>
                           <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
 
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                          <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
 
                         </ul>
                       </div>
@@ -434,7 +422,7 @@
                 <div class="panel-header-small-static-action">
                   <!-- <h5>Select all</h5> -->
 
-                  <label for="checkbox10" style="margin-top:4px;"><input type="checkbox" id="checkbox10"> Select All</label>
+                  <label for="checkbox11" style="margin-top:4px;"><input type="checkbox" id="checkbox11"> Select All</label>
                   <img src="../images/step2-tree2.png" style="margin-left:-3px; margin-top:6px;">
 
                 </div>
@@ -446,16 +434,13 @@
 
 
             <br>
-            <a class="secondary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new1.html">Back</a>
-            <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-new3.html">Next</a>
+            <!-- <a class="secondary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit1.html">Back</a>
+            <a class="primary radius button" href="file://localhost/Users/seemadoshi/projects/petroskills-style-guide/demo/petrocore-reports-edit3.html">Next</a> -->
 
             </div>
 
 
-</div>
-  </div>
-
-</div>         
+  
 
 
 

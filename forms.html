@@ -21,6 +21,57 @@
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="stylesheets/foundation-override.css">
 
+<style>
+
+form {font-family: verdana, sans-serif;}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"],
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+textarea {
+  border: 1px solid #5b5b5b;
+  -moz-box-shadow: 0px 1px #c5c5c5;
+  -webkit-box-shadow: 0px 1px #c5c5c5;
+  box-shadow: 0px 1px #c5c5c5;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="date"]:focus, 
+input[type="datetime"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus, 
+textarea:focus {
+  -moz-box-shadow: inset 0 0 7px 0px #8fb1ce, 0px 1px #c5c5c5;
+  -webkit-box-shadow: inset 0 0 7px 0px #8fb1ce, 0px 1px #c5c5c5;
+  box-shadow: inset 0 0 7px 0px #8fb1ce, 0px 1px #c5c5c5;
+  border: 1px solid #5b5b5b;
+}
+
+label {
+  font-weight: bold;
+}
+
+.default label {
+  font-weight: normal;
+}
+
+*:focus {
+    outline: none;
+}
+</style>
+
   <script src="javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
@@ -126,7 +177,7 @@
 <!-- Right aligned and inline labels -->
 <h3>Right-Aligned Form</h3>
 <p>Sometimes you want a form with labels to the left of your inputs. You can add a class of <strong>.right</strong> to a label to have it align to the right, and if your label is next to an input (in another column) adding a class of <strong>.inline</strong> will have it vertically center against an input.</p>
-<div class="six">
+<div class="nine">
   <form>
     <div class="row">
       <div class="two mobile-one columns">
@@ -225,48 +276,22 @@
 
 <!-- Custom form field inputs -->
 <h3>Radio Buttons and Checkboxes</h3>
-<p>Below are extra input fields to help with designing forms. They have been customized to give a unique look and feel, and they are cross-browser and cross-device compatible.</p>
-<form class="custom">
-  <h6>Custom Radio Buttons and Checkboxes</h6>
-  <!-- Custom Radio -->
+<p>Below are extra input fields to help with designing forms.</p>
+
+
+<form class="default">
   <div class="row">
-    <div class="four columns">
-      <label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Radio Button 1</label>
-      <label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> Radio Button 2</label>
-      <label for="radio3"><input name="radio1" type="radio" id="radio3" disabled style="display:none;"><span class="custom radio"></span> Radio Button 3</label>
-    </div>
-    <div class="four columns">
-      <label for="radio4"><input name="radio2" type="radio" id="radio4"> Radio Button 1</label>
-      <label for="radio5"><input name="radio2" CHECKED type="radio" id="radio5"> Radio Button 2</label>
-      <label for="radio6"><input name="radio2" type="radio" id="radio6"> Radio Button 3</label>
+    <div class="six columns">
+      <label for="radio1"><input name="radio" type="radio" id="radio1"> Radio Button 1</label>
+      <label for="radio2"><input name="radio" CHECKED type="radio" id="radio2"> Radio Button 2</label>
+      <label for="radio3"><input name="radio" type="radio" id="radio3"> Radio Button 3</label>
     </div>
 
-    <!-- Custom Checkbox -->
-    <div class="four columns">
-      <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> Label for Checkbox</label>
-      <label for="checkbox2"><input type="checkbox" id="checkbox2" checked style="display: none;"><span class="custom checkbox checked"></span> Label for Checkbox</label>
-      <label for="checkbox3"><input type="checkbox" CHECKED id="checkbox3"> Label for Checkbox</label>
+    <div class="six columns">
+      <label for="checkbox4"><input type="checkbox" id="checkbox4"> Label for Checkbox</label>
+      <label for="checkbox5"><input type="checkbox" id="checkbox5" checked> Label for Checkbox</label>
+      <label for="checkbox6"><input type="checkbox" id="checkbox6"> Label for Checkbox</label>
     </div>
-  </div>
-<br>
-<br>
-  <!-- Custom Selects -->
-  <label for="customDropdown">Dropdown Label</label>
-  <select style="display:none;" id="customDropdown">
-    <option SELECTED>This is a dropdown</option>
-    <option>This is another option</option>
-    <option>Look, a third option</option>
-  </select>
-  <div class="custom dropdown">
-    <a href="#" class="current">
-      This is a dropdown
-    </a>
-    <a href="#" class="selector"></a>
-    <ul>
-      <li>This is a dropdown</li>
-      <li>This is another option</li>
-      <li>Look, a third option</li>
-    </ul>
   </div>
 </form>
 
