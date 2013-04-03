@@ -1179,7 +1179,7 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 }
 
 .button.radius.primary {
-	background: #2f94ce
+	background: #2f94ce;
 }
 
 .button.radius.primary:hover {
@@ -1212,6 +1212,61 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 .button.radius.alert:hover {
 	background: #d12525;
 }
+
+
+
+
+
+
+
+
+.button.radius.primary-disabled {
+	background: #2f94ce;
+	color:#136593;
+	text-shadow: 0px 1px rgb(88, 188, 245);
+}
+
+.button.radius.primary-disabled:hover {
+	background: #2f94ce;
+}
+
+.button.radius.secondary-disabled {
+	background: #dddddd;
+	border:1px solid #aaaaaa;
+	color:#7c7b7b;
+	text-shadow: 0px 1px rgb(255, 255, 255);	
+}
+
+.button.radius.secondary-disabled:hover {
+	background: #dddddd;
+}
+
+.button.radius.success-disabled {
+	background: #59a02e;
+	border:1px solid #347c09;
+	color:#3d7819;
+	text-shadow: 0px 1px rgb(135, 202, 93);
+}
+
+.button.radius.success-disabled:hover {
+	background: #59a02e;
+}
+
+.button.radius.alert-disabled {
+	background: #e72828;
+	border:1px solid #ab0404;
+	color:#a22727;
+	text-shadow: 0px 1px rgb(255, 102, 106);
+}
+
+.button.radius.alert-disabled:hover {
+	background: #e72828;
+}
+
+
+
+
+
 
 @media only screen and (max-width: 767px) {
 	.button {
@@ -2742,6 +2797,18 @@ form.custom div.custom.dropdown {
 	color:#717171;
 }
 */
+
+.accordion > li > .title h6 a {
+	color: #333;
+	display: block;
+	line-height: inherit;
+}
+
+.accordion > li.no-dropdown > div.title:after {
+	content: "";
+}
+
+
 @media only screen and (max-width: 767px) {
 .right.inline.custom-width-mobile-one {
 	width:280px;
