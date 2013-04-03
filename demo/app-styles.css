@@ -57,15 +57,9 @@ a {
 	color:#01669f;
 }
 
-
-/* In order to accomodate the multi-lingual dropdown menu, we must remove:  body, div, ul and li from the list below */
-/* body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif; } */
-dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
 }
-
-
 
 /*.content-container {
 	overflow: scroll;
@@ -189,94 +183,6 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	display: block;
 	background-image: url("../images/toggle-btn-active.png");
 }*/
-
-
-/* ----------------------------------------------- */
-/* Multilingual Menu implemented on April 3rd 2013 */
-/* ----------------------------------------------- */
-
-.profile-container {	/* Container holding the horizontal menu positioned to the right */
-	width:720px;
-}
-
-.top-nav {	/* Container within .profile-container positioned to the right holding the horizontal menu */
-	width:718px;
-	margin:0px;
-	padding:0px;
-}
-
-.top-bar ul > li a:not(.button) {	/* Horizontal menu font */
-	height: 45px;
-	line-height: 45px;
-	padding: 0 15px;
-}
-
-.top-bar ul > li.has-dropdown {	/* Horizontal menu item Language on mouse over */
-	position: relative;	/* Dropdown Level 2+ */ 
-/*	margin:0px 8px 0px 8px;	*/
-	margin:0px;
-	padding: 0px;
-	width: 115px; /* Fixed width for IE8 */
-}
-
-.top-bar ul > li a:hover, a:focus, a:active {
-/* In addition to file foundation.min.css or foundation.css, line .top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a {color: #d9d9d9}, the following fixes IE8 */ 	
-	color: #d9d9d9;	/* Light gray color on mouse over */
-}
-
-.top-bar ul > li.has-dropdown:hover > .dropdown, .top-bar ul > li.has-dropdown:focus > .dropdown {
-	display: block;
-	visibility: visible;
-	border:solid 1px #999999;	/* Dropdown menu's border */
-/*	height:100px; */
-	height:auto;
-}
-
-.top-bar ul > li.has-dropdown a {
-	padding-right: 33.75px; 
-	margin-right:0px;
-	width: 100%;	
-}
-
-.top-bar ul > li.has-dropdown .dropdown {	/* Dropdown menu */
-/*	background: #222222;  */
-	background: white;
-	position: absolute;	
-	left: 0;
-	top:39px;	/* This is where the top of dropdown menu starts */
-	margin: 0;
-/*	padding: 9px 0 0 0; */
-	padding: 0px;
-	visibility: hidden;
-	z-index: 99;
-}
-
-.top-bar ul > li.has-dropdown .dropdown li {	/* Dropdown menu */
-/*	background: #222222;  */
-	background: #fff;	
-	line-height: 1;
-	min-width: 100%;
-/*	padding-bottom: 5px;	Space between dropdown menu items */
-	padding-bottom: 0px;
-	height:auto;	/* Auto height added */
-}
-
-.top-bar ul > li.has-dropdown .dropdown li a {	/* Font color of the dropdown menu */
-/*	color: white;  */
-	color: #999999;
-	font-weight: normal;
-	height: 100%;
-	line-height: 1;
-/*	padding: 5px 17px 5px 15px; */
-/*	white-space: nowrap; */
-}
-
-.top-bar ul > li.has-dropdown .dropdown li a:hover, .top-bar ul > li.has-dropdown .dropdown li a:focus {
-/*	background: #3c3c3c; */
-	background: #cdebf5;	/* Background light blue color of dropdown menu on mouse over */ 
-}
-
-/* ------------ End Multilingual Menu ----------- */
 
 
 /* iPads (landscape) ----------- */
