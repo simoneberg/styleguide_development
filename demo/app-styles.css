@@ -192,14 +192,14 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 
 
 /* ----------------------------------------------- */
-/* Multilingual Menu implemented on April 2nd 2013 */
+/* Multilingual Menu implemented on April 3rd 2013 */
 /* ----------------------------------------------- */
 
-.profile-container {	/* Container positioned to the right holding menu horizontal */
+.profile-container {	/* Container holding the horizontal menu positioned to the right */
 	width:720px;
 }
 
-.top-nav {	/* Container within .profile-container positioned to the right holding horizontal menu */
+.top-nav {	/* Container within .profile-container positioned to the right holding the horizontal menu */
 	width:718px;
 	margin:0px;
 	padding:0px;
@@ -211,12 +211,12 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	padding: 0 15px;
 }
 
-.top-bar ul > li.has-dropdown {	/* Horizontal menu item English on mouse over */
+.top-bar ul > li.has-dropdown {	/* Horizontal menu item Language on mouse over */
 	position: relative;	/* Dropdown Level 2+ */ 
 /*	margin:0px 8px 0px 8px;	*/
 	margin:0px;
 	padding: 0px;
-	width: 115px; /* Fixed width for the IE8 */												
+	width: 115px; /* Fixed width for IE8 */
 }
 
 .top-bar ul > li a:hover, a:focus, a:active {
@@ -227,7 +227,7 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 .top-bar ul > li.has-dropdown:hover > .dropdown, .top-bar ul > li.has-dropdown:focus > .dropdown {
 	display: block;
 	visibility: visible;
-	border:solid 1px #999999;	/* Floating dropdown menu's border */
+	border:solid 1px #999999;	/* Dropdown menu's border */
 /*	height:100px; */
 	height:auto;
 }
@@ -238,12 +238,12 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	width: 100%;	
 }
 
-.top-bar ul > li.has-dropdown .dropdown {	/* Floating dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown {	/* Dropdown menu */
 /*	background: #222222;  */
 	background: white;
 	position: absolute;	
 	left: 0;
-	top:39px;	/* Beginning of top floating dropdown menu */
+	top:39px;	/* This is where the top of dropdown menu starts */
 	margin: 0;
 /*	padding: 9px 0 0 0; */
 	padding: 0px;
@@ -251,7 +251,7 @@ dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
 	z-index: 99;
 }
 
-.top-bar ul > li.has-dropdown .dropdown li {	/* Floating dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown li {	/* Dropdown menu */
 /*	background: #222222;  */
 	background: #fff;	
 	line-height: 1;
