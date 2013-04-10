@@ -184,35 +184,50 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	background-image: url("../images/toggle-btn-active.png");
 }*/
 
+
+
 /* ----------------------------------------------- */
-/* Multilingual Menu implemented on April 4th 2013 */
+/* Multilingual Menu implemented on April 10th 2013 */
 /* ----------------------------------------------- */
 
-.profile-container {	/* Container positioned to the right holding menu horizontal */
-	width:496px;	/* New width because of new item */
+.profile-container {	/* Container positioned to the right holding menu horizontal */	
+	margin-right: 13px;
 }
 
 .top-nav {	/* Container within .profile-container positioned to the right holding horizontal menu */
-	margin:0px;
 	padding:0px;
+	margin:0px;	
 }
 	
 .top-bar ul > li.has-dropdown {	/* Horizontal menu item English on mouse over */
 	position: relative;	/* Dropdown Level 2+ */ 
-	margin:0px 0px 0px 8px;	/* left margin for language */
+	margin:0px 0px 0px 8px;	/* left margin for dropdown menu */
 	padding: 0px;
 	width:auto;
 }
 
-.top-bar ul > li.has-dropdown:hover > .dropdown, .top-bar ul > li.has-dropdown:focus > .dropdown {
+.top-bar ul > li.has-dropdown:hover > .dropdown,
+.top-bar ul > li.has-dropdown:focus > .dropdown {	/* Floating dropdown menu */
 	display: block;
 	visibility: visible;
-	border:solid 1px #999999;	/* Floating dropdown menu's border */
+	border:solid 1px #8a8a8a;	/* Floating dropdown menu's border */
 	height:auto;
+	position: absolute;
+	top: 41px;	/* Beginning of top floating dropdown menu */
+}
+
+.top-bar ul > li.has-dropdown:hover > .language,
+.top-bar ul > li.has-dropdown:focus > .language {
+	left: -4px;	/* Position of language dropdown menu */
+}
+
+.top-bar ul > li.has-dropdown:hover > .user,
+.top-bar ul > li.has-dropdown:focus > .user {
+	left: -37px;	/* Position of user dropdown menu */
 }
 
 .top-bar ul > li.has-dropdown a {
-	padding-right: 24px;	/* Distance of dropdown arrow from side margins */
+	padding-right: 24px;	/* Distance of dropdown white arrow from side margins */
 	padding-left: 0px;
 	margin-right:0px;
 	width: 100%;	
@@ -220,12 +235,9 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 .top-bar ul > li.has-dropdown .dropdown {	/* Floating dropdown menu */
-	background: white;
-	position: absolute;	
-	left: -7px;	
-	top: 41px;	/* Beginning of top floating dropdown menu */
 	margin: 0;
 	padding: 0px;
+	background: white;
 	visibility: hidden;
 	z-index: 99;
 }
@@ -233,30 +245,36 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 .top-bar ul > li.has-dropdown .dropdown li {	/* Dropdown menu */
 	background: #fff;	
 	line-height: 1;
-	min-width: 100%;
+/*min-width: 100%;*/
 	padding-bottom: 0px;	/* Space between dropdown menu items */
 	height:auto;	/* Auto height added */
 	min-height: 100%;
 }
 
-.top-bar ul > li.has-dropdown .dropdown li a {	/* Font color of the dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown li a {	/* Font color of dropdown menu */
 	font-weight: normal;
-	color: #7f817e; /* Dark gray font color */	
+	color: #343537; /* Dark gray font color */
 	height: 100%;
-	line-height: 1;
-	padding-top: 7px;	/* Justifies language items on the menu */
-	padding-bottom: 7px;	/* Justifies language items on the menu */	
-	padding-left: 6px;	/* Justifies language items on the menu */
-	width: 114px;	/* Width of dropdown menu */
-/*	white-space: nowrap; */
+	line-height: 1;	
+	padding: 5px 0px 7px 9px;	/* Justifies menu items */				
+}
+
+.top-bar ul > li.has-dropdown .language li a {	/* Font color of the dropdown menu */
+	width: 89px;	/* Width of language dropdown menu */
+}
+
+.top-bar ul > li.has-dropdown .user li a {	/* Font color of the dropdown menu */
+	width: 117px;	/* Width of user dropdown menu */
 }
 
 .top-bar ul > li.has-dropdown .dropdown li:last-child {
 	padding-bottom: 0px;	/* Dropdown menu bottom */
 }
 
-.top-bar ul > li.has-dropdown .dropdown li a:hover, .top-bar ul > li.has-dropdown .dropdown li a:focus {
-	background: #cdebf5;	/* Background light blue color of menu on mouse over */ 
+.top-bar ul > li.has-dropdown .dropdown li a:hover,
+.top-bar ul > li.has-dropdown .dropdown li a:focus {
+	background: #d6e8f6;	/* Background light blue color of menu on mouse over */
+	width: 100%;
 }
 
 .top-bar ul > li.has-dropdown a:after {	/* Arrow of Dropdown menu */
