@@ -142,6 +142,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 .top-bar ul {
 	height: 50px;
 	display: block;
+	width: auto;
 }
 
 .top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus {
@@ -192,19 +193,28 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 .profile-container {	/* Container positioned to the right holding menu horizontal */	
 	margin-right: 13px;
+	width:auto;	
 }
 
 .top-nav {	/* Container within .profile-container positioned to the right holding horizontal menu */
 	padding:0px;
 	margin:0px;	
+	width:auto;
+	float: right;
 }
 	
 .top-bar ul > li.has-dropdown {	/* Horizontal menu item English on mouse over */
 	position: relative;	/* Dropdown Level 2+ */ 
-	margin:0px 0px 0px 8px;	/* left margin for dropdown menu */
+	margin:0px 0px 0px 8px !important;	/* left margin for dropdown menu */
 	padding: 0px;
 	width:auto;
 }
+
+
+
+
+
+
 
 .top-bar ul > li.has-dropdown:hover > .dropdown,
 .top-bar ul > li.has-dropdown:focus > .dropdown {	/* Floating dropdown menu */
@@ -240,6 +250,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	background: white;
 	visibility: hidden;
 	z-index: 99;
+	width: auto;
+	left: auto !important;
+	right: auto !important;
+	/*padding-right: 10px;*/
 }
 
 .top-bar ul > li.has-dropdown .dropdown li {	/* Dropdown menu */
@@ -256,7 +270,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	color: #343537; /* Dark gray font color */
 	height: 100%;
 	line-height: 1;	
-	padding: 5px 0px 7px 9px;	/* Justifies menu items */				
+	padding: 5px 10px 7px 9px;	/* Justifies menu items */				
 }
 
 .top-bar ul > li.has-dropdown .language li a {	/* Font color of the dropdown menu */
@@ -264,7 +278,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 .top-bar ul > li.has-dropdown .user li a {	/* Font color of the dropdown menu */
-	width: 117px;	/* Width of user dropdown menu */
+	width: auto;	/* Width of user dropdown menu */
 }
 
 .top-bar ul > li.has-dropdown .dropdown li:last-child {
@@ -277,11 +291,55 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	width: 100%;
 }
 
-.top-bar ul > li.has-dropdown a:after {	/* Arrow of Dropdown menu */
+.top-bar ul > li.has-dropdown a:after {	 /*Arrow of Dropdown menu*/
 	width: auto;
 	margin-right: 8px;	
-	margin-top: 0px;
+	margin-top: -1px;
 }
+
+
+
+
+
+@media only screen and (max-width: 940px) {
+.top-bar ul.left>li, .top-bar ul.right>li {
+display: block;
+float: left;
+margin: 0 !important;
+}
+
+.top-bar ul > li.has-dropdown .dropdown {
+margin: 0;
+padding: 0px;
+background: white;
+visibility: hidden;
+z-index: 99 !important;
+width: auto;
+left: auto !important;
+right: auto !important;
+}
+
+.top-bar ul>li.has-dropdown a:after {
+content: "";
+display: block;
+width: 0;
+height: 0;
+border: solid 5px;
+border-color: #fff transparent transparent transparent;
+margin-right: 5px;
+margin-top: -1.5px;
+position: absolute;
+top: 50%;
+}
+
+.top-bar {
+overflow: visible;
+}
+}
+
+
+
+
 
 /* --------  IE8 Fixes ------- */
 
@@ -408,17 +466,20 @@ display:none;
 	.top-bar {
 		height:44px;
 		background-image: url("../images/header-bg-phone.png");
+		margin:0;
 	}
 
 	.logo {
 		height:38px;
 		width:194px;
-		margin-top:3px;
+		margin-top:0px;
 		background-image: url("../images/logo-phone.png");
 		display:block;
 		margin-left: auto;
 		margin-right: auto;
 		float:none;
+		position:relative;
+		top:3px;
 	}
 
 	.profile-container {
@@ -435,6 +496,7 @@ display:none;
 		margin-right: 7px;
 		background-color: white;
 		border: 1px solid #27435a;
+		margin-top: 3px;
 	}
 
 	.top-nav{
@@ -442,7 +504,7 @@ display:none;
 	}
 
 	.dropdown-profile {
-		margin-top:-10px;
+		margin-top:-7px;
 		cursor: pointer;
 		float:left;
 	}
