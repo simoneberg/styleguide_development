@@ -1947,7 +1947,7 @@ table {
 	border-spacing: 0px;
 }
 
-table thead tr th {
+/*table thead tr th {
 	background: #c0c0c0;
 	background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
@@ -1956,6 +1956,12 @@ table thead tr th {
 	background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
 	background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+}*/
+
+
+table thead tr th {
+	border-bottom: 1px solid #e1e1e1;
+	background: white;
 }
 
 table tbody tr:nth-child(even) {
