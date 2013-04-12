@@ -1035,7 +1035,8 @@ span.prefix {
 	background: -o-linear-gradient(top,  #afafaf 0%,#898989 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #afafaf 0%,#898989 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #afafaf 0%,#898989 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#898989',GradientType=0 ); /* IE6-9 */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#898989',GradientType=0 ); */
+	/* IE6-9 */
 	border: 1px solid #5b5b5b;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
@@ -1052,10 +1053,10 @@ span.postfix {
 	background: -o-linear-gradient(top,  #afafaf 0%,#898989 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #afafaf 0%,#898989 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #afafaf 0%,#898989 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#898989',GradientType=0 ); /* IE6-9 */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afafaf', endColorstr='#898989',GradientType=0 ); */
+	/* IE6-9 */
 	border: 1px solid #5b5b5b;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-radius: 0 20px 20px 0;
 	-moz-box-shadow: 0px 1px #c5c5c5;
 	-webkit-box-shadow: 0px 1px #c5c5c5;
 	box-shadow: 0px 1px #c5c5c5;
