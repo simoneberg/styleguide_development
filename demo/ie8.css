@@ -1,0 +1,33 @@
+/* CSS Targets only Internet Explorer 8 */
+
+#ie_pagecontainer{
+	max-width:100%;
+	min-width: 940px; 
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Petrocore Reports page */
+.table-header-action {
+	height: auto;
+}
+
+.table-header-action .button {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* Footer */
+.petrocore-footer {
+	height:auto; 
+}
+
+.trademark {
+	width: auto;
+	height:auto;
+}
+
+.feedback {
+	float:right;
+}
+
