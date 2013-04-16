@@ -2965,8 +2965,21 @@ form.custom div.custom.dropdown {
 	/*background-color: purple;*/
 }
 
+.nine.mobile-three.columns.inline-input-override {
+	width:100% !important;
+	float:left;
+	/*background-color: purple;*/
+}
+
 /*This makes form labels and fields float on top instead of left*/
 .two.mobile-one.columns.inline-input-override {
+	width:100% !important;
+	float:left;
+	margin-bottom: -12px;
+	/*background-color: green;*/
+}
+
+.three.mobile-one.columns.inline-input-override {
 	width:100% !important;
 	float:left;
 	margin-bottom: -12px;
