@@ -3024,6 +3024,20 @@ width:85% !important;
 }
 }
 
+/*This sets a min height to textarea iput fields;*/
+.three.text-area-min-height {
+min-height: 40px;
+}
+.four.text-area-min-height {
+min-height: 40px;
+}
+.five.text-area-min-height {
+min-height: 40px;
+}
+.six.text-area-min-height {
+min-height: 40px;
+}
+
 @media only screen and (min-width: 769px) and (max-width: 855px) {
 .three.tablet-four.columns {
 	width:33.33333% !important;
