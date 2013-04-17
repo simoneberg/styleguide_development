@@ -1,20 +1,21 @@
 /* CSS Targets only Internet Explorer 8 */
 
-#ie_pagecontainer{
-	max-width:100%;
-	min-width: 940px; 
-	margin: 0px;
-	padding: 0px;
+body {
+    max-width:100%;
+    min-width: 940px;
+    margin: 0px;
+    padding: 0px;
+	border: solid 3px yellow;
 }
 
 /* Petrocore Reports page */
 .table-header-action {
-	height: auto;
+    height: auto;
 }
 
 .table-header-action .button {
-	margin-top: 5px;
-	margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* Footer */
