@@ -2800,6 +2800,16 @@ label.inline {
 
 
 
+.text-after-input-field {
+	margin-left: 12px;
+	margin-top: 5px;
+	display: block;
+	float: left;
+	position: relative;
+	font-size: 13px;
+	color: #767676;
+}
+
 .icon-after-input-field {
 	margin-left: 12px;
 	margin-top: 6px;
@@ -3000,6 +3010,29 @@ form.custom div.custom.dropdown {
 
 input[type="text"].four.icon-after-input-field-float-mobile, .row input[type="text"].four.icon-after-input-field-float-mobile {
 width:85% !important;
+}
+
+.text-after-input-field {
+	margin-left: 0px;
+	margin-top: -6px;
+	display: block;
+	float: left;
+	position: relative;
+	font-size: 13px;
+	color: #767676;
+	margin-bottom: 3px;
+}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 855px) {
+.three.tablet-four.columns {
+	width:33.33333% !important;
+	/*background-color: orange;*/
+}
+
+.nine.tablet-eight.columns {
+	width:66.66667% !important;
+	/*background-color: pink;*/
 }
 }
 
