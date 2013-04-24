@@ -31,3 +31,18 @@ body {
 	float:right;
 }
 
+/* The following code fixes the x closing button on a modal pop-up window in IE8 */
+
+#myModal h5 {
+    display:inline-block;
+}
+
+.reveal-modal .close-reveal-modal {
+    color:#666666;   
+    font-weight:bold;
+    font-size:1.6em;
+    cursor: pointer;
+    float:right;
+    position:relative;
+    top:11px;
+}
