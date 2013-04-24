@@ -2174,8 +2174,8 @@ table.nested-table {
 	-o-border-radius: 0px;
 	border-radius: 0px;
 	border-spacing: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 0px;
+	padding-right: 0px;
 	padding-top: 6px;
 }
 
