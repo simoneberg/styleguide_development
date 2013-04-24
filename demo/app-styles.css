@@ -1835,7 +1835,7 @@ ul.accordion>li>div.title:after {
 	float:right;
 }
 
-.panel-header h5:after {
+/*.panel-header h5:after {
 	content: "\f0d8";
 	font-family: FontAwesome;
 	font-size: 18px;
@@ -1867,7 +1867,7 @@ ul.accordion>li>div.title:after {
 	right: 22px;
 	top:6px;
 	cursor:auto;
-}
+}*/
 
 .panel-header-small h5 {
 	margin-top: 4px;
@@ -1878,6 +1878,11 @@ ul.accordion>li>div.title:after {
 	margin-top: 4px;
 	margin-bottom: 0px;
 	font-size: 16px;
+}
+
+.panel-header h5 {
+	width: 80%;
+	float: left;
 }
 
 
@@ -1900,9 +1905,94 @@ ul.accordion>li>div.title:after {
 	color:#7c7c7c;
 }
 
+
+
+.panel-header-icons.icon- {
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 6px;
+}
+
+.panel-header-icons-list {
+	display:block;
+}
+
+.panel-header-icons-list li {
+	float:right;
+	margin-left:10px;
+	display: block;
+}
+
+.panel-header-icons-list li a{
+	color:#7c7c7c;
+	font-size: 18px;
+    color: #666666;
+    text-shadow: 0px 1px #e5e5e5;
+}
+
+
+.panel-header-icons-collapse-up.icon- {
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 15px;
+}
+
+.panel-header-icons-collapse-up-list {
+	display:block;
+}
+
+.panel-header-icons-collapse-up-list li {
+	float:right;
+	margin-left:10px;
+	display: block;
+}
+
+.panel-header-icons-collapse-up-list li a{
+	color:#7c7c7c;
+	font-size: 18px;
+    color: #666666;
+    text-shadow: 0px 1px #e5e5e5;
+}
+
+
+.panel-header-icons-close.icon- {
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 10px;
+}
+
+.panel-header-icons-close-list {
+	display:block;
+}
+
+.panel-header-icons-close-list li {
+	float:right;
+	margin-left:10px;
+	display: block;
+}
+
+.panel-header-icons-close-list li a{
+	color:#7c7c7c;
+	font-size: 18px;
+    color: #666666;
+    text-shadow: 0px 1px #e5e5e5;
+}
+
+
+
 .panel-footer .radius.button{
 	width:45%;
 }
+
+
+.six.columns.visible-charts.left-chart {
+padding-left: 0px;
+}
+
+.six.columns.visible-charts.right-chart {
+padding-right: 0px;
+}
+
 
 @media only screen and (max-width: 767px) {
 	
@@ -1925,13 +2015,33 @@ ul.accordion>li>div.title:after {
 	}	
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media only screen and (max-width: 767px) {
+.six.columns.visible-charts.left-chart {
+padding: 0px;
+}
+
+.six.columns.visible-charts.right-chart {
+padding: 0px;
+}
+
+}
+/*@media (min-width: 768px) and (max-width: 1024px) {
 	.six.columns.visible-charts {
 	width: 100%;
 	float: left;
 	margin-bottom: 15px;
 }
+
+.six.columns.visible-charts.left-chart {
+padding: 0px;
 }
+
+.six.columns.visible-charts.right-chart {
+padding: 0px;
+}
+
+}*/
 
 /****** DASHBOARD *******/
 
@@ -2064,8 +2174,8 @@ table.nested-table {
 	-o-border-radius: 0px;
 	border-radius: 0px;
 	border-spacing: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 0px;
+	padding-right: 0px;
 	padding-top: 6px;
 }
 
@@ -2080,6 +2190,9 @@ th.select-all-column {
 	text-align: center;
 }
 
+.total-row {
+border-top: 1px solid #c4c4c4;
+} 
 
 @media only screen and (max-width: 767px) {
 table.nested-table {
@@ -3179,5 +3292,9 @@ width:100%;
 	margin-bottom: 8px;
 }
 }
+
+
+
+
 
 
