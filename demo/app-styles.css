@@ -2079,6 +2079,10 @@ table tbody tr:nth-child(even) {
 	background: #f1f1f1;
 }
 
+
+table tbody tr td {
+vertical-align: middle;
+}
 /****** TABLE *******/
 
 
@@ -3179,7 +3183,15 @@ min-height: 40px;
 	margin-bottom: 0px;
 }
 
+.nested-no-margin-bottom {
+	margin-bottom: -10px;
+}
+
 .form-no-margin-bottom {
+margin-bottom: 0px;
+}
+
+.icon-.no-margin-bottom {
 margin-bottom: 0px;
 }
 
@@ -3284,6 +3296,53 @@ width:100%;
 }
 
 
+.tabs {
+	border-bottom: solid 1px #717171;
+}
+
+.tabs dd a, .tabs li a {
+color: #6f6f6f;
+display: block;
+font-size: 14px;
+height: 40px;
+line-height: 40px;
+padding: 0px 23.8px;
+background: #f1f1f1;
+background: -moz-linear-gradient(top,  #f1f1f1 0%, #e7e7e7 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#e7e7e7));
+background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e7e7e7 100%);
+background: -o-linear-gradient(top,  #f1f1f1 0%,#e7e7e7 100%);
+background: -ms-linear-gradient(top,  #f1f1f1 0%,#e7e7e7 100%);
+background: linear-gradient(to bottom,  #f1f1f1 0%,#e7e7e7 100%);
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#e7e7e7',GradientType=0 );*/
+font-weight: bold;
+}
+
+.tabs dd, .tabs li {
+	border: solid 1px #717171;
+	margin-left: 10px;
+	margin-top: -2px;
+}
+
+.tabs dd.active, .tabs li.active {
+	border-top: 1px solid #717171;
+	margin-top: -1px;
+	border-bottom: 0px;
+	background: #fff;
+	background-color: #fff;
+}
+
+.tabs dd.active a, .tabs li.active a {
+cursor: default;
+color: #3c3c3c;
+background: #fff;
+border-left: 0px solid #717171;
+border-right: 0px solid #717171;
+font-weight: bold;
+}
+
+
+
 @media only screen and (max-width: 767px) {
 .save-template-btn {
 	float:none;
@@ -3291,10 +3350,59 @@ width:100%;
 	margin-top: 10px;
 	margin-bottom: 8px;
 }
+
+.tabs {
+	list-style: none;
+	border-bottom: 0px;
+	display: block;
+	height: 120px;
+	width:100%;
+	padding: 0;
+	margin-bottom: 20px;
+	/*background-color:pink;*/
 }
 
+.tabs dd, .tabs li {
+	width:100%;
+	border: solid 1px #717171;
+	margin-left: 0px;
+	margin-top: -2px;
+}
 
+.tabs dd.active, .tabs li.active {
+border-top: 1px solid #717171;
+margin-top: -1px;
+border-bottom: 1px solid #717171;
+border-left: 4px solid #717171;
+}
+}
 
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+.tabs {
+	list-style: none;
+	border-bottom: 0px;
+	display: block;
+	height: 120px;
+	width:100%;
+	padding: 0;
+	margin-bottom: 20px;
+	/*background-color:pink;*/
+}
+
+.tabs dd, .tabs li {
+	width:100%;
+	border: solid 1px #717171;
+	margin-left: 0px;
+	margin-top: -2px;
+}
+
+.tabs dd.active, .tabs li.active {
+border-top: 1px solid #717171;
+margin-top: -1px;
+border-bottom: 1px solid #717171;
+border-left: 4px solid #717171;
+}
+}
 
 
 
