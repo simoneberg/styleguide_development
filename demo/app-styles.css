@@ -1712,12 +1712,13 @@ ul.accordion>li>div.title:after {
 }
 
 .panel-header {
-	height:50px;
+	/*height:50px;*/
+	float:left;
 	width:100%;
 	clear: both;
 	margin-left: 0px;
 	margin-top: 0px;
-	padding-top: 2px;
+	padding-top: 1px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background: #c0c0c0;
@@ -1881,7 +1882,7 @@ ul.accordion>li>div.title:after {
 }
 
 .panel-header h5 {
-	width: 80%;
+	width: 100%;
 	float: left;
 }
 
@@ -1893,6 +1894,7 @@ ul.accordion>li>div.title:after {
 
 .panel-action-icons-list {
 	display:block;
+	margin-top: 10px;
 }
 
 .panel-action-icons-list li {
@@ -1978,6 +1980,20 @@ ul.accordion>li>div.title:after {
     text-shadow: 0px 1px #e5e5e5;
 }
 
+
+.panel-title-container {
+width:65%;
+position:relative;
+float:left;
+/*background-color: orange;*/
+}
+
+.panel-header-icons-container {
+width:70px;
+position:relative;
+float:right;
+/*background-color: pink;*/
+}
 
 
 .panel-footer .radius.button{
