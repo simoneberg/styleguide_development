@@ -2978,9 +2978,14 @@ label.inline {
 	margin-top: 7px;
 }
 
+.text-after-dropdown {
+margin-bottom: 0px;
+}
+
 form.custom div.custom.dropdown {
 	float:left;
 	margin-right:12px;
+	margin-bottom: 2px;
 }
 
 #add-names-container {
@@ -3420,5 +3425,11 @@ border-left: 4px solid #717171;
 }
 }
 
+
+.table-info-icons.icon- {
+	color:#7c7c7c;
+	font-size: 16px;
+	line-height: 24px;
+}
 
 
