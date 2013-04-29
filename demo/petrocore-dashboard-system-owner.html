@@ -24,17 +24,22 @@
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/app-styles.css">
 
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
+
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -69,6 +74,7 @@
       </div>
   </div>
 </nav>
+
 <!--***** PETROCORE HEADER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -280,12 +286,14 @@
 
               <!--This is a dashboard panel-->
                   <div class="panel-header">
-                    <h5>Competency Framework</h5>
+                    <div class="panel-title-container"><h5>Competency Framework</h5></div>
+                      <div class="panel-header-icons-container">
                         <ul class="panel-header-icons-list">
                           <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> -->
                           <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
                           <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
                         </ul> 
+                      </div>
                   </div>
                     <div class="panel-content-container-dashboard">
                       <div class="panel-action-icons-container">
@@ -358,12 +366,14 @@
               <!--This is a dashboard panel-->
                 <div class="panel-wrapper">
                   <div class="panel-header">
-                    <h5>My Team</h5>
-                       <ul class="panel-header-icons-list">
+                    <div class="panel-title-container"><h5>My Team</h5></div>
+                      <div class="panel-header-icons-container">
+                        <ul class="panel-header-icons-list">
                           <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> -->
                           <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
                           <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
-                        </ul>
+                        </ul> 
+                      </div>
                   </div>
                     <div class="panel-content-container-dashboard">
 
