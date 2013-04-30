@@ -211,11 +211,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 
-
-
-
-
-
 .top-bar ul > li.has-dropdown:hover > .dropdown,
 .top-bar ul > li.has-dropdown:focus > .dropdown {	/* Floating dropdown menu */
 	display: block;
@@ -298,6 +293,16 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 
+/* The following segment is to standardize the dropdown box menu across all browsers */
+form.custom div.custom.dropdown ul li.selected:after{
+	content:"";
+}
+
+form.custom div.custom.dropdown ul li:hover:after{
+	content:"";
+}
+
+/* -- End of overwriting and reconfiguring -- */
 
 
 

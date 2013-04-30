@@ -16,3 +16,11 @@ span.prefix {
 	height: 54px;
 	line-height: 54px;
 }
+
+
+/* It fixes the misalignment of the dropdown arrow box */
+form.custom div.custom.dropdown a.selector {
+	right:1px;
+	top:1px;	
+}
+
