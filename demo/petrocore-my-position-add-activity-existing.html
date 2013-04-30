@@ -24,17 +24,22 @@
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/app-styles.css">
 
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
+
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -69,6 +74,7 @@
       </div>
   </div>
 </nav>
+
 <!--***** PETROCORE HEADER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -298,7 +304,7 @@
          <form class="form-no-margin-bottom">
             <fieldset>
             <legend>Date Information</legend>
-
+            </fieldset>
               <!--****** START/END CHUNK ******-->
               <form>
               <div class="row">
@@ -307,14 +313,14 @@
                   <label class="right inline custom-width-mobile-one">Planned Start:</label>
                 </div>
                 <div class="nine mobile-three columns inline-input-override">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf073;</p></a></div>
+                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
 
                 <div class="three mobile-one columns inline-input-override">
                   <label class="right inline">Planned End:</label>
                 </div>
                 <div class="nine mobile-three columns inline-input-override">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf073;</p></a></div>
+                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf073;</p></a></div>
                 </div>
                   
               </div>
@@ -322,7 +328,7 @@
               <!--****** START/END CHUNK ******-->
 
             <!--****** PRIORITY DROPDOWN ******-->
-            <form class="custom no-margin-bottom">
+            <form class="custom">
 
               <div class="row">
 
@@ -357,29 +363,6 @@
 
             </form>
             <!--****** PRIORITY DROPDOWN ******-->
-
-
-
-
-
-              <!--****** PLANNED START CHUNK ******-->
-              <form>
-              <div class="row">
-
-                <div class="three mobile-one columns inline-input-override">
-                  <label class="right inline custom-width-mobile-one">Completion Date:</label>
-                </div>
-                <div class="nine mobile-three columns inline-input-override">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile" style="float:left;" /><div class="icon-after-input-field"><a href="#"><p class="icon-">&#xf073;</p></a></div>
-                </div>
-              </div>
-
-            </form>
-              <!--****** PLANNED START CHUNK ******-->
-
-
-
-
 
 
             <!--****** NOTIFICATIONS CHUNK ******-->

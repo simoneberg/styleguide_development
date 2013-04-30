@@ -2866,6 +2866,7 @@ fieldset {
 	border-left: none;
 	border-bottom: none;
 	padding-left: 0px;
+	padding-bottom: 0px;
 }
 
 fieldset legend {
@@ -2986,6 +2987,7 @@ form.custom div.custom.dropdown {
 	float:left;
 	margin-right:12px;
 	margin-bottom: 2px;
+	margin-left: 3px;
 }
 
 #add-names-container {
@@ -3433,3 +3435,11 @@ border-left: 4px solid #717171;
 }
 
 
+.icon-after-input-field-float-mobile {
+	width:85%;
+	float:left;
+}
+
+.four.icon-after-input-field-float-mobile {
+	margin-left:3px;
+}
