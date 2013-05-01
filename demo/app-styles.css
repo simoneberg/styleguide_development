@@ -292,16 +292,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	margin-top: -1px;
 }
 
-
-/* The following segment is to standardize the dropdown box menu across all browsers */
-form.custom div.custom.dropdown ul li.selected:after{
-	content:"";
-}
-
-form.custom div.custom.dropdown ul li:hover:after{
-	content:"";
-}
-
 /* -- End of overwriting and reconfiguring -- */
 
 
@@ -340,6 +330,8 @@ form.custom div.custom.dropdown ul li:hover:after{
 /* -- For a grayed out border dropdown language selection, change the color #8a8a8a by #ddd -- */
 form.custom div.custom.dropdown{
 	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
+	height:auto;
+	border:solid 1px white;
 }
 
 form.custom div.custom.dropdown a.current{
@@ -390,7 +382,6 @@ form.custom div.custom.dropdown ul li:hover:after{
 }
 
 /* -- End of overwriting and reconfiguring -- */
-
 
 
 
