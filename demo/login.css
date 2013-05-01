@@ -224,7 +224,7 @@ form.custom div.custom.dropdown ul{
 /* --  Dropdown item list -- */
 form.custom div.custom.dropdown ul li{
 	font-size:12px;	 /* Dropdown menu items font size */
-	color:#999;  /* Dropdown menu items font color olor to match theme page */
+	color:#999;  /* Dropdown menu items font color olor to match theme page */	
 }
 
 form.custom div.custom.dropdown ul li.selected{
@@ -233,6 +233,7 @@ form.custom div.custom.dropdown ul li.selected{
 
 form.custom div.custom.dropdown ul li:hover{
 	color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
+
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
