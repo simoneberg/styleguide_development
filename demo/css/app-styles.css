@@ -2919,6 +2919,7 @@ p.form-category-title-bold {
 	display: block;
 }
 
+
 label.inline {
 	font-weight: bold;
 }
@@ -2930,9 +2931,6 @@ label.inline {
 .dropdown-label {
 	float:left;
 }
-
-
-
 
 .text-after-input-field {
 	margin-left: 12px;
@@ -3097,6 +3095,19 @@ form.custom div.custom.dropdown {
 
 
 @media only screen and (max-width: 767px) {
+/*This makes form labels and fields float on top instead of left*/
+/* replaces the overide classes */
+.row .compass-mobile {
+	width:100% !important;
+	float:left;
+}
+
+.row .compass-mobile>label {
+	width:100% !important;
+	float:left;
+	margin-bottom: -4px;
+}
+
 .right.inline.custom-width-mobile-one {
 	width:280px;
 	/*background-color: orange;*/
@@ -3109,12 +3120,14 @@ form.custom div.custom.dropdown {
 }
 
 /*This makes form labels and fields float on top instead of left*/
+/* to be depricated */
 .ten.mobile-three.columns.inline-input-override {
 	width:100% !important;
 	float:left;
 	/*background-color: purple;*/
 }
 
+/* to be depricated */
 .nine.mobile-three.columns.inline-input-override {
 	width:100% !important;
 	float:left;
@@ -3122,6 +3135,7 @@ form.custom div.custom.dropdown {
 }
 
 /*This makes form labels and fields float on top instead of left*/
+/* to be depricated */
 .two.mobile-one.columns.inline-input-override {
 	width:100% !important;
 	float:left;
@@ -3129,6 +3143,7 @@ form.custom div.custom.dropdown {
 	/*background-color: green;*/
 }
 
+/* to be depricated */
 .three.mobile-one.columns.inline-input-override {
 	width:100% !important;
 	float:left;
@@ -3164,7 +3179,7 @@ width:85% !important;
 }
 }
 
-/*This sets a min height to textarea iput fields;*/
+/*This sets a min height to textarea input fields;*/
 .three.text-area-min-height {
 min-height: 40px;
 }
