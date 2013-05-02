@@ -62,7 +62,7 @@ fieldset legend {
 
 /* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
 #step1, #step2, #step3, #step4 {
-	width:auto;
+	width:auto; /* Keeps elements within its div */
 /*	min-width:317px;  */
 	min-width:248px;
 	border-right:solid 1px #717171;	
