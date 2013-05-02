@@ -24,17 +24,22 @@
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/app-styles.css">
 
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
+
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -69,6 +74,7 @@
       </div>
   </div>
 </nav>
+
 <!--***** PETROCORE HEADER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -430,16 +436,20 @@
 
             <!-- PAGINATION -->
           <div class="pagination-centered">
+            <div class="page-of-page">
+            <p>Page 1 of 13</p>
+            </div>
             <ul class="pagination">
-              <li class="arrow unavailable"><a href="">&laquo;</a></li>
+              <li class="arrow unavailable"><a href="" class="fix-margin-right">&laquo;</a></li>
+              <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
               <li class="current"><a href="">1</a></li>
               <li><a href="">2</a></li>
               <li><a href="">3</a></li>
               <li><a href="">4</a></li>
-              <li class="unavailable"><a href="">&hellip;</a></li>
-              <li><a href="">12</a></li>
-              <li><a href="">13</a></li>
-              <li class="arrow"><a href="">&raquo;</a></li>
+              <!-- <li class="unavailable"><a href="">&hellip;</a></li> -->
+              <li><a href="">5</a></li>            
+              <li class="arrow"><a href="">&rsaquo;</a></li>
+              <li class="arrow"><a href="" class="fix-margin-left">&raquo;</a></li>
             </ul>
           </div>
             <!-- PAGINATION -->
