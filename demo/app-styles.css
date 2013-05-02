@@ -1457,9 +1457,10 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 
 .reveal-modal .close-reveal-modal:not(.button) {
 	color:#666666;
-	line-height: 6px;
+	line-height: 10px;
 	text-shadow: 0px 1px #ccc;
-	top:-9px;
+	/*top:-9px;*/
+	font-size: 16px;
 }
 
 .reveal-modal .close-reveal-modal:not(.button):hover {
@@ -2988,6 +2989,14 @@ form.custom div.custom.dropdown {
 	margin-right:12px;
 	margin-bottom: 2px;
 	margin-left: 3px;
+}
+
+.modal-dropdown-list {
+width: 100% !important;
+}
+
+.custom.dropdown.modal-input-fields {
+width: 100% !important;
 }
 
 #add-names-container {

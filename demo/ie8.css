@@ -39,10 +39,10 @@ body {
 
 .reveal-modal .close-reveal-modal {
     color:#666666;   
-    font-weight:bold;
-    font-size:1.6em;
+    font-weight:normal;
+    /*font-size:1.6em;*/
     cursor: pointer;
     float:right;
-    position:relative;
+    /*position:relative;*/
     top:11px;
 }
