@@ -24,17 +24,22 @@
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/app-styles.css">
 
+  <!--[if IE 8]>
+  	<link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
+  
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->    
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -421,14 +426,17 @@
                 <div class="twelve columns">
                   <div class="radio"><label for="radio1"><input name="radioreport" type="radio" id="radio1" style="margin-bottom:13px;"><span class="radio"></span> Report on Assigned Position</label></div>
                   <div class="radio"><label for="radio2"><input name="radioreport" type="radio" id="radio2" style="margin-bottom:13px;"><span class="radio"></span> Report on people with the following Position(s) set as:</label></div>
-                  
+
+               
+
+
                   <form>
                   <div class="radio"><label for="radio3"><input name="radioposition" type="radio" id="radio3" style="margin-left:25px; margin-bottom:10px; margin-top:10px;"><span class="radio"></span> Assigned Position</label></div>
                   <div class="radio"><label for="radio4"><input name="radioposition" type="radio" id="radio4" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Growth Position</label></div>
                   <div class="radio"><label for="radio5"><input name="radioposition" type="radio" id="radio5" style="margin-left:25px; margin-bottom:10px;"><span class="radio"></span> Assigned or Growth Position</label></div>
                   </form>
 
-                </div>
+                </div>             
                 </div>
               </form>
 

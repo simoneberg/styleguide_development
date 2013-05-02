@@ -192,7 +192,7 @@ p.centered {
 	padding-left: 4px;
 }
 
-#lang-selection {
+#drop-selection {
 	display:none;
 }
  
@@ -201,7 +201,7 @@ p.centered {
 form.custom div.custom.dropdown{
 	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
 	height:auto;
-	border:solid 1px white;
+	border:solid 1px #fff;
 }
 
 form.custom div.custom.dropdown a.current{

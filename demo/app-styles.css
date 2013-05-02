@@ -322,7 +322,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	padding-left: 4px;
 }
 
-#lang-selection {
+#drop-selection {
 	display:none;
 }
  
@@ -331,7 +331,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 form.custom div.custom.dropdown{
 	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
 	height:auto;
-	border:solid 1px white;
+	border:solid 1px #fff;
 }
 
 form.custom div.custom.dropdown a.current{
@@ -2680,6 +2680,7 @@ color:red;
 	margin-top: 5px;
 	margin-left: 4px;
 }
+
 
 
 @media only screen and (max-width: 767px) {

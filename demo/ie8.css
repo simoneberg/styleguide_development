@@ -46,3 +46,29 @@ body {
     position:relative;
     top:11px;
 }
+
+
+/* It fixes the misalignment of the dropdown arrow box */
+form.custom div.custom.dropdown a.selector {
+	right:1px;
+	top:1px;	
+}
+
+/* It adds bottom space to legend tags */
+fieldset legend {
+	margin-bottom: 10px;
+}
+
+
+/* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
+#step1, #step2, #step3, #step4 {
+	width:auto;
+/*	min-width:317px;  */
+	min-width:248px;
+	border-right:solid 1px #717171;	
+}
+
+
+
+
+
