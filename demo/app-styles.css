@@ -211,11 +211,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 }
 
 
-
-
-
-
-
 .top-bar ul > li.has-dropdown:hover > .dropdown,
 .top-bar ul > li.has-dropdown:focus > .dropdown {	/* Floating dropdown menu */
 	display: block;
@@ -297,7 +292,96 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	margin-top: -1px;
 }
 
+/* -- End of overwriting and reconfiguring -- */
 
+
+/* ------------------ */
+/* -- Dropdown box -- */
+/* ------------------ */
+#language-wrapper {
+	margin:0 auto;
+	width:218px;
+}
+
+#language-label {
+	position:relative;
+	top:23px;	
+	left:0px;
+	width:85px;
+	padding-right:4px;
+	font-size: 12px;
+	color: #999;
+	text-align:right;
+}
+
+#language-container {
+	position:relative;
+	top:0px;	
+	left:86px;
+	width:130px;
+	padding-left: 4px;
+}
+
+#drop-selection {
+	display:none;
+}
+ 
+/* -- The following segment overwrites and reconfigures the dropdown control from foundation.min.css */
+/* -- For a grayed out border dropdown language selection, change the color #8a8a8a by #ddd -- */
+form.custom div.custom.dropdown{
+	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
+	height:auto;
+	border:solid 1px #fff;
+}
+
+form.custom div.custom.dropdown a.current{
+   	color:#999;  /* Font color gray to match theme page for the language once selected, English is the default  */
+	border:solid #8a8a8a 1px;  /* dropdown border color is dark gray */
+}
+
+form.custom div.custom.dropdown a.selector{
+	border:solid #8a8a8a 1px;  /* dropdown arrow square box border color is dark gray */
+}
+
+form.custom div.custom.dropdown a.selector:after{
+	border-color:#8a8a8a transparent transparent transparent;   /* Actual dropdown arrow color is dark gray */
+}
+
+
+/* -- This is the actual dropdown menu on the login page -- */
+form.custom div.custom.dropdown ul{
+	border:solid 1px #999;  /* Dropdown menu border color to match theme page */
+}
+
+/* --  Dropdown item list -- */
+form.custom div.custom.dropdown ul li{
+	font-size:12px;	 /* Dropdown menu items font size */
+	color:#999;  /* Dropdown menu items font color olor to match theme page */	
+}
+
+form.custom div.custom.dropdown ul li.selected{
+	color:#808080;  /* Darker gray font color when language is selected within the dropdown menu */
+}
+
+form.custom div.custom.dropdown ul li:hover{
+	color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
+
+}
+
+form.custom div.custom.dropdown ul li.selected:hover{
+	color:#808080;  /* Darker gray font color on menu item already selected when mouse over */
+}
+
+/* The following segment is to standardize the dropdown box menu across all browsers */
+form.custom div.custom.dropdown ul li.selected:after{
+	content:"";
+}
+
+form.custom div.custom.dropdown ul li:hover:after{
+	content:"";
+}
+
+/* -- End of overwriting and reconfiguring -- */
 
 
 
@@ -2575,7 +2659,7 @@ color:red;
 .circle {
 	border-radius: 50%;
 	width: 24px;
-	height: 24px; 
+	height: 24px;	 
 	background-color: #d3d3d3;
 	margin-left: auto;
 	margin-right: auto;
@@ -2597,6 +2681,7 @@ color:red;
 	margin-top: 5px;
 	margin-left: 4px;
 }
+
 
 
 @media only screen and (max-width: 767px) {
@@ -2658,7 +2743,7 @@ margin-left: -4px;
 }
 
 
-@media only screen and (min-width: 769px) and (max-width: 1155px) {
+@media only screen and (min-width: 769px) and (max-width: 1169px) {
 .step-name-long {
 	width:90px;
 	margin-top: -12px;

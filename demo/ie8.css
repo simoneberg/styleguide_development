@@ -17,6 +17,17 @@ body {
     margin-bottom: 5px;
 }
 
+/* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
+#progress-indicator {
+	min-width: 797px;
+}
+
+#step1, #step2, #step3, #step4 {
+	border-right:solid 1px #717171;	
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 /* Footer */
 .petrocore-footer {
 	height:auto; 
@@ -32,7 +43,6 @@ body {
 }
 
 /* The following code fixes the x closing button on a modal pop-up window in IE8 */
-
 #myModal h5 {
     display:inline-block;
 }
@@ -45,4 +55,15 @@ body {
     float:right;
     /*position:relative;*/
     top:11px;
+}
+
+/* It fixes the misalignment of the dropdown arrow box */
+form.custom div.custom.dropdown a.selector {
+	right:1px;
+	top:1px;	
+}
+
+/* It adds bottom space to legend tags */
+fieldset legend {
+	margin-bottom: 10px;
 }
