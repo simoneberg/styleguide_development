@@ -3003,6 +3003,15 @@ p.form-category-title-bold {
 .custom-label {
 	margin-top:2px;
 	display: block;
+	margin-bottom: 8px;
+}
+
+.nested-dropdown-left {
+	margin-left:5px;
+}
+
+.nested-fieldest {
+	margin-left:5px;
 }
 
 label.inline {
@@ -3073,7 +3082,7 @@ form.custom div.custom.dropdown {
 	float:left;
 	margin-right:12px;
 	margin-bottom: 2px;
-	margin-left: 3px;
+	/*margin-left: 3px;*/
 }
 
 .modal-dropdown-list {
@@ -3492,6 +3501,11 @@ margin-top: -1px;
 border-bottom: 1px solid #717171;
 border-left: 4px solid #717171;
 }
+
+.four.text-area-min-height.description-mobile {
+width: 85% !important;
+}
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -3521,19 +3535,13 @@ border-left: 4px solid #717171;
 }
 }
 
-
 .table-info-icons.icon- {
 	color:#7c7c7c;
 	font-size: 16px;
 	line-height: 24px;
 }
 
-
 .icon-after-input-field-float-mobile {
 	width:85%;
 	float:left;
-}
-
-.four.icon-after-input-field-float-mobile {
-	margin-left:3px;
 }
