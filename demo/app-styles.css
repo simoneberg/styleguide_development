@@ -3545,3 +3545,158 @@ border-left: 4px solid #717171;
 	width:85%;
 	float:left;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****** SEARCH RESULTS NAVIGATION *******/
+
+
+ul.search-results-nav {
+/*	margin: 0 0 0px 0; */
+	border: solid #fff 1px;
+}
+
+ul.search-results-nav>li.active {
+	border: solid #000 1px;
+}
+
+ul.search-results-nav>li a {
+	border-top: 0px;
+	color:#696969;
+	line-height: 25px;
+}
+
+ul.search-results-nav>li a:hover {
+	border-top: 0px;
+	color:#505050;
+}
+
+ul.search-results-nav>li .content {
+	padding:10px 0px 10px 15px;
+	border-bottom:#fff;
+}
+
+ul.search-results-nav>li.active .title {
+	background: #fff;
+	padding-top: 13px;
+	border-left: 0px;
+	border-right: 0px;
+			border-bottom:#fff;
+/*							border-top: 1px solid #fff;
+							text-shadow: 0px 1px #fff;
+*/
+							
+/*	-webkit-transition: background-color 0.15s ease-in-out;   */
+							border-top: 0px solid #fff;
+							text-shadow: 0px 0px #fff;
+
+}
+
+ul.search-results-nav>li>div.title {
+	background: #fff;
+	padding-top: 13px;
+	border-left: 0px;
+	border-right: 0px;
+			border-bottom:#fff;
+	border-top: 1px solid #fff;
+/*	text-shadow: 0px 1px #fff; */
+	text-shadow: 0px 0px #fff;	
+}
+
+ul.search-results-nav>li.active .content {
+	background: #fff;
+display: block;
+	border-left: 0px;
+	border-right: 0px;
+/*		-moz-box-shadow: inset 0 0 1px 1px #fff;
+	-webkit-box-shadow: inset 0 0 1px 1px #fff;
+	box-shadow: inset 0 0 1px 1px #fff; 
+*/	
+	-moz-box-shadow: inset 0 0 0px 0px #fff;
+	-webkit-box-shadow: inset 0 0 0px 0px #fff;
+	box-shadow: inset 0 0 0px 0px #fff;	
+}
+
+.search-results-nav ul {
+	list-style: none;
+}
+
+.search-results-nav h6 {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+ul.search-results-nav>li.active .title h6 {
+/*	color:#6d4500;  */
+}
+
+ul.search-results-nav>li .title h6 {
+/*	color:#333333;  */
+}
+
+
+/*@media only screen and (width: 768px) {
+	ul.search-results-nav>li>div.title .two-lines:after {
+		content: "\f0d7";
+		font-family: FontAwesome;
+		font-size: 18px;
+	    color: red;
+	    text-shadow: 0px 1px #f8f8f8;
+		display: block;
+		width: 0;
+		height: 0;
+		border: none;
+		border-color: none;
+		position: absolute;
+		right: 23px;
+		top: 20px;
+	}
+}
+*/
+
+
+/*ul.search-results-nav>li.active .title:before {
+	content:"hello";
+}
+
+ul.search-results-nav>li>div.title:after {
+	content:"hello";
+}*/
