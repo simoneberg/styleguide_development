@@ -1922,6 +1922,11 @@ ul.accordion>li>div.title:after {
 	min-height:250px;
 }
 
+.table-content-container {
+	padding: 0px 15px 0px 15px;
+	height:auto;
+}
+
 .panel-action-icons-container {
 	height: 24px;
 	display: block;
@@ -3555,4 +3560,38 @@ border-left: 4px solid #717171;
 .icon-after-input-field-float-mobile {
 	width:85%;
 	float:left;
+}
+
+.four.icon-after-input-field-float-mobile {
+	margin-left:3px;
+}
+
+ul.pagination {
+	margin-top: -15px;
+}
+
+ul.pagination li.current a {
+background: #2795b6;
+}
+
+.page-of-page {
+	margin-top: 10px;
+	color: #555;
+}
+
+div.pagination-centered {
+	margin-top: 20px;
+}
+
+.fix-margin-left {
+	margin-left: -8px;
+}
+
+.fix-margin-right {
+	margin-right: -8px;
+}
+
+.arrow a {
+	font-size: 17px;
+	margin-top: 4px;
 }
