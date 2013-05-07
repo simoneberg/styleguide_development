@@ -1794,6 +1794,17 @@ ul.accordion>li>div.title:after {
 	min-height: 519px;
 	overflow: hidden;
 	width:100%;
+	padding:15px;
+}
+
+.panel-wrapper-white-tree-uncontained {
+	/*border-left:1px solid #8a8a8a;*/
+	background-color: #fff;
+	min-height: 519px;
+	overflow: hidden;
+	width:100%;
+	border: 1px solid #8a8a8a;
+	padding:15px;
 }
 
 .panel-header {
