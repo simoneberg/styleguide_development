@@ -3637,6 +3637,14 @@ ul.search-result-nav .hide{
 .export-print a{
 	color:#000;
 }
+.search-results {
+
+}
+
+
+
+
+
 .adjust-two-columns {
 	width: 19%;	
 }
@@ -3646,6 +3654,11 @@ ul.search-result-nav .hide{
 .table-search-results {
 	margin-bottom:40px;
 }
+.table-search-results a{
+	color:#000;
+	text-decoration:underline;
+}
+
 
 
 
