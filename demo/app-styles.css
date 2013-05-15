@@ -362,7 +362,101 @@ form.custom div.custom.dropdown ul li:hover:after{
 	content:"";
 }
 
-/* ---------------------- */
+/* --- Search result pages --- */
+
+.result-title {
+	margin-left: 9px;
+}
+
+ul.search-result-nav{
+	display:block;
+	list-style:none;
+	margin:0;
+	margin-top:0px;	
+	padding:0;
+	line-height: 36px;	
+	margin-left:-15px;
+	margin-right:-15px;	
+}
+
+ul.search-result-nav li{
+	display:block;
+	list-style:none;
+	margin:0 0 0 0;	
+
+}
+
+ul.search-result-nav li a{
+	display:block;
+	color:#999999;
+	text-decoration:underline;	
+	border:solid 1px #fff;	
+	padding-left:7px;		
+}
+
+ul.search-result-nav li.title{
+	display:block;
+	color:#222222;
+	text-decoration:none;
+	font-weight:bold;
+	padding-left:7px;
+	padding-top:-5px;	
+}
+
+ul.search-result-nav .selected-item{
+	color:#222222;
+	border:solid 1px #000;
+	font-weight:bold;
+	text-decoration:none;
+	padding-left:7px;		
+}
+
+ul.search-result-nav li a:hover{
+	border:solid 1px #6f6f6f;
+	padding-left:7px;		
+}
+
+ul.search-result-nav .grayedout-item{
+	color:#cccccc;
+	border:solid 1px #fff;	
+	padding-left:7px;
+}
+
+.export-print {
+	margin-right:6px;
+}
+
+.export-print a{
+	color:#000;
+}
+
+.add-space {
+	margin-right:5px;
+	margin-left:11px;	
+}
+
+.adjust-two-columns {
+	width: 20%;	
+}
+
+.adjust-ten-columns {
+	width: 80%;	
+}
+
+.table-search-results {
+	margin-bottom:40px;
+}
+
+.table-search-results a{
+	color:#000;
+	text-decoration:underline;
+}
+
+.no-border {
+	border: solid #fff 0px;
+}
+
+/* --------------- */
 
 @media only screen and (max-width: 940px) {
 .top-bar ul.left>li, .top-bar ul.right>li {
@@ -3233,6 +3327,22 @@ width:85% !important;
 	color: #767676;
 	margin-bottom: 3px;
 }
+
+/* -- Search Result Pages -- */
+
+.result-title {
+	width:42%;
+	float:left;	
+	margin-left: 9px;
+	margin-top: 12px;	
+}
+.export-print {	
+	width:52%;
+	float:right;	
+	margin-right:6px;
+	margin-top: 12px;	
+}
+
 }
 
 /*This sets a min height to textarea iput fields;*/
@@ -3514,97 +3624,3 @@ border-left: 4px solid #717171;
 	float:left;
 }
 
-/* --- Search result pages --- */
-
-.result-title {
-	margin-left: 9px;
-}
-
-ul.search-result-nav{
-	display:block;
-	list-style:none;
-	margin:0;
-	margin-top:0px;	
-	padding:0;
-	line-height: 36px;	
-	margin-left:-15px;
-	margin-right:-15px;	
-}
-
-ul.search-result-nav li{
-	display:block;
-	list-style:none;
-	margin:0 0 0 0;	
-
-}
-
-ul.search-result-nav li a{
-	display:block;
-	color:#999999;
-	text-decoration:underline;	
-	border:solid 1px #fff;	
-	padding-left:7px;		
-}
-
-ul.search-result-nav li.title{
-	display:block;
-	color:#222222;
-	text-decoration:none;
-	font-weight:bold;
-	padding-left:7px;
-	padding-top:-5px;	
-}
-
-ul.search-result-nav .selected-item{
-	color:#222222;
-	border:solid 1px #000;
-	font-weight:bold;
-	text-decoration:none;
-	padding-left:7px;		
-}
-
-ul.search-result-nav li a:hover{
-	border:solid 1px #6f6f6f;
-	padding-left:7px;		
-}
-
-ul.search-result-nav .grayedout-item{
-	color:#cccccc;
-	border:solid 1px #fff;	
-	padding-left:7px;
-}
-
-.export-print {
-	margin-right:6px;
-}
-
-.export-print a{
-	color:#000;
-}
-
-.add-space {
-	margin-right:5px;
-	margin-left:11px;	
-}
-
-.adjust-two-columns {
-	width: 20%;	
-}
-
-.adjust-ten-columns {
-	width: 80%;	
-}
-
-.table-search-results {
-	margin-bottom:40px;
-}
-
-.table-search-results a{
-	color:#000;
-	text-decoration:underline;
-}
-
-.no-border {
-	border: solid #fff 0px;
-}
-/* --------------- */
