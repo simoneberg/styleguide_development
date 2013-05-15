@@ -185,61 +185,54 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	background-image: url("../images/toggle-btn-active.png");
 }*/
 
-
-
-/* ----------------------------------------------- */
-/* Multilingual Menu implemented on April 10th 2013 */
-/* ----------------------------------------------- */
-
-.profile-container {	/* Container positioned to the right holding menu horizontal */	
+.profile-container {	
 	margin-right: 13px;
 	width:auto;	
 }
 
-.top-nav {	/* Container within .profile-container positioned to the right holding horizontal menu */
+.top-nav {
 	padding:0px;
 	margin:0px;	
 	width:auto;
 	float: right;
 }
 	
-.top-bar ul > li.has-dropdown {	/* Horizontal menu item English on mouse over */
-	position: relative;	/* Dropdown Level 2+ */ 
-	margin:0px 0px 0px 8px !important;	/* left margin for dropdown menu */
+.top-bar ul > li.has-dropdown {
+	position: relative;	
+	margin:0px 0px 0px 8px !important;
 	padding: 0px;
 	width:auto;
 }
 
-
 .top-bar ul > li.has-dropdown:hover > .dropdown,
-.top-bar ul > li.has-dropdown:focus > .dropdown {	/* Floating dropdown menu */
+.top-bar ul > li.has-dropdown:focus > .dropdown {
 	display: block;
 	visibility: visible;
-	border:solid 1px #8a8a8a;	/* Floating dropdown menu's border */
+	border:solid 1px #8a8a8a;
 	height:auto;
 	position: absolute;
-	top: 41px;	/* Beginning of top floating dropdown menu */
+	top: 41px;
 }
 
 .top-bar ul > li.has-dropdown:hover > .language,
 .top-bar ul > li.has-dropdown:focus > .language {
-	left: -4px;	/* Position of language dropdown menu */
+	left: -4px;	
 }
 
 .top-bar ul > li.has-dropdown:hover > .user,
 .top-bar ul > li.has-dropdown:focus > .user {
-	left: -37px;	/* Position of user dropdown menu */
+	left: -37px;
 }
 
 .top-bar ul > li.has-dropdown a {
-	padding-right: 24px;	/* Distance of dropdown white arrow from side margins */
+	padding-right: 24px;
 	padding-left: 0px;
 	margin-right:0px;
 	width: 100%;	
 	width:auto;	
 }
 
-.top-bar ul > li.has-dropdown .dropdown {	/* Floating dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown {
 	margin: 0;
 	padding: 0px;
 	background: white;
@@ -248,56 +241,50 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	width: auto;
 	left: auto !important;
 	right: auto !important;
-	/*padding-right: 10px;*/
 }
 
-.top-bar ul > li.has-dropdown .dropdown li {	/* Dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown li {
 	background: #fff;	
 	line-height: 1;
-/*min-width: 100%;*/
-	padding-bottom: 0px;	/* Space between dropdown menu items */
-	height:auto;	/* Auto height added */
+	padding-bottom: 0px;
+	height:auto;
 	min-height: 100%;
 }
 
-.top-bar ul > li.has-dropdown .dropdown li a {	/* Font color of dropdown menu */
+.top-bar ul > li.has-dropdown .dropdown li a {
 	font-weight: normal;
-	color: #343537; /* Dark gray font color */
+	color: #343537;
 	height: 100%;
 	line-height: 1;	
-	padding: 5px 10px 7px 9px;	/* Justifies menu items */				
+	padding: 5px 10px 7px 9px;			
 }
 
-.top-bar ul > li.has-dropdown .language li a {	/* Font color of the dropdown menu */
-	width: 89px;	/* Width of language dropdown menu */
+.top-bar ul > li.has-dropdown .language li a {
+	width: 89px;
 }
 
-.top-bar ul > li.has-dropdown .user li a {	/* Font color of the dropdown menu */
-	width: auto;	/* Width of user dropdown menu */
+.top-bar ul > li.has-dropdown .user li a {
+	width: auto;
 }
 
 .top-bar ul > li.has-dropdown .dropdown li:last-child {
-	padding-bottom: 0px;	/* Dropdown menu bottom */
+	padding-bottom: 0px;
 }
 
 .top-bar ul > li.has-dropdown .dropdown li a:hover,
 .top-bar ul > li.has-dropdown .dropdown li a:focus {
-	background: #d6e8f6;	/* Background light blue color of menu on mouse over */
+	background: #d6e8f6;
 	width: 100%;
 }
 
-.top-bar ul > li.has-dropdown a:after {	 /*Arrow of Dropdown menu*/
+.top-bar ul > li.has-dropdown a:after {
 	width: auto;
 	margin-right: 8px;	
 	margin-top: -1px;
 }
 
-/* -- End of overwriting and reconfiguring -- */
-
-
-/* ------------------ */
 /* -- Dropdown box -- */
-/* ------------------ */
+
 #language-wrapper {
 	margin:0 auto;
 	width:218px;
@@ -326,53 +313,47 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	display:none;
 }
  
-/* -- The following segment overwrites and reconfigures the dropdown control from foundation.min.css */
-/* -- For a grayed out border dropdown language selection, change the color #8a8a8a by #ddd -- */
 form.custom div.custom.dropdown{
-	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
+	font-size:12px;
 	height:auto;
 	border:solid 1px #fff;
 }
 
 form.custom div.custom.dropdown a.current{
-   	color:#999;  /* Font color gray to match theme page for the language once selected, English is the default  */
-	border:solid #8a8a8a 1px;  /* dropdown border color is dark gray */
+   	color:#999;
+	border:solid #8a8a8a 1px;
 }
 
 form.custom div.custom.dropdown a.selector{
-	border:solid #8a8a8a 1px;  /* dropdown arrow square box border color is dark gray */
+	border:solid #8a8a8a 1px; 
 }
 
 form.custom div.custom.dropdown a.selector:after{
-	border-color:#8a8a8a transparent transparent transparent;   /* Actual dropdown arrow color is dark gray */
+	border-color:#8a8a8a transparent transparent transparent; 
 }
 
-
-/* -- This is the actual dropdown menu on the login page -- */
 form.custom div.custom.dropdown ul{
-	border:solid 1px #999;  /* Dropdown menu border color to match theme page */
+	border:solid 1px #999;
 }
 
-/* --  Dropdown item list -- */
 form.custom div.custom.dropdown ul li{
-	font-size:12px;	 /* Dropdown menu items font size */
-	color:#999;  /* Dropdown menu items font color olor to match theme page */	
+	font-size:12px;
+	color:#999;
 }
 
 form.custom div.custom.dropdown ul li.selected{
-	color:#808080;  /* Darker gray font color when language is selected within the dropdown menu */
+	color:#808080;
 }
 
 form.custom div.custom.dropdown ul li:hover{
-	color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
+	color:#808080;
 
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
-	color:#808080;  /* Darker gray font color on menu item already selected when mouse over */
+	color:#808080;
 }
 
-/* The following segment is to standardize the dropdown box menu across all browsers */
 form.custom div.custom.dropdown ul li.selected:after{
 	content:"";
 }
@@ -381,9 +362,7 @@ form.custom div.custom.dropdown ul li:hover:after{
 	content:"";
 }
 
-/* -- End of overwriting and reconfiguring -- */
-
-
+/* ---------------------- */
 
 @media only screen and (max-width: 940px) {
 .top-bar ul.left>li, .top-bar ul.right>li {
@@ -421,10 +400,6 @@ overflow: visible;
 }
 }
 
-
-
-
-
 /* --------  IE8 Fixes ------- */
 
 .lt-ie9 .top-bar ul li a {
@@ -451,22 +426,17 @@ overflow: visible;
 }
 
 .lt-ie9 .top-bar ul > li a:hover, .lt-ie9 .top-bar ul > li a:focus, .lt-ie9 .top-bar ul > li a:active {
-	color: #d9d9d9;	/* Light gray color on mouse over on horizontal menu */
+	color: #d9d9d9;
 }
 
 .lt-ie9 .top-bar ul li.has-dropdown {
-	padding-right: 24px;	/* Distance of dropdown arrow from side margins */
+	padding-right: 24px;
 }
 
 .lt-ie9 .top-bar .username {
 	font-size:14px; 
 	font-weight: bold;
 }
-/* ----------------------------------------------- */
-/* ------------- End Multilingual Menu ----------- */
-/* ----------------------------------------------- */
-
-
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-width : 769px) {
@@ -2179,9 +2149,6 @@ table tbody tr:nth-child(even) {
 	background: #f1f1f1;
 }
 
-
-
-
 table tbody tr td {
 vertical-align: middle;
 }
@@ -3547,31 +3514,11 @@ border-left: 4px solid #717171;
 	float:left;
 }
 
+/* --- Search result pages --- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.result-title {
+	margin-left: 9px;
+}
 
 ul.search-result-nav{
 	display:block;
@@ -3591,24 +3538,19 @@ ul.search-result-nav li{
 
 }
 
-ul.search-result-nav li a{ /* active-item */
+ul.search-result-nav li a{
 	display:block;
-/*	color:#6f6f6f; */
 	color:#999999;
 	text-decoration:underline;	
 	border:solid 1px #fff;	
-/*	padding-left:15px;		*/
 	padding-left:7px;		
 }
 
 ul.search-result-nav li.title{
 	display:block;
-/*	color:#6f6f6f; */
 	color:#222222;
-/*	border-bottom:solid 1px #c4c4c4; */
 	text-decoration:none;
 	font-weight:bold;
-/*	padding-left:15px;		*/
 	padding-left:7px;
 	padding-top:-5px;	
 }
@@ -3618,58 +3560,51 @@ ul.search-result-nav .selected-item{
 	border:solid 1px #000;
 	font-weight:bold;
 	text-decoration:none;
-/*	padding-left:15px;		*/
 	padding-left:7px;		
 }
 
-ul.search-result-nav li a:focus{
-/*	color:green; */
-}
 ul.search-result-nav li a:hover{
-/*	color:#202020; */
 	border:solid 1px #6f6f6f;
-/*	padding-left:15px;		*/
 	padding-left:7px;		
 }
-ul.search-result-nav li a:active{
-/*	color:#202020;
-	border:solid 1px #6f6f6f;
-	font-weight:bold;  */
-}
+
 ul.search-result-nav .grayedout-item{
-/*	display:block; */
 	color:#cccccc;
-	text-decoration:none;	
 	border:solid 1px #fff;	
-/*	padding-left:15px;		*/
 	padding-left:7px;
+}
+
+.export-print {
+	margin-right:6px;
+}
+
+.export-print a{
+	color:#000;
 }
 
 .add-space {
 	margin-right:5px;
-	margin-left:10px;	
-}
-
-.export-print {
-	margin-right:-5px;
-}
-.export-print a{
-	color:#000;
+	margin-left:11px;	
 }
 
 .adjust-two-columns {
 	width: 20%;	
 }
+
 .adjust-ten-columns {
 	width: 80%;	
 }
+
 .table-search-results {
 	margin-bottom:40px;
 }
+
 .table-search-results a{
 	color:#000;
 	text-decoration:underline;
 }
+
 .no-border {
 	border: solid #fff 0px;
 }
+/* --------------- */
