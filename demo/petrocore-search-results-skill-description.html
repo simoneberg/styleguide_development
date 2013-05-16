@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+<!--<meta name="viewport" content="width=device-width" />-->  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/app.css">
+  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/app-styles.css">
+
+  <!--[if IE 8]>
+  	<link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>                                                                     
+              </ul>          
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>                                                                        
+              </ul>
+            </li> 
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<!--***** PETROCORE HEADER *****-->
+
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+      
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+        <div class="row collapse search-input">
+          <div class="two mobile-one columns">
+            <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+          </div>
+          <div class="eight mobile-three columns">
+            <input type="text" />
+          </div>
+          <div class="two mobile-one columns">
+            <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
+          </div>
+        </div>
+      </div>
+      <!--***** SEARCH *****--> 
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+          <li>
+            <div class="title">
+              <h6>Dashboard</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Goals</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>My Position</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Growth Positions</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6 class="two-lines">My Team's Development</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6><a href="petrocore-reports.html">Reports</a></h6>
+            </div>
+            <!-- <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div> -->
+          </li>
+          <li>
+            <div class="title">
+              <h6>Administration</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Notes</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6>Tools</h6>
+            </div>
+        <!--<div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>-->
+          </li>
+        </ul>
+      </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li class="current"><a href="#">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+          <h4>Search Results for &quot;drilling&quot;</h4>
+            <hr>
+            <div class="row">
+				<div class="twelve columns">
+ 		           <div class=""><p><strong>Found 154 results</strong></p></div>
+				</div>
+            
+	            <div class="columns remove-padding adjust-two-columns">
+
+				     <!--***** SEARCH RESULTS NAVIGATION *****-->
+                
+					<div class="twelve columns">
+						<ul class="search-result-nav">
+						  <li class="title"><p><strong>Search Types</strong></p></li>          
+						  <li class="grayedout-item">Person (0)</li>  
+						  <li class="grayedout-item">Group (0)</li>  
+						  <li class="grayedout-item">Map (0)</li>  
+						  <li><a href="petrocore-search-results-skill-group.html">Skill Group (4)</a></li>  
+						  <li><a href="petrocore-search-results-skill.html">Skill (22)</a></li>  
+						  <li class="selected-item">Skill Description (120)</li>  
+						  <li><a href="petrocore-search-results-development-activity.html">Development Activity (8)</a></li>                
+						</ul>  
+					</div>
+
+				    <!--***** SEARCH RESULTS NAVIGATION *****-->
+                
+    	        </div>
+            
+       	        <div class="columns remove-padding adjust-ten-columns">
+	          		<div class="left result-title"><p><strong>Results 1-25 of 120</strong></p></div>
+		          	<div class="export-print right text-right"><p><i class="icon- add-space"><a href="#">&#xf019;</a></i> <a href="#">Export</a> <i class="icon- add-space"><a href="#">&#xf02f;</a></i> <a href="#">Print</a></p></div>
+
+    	            <!--***** TABLE *****-->
+
+	    		    <table class="twelve no-border table-search-results">
+		    	        <thead>
+		        	      <tr>
+		            	    <th>Description</th>
+		        	      </tr>
+		            	</thead>
+			            <tbody>
+		    	          <tr>
+        			        <td><a href="#">Attend the morning drilling meeting and report on the status and objectives of the drilling rigs.</a></td>
+        	    		  </tr>
+			              <tr>
+    			            <td><a href="#">Collect relevant topographic maps and describe the implications of surface location factors on drilling operations.</a></td>
+    	        		  </tr>
+		        	      <tr>
+        		    	    <td><a href="#">Create a drilling program for a typical well using offset data, post-well reports, previous programs, and best practices.</a></td>
+            			  </tr>
+			              <tr>
+        		    	    <td><a href="#">Implement optimized procedures and mitigate HSE issues.</a></td>
+    	        		  </tr>
+		        	      <tr>
+        		    	    <td><a href="#">Incorporate practical operational considerations in the drilling program.</a></td>
+            			  </tr>                  
+		        	      <tr>
+		            	    <td><a href="#">Describe the basic objectives and elements of performance planning and the Technical Limit, to generate a Days.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Estimate the technical limit for a common situation using an offset's estimate of the technical limit and a detailed.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Monitor drilling performance for a typical well against the detailed drilling plan.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Describe the purposes of Rig and Service Company Inspection programs, including equipment, personnel and HSE.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Identify types and capabilities of major components of a typical Drilling System.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Display management / leadership ability.</a></td>
+		            	  </tr>                  
+        			      <tr>
+            			    <td><a href="#">Manage potential conflict situations.</a></td>
+		            	  </tr>                  
+		        	      <tr>
+        		    	    <td><a href="#">Build and lead effective motivated teams to achieve drilling plans.</a></td>
+		            	  </tr>                  
+		        	      <tr>
+        		    	    <td><a href="#">Act as a recognized role model by supervisory apprentices.</a></td>
+            			  </tr>                  
+		        	      <tr>
+		            	    <td><a href="#">Expand experience in DS-1 through DS-1 technology for use in horizontal and extended reach drilling operations.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Analyze use of production tubing as drill string potential in horizontal wells using mudmotors.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Explain different rock types and basic aspects of downhole environment.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Identify geologic factors effect on drilling performance: Rock type / drillability, tectonic / instability, temperature profile.</a></td>
+		            	  </tr>                  
+        			      <tr>
+            			    <td><a href="#">Explain significance of fracture pressure and how it impacts well design and drilling operations.</a></td>
+		            	  </tr>                  
+        			      <tr>
+            			    <td><a href="#">Explain the significance of pore pressure and how it impacts well design and drilling operations.</a></td>
+		            	  </tr>                  
+        			      <tr>
+		            	    <td><a href="#">For all well types in an area, monitor formation pressure to identify abnormal and / or dangerous situations.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Organize wellsite personnel to implement plans, assure appropriate contingency plans exist, vet lessons learned.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Use geologic principles to characterize the drilling pore-pressure environment.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Use advanced pore pressure prediction techniques when appropriate (i.e. sonic, density, resistivity and conductivity.</a></td>
+        		    	  </tr>                  
+        	    		  <tr>
+		            	    <td><a href="#">Identify and address regulatory implications of casing points, drilling fluids, operational plans, environmental.</a></td>
+        		    	  </tr>                                                                                                            
+        	    		</tbody>
+			          </table>
+
+                      <!--***** TABLE *****-->           
+           
+	            </div>
+            
+				<div class="twelve columns pagination-centered">  
+					<p>Page 1 of 5</p>
+					<ul class="pagination">
+					  <li class="arrow unavailable"><a href="">«</a></li>  
+					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>    
+					  <li class="current unavailable"><a href="">1</a></li>    
+					  <li><a href="">2</a></li>
+					  <li><a href="">3</a></li>
+					  <li><a href="">4</a></li>
+					  <li><a href="">5</a></li>                        
+					  <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+					  <li class="arrow unavailable"><a href="">»</a></li>
+					</ul>       
+				</div>            
+            
+            </div>
+
+       </div>      
+    </div>
+  </div>
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+  
+  <!-- END NAVIGATION -->
+    </div>
+  <!-- </div> -->
+  <!-- CONTENT AREA -->
+
+<div id="myModal" class="reveal-modal expand">
+  <div class="modal-header">
+    <h5>This is a Pop-up</h5>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div class="popup-content-container">
+    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right" href="#">Cancel</a>
+  </div>
+</div>
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="../javascripts/jquery.foundation.forms.js"></script>
+  <script src="../javascripts/jquery.event.move.js"></script>
+  <script src="../javascripts/jquery.event.swipe.js"></script>
+  <script src="../javascripts/jquery.foundation.reveal.js"></script>
+  <script src="../javascripts/jquery.foundation.orbit.js"></script>
+  <script src="../javascripts/jquery.foundation.navigation.js"></script>
+  <script src="../javascripts/jquery.foundation.buttons.js"></script>
+  <script src="../javascripts/jquery.foundation.tabs.js"></script>
+  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="../javascripts/jquery.foundation.accordion.js"></script>
+  <script src="../javascripts/jquery.placeholder.js"></script>
+  <script src="../javascripts/jquery.foundation.alerts.js"></script>
+  <script src="../javascripts/jquery.foundation.topbar.js"></script>
+  <script src="../javascripts/jquery.foundation.joyride.js"></script>
+  <script src="../javascripts/jquery.foundation.clearing.js"></script>
+  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+
+</body>
+</html>
