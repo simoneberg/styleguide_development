@@ -448,9 +448,16 @@ ul.search-result-nav .grayedout-item{
 }
 
 .table-search-results a{
-	color:#000;
+	color:#01669f;
+	text-decoration:none;
+}
+
+.table-search-results a:hover {
+	color:#00466e;
 	text-decoration:underline;
 }
+
+
 
 .no-border {
 	border: solid #fff 0px;
