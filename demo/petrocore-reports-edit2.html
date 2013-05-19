@@ -22,19 +22,24 @@
   <link rel="stylesheet" href="../stylesheets/app.css">
   <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-  <link rel="stylesheet" href="../demo/app-styles.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -69,6 +74,7 @@
       </div>
   </div>
 </nav>
+
 <!--***** PETROCORE HEADER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -231,7 +237,7 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="success radius button" href="petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="petrocore-reports-history.html">View History</a></div>
+          <h4>Edit Report Template</h4><div class="save-template-btn"><a class="primary radius button" href="petrocore-reports.html">Save Template</a></div><div class="save-template-btn"><a class="secondary radius button" href="petrocore-reports-history.html">View History</a></div>
             <hr>
           <div id="progress-indicator">
             
@@ -239,25 +245,25 @@
               <div class="three columns" id="step1">
                 <!-- <div class="step-number active-step-number"><p>1</p></div> -->
                 <div class="step-name alternate-step-number-1"><a href="petrocore-reports-edit1.html" style="color:#222;"><p>Properties</p></a></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns active-step" id="step2">
                 <!--<div class="step-number active-step-number"><p class="highlight-step">2</p></div>-->
                 <div class="step-name-long alternate-step-number-2"><p>People &amp; Position</p></div>
-                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+                <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step3">
                 <!-- <div class="step-number"><p>3</p></div> -->
                 <div class="step-name-short alternate-step-number-3"><a href="petrocore-reports-edit3.html" style="color:#222;"><p>Share</p></a></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             
               <div class="three columns" id="step4">
                 <!-- <div class="step-number"><p>4</p></div> -->
                 <div class="step-name-short alternate-step-numbe4"><a href="petrocore-reports-edit4.html" style="color:#222;"><p>Reports</p></a></div>
-                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div></div></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
               </div>
             </div>  
           </div>
@@ -301,11 +307,7 @@
           <form class="form-remove-margin-bottom">
           <fieldset>
           <legend>Select People</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
-                </div>
-              </div>
+  
           </fieldset>
           </form>
 
@@ -321,7 +323,6 @@
                       <div class="filters-checklist">
                           <p class="options-description"><b>Include</b></p>
                           <label for="checkbox1"><input type="checkbox" CHECKED id="checkbox1"> Yourself</label>
-                          <label for="checkbox2"><input type="checkbox" CHECKED id="checkbox2"> Others</label>  
                           <label for="checkbox12"><input type="checkbox" id="checkbox12"> Directly assigned to me</label>                                           
                       </div>
                       
@@ -339,8 +340,9 @@
                           
 
 
-                    <p class="options-section"><b>Filter: </b><a href="#">Add a filter</a></p>
-
+          <!--***** MODAL *****-->
+                    <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+          <!--***** MODAL *****-->
 
 
                       <hr class="petrocore-hr"> 
@@ -368,13 +370,8 @@
               <div class="eight columns remove-padding-custom">
                 <div class="panel-wrapper-white-tree">
 
-                <div class="panel-header-small-static-action">
-                  <!-- <h5>Select all</h5> -->
+                  <img src="../images/step2-tree.jpg">                  
 
-                  <label for="checkbox10" style="margin-top:4px;"><input type="checkbox" id="checkbox10"> Select All</label>
-                  <img src="../images/step2-tree.png" style="margin-left:-3px; margin-top:6px;">                  
-
-                </div>
               </div>
 
               </div>
@@ -389,12 +386,8 @@
            
           <form class="form-remove-margin-bottom">
           <fieldset>
-          <legend>Select People</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p class="form-description remove-margin-bottom">Maecenas sed diam eget risus varius blandit sit amet non magna nullam quis risus eget urna</p>
-                </div>
-              </div>
+          <legend>Select Position</legend>
+
           </fieldset>
           </form>
 
@@ -428,7 +421,9 @@
 
                   <hr class="petrocore-hr"> 
                           
-                    <p class="options-section"><b>Filter: </b><a href="#">Add a filter</a></p>
+          <!--***** MODAL *****-->
+                    <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="position-filter" class="">Add a Filter</a></p>
+          <!--***** MODAL *****-->
 
                       <hr class="petrocore-hr"> 
 
@@ -451,13 +446,8 @@
               <div class="eight columns remove-padding-custom">
                 <div class="panel-wrapper-white-tree">
 
-                <div class="panel-header-small-static-action">
-                  <!-- <h5>Select all</h5> -->
+                  <img src="../images/step2-tree2.jpg">                  
 
-                  <label for="checkbox11" style="margin-top:4px;"><input type="checkbox" id="checkbox11"> Select All</label>
-                  <img src="../images/step2-tree2.png" style="margin-left:-3px; margin-top:6px;">
-
-                </div>
               </div>
 
               </div>
@@ -514,6 +504,194 @@
     </div>
   <!--</div>-->
   <!-- CONTENT AREA -->
+
+  <!--************** MODAL WINDOW PEOPLE ****************-->
+
+<div id="people-filter" class="reveal-modal expand">
+ 
+                  <div class="panel-header">
+                    <div class="panel-title-container"><h5>Add a Filter</h5></div>
+                      <div class="panel-header-icons-container">
+                       <ul class="panel-header-icons-list">
+                          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+                          <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                          <!-- <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li> -->
+                        </ul>
+                      </div>
+                  </div>
+
+  <div class="popup-content-container">
+
+
+<!--************** FORM ****************-->
+          <form class="custom">
+
+          <div class="row">
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>Account Status</option>
+                <option>Account Status</option>
+                <option>Account Status</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  Account Status
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>Account Status</li>
+                  <li>Account Status</li>
+                  <li>Account Status</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>is</option>
+                <option>is</option>
+                <option>is</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  is
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>is</li>
+                  <li>is</li>
+                  <li>is</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>Active</option>
+                <option>Active</option>
+                <option>Active</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  Active
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>Active</li>
+                  <li>Active</li>
+                  <li>Active</li>
+                </ul>
+              </div> 
+              </div>             
+            
+            </div>
+          </form>
+<!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+
+<!--************** MODAL WINDOW POSITION ****************-->
+
+<div id="position-filter" class="reveal-modal expand">
+  
+                  <div class="panel-header">
+                    <div class="panel-title-container"><h5>Add a Filter</h5></div>
+                      <div class="panel-header-icons-container">
+                       <ul class="panel-header-icons-list">
+                          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+                          <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                          <!-- <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li> -->
+                        </ul>
+                      </div>
+                  </div>
+
+  <div class="popup-content-container">
+
+
+<!--************** FORM ****************-->
+          <form class="custom">
+
+          <div class="row">
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>Account Status</option>
+                <option>Account Status</option>
+                <option>Account Status</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  Account Status
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>Account Status</li>
+                  <li>Account Status</li>
+                  <li>Account Status</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>is</option>
+                <option>is</option>
+                <option>is</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  is
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>is</li>
+                  <li>is</li>
+                  <li>is</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="four columns">
+             <select style="display:none;" id="customDropdown">
+                <option SELECTED>Active</option>
+                <option>Active</option>
+                <option>Active</option>
+              </select>
+              <div class="custom dropdown modal-input-fields">
+                <a href="#" class="current">
+                  Active
+                </a>
+                <a href="#" class="selector"></a>
+                <ul class="modal-dropdown-list">
+                  <li>Active</li>
+                  <li>Active</li>
+                  <li>Active</li>
+                </ul>
+              </div> 
+              </div>             
+            
+            </div>
+          </form>
+<!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW POSITION ****************-->
+
 
 <div id="myModal" class="reveal-modal expand">
   <div class="modal-header">

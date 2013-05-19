@@ -22,12 +22,15 @@
   <link rel="stylesheet" href="../stylesheets/app.css">
   <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-  <link rel="stylesheet" href="../demo/css/app-styles.css">
+  <link rel="stylesheet" href="../demo/app-styles.css">
+
+  <!--[if IE 8]>
+  	<link rel="stylesheet" type="text/css" href="ie8.css">
+  <![endif]-->
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
-
 
 <!--***** PETROCORE HEADER *****-->
 
@@ -36,7 +39,7 @@
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
@@ -74,8 +77,6 @@
 
 <!--***** PETROCORE HEADER *****-->
 
-
-
 <!--***** MAIN WRAPPER *****-->
 <div class="row master-wrapper">
 
@@ -102,7 +103,7 @@
       <div class="left-nav-container">
         <!--This will hold the accordeon navigation-->
         <ul class="accordion">
-          <li class="active">
+          <li>
             <div class="title">
               <h6>Dashboard</h6>
             </div>
@@ -219,27 +220,25 @@
 
   <!--***** RIGHT SPLIT CONTAINER *****-->
   <div class="nine columns right-split-container">
-      
-
-
-
-
-<!-- 
       <div class="breadcrumbs-container">
-
-      </div> -->
-
-
-
-
-
-
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li class="current"><a href="#">Search</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="content-container">
-
-
-      </div> 
-
-
+        <!--This will hold the content-->
+          <h4>Search Results for &quot;vancouver island&quot;</h4>
+        <hr>
+            <div class="row">
+	            <div class="twelve columns text-center">
+ 		           <p>No search results found.</p>
+				</div>
+            </div>
+    </div>      
   </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
@@ -248,13 +247,13 @@
 
 <!--***** FOOTER *****-->
 
-<!-- <div class="row">
+<div class="row">
   <div class="twelve columns petrocore-footer">
       <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
       <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
       <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
   </div>
-</div> -->
+</div>
 <!--***** FOOTER *****-->
 
   <!-- Entire Navbar Code -->
@@ -272,7 +271,7 @@
   </li> -->
   
   <!-- END NAVIGATION -->
-    <!-- </div> -->
+    </div>
   <!-- </div> -->
   <!-- CONTENT AREA -->
 
