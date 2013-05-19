@@ -97,7 +97,7 @@
           <p><img src="images/breadcrumbs.jpg" alt="Breadcrumbs"></p>
           <p>Breadcrumbs are used when walking a user through a linear flow or show where someone is in the hierarchy. They are built with a UL just like pagination, and they can support span or anchor elements with current and unavailable classes.</p>
           <p><img src="images/breadcrumbs-long.jpg" alt="Breadcrumbs"></p>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          <p>When breadcrumbs have links that display too many characters or are too long for the entire breadcrumbs to fit, they will display a "..." after 20 characters (including spaces). This is to indicate to the user that the link contains more characters.</p>
           <hr>
           <h3>Search</h3>
           <p><img src="images/search.jpg" alt="Search"></p>
@@ -106,7 +106,12 @@
           <hr>
           <h3>Pagination</h3>
           <p><img src="images/petrocore-interface-pagination.jpg" alt="Pagination"></p>
-          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <p>Pagination control allows users to go through multiple pages of results. The pagination control must display as above:</p>
+          <ul class="square">
+            <li>It must have a page number indication as follows: [current page number] of [total pages]</li>
+            <li>5 pages are listed on the 2nd line. Example: 1 2 3 4 5</li>
+            <li>There are 4 arrow controls. In the screenshot above, first one takes you back to page 1. Second arrow takes you back a page. Third arrow takes you forward a page. Fourth arrows takes you to the last page.</li>
+          </ul>
 
           <hr>
           <h3>Responsive</h3>
