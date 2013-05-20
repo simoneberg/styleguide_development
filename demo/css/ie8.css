@@ -63,7 +63,18 @@ form.custom div.custom.dropdown a.selector {
 	top:1px;	
 }
 
+form.custom.search-type div.custom.dropdown a.selector {
+	right:1px;
+	top:1px;	
+}
+
+
 /* It adds bottom space to legend tags */
 fieldset legend {
 	margin-bottom: 10px;
+}
+
+/* It preserves size of horizontal filters */
+.added-filter {
+	min-width:204px;
 }
