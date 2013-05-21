@@ -1330,7 +1330,8 @@ textarea:focus {
 }
 
 .search-bar-icons-dropdown {
-	color: #5b5b5b;
+/*	color: #5b5b5b; */
+	color: #979797;	
 	margin-top:-3px;
 	margin-left:-3px;
 	text-shadow: 0px 1px #ccc;
@@ -3724,7 +3725,24 @@ span.dropdown-arrow {
 	border-bottom: 1px solid #5b5b5b;
 	cursor:pointer;
 }
+	
+#arrowdown {
+/*	border:solid 1px black; */
 
+}
+
+/*	
+#magnifglass .icon- {
+	border:solid 1px blue;
+}
+	
+#arrowdown .icon- {
+	border:solid 1px red;
+}	
+	
+*/	
+
+	
 .row.collapse.search-input {
 	padding: 0px 20px 0px 20px;	
 }
@@ -3734,7 +3752,7 @@ span.dropdown-arrow {
 } 
 
 #advanced_search {
-	background-color:#c5c5c5;
+	background-color:#f4f4f4;
 	padding: 10px 20px 0px 20px;
 	border-bottom:solid 1px #717171;	
 	height:auto;	
@@ -3759,12 +3777,12 @@ span.dropdown-arrow {
 .add-filter-container .petrocore-hr {
 	height: 1px;
 	margin: -9px 0 10px;	
-	border: solid #949494 1px;
+	border: solid #bababa 1px;
 	border-width: 1px 0 0;
 	clear: both;
-	-moz-box-shadow: 0px 1px #dfdfdf;
-	-webkit-box-shadow: 0px 1px #dfdfdf;
-	box-shadow: 0px 1px #dfdfdf;
+	-moz-box-shadow: 0px 1px #f7f7f7;
+	-webkit-box-shadow: 0px 1px #f7f7f7;
+	box-shadow: 0px 1px #f7f7f7;
 }
 
 .added-filter {
@@ -3772,7 +3790,7 @@ span.dropdown-arrow {
 	width:100%;
 	height:auto;
 	line-height: 32px;
-	background-color:#bcbcbc;
+	background-color:#e7e7e7;
 	margin: 0px 0px 6px 0px;
 	display:inline-block;
 /*	min-width:204px;					This lines works well with IE8    */
@@ -3825,12 +3843,11 @@ span.dropdown-arrow {
 
 
 /* ============== */
-/*
-#search-type-label {
-														border:solid 1px red;
-														color:red;
+
+form.custom.search-type #search-type-label {
+	font-weight:bold;
+	padding-bottom: 5px;
 }
-*/
 
 form.custom.search-type div.custom.dropdown{
 	display:block;
