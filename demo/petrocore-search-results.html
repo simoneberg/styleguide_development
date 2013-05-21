@@ -31,18 +31,32 @@
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
+  
 	function show_hide_advanced(id) {
 		var e = document.getElementById(id);
+			a = document.getElementById('arrowdown');
+		
+		
 		if(e.style.display == 'block')
-			e.style.display = 'none';
+		
+		{	e.style.display = 'none';
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			a.style.position = 'relative';
+			a.style.top = '2px';						
+		}
 		else
-			e.style.display = 'block';
-	}
+		{	e.style.display = 'block';
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			a.style.position = 'relative';
+			a.style.top = '6px';			
+		}
+	}	
+	
    </script>
 
-<script type="text/javascript" src="../javascripts/jquery.js"></script>
+   <script type="text/javascript" src="../javascripts/jquery.js"></script>
 
-<script type="text/javascript">
+   <script type="text/javascript">
  
 	$(document).ready(function(){
  
@@ -126,13 +140,13 @@
 
                      
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
           </div>
   
 
           
           <div class="two mobile-one columns">
-            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
 
                     
@@ -146,7 +160,7 @@
                     <p><strong>Advanced Search</strong></p>
                 
 					<form class="custom search-type">                  
-						<label for="customDropdown"><strong>Search Type:</strong></label>  
+						<label id="search-type-label" for="customDropdown">Search Type:</label>  
 						<select style="display:none;" id="customDropdown">  
 							<option SELECTED>Person</option>  
 							<option>Group</option>    
