@@ -9,7 +9,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Pop-ups – PetroSkills Online Style Guide</title>
+  <title>Tables – PetroSkills Online Style Guide</title>
   
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -22,6 +22,13 @@
   <link rel="stylesheet" href="stylesheets/foundation-override.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
+
+<!--<style type="text/css">
+table {border-top: 1px solid black; border-right: 1px solid black; border-left: 1px solid black; border-radius:0px; border-spacing: 0px;}
+table thead, table tfoot {background-color:#925d01 !important;}
+table tbody tr td {border-bottom: 1px solid black;}
+</style>-->
+
 </head>
 <body>
 
@@ -64,10 +71,10 @@
       <ul class="subitems">
           <li><a href="tables.html">Tables</a></li>
           <li><a href="charts.html">Charts</a></li>
-          <li class="active"><a href="popups.html">Pop-ups</a></li>
+          <li><a href="popups.html">Pop-ups</a></li>
           <li><a href="tooltips.html">Tooltips</a></li>
           <li><a href="context-menu.html">Context Menu</a></li>
-          <li><a href="calendar.html">Calendar</a></li>          
+          <li class="active"><a href="calendar.html">Calendar</a></li>
         </ul>
     </li>
     <li><a href="design-examples.html">Design Examples</a></li>
@@ -86,47 +93,89 @@
 
   </div>
     <div class="nine columns">
-      <h2>Pop-ups</h2>
-      <p>Pop-ups simplify site functions by appearing as an overlay over existing page content. They may exist as one or multiple steps. They adopt the same rules as normal page content but feature a header and a close button. The background page 'dims' while dialogs are active. A black layer #000000 at 80% is used to create this effect.</p>
-      <p>Buttons must be right-aligned as shown in the screenshot, and usually consist of [Cancel] and [Save] (in that order).</p>
-      <img src="images/petrocore-popups.jpg" alt="Popups"><br><br>
-      
-      <hr>
+      <h2>Calendar</h2>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Donec sed odio dui. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      <p><img src="images/calendar.jpg" alt="Calendar"></p>
 
-      <!-- Popup forms -->
-      <h3>Pop-up Forms</h3>
-      <p>There are two ways to display forms inside a pop-up window, which are displayed below. For more information on form styles, please refer to the <a href="forms.html">forms page</a>.</p>
-      <h4>Top-aligned Form Labels</h4>
-      <p><img src="images/petrocore-interface-popup-forms-top.jpg" alt="Popup Form Styles"></p>
-      <p><strong>Use top-aligned form labels when:</strong></p>
-      <ul class="square">
-        <li>Form labels are really long (i.e. localization).</li>
-      </ul>
-      <p><strong>Do not use top-aligned form labels when:</strong></p>
-      <ul class="square">
-        <li>Forms are really long. Use right-aligned form labels to help reduce vertical screen space. See below for more information.</li>
-      </ul>
-      <!--
-      <h4>Right-aligned Form Labels</h4>
-      <p><img src="images/petrocore-interface-popup-forms-right.jpg" alt="Popup Form Styles"></p>
-      <p><strong>Use right-aligned form labels when:</strong></p>
-      <ul class="square">
-        <li>The form is really long, and you need to reduce vertical screen space. Right-aligned form labels are perfect for pop-up windows because they don't take up as much vertical screen space versus top-aligned form labels.</li>
-        <p>The form is easy to scan, and you want the user to complete the form faster. Right-aligned form labels allow users to scan and complete forms faster than top-aligned form labels.</p>
-      </ul>
-      <p><strong>Do not use right-aligned form labels when:</strong></p>
-      <ul class="square">
-        <li>Labels are really long. Right-aligned form labels have issues with small width columns and makes it hard to read and scan.</li>
-        <li>If you foresee that the label translated will be very long (i.e. non-English), please use top-aligned form labels instead.</li>
-      </ul>
-      -->
-      <p>For more information about form usability, please refer to <a href="http://www.lukew.com/ff/entry.asp?504" target="_blank">this article</a> posted by Luke W.</p>
-      <p>&nbsp;</p>
-      </div>
+<!--  <h3>Demo</h3>
+      <table class="twelve">
+        <thead>
+          <tr>
+            <th>Table Header</th>
+            <th>Table Header</th>
+            <th>Table Header</th>
+            <th>Table Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Content</td>
+            <td>This is longer content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>This is longer content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>This is longer content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>This is longer content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Code</h3>
+      <pre>
+      &lt;table class="twelve"&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Table Header&lt;/th&gt;
+            &lt;th&gt;Table Header&lt;/th&gt;
+            &lt;th&gt;Table Header&lt;/th&gt;
+            &lt;th&gt;Table Header&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;This is longer content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;This is longer content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;This is longer content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;This is longer content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+            &lt;td&gt;Content&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      </pre> -->
+
+    </div>
   </div>
-
-
-
   <!-- CONTENT AREA -->
 
   
