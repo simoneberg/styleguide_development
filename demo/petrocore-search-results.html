@@ -62,10 +62,7 @@
  
  		$('#add_a_filter').click (function() {
 			
-//			$('#area').append("1 ");
-//			$('add-filter-area').show();
-			
-			$('#filters').append('<li class="added-filter collapse"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>');
+//			$('#filters').append('<li class="added-filter collapse"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>');
 		}); 
 	});
 </script>
@@ -135,7 +132,7 @@
 
         
           <div class="nine mobile-three columns">
-            <input id="initial-search" class="round-left" type="text" />
+            <input id="initial-search" class="round-left" type="text" />            
           </div>
 
                      
@@ -161,32 +158,16 @@
                 
 					<form class="custom search-type">                  
 						<label id="search-type-label" for="customDropdown">Search Type:</label>  
-						<select style="display:none;" id="customDropdown">  
-							<option SELECTED>Person</option>  
-							<option>Group</option>    
-							<option>Map</option>  
-							<option>Skill Group</option>  
+						<select class="expand" style="display:none;" id="customDropdown">
+							<option SELECTED>Person</option>
+							<option>Group</option>
+							<option>Map</option>
+							<option>Skill Group</option>
 							<option>Skill</option>
 							<option>Skill Description</option>
 							<option>Development Activity</option>
 						</select>                          
-                                                
-<!--
-						<div class="custom dropdown search-type expand">
-					       <a href="#" class="current customdropdown">English</a>
-					       <a href="#" class="selector"></a>
-                          
-						   <ul>
-					           <li>Person</li>
-					           <li>Group</li>      
-					           <li>Map</li>
-					           <li>Skill Group</li>
-					           <li>Skill</li>            
-				        	   <li>Skill Description</li>                  
-				        	   <li>Development Activity</li>                                                 
-				    	   </ul>
-				   </div>            
--->	          
+                                                          
 					</form>                    
                    
 
@@ -195,7 +176,7 @@
                     
 
     				      <!--***** MODAL *****-->
-                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
 				          <!--***** MODAL *****-->
                     
                     	  <div class="add-filter-area">
@@ -209,7 +190,9 @@
                                 
 <!--       <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="icon-">&#xf040;</a></div></li>                          -->
 
-<!--   <li class="added-filter collapse"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              -->
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
              		           </ul>
                     	  </div><!--Close panel wrapper grey-->
@@ -353,7 +336,8 @@
           <h4>Search Results for &quot;Smith&quot;</h4>          
             <hr>
             <div class="row">
-				<div class="twelve columns">
+				<div class="twelve columns">               
+                
  		           <div class=""><p><strong>Found 260 results</strong></p></div>
 				</div>
             
