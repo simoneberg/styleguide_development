@@ -3660,22 +3660,13 @@ span.dropdown-arrow {
 	cursor:pointer;
 }
 	
-#arrowdown {
-/*	border:solid 1px black; */
-
+hr.search-results-for {
+	border:solid #8b8b8b;	
+	border-width:1px 0 0;
+	clear:both;
+	height:0
+	margin: 6px 0px 9px;		
 }
-
-/*	
-#magnifglass .icon- {
-	border:solid 1px blue;
-}
-	
-#arrowdown .icon- {
-	border:solid 1px red;
-}	
-	
-*/	
-
 	
 .row.collapse.search-input {
 	padding: 0px 20px 0px 20px;	
