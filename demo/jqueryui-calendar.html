@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page for Calendar</title>
+	<link href="css/petroskills-theme/jquery-ui-1.10.1.custom.css" rel="stylesheet">
+	<link href="css/petroskills-theme/jqueryui-override.css" rel="stylesheet">
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery-ui-1.10.1.custom.js"></script>
+	<script>
+	$(function() {
+
+		
+		$( "#datepicker" ).datepicker({
+			inline: true
+		});
+		
+
+	});
+	</script>
+	<style>
+	body{
+		font: 62.5% "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	</style>
+</head>
+<body>
+
+<h1>Welcome to jQuery UI!</h1>
+
+<div class="ui-widget">
+	<p>This page demonstrates the widgets you downloaded using the theme you selected in the download builder. We've included and linked to minified versions of <a href="js/jquery-1.9.1.js">jQuery</a>, your personalized copy of <a href="js/jquery-ui-1.10.1.custom.min.js">jQuery UI (js/jquery-ui-1.10.1.custom.min.js)</a>, and <a href="css/petroskills-theme/jquery-ui-1.10.1.custom.min.css">css/petroskills-theme/jquery-ui-1.10.1.custom.min.css</a> which imports the entire jQuery UI CSS Framework. You can choose to link a subset of the CSS Framework depending on your needs. </p>
+	<p>You've downloaded components and a theme that are compatible with jQuery 1.6+. Please make sure you are using jQuery 1.6+ in your production environment.</p>
+</div>
+
+<h1>YOUR COMPONENTS:</h1>
+
+<!-- Datepicker -->
+<h2 class="demoHeaders">Datepicker</h2>
+<div id="datepicker"></div>
+
+
+
+</body>
+</html>

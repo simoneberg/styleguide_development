@@ -61,3 +61,13 @@
 	background: none !important;
 	border: 0 !important;
 }
+
+.ui-datepicker {
+	padding: 0;
+}
+
+.ui-datepicker .ui-state-highlight {
+	background-color: #fefaf2;
+	border: 1px solid #3ab1de;
+}
+
