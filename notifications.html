@@ -9,7 +9,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Charts – PetroSkills Online Style Guide</title>
+  <title>Notifications – PetroSkills Online Style Guide</title>
   
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="stylesheets/foundation-override.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
+
 </head>
 <body>
 
@@ -29,17 +30,7 @@
   <nav class="top-bar">
     <ul>
       <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
-      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
     </ul>
-    <!-- <section>
-      <ul class="left">
-        <li><a href="#">Link</a></li>
-      </ul>
-
-      <ul class="right">
-        <li><a href="#">Link</a></li>
-      </ul>
-    </section> -->
   </nav>
   <!-- END NAVIGATION -->
 
@@ -63,64 +54,43 @@
     <li class="active"><a href="tables.html">Patterns</a>
       <ul class="subitems">
           <li><a href="tables.html">Tables</a></li>
-          <li class="active"><a href="charts.html">Charts</a></li>
+          <li><a href="charts.html">Charts</a></li>
           <li><a href="popups.html">Pop-ups</a></li>
           <li><a href="tooltips.html">Tooltips</a></li>
           <li><a href="context-menu.html">Context Menu</a></li>
           <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="notifications.html">Notifications</a></li>
+          <li class="active"><a href="notifications.html">Notifications</a></li>
         </ul>
     </li>
     <li><a href="design-examples.html">Design Examples</a></li>
-    <!-- <li class="active"><a href="#">Item 6</a>
-        <ul class="subitems">
-          <li class="active"><a href="#">Subitem 1</a></li>
-          <li><a href="#">Subitem 2</a></li>
-          <li><a href="#">Subitem 3</a></li>
-          <li><a href="#">Subitem 4</a></li>
-          <li><a href="#">Subitem 5</a></li>
-        </ul>
-    </li> -->
     <li><a href="support.html">Support</a></li>
   </ul>
     <!-- END SIDE BAR -->
 
   </div>
     <div class="nine columns">
-      <h2>Charts</h2>
-      <p>There are various charts displayed throughout the web application. One of the examples below showcases the Dashboard page.</p>
-      <img src="images/petrocore-interface-charts.jpg" alt="Dashboard Panels" style="border: 1px solid #717171;"><br><br>
+      <h2>Notifications</h2>
+      <p>The Notification control is placed before the user's name in the header area of the Compass UI. It displays the number of notifications that are sent to the user by the Compass system.</p>
+      <p>When the Notification indicator is at zero, the number and the circle icon are darken. When it is at 1 or more, the number and the circle icon is lit up with an orange color.</p>
+      <p>When the number icon is clicked, a pop-up overlay appears and is positioned below the number icon.</p>
       <hr>
-
-      <h3>Chart Structure [Outdated: 05-29-2013]</h3>
-      <p><img src="images/petrocore-interface-charts-specs.jpg" alt="Chart Information"></p>
-      <p>The chart includes many functionalities and information:</p>
+      <h3>Usage</h3>
+      <p>At this time, the notification control is being used for:</p>
       <ul class="square">
-        <li><strong>Expand/collapse functionality.</strong> Close or expand the chart as needed.</li>
-        <li><strong>Full view or split view.</strong> The chart can take up the whole width of the content area or split at 50%.</li>
-        <li><strong>Full screen functionality.</strong> A user can view the chart at a full screen resolution which takes up the entire browser window.</li>
-        <li><strong>Chart Details.</strong> When a user hovers over the chart, additional information is displayed via a tooltip.</li>
-        <li><strong>Legend</strong> shows the divisions of a pie chart by color.</li>
-        <li><strong>Chart Filters</strong> NOTE: To be added soon.</li>
+        <li>A visual notification that shows a user that they have reports that have completed generating.</li>
+        <li>When the report has completed, a notification icon is displayed to the user.</li>
+        <li>The pop-up overlay is presented with a list of recently generated reports that are also links that can be clicked to open the selected report.</li>
+        <li>The user can choose not to open the report and simply remove the notification from the list by clicking the "x" button.</li>
       </ul>
-
       <hr>
-      <h3>Chart Filters</h3>
-      <p>Chart Filters allow users to manipulate and control what data is displayed on the charts.</p>
-      <p><img src="images/petrocore-interface-new-panels-filters-on-off.jpg" alt="Chart Filters - Options"></p>
-      <p>Chart Filters have an <strong>Off</strong> or <strong>On</strong> setting. When the setting is set to <strong>Off</strong>, it means that the chart displays default data. No custom settings will be set on the chart. Also, the slide-out menu will be disabled (indicated by the greyed-out arrow).</p>
-      <p>If the setting is set to <strong>On</strong>, any custom settings that the user has made on the chart will be applied. The slide-out menu will be enabled (indicated by the darker grey arrow). Users can click on the arrow or anywhere in the row to slide out the menu to see more options.</p>
-      <h4>Positions (tab)</h4>
-      <p><img src="images/chart-filters/petrocore-interface-new-panels-filters-positon.jpg" alt="Chart Filters - Positions (tab)"></p>
-      <p>This tab allows you to change what positions will be used for displaying data in the chart.</p>
-      <h4>Groups (tab)</h4>
-      <p><img src="images/chart-filters/petrocore-interface-new-panels-filters-groups.jpg" alt="Chart Filters - Groups (tab)"></p>
-      <p>This tab allows you to change what groups will be used for displaying data in the chart. It also allows you to set to the groups that only "Directly Assigned to Me".</p>
-      <h4>Settings (tab)</h4>
-      <p><img src="images/chart-filters/petrocore-interface-new-panels-filters-settings.jpg" alt="Chart Filters - Settings (tab)"></p>
-      <p>This tab is open or available to contain a form. More information will be available soon.</p>
+      <h5>Pop-up Overlay with 1 or More Notifications</h5>
+      <p><img src="images/notifications/petrocore-header-notifications.jpg" alt="Screenshot of at least 1 notification" style="border: 1px solid #717171;"></p>
+      <p>When the notification counter is 1 or more, the user can click on the numbered icon to open up a pop-up overlay. This pop-up overlay is a scrollable control which allows the user to see more than 3 notifications at a time.</p>
+      <br>
+      <h5>Pop-up Overlay with Zero Notifications</h5>
+      <p><img src="images/notifications/petrocore-header-notifications-zero.jpg" alt="Screenshot of Zero Notifications" style="border: 1px solid #717171;"></p>
+      <p>When the notification counter is at zero, the user can click on the numbered icon to open up a pop-up overlay. The overlay will display a "You have no notifications at this time" message.</p>
       <p>&nbsp;</p>
-   
     </div>
   </div>
   <!-- CONTENT AREA -->
