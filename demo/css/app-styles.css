@@ -3,11 +3,6 @@
 	width:100%;
 }
 
-	/*.six, .row .six {
-	width: 50%;
-	float: left;
-	}*/
-
 .columns.right-split-container {
 	padding:0px;
 }
@@ -15,6 +10,10 @@
 .columns.left-split-container {
 	padding:0px;
 	height:0;
+}
+
+.indent {
+	margin-left: 25px;
 }
 
 .petrocore-footer .columns {
@@ -32,6 +31,14 @@
 
 .profile-container.lesser {
 	width: 275px;
+}
+
+.radio-group {
+	margin-top: 13px;
+}
+
+.radio-group:last-child {
+	margin-bottom: 10px;
 }
 
 .top-bar {
@@ -156,34 +163,6 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 .master-wrapper {
 	background-color: #c2c2c2;
 }
-
-/*.toggle-nav-tablet {
-	width:48px;
-	height:44px;
-	background-image: url("../images/toggle-nav-bgrd.png");
-	float:left;
-	border-right: 1px solid #717172;
-}
-
-.toggle-btn {
-	height:26px;
-	width:36px;
-	margin-top: 9px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	background-image: url("../images/toggle-btn.png");
-}
-
-.toggle-btn:active{
-	height:26px;
-	width:36px;
-	margin-top: 9px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	background-image: url("../images/toggle-btn-active.png");
-}*/
 
 .profile-container {	
 	margin-right: 13px;
@@ -320,7 +299,7 @@ form.custom div.custom.dropdown{
 }
 
 form.custom div.custom.dropdown a.current{
-   	color:#999;
+	color:#999;
 	border:solid #8a8a8a 1px;
 }
 
@@ -360,6 +339,10 @@ form.custom div.custom.dropdown ul li.selected:after{
 
 form.custom div.custom.dropdown ul li:hover:after{
 	content:"";
+}
+
+form select.custom-dropdown {
+	display: none;
 }
 
 /* --- Search result pages --- */
@@ -462,6 +445,11 @@ ul.search-result-nav .grayedout-item{
 .no-border {
 	border: solid #fff 0px;
 }
+
+.with-above {
+	margin-top: -15px;
+}
+
 
 /* --------------- */
 
@@ -2671,35 +2659,27 @@ color:red;
 	padding-top: 4px;
 }
 
-.step-name-long {
-	height:30px;
+.step-name.long {
 	width:154px;
-	/*background-color: green;*/
-	position:relative;
-	float: left;
-	padding-left: 10px;
-	padding-top: 4px;
 }
 
-.step-name-short{
-	height:30px;
+.step-name.short{
 	width:60px;
-	/*background-color: green;*/
-	position:relative;
-	float: left;
-	padding-left: 10px;
-	padding-top: 4px;
 }
 
 .step-name p {
 	font-weight: bold;
 }
 
-.step-name-long p {
+.step-name a, p{
+	color: #222;
+}
+
+.step-name.long p {
 	font-weight: bold;
 }
 
-.step-name-short p {
+.step-name.short p {
 	font-weight: bold;
 }
 
@@ -2947,6 +2927,31 @@ label.inline {
 	font-size: 13px;
 	color: #767676;
 }
+
+.icon-after-field {
+	margin-top: 16px;
+	position: relative;
+}
+
+.icon-after-field.custom {
+	top: 8px;
+}
+
+.icon-after-field.input {
+	top: 8px;
+}
+
+.icon-after-field.text {
+	margin-left: 6px;
+	top: 2px;
+}
+
+a.icon-after-field {
+	color: #767676;
+	cursor: pointer;
+	font-size: 16px;
+}
+
 
 .icon-after-input-field {
 	margin-left: 12px;
