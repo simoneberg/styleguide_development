@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Notifications – PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation-override.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
+    </ul>
+  </nav>
+  <!-- END NAVIGATION -->
+
+  <!-- PAGE TITLE -->
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Patterns</h2>
+      <p>These elements alter page content when users interact with them.</p>
+    </div>
+  </div>
+  <!-- END PAGE TITLE -->
+
+  <!-- CONTENT AREA -->
+  <div class="row">
+    <div class="three columns">
+    <!-- SIDE BAR -->
+  <ul class="tabs vertical">
+    <li><a href="index.html">Getting Started</a></li>
+    <li><a href="grids.html">Foundations</a></li>
+    <li><a href="building-blocks.html">Building Blocks</a></li>
+    <li class="active"><a href="tables.html">Patterns</a>
+      <ul class="subitems">
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="charts.html">Charts</a></li>
+          <li><a href="popups.html">Pop-ups</a></li>
+          <li><a href="tooltips.html">Tooltips</a></li>
+          <li><a href="context-menu.html">Context Menu</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li class="active"><a href="notifications.html">Notifications</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+        </ul>
+    </li>
+    <li><a href="design-examples.html">Design Examples</a></li>
+    <li><a href="support.html">Support</a></li>
+  </ul>
+    <!-- END SIDE BAR -->
+
+  </div>
+    <div class="nine columns">
+      <h2>Notifications</h2>
+      <p>The Notification control is placed before the user's name in the header area of the Compass UI. It displays the number of notifications that are sent to the user by the Compass system.</p>
+      <p>When the Notification indicator is at zero, the number shown is 0 and the circle icon is grey. When it is at 1 or more, the number and the circle icon is lit up with an orange color.</p>
+      <p>When the number icon is clicked, a pop-up overlay appears and is positioned below the number icon.</p>
+      <hr>
+      <h3>Usage</h3>
+      <p>At this time, the notification control is being used for:</p>
+      <ul class="square">
+        <li>A visual notification that shows a user that they have reports that have completed generating.</li>
+        <li>When the report has completed, a notification icon is displayed to the user.</li>
+        <li>The pop-up overlay is presented with a list of recently generated reports that are also links that can be clicked to open the selected report.</li>
+        <li>The user can choose not to open the report and simply remove the notification from the list by clicking the "x" button.</li>
+      </ul>
+      <hr>
+      <h5>Pop-up Overlay with 1 or More Notifications</h5>
+      <p><img src="images/notifications/petrocore-header-notifications.jpg" alt="Screenshot of at least 1 notification" style="border: 1px solid #717171;"></p>
+      <p>When the notification counter is 1 or more, the user can click on the numbered icon to open up a pop-up overlay. This pop-up overlay is a scrollable control which allows the user to see more than 3 notifications at a time.</p>
+      <p>Users can click on the "X" or Delete button to remove the notification. When a notification gets deleted, the counter will reduce. For example, if a user has 4 notifications and they remove 1 notification, it will reduce to 3. Clicking or closing the notification overlay will not reduce or "zero" out the counter.</p>
+      <br>
+      <h5>Pop-up Overlay with Zero Notifications</h5>
+      <p><img src="images/notifications/petrocore-header-notifications-zero.jpg" alt="Screenshot of Zero Notifications" style="border: 1px solid #717171;"></p>
+      <p>When the notification counter is at zero, the user can click on the numbered icon to open up a pop-up overlay. The overlay will display a "You have no notifications at this time" message.</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <!-- CONTENT AREA -->
+
+  
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  <script src="javascripts/jquery.event.move.js"></script>
+  <script src="javascripts/jquery.event.swipe.js"></script>
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/jquery.placeholder.js"></script>
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+  
+</body>
+</html>

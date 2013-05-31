@@ -61,11 +61,11 @@
     <li><a href="grids.html">Foundations</a></li>
     <li><a href="building-blocks.html">Building Blocks</a></li>
     <li><a href="tables.html">Patterns</a></li>
-    <li class="active"><a href="design-examples.html">Design Examples</a>
+    <li class="active"><a href="add-activity.html">Design Examples</a>
       <ul class="subitems">
           <li><a href="add-activity.html">Add Activity</a></li>
           <li><a href="assessment-wizard.html">Assessment Wizard</a></li>
-          <li><a href="design-examples.html">Dashboard</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="reports.html">Reports</a></li>
           <li class="active"><a href="search-results.html">Search Results</a></li>
@@ -93,7 +93,7 @@
           <hr>
 
           <h3>Search Workflow</h3>
-          <p><img src="images/search-workflow.jpg" /></p>
+          <p><img src="images/search-types/search-workflow.png" style="border: 1px solid #717171;"/></p>
           <p>The search workflow is a 2-step process. The user does:</p>
           <ol class="square">
             <li>a search by typing in what they're looking for in the Search box.</li>
@@ -101,13 +101,26 @@
           </ol>
 
           <h3>Simple Search</h3>
-          <p><img src="images/simple-search-closeup.jpg" /></p>
+          <p><img src="images/simple-search-closeup.jpg" style="border: 1px solid #717171;" /></p>
           <p>This is where the user types in to do a simple search.</p>
 
           <h3>Advanced Search Feature</h3>
-          <p><img src="images/advanced-search-icon-closeup.png" /></p>
+          <p><img src="images/advanced-search-icon-closeup.png" style="border: 1px solid #717171;"/></p>
           <p>This control activates the feature that the user to do an advanced search. The menu will slide down like an "accordion".</p>
-          <div class="row">
+          <p>After an advanced search is made, the search results counter will display differently than a simple search. The Advanced Search results counter will contain 2 key information that relate with the Advanced Search feature along with the number of results found:</p>
+          <ul class="square">
+            <li>How many filters applied</li>
+            <li>What search type is applied</li>
+          </ul>
+          <!-- <p><img src="images/petrocore-interface-advanced-search-2.jpg" alt="Advanced Search" style="border: 1px solid #717171;"/></p> -->
+          <p>The results will contain 2 links that users can click on: (1) Filters Applied and (2) Search Type. When one of these links are clicked, it will flash or glow the area that corresponds with the appropriate section. Please refer to the screenshot below.</p>
+          <p>These 2 links will also cause the Advanced Search menu to open if it is closed.</p>
+          <p><img src="images/petrocore-interface-advanced-search-glow.jpg" alt="Advanced Search"  style="border: 1px solid #717171;"/></p>
+          <br>
+          <h5>Search Type in Advanced Search</h5>
+         <p><img src="images/petrocore-interface-advanced-search-3.jpg" alt="Advanced Search"  style="border: 1px solid #717171;"/></p>
+         <p>There are 8 search types in Advanced Search. They are also mentioned below under Search Types.</p>
+        <!--<div class="row">
             <div class="six columns">
               <a href="images/petrocore-interface-advanced-search-2.jpg"><img src="images/petrocore-interface-advanced-search-2.jpg" alt="Advanced Search" style="border: 1px solid #717171;"></a>
               <p>View thumbnail to see more</p>
@@ -116,33 +129,43 @@
               <a href="images/petrocore-interface-advanced-search-3.jpg"><img src="images/petrocore-interface-advanced-search-3.jpg" alt="Advanced Search" style="border: 1px solid #717171;"></a>
               <p>View thumbnail to see more</p>
             </div>
-          </div>
+          </div> -->
           <hr>
           <h3>No Search Results</h3>
-          <p><img src="images/no-search-results.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p>
+            <a href="images/search-types/search-type-0-no-results.jpg">
+              <img src="images/search-types/search-type-0-no-results.jpg" alt="Search Type - Person" style="border: 1px solid #717171;">
+            </a>
+          </p>
           <p>The screenshot shows what the page would look like if there are no Search Results.</p>
           <hr>
 
           <h3>Results Count</h3>
-          <p><img src="images/search-results-count.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p><img src="images/search-types/search-results-count.png" alt="Results Count" style="border: 1px solid #717171;"></p>
           <p>Results count should be displayed as [current number of search results on this page] of [total number of results].</p>
           
 
           <hr>
           <h3>Search Types</h3>
-          <p>There are 6 search types:</p>
+          <p>There are 8 search types:</p>
           <ul class="square">
-            <li>People</li>
-            <li>Maps</li>
-            <li>Skill Groups</li>
-            <li>Skills</li>
-            <li>Skill Descriptions</li>
-            <li>Development Activities</li>
+            <li>Person</li>
+            <li>Group</li>
+            <li>Position</li>
+            <li>Map</li>
+            <li>Skill Group</li>
+            <li>Skill</li>
+            <li>Skill Description</li>
+            <li>Development Activity</li>
           </ul>
           <hr>
-          <h3>People</h3>
-          <p>[Screenshot coming soon]</p>
-          <p>Search results for People display a table list of People's:</p>
+          <h3>Person</h3>
+          <p>
+            <a href="images/search-types/search-type-1-person.jpg">
+              <img src="images/search-types/search-type-1-person.jpg" alt="Search Type - Person" style="border: 1px solid #717171;">
+            </a>
+          </p>
+          <p>Search results for Person display a table list of People's:</p>
           <ul class="square">
             <li>Last Name</li>
             <li>First Name</li>
@@ -152,35 +175,65 @@
             <li>Viewable</li>
           </ul>
           <hr>
+          <h3>Group</h3>
+          <p>
+            <a href="images/search-types/search-type-2-group.jpg">
+              <img src="images/search-types/search-type-2-group.jpg" alt="Search Type - Group" style="border: 1px solid #717171;">
+            </a>
+          </p>
+          <p>Search results for Group.</p>
+          <hr>
+          <h3>Position</h3>
+          <p>
+            <a href="images/search-types/search-type-3-position.jpg">
+              <img src="images/search-types/search-type-3-position.jpg" alt="Search Type - Position" style="border: 1px solid #717171;">
+            </a>
+          </p>
+          <p>Search results for Position.</p>
+          <hr>
           <h3>Maps</h3>
-          <p>[Screenshot coming soon]</p>
-          <p>Search results for Competency Maps.</p>
+          <p>
+            <a href="images/search-types/search-type-4-map.jpg">
+              <img src="images/search-types/search-type-4-map.jpg" alt="Search Type - Map" style="border: 1px solid #717171;">
+            </a>
+          </p>
+          <p>Search results for Competency Map.</p>
           <hr>
           <h3>Skill Group</h3>
-          <p><img src="images/skill-group-search-results.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p>
+            <a href="images/search-types/search-type-5-skill-group.jpg">
+              <img src="images/search-types/search-type-5-skill-group.jpg" alt="Search Type - Skill Group" style="border: 1px solid #717171;">
+            </a>
+          </p>
           <p>Search results display a table list of skill groups based on the search term.</p>
           <hr>
 
           <h3>Skill</h3>
-          <p><img src="images/skill-search-results.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p>
+            <a href="images/search-types/search-type-6-skill.jpg">
+              <img src="images/search-types/search-type-6-skill.jpg" alt="Search Type - Skill" style="border: 1px solid #717171;">
+            </a>
+          </p>
           <p>Search results display a table list of skills based on the search term.</p>
           <hr>
 
           <h3>Skill Description </h3>
-          <p><img src="images/skill-description-search-results.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p>
+            <a href="images/search-types/search-type-7-skill-description.jpg">
+              <img src="images/search-types/search-type-7-skill-description.jpg" alt="Search Type - Skill Description" style="border: 1px solid #717171;">
+            </a>
+          </p>
           <p>Search results display a table list of skill descriptions based on the search term.</p>
           <hr>
 
           <h3>Development Activity</h3>
-          <p><img src="images/development-activity-search-results.jpg" alt="Search" style="border: 1px solid #717171;"></p>
+          <p>
+            <a href="images/search-types/search-type-8-dev-activity.jpg">
+              <img src="images/search-types/search-type-8-dev-activity.jpg" alt="Search Type - Development Activity" style="border: 1px solid #717171;">
+            </a>
+          </p>
           <p>Search results display a table list of development activities based on a Code or Name search term.</p>
-          <hr>
-
-          <!-- <h3>Advanced Search</h3>
-          <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-          <img src="images/petrocore-interface-advanced-search-1.jpg" alt="Advanced Search" style="border: 1px solid #717171;"><br><br>
-          <hr> -->
-          
+          <hr>          
 
           </div>
     </div>

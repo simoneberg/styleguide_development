@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Design Examples – PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation-override.css">
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
+      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
+    </ul>
+    <!-- <section>
+      <ul class="left">
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </section> -->
+  </nav>
+  <!-- END NAVIGATION -->
+
+  <!-- PAGE TITLE -->
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Design Examples</h2>
+      <p>A showcase on how the design is applied throughout the user-interface.</p>
+    </div>
+  </div>
+  <!-- END PAGE TITLE -->
+
+  <!-- CONTENT AREA -->
+  <div class="row">
+    <div class="three columns">
+    <!-- SIDE BAR -->
+  <ul class="tabs vertical">
+    <li><a href="index.html">Getting Started</a></li>
+    <li><a href="grids.html">Foundations</a></li>
+    <li><a href="building-blocks.html">Building Blocks</a></li>
+    <li><a href="tables.html">Patterns</a></li>
+    <li class="active"><a href="add-activity.html">Design Examples</a>
+      <ul class="subitems">
+          <li><a href="add-activity.html">Add Activity</a></li>
+          <li><a href="assessment-wizard.html">Assessment Wizard</a></li>
+          <li class="active"><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="search-results.html">Search Results</a></li>
+          <li><a href="subpage.html">Subpage</a></li>
+        </ul>
+    </li>
+    <!-- <li class="active"><a href="#">Item 6</a>
+        <ul class="subitems">
+          <li class="active"><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+          <li><a href="#">Subitem 4</a></li>
+          <li><a href="#">Subitem 5</a></li>
+        </ul>
+    </li> -->
+    <li><a href="support.html">Support</a></li>
+  </ul>
+    <!-- END SIDE BAR -->
+
+  </div>
+    <div class="nine columns">
+       <h2>Panel Functionality</h2>
+          <p>The Dashboard page displays various functionality that a user can do. Panels are layed out in the main content and have various functions:</p>
+          <ul class="square">
+            <li>They are resizable. They can span across from 50% to 100%. This allows a user to make certain charts more important than others. The control is activated by an icon button that looks like a <i class="icon-">&#xf0db;</i>.</li>
+            <li>They can be rearranged and draggable. This allows the user to rearrange the dashboard page to their own preference. Refer to screenshot below to see more information.</li>
+            <li>The charts have interactive controls to help engage and clarify data to the user. The <i class="icon-">&#xf0b2;</i> control makes the chart full-screen. The <i class="icon-">&#xf05a;</i> control pops up a new window or tab and directs user to a page that shows about more information about the chart.</li>
+          </ul>
+
+          <img src="images/petrocore-interface-charts-functionality.jpg" alt="Panel Functionality" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Resizable Panels</h3>
+           <p>Panels can be resized by a click or a tap of a button.</p>
+          <img src="images/petrocore-interface-charts-layout.jpg" alt="Panel Functionality Resize" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Draggable Panels</h3>
+           <p>Panels can be moved and rearranged to allows users to customize the dashboard to their own preference.</p>
+          <img src="images/petrocore-interface-panel-functionality-drag.jpg" alt="Panel Functionality Drag" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Chart Tooltips</h3>
+           <p>Each chart has a tooltip to help display additional information to the user.</p>
+          <img src="images/petrocore-interface-panel-functionality-hover.jpg" alt="Panel Functionality Hover" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h2>Chart Filters</h2>
+          <p>The Chart Filters are a new functionality that allows the user to modify their chart data and what it outputs. It also allows the user to have multiple copies of the same chart but each one can have its own data.</p>
+          <hr>
+
+          <h3>Options On &amp; Off</h3>
+          <p>The options can be in the "Off" state or "On". When in the "Off" state, the collapse/expand action does not work and looks disabled (as shown in the left side of the screenshot). When in the "On" state (the user will click/tap on this link), the collapse/expand action will now be available and allow the user to modify their chart filters.</p>
+          <img src="images/petrocore-interface-new-panels-filters-on-off.jpg" alt="Panel Filters" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Positions</h3>
+          <p>Positions are the first tab upon expanding the Options menu (default). It displays a tree that allows the user to change what position is shown in the chart.</p>
+          <img src="images/petrocore-interface-new-panels-filters-positon.jpg" alt="Panel Filters" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Groups</h3>
+          <p>Groups are the second tab. It displays a tree that allows the user to change what group is shown in the chart.</p>
+          <img src="images/petrocore-interface-new-panels-filters-groups.jpg" alt="Panel Filters" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Settings</h3>
+          <p>Settings are the third tab. <em>Note: More information will come soon on this tab.</em></p>
+          <img src="images/petrocore-interface-new-panels-filters-settings.jpg" alt="Panel Filters" style="border: 1px solid #717171;"><br><br>
+          <hr>
+                                                
+       
+          <h2>User Roles</h2>
+          <p>Below are the roles that are used in the Compass application:</p>
+          <ul class="square">
+            <li>Participant</li>
+            <li>Administrator</li>
+            <li>Supervisor</li>
+            <li>Manager</li>
+            <li>Mentor</li>
+            <li>Subject Matter Expert (SME)</li>
+            <li>Reviewer</li>
+            <li>System Owner</li>
+            <li>Reporter</li>
+          </ul>
+
+        <hr>
+
+          <h3>Multiple Roles</h3>
+          <p>If the user has access to multiple roles, they can display the following charts and tabs on their dashboard.</p>
+
+          <h4>My Development</h4>
+          <p>My Development tab displays charts and data that pertains to their own assigned position as a participant.</p>
+          <img src="images/dashboard-multiple-role-my-dev.jpg" alt="My Development" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h4>My Team's Development</h4>
+          <p>If the user has a Supervisor role or has a role higher than a participant, they will have access to the My Team's Development tab. This tab displays information that pertains to their team members.</p>
+          <img src="images/dashboard-multiple-role-my-teams-dev.jpg" alt="My Team's Development" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h4>My Organization</h4>
+          <p>My Organization tab displays and showcases the Role Statistics panel.</p>
+          <img src="images/dashboard-multiple-role-my-organization.jpg" alt="My Organization" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h3>Single Role</h3>
+
+          <h4>Participant</h4>
+          <p>As a Participant (and available to other roles like Supervisor, Manager, and Mentor, they have access to the following:</p>
+          <ul class="square">
+            <li>My Development tab is available.</li>
+            <li>Participant Assessment chart.</li>
+            <li>Supervisor Assessment chart.</li>
+            <li>My Development Status chart.</li>
+            <li>My Development Cycle chart.</li>
+          </ul>
+          <img src="images/dashboard-single-role-my-dev.jpg" alt="My Development" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h4>SME &amp; Reviewer</h4>
+          <p>The Role Statistics panel is assigned to the SME &amp; Reviewer role. As a user, the panel size can be adjusted to full or half-size.</p>
+          <img src="images/dashboard-sme-reviewer.jpg" alt="SME &amp; Reviewer" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h4>System Owner</h4>
+          <p>As a System Owner, they get access to the Competency Framework and My Team panels. In the screenshot below, users can click on the layout icon to change the panel size to full size or half size.</p>
+          <img src="images/dashboard-system-owner.jpg" alt="System Owner" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          <h4>Reporter</h4>
+          <p>The Quick Reports panel is assigned to the Reporter's role. This panel allows users to receive reports through their email. </p>
+          <img src="images/dashboard-single-role-reporter.jpg" alt="Reporter" style="border: 1px solid #717171;"><br><br>
+          <hr>
+
+          </div>
+    </div>
+  </div>
+  <!-- CONTENT AREA -->
+
+  
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  <script src="javascripts/jquery.event.move.js"></script>
+  <script src="javascripts/jquery.event.swipe.js"></script>
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/jquery.placeholder.js"></script>
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+  
+</body>
+</html>
