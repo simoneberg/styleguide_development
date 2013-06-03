@@ -29,6 +29,44 @@
   <![endif]-->
 
   <script src="../javascripts/modernizr.foundation.js"></script>
+      
+  <script type="text/javascript">
+  
+	function show_hide_advanced(id) {
+		var e = document.getElementById(id);
+			a = document.getElementById('arrowdown');
+		
+		
+		if(e.style.display == 'block')
+		
+		{	e.style.display = 'none';
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			a.style.position = 'relative';
+			a.style.top = '2px';						
+		}
+		else
+		{	e.style.display = 'block';
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			a.style.position = 'relative';
+			a.style.top = '6px';			
+		}
+	}	
+	
+   </script>
+
+   <script type="text/javascript" src="../javascripts/jquery.js"></script>
+
+   <script type="text/javascript">
+ 
+	$(document).ready(function(){
+ 
+ 		$('#add_a_filter').click (function() {
+			
+//			$('#filters').append('<li class="added-filter collapse"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>');
+		}); 
+	});
+</script>
+
 </head>
 <body>
 
@@ -84,26 +122,88 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
+
+
+
       
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
+
+        
+          <div class="nine mobile-three columns">
+            <input id="initial-search" class="round-left" type="text" />            
+          </div>
+
+                     
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+          </div>
+  
+
+          
           <div class="two mobile-one columns">
-            <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          <div class="eight mobile-three columns">
-            <input type="text" />
-          </div>
-          <div class="two mobile-one columns">
-            <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
-          </div>
+
+                    
         </div>
       </div>
-      <!--***** SEARCH *****--> 
+      <!--***** SEARCH *****-->   
+            
+			<div id="advanced_search" class="hide_it">
+	                <!--This is a Advanced Search panel that is hidden by default-->
+                  	
+                    <p><strong>Advanced Search</strong></p>
+                
+					<form class="custom search-type">                  
+						<label id="search-type-label" for="customDropdown">Search Type:</label>  
+						<select class="expand" style="display:none;" id="customDropdown">
+							<option SELECTED>Person</option>
+							<option>Group</option>
+							<option>Map</option>
+							<option>Skill Group</option>
+							<option>Skill</option>
+							<option>Skill Description</option>
+							<option>Development Activity</option>
+						</select>                          
+                                                          
+					</form>                    
+                   
 
+
+                 <div class="add-filter-container">
+                    
+
+    				      <!--***** MODAL *****-->
+                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+				          <!--***** MODAL *****-->
+                    
+                    	  <div class="add-filter-area">
+                          
+								<hr class="petrocore-hr">
+                        		<ul id="filters">
+
+<!--    <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon- edit-filter">&#xf040;</p></a></div></li>   -->
+
+<!--       <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon- edit-filter">&#xf040;</p></a></div></li>    -->
+                                
+<!--       <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="icon-">&#xf040;</a></div></li>                          -->
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
+               
+             		           </ul>
+                    	  </div><!--Close panel wrapper grey-->
+					</div>
+		     </div>
+             
+             
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
-        <!--This will hold the accordeon navigation-->
+      <!--This will hold the accordeon navigation-->
+
         <ul class="accordion">
           <li>
             <div class="title">
@@ -233,10 +333,11 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Search Results for &quot;Smith&quot;</h4>
+          <h4>Search Results for &quot;Smith&quot;</h4>          
             <hr class="search-results-for">
             <div class="row">
-				<div class="twelve columns">
+				<div class="twelve columns">               
+                
  		           <div class=""><p><strong>Found 260 results</strong></p></div>
 				</div>
             

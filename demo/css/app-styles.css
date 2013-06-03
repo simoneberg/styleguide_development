@@ -1318,7 +1318,8 @@ textarea:focus {
 }
 
 .search-bar-icons-dropdown {
-	color: #5b5b5b;
+/*	color: #5b5b5b; */
+	color: #979797;	
 	margin-top:-3px;
 	margin-left:-3px;
 	text-shadow: 0px 1px #ccc;
@@ -3492,6 +3493,146 @@ border-left: 4px solid #717171;
 	width:85%;
 	float:left;
 }
+/*******************************************************/
+/*************************SEARCH************************/
+/*******************************************************/
+
+#initial-search.round-left {	
+	border: 1px solid #5b5b5b;
+	border-radius: 20px 0px 0px 20px;
+	-moz-box-shadow: 0px 0px 1px #c5c5c5;
+	-webkit-box-shadow: 0px 0px 1px #c5c5c5;
+	box-shadow: 0px 0px 1px #c5c5c5;
+	padding-left:15px;	
+}
+
+span.dropdown-arrow {
+	width:100%;	
+	background: #fff;	
+	border-radius: 0px;	
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;	
+	-moz-box-shadow: 0px 0px transparent;
+	-webkit-box-shadow: 0px 0px transparent;	
+	border-top: 1px solid #5b5b5b; 
+	border-left: 0px solid #fff; 
+	border-bottom: 1px solid #5b5b5b;
+	cursor:pointer;
+}
+	
+hr.search-results-for {
+	border:solid #8b8b8b;	
+	border-width:1px 0 0;
+	clear:both;
+	height:0
+	margin: 6px 0px 9px;		
+}
+	
+.row.collapse.search-input {
+	padding: 0px 20px 0px 20px;	
+}
+
+.hide_it {
+	display: none; 
+} 
+
+#advanced_search {
+	background-color:#f4f4f4;
+	padding: 10px 20px 0px 20px;
+	border-bottom:solid 1px #717171;	
+	height:auto;	
+/*													border:solid 2px yellow; */
+	border-left: 0px;
+	border-right: 0px;
+		-moz-box-shadow: inset 0 0 1px 1px #d1d1d1;
+	-webkit-box-shadow: inset 0 0 1px 1px #d1d1d1;
+	box-shadow: inset 0 0 1px 1px #d1d1d1;
+}
+
+.add-filter-container {
+	padding-top:17px;
+	height:auto;
+	padding-bottom: 0px;
+	clear: both;
+/*											border:solid 1px blue;  		*/
+}
+
+
+.add-filter-area {
+	height:auto;
+	clear: both;	
+/*											border:solid 1px pink;  	*/
+}
+
+.add-filter-container .petrocore-hr {
+	height: 1px;
+	margin: -9px 0 10px;	
+	border: solid #bababa 1px;
+	border-width: 1px 0 0;
+	clear: both;
+	-moz-box-shadow: 0px 1px #f7f7f7;
+	-webkit-box-shadow: 0px 1px #f7f7f7;
+	box-shadow: 0px 1px #f7f7f7;
+}
+
+.added-filter {
+/*											border:solid 1px white;  */
+	width:100%;
+	height:auto;
+	line-height: 32px;
+	background-color:#e7e7e7;
+	margin: 0px 0px 6px 0px;
+	display:inline-block;
+/*	min-width:204px;					This lines works well with IE8    */
+	clear:both;	
+}
+
+.inside-filter-txt {
+	line-height:38px;											
+	float:left;	
+	width:auto;
+	height:auto; 
+	padding: 0px 0px 0px 8px;
+/*											border:solid 1px yellow; */
+}
+
+.inside-filter-icon {
+/*											border:solid 1px green;  */
+	float:right;
+	width:auto;
+	height:auto; 
+	padding: 0px 5px 0px 0px;
+}
+                              
+.inside-filter-icon .icon- {
+/*												border:solid 1px blue;  */
+	font-size: 14px; 
+	line-height: 24px;
+	color:#676767;
+	vertical-align:bottom;
+}
+
+@media only screen and (max-width: 987px) {
+
+#advanced_search {
+	padding: 10px 5px 0px 5px;
+}
+
+.inside-filter-txt {
+	font-size:12px;
+/*	color:#676767; */
+}
+
+.inside-filter-icon .icon- {
+	font-size: 12px; 
+	line-height: 24px;
+	color:#676767;
+	vertical-align:bottom;
+}
+}
+
 
 .four.icon-after-input-field-float-mobile {
 	margin-left:3px;
@@ -3526,3 +3667,124 @@ div.pagination-centered {
 	font-size: 17px;
 	margin-top: 4px;
 }
+
+/* ============== */
+
+form.custom.search-type #search-type-label {
+	font-weight:bold;
+	padding-bottom: 5px;
+}
+
+form.custom.search-type div.custom.dropdown{
+	display:block;
+	position:relative;
+	width:auto;
+	height:28px;
+	margin-bottom:9px;
+	margin-top:-2px;	
+	border:solid 1px transparent;
+}
+
+form.custom.search-type div.custom.dropdown ul{
+	overflow-y:auto;
+	max-height:200px;
+}
+
+form.custom.search-type div.custom.dropdown a.current{
+	display:block;
+	width:auto;
+	line-height:26px;
+	min-height:28px;
+	padding:0;
+	padding-left:6px;
+	padding-right:38px;
+	border:solid 1px #ddd;
+	color:#141414;
+	background-color:#fff;
+	white-space:nowrap;
+	border:solid 1px #717171;
+}
+
+form.custom.search-type div.custom.dropdown a.selector{
+	position:absolute;
+	width:27px;
+	height:28px;
+	display:block;
+	right:0;
+	top:0;
+	border:solid 1px #ddd;
+	background: #afafaf; /* Old browsers */
+	background: -moz-linear-gradient(top,  #afafaf 0%, #898989 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#afafaf), color-stop(100%,#898989)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #afafaf 0%,#898989 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #afafaf 0%,#898989 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #afafaf 0%,#898989 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #afafaf 0%,#898989 100%); /* W3C */
+	border: 1px solid #5b5b5b;
+	-moz-box-shadow: 0px 1px #c5c5c5;
+	-webkit-box-shadow: 0px 1px #c5c5c5;
+	box-shadow: 0px 1px #c5c5c5;																												
+}
+
+form.custom.search-type div.custom.dropdown a.selector:after{
+	content:"";
+	display:block;
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	border:solid 5px;
+	border-color:#676767 transparent transparent transparent;	
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-top:-2px;
+	margin-left:-5px;
+}
+form.custom.search-type div.custom.dropdown:hover a.selector:after,
+form.custom div.custom.dropdown.open a.selector:after {
+	content:"";	
+	display:block;
+	width:0;
+	height:0;
+	border:solid 5px;
+	border-color:#222 transparent transparent transparent
+}
+
+form.custom.search-type div.custom.dropdown.open ul{
+	display:block;
+	z-index:10;
+	border:solid 1px #717171;
+}
+
+form.custom.search-type div.custom.dropdown.small{width:134px !important}
+form.custom.search-type div.custom.dropdown.medium{width:254px !important}
+form.custom.search-type div.custom.dropdown.large{width:434px !important}
+form.custom.search-type div.custom.dropdown.expand{width:100% !important}
+form.custom.search-type div.custom.dropdown.open.small ul{width:134px !important}
+form.custom.search-type div.custom.dropdown.open.medium ul{width:254px !important}
+form.custom.search-type div.custom.dropdown.open.large ul{width:434px !important}
+form.custom.search-type div.custom.dropdown.open.expand ul{width:100% !important}
+
+
+form.custom.search-type div.custom.dropdown ul{position:absolute;width:auto;display:none;margin:0;left:0;top:27px;margin:0;padding:0;background:#fff;background:rgba(255,255,255,0.95);border:solid 1px #ccc}
+form.custom.search-type div.custom.dropdown ul li{color:#555;font-size:13px;cursor:pointer;padding:3px;padding-left:6px;padding-right:38px;min-height:18px;line-height:18px;margin:0;white-space:nowrap;list-style:none}
+form.custom.search-type div.custom.dropdown ul li.selected{background:#cdebf5;color:#000}
+form.custom.search-type div.custom.dropdown ul li.selected:after{
+	content:"";	
+	position:absolute;
+	right:10px
+}
+	
+form.custom.search-type div.custom.dropdown ul li:hover{background-color:#cdebf5;color:#000}
+form.custom.search-type div.custom.dropdown ul li:hover:after{
+	content:"";	
+	position:absolute;
+	right:10px;
+	color:#a3dbec;
+}
+
+form.custom.search-type div.custom.dropdown ul li.selected:hover{background:#cdebf5;cursor:default;color:#000}
+form.custom.search-type div.custom.dropdown ul li.selected:hover:after{color:#000}
+form.custom.search-type div.custom.dropdown ul.show{display:block}
+form.custom.search-type .custom.disabled{background-color:#ddd}
