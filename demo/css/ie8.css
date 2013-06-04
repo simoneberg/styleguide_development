@@ -16,6 +16,43 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+/* -------- Header Menu IE8 Fixes ------- */
+
+.lt-ie9 .top-bar ul li a {
+	color: white;
+	display: block;
+	font-weight:normal;
+	font-size: 13px;
+	height: 50px;	
+	line-height: 50px;	
+	padding-top: 1px;	
+	padding-right: 0px;	
+	padding-left: 0px;			
+}
+
+.lt-ie9 .top-bar ul li a.button {
+	height: auto;
+	line-height: 30px;
+	margin-top: 7px;
+}
+
+.lt-ie9 .top-bar ul li a img {
+	margin-top: -5px;
+	vertical-align: middle;
+}
+
+.lt-ie9 .top-bar ul > li a:hover, .lt-ie9 .top-bar ul > li a:focus, .lt-ie9 .top-bar ul > li a:active {
+	color: #d9d9d9;
+}
+
+.lt-ie9 .top-bar ul li.has-dropdown {
+	padding-right: 24px;
+}
+
+.lt-ie9 .top-bar .username {
+	font-size:14px; 
+	font-weight: bold;
+}
 
 /* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
 #progress-indicator {
@@ -42,7 +79,7 @@ body {
 	float:right;
 }
 
-/* The following code fixes the x closing button on a modal pop-up window in IE8 */
+/* It fixes the x closing button on a modal pop-up window in IE8 */
 #myModal h5 {
     display:inline-block;
 }
@@ -50,24 +87,35 @@ body {
 .reveal-modal .close-reveal-modal {
     color:#666666;   
     font-weight:normal;
-    /*font-size:1.6em;*/
     cursor: pointer;
     float:right;
-    /*position:relative;*/
     top:11px;
 }
 
 /* It fixes the misalignment of the dropdown arrow box */
-form.custom div.custom.dropdown a.selector {
-	right:1px;
-	top:1px;	
+form.custom.petro-dropdown div.custom.dropdown a.selector {
+	width:30px;
+	height:30px;		
+	border: solid #5b5b5b 1px;
+}
+
+form.custom.petro-dropdown div.custom.dropdown a.selector:after{
+	border-color:#676767 transparent transparent transparent;	
+	margin-top:-2px;
+	margin-left:-5px;	
 }
 
 form.custom.search-type div.custom.dropdown a.selector {
-	right:1px;
-	top:1px;	
+	width:30px;
+	height:30px;
+	border: 1px solid #717171;		
 }
 
+form.custom.search-type div.custom.dropdown a.selector:after{	
+	border-color:#676767 transparent transparent transparent;		
+	margin-top:-2px;
+	margin-left:-5px;
+}
 
 /* It adds bottom space to legend tags */
 fieldset legend {

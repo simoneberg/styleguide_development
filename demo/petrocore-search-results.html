@@ -19,11 +19,13 @@
   
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/app.css">
+  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-  <link rel="stylesheet" href="css/app-styles.css">
-  
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
   <!--[if IE 8]>
-  	<link rel="stylesheet" type="text/css" href="ie8.css">
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
   <script src="../javascripts/modernizr.foundation.js"></script>
@@ -31,39 +33,26 @@
   <script type="text/javascript">
   
 	function show_hide_advanced(id) {
-		var e = document.getElementById(id);
-			a = document.getElementById('arrowdown');
+		var advanced_panel = document.getElementById(id);
+			advanced_arrow = document.getElementById('arrowdown');
 		
 		
-		if(e.style.display == 'block')
+		if(advanced_panel.style.display == 'block')
 		
-		{	e.style.display = 'none';
+		{	advanced_panel.style.display = 'none';
 			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
-			a.style.position = 'relative';
-			a.style.top = '2px';						
+			advanced_arrow.style.position = 'relative';
+			advanced_arrow.style.top = '0px';						
 		}
 		else
-		{	e.style.display = 'block';
+		{	advanced_panel.style.display = 'block';
 			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-			a.style.position = 'relative';
-			a.style.top = '6px';			
+			advanced_arrow.style.position = 'relative';
+			advanced_arrow.style.top = '7px';						
 		}
 	}	
 	
-   </script>
-
-   <script type="text/javascript" src="../javascripts/jquery.js"></script>
-
-   <script type="text/javascript">
- 
-	$(document).ready(function(){
- 
- 		$('#add_a_filter').click (function() {
-			
-//			$('#filters').append('<li class="added-filter collapse"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>');
-		}); 
-	});
-</script>
+  </script>
 
 </head>
 <body>
@@ -113,38 +102,28 @@
 
 <!--***** PETROCORE HEADER *****-->
 
-
-
 <!--***** MAIN WRAPPER *****-->
 <div class="row master-wrapper">
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-
-
-
       
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-
         
           <div class="nine mobile-three columns">
-            <input id="initial-search" class="round-left" type="text" />            
+            <input id="initial-search" class="round-left" type="text" value="" />            
           </div>
-
-                     
+                  
           <div class="one mobile-one columns">
             <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
           </div>
-  
-
           
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-
-                    
+          
         </div>
       </div>
       <!--***** SEARCH *****-->   
@@ -159,6 +138,7 @@
 						<select class="expand" style="display:none;" id="customDropdown">
 							<option SELECTED>Person</option>
 							<option>Group</option>
+							<option>Position</option>                            
 							<option>Map</option>
 							<option>Skill Group</option>
 							<option>Skill</option>
@@ -167,41 +147,31 @@
 						</select>                          
                                                           
 					</form>                    
-                   
 
+	                <div class="add-filter-container">
 
-                 <div class="add-filter-container">
+    				      <!--***** ADD FILTER *****-->
                     
-
-    				      <!--***** MODAL *****-->
                     	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				          <!--***** MODAL *****-->
+				          <!--***** ADD FILTER *****-->
                     
                     	  <div class="add-filter-area">
                           
 								<hr class="petrocore-hr">
                         		<ul id="filters">
 
-<!--    <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon- edit-filter">&#xf040;</p></a></div></li>   -->
-
-<!--       <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon- edit-filter">&#xf040;</p></a></div></li>    -->
-                                
-<!--       <li class="added-filter"><div class="inside-filter-txt">Account Status is Active</div><div class="inside-filter-icon filter-action-icons"><a href="#" class="icon-">&#xf040;</a></div></li>                          -->
-
 	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
 
 	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
-             		           </ul>
-                    	  </div><!--Close panel wrapper grey-->
+             		            </ul>
+                    	  </div>
 					</div>
-		     </div>
-             
-             
+		     </div>             
+
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
-      <!--This will hold the accordeon navigation-->
-
+        <!--This will hold the accordeon navigation-->
         <ul class="accordion">
           <li>
             <div class="title">
@@ -331,275 +301,30 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Search Results for &quot;Smith&quot;</h4>          
+          <h4>Search Results Links</h4>
             <hr class="search-results-for">
             <div class="row">
-				<div class="twelve columns">               
-                
- 		           <div class=""><p><strong>Found 260 results</strong></p></div>
+	            <div class="twelve columns text-center">
+ 		           <h2>For Internal Use Only</h2>
+                   
+<h4>This page contains all the links of the search result pages:</h4>
+
+<hr>
+
+<p><a href="petrocore-search-no-results.html" target="_blank">petrocore-search-no-results.html</a></p>
+<p><a href="petrocore-search-results-person.html" target="_blank">petrocore-search-results-person.html</a></p>
+<p><a href="petrocore-search-results-group.html" target="_blank">petrocore-search-results-group.html</a></p>
+<p><a href="petrocore-search-results-position.html" target="_blank">petrocore-search-results-position.html</a></p>
+<p><a href="petrocore-search-results-map.html" target="_blank">petrocore-search-results-map.html</a></p>
+<p><a href="petrocore-search-results-skill-group.html" target="_blank">petrocore-search-results-skill-group.html</a></p>
+<p><a href="petrocore-search-results-skill.html" target="_blank">petrocore-search-results-skill.html</a></p>
+<p><a href="petrocore-search-results-skill-description.html" target="_blank">petrocore-search-results-skill-description.html</a></p>
+<p><a href="petrocore-search-results-development-activity.html" target="_blank">petrocore-search-results-development-activity.html</a></p>
+
 				</div>
-            
-	            <div class="columns remove-padding adjust-two-columns">
-               
-				    <!--***** SEARCH RESULTS NAVIGATION *****-->
-                
-					<div class="twelve columns">
-						<ul class="search-result-nav">
-						  <li class="title"><p><strong>Search Types</strong></p></li>          
-						  <li class="selected-item">Person (260)</li>  
-						  <li class="grayedout-item">Group (0)</li>  
-						  <li class="grayedout-item">Map (0)</li>  
-						  <li class="grayedout-item">Skill Group (0)</li>  
-						  <li class="grayedout-item">Skill (0)</li>  
-						  <li class="grayedout-item">Skill Description (0)</li>  
-						  <li class="grayedout-item">Development Activity (0)</li>                                
-						</ul>  
-					</div>  
-
-				    <!--***** SEARCH RESULTS NAVIGATION *****-->          
-                
-    	        </div>
-            
-	   	        <div class="columns remove-padding adjust-ten-columns">
-	          		<div class="left result-title"><p><strong>Results 1-25 of 260</strong></p></div>
-		          	<div class="export-print right text-right"><p><i class="icon- add-space"><a href="#">&#xf019;</a></i> <a href="#">Export</a> <i class="icon- add-space"><a href="#">&#xf02f;</a></i> <a href="#">Print</a></p></div>
-
-                	<!--***** TABLE *****-->
-
-		          	<table class="twelve no-border table-search-results">
-		    	        <thead>
-        			      <tr>
-            			    <th>Last Name</th>
-		            	    <th>First Name</th>
-		            	    <th>Employee #</th>
-		            	    <th>User ID</th>
-        		    	    <th>Account</th>
-            			    <th>Viewable</th>                                        
-		        	      </tr>
-		            	</thead>
-	    		        <tbody>
-        	    		  <tr>
-		    	            <td><a href="#">Smith</a></td>
-    			            <td><a href="#">Anna</a></td>
-    	        		    <td><a href="#">57485</a></td>
-		    	            <td><a href="#">aneol</a></td>
-    			            <td><a href="#">Active</a></td>
-    	        		    <td><a href="#">Full</a></td>
-		            	  </tr>                  
-        			      <tr>
-    	        		    <td><a href="#">Smith</a></td>
-		    	            <td><a href="#">Alexander</a></td>
-    			            <td><a href="#">32104</a></td>
-    	        		    <td><a href="#">alese</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Amina</a></td>
-                            <td><a href="#">59201</a></td>
-                            <td><a href="#">ameop</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Arthur</a></td>
-                            <td><a href="#">10221</a></td>
-                            <td><a href="#">arpol</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Charlotte</a></td>
-                            <td><a href="#">00387</a></td>
-                            <td><a href="#">chetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Elise</a></td>
-                            <td><a href="#">20048</a></td>
-                            <td><a href="#">elrod</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Emma</a></td>
-                            <td><a href="#">18785</a></td>
-                            <td><a href="#">emeol</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Eric</a></td>
-                            <td><a href="#">10032</a></td>
-                            <td><a href="#">erese</a></td>
-                            <td><a href="#">Inactive</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Eva</a></td>
-                            <td><a href="#">27478</a></td>
-                            <td><a href="#">eveop</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Gabriel</a></td>
-                            <td><a href="#">27478</a></td>
-                            <td><a href="#">garil</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Hannah</a></td>
-                            <td><a href="#">25875</a></td>
-                            <td><a href="#">haetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Limited</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Ivan</a></td>
-                            <td><a href="#">10512</a></td>
-                            <td><a href="#">ivrod</a></td>
-                            <td><a href="#">Inactive</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Jonas</a></td>
-                            <td><a href="#">02698</a></td>
-                            <td><a href="#">joeol</a></td>
-                            <td><a href="#">Inactive</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Julia</a></td>
-                            <td><a href="#">20115</a></td>
-                            <td><a href="#">juese</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lars</a></td>
-                            <td><a href="#">18745</a></td>
-                            <td><a href="#">laeop</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Laura</a></td>
-                            <td><a href="#">12454</a></td>
-                            <td><a href="#">laril</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Léa</a></td>
-                            <td><a href="#">10075</a></td>
-                            <td><a href="#">leetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lena</a></td>
-                            <td><a href="#">67100</a></td>
-                            <td><a href="#">lerod</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lina</a></td>
-                            <td><a href="#">57485</a></td>
-                            <td><a href="#">lipol</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Louis</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">loetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>    
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lukas</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">luetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Marie</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">maetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Maxim</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">maeyp</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Milan</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">mieur</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Narek</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">naetr</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                                                                                                        
-                        </tbody>
-                      </table>
-
-                      <!--***** TABLE *****-->           
-            
-	            </div>
-            
-				<div class="twelve columns pagination-centered">  
-					<p>Page 1 of 11</p>
-					<ul class="pagination">
-					  <li class="arrow unavailable"><a href="">«</a></li>  
-					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>    
-					  <li class="current unavailable"><a href="">1</a></li>    
-					  <li><a href="">2</a></li>
-					  <li><a href="">3</a></li>
-					  <li><a href="">4</a></li>
-					  <li><a href="">5</a></li>                        
-					  <li class="arrow"><a href="">&rsaquo;</a></li>
-					  <li class="arrow"><a href="">»</a></li>
-					</ul>       
-				</div> 
-            
             </div>
-
-	      </div>      
-	  </div>
+    </div>      
+  </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
@@ -649,7 +374,13 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
-  
+
+
+
+
+
+
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -672,8 +403,7 @@
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
   
   -->
-    
-    
+  
   <!-- Included JS Files (Compressed) -->
   <script src="../javascripts/foundation.min.js"></script>
   
