@@ -162,6 +162,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 
 .master-wrapper {
 	background-color: #c2c2c2;
+	overflow:hidden;
+	height:auto;
 }
 
 .profile-container {	
@@ -299,8 +301,8 @@ form.custom div.custom.dropdown{
 }
 
 form.custom div.custom.dropdown a.current{
-	color:#999;
-	border:solid #8a8a8a 1px;
+   	color:#404040;	
+	border:solid #5b5b5b 1px;
 }
 
 form.custom div.custom.dropdown a.selector{
@@ -317,20 +319,20 @@ form.custom div.custom.dropdown ul{
 
 form.custom div.custom.dropdown ul li{
 	font-size:12px;
-	color:#999;
+   	color:#404040;	
 }
 
 form.custom div.custom.dropdown ul li.selected{
-	color:#808080;
+   	color:#404040;
 }
 
 form.custom div.custom.dropdown ul li:hover{
-	color:#808080;
+   	color:#404040;
 
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
-	color:#808080;
+   	color:#404040;
 }
 
 form.custom div.custom.dropdown ul li.selected:after{
@@ -3493,9 +3495,39 @@ border-left: 4px solid #717171;
 	width:85%;
 	float:left;
 }
-/*******************************************************/
-/*************************SEARCH************************/
-/*******************************************************/
+
+ul.pagination {
+	margin-top: -15px;
+}
+
+ul.pagination li.current a {
+	background: #2795b6;
+}
+
+.page-of-page {
+	margin-top: 10px;
+	color: #555;
+			border: 3px solid red;	
+}
+
+div.pagination-centered {
+	margin-top: 20px;
+}
+
+.fix-margin-left {
+	margin-left: -8px;
+}
+
+.fix-margin-right {
+	margin-right: -8px;
+}
+
+.arrow a {
+	font-size: 17px;
+	margin-top: 4px;
+}
+
+/************************* SEARCH ************************/
 
 #initial-search.round-left {	
 	border: 1px solid #5b5b5b;
@@ -3543,10 +3575,9 @@ hr.search-results-for {
 	padding: 10px 20px 0px 20px;
 	border-bottom:solid 1px #717171;	
 	height:auto;	
-/*													border:solid 2px yellow; */
 	border-left: 0px;
 	border-right: 0px;
-		-moz-box-shadow: inset 0 0 1px 1px #d1d1d1;
+	-moz-box-shadow: inset 0 0 1px 1px #d1d1d1;
 	-webkit-box-shadow: inset 0 0 1px 1px #d1d1d1;
 	box-shadow: inset 0 0 1px 1px #d1d1d1;
 }
@@ -3556,14 +3587,11 @@ hr.search-results-for {
 	height:auto;
 	padding-bottom: 0px;
 	clear: both;
-/*											border:solid 1px blue;  		*/
 }
-
 
 .add-filter-area {
 	height:auto;
 	clear: both;	
-/*											border:solid 1px pink;  	*/
 }
 
 .add-filter-container .petrocore-hr {
@@ -3578,14 +3606,12 @@ hr.search-results-for {
 }
 
 .added-filter {
-/*											border:solid 1px white;  */
 	width:100%;
 	height:auto;
 	line-height: 32px;
 	background-color:#e7e7e7;
 	margin: 0px 0px 6px 0px;
 	display:inline-block;
-/*	min-width:204px;					This lines works well with IE8    */
 	clear:both;	
 }
 
@@ -3595,11 +3621,9 @@ hr.search-results-for {
 	width:auto;
 	height:auto; 
 	padding: 0px 0px 0px 8px;
-/*											border:solid 1px yellow; */
 }
 
 .inside-filter-icon {
-/*											border:solid 1px green;  */
 	float:right;
 	width:auto;
 	height:auto; 
@@ -3607,7 +3631,6 @@ hr.search-results-for {
 }
                               
 .inside-filter-icon .icon- {
-/*												border:solid 1px blue;  */
 	font-size: 14px; 
 	line-height: 24px;
 	color:#676767;
@@ -3633,42 +3656,7 @@ hr.search-results-for {
 }
 }
 
-
-.four.icon-after-input-field-float-mobile {
-	margin-left:3px;
-}
-
-ul.pagination {
-	margin-top: -15px;
-}
-
-ul.pagination li.current a {
-background: #2795b6;
-}
-
-.page-of-page {
-	margin-top: 10px;
-	color: #555;
-}
-
-div.pagination-centered {
-	margin-top: 20px;
-}
-
-.fix-margin-left {
-	margin-left: -8px;
-}
-
-.fix-margin-right {
-	margin-right: -8px;
-}
-
-.arrow a {
-	font-size: 17px;
-	margin-top: 4px;
-}
-
-/* ============== */
+/************************* ADVANCED SEARCH ************************/
 
 form.custom.search-type #search-type-label {
 	font-weight:bold;
@@ -3698,11 +3686,10 @@ form.custom.search-type div.custom.dropdown a.current{
 	padding:0;
 	padding-left:6px;
 	padding-right:38px;
-	border:solid 1px #ddd;
 	color:#141414;
 	background-color:#fff;
 	white-space:nowrap;
-	border:solid 1px #717171;
+	border:solid 1px #717171; 
 }
 
 form.custom.search-type div.custom.dropdown a.selector{
@@ -3712,7 +3699,6 @@ form.custom.search-type div.custom.dropdown a.selector{
 	display:block;
 	right:0;
 	top:0;
-	border:solid 1px #ddd;
 	background: #afafaf; /* Old browsers */
 	background: -moz-linear-gradient(top,  #afafaf 0%, #898989 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#afafaf), color-stop(100%,#898989)); /* Chrome,Safari4+ */
@@ -3723,7 +3709,7 @@ form.custom.search-type div.custom.dropdown a.selector{
 	border: 1px solid #5b5b5b;
 	-moz-box-shadow: 0px 1px #c5c5c5;
 	-webkit-box-shadow: 0px 1px #c5c5c5;
-	box-shadow: 0px 1px #c5c5c5;																												
+	box-shadow: 0px 1px #c5c5c5;		
 }
 
 form.custom.search-type div.custom.dropdown a.selector:after{
@@ -3741,8 +3727,7 @@ form.custom.search-type div.custom.dropdown a.selector:after{
 	margin-top:-2px;
 	margin-left:-5px;
 }
-form.custom.search-type div.custom.dropdown:hover a.selector:after,
-form.custom div.custom.dropdown.open a.selector:after {
+form.custom.search-type div.custom.dropdown:hover a.selector:after,form.custom div.custom.dropdown.open a.selector:after{
 	content:"";	
 	display:block;
 	width:0;
@@ -3757,34 +3742,31 @@ form.custom.search-type div.custom.dropdown.open ul{
 	border:solid 1px #717171;
 }
 
-form.custom.search-type div.custom.dropdown.small{width:134px !important}
-form.custom.search-type div.custom.dropdown.medium{width:254px !important}
-form.custom.search-type div.custom.dropdown.large{width:434px !important}
-form.custom.search-type div.custom.dropdown.expand{width:100% !important}
-form.custom.search-type div.custom.dropdown.open.small ul{width:134px !important}
-form.custom.search-type div.custom.dropdown.open.medium ul{width:254px !important}
-form.custom.search-type div.custom.dropdown.open.large ul{width:434px !important}
-form.custom.search-type div.custom.dropdown.open.expand ul{width:100% !important}
+form.custom.search-type div.custom.dropdown ul li.selected{
+	background:#d6e8f6;
+	color:#000
+}
 
-
-form.custom.search-type div.custom.dropdown ul{position:absolute;width:auto;display:none;margin:0;left:0;top:27px;margin:0;padding:0;background:#fff;background:rgba(255,255,255,0.95);border:solid 1px #ccc}
-form.custom.search-type div.custom.dropdown ul li{color:#555;font-size:13px;cursor:pointer;padding:3px;padding-left:6px;padding-right:38px;min-height:18px;line-height:18px;margin:0;white-space:nowrap;list-style:none}
-form.custom.search-type div.custom.dropdown ul li.selected{background:#cdebf5;color:#000}
 form.custom.search-type div.custom.dropdown ul li.selected:after{
-	content:"";	
+	content:"";												
 	position:absolute;
 	right:10px
 }
 	
-form.custom.search-type div.custom.dropdown ul li:hover{background-color:#cdebf5;color:#000}
+form.custom.search-type div.custom.dropdown ul li:hover{
+	background:#d6e8f6;
+	color:#000
+}
+
 form.custom.search-type div.custom.dropdown ul li:hover:after{
 	content:"";	
 	position:absolute;
 	right:10px;
-	color:#a3dbec;
+	color:#a3dbec
 }
 
-form.custom.search-type div.custom.dropdown ul li.selected:hover{background:#cdebf5;cursor:default;color:#000}
-form.custom.search-type div.custom.dropdown ul li.selected:hover:after{color:#000}
-form.custom.search-type div.custom.dropdown ul.show{display:block}
-form.custom.search-type .custom.disabled{background-color:#ddd}
+form.custom.search-type div.custom.dropdown ul li.selected:hover{
+	background:#d6e8f6;
+	cursor:default;
+	color:#000
+}
