@@ -1,6 +1,33 @@
-.row {
-	/*width: 1260px;*/
-	width:100%;
+.checkbox-group div.form-group label {
+	font-weight: normal;
+}
+
+.form-group {
+	display: inline-block;
+	margin-top: 3px;
+	margin-bottom: 8px;
+}
+
+.form-group>label {
+	font-weight: bold;
+}
+
+/* needed to over-ride bold label 
+   for single radio buttons 
+   and checkboxes */
+.form-group>label.plain {
+	font-weight: normal;
+}
+
+.form-group .information-text {
+	line-height: 14px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.form-text-display-field {
+	font-size: 16px;
+	margin-bottom: 12px;
 }
 
 .columns.right-split-container {
@@ -34,11 +61,20 @@
 }
 
 .radio-group {
-	margin-top: 13px;
+	margin-top: 8px;
 }
 
-.radio-group:last-child {
-	margin-bottom: 10px;
+.radio-group .row:last-child {
+	margin-bottom: 13px;
+}
+
+.radio-group div.form-group label {
+	font-weight: normal;
+}
+
+.row {
+	/*width: 1260px;*/
+	width:100%;
 }
 
 .top-bar {
@@ -291,7 +327,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 #drop-selection {
 	display:none;
 }
- 
+
+form.custom .control-with-icon-after {
+	float: left;
+	width: 90% !important;
+}
+
 form.custom div.custom.dropdown{
 	font-size:12px;
 	height:auto;
@@ -326,7 +367,6 @@ form.custom div.custom.dropdown ul li.selected{
 
 form.custom div.custom.dropdown ul li:hover{
 	color:#808080;
-
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
@@ -440,16 +480,21 @@ ul.search-result-nav .grayedout-item{
 	text-decoration:underline;
 }
 
-
-
 .no-border {
 	border: solid #fff 0px;
+}
+
+.with-above-small {
+	margin-top: -8px;
 }
 
 .with-above {
 	margin-top: -15px;
 }
 
+.with-above-large {
+	margin-top: -20px;
+}
 
 /* --------------- */
 
@@ -1827,11 +1872,11 @@ ul.accordion>li>div.title:after {
 }
 
 .row.tree-container-with-border {
-	border: 1px solid #8a8a8a;;
+	border: 1px solid #8a8a8a;
 }
 
 .panel-wrapper-grey-tree {
-	border-right:1px solid #8a8a8a;;
+	border-right:1px solid #8a8a8a;
 	/*border-left:1px solid #8a8a8a;*/
 	background-color: #f0f0f0;
 	height: auto;
@@ -2939,6 +2984,7 @@ label.inline {
 }
 
 .icon-after-field.input {
+	margin-left: 6px;
 	top: 8px;
 }
 
