@@ -333,297 +333,257 @@
             </div>
           </div>
         </div>
-
         <br>
-          <!--***** FORMS *****-->
-
-          <div class="form-container">
-
-            <!--************** GENERAL INFORMATION FORM ****************-->
-            <form>
-              <fieldset>
-                <legend>General Information</legend>
-                <div class="row">
-
-                  <div class="two mobile-one columns">
-                    <label class="right inline">Name:</label>
-                  </div>
-                  <div class="ten mobile-three columns">
-                    <input type="text" placeholder="" class="four" />
-                  </div>
-
-            </div>
-
+        <!--***** FORM *****-->
+        <!--***** GENERAL INFORMATION *****-->
+        <form class="custom">
+          <fieldset>
+            <legend>General Information</legend>
             <div class="row">
-              <div >
-                <div class="two mobile-one columns">
-                  <span class="right custom-label">Creator:</span>
-                </div>
-
-                <div class="ten mobile-three columns text-only-custom-field">
-                  <span>Bowen, Jenny (JBNX)</span>
-                </div>
+              <div class="form-group six mobile-twelve columns">
+                <label class="">Name</label>
+                <input type="text" placeholder="" value="Template Name"/>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label>Creator</label>
+                <div class="form-text-display-field">Bowen, Jenny (JBNX)</div>
               </div>
             </div>
 
             <div class="row">
-              <div class="two mobile-one columns">
-                <span class="right custom-label">Owner:</span>
-              </div>
-
-              <div class="ten mobile-three columns text-only-custom-field">
-                <span><a href="#">Bowen, Jenny (JBNX)</a></span><a class="icon-after-field text" href="#">&#xf08e;</a>
+              <div class="form-group six mobile-twelve columns">
+                <label>Owner</label>
+                <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-after-field text" href="#">&#xf08e;</a></div>
               </div>
             </div>
+          </fieldset> <!-- GENERAL INFORMATION -->
 
-          </fieldset>
-        </form>
-        <!--************** GENERAL INFORMATION FORM ****************-->
+          <!--***** SELECT REPORT TYPE *****-->
 
+<<<<<<< HEAD
         <!--************** SELECT REPORT TYPE FORM ****************-->
         <form class="custom petro-dropdown">
+=======
+>>>>>>> c2e60dcc30140635f5968bc8d65cd1675b2d6719
           <fieldset>
             <legend>Select Report Type</legend>
-
-              <!-- <label for="customDropdown">Dropdown Label</label> -->
+            <div class="form-group six mobile-twelve columns">
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>Gap Analysis</option>
-                <option>Gap Analysis</option>
-                <option>Gap Analysis</option>
+                <option>Gap Analysis 2</option>
+                <option>Gap Analysis 3</option>
               </select>
-              <div class="custom dropdown">
+              <div class="custom dropdown expand control-with-icon-after">
                 <a href="#" class="current">
                   Gap Analysis
                 </a>
                 <a href="#" class="selector"></a>
                 <ul>
-                  <li>Gap Analysis</li>
-                  <li>Gap Analysis</li>
-                  <li>Gap Analysis</li>
+                  <li>Gap Analysis A </li>
+                  <li>Gap Analysis B</li>
+                  <li>Gap Analysis C</li>
                 </ul>
               </div>
-              <a class="icon-after-field custom" href="#">&#xf05a;</a>
+            </div>
+            <a class="icon-after-field custom" href="#">&#xf05a;</a>
+        </fieldset> <!-- SELECT REPORT TYPE -->
 
-          </fieldset>
-        </form>
-        <!--************** SELECT REPORT TYPE FORM ****************-->
-
-        <!--************** OPTIONS FORM ****************-->
-        <form>
+          <!--***** OPTIONS *****-->
           <fieldset>
             <legend>Options</legend>
-
-            <div>
-              <p class="form-category-title">Display:</p>
-              <label for="checkbox5"><input type="checkbox" id="checkbox5"> Generate sections for each Group</label>
-              <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
-              <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
-              <p class="form-category-title-bold">Reporting on more groups than allowed. Please select 25 or less</p>
-              <label for="checkbox7"><input type="checkbox" id="checkbox7"> Generate sections for each Position</label>
-              <label for="checkbox8"><input type="checkbox" id="checkbox8"> Show only high importance Skill Descriptions</label>
-              <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
-            </div>
-
-          </fieldset>
-        </form>
-        <!--************** OPTIONS FORM ****************-->
-
-        <!--************** SCHEDULE FORM ****************-->
-        <form>
-          <fieldset>
-            <legend>Schedule</legend>
-
-            <!--****** ENABLE CHUNK ******-->
-            <form>
+            <div class="checkbox-group">
               <div class="row">
-                <div class="twelve columns">
-                  <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1"><span class="radio"></span> Enable Scheduling</label></div>
-                  <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2"><span class="radio"></span> Disable Scheduling</label></div>
+                <div class="form-group six mobile-twelve columns">
+                  <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
                 </div>
               </div>
-            </form>
-          </form>
-          <!--****** ENABLE CHUNK ******-->
-
-          <!--****** DATE CHUNK ******-->
-          <form>
-            <div class="row">
-
-              <div class="two mobile-one columns compass-mobile">
-                <label class="right inline custom-width-mobile-one">Start Date:</label>
+              <div class="row">
+                <div class="form-group eight mobile-twelve columns">
+                 <span class="infomation-text">Reporting on more groups than allowed. Please select 25 or less</span>
+               </div>
+             </div>
+             <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
               </div>
-              <div class="ten mobile-three columns compass-mobile">
-                <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
-              </div>
-
-              <div class="two mobile-one columns compass-mobile">
-                <label class="right inline">End Date:</label>
-              </div>
-              <div class="ten mobile-three columns compass-mobile">
-                <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href"#"><p class="icon-">&#xf073;</p></a></div>
-              </div>
-
-              <div class="two mobile-one columns"></div>
-
-              <div class="ten mobile-three columns compass-mobile">
-                <label for="checkbox10"><input type="checkbox"> No end date</label>
-              </div>
-
             </div>
+            <div class="row">
+              <div class="form-group eight mobile-twelve columns">
+                <span class="information-text">Reporting on more groups than allowed. Please select 25 or less</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
+              </div>
+            </div>
+<<<<<<< HEAD
           </form>
           <!--****** DATE CHUNK ******-->
 
           <!-- </form> -->
           <!--****** TIME CHUNK ******-->
           <form class="custom petro-dropdown">
+=======
+          </div>
+        </fieldset> <!-- OPTIONS -->
+>>>>>>> c2e60dcc30140635f5968bc8d65cd1675b2d6719
 
+        <!--***** SCHEDULE *****-->
+        <fieldset>
+          <legend>Schedule</legend>
+          <!--***** ENABLE *****-->
+          <div class="radio-group">
             <div class="row">
-
-              <div class="two mobile-one columns">
-                <label for="customDropdown" class="right custom-dropdown-label compass-mobile">Time:</label>
-              </div>
-
-              <div class="ten mobile-three columns compass-mobile">
-                <select class="custom-dropdown" id="customDropdown">
-                  <option SELECTED>12:00am</option>
-                  <option>1:00 am</option>
-                  <option>2:00 am</option>
-                </select>
-                <div class="custom dropdown">
-                  <a href="#" class="current">
-                    12:00am
-                  </a>
-                  <a href="#" class="selector"></a>
-                  <ul>
-                    <li>1:00 am</li>
-                    <li>2:00 am</li>
-                    <li>3:00 am</li>
-                  </ul>
-                </div>
-                <div>
-
-                </div>
-              </div>
-
-              <div>
-
-                <div class="two mobile-one columns"></div>
-
-                <div class="ten mobile-three columns compass-mobile">
-                  <span><p>(UTC - 7:00) MT (US &amp; Canada)</p></span>
-                </div>
-
-              </div></div>
-
-            </form>
-            <!--****** TIME CHUNK ******-->
-
-            <!--****** RECURRING CHUNK ******-->
-            <form>
-
-              <div class="row">
-
-                <div class="two mobile-one columns compass-mobile">
-                  <span class="right custom-label">Recurring:</span>
-                </div>
-
-                <div class="ten columns compass-mobile recurring-radio-buttons">
-                  <div class="radio-float"><label for="radio3"><input name="radio2" type="radio" id="radio3"><span class="radio"></span> Daily</label></div>
-                  <div class="radio-float"><label for="radio4"><input name="radio2" type="radio" id="radio4"><span class="radio"></span> Weekly</label></div>
-                  <div class="radio-float"><label for="radio5"><input name="radio2" type="radio" id="radio5"><span class="radio"></span> Monthly</label></div>
-                </div>
-
-              </div>
-
-
-              <div class="row">
-
-                <div class="two mobile-one columns"></div>
-
-                <div class="ten mobile-three columns compass-mobile">
-                  <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
-                  <input type="text" placeholder="" class="" style="float:left; width:100px; margin-right:8px;"/>
-                  <span style="float:left; margin-top:8px;">day(s)</span>
-                </div>
+              <div class="form-group six mobile-twelve columns">
+                <label for="radio1"><input name="radio1" type="radio" id="radio1"> Enable Scheduling</label>
               </div>
             </div>
-
-          </form>
-          <!--****** RECURRING CHUNK ******-->
-
-          <!--****** NOTIFICATIONS CHUNK ******-->
-
-          <form>
             <div class="row">
-
-              <div class="two mobile-one columns compass-mobile">
-                <span class="right custom-label" >Notifications:</span>
-              </div>
-
-              <div class="ten mobile-three columns compass-mobile notifications-checkboxes">
-                <div class="label-float-mobile">
-                  <label for="checkbox11"><input type="checkbox" id="checkbox11"> Bowen, Jenny (JBNX)</label>
-                  <label for="checkbox12"><input type="checkbox" id="checkbox12"> Email</label>
-                </div>
+              <div class="form-group six mobile-twelve columns">
+                <label for="radio2"><input name="radio1" type="radio" id="radio2"> Disable Scheduling</label>
               </div>
             </div>
-          </form>
+          </div>
+          <!-- ENABLE -->
 
-
-
-
-          <form>
-            <div class="row">
-
-              <div class="two mobile-one columns">
-                <span class="right"></span>
-              </div>
-
-              <div class="ten mobile-three columns compass-mobile" id="add-names-container">
-                <img src="images/add-names.png">
-                <img src="images/recipients.png">
-              </div>
-
+          <!--***** DATE *****-->
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <label>Start Date</label>
+              <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
-          </form>
-
-
-          <form>
-            <div class="row">
-
-              <div class="two mobile-one columns">
-                <span class="right"></span>
-              </div>
-
-
-              <div class="ten mobile-three columns compass-mobile">
-                <span><p>Within the notification email include:</p></span>
-                <label for="checkbox13"><input type="checkbox"> A link to the report</label>
-              </div>
-
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <label class="">End Date</label>
+              <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
-          </form>
+          </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label class="plain with-above" for="checkbox10"><input type="checkbox"> No end date</label>
+              </div>
+          </div>
+          <!-- DATE -->
 
-        </fieldset>
+          <!--***** TIME *****-->
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <label for="customDropdown">Time</label>
+              <select class="custom-dropdown" id="customDropdown">
+                <option SELECTED>12:00am</option>
+                <option>1:00 am</option>
+                <option>2:00 am</option>
+              </select>
+              <div class="custom dropdown expand">
+                <a href="#" class="current">
+                  12:00am
+                </a>
+                <a href="#" class="selector"></a>
+                <ul>
+                  <li>1:00 am</li>
+                  <li>2:00 am</li>
+                  <li>3:00 am</li>
+                </ul>
+              </div>
+              <div class="with-above-small"><p>(UTC - 7:00) MT (US &amp; Canada)</p></div>
+            </div>
+          </div>
+          <!--TIME -->
+
+          <!--***** RECURRING *****-->
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <label>Recurring</label>
+            </div>
+          </div>
+          <div class="radio-group">
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3"> Daily</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="radio4"><input name="radio2" type="radio" id="radio4"> Weekly</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="radio5"><input name="radio2" type="radio" id="radio5"> Monthly</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
+              <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
+              <span style="float:left; margin-top:8px;">day(s)</span>
+            </div>
+          </div>
+          <!-- RECURRING -->
+
+          <!--***** NOTIFICATIONS *****-->
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <label>Notifications</label>
+            </div>
+          </div>
+          <div class="checkbox-group">
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <img src="images/add-names.png" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <img src="images/recipients.png" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-twelve columns">
+              <p>Within the notification email include:</p>
+            </div>
+          </div>
+          <div class="row with-above">
+            <div class="form-group six mobile-twelve columns">
+              <label class="plain with-above-large" for="checkbox13"><input type="checkbox"> A link to the report</label>
+            </div>
+          </div>
+          <!-- NOTIFICATIONS -->
+        </fieldset> <!-- SCHEDULE -->
       </form>
-      <!--****** NOTIFICATIONS CHUNK ******-->
-      <br>
+
       <a class="primary radius button" href="petrocore-reports-new2.html">Next</a>
 
-    </div>
 
-
+    </div><!--Close Content Container-->
   </div>
-</div>
-
-</div>
-
-
-
-
-
-</div><!--Close Content Container-->
-</div>
 </div>
 <!--***** RIGHT SPLIT CONTAINER *****-->
 
