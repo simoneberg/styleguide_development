@@ -744,17 +744,32 @@
   <!-- CONTENT AREA -->
 
 <div id="myModal" class="reveal-modal expand">
-  <div class="modal-header">
-    <h5>This is a Pop-up</h5>
-    <a class="close-reveal-modal">&#215;</a>
-  </div>
-  <div class="popup-content-container">
-    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-  </div>
-  <div class="modal-footer">
-    <a class="success radius button right" href="#">OK</a>
-    <a class="secondary radius button right" href="#">Cancel</a>
+  <div class="panel-header">
+    <div class="panel-title-container"><h5>This is a Pop-up</h5></div>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="popup-content-container" >
+       <form class="custom">
+          <fieldset>
+            
+            <div class="row">
+              <div class="form-group six mobile-twelve columns">
+                <p><strong>Object Type Name</strong></p>
+                <label class="">Browse for an xml file</label>
+                <input type="file" placeholder="" value="Template Name"/><a class="secondary radius button " href="#">Browse</a>
+                <a class="secondary radius button " href="#">Browse</a>
+              </div>
+            </div>
+    </div>
+    <div class="modal-footer">
+      <a class="primary radius button left" href="#">Save</a>
+      <a class="left a-link" href="#">Cancel</a>
+    </div>
   </div>
 </div>
   
