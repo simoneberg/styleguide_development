@@ -56,7 +56,7 @@ body {
 
 /* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
 #progress-indicator {
-	min-width: 797px;
+	min-width: 745px;
 }
 
 #step1, #step2, #step3, #step4 {
@@ -126,3 +126,17 @@ fieldset legend {
 .added-filter {
 	min-width:204px;
 }
+
+.footer-logo {
+	margin-bottom:6px;
+}
+
+.glowing {
+/*   zoom: 1;
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=2, OffY=2, Color=#529fd6); */
+   border:solid 3px #b8d4e6;
+}
+#search_type_drop {
+	padding-bottom:28px;
+}
+
