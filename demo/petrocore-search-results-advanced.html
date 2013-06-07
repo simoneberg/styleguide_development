@@ -52,7 +52,28 @@
 		}
 	}	
 	
-  </script>
+	function show_advanced(id) {
+		var advanced_panel = document.getElementById(id);
+			advanced_arrow = document.getElementById('arrowdown');
+		
+		
+		advanced_panel.style.display = 'block';
+		document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+		advanced_arrow.style.position = 'relative';
+		advanced_arrow.style.top = '7px';						
+	}
+
+
+		
+	
+	
+	
+	
+
+</script>
+	
+
+
 
 </head>
 <body>
@@ -115,7 +136,7 @@
         <div class="row collapse search-input">
         
           <div class="nine mobile-three columns">
-            <input id="initial-search" class="round-left" type="text" value="Smith" />            
+            <input id="initial-search" class="round-left" type="text" value="John" />            
           </div>
                   
           <div class="one mobile-one columns">
@@ -134,21 +155,30 @@
 	                <!--This is a Advanced Search panel that is hidden by default-->
                   	
                     <p><strong>Advanced Search</strong></p>
-                
+
+
+
+
+
+
 					<form class="custom search-type">                  
 						<label id="search-type-label" for="customDropdown">Search Type:</label>  
-						<select class="expand" style="display:none;" id="customDropdown">
-							<option SELECTED>Person</option>
-							<option>Group</option>
-							<option>Position</option>                            
-							<option>Map</option>
-							<option>Skill Group</option>
-							<option>Skill</option>
-							<option>Skill Description</option>
-							<option>Development Activity</option>
-						</select>                          
-                                                          
+
+						<div id="search_type_drop">                  
+							<select class="expand" style="display:none;" id="customDropdown">
+								<option SELECTED>Person</option>
+								<option>Group</option>
+								<option>Position</option>                            
+								<option>Map</option>
+								<option>Skill Group</option>
+								<option>Skill</option>
+								<option>Skill Description</option>
+								<option>Development Activity</option>
+							</select>                          
+						</div>              
+                                            
 					</form>                    
+
 
 	                <div class="add-filter-container">
 
@@ -303,268 +333,251 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Search Results for &quot;Smith&quot;</h4>
+          <h4>Search Results for &quot;John&quot;</h4>
             <hr class="search-results-for">
             <div class="row">
 				<div class="twelve columns">
- 		           <div class=""><p><strong>Found 260 results</strong></p></div>
+ 		           <div class="adv-results-found"><p><strong>Found 75 results with <a id="filters_applied" href="#" onclick="show_advanced('advanced_search');">2 filters applied</a> and <a id="search_type_applied" href="#" onclick="show_advanced('advanced_search');">Search Type is Person</a></strong></p></div>
 				</div>
             
-	            <div class="columns remove-padding adjust-two-columns">
-               
-				    <!--***** SEARCH RESULTS NAVIGATION *****-->
-                
-					<div class="twelve columns">
-						<ul class="search-result-nav">
-						  <li class="title"><p><strong>Search Types</strong></p></li>          
-						  <li class="selected-item">Person (260)</li>  
-						  <li class="grayedout-item">Group (0)</li>  
-						  <li class="grayedout-item">Position (0)</li>                            
-						  <li class="grayedout-item">Map (0)</li>  
-						  <li class="grayedout-item">Skill Group (0)</li>  
-						  <li class="grayedout-item">Skill (0)</li>  
-						  <li class="grayedout-item">Skill Description (0)</li>  
-						  <li class="grayedout-item">Development Activity (0)</li>                                
-						</ul>  
-					</div>  
-
-				    <!--***** SEARCH RESULTS NAVIGATION *****-->          
-                
-    	        </div>
             
-	   	        <div class="columns remove-padding adjust-ten-columns">
-	          		<div class="left result-title"><p><strong>Results 1-25 of 260</strong></p></div>
+	   	        <div class="columns remove-padding adjust-twelve-columns">
+	          		<div class="left adv-result-title"><p><strong>Results 1-25 of 75</strong></p></div>
 		          	<div class="export-print right text-right"><p><i class="icon- add-space"><a href="#">&#xf019;</a></i> <a href="#">Export</a> <i class="icon- add-space"><a href="#">&#xf02f;</a></i> <a href="#">Print</a></p></div>
 
                 	<!--***** TABLE *****-->
 
-		          	<table class="twelve table-search-results">
+<div id="table_container">
+
+		          	<table class="twelve no-border table-search-results adv-table-search-results">
 		    	        <thead>
         			      <tr>
-            			    <th>Last Name</th>
-		            	    <th>First Name</th>
-		            	    <th>Employee #</th>
-		            	    <th>User ID</th>
-        		    	    <th>Account</th>
-            			    <th>Viewable</th>                                        
+            			    <th width="300">Last Name</th>
+		            	    <th width="300">First Name</th>
+		            	    <th width="300">Employee #</th>
+		            	    <th width="300">User ID</th>
+        		    	    <th width="300">Account</th>
+            			    <th width="300">Viewable</th>
 		        	      </tr>
 		            	</thead>
-	    		        <tbody>
-        	    		  <tr>
-		    	            <td><a href="#">Smith</a></td>
-    			            <td><a href="#">Anna</a></td>
-    	        		    <td><a href="#">57485</a></td>
-		    	            <td><a href="#">aneol</a></td>
+    			        <tbody>
+	       	    		  <tr>
+		    	            <td><a href="#">Robertson</a></td>
+    			            <td><a href="#">John</a></td>
+    	        		    <td><a href="#">109458849</a></td>
+		    	            <td><a href="#">JROA</a></td>
     			            <td><a href="#">Active</a></td>
     	        		    <td><a href="#">Full</a></td>
 		            	  </tr>                  
         			      <tr>
     	        		    <td><a href="#">Smith</a></td>
-		    	            <td><a href="#">Alexander</a></td>
-    			            <td><a href="#">32104</a></td>
-    	        		    <td><a href="#">alese</a></td>
+		    	            <td><a href="#">John</a></td>
+    			            <td><a href="#">091485012</a></td>
+    	        		    <td><a href="#">JSLE</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Amina</a></td>
-                            <td><a href="#">59201</a></td>
-                            <td><a href="#">ameop</a></td>
+                            <td><a href="#">Washington</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">123480535</a></td>
+                            <td><a href="#">JWJE</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Arthur</a></td>
-                            <td><a href="#">10221</a></td>
-                            <td><a href="#">arpol</a></td>
+                            <td><a href="#">Reynolds</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">093739502</a></td>
+                            <td><a href="#">JRIO</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Charlotte</a></td>
-                            <td><a href="#">00387</a></td>
-                            <td><a href="#">chetr</a></td>
+                            <td><a href="#">Meng</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">038472912</a></td>
+                            <td><a href="#">JMKL</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>                  
+                          </tr>   
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Elise</a></td>
-                            <td><a href="#">20048</a></td>
-                            <td><a href="#">elrod</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Emma</a></td>
-                            <td><a href="#">18785</a></td>
-                            <td><a href="#">emeol</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Eric</a></td>
-                            <td><a href="#">10032</a></td>
-                            <td><a href="#">erese</a></td>
-                            <td><a href="#">Inactive</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Eva</a></td>
-                            <td><a href="#">27478</a></td>
-                            <td><a href="#">eveop</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Gabriel</a></td>
-                            <td><a href="#">27478</a></td>
-                            <td><a href="#">garil</a></td>
-                            <td><a href="#">Active</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Hannah</a></td>
-                            <td><a href="#">25875</a></td>
-                            <td><a href="#">haetr</a></td>
+                            <td><a href="#">Slaton</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">029375922</a></td>
+                            <td><a href="#">JSLW</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Limited</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Ivan</a></td>
-                            <td><a href="#">10512</a></td>
-                            <td><a href="#">ivrod</a></td>
+                            <td><a href="#">Chung</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">048947001</a></td>
+                            <td><a href="#">JCKA</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Full</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">Rooney</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">039375920</a></td>
+                            <td><a href="#">JROW</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Full</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">Masterson</a></td>
+                            <td><a href="#">Eva</a></td>
+                            <td><a href="#">581749230</a></td>
+                            <td><a href="#">JMER</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Full</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">Aranda</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">103857291</a></td>
+                            <td><a href="#">JAKE</a></td>
                             <td><a href="#">Inactive</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>                  
+                          </tr>    
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Jonas</a></td>
-                            <td><a href="#">02698</a></td>
-                            <td><a href="#">joeol</a></td>
-                            <td><a href="#">Inactive</a></td>
-                            <td><a href="#">Full</a></td>
-                          </tr>                  
-                          <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Julia</a></td>
-                            <td><a href="#">20115</a></td>
-                            <td><a href="#">juese</a></td>
+                            <td><a href="#">Perez</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">985737193</a></td>
+                            <td><a href="#">JPAS</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lars</a></td>
-                            <td><a href="#">18745</a></td>
-                            <td><a href="#">laeop</a></td>
+                            <td><a href="#">Morey</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">492820504</a></td>
+                            <td><a href="#">JMKE</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Laura</a></td>
-                            <td><a href="#">12454</a></td>
-                            <td><a href="#">laril</a></td>
+                            <td><a href="#">Dulin</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">049371935</a></td>
+                            <td><a href="#">JDPW</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Léa</a></td>
-                            <td><a href="#">10075</a></td>
-                            <td><a href="#">leetr</a></td>
+                            <td><a href="#">Greene</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">145692870</a></td>
+                            <td><a href="#">JGQO</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lena</a></td>
-                            <td><a href="#">67100</a></td>
-                            <td><a href="#">lerod</a></td>
+                            <td><a href="#">Sienna</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">192581045</a></td>
+                            <td><a href="#">JSWO</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lina</a></td>
-                            <td><a href="#">57485</a></td>
-                            <td><a href="#">lipol</a></td>
+                            <td><a href="#">Evans</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">034984105</a></td>
+                            <td><a href="#">JEAL</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                  
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Louis</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">loetr</a></td>
+                            <td><a href="#">Peeve</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">915981030</a></td>
+                            <td><a href="#">JPQX</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Full</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">O'Connor</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">032985750</a></td>
+                            <td><a href="#">JOLE</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Full</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">Rouge</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">194850201</a></td>
+                            <td><a href="#">JROC</a></td>
+                            <td><a href="#">Active</a></td>
+                            <td><a href="#">Limited</a></td>
+                          </tr>                  
+                          <tr>
+                            <td><a href="#">Ramson</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">203859021</a></td>
+                            <td><a href="#">JRWX</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>    
                           <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Lukas</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">luetr</a></td>
+                            <td><a href="#">Emerson</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">104958203</a></td>
+                            <td><a href="#">JEMB</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Marie</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">maetr</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Bencsik</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">040582010</a></td>
+                            <td><a href="#">JBMI</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Maxim</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">maeyp</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Fannie</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">198494291</a></td>
+                            <td><a href="#">JFGE</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Milan</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">mieur</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Martinez</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">058189050</a></td>
+                            <td><a href="#">JMSK</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
-                          </tr>        	      <tr>
-                            <td><a href="#">Smith</a></td>
-                            <td><a href="#">Narek</a></td>
-                            <td><a href="#">32104</a></td>
-                            <td><a href="#">naetr</a></td>
+                          </tr>
+                          <tr>
+                            <td><a href="#">Rosey</a></td>
+                            <td><a href="#">John</a></td>
+                            <td><a href="#">029375023</a></td>
+                            <td><a href="#">JRMZ</a></td>
                             <td><a href="#">Active</a></td>
                             <td><a href="#">Full</a></td>
                           </tr>                                                                                                        
                         </tbody>
                       </table>
-
+</div>
                       <!--***** TABLE *****-->           
             
 	            </div>
             
 				<div class="twelve columns pagination-centered">  
-					<p>Page 1 of 11</p>
+					<p>Page 1 of 3</p>
 					<ul class="pagination">
 					  <li class="arrow unavailable"><a href="">«</a></li>  
 					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>    
 					  <li class="current unavailable"><a href="">1</a></li>    
 					  <li><a href="">2</a></li>
-					  <li><a href="">3</a></li>
-					  <li><a href="">4</a></li>
-					  <li><a href="">5</a></li>                        
-					  <li class="arrow"><a href="">&rsaquo;</a></li>
-					  <li class="arrow"><a href="">»</a></li>
+					  <li><a href="">3</a></li>                       
+					  <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+					  <li class="arrow unavailable"><a href="">»</a></li>
 					</ul>       
 				</div> 
             
@@ -657,6 +670,51 @@
       $("#featured").orbit();
     });
     </script> 
+    
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+//	var userview = $(window).height();  // returns height of browser viewport
+//	$('.master-wrapper').css('min-height',userview-44);  // 44 is the footer height that we exclude
+	
+	
+//	alert (userview-44);  // Just to display the viewport area we are working with
+
+		 var userviewright = $(".right-split-container").width();
+
+//	alert (userviewright);  // Just to display the viewport area we are working with
+
+		$('#table_container').css('width',userviewright-63);  // content area on the right hand side
+	
+		$('#filters_applied').click(function(){		
+// it works	$('#filters').css('border', 'solid 3px red');
+// it works			$('#filter1').css('border', 'solid 3px red');
+// Finally it works			$('.added-filter').css('border', 'solid 3px #3fd2ff');			
+			$('.added-filter').toggleClass('glowing');			
+//			$(this).last().addclass('glowing');	
+//	alert (this);  // Just to display the viewport area we are working with					
+//$("p").last().addClass("selected");	
+		});
+
+		$('#search_type_applied').click(function(){		
+// it works	$('#filters').css('border', 'solid 3px red');
+// it works			$('#filter1').css('border', 'solid 3px red');
+			$('#search_type_drop').toggleClass('glowing');	
+//			$('#customDropdown').css('border', 'solid 3px #3fd2ff');			
+//			$(this).last().addclass('glowing');	
+//	alert (this);  // Just to display the viewport area we are working with					
+//$("p").last().addClass("selected");	
+		});
+		
+		
+		
+	});
+	
+</script>    
+
+
+
 
 </body>
 </html>
