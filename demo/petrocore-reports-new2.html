@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -266,18 +265,86 @@
 
         <br>
         <!--***** FORMS *****-->
+        <form class="custom form-remove-margin-bottom">
+          <fieldset>
+            <legend>Select People</legend>
+          </fieldset>
 
-        <div class="form-container">
+          <div class="row tree-container-with-border collapse">
+            <div class="four mobile-twelve columns remove-padding">
+              <!--This is a dashboard panel-->
+              <div class="panel-wrapper-grey-tree">
+                <div class="panel-header-small-static">
+                  <h5>Options</h5>
+                </div>
+                <div class="panel-content-container">
+                  <div class="checkbox-group filters-checklist">
+                    <p class="options-description"><b>Include</b></p>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox1"><input type="checkbox" CHECKED id="checkbox1"> Yourself</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox12"><input type="checkbox" id="checkbox12"> Directly assigned to me</label>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="petrocore-hr">
 
-          <form class="form-remove-margin-bottom">
-            <fieldset>
-              <legend>Select People</legend>
+                  <div class="checkbox-group filters-checklist">
+                    <p class="options-description"><b>Exclude</b></p>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox3"><input type="checkbox" id="checkbox3"> Supervisors</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox4"><input type="checkbox" CHECKED id="checkbox4"> Mentors</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox5"><input type="checkbox" id="checkbox5"> Administrators</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox6"><input type="checkbox" id="checkbox6"> Managers</label>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="petrocore-hr">
+                  <!--***** MODAL *****-->
+                  <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+                  <!--***** MODAL *****-->
+                  <hr class="petrocore-hr">
+                  <div class="filter-list">
+                    <ul>
+                      <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                      <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                    </ul>
+                  </div>
+                </div><!--Close panel wrapper grey-->
+              </div><!--Close panel content container-->
+            </div><!--Close row-->
 
-            </fieldset>
-          </form>
+            <div class="eight columns remove-padding-custom">
+              <div class="panel-wrapper-white-tree">
+                <img src="../images/step2-tree.jpg">
+              </div>
+            </div>
+          </div>
 
-          <div class="row tree-container-with-border">
-            <div class="four columns remove-padding">
+          <fieldset>
+            <legend>Select Position</legend>
+          </fieldset>
+
+          <div class="row tree-container-with-border collapse">
+            <div class="four columns remove-padding remove-padding">
               <!--This is a dashboard panel-->
               <div class="panel-wrapper-grey-tree">
                 <div class="panel-header-small-static">
@@ -285,169 +352,74 @@
                 </div>
                 <div class="panel-content-container">
 
-                  <div class="filters-checklist">
-                    <p class="options-description"><b>Include</b></p>
-                    <label for="checkbox1"><input type="checkbox" id="checkbox1"> Yourself</label>
-                    <label for="checkbox12"><input type="checkbox" id="checkbox12"> Directly assigned to me</label>
-                  </div>
-
-                  <hr class="petrocore-hr">
-
-                  <div class="filters-checklist">
-                    <p class="options-description"><b>Exclude</b></p>
-                    <label for="checkbox3"><input type="checkbox" id="checkbox3"> Supervisors</label>
-                    <label for="checkbox4"><input type="checkbox" id="checkbox4"> Mentors</label>
-                    <label for="checkbox5"><input type="checkbox" id="checkbox5"> Administrators</label>
-                    <label for="checkbox6"><input type="checkbox" id="checkbox6"> Managers</label>
-                  </div>
-
-                  <hr class="petrocore-hr">
-
-
-                  <!--***** MODAL *****-->
-                  <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="people-filter" class="">Add a Filter</a></p>
-                  <!--***** MODAL *****-->
-
-
-
-                  <hr class="petrocore-hr">
-
-                  <div class="filter-list">
-                    <ul>
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                    </ul>
-                  </div>
-
-                </div><!--Close panel wrapper grey-->
-
-              </div><!--Close panel content container-->
-
-            </div><!--Close row-->
-
-            <div class="eight columns remove-padding-custom">
-              <div class="panel-wrapper-white-tree">
-
-                <img src="../images/step2-tree.jpg">
-
-              </div>
-
-            </div>
-
-          </div><!--Close form container-->
-
-
-
-
-
-          <div class="form-container">
-
-            <form class="form-remove-margin-bottom">
-              <fieldset>
-                <legend>Select Position</legend>
-                <div class="row">
-
-                </fieldset>
-              </form>
-
-              <div class="row tree-container-with-border">
-                <div class="four columns remove-padding">
-                  <!--This is a dashboard panel-->
-                  <div class="panel-wrapper-grey-tree">
-                    <div class="panel-header-small-static">
-                      <h5>Options</h5>
-                    </div>
-                    <div class="panel-content-container">
-
-
-                      <form >
+                  <div class="row">
+                    <div class="twelve columns">
+                      <div class="radio-group">
                         <div class="row">
-                          <div class="twelve columns">
-                            <div class="radio-group">
-                              <div class="radio"><label for="radio1"><input name="radioreport" type="radio" id="radio1"><span class="radio"></span> Report on Assigned Position</label></div>
-                              <div class="radio"><label for="radio2"><input name="radioreport" type="radio" id="radio2"><span class="radio"></span> Report on people with the following Position(s) set as:</label></div>
-
-
-
-                              <div class="radio-group indent">
-                                <div class="radio"><label for="radio3"><input name="radioposition" type="radio" id="radio3"><span class="radio"></span> Assigned Position</label></div>
-                                <div class="radio"><label for="radio4"><input name="radioposition" type="radio" id="radio4"><span class="radio"></span> Growth Position</label></div>
-                                <div class="radio"><label for="radio5"><input name="radioposition" type="radio" id="radio5"><span class="radio"></span> Assigned or Growth Position</label></div>
-                              </div>
+                          <div class="form-group">
+                            <label for="radio1"><input name="radioreport" type="radio" id="radio1"><span class="radio"></span> Report on Assigned Position</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group">
+                            <label for="radio2"><input name="radioreport" type="radio" CHECKED id="radio2" ><span class="radio"></span> Report on people with the following Position(s) set as:</label>
+                          </div>
+                        </div>
+                        <div class="radio-group indent">
+                          <div class="row">
+                            <div class="form-group">
+                              <label for="radio3"><input name="radioposition" type="radio" CHECKED id="radio3"><span class="radio"></span> Assigned Position</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                              <label for="radio4"><input name="radioposition" type="radio" id="radio4"><span class="radio"></span> Growth Position</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group">
+                              <label for="radio5"><input name="radioposition" type="radio" id="radio5"><span class="radio"></span> Assigned or Growth Position</label>
                             </div>
                           </div>
                         </div>
-                      </form>
-
-                      <hr class="petrocore-hr">
-
-                      <!--***** MODAL *****-->
-                      <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="position-filter" class="">Add a Filter</a></p>
-                      <!--***** MODAL *****-->
-
-                      <hr class="petrocore-hr">
-
-                      <div class="filter-list">
-                        <ul>
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                          <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
-
-                        </ul>
                       </div>
-
-                    </div><!--Close panel wrapper grey-->
-
-                  </div><!--Close panel content container-->
-
-                </div><!--Close row-->
-
-
-                <div class="eight columns remove-padding-custom">
-
-                  <div class="panel-wrapper-white-tree">
-
-                    <img src="../images/step2-tree2.jpg">
-
+                    </form>
                   </div>
-
                 </div>
 
-              </div><!--Close form container-->
+                <hr class="petrocore-hr">
+                <!--***** MODAL *****-->
+                <p class="options-section"><b>Filter: </b><a href="#" data-reveal-id="position-filter" class="">Add a Filter</a></p>
+                <!--***** MODAL *****-->
+                <hr class="petrocore-hr">
+                <div class="filter-list">
+                  <ul>
+                    <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                    <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                  </ul>
+                </div>
 
+              </div><!--Close panel wrapper grey-->
+            </div><!--Close panel content container-->
+          </div><!--Close row-->
 
-              <br>
-              <a class="secondary radius button" href="petrocore-reports-new1.html">Back</a>
-              <a class="primary radius button" href="petrocore-reports-new4.html">Next</a>
-
+          <div class="eight columns remove-padding-custom">
+            <div class="panel-wrapper-white-tree">
+              <img src="../images/step2-tree2.jpg">
             </div>
-
-
           </div>
-        </div>
-
+        </form>
       </div>
 
+      <br>
+      <a class="secondary radius button" href="petrocore-reports-new1.html">Back</a>
+      <a class="primary radius button" href="petrocore-reports-new4.html">Next</a>
+
+    </div>
 
 
-
-
-    </div><!--Close Content Container-->
-  </div>
+  </div><!--Close Content Container-->
+</div>
 </div>
 <!--***** RIGHT SPLIT CONTAINER *****-->
 
