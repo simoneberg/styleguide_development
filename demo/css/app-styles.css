@@ -1,9 +1,6 @@
-.a-link{
-	padding-top: 12px;
-
-	padding-left: 10px;
-
-	padding-bottom: 10px;
+.cancel-link{
+	
+	padding: 12px 10px 10px;
 }
 
 .checkbox-group div.form-group label {
@@ -1573,7 +1570,8 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 
 @media only screen and (max-width: 767px) {
 	.button {
-		margin-bottom: 8px;
+		margin-bottom: 5px;
+		display: inline-block;
 	}
 
 	.modal-footer {
@@ -1636,8 +1634,8 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 	margin-left: 0px;
 	margin-top: 10px;
 	padding-top: 6px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 7px;
+	padding-right: 7px;
 	background: #e3e3e3;
 	background: -moz-linear-gradient(top,  #e3e3e3 0%, #d1d1d1 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#d1d1d1));
@@ -1697,7 +1695,7 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 	}
 
 	.reveal-modal .close-reveal-modal:not(.button) {
-		top:0px;
+		top:10px;
 	}
 }
 
