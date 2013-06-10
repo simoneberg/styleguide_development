@@ -345,7 +345,7 @@ form.custom .control-with-icon-after {
 }
 
 form.custom div.custom.dropdown{
-	font-size:12px;
+	font-size:14px;
 	height:auto;
 	border:solid 1px #fff;
 }
@@ -1474,8 +1474,9 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 /******BUTTONS*******/
 
 .button {
-	margin-left:5px;
+	margin-left:0px;
 	margin-right: 5px;
+
 }
 
 .button-gallery {
@@ -1570,12 +1571,29 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 
 
 
+@media only screen and (max-width: 767px){
 
+	button.button{ 
+		width: auto;
+		padding: 10px 20px 11px;
+	}
+}
+/*
+	input[type="submit"].button{
+		width: auto;
+		padding: 10px 20px 11px;
+	}
+	input[type="reset"].button{		
+		width: auto;
+		padding: 10px 20px 11px;
+}*/
 
 @media only screen and (max-width: 767px) {
 	.button {
 		margin-bottom: 5px;
 		display: inline-block;
+		width: auto;
+		padding: 10px 20px 11px;
 	}
 
 	.modal-footer {
@@ -1583,7 +1601,7 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 		line-height: 36px;
 	}
 
-	.a-link{
+	.cancel-link{
 		line-height: 16px;
 		text-align: center;
 		margin-top: 2px;

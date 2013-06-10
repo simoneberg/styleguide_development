@@ -305,184 +305,117 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Add Activity</h4>
-            <hr>
-
-
-
-
-
-
-
-          <div class="form-container">
-
-<!--************** TABS FORM ****************-->
-
-          <form>
-            <div class="row">
-              <div class="twelve columns">
-                <div class="radio-float"><label for="radio1"><input name="radio1" type="radio" id="radio1" style=""><span class="radio"></span> Existing Activity</label></div>
-                <div class="radio-float"><label for="radio2"><input name="radio1" type="radio" id="radio2" CHECKED style=""><span class="radio"></span> Create New Activity</label></div>
+        <form class="custom">
+             <h4>Add Activity</h4>
+              <hr>
+              <div class="radio-group">
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label for="radio1"><input name="radio1" type="radio" id="radio1" > Existing Activity</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label for="radio2"><input name="radio1" type="radio" id="radio2" CHECKED > Create New Activity</label>
+                  </div>
+                </div>
               </div>
-            </div>
-          </form>
-
-<!--************** TABS FORM ****************-->
-
-
-
-
-
-
-
-
-<!--************** ACTIVITY INFORMATION FORM ****************-->
-         <form class="custom">
-            <fieldset>
-            <legend>Activity Information</legend>
-            </fieldset>
-              <!--****** START/END CHUNK ******-->
-              <div class="row">
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Code:</label>
+              <fieldset>
+                <legend>Activity Information</legend>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Code</label>
+                    <input type="text" placeholder="" value=""/>
+                  </div>
                 </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Name</label>
+                    <input type="text" placeholder="" value=""/>
+                  </div>
                 </div>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Name:</label>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label>Planned Start</label>
+                    <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
+                  </div>
                 </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Planned End</label>
+                    <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
+                  </div>
                 </div>
-
-                <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Planned Start:</label>
-                </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href=""><p class="icon-">&#xf073;</p></a></div>
-                </div>
-
-                <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Planned End:</label>
-                </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four icon-after-input-field-float-mobile left"/><div class="icon-after-input-field"><a href=""><p class="icon-">&#xf073;</p></a></div>
-                </div>
-
-
-           <!--****** PRIORITY DROPDOWN ******-->
-
-
-                <div class="twelve columns">
-                  <label for="customDropdown" class="custom-dropdown-label">Priority:</label>
-                  <select style="display:none;" id="customDropdown">
-                    <option SELECTED>Lorem Ipsum</option>
-                    <option>Lorem Ipsum</option>
-                    <option>Lorem Ipsum</option>
+                              <!--****** PRIORITY DROPDOWN ******-->
+                <label for="customDropdown" class="custom-dropdown-label"> Priority</label>  
+                <div class="form-group six">
+                  <select class="custom-dropdown" id="customDropdown">
+                    <option >Low</option>
+                    <option SELECTED>Medium</option>
+                    <option>High</option>
                   </select>
-                  <div class="custom dropdown">
+                  <div class="custom dropdown expand">
                     <a href="#" class="current">
-                      Lorem Ipsum
+                      Medium
                     </a>
                     <a href="#" class="selector"></a>
                     <ul>
-                      <li>Lorem Ipsum</li>
-                      <li>Lorem Ipsum</li>
-                      <li>Lorem Ipsum</li>
+                      <li>Low </li>
+                      <li>Medium</li>
+                      <li>High</li>
                     </ul>
                   </div>
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p>
-                <div>
-
                 </div>
+              </fieldset>
+              <fieldset>
+                <legend>Optional</legend>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Name</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-
-
-
-            <!--****** PRIORITY DROPDOWN ******-->
-
-
-<!--************** ACTIVITY INFORMATION FORM ****************-->
-
-
-
-<!--************** DATE INFORMATION FORM ****************-->
-         <form class="form-no-margin-bottom">
-            <fieldset class="nested-fieldest">
-            <legend>Optional</legend>
-            </fieldset>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">URL:</label>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Description</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
+                <div class="row">
+                   <div class="form-group six mobile-twelve columns">
+                    <label class="">Custom Property</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Description:</label>
+                <div class="row">
+                   <div class="form-group six mobile-twelve columns">
+                    <label class="">Custom Property</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-                <div class="twelve columns">
-                  <textarea placeholder="" class="four text-area-min-height"></textarea>
+                <div class="row">
+                   <div class="form-group six mobile-twelve columns">
+                    <label class="">Custom Property</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Custom Property:</label>
+                <div class="row">
+                  <div class="form-group six mobile-twelve columns">
+                    <label class="">Custom Property</label>
+                    <input type="text" placeholder="" value="Template Name"/>
+                  </div>
                 </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
-                </div>
+              </fieldset>
 
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Custom Property:</label>
-                </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
-                </div>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Custom Property:</label>
-                </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
-                </div>
-
-               <div class="twelve columns">
-                  <label class="custom-label custom-width-mobile-one">Custom Property:</label>
-                </div>
-                <div class="twelve columns">
-                  <input type="text" placeholder="" class="four left"/>
-                </div>
-
-            </form>
-              <!--****** START/END CHUNK ******-->
-
-
-</div>
-</div>
-
-
-            <!--****** NOTIFICATIONS CHUNK ******-->
-            <br>
-            <a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
-            <a class="secondary radius button" href="petrocore-reports-new2.html">Cancel</a>
-            </div>
-
-
-</div>
-  </div>
-
-</div>
-
-
-
+                <br>
+                <button class="primary radius button left">Save</button>
+                <a class="cancel-link left" href="#">Cancel</a>
+                <br>
+            
+          </form>
 
       </div><!--Close Content Container-->
-  </div>
+    </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
@@ -518,20 +451,7 @@
   <!--</div>-->
   <!-- CONTENT AREA -->
 
-<div id="myModal" class="reveal-modal expand">
-  <div class="modal-header">
-    <h5>This is a Pop-up</h5>
-    <a class="close-reveal-modal">&#215;</a>
-  </div>
-  <div class="popup-content-container">
-    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-  </div>
-  <div class="modal-footer">
-    <a class="success radius button right" href="#">OK</a>
-    <a class="secondary radius button right" href="#">Cancel</a>
-  </div>
-</div>
+
 
   <!-- Included JS Files (Uncompressed) -->
   <!--
