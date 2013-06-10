@@ -77,6 +77,10 @@
 	font-weight: normal;
 }
 
+.remove-padding {
+	margin-left:-1px;
+}
+
 .row {
 	/*width: 1260px;*/
 	width:100%;
