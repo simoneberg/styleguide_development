@@ -131,11 +131,11 @@ fieldset legend {
 	margin-bottom:6px;
 }
 
+/* Avanced Search Results */
 .glowing {
-/*   zoom: 1;
-   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=2, OffY=2, Color=#529fd6); */
    border:solid 3px #b8d4e6;
 }
+
 #search_type_drop {
 	padding-bottom:28px;
 }
