@@ -3999,14 +3999,24 @@ form.custom.search-type div.custom.dropdown ul li.selected:hover{
 	padding-top:0px;		
 	margin-top: 0px;
 	margin-bottom: 0px;
-	text-decoration:none;						
+	text-decoration:none;	
 }	
 
 .notifications-area .anotification {
 	float:right;
 	position:relative;
 	margin:0px;	
-	top:13px;
+	top:13px;	
+}
+
+.notifications-area a.anotification {
+	color: #afafaf;							
+}
+
+.notifications-area a.anotification:hover,
+.notifications-area a.anotification:focus,
+.notifications-area a.anotification:active {
+	color: #0169a0;
 }
 
 .notifications-area p {
