@@ -3895,3 +3895,140 @@ form.custom.search-type div.custom.dropdown ul li.selected:hover{
     -webkit-box-shadow: 0 0 5px rgba(82, 159, 214, 1); 
     -moz-box-shadow: 0 0 5px rgba(82, 159, 214, 1); 
 }
+
+/* Report Completion Notification  */
+.button.round.notification-btn{
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	-ms-border-radius:50px;
+	-o-border-radius:50px;
+	border-radius:50px;
+	background:#f5b644;
+	border:1px solid #ab720b;
+	color:#202020;
+	cursor:pointer;
+	display:inline-block;
+	font-family:inherit;
+	font-size:12px;	
+	font-weight:bold;
+	line-height:1;
+	margin-left:7px;
+	margin-right:2px;
+	padding:4px 6px 4px;									
+	position:relative;
+	text-align:center;
+	text-decoration:none;
+}
+
+.button.round.notification-btn:hover,
+.button.round.notification-btn:focus,
+.button.round.notification-btn:active {
+	color: #000;
+}
+
+.notifications-popup {	
+   	position: absolute;
+	display: none;	
+    background: #fff;
+	top:20%;
+    left: 50%;		
+	width:367px;
+	height:auto;
+	z-index:1000;
+	-moz-box-shadow: 3px 5px 5px #d8d8d8;
+	-webkit-box-shadow: 3px 5px 5px #d8d8d8;
+	box-shadow: 3px 5px 5px #d8d8d8;	
+	z-index:10001;
+}
+
+.notifications-popup .arrow {
+   	width: 0;
+   	height: 0;	
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #49799f;				
+   	position:absolute;
+   	left:72%;
+   	top:-10px;
+}
+
+.notifications-popup .arrow-border {
+  	width: 0;
+  	height: 0;
+   	border-left: 11px solid transparent;
+   	border-right: 11px solid transparent;
+   	position:absolute;
+   	top:-12px;
+}
+	  
+.notifications-title {
+   	margin:0px;
+	padding:0px;		
+	width:100%;
+	height:26px;		
+    background-color:#49799f;
+}
+
+.notifications-title h5{
+   	margin:0px;
+	font-size:1.15em;
+	padding-top:6px;
+	padding-left:11px;
+    color:#fff;		
+}
+
+.notifications-area {
+	width:auto;
+	height:auto;
+   	margin:0px;
+	padding:0px;		
+	padding-bottom:12px;		
+	padding-top:4px;				
+	border:solid 1px #8a8a8a;
+}
+		
+.notifications-area .notification {
+	width:auto;
+	height:auto;		
+	padding:0px 15px 0px 15px;				
+	margin:0px;
+}
+
+.notifications-area .notification a {
+	color: #0169a0;
+	padding-top:0px;		
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-decoration:none;						
+}	
+
+.notifications-area .anotification {
+	float:right;
+	position:relative;
+	margin:0px;	
+	top:13px;
+}
+
+.notifications-area p {
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+	 
+.hr-notification{
+	border:solid #ddd;
+	border-width:1px 0px 0px;
+	clear:both;
+	margin:8px 0px 4px; 
+	height:0;
+}
+
+#overlay {
+    position: fixed; 	
+    top: 0;
+    left: 0;
+	display:none;			
+    width: 100%;
+    height: 100%;
+    background:none;
+    z-index:10000;
+}

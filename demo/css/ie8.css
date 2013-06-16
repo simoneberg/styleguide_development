@@ -140,3 +140,8 @@ fieldset legend {
 	padding-bottom:28px;
 }
 
+/* Notification clickable overlay */
+#overlay {	
+    background: #000;
+    filter: alpha(opacity=1);
+}
