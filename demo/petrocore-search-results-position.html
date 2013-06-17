@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
+  <script src="../javascripts/jquery.js"></script>
+  
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
@@ -51,7 +53,49 @@
 			advanced_arrow.style.top = '7px';						
 		}
 	}	
-	
+
+  
+	$(document).ready(function(){
+
+		var notifs = $("#user-notifications").text();
+		var notifs_exist = true;
+
+	   	$('#notification_btn').bind('click', function (event) {
+				
+			if (notifs_exist == true) {
+	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+			    $('.notifications-popup').css('top',event.pageY+30);
+				$('.notifications-popup').toggle();	
+				$('#overlay').show();
+				$('#overlay').click(function(){
+						$('.notifications-popup').hide();
+						$('#overlay').hide();							
+				});
+					
+			} else {
+				$('.notifications-popup').hide();
+				$('#overlay').hide();															
+				}
+	    });	
+			
+		$('.notification .anotification').click (function() {
+			$(this).parent().remove();
+			notifs = $("#user-notifications").text();				
+			$("#user-notifications").html(notifs-1);
+				
+			if (notifs == 1) {
+				notifs_exist = false;								
+			    $('.notification-btn').css('background','#c0c2c1');
+			    $('.notification-btn').css('border','1px solid #616161');
+			    $('.notification-btn').css('color','#404040');
+			    $('.notifications-area').html('You have "0" Notifications');
+			    $('.notifications-area').css('text-align','center');
+			    $('.notifications-area').css('padding','10px 0 10px 0');
+			}										
+		});
+			
+	});
+		
   </script>
 
 </head>
@@ -68,6 +112,8 @@
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -416,6 +462,43 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>                
+                
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+                    
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a> 
+			<hr class="hr-notification">
+	    </div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a> 
+			<hr class="hr-notification">
+		</div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a> 
+		</div>                               
+
+	</div>
+</div>         
+
   
   <!-- Included JS Files (Uncompressed) -->
   <!--

@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
+  <script src="../javascripts/jquery.js"></script>
+  
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
@@ -50,7 +52,49 @@
 			advanced_arrow.style.top = '7px';						
 		}
 	}	
-	
+ 
+ 
+	$(document).ready(function(){
+
+		var notifs = $("#user-notifications").text();
+		var notifs_exist = true;
+
+	   	$('#notification_btn').bind('click', function (event) {
+				
+			if (notifs_exist == true) {
+	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+			    $('.notifications-popup').css('top',event.pageY+30);
+				$('.notifications-popup').toggle();	
+				$('#overlay').show();
+				$('#overlay').click(function(){
+						$('.notifications-popup').hide();
+						$('#overlay').hide();							
+				});
+					
+			} else {
+				$('.notifications-popup').hide();
+				$('#overlay').hide();															
+				}
+	    });	
+			
+		$('.notification .anotification').click (function() {
+			$(this).parent().remove();
+			notifs = $("#user-notifications").text();				
+			$("#user-notifications").html(notifs-1);
+				
+			if (notifs == 1) {
+				notifs_exist = false;								
+			    $('.notification-btn').css('background','#c0c2c1');
+			    $('.notification-btn').css('border','1px solid #616161');
+			    $('.notification-btn').css('color','#404040');
+			    $('.notifications-area').html('You have "0" Notifications');
+			    $('.notifications-area').css('text-align','center');
+			    $('.notifications-area').css('padding','10px 0 10px 0');
+			}										
+		});
+			
+	});
+			
   </script>
 
 </head>
@@ -66,6 +110,8 @@
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
             <ul class="dropdown user">
@@ -334,21 +380,21 @@
           <fieldset>
             <legend>General Information</legend>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label class="">Name</label>
                 <input type="text" placeholder="" value="Template Name"/>
               </div>
             </div>
             
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label>Creator</label>
                 <div class="form-text-display-field">Bowen, Jenny (JBNX)</div>
               </div>
             </div>
 
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label>Owner</label>
                 <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-after-field text" href="#">&#xf08e;</a></div>
               </div>
@@ -359,7 +405,7 @@
 
           <fieldset>
             <legend>Select Report Type</legend>
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>Gap Analysis</option>
                 <option>Gap Analysis 2</option>
@@ -385,37 +431,37 @@
             <legend>Options</legend>
             <div class="checkbox-group">
               <div class="row">
-                <div class="form-group six mobile-twelve columns">
+                <div class="form-group six mobile-four columns">
                   <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
                 </div>
               </div>
               <div class="row">
-                <div class="form-group eight mobile-twelve columns">
+                <div class="form-group eight mobile-four columns">
                  <span class="infomation-text">Reporting on more groups than allowed. Please select 25 or less</span>
                </div>
              </div>
              <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group eight mobile-twelve columns">
+              <div class="form-group eight mobile-four columns">
                 <span class="information-text">Reporting on more groups than allowed. Please select 25 or less</span>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
               </div>
             </div>
@@ -428,12 +474,12 @@
           <!--***** ENABLE *****-->
           <div class="radio-group">
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="radio1"><input name="radio1" type="radio" id="radio1"> Enable Scheduling</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="radio2"><input name="radio1" type="radio" id="radio2"> Disable Scheduling</label>
               </div>
             </div>
@@ -442,19 +488,19 @@
 
           <!--***** DATE *****-->
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label>Start Date</label>
               <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
           </div>
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label class="">End Date</label>
               <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
           </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label class="plain with-above" for="checkbox10"><input type="checkbox"> No end date</label>
               </div>
           </div>
@@ -462,7 +508,7 @@
 
           <!--***** TIME *****-->
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label for="customDropdown">Time</label>
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>12:00am</option>
@@ -487,29 +533,29 @@
 
           <!--***** RECURRING *****-->
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label>Recurring</label>
             </div>
           </div>
           <div class="radio-group">
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3"> Daily</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="radio4"><input name="radio2" type="radio" id="radio4"> Weekly</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="radio5"><input name="radio2" type="radio" id="radio5"> Monthly</label>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
               <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
               <span style="float:left; margin-top:8px;">day(s)</span>
@@ -519,39 +565,39 @@
 
           <!--***** NOTIFICATIONS *****-->
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label>Notifications</label>
             </div>
           </div>
           <div class="checkbox-group">
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
               </div>
             </div>
             <div class="row">
-              <div class="form-group six mobile-twelve columns">
+              <div class="form-group six mobile-four columns">
                 <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <img src="images/add-names.png" />
             </div>
           </div>
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <img src="images/recipients.png" />
             </div>
           </div>
           <div class="row">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <p>Within the notification email include:</p>
             </div>
           </div>
           <div class="row with-above">
-            <div class="form-group six mobile-twelve columns">
+            <div class="form-group six mobile-four columns">
               <label class="plain with-above-large" for="checkbox13"><input type="checkbox"> A link to the report</label>
             </div>
           </div>
@@ -595,6 +641,43 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>                
+                
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+                    
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a> 
+			<hr class="hr-notification">
+	    </div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a> 
+			<hr class="hr-notification">
+		</div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a> 
+		</div>                               
+
+	</div>
+</div>         
+
 
 <!-- Included JS Files (Uncompressed) -->
   <!--
