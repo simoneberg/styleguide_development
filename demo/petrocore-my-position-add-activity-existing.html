@@ -31,27 +31,26 @@
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
-  
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-		
-		
-		if(advanced_panel.style.display == 'block')
-		
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
-		}
-	}	
-	
+
+      function show_hide_advanced(id) {
+          var advanced_panel = document.getElementById(id);
+          advanced_arrow = document.getElementById('arrowdown');
+
+
+          if (advanced_panel.style.display == 'block') {
+              advanced_panel.style.display = 'none';
+              document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+              advanced_arrow.style.position = 'relative';
+              advanced_arrow.style.top = '0px';
+          }
+          else {
+              advanced_panel.style.display = 'block';
+              document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+              advanced_arrow.style.position = 'relative';
+              advanced_arrow.style.top = '7px';
+          }
+      }
+
   </script>
 
 </head>
@@ -64,12 +63,9 @@
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
-          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
-
-         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
                   <li><a href="#">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
@@ -128,44 +124,44 @@
       </div>
       <!--***** SEARCH *****-->   
             
-	  <div id="advanced_search" class="hide_it">
-	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
-		<p><strong>Advanced Search</strong></p>
+    <div id="advanced_search" class="hide_it">
+    <!--This is a Advanced Search panel that is hidden by default-->
+                    
+    <p><strong>Advanced Search</strong></p>
                 
-			<form class="custom search-type">                  
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" style="display:none;" id="customDropdown">
-					<option SELECTED>Person</option>
-					<option>Group</option>
-					<option>Position</option>                            
-					<option>Map</option>
-					<option>Skill Group</option>
-					<option>Skill</option>
-					<option>Skill Description</option>
-					<option>Development Activity</option>
-				</select>                          
+      <form class="custom search-type">                  
+        <label id="search-type-label" for="customDropdown">Search Type:</label>  
+        <select class="expand" style="display:none;" id="customDropdown">
+          <option SELECTED>Person</option>
+          <option>Group</option>
+          <option>Position</option>                            
+          <option>Map</option>
+          <option>Skill Group</option>
+          <option>Skill</option>
+          <option>Skill Description</option>
+          <option>Development Activity</option>
+        </select>                          
                                                         
-			</form>                    
+      </form>                    
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->    
+        <!--***** ADD FILTER *****-->    
                 <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				<!--***** ADD FILTER *****-->
+        <!--***** ADD FILTER *****-->
                     
-				<div class="add-filter-area">
+        <div class="add-filter-area">
                           
-					<hr class="petrocore-hr">
-                    	<ul id="filters">
+          <hr class="petrocore-hr">
+                      <ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+     <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
+     <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
-             		    </ul>
+                    </ul>
                 </div>
-			</div>
-		</div>             
+      </div>
+    </div>             
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -293,67 +289,67 @@
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Subitem 1</a></li>
-            <li><a href="#">Subitem 2</a></li>
-            <li><a href="#">Subitem 3</a></li>
-            <li><a href="#">Subitem 4</a></li>
-            <li><a href="#">Subitem 5</a></li>
-            <li class="current"><a href="#">Subitem 6</a></li>
+            <li><a href="#">Development Plan</a></li>
+            <li class="current"><a href="#">Add Activity</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
-        <!--This will hold the content-->
-            
-         <!-- <div class="form-container">-->
-           
-<!--************** TABS FORM ****************-->
-            <form class="custom">
+          <!--This will hold the content-->
+
+          <!-- <div class="form-container">-->
+
+          <!--************** TABS FORM ****************-->
+          <form class="custom">
               <h4>Add Activity</h4>
               <hr>
 
               <div class="radio-group">
-                <div class="row">
-                  <div class="form-group six mobile-twelve columns">
-                    <label for="radio1"><input name="radio1" type="radio" id="radio1" CHECKED> Existing Activity</label>
+                  <div class="row">
+                      <div class="form-group six mobile-twelve columns">
+                          <label for="radio1">
+                              <input name="radio1" type="radio" id="radio1" checked>
+                              Existing Activity</label>
+                      </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-twelve columns">
-                    <label for="radio2"><input name="radio1" type="radio" id="radio2"> Create New Activity</label>
-                </div>
+                  <div class="row">
+                      <div class="form-group six mobile-twelve columns">
+                          <label for="radio2">
+                              <input name="radio1" type="radio" id="radio2">
+                              Create New Activity</label>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="form-group six mobile-twelve columns">
+                          <label for="radio3">
+                              <input name="radio1" type="radio" id="radio3">
+                              Historical Activity</label>
+                      </div>
+                  </div>
               </div>
-            </div>
-
-            
-          
-
-<!--************** TABS FORM ****************-->
 
 
-<!--************** SEARCH ACTIVITIES****************-->
+              <!--************** SEARCH ACTIVITIES****************-->
 
-           
-            <fieldset>
-              <legend>Search Activities</legend>
-              <img src="images/search-activity-existing.jpg">
-            </fieldset>
-          
-
-<!--************** SEARCH ACTIVITIES ****************-->
+              <fieldset>
+                  <legend>Search Activities</legend>
+                  <img src="images/search-activity-existing.jpg">
+              </fieldset>
 
 
-<!--************** YOUR SELECTION ****************-->
-            <fieldset>
-            <legend>Your Selection:</legend>
-              <div class="row">
-                <div class="twelve columns">
-                  <p style="margin-bottom:0px;">Morbi leo risus, porta ac consectetur ac, vestibulum at eros Morbi leo risus, porta ac consectetur acer<br>
-                  <a href="#">View Details</a></p>
-                </div>
-              </div>
-            </fieldset>
+              <!--************** SEARCH ACTIVITIES ****************-->
+
+              <!--************** YOUR SELECTION ****************-->
+              <fieldset>
+                  <legend>Your Selection:</legend>
+                  <div class="row">
+                      <div class="twelve columns">
+                          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros Morbi leo risus, porta ac consectetur acer<br>
+                              <a href="#">View Details</a>
+                          </p>
+                      </div>
+                  </div>
+              </fieldset>
 
 
 
@@ -365,22 +361,22 @@
               <!--****** START/END CHUNK ******-->
 
               <div class="row">
-                <div class="form-group six mobile-twelve columns">
+                <div class="form-group six mobile-four columns">
                   <label>Planned Start</label>
                   <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
                 </div>
               </div>
               <div class="row">
-                <div class="form-group six mobile-twelve columns">
-                  <label class="">Planned End</label>
-                  <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
+                <div class="form-group six mobile-four columns">
+                  <label>Planned End</label>
+                  <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
                 </div>
               </div>
 
-              <!--****** PRIORITY DROPDOWN ******-->
-              <label for="customDropdown" class="custom-dropdown-label"> Priority</label>  
-              <div class="form-group six">
-                <select class="custom-dropdown" id="customDropdown">
+               <!--****** PRIORITY DROPDOWN ******-->
+              <label for="customDropdown" class="custom-dropdown-label"> Priority</label>
+              <div class="form-group six mobile-four columns">
+                <select class="custom-dropdown" id="Select1">
                   <option >Low</option>
                   <option SELECTED>Medium</option>
                   <option>High</option>
@@ -405,29 +401,16 @@
                 <button class="primary radius button left">Save</button>
                 <a class="cancel-link left" href="#">Cancel</a>
                 <br>
-              
-            
-
-
-            </form>
+          </form>
 
       
             <!--****** PRIORITY DROPDOWN ******-->
 
+      </div>
 
-            
-
-</div>
-  </div>
-
-</div>  
-
-
-
-
-      </div><!--Close Content Container-->   
-  </div>
-  </div>
+  </div>  
+  <!--Close Content Container-->   
+  
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -458,7 +441,7 @@
   </li> -->
   
   <!-- END NAVIGATION -->
-    </div>
+    <!--</div>-->
   <!--</div>-->
   <!-- CONTENT AREA -->
 
@@ -493,11 +476,7 @@
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
   
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script> 
+   
 
 </body>
 </html>
