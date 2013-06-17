@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -14,12 +13,12 @@
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
-  -->
-  
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="stylesheets/foundation-override.css">
+-->
+
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="stylesheets/foundation.min.css">
+<link rel="stylesheet" href="stylesheets/app.css">
+<link rel="stylesheet" href="stylesheets/foundation-override.css">
 
 <style>
 
@@ -68,11 +67,11 @@ label {
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 </style>
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+<script src="javascripts/modernizr.foundation.js"></script>
 </head>
 <body>
 
@@ -106,22 +105,22 @@ label {
   <!-- CONTENT AREA -->
   <div class="row">
     <div class="three columns">
-    <!-- SIDE BAR -->
-  <ul class="tabs vertical">
-    <li><a href="index.html">Getting Started</a></li>
-    <li><a href="grids.html">Foundations</a></li>
-    <li class="active"><a href="building-blocks.html">Building Blocks</a>
-      <ul class="subitems">
-          <li><a href="building-blocks.html">Global Header &amp; Footer</a></li>
-          <li><a href="navigation.html">Navigation</a></li>
-          <li class="active"><a href="forms.html">Forms</a></li>
-          <li><a href="buttons.html">Buttons</a></li>
-          <li><a href="icons.html">Icons</a></li>
-          <li><a href="login.html">Login</a></li>          
-        </ul>
-    </li>
-    <li><a href="tables.html">Patterns</a></li>
-    <li><a href="add-activity.html">Design Examples</a></li>
+      <!-- SIDE BAR -->
+      <ul class="tabs vertical">
+        <li><a href="index.html">Getting Started</a></li>
+        <li><a href="grids.html">Foundations</a></li>
+        <li class="active"><a href="building-blocks.html">Building Blocks</a>
+          <ul class="subitems">
+            <li><a href="building-blocks.html">Global Header &amp; Footer</a></li>
+            <li><a href="navigation.html">Navigation</a></li>
+            <li class="active"><a href="forms.html">Forms</a></li>
+            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="icons.html">Icons</a></li>
+            <li><a href="login.html">Login</a></li>          
+          </ul>
+        </li>
+        <li><a href="tables.html">Patterns</a></li>
+        <li><a href="add-activity.html">Design Examples</a></li>
     <!-- <li class="active"><a href="#">Item 6</a>
         <ul class="subitems">
           <li class="active"><a href="#">Subitem 1</a></li>
@@ -130,190 +129,89 @@ label {
           <li><a href="#">Subitem 4</a></li>
           <li><a href="#">Subitem 5</a></li>
         </ul>
-    </li> -->
-    <li><a href="support.html">Support</a></li>
-  </ul>
+      </li> -->
+      <li><a href="support.html">Support</a></li>
+    </ul>
     <!-- END SIDE BAR -->
 
   </div>
-    <div class="nine columns">
-      <h2>Forms</h2>
-      <p>Please refer to the instructions below how to design and structure your forms. They need to be consistent with Petroskills' digital brand and style guidelines.</p>
-      <p><strong>Inputs are full width by default</strong> and will run as wide as the column that contains them. However, you have two options to adjust the width of the input field:</p>
-      <ul class="square">
-        <li>You can size inputs using column sizes, like <strong>.six</strong>.</li>
-        <li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
-      </ul>
-      <p>
-        Refer below to see more specific examples of form layouts.
-      </p>
-      <hr>
-<!-- Row Layout for forms -->
-<h3>Top-Aligned Form</h3>
-<p>Below is the default form layout. This is a top label aligned form, where the labels are placed above the input field. See below:</p>
-<div class="six">
-  <form>
-    <label>This is a label.</label>
-    <input type="text" placeholder="Standard Input" />
-    <label>Address</label>
-    <input type="text" class="twelve" placeholder="Street" />
-    <div class="row">
-      <div class="six columns">
-        <input type="text" placeholder="City" />
-      </div>
-      <div class="three columns">
-        <input type="text" placeholder="State" />
-      </div>
-      <div class="three columns">
-        <input type="text" placeholder="ZIP" />
-      </div>
-    </div>
-    <textarea placeholder="Message"></textarea>
-  </form>
-</div><!-- six columns -->
+  <div class="nine columns">
+    <h2>Forms</h2>
+    <p>Please refer to the instructions below how to design and structure your forms. They need to be consistent with Petroskills' digital brand and style guidelines.</p>
+    <p><strong>Inputs are full width by default</strong> and will run as wide as the column that contains them. However, you have two options to adjust the width of the input field:</p>
+    <ul class="square">
+      <li>You can size inputs using column sizes, like <strong>.six</strong>.</li>
+      <li>You can create row elements inside your form and use columns for the form, including inputs, labels and more. Rows inside a form inherit some special padding to even up input spacing.</li>
+    </ul>
+    <p>
+      Refer below to see more specific examples of form layouts.
+    </p>
+    <hr>
+    <!-- Row Layout for forms -->
+    <h3>Top-Aligned Form</h3>
+    <p>Below is the default form layout. This is a top label aligned form, where the labels are placed above the input field. See below:</p>
+    <p><img src="images/forms-top-align.png" style="border: 1px solid #717171;"></p>
+    <p><a href="demo/forms-top-align.html" class="button">View Demo</a></p>
 
-<hr>
+    <hr>
 
-<!-- Right aligned and inline labels -->
-<!--<h3>Right-Aligned Form</h3>
-<p>Sometimes you want a form with labels to the left of your inputs. You can add a class of <strong>.right</strong> to a label to have it align to the right, and if your label is next to an input (in another column) adding a class of <strong>.inline</strong> will have it vertically center against an input.</p>
-<div class="nine">
-  <form>
-    <div class="row">
-      <div class="two mobile-one columns">
-        <label class="right inline">Address</label>
+    <!-- Fieldsets for forms -->
+    <h3>Fieldsets</h3>
+    <p>Below is an example of a form placed inside a <strong>Fieldset</strong> element. This is used to create a division or space out forms from other elements or content.</p>
+    <p><img src="images/forms-fieldset.png" style="border: 1px solid #717171;"></p>
+    <p><a href="demo/forms-top-align.html" class="button">View Demo</a></p>
+
+    <hr>
+
+    <h3>Error States</h3>
+    <p>Every form and form field must specify and be visual to the user if there is an error to a form. </p>
+    <p>Form errors must occur when it is required. Examples would be:</p>
+    <ul class="square">
+      <li>Your [form field] must not be blank.</li>
+      <li>Your [form field] must have a name.</li>
+      <li>Your [form field] must have a password.</li>
+    </ul>
+    <p>You attach a class of <strong>.compass-error</strong> to the individual elements: label, input, small.</p>
+    <p><img src="images/forms-error-states.png" style="border: 1px solid #717171;"></p>
+    <p><a href="demo/forms-top-align.html" class="button">View Demo</a></p>
+
+    <hr>
+
+    <!-- Custom form field inputs -->
+    <h3>Radio Buttons and Checkboxes</h3>
+    <p>Below are extra input fields to help with designing forms.</p>
+
+    <form class="default">
+      <div class="row">
+        <div class="six columns">
+          <label for="radio1"><input name="radio" type="radio" id="radio1"> Radio Button 1</label>
+          <label for="radio2"><input name="radio" CHECKED type="radio" id="radio2"> Radio Button 2</label>
+          <label for="radio3"><input name="radio" type="radio" id="radio3"> Radio Button 3</label>
+        </div>
+
+        <div class="six columns">
+          <label for="checkbox4"><input type="checkbox" id="checkbox4"> Label for Checkbox</label>
+          <label for="checkbox5"><input type="checkbox" id="checkbox5" checked> Label for Checkbox</label>
+          <label for="checkbox6"><input type="checkbox" id="checkbox6"> Label for Checkbox</label>
+        </div>
       </div>
-      <div class="ten mobile-three columns">
-        <input type="text" placeholder="e.g. Home" class="eight" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="two mobile-one columns">
-        <label class="right inline">City:</label>
-      </div>
-      <div class="ten mobile-three columns">
-        <input type="text" class="eight" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="two mobile-one columns">
-        <label class="right inline">ZIP:</label>
-      </div>
-      <div class="ten mobile-three columns">
-        <input type="text" class="three" />
-      </div>
-    </div>
-  </form>
+    </form>
+
+    <hr>
+
+    <!-- Popup forms -->
+    <h3>Popup Forms</h3>
+    <p>Below is a screenshot that showcases a form inside a pop-up. </p>
+    <p><img src="images/petrocore-interface-popup-forms-top.jpg" alt="Popup Form Styles"></p>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+  </div>
 </div>
+<!-- CONTENT AREA -->
 
-<hr>
--->
-
-<!-- Fieldsets for forms -->
-<h3>Fieldsets</h3>
-<p>Below is an example of a form placed inside a <strong>Fieldset</strong> element. This is used to create a division or space out forms from other elements or content.</p>
-<div class="six">
-  <form>
-    <fieldset>
-      <legend>Fieldset Name</legend>
-      <label>This is a label.</label>
-      <input type="text" placeholder="Standard Input" />
-      <label>Address</label>
-      <input type="text" />
-      <input type="text" class="six" />
-    </fieldset>
-  </form>
-</div><!-- six columns -->
-
-<hr>
-
-<h3>Error States</h3>
-<p>Every form and form field must specify and be visual to the user if there is an error to a form. </p>
-<p>Form errors must occur when it is required. Examples would be:</p>
-<ul class="square">
-<li>Your [form field] must not be blank.</li>
-<li>Your [form field] must have a name.</li>
-<li>Your [form field] must have a password.</li>
-</ul>
-<p>You can attach a class of <strong>.error</strong> either to the individual elements (label, input, small) or to a column/div.</p>
-<div class="six">
-  <form>
-    <label class="error">Label Name</label>
-    <input class="error" type="text" placeholder="Standard Input" />
-    <small class="error">Please provide a label.</small>
-    <label>Address</label>
-    <input type="text" class="twelve" placeholder="Street" />
-    <div class="row">
-      <div class="six columns">
-        <input type="text" placeholder="City" />
-      </div>
-      <div class="three columns">
-        <input type="text" placeholder="State" />
-      </div>
-      <div class="three columns">
-        <input type="text" placeholder="ZIP" />
-      </div>
-    </div>
-    <textarea placeholder="Message"></textarea>
-  </form>
-</div><!-- six columns -->
-
-<!-- Right aligned and inline labels -->
-<div class="six error">
-  <form>
-    <fieldset>
-      <legend>Fieldset Name</legend>
-      <p>Please fill in all of the required fields below:</p>
-      <label>This is a label.</label>
-      <input type="text" placeholder="Standard Input" />
-      <label>Address</label>
-      <input type="text" />
-      <input type="text" class="six" />
-    </fieldset>
-  </form>
-</div><!-- six columns -->
-
-<hr>
-
-<!-- Custom form field inputs -->
-<h3>Radio Buttons and Checkboxes</h3>
-<p>Below are extra input fields to help with designing forms.</p>
-
-
-<form class="default">
-  <div class="row">
-    <div class="six columns">
-      <label for="radio1"><input name="radio" type="radio" id="radio1"> Radio Button 1</label>
-      <label for="radio2"><input name="radio" CHECKED type="radio" id="radio2"> Radio Button 2</label>
-      <label for="radio3"><input name="radio" type="radio" id="radio3"> Radio Button 3</label>
-    </div>
-
-    <div class="six columns">
-      <label for="checkbox4"><input type="checkbox" id="checkbox4"> Label for Checkbox</label>
-      <label for="checkbox5"><input type="checkbox" id="checkbox5" checked> Label for Checkbox</label>
-      <label for="checkbox6"><input type="checkbox" id="checkbox6"> Label for Checkbox</label>
-    </div>
-  </div>
-</form>
-
-<hr>
-
-<!-- Popup forms -->
-<h3>Popup Forms</h3>
-<p>Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur fermentum.</p>
-<p><img src="images/petrocore-interface-popup-forms-top.jpg" alt="Popup Form Styles"></p>
-
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-    </div>
-  </div>
-  <!-- CONTENT AREA -->
-
-  
-  
-  <!-- Included JS Files (Uncompressed) -->
+<!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="javascripts/jquery.js"></script>
   <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
@@ -333,21 +231,19 @@ label {
   <script src="javascripts/jquery.foundation.joyride.js"></script>
   <script src="javascripts/jquery.foundation.clearing.js"></script>
   <script src="javascripts/jquery.foundation.magellan.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="javascripts/app.js"></script>
+-->
 
-  
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script> 
-  
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+
+<script>
+$(window).load(function(){
+  $("#featured").orbit();
+});
+</script> 
+
 </body>
 </html>

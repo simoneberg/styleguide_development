@@ -1,10 +1,13 @@
 .cancel-link{
-	
 	padding: 12px 10px 10px;
 }
 
 .checkbox-group div.form-group label {
 	font-weight: normal;
+}
+
+.checkbox-group>.row:last-child {
+	margin-bottom: 16px;
 }
 
 .form-group {
@@ -31,7 +34,7 @@
 }
 
 .form-text-display-field {
-	display:inline-block;	
+	display: inline-block;
 	font-size: 16px;
 	margin-bottom: 12px;
 }
@@ -66,12 +69,8 @@
 	width: 275px;
 }
 
-.radio-group {
-	margin-top: 8px;
-}
-
-.radio-group .row:last-child {
-	margin-bottom: 13px;
+.radio-group>.row:last-child {
+	margin-bottom: 16px;
 }
 
 .radio-group div.form-group label {
@@ -343,127 +342,115 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 /* for controls with a trailing icon
    set the width so the icon stays on
    the same line when resized */
-form.custom .control-with-icon-after {
+form.custom .control-with-trailing-icon {
 	float: left;
 }
 
-form.custom .one.columns .control-with-icon-after,
-form.custom .two.columns .control-with-icon-after {
+form.custom .one.columns .control-with-trailing-icon,
+form.custom .two.columns .control-with-trailing-icon {
 	width: 100% !important;
 }
-form.custom .three.columns .control-with-icon-after {
+form.custom .three.columns .control-with-trailing-icon {
 	width: 83% !important;
 }
-form.custom .four.columns .control-with-icon-after {
+form.custom .four.columns .control-with-trailing-icon {
 	width: 87% !important;
 }
-form.custom .five.columns .control-with-icon-after,
-form.custom .six.columns .control-with-icon-after {
+form.custom .five.columns .control-with-trailing-icon,
+form.custom .six.columns .control-with-trailing-icon {
 	width: 90% !important;
 }
-form.custom .seven.columns .control-with-icon-after,
-form.custom .eight.columns .control-with-icon-after {
+form.custom .seven.columns .control-with-trailing-icon,
+form.custom .eight.columns .control-with-trailing-icon {
 	width: 93% !important;
 }
-form.custom .nine.columns .control-with-icon-after,
-form.custom .ten.columns .control-with-icon-after,
-form.custom .eleven.columns .control-with-icon-after,
-form.custom .twelve.columns .control-with-icon-after {
+form.custom .nine.columns .control-with-trailing-icon,
+form.custom .ten.columns .control-with-trailing-icon,
+form.custom .eleven.columns .control-with-trailing-icon,
+form.custom .twelve.columns .control-with-trailing-icon {
 	width: 95% !important;
 }
 
 @media only screen and (max-width: 1024px) {
-	form.custom .one.columns .control-with-icon-after,
-	form.custom .two.columns .control-with-icon-after {
-		color: blue;
+	form.custom .one.columns .control-with-trailing-icon,
+	form.custom .two.columns .control-with-trailing-icon {
 		width: 100% !important;
 	}
-	form.custom .three.columns .control-with-icon-after {
-		color: blue;
+	form.custom .three.columns .control-with-trailing-icon {
 		width: 77% !important;
 	}
-	form.custom .four.columns .control-with-icon-after {
-		color: blue;
+	form.custom .four.columns .control-with-trailing-icon {
 		width: 80% !important;
 	}
-	form.custom .five.columns .control-with-icon-after {
-		color: blue;
+	form.custom .five.columns .control-with-trailing-icon {
 		width: 85% !important;
 	}
-	form.custom .six.columns .control-with-icon-after,
-	form.custom .seven.columns .control-with-icon-after,
-	form.custom .eight.columns .control-with-icon-after,
-	form.custom .nine.columns .control-with-icon-after {
-		color: blue;
+	form.custom .six.columns .control-with-trailing-icon,
+	form.custom .seven.columns .control-with-trailing-icon,
+	form.custom .eight.columns .control-with-trailing-icon,
+	form.custom .nine.columns .control-with-trailing-icon {
 		width: 90% !important;
 	}
-	form.custom .ten.columns .control-with-icon-after,
-	form.custom .eleven.columns .control-with-icon-after,
-	form.custom .twelve.columns .control-with-icon-after {
-		color: blue;
+	form.custom .ten.columns .control-with-trailing-icon,
+	form.custom .eleven.columns .control-with-trailing-icon,
+	form.custom .twelve.columns .control-with-trailing-icon {
 		width: 95% !important;
 	}
 }
 
 @media only screen and (max-width: 769px) {
-	form.custom .one.columns .control-with-icon-after,
-	form.custom .two.columns .control-with-icon-after {
-		color: red;
+	form.custom .one.columns .control-with-trailing-icon,
+	form.custom .two.columns .control-with-trailing-icon {
 		width: 100% !important;
 	}
-	form.custom .three.columns .control-with-icon-after,
-	form.custom .four.columns .control-with-icon-after{
-		color: red;
+	form.custom .three.columns .control-with-trailing-icon,
+	form.custom .four.columns .control-with-trailing-icon{
 		width: 80% !important;
 	}
-	form.custom .five.columns .control-with-icon-after,
-	form.custom .six.columns .control-with-icon-after {
-		color: red;
+	form.custom .five.columns .control-with-trailing-icon,
+	form.custom .six.columns .control-with-trailing-icon {
 		width: 85% !important;
 	}
-	form.custom .seven.columns .control-with-icon-after,
-	form.custom .eight.columns .control-with-icon-after,
-	form.custom .nine.columns .control-with-icon-after,
-	form.custom .ten.columns .control-with-icon-after,
-	form.custom .eleven.columns .control-with-icon-after,
-	form.custom .twelve.columns .control-with-icon-after {
-		color: red;
+	form.custom .seven.columns .control-with-trailing-icon,
+	form.custom .eight.columns .control-with-trailing-icon,
+	form.custom .nine.columns .control-with-trailing-icon,
+	form.custom .ten.columns .control-with-trailing-icon,
+	form.custom .eleven.columns .control-with-trailing-icon,
+	form.custom .twelve.columns .control-with-trailing-icon {
 		width: 90% !important;
 	}
 }
 
 @media only screen and (max-width: 525px) {
-	form.custom .one.columns .control-with-icon-after,
-	form.custom .two.columns .control-with-icon-after,
-	form.custom .three.columns .control-with-icon-after,
-	form.custom .four.columns .control-with-icon-after,
-	form.custom .five.columns .control-with-icon-after,
-	form.custom .six.columns .control-with-icon-after,
-	form.custom .seven.columns .control-with-icon-after,
-	form.custom .eight.columns .control-with-icon-after,
-	form.custom .nine.columns .control-with-icon-after,
-	form.custom .ten.columns .control-with-icon-after,
-	form.custom .eleven.columns .control-with-icon-after,
-	form.custom .twelve.columns .control-with-icon-after {
-		background-color: red;
+	form.custom .one.columns .control-with-trailing-icon,
+	form.custom .two.columns .control-with-trailing-icon,
+	form.custom .three.columns .control-with-trailing-icon,
+	form.custom .four.columns .control-with-trailing-icon,
+	form.custom .five.columns .control-with-trailing-icon,
+	form.custom .six.columns .control-with-trailing-icon,
+	form.custom .seven.columns .control-with-trailing-icon,
+	form.custom .eight.columns .control-with-trailing-icon,
+	form.custom .nine.columns .control-with-trailing-icon,
+	form.custom .ten.columns .control-with-trailing-icon,
+	form.custom .eleven.columns .control-with-trailing-icon,
+	form.custom .twelve.columns .control-with-trailing-icon {
 		width: 93% !important;
 	}
 }
 
 @media only screen and (max-width: 480px) {
-	form.custom .one.columns .control-with-icon-after,
-	form.custom .two.columns .control-with-icon-after,
-	form.custom .three.columns .control-with-icon-after,
-	form.custom .four.columns .control-with-icon-after,
-	form.custom .five.columns .control-with-icon-after,
-	form.custom .six.columns .control-with-icon-after,
-	form.custom .seven.columns .control-with-icon-after,
-	form.custom .eight.columns .control-with-icon-after,
-	form.custom .nine.columns .control-with-icon-after,
-	form.custom .ten.columns .control-with-icon-after,
-	form.custom .eleven.columns .control-with-icon-after,
-	form.custom .twelve.columns .control-with-icon-after {
-		color: green;
+	form.custom .one.columns .control-with-trailing-icon,
+	form.custom .two.columns .control-with-trailing-icon,
+	form.custom .three.columns .control-with-trailing-icon,
+	form.custom .four.columns .control-with-trailing-icon,
+	form.custom .five.columns .control-with-trailing-icon,
+	form.custom .six.columns .control-with-trailing-icon,
+	form.custom .seven.columns .control-with-trailing-icon,
+	form.custom .eight.columns .control-with-trailing-icon,
+	form.custom .nine.columns .control-with-trailing-icon,
+	form.custom .ten.columns .control-with-trailing-icon,
+	form.custom .eleven.columns .control-with-trailing-icon,
+	form.custom .twelve.columns .control-with-trailing-icon {
 		width: 90% !important;
 	}
 }
@@ -479,6 +466,10 @@ form.custom div.custom.dropdown a.current{
 	border:solid #5b5b5b 1px;
 }
 
+form.custom div.custom.dropdown.compass-error a.current{
+	border: none;
+}
+
 form.custom div.custom.dropdown a.selector{
 	border:solid #8a8a8a 1px; 
 }
@@ -492,20 +483,20 @@ form.custom div.custom.dropdown ul{
 }
 
 form.custom div.custom.dropdown ul li{
-	font-size:12px;
-   	color:#404040;	
+  font-size:12px;
+  color:#404040;	
 }
 
 form.custom div.custom.dropdown ul li.selected{
-   	color:#404040;
+  color:#404040;
 }
 
 form.custom div.custom.dropdown ul li:hover{
-   	color:#404040;
+  color:#404040;
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
-   	color:#404040;
+  color:#404040;
 }
 
 form.custom div.custom.dropdown ul li.selected:after{
@@ -521,7 +512,6 @@ form select.custom-dropdown {
 }
 
 /* -- Search Result Pages -- */
-
 .result-title .adv-result-title {
 	width:42%;
 	float:left;	
@@ -548,7 +538,6 @@ ul.search-result-nav li{
 	display:block;
 	list-style:none;
 	margin:0 0 0 0;	
-
 }
 
 ul.search-result-nav li a{
@@ -583,7 +572,7 @@ ul.search-result-nav li a:hover{
 
 ul.search-result-nav .grayedout-item{
 	color:#cccccc;
-	border:solid 1px #fff;	
+	border:solid 1px #fff;
 	padding-left:7px;
 }
 
@@ -597,7 +586,7 @@ ul.search-result-nav .grayedout-item{
 
 .add-space {
 	margin-right:5px;
-	margin-left:11px;	
+	margin-left:11px;
 }
 
 .adjust-two-columns {
@@ -1470,6 +1459,73 @@ textarea:focus {
 	border: 1px solid #5b5b5b;
 }
 
+input[type="text"].compass-error, 
+input[type="password"].compass-error, 
+input[type="date"].compass-error, 
+input[type="datetime"],
+input[type="email"].compass-error, 
+input[type="number"].compass-error, 
+input[type="search"].compass-error, 
+input[type="tel"].compass-error, 
+input[type="time"].compass-error, 
+input[type="url"].compass-error, 
+textarea.compass-error {
+  border: 2px solid #c60f13;
+  margin-bottom: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="text"].compass-error:focus, 
+input[type="password"].compass-error:focus, 
+input[type="date"].compass-error:focus, 
+input[type="datetime"].compass-error:focus, 
+input[type="email"].compass-error:focus, 
+input[type="number"].compass-error:focus, 
+input[type="search"].compass-error:focus, 
+input[type="tel"].compass-error:focus, 
+input[type="time"].compass-error:focus, 
+input[type="url"].compass-error:focus, 
+textarea.compass-error:focus {
+  border: 2px solid #c60f13;
+  margin-bottom: 0;
+}
+
+label.compass-error { 
+  color: #c60f13;
+  font-weight: bold !important;
+}
+
+small.compass-error { 
+  display: block;
+  padding: 6px 4px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  background: #c60f13;
+  color: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+small.compass-error.control-with-trailing-icon {
+  display: inline-block;
+}
+
+small.compass-error.custom-dropdown {
+  display: inline-block;
+}
+
 *:focus {
     outline: none;
 }
@@ -1637,13 +1693,6 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 	background: #d12525;
 }
 
-
-
-
-
-
-
-
 .button.radius.primary-disabled {
 	background: #2f94ce;
 	color:#136593;
@@ -1686,9 +1735,6 @@ ul.breadcrumbs li:hover a, ul.breadcrumbs li a:focus {
 .button.radius.alert-disabled:hover {
 	background: #e72828;
 }
-
-
-
 
 @media only screen and (max-width: 767px){
 
@@ -3127,31 +3173,31 @@ label.inline {
 	color: #767676;
 }
 
-.icon-after-field {
-	margin-top: 16px;
+.icon-trailing-control {
+	margin-left: 16px;
 	position: relative;
+	float: left;
 }
 
-.icon-after-field.custom {
-	margin-top: 8px;
-}
-
-.icon-after-field.input {
-	margin-left: 6px;
-	margin-top: 8px;
-}
-
-.icon-after-field.text {
-	margin-left: 6px;
-	margin-top: 2px;
-}
-
-a.icon-after-field {
+a.icon-trailing-control {
 	color: #767676;
 	cursor: pointer;
 	font-size: 16px;
 }
 
+.icon-trailing-control.custom {
+	margin-left: 6px;
+	margin-top: 8px;
+}
+
+.icon-trailing-control.input{
+	margin-top: 8px;
+}
+
+.icon-trailing-control.text {
+	margin-top: 2px;
+	float: none;
+}
 
 .icon-after-input-field {
 	margin-left: 12px;
@@ -3195,8 +3241,13 @@ margin-bottom: 0px;
 form.custom div.custom.dropdown {
 	float:left;
 	margin-right:12px;
-	margin-bottom: 2px;
+	margin-bottom: 10px;
 	/*margin-left: 3px;*/
+}
+
+form.custom div.custom.dropdown.compass-error {
+	margin-bottom: 0;
+	border: 2px solid #c60f13;
 }
 
 .modal-dropdown-list {
@@ -3382,7 +3433,8 @@ width: 100% !important;
 	margin-left: 20px;
 }*/
 
-input[type="text"].four.icon-after-input-field-float-mobile, .row input[type="text"].four.icon-after-input-field-float-mobile {
+input[type="text"].four.icon-after-input-field-float-mobile, 
+.row input[type="text"].four.icon-after-input-field-float-mobile {
 width:85% !important;
 }
 
@@ -3415,6 +3467,9 @@ width:85% !important;
 }
 
 /*This sets a min height to textarea input fields;*/
+.text-area-min-height {
+  min-height: 80px;
+}
 .three.text-area-min-height {
 min-height: 40px;
 }
