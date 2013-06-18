@@ -7,16 +7,16 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->
+<!--<meta name="viewport" content="width=device-width" />-->  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-
+  
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-
+  
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
   <link rel="stylesheet" href="../stylesheets/app.css">
@@ -28,74 +28,29 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-  
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
-  
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-		
-		
-		if(advanced_panel.style.display == 'block')
-		
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
-		}
-	}	
- 
- 
-	$(document).ready(function(){
 
-		var notifs = $("#user-notifications").text();
-		var notifs_exist = true;
+      function show_hide_advanced(id) {
+          var advanced_panel = document.getElementById(id);
+          advanced_arrow = document.getElementById('arrowdown');
 
-	   	$('#notification_btn').bind('click', function (event) {
-				
-			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
-				$('#overlay').show();
-				$('#overlay').click(function(){
-						$('.notifications-popup').hide();
-						$('#overlay').hide();							
-				});
-					
-			} else {
-				$('.notifications-popup').hide();
-				$('#overlay').hide();															
-				}
-	    });	
-			
-		$('.notification .anotification').click (function() {
-			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
-			$("#user-notifications").html(notifs-1);
-				
-			if (notifs == 1) {
-				notifs_exist = false;								
-			    $('.notification-btn').css('background','#c0c2c1');
-			    $('.notification-btn').css('border','1px solid #616161');
-			    $('.notification-btn').css('color','#404040');
-			    $('.notifications-area').html('You have "0" Notifications');
-			    $('.notifications-area').css('text-align','center');
-			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
-		});
-			
-	});
-			
+
+          if (advanced_panel.style.display == 'block') {
+              advanced_panel.style.display = 'none';
+              document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+              advanced_arrow.style.position = 'relative';
+              advanced_arrow.style.top = '0px';
+          }
+          else {
+              advanced_panel.style.display = 'block';
+              document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+              advanced_arrow.style.position = 'relative';
+              advanced_arrow.style.top = '7px';
+          }
+      }
+
   </script>
 
 </head>
@@ -108,20 +63,15 @@
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
-          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
-
-		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
-
-         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
                   <li><a href="#">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>
-              </ul>
+                  <li><a href="#">Role History</a></li>                                                                     
+              </ul>          
           </li>
           <li><p class="bar">&#124;</p></li>
 
@@ -132,9 +82,9 @@
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Français</a></li>
                   <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>
+                  <li><a href="#">Polski</a></li>                                                                        
               </ul>
-            </li>
+            </li> 
           <li><p class="bar">&#124;</p></li>
 
 
@@ -153,7 +103,7 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-
+      
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
@@ -174,44 +124,44 @@
       </div>
       <!--***** SEARCH *****-->   
             
-	  <div id="advanced_search" class="hide_it">
-	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
-		<p><strong>Advanced Search</strong></p>
+    <div id="advanced_search" class="hide_it">
+    <!--This is a Advanced Search panel that is hidden by default-->
+                    
+    <p><strong>Advanced Search</strong></p>
                 
-			<form class="custom search-type">                  
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" style="display:none;" id="customDropdown">
-					<option SELECTED>Person</option>
-					<option>Group</option>
-					<option>Position</option>                            
-					<option>Map</option>
-					<option>Skill Group</option>
-					<option>Skill</option>
-					<option>Skill Description</option>
-					<option>Development Activity</option>
-				</select>                          
+      <form class="custom search-type">                  
+        <label id="search-type-label" for="customDropdown">Search Type:</label>  
+        <select class="expand" style="display:none;" id="customDropdown">
+          <option SELECTED>Person</option>
+          <option>Group</option>
+          <option>Position</option>                            
+          <option>Map</option>
+          <option>Skill Group</option>
+          <option>Skill</option>
+          <option>Skill Description</option>
+          <option>Development Activity</option>
+        </select>                          
                                                         
-			</form>                    
+      </form>                    
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->    
+        <!--***** ADD FILTER *****-->    
                 <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				<!--***** ADD FILTER *****-->
+        <!--***** ADD FILTER *****-->
                     
-				<div class="add-filter-area">
+        <div class="add-filter-area">
                           
-					<hr class="petrocore-hr">
-                    	<ul id="filters">
+          <hr class="petrocore-hr">
+                      <ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+     <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
+     <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
-             		    </ul>
+                    </ul>
                 </div>
-			</div>
-		</div>             
+      </div>
+    </div>             
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -324,7 +274,7 @@
                 <li><a href="#">Item 1</a></li>
               </ul>
             </div>-->
-          </li>
+          </li>          
         </ul>
       </div>
       <!--***** MAIN NAVIGATION *****-->
@@ -339,131 +289,101 @@
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
             <li><a href="#">Development Plan</a></li>
             <li class="current"><a href="#">Add Activity</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
-        <!--This will hold the content-->
-        <form class="custom">
-             <h4>Add Activity</h4>
+          <!--This will hold the content-->
+
+          <!-- <div class="form-container">-->
+
+                      <form class="custom">
+              <h4>Add Activity</h4>
               <hr>
+
               <div class="radio-group">
                 <div class="row">
-                  <div class="form-group six mobile-four columns">
+                  <div class="form-group six mobile-twelve columns">
                     <label for="radio1"><input name="radio1" type="radio" id="radio1" > Existing Activity</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label for="radio2"><input name="radio1" type="radio" id="radio2" CHECKED > Create New Activity</label>
+                  <div class="form-group six mobile-twelve columns">
+                    <label for="radio2"><input name="radio1" type="radio" id="radio2"> Create New Activity</label>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label for="radio3"><input name="radio1" type="radio" id="radio3" > Historical Activity</label>
+                  <div class="form-group six mobile-twelve columns">
+                    <label for="radio3"><input name="radio1" type="radio" id="radio2" CHECKED> Historical Activity</label>
                   </div>
+                </div>
+              
+            </div>
+
+<!--************** SEARCH ACTIVITIES****************-->
+
+           
+            <fieldset>
+              <legend>Search Activities</legend>
+              <img src="images/search-activity-existing.jpg">
+            </fieldset>
+          
+
+<!--************** SEARCH ACTIVITIES ****************-->
+
+
+<!--************** YOUR SELECTION ****************-->
+            <fieldset>
+            <legend>Your Selection:</legend>
+              <div class="row">
+                <div class="twelve columns">
+                  <p>This activity is archived: <br>
+                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros Morbi leo risus, porta ac consectetur acer<br>
+                  <a href="#">View Details</a></p>
                 </div>
               </div>
-              <fieldset>
-                <legend>Activity Information</legend>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Code</label>
-                    <input type="text" placeholder="" value=""/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Name</label>
-                    <input type="text" placeholder="" value=""/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Planned Start</label>
-                    <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Planned End</label>
-                    <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
-                  </div>
-                </div>
-                              <!--****** PRIORITY DROPDOWN ******-->
-                <label for="customDropdown" class="custom-dropdown-label"> Priority</label>  
-                <div class="form-group six mobile- columns">
-                  <select class="custom-dropdown" id="customDropdown">
-                    <option >Low</option>
-                    <option SELECTED>Medium</option>
-                    <option>High</option>
-                  </select>
-                  <div class="custom dropdown expand">
-                    <a href="#" class="current">
-                      Medium
-                    </a>
-                    <a href="#" class="selector"></a>
-                    <ul>
-                      <li>Low </li>
-                      <li>Medium</li>
-                      <li>High</li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Optional</legend>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Name</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Description</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-                <div class="row">
-                   <div class="form-group six mobile-four columns">
-                    <label class="">Custom Property</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-                <div class="row">
-                   <div class="form-group six mobile-four columns">
-                    <label class="">Custom Property</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-                <div class="row">
-                   <div class="form-group six mobile-four columns">
-                    <label class="">Custom Property</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label class="">Custom Property</label>
-                    <input type="text" placeholder="" value="Template Name"/>
-                  </div>
-                </div>
-              </fieldset>
+            </fieldset>
 
+
+
+<!--************** DATE INFORMATION FORM ****************-->
+
+            <fieldset>
+              <legend>Date Information</legend>
+            
+              <!--****** START/END CHUNK ******-->
+
+              <div class="row">
+                <div class="form-group six mobile-twelve columns">
+                  <label>Completion Date</label>
+                  <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
+                </div>
+              </div>
+             
+
+            </fieldset>
+            <!--****** START/END CHUNK ******-->
+              
                 <br>
                 <button class="primary radius button left">Save</button>
                 <a class="cancel-link left" href="#">Cancel</a>
                 <br>
+              
             
-          </form>
 
-      </div><!--Close Content Container-->
-    </div>
-  </div>
+
+            </form>
+
+      
+            <!--****** PRIORITY DROPDOWN ******-->
+
+      </div>
+
+  </div>  
+  <!--Close Content Container-->   
+  
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -492,50 +412,14 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-
+  
   <!-- END NAVIGATION -->
-    </div>
+    <!--</div>-->
   <!--</div>-->
   <!-- CONTENT AREA -->
 
 
-<div id="overlay"></div>
-
-<div class="notifications-popup">
-
-	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
-	<div class="notifications-title">
-    	<h5>Notifications</h5>
-	</div>
-
-	<div class="notifications-area">
-                    
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
-			<hr class="hr-notification">
-	    </div>
-                        
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
-			<hr class="hr-notification">
-		</div>
-                        
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
-
-	</div>
-</div>         
-
-
+  
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -556,20 +440,16 @@
   <script src="../javascripts/jquery.foundation.joyride.js"></script>
   <script src="../javascripts/jquery.foundation.clearing.js"></script>
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
-
+  
   -->
-
+  
   <!-- Included JS Files (Compressed) -->
   <script src="../javascripts/foundation.min.js"></script>
-
+  
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
-
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script>
+  
+   
 
 </body>
 </html>
