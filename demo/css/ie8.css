@@ -145,3 +145,18 @@ fieldset legend {
     background: #000;
     filter: alpha(opacity=1);
 }
+
+/***** Report Templates  ******/
+.button.dropdown.split.petrocore-actions > span {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */	
+}
+
+.button.dropdown.split.petrocore-actions > a { /* Left area of the Button on hover */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */	
+}
+
+.button.dropdown.split.petrocore-actions > span:hover,
+.button.dropdown.split.petrocore-actions > span:focus,
+.button.dropdown.split.petrocore-actions > span:active { /* Arrow down button */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */	
+}
