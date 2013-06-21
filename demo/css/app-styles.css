@@ -339,9 +339,132 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockqu
 	display:none;
 }
 
+/* for controls with a trailing icon
+   set the width so the icon stays on
+   the same line when resized */
 form.custom .control-with-icon-after {
 	float: left;
+}
+
+form.custom .one.columns .control-with-icon-after,
+form.custom .two.columns .control-with-icon-after {
+	width: 100% !important;
+}
+form.custom .three.columns .control-with-icon-after {
+	width: 83% !important;
+}
+form.custom .four.columns .control-with-icon-after {
+	width: 87% !important;
+}
+form.custom .five.columns .control-with-icon-after,
+form.custom .six.columns .control-with-icon-after {
 	width: 90% !important;
+}
+form.custom .seven.columns .control-with-icon-after,
+form.custom .eight.columns .control-with-icon-after {
+	width: 93% !important;
+}
+form.custom .nine.columns .control-with-icon-after,
+form.custom .ten.columns .control-with-icon-after,
+form.custom .eleven.columns .control-with-icon-after,
+form.custom .twelve.columns .control-with-icon-after {
+	width: 95% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+	form.custom .one.columns .control-with-icon-after,
+	form.custom .two.columns .control-with-icon-after {
+		color: blue;
+		width: 100% !important;
+	}
+	form.custom .three.columns .control-with-icon-after {
+		color: blue;
+		width: 77% !important;
+	}
+	form.custom .four.columns .control-with-icon-after {
+		color: blue;
+		width: 80% !important;
+	}
+	form.custom .five.columns .control-with-icon-after {
+		color: blue;
+		width: 85% !important;
+	}
+	form.custom .six.columns .control-with-icon-after,
+	form.custom .seven.columns .control-with-icon-after,
+	form.custom .eight.columns .control-with-icon-after,
+	form.custom .nine.columns .control-with-icon-after {
+		color: blue;
+		width: 90% !important;
+	}
+	form.custom .ten.columns .control-with-icon-after,
+	form.custom .eleven.columns .control-with-icon-after,
+	form.custom .twelve.columns .control-with-icon-after {
+		color: blue;
+		width: 95% !important;
+	}
+}
+
+@media only screen and (max-width: 769px) {
+	form.custom .one.columns .control-with-icon-after,
+	form.custom .two.columns .control-with-icon-after {
+		color: red;
+		width: 100% !important;
+	}
+	form.custom .three.columns .control-with-icon-after,
+	form.custom .four.columns .control-with-icon-after{
+		color: red;
+		width: 80% !important;
+	}
+	form.custom .five.columns .control-with-icon-after,
+	form.custom .six.columns .control-with-icon-after {
+		color: red;
+		width: 85% !important;
+	}
+	form.custom .seven.columns .control-with-icon-after,
+	form.custom .eight.columns .control-with-icon-after,
+	form.custom .nine.columns .control-with-icon-after,
+	form.custom .ten.columns .control-with-icon-after,
+	form.custom .eleven.columns .control-with-icon-after,
+	form.custom .twelve.columns .control-with-icon-after {
+		color: red;
+		width: 90% !important;
+	}
+}
+
+@media only screen and (max-width: 525px) {
+	form.custom .one.columns .control-with-icon-after,
+	form.custom .two.columns .control-with-icon-after,
+	form.custom .three.columns .control-with-icon-after,
+	form.custom .four.columns .control-with-icon-after,
+	form.custom .five.columns .control-with-icon-after,
+	form.custom .six.columns .control-with-icon-after,
+	form.custom .seven.columns .control-with-icon-after,
+	form.custom .eight.columns .control-with-icon-after,
+	form.custom .nine.columns .control-with-icon-after,
+	form.custom .ten.columns .control-with-icon-after,
+	form.custom .eleven.columns .control-with-icon-after,
+	form.custom .twelve.columns .control-with-icon-after {
+		background-color: red;
+		width: 93% !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	form.custom .one.columns .control-with-icon-after,
+	form.custom .two.columns .control-with-icon-after,
+	form.custom .three.columns .control-with-icon-after,
+	form.custom .four.columns .control-with-icon-after,
+	form.custom .five.columns .control-with-icon-after,
+	form.custom .six.columns .control-with-icon-after,
+	form.custom .seven.columns .control-with-icon-after,
+	form.custom .eight.columns .control-with-icon-after,
+	form.custom .nine.columns .control-with-icon-after,
+	form.custom .ten.columns .control-with-icon-after,
+	form.custom .eleven.columns .control-with-icon-after,
+	form.custom .twelve.columns .control-with-icon-after {
+		color: green;
+		width: 90% !important;
+	}
 }
 
 form.custom div.custom.dropdown{
@@ -377,12 +500,7 @@ form.custom div.custom.dropdown ul li.selected{
 }
 
 form.custom div.custom.dropdown ul li:hover{
-<<<<<<< HEAD
    	color:#404040;
-
-=======
-	color:#808080;
->>>>>>> c2e60dcc30140635f5968bc8d65cd1675b2d6719
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
@@ -3013,17 +3131,17 @@ label.inline {
 }
 
 .icon-after-field.custom {
-	top: 8px;
+	margin-top: 8px;
 }
 
 .icon-after-field.input {
 	margin-left: 6px;
-	top: 8px;
+	margin-top: 8px;
 }
 
 .icon-after-field.text {
 	margin-left: 6px;
-	top: 2px;
+	margin-top: 2px;
 }
 
 a.icon-after-field {
