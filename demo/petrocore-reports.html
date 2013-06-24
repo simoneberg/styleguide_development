@@ -93,6 +93,12 @@
 			    $('.notifications-area').css('padding','10px 0 10px 0');
 			}										
 		});
+
+		$(".action_buttons").click(function () {
+			$(this).next().trigger('click');		
+		});
+
+
 			
 	});
 			
@@ -428,18 +434,19 @@
                 <td>2 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp1" href="#">Actions</a>  
-				  <span></span>    
+				<a name="action-button1"></a>
+				<div href="#action-button1" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+				  <span></span>  
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>                 
-                
+
                 </td>
               </tr>
               
@@ -449,14 +456,15 @@
                 <td>4 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp2" href="#">Actions</a>  
+				<a name="action-button2"></a>
+				<div href="#action-button2" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp2" class="action_buttons" href="#action-button2">Actions</a>   
 				  <span></span>    
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -470,14 +478,15 @@
                 <td>15 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp3" href="#">Actions</a>  
+				<a name="action-button3"></a>
+				<div href="#action-button3" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp3" class="action_buttons" href="#action-button3">Actions</a>   
 				  <span></span>    
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -491,14 +500,15 @@
                 <td>9 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp4" href="#">Actions</a>  
-				  <span></span>    
+				<a name="action-button4"></a>
+				<div href="#action-button4" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp4" class="action_buttons" href="#action-button4">Actions</a> 
+				  <span></span>                     
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -512,14 +522,15 @@
                 <td>1 Report</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp5" href="#">Actions</a>  
-				  <span></span>    
+				<a name="action-button5"></a>
+				<div href="#action-button5" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp5" class="action_buttons" href="#action-button5">Actions</a>
+  				  <span></span>     
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -534,14 +545,15 @@
                 <td>3 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp6" href="#">Actions</a>  
+				<a name="action-button6"></a>
+				<div href="#action-button6" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp6" class="action_buttons" href="#action-button6">Actions</a>  
 				  <span></span>    
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -555,14 +567,15 @@
                 <td>6 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp7" href="#">Actions</a>  
+                <a name="action-button7"></a>
+				<div href="#action-button7" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp7" class="action_buttons" href="#action-button7">Actions</a>  
 				  <span></span>    
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             
@@ -576,14 +589,15 @@
                 <td>9 Reports</td>
                 <td>
 
-				<div href="#" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp8" href="#">Actions</a>  
+                <a name="action-button8"></a>
+				<div href="#action-button8" class="button dropdown split petrocore-actions">  
+				  <a id="report-temp8" class="action_buttons" href="#action-button8">Actions</a>  
 				  <span></span>    
 				  <ul>  
 				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share</a></li>
+				    <li><a href="#">Share Report Template</a></li>
 				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">History</a></li>    
+				    <li><a href="#">View History</a></li>    
 				    <li><a href="#">Delete</a></li>    
 				  </ul>  
 				</div>             

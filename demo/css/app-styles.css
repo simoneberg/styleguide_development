@@ -2919,7 +2919,7 @@ fieldset {
 	-ms-border-radius: 0px;
 	-o-border-radius: 0px;
 	border-radius: 0px;
-	margin: 10px 0;
+	margin: 10px 0 30px 0px;
 	border-top: 1px solid #e1e1e1;
 	border-right: none;
 	border-left: none;
@@ -2931,10 +2931,9 @@ fieldset {
 fieldset legend {
 	font-weight: bold;
 	background: #fff;
-	padding: 0 0px;
 	margin: 0;
-	margin-left: 0px;
-	padding-right: 12px;
+	padding: 0px 12px 0px 0px;;	
+	margin-top: 0px;
 }
 
 .form-container {
@@ -3749,6 +3748,7 @@ form.custom.search-type div.custom.dropdown{
 	margin-bottom:9px;
 	margin-top:-2px;	
 	border:solid 1px transparent;
+	padding:0px;
 }
 
 form.custom.search-type div.custom.dropdown ul{
@@ -4110,6 +4110,7 @@ form.custom.search-type div.custom.dropdown ul li.selected:hover{
 	padding: 0;
 	margin: 0;
 	position: relative;
+	width:182px;
 }
 
 .button.dropdown.split.petrocore-actions:hover,
@@ -4260,4 +4261,21 @@ form.custom span.custom.radio.checked:before{
 form.custom span.custom.checkbox.checked:before{
 	content:"\00d7";
 	color:#222;
+}
+
+
+
+
+
+
+.button.large{font-size:17px;padding:15px 30px 16px}.button.medium{font-size:14px}.button.small{font-size:11px;padding:7px 14px 8px}.button.tiny{font-size:10px;padding:5px 10px 6px}.button.expand{width:100%;text-align:center}
+
+
+.adjust-left {
+	padding:0px 10px 0px 0px;
+	margin-left: 0px;
+}
+
+.classchecked {
+	checked:checked;
 }
