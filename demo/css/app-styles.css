@@ -4140,6 +4140,7 @@ form.custom.search-type div.custom.dropdown ul li.selected:hover{
 	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;	
+									width:auto;
 }
 
 .button.dropdown.split.petrocore-actions > span {
@@ -4198,7 +4199,7 @@ form.custom.search-type div.custom.dropdown ul li.selected:hover{
 	margin: 0;
 	padding: 0;
 	border: 1px solid #8b8b8b;
-	border-top: none;
+/*	border-top: none; */
 	min-width: 118px;	
 	z-index: 40;
 }	
