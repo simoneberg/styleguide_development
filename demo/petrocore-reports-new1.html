@@ -92,69 +92,7 @@
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
 			}										
-		});
-// -----------------------------------------------------------
-	
-		$('#checkbox5 :checkbox').click(function(){		
-			$('#checkbox5 :checkbox').prev().toggleClass('classchecked');	
-			$('#checkbox5 :checkbox').prev().css('background','#c0c2c1');
-		});
-
-		$('input[name="namecheckbox5"]').click(function(){
-			$('input[name="namecheckbox5"]').prev().attr('checked', true);	
-			$('input[name="namecheckbox5"]').prev().toggleClass('classchecked');	
-			$('input[name="namecheckbox5"]').prev().css('background','#c0c2c1');			
-		});
-
-
-//			$('#checkbox5 :checkbox').click(function(){
-//								alert ($(this).parent().remove());
-//    			var inputname = $('#checkbox5 :checkbox').attr("name");
-
-//				$(this).attr('checked', true);	
-//				$(this).ofc("add", options);
-//				$(this).css('border','solid 1px red');	
-//			});
-	
-	
-//        function() {
- //           $('input[name="namecheckbox555"]').click(function() {
-	//			$(this).attr('checked', true);	
-		//		$('input[name="namecheckbox5"]').css('border','solid 1px red');	
-
-											
-				
-//              $("#checkbox5 :checkbox").attr('checked', $(this).attr('checked'));	
-//				$("#checkbox5 :checkbox").attr("checked", "checked");				
-//				$('input[name="namecheckbox5"]').css('border','solid 1px red');				
-//				$('#checkbox5').parent().css('border','2px solid red');				
-    //    });
-		
-//		}
-	
-				
-				
-								
-//				$('input[name="c2all"]').click(function() {
-//                	$("#column2 :checkbox").attr('checked', $(this).attr('checked'));
-//        		});
-		
-		
-//		$('li.third-item').prev().css('background-color', 'red');
-//       form.custom span.custom.checkbox
-	
-//	<label for="checkbox5">
-//       	<div><input type="checkbox" name="checkbox5" checked id="checkbox5">Generate sections for each Group</div>
-//    </label>
-	
-
-//        function() {
-//            $('input[name="checkbox5"]').click(function() {
-//                $("#checkbox5 :checkbox").attr('checked', $(this).attr('checked')     );	
-//        });	
-//		}	
-
-
+		});				  
 			
 	});
 			
@@ -515,18 +453,12 @@
             <div class="checkbox-group">
             
               <span class="infomation-text">Display:</span>
-
-
-
-
             
               <div class="row">
                 <div class="form-group six mobile-four columns">
                   <label for="checkbox5">
-			       	<div><input type="checkbox" name="namecheckbox5" checked id="checkbox5">Generate sections for each Group</div>                    
-                  </label>
-                 
-                  
+			       	<div><input type="checkbox" checked id="checkbox5">Generate sections for each Group</div>                    
+                  </label>                 
                   
                 </div>
               </div>
@@ -664,9 +596,11 @@
           </div>
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
-              <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
-              <span style="float:left; margin-top:8px;">day(s)</span>
+<!--          <span class="add-small-space-right" style="float:left; margin-top:8px; margin-right:8px;">Every:</span>   -->
+              <span class="add-small-margin left">Every:</span>
+<!--          <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>  -->
+              <input class="add-small-margin left" type="text" placeholder="" value="7" style="width:100px;"/>
+              <span class="add-small-margin add-small-margin-left left">day(s)</span>
             </div>
           </div>
           <!-- RECURRING -->
@@ -710,10 +644,10 @@
       </form>
 
 <div class="row">
-    <div style="display:inline-block; padding-right:20px;">
+    <div class="same-line add-medium-space-right">
     	<a class="primary radius button" href="petrocore-reports-new2.html">Next</a>
     </div>
-    <div style="display:inline-block;">
+    <div class="same-line">
       <a class="" href="#">Cancel</a>
     </div>
 </div>

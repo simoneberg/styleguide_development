@@ -4263,19 +4263,27 @@ form.custom span.custom.checkbox.checked:before{
 	color:#222;
 }
 
-
-
-
-
-
-.button.large{font-size:17px;padding:15px 30px 16px}.button.medium{font-size:14px}.button.small{font-size:11px;padding:7px 14px 8px}.button.tiny{font-size:10px;padding:5px 10px 6px}.button.expand{width:100%;text-align:center}
-
-
 .adjust-left {
 	padding:0px 10px 0px 0px;
 	margin-left: 0px;
 }
 
-.classchecked {
-	checked:checked;
+.add-small-space-right {
+	padding-right:10px;
+}
+
+.add-medium-space-right {
+	padding-right:20px;
+}
+
+.add-small-margin {
+	margin: 10px 10px 10px 0px;
+}
+
+.add-small-margin-left {
+	margin-left: 10px;
+}
+
+.same-line {
+	display:inline-block;
 }
