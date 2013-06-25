@@ -92,7 +92,7 @@
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
 			}										
-		});
+		});				  
 			
 	});
 			
@@ -351,16 +351,23 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <h4>New Report Template</h4><div class="save-template-btn"><a class="primary radius button" href="petrocore-reports.html">Save Template</a></div>
+        <h4>New Report Template</h4>
         <hr>
         <div id="progress-indicator">
 
           <div class="row">
+          
             <div class="three columns active-step" id="step1">
               <div class="step-number active-step-number"><p class="highlight-step">1</p></div>
               <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-              <div class="step-completion"><div class="circle circle-active"><!--<div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div>--></div></div>
+              
+              <div class="step-completion">
+              	<div class="circle">
+                	<div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div>
+                </div>
+              </div>
             </div>
+            
 
             <div class="three columns" id="step2">
               <a href="petrocore-reports-new2.html">
@@ -382,35 +389,42 @@
         <br>
         <!--***** FORM *****-->
         <!--***** GENERAL INFORMATION *****-->
-        <form class="custom">
+        <form class="custom search-type">
           <fieldset>
             <legend>General Information</legend>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="">Name</label>
+                <label class="infomation-text">Name: </label>
                 <input type="text" placeholder="" value="Template Name"/>
               </div>
             </div>
             
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Creator</label>
+                <label class="inline-label">Creator: </label>
                 <div class="form-text-display-field">Bowen, Jenny (JBNX)</div>
               </div>
             </div>
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Owner</label>
+                <label class="inline-label">Owner: </label>
                 <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-after-field text" href="#">&#xf08e;</a></div>
               </div>
             </div>
           </fieldset> <!-- GENERAL INFORMATION -->
 
+
+
+
+              
+                        
+          
           <!--***** SELECT REPORT TYPE *****-->
           <fieldset>
             <legend>Select Report Type</legend>
-            <div class="form-group six mobile-four columns">
+            
+            <div class="form-group six mobile-four columns adjust-left">
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>Gap Analysis</option>
                 <option>Gap Analysis 2</option>
@@ -433,43 +447,59 @@
 
           <!--***** OPTIONS *****-->
           <fieldset>
+          
             <legend>Options</legend>
+            
             <div class="checkbox-group">
+            
+              <span class="infomation-text">Display:</span>
+            
               <div class="row">
                 <div class="form-group six mobile-four columns">
-                  <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
+                  <label for="checkbox5">
+			       	<div><input type="checkbox" checked id="checkbox5">Generate sections for each Group</div>                    
+                  </label>                 
+                  
                 </div>
               </div>
-              <div class="row">
-                <div class="form-group eight mobile-four columns">
-                 <span class="infomation-text">Reporting on more groups than allowed. Please select 25 or less</span>
+
+            
+              <div class="row">             
+              <div class="form-group eight mobile-four columns">
+                 <span class="infomation-text bold-it">Generating a report with sections for each group is limited to 25 groups. This limit is enforced when selecting groups.</span>
                </div>
              </div>
+            
              <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
+                <label for="checkbox6"><input type="checkbox" id="checkbox6">Generate sections for each Person</label>
               </div>
             </div>
-            <div class="row">
-              <div class="form-group eight mobile-four columns">
-                <span class="information-text">Reporting on more groups than allowed. Please select 25 or less</span>
+            
+              <div class="row">
+                <div class="form-group eight mobile-four columns">
+                 <span class="infomation-text bold-it">Generating a report with sections for each group is limited to 25 groups. This limit is enforced when selecting groups.</span>
               </div>
             </div>
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
-              </div>
-            </div>
+            
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
+                <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7">Generate sections for each Position</label>
               </div>
             </div>
+            
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
+                <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8">Show only high importance Skill Descriptions</label>
               </div>
             </div>
+            
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="checkbox9"><input type="checkbox" id="checkbox9">Grayscale</label>
+              </div>
+            </div>
+            
           <!--****** DATE CHUNK ******-->
 
           <!--****** TIME CHUNK ******-->
@@ -483,12 +513,12 @@
           <div class="radio-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio1"><input name="radio1" type="radio" id="radio1"> Enable Scheduling</label>
+                <label for="radio1"><input name="radio1" type="radio" id="radio1" value="Enable Scheduling">Enable Scheduling</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio2"><input name="radio1" type="radio" id="radio2"> Disable Scheduling</label>
+                <label for="radio2"><input name="radio1" type="radio" id="radio2" value=" Scheduling" checked >Disable Scheduling</label>
               </div>
             </div>
           </div>
@@ -497,19 +527,19 @@
           <!--***** DATE *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label>Start Date</label>
+              <label><span class="infomation-text bold-it">Start Date:</span></label>
               <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
           </div>
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label class="">End Date</label>
+              <label class=""><span class="infomation-text bold-it">End Date:</span></label>
               <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
             </div>
           </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="plain with-above" for="checkbox10"><input type="checkbox"> No end date</label>
+                <label class="plain with-above" for="checkbox10"><input type="checkbox">No end date</label>
               </div>
           </div>
           <!-- DATE -->
@@ -517,7 +547,9 @@
           <!--***** TIME *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label for="customDropdown">Time</label>
+              <label class=""><span class="infomation-text bold-it">Time:</span></label>
+			  <span class="infomation-text">Run at:</span>
+
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>12:00am</option>
                 <option>1:00 am</option>
@@ -542,31 +574,33 @@
           <!--***** RECURRING *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label>Recurring</label>
+              <label>Recurring:</label>
             </div>
           </div>
           <div class="radio-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3"> Daily</label>
+                <label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3">Daily</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio4"><input name="radio2" type="radio" id="radio4"> Weekly</label>
+                <label for="radio4"><input name="radio2" type="radio" id="radio4">Weekly</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio5"><input name="radio2" type="radio" id="radio5"> Monthly</label>
+                <label for="radio5"><input name="radio2" type="radio" id="radio5">Monthly</label>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <span style="float:left; margin-top:8px; margin-right:8px;">Every:</span>
-              <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>
-              <span style="float:left; margin-top:8px;">day(s)</span>
+<!--          <span class="add-small-space-right" style="float:left; margin-top:8px; margin-right:8px;">Every:</span>   -->
+              <span class="add-small-margin left">Every:</span>
+<!--          <input type="text" placeholder="" value="7" class="" style="float:left; width:100px; margin-right:8px;"/>  -->
+              <input class="add-small-margin left" type="text" placeholder="" value="7" style="width:100px;"/>
+              <span class="add-small-margin add-small-margin-left left">day(s)</span>
             </div>
           </div>
           <!-- RECURRING -->
@@ -574,31 +608,27 @@
           <!--***** NOTIFICATIONS *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label>Notifications</label>
+              <label>Notifications:</label>
             </div>
           </div>
           <div class="checkbox-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+                <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11">Bowen, Jenny (JBNX)</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
+                <label for="checkbox12"><input type="checkbox" id="checkbox12 ">Email</label>
               </div>
             </div>
           </div>
+
           <div class="row">
-            <div class="form-group six mobile-four columns">
-              <img src="images/add-names.png" />
-            </div>
+              <img src="images/add-names.png" style="float:left; padding:20px 15px 20px 0px;" />
+              <img src="images/recipients.png" style="float:left; padding:20px 15px 20px 0px;" />
           </div>
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <img src="images/recipients.png" />
-            </div>
-          </div>
+          
           <div class="row">
             <div class="form-group six mobile-four columns">
               <p>Within the notification email include:</p>
@@ -606,14 +636,21 @@
           </div>
           <div class="row with-above">
             <div class="form-group six mobile-four columns">
-              <label class="plain with-above-large" for="checkbox13"><input type="checkbox"> A link to the report</label>
+              <label class="plain with-above-large" for="checkbox13"><input type="checkbox">A link to the report</label>
             </div>
           </div>
           <!-- NOTIFICATIONS -->
         </fieldset> <!-- SCHEDULE -->
       </form>
 
-      <a class="primary radius button" href="petrocore-reports-new2.html">Next</a>
+<div class="row">
+    <div class="same-line add-medium-space-right">
+    	<a class="primary radius button" href="petrocore-reports-new2.html">Next</a>
+    </div>
+    <div class="same-line">
+      <a class="" href="#">Cancel</a>
+    </div>
+</div>
 
 
     </div><!--Close Content Container-->
