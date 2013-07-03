@@ -32,11 +32,9 @@
   
   <script src="../javascripts/modernizr.foundation.js"></script>  
 
-<!--  <script src="/js/jquery-ui-1.10.1.custom.js"></script>  -->
+ <script src="js/jquery-ui.js"></script>
 
-   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
-  
-  
+<!--    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>   -->
       
   <script type="text/javascript">
   
@@ -103,19 +101,38 @@
   
 
 
- $('.participant').draggable( { containment: 'document', cursor: 'pointer', revert: 'invalid', helper: 'clone' } );
+ $('.participant').draggable( { containment: 'document', cursor: 'pointer', opacity: 1.00, revert: 'invalid', helper: 'clone' } );
+
+ $('.participant').bind("drag", function(event, ui) {
+    ui.helper.css('background-color', '#e6edf5');
+    ui.helper.css('border', 'solid 1px #8b8b8b');
+    ui.helper.css('z-index', '10000');
+});
+
+
+
+
+
 
  var stockArea = $('#relationships').droppable( { tolerance: 'pointer', accept: '.participant',
   
         drop: function (event, ui) {
           var target = $('#relationships');
 //          $(ui.draggable).appendTo(target).remove();
+//          $(ui.sortable.helper).css('border','1px solid red');
+
           (target).append($(ui.draggable));		
         }
     });
 
 			
 });
+
+
+	
+	
+
+
 			
   </script>
 
