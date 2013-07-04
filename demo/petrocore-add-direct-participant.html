@@ -98,40 +98,52 @@
 			}										
 		});
 
-  
 
+ $('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
 
- $('.participant').draggable( { containment: 'document', cursor: 'pointer', opacity: 1.00, revert: 'invalid', helper: 'clone' } );
-
- $('.participant').bind("drag", function(event, ui) {
+ $('.participant').bind("drag", function(event, ui) {		 
     ui.helper.css('background-color', '#e6edf5');
     ui.helper.css('border', 'solid 1px #8b8b8b');
-    ui.helper.css('z-index', '10000');
+//    ui.helper.css('z-index', '10000');
 });
-
-
-
-
 
 
  var stockArea = $('#relationships').droppable( { tolerance: 'pointer', accept: '.participant',
-  
+
         drop: function (event, ui) {
           var target = $('#relationships');
 //          $(ui.draggable).appendTo(target).remove();
-//          $(ui.sortable.helper).css('border','1px solid red');
 
-          (target).append($(ui.draggable));		
+          (target).append($(ui.draggable));	
+//		  $(ui.draggable).addClass('redborder');  GOOD ONE
+// 		  $(ui.draggable).css('border','1px solid red');   GOOD ONE
+//		  $(ui.draggable).find('span').css('background-color', 'red');	  GOOD ONE
+//		  $(ui.draggable).find('.sr-assigned').css('display', 'none');  BEST
+		  $(ui.draggable).addClass('direct-participant');
+//		  alert($(ui.draggable).find('.icon-').text());
+		  $(ui.draggable).find('.icon-').text("✖");
+		  $(ui.draggable).find('.icon-').addClass('add_x');
         }
     });
 
+$('.participant .add_plus').click (function() {
+	var target = $('#relationships');
+//	(target).append($(this).parent());
+//	(target).append($(this).parent().addClass('direct-participant'));
+	$(this).parent().find('.icon-').text("✖");
+	$(this).parent().find('.icon-').addClass('add_x');	
+//	(target).append($(this).parent().addClass('direct-participant','add_x'));
+	(target).append($(this).parent().addClass('direct-participant'));
+})
+
+$('.direct-participant .add_x').click (function() {
+			$(this).parent().remove();
+})
+
+
+
 			
 });
-
-
-	
-	
-
 
 			
   </script>
