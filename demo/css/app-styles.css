@@ -4442,6 +4442,7 @@ form.custom span.custom.checkbox.checked:before{
 	border-top: 1px solid #cfcfcf;
 }
 
+/*
 .search-results-relationships {
 	height: auto;	
 	max-height: 500px;
@@ -4450,6 +4451,7 @@ form.custom span.custom.checkbox.checked:before{
 	overflow-y:scroll;
 	clear:both;
 }
+*/
 
 .search-results-relationships h5 {
 	font-size: 15px;
@@ -4545,48 +4547,49 @@ form.custom span.custom.checkbox.checked:before{
 .direct-participant .sr-icon-plus,
 .direct-participant .sr-icon-x {
 	margin:0px;	
-	float:right; 	
+	float:right;
 }
 
 .participant .sr-icon-plus:after {
-	display:inline-block;	
 	content: "\f067";
 	font-family: FontAwesome;
 	text-decoration: none;
-	position:relative;
+	position:relative;	
 	right: 10px;
 	top: 13px;
-	display:inline-block;
+	display:block;
 }
 
 .participant .sr-icon-x:after {
-	display:none;
 	content: "\f00d";
 	font-family: FontAwesome;
 	text-decoration: none;
+	position:relative;		
 	top: 0px;
+	display:none;
 }
 
 .participant .sr-assigned {
 	display:inline-block;	
 }
 
-.direct-participant .sr-icon-plus:after {
-	display:none;	
+.direct-participant .sr-icon-plus:after {	
 	content: "\f067";
 	font-family: FontAwesome;
 	text-decoration: none;
 	position:relative;
 	right: 10px;
 	top: 13px;
+	display:none;
 }
 
 .direct-participant .sr-icon-x:after {
-	display:inline-block;	
 	content: "\f00d";
 	font-family: FontAwesome;
 	text-decoration: none;
+	position:relative;		
 	top: 0px;
+	display:block;	
 }
 
 .direct-participant .sr-assigned {
@@ -4594,12 +4597,31 @@ form.custom span.custom.checkbox.checked:before{
 }
 
 
-.participant a.sr-icon-plus:after {
+.participant a.sr-icon-plus:after,
+.participant a.sr-icon-plus:after,
+.participant a.sr-icon-plus:after,
+
+.participant a.sr-icon-x:after,
+.participant a.sr-icon-x:after,
+.participant a.sr-icon-x:after,
+
+.direct-participant a.sr-icon-x:after,
+.direct-participant a.sr-icon-x:after,
+.direct-participant a.sr-icon-x:after
+ {
 	color: #858585;
 }
 
 .participant a.sr-icon-plus:hover:after,
 .participant a.sr-icon-plus:focus:after,
-.participant a.sr-icon-plus:active:after {
-	color: #0169a0
+.participant a.sr-icon-plus:active:after,
+
+.participant a.sr-icon-x:hover:after,
+.participant a.sr-icon-x:focus:after,
+.participant a.sr-icon-x:active:after,
+
+.direct-participant a.sr-icon-x:hover:after,
+.direct-participant a.sr-icon-x:focus:after,
+.direct-participant a.sr-icon-x:active:after {
+	color: #0169a0;
 }
