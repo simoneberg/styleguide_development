@@ -177,7 +177,7 @@
                 
 			<form class="custom search-type">                  
 				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" style="display:none;" id="customDropdown">
+				<select class="expand" class="custom-dropdown" id="customDropdown">
 					<option SELECTED>Person</option>
 					<option>Group</option>
 					<option>Position</option>                            
@@ -396,7 +396,7 @@
             <div class="row">
               <div class="form-group six mobile-four columns">
                 <label>Owner</label>
-                <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-after-field text" href="#">&#xf08e;</a></div>
+                <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-trailing-control text" href="#">&#xf08e;</a></div>
               </div>
             </div>
           </fieldset> <!-- GENERAL INFORMATION -->
@@ -411,7 +411,7 @@
                 <option>Gap Analysis 2</option>
                 <option>Gap Analysis 3</option>
               </select>
-              <div class="custom dropdown expand control-with-icon-after">
+              <div class="custom dropdown expand control-with-trailing-icon">
                 <a href="#" class="current">
                   Gap Analysis
                 </a>
@@ -423,7 +423,7 @@
                 </ul>
               </div>
             </div>
-            <a class="icon-after-field custom" href="#">&#xf05a;</a>
+            <a class="icon-trailing-control custom" href="#">&#xf05a;</a>
         </fieldset> <!-- SELECT REPORT TYPE -->
 
           <!--***** OPTIONS *****-->
@@ -432,7 +432,7 @@
             <div class="checkbox-group">
               <div class="row">
                 <div class="form-group six mobile-four columns">
-                  <label for="checkbox5"><input type="checkbox" CHECKED id="checkbox5"> Generate sections for each Group</label>
+                  <label for="checkbox5"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox5"> Generate sections for each Group</label>
                 </div>
               </div>
               <div class="row">
@@ -442,7 +442,7 @@
              </div>
              <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox6"><input type="checkbox" id="checkbox6"> Generate sections for each Person</label>
+                <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Generate sections for each Person</label>
               </div>
             </div>
             <div class="row">
@@ -452,17 +452,17 @@
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox7"><input type="checkbox" CHECKED id="checkbox7"> Generate sections for each Position</label>
+                <label for="checkbox7"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox7"> Generate sections for each Position</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox8"><input type="checkbox" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
+                <label for="checkbox8"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox8"> Show only high importance Skill Descriptions</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox9"><input type="checkbox" id="checkbox9"> Grayscale</label>
+                <label for="checkbox9"><input type="checkbox" data-customforms="disabled" id="checkbox9"> Grayscale</label>
               </div>
             </div>
           </div>
@@ -475,12 +475,12 @@
           <div class="radio-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio1"><input name="radio1" type="radio" id="radio1"> Enable Scheduling</label>
+                <label for="radio1"><input name="radio1" type="radio" data-customforms="disabled" id="radio1"> Enable Scheduling</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio2"><input name="radio1" type="radio" id="radio2"> Disable Scheduling</label>
+                <label for="radio2"><input name="radio1" type="radio" data-customforms="disabled" id="radio2"> Disable Scheduling</label>
               </div>
             </div>
           </div>
@@ -490,18 +490,18 @@
           <div class="row">
             <div class="form-group six mobile-four columns">
               <label>Start Date</label>
-              <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2013"/><a class="icon-after-field input" href"#">&#xf073;</a>
+              <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
             </div>
           </div>
           <div class="row">
             <div class="form-group six mobile-four columns">
               <label class="">End Date</label>
-              <input class="control-with-icon-after" type="text" placeholder="" value="03/28/2014"/><a class="icon-after-field input" href"#">&#xf073;</a>
+              <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2014"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
             </div>
           </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="plain with-above" for="checkbox10"><input type="checkbox"> No end date</label>
+                <label class="plain with-above" for="checkbox10"><input type="checkbox" data-customforms="disabled"> No end date</label>
               </div>
           </div>
           <!-- DATE -->
@@ -540,17 +540,17 @@
           <div class="radio-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio3"><input name="radio2" CHECKED type="radio" id="radio3"> Daily</label>
+                <label for="radio3"><input name="radio2" CHECKED type="radio" data-customforms="disabled" id="radio3"> Daily</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio4"><input name="radio2" type="radio" id="radio4"> Weekly</label>
+                <label for="radio4"><input name="radio2" type="radio" data-customforms="disabled" id="radio4"> Weekly</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="radio5"><input name="radio2" type="radio" id="radio5"> Monthly</label>
+                <label for="radio5"><input name="radio2" type="radio" data-customforms="disabled" id="radio5"> Monthly</label>
               </div>
             </div>
           </div>
@@ -572,12 +572,12 @@
           <div class="checkbox-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox11"><input type="checkbox" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+                <label for="checkbox11"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox12"><input type="checkbox" id="checkbox12 "> Email</label>
+                <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12 "> Email</label>
               </div>
             </div>
           </div>
@@ -598,7 +598,7 @@
           </div>
           <div class="row with-above">
             <div class="form-group six mobile-four columns">
-              <label class="plain with-above-large" for="checkbox13"><input type="checkbox"> A link to the report</label>
+              <label class="plain with-above-large" for="checkbox13"><input type="checkbox" data-customforms="disabled"> A link to the report</label>
             </div>
           </div>
           <!-- NOTIFICATIONS -->

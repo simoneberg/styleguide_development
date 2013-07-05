@@ -178,7 +178,7 @@
                 
 			<form class="custom search-type">                  
 				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" style="display:none;" id="customDropdown">
+				<select class="expand" class="custom-dropdown" id="customDropdown">
 					<option SELECTED>Person</option>
 					<option>Group</option>
 					<option>Position</option>                            
@@ -396,12 +396,12 @@
                     <p class="options-description"><b>Include</b></p>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox1"><input type="checkbox" CHECKED id="checkbox1"> Yourself</label>
+                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox1"> Yourself</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox12"><input type="checkbox" id="checkbox12"> Directly assigned to me</label>
+                        <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"> Directly assigned to me</label>
                       </div>
                     </div>
                   </div>
@@ -411,22 +411,22 @@
                     <p class="options-description"><b>Exclude</b></p>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox3"><input type="checkbox" id="checkbox3"> Supervisors</label>
+                        <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"> Supervisors</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox4"><input type="checkbox" CHECKED id="checkbox4"> Mentors</label>
+                        <label for="checkbox4"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox4"> Mentors</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox5"><input type="checkbox" id="checkbox5"> Administrators</label>
+                        <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"> Administrators</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox6"><input type="checkbox" id="checkbox6"> Managers</label>
+                        <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Managers</label>
                       </div>
                     </div>
                   </div>
@@ -471,28 +471,28 @@
                       <div class="radio-group">
                         <div class="row">
                           <div class="form-group">
-                            <label for="radio1"><input name="radioreport" type="radio" id="radio1"><span class="radio"></span> Report on Assigned Position</label>
+                            <label for="radio1"><input name="radioreport" type="radio" data-customforms="disabled" id="radio1"><span class="radio"></span> Report on Assigned Position</label>
                           </div>
                         </div>
                         <div class="row">
                           <div class="form-group">
-                            <label for="radio2"><input name="radioreport" type="radio" CHECKED id="radio2" ><span class="radio"></span> Report on people with the following Position(s) set as:</label>
+                            <label for="radio2"><input name="radioreport" type="radio" data-customforms="disabled" CHECKED id="radio2" ><span class="radio"></span> Report on people with the following Position(s) set as:</label>
                           </div>
                         </div>
                         <div class="radio-group indent">
                           <div class="row">
                             <div class="form-group">
-                              <label for="radio3"><input name="radioposition" type="radio" CHECKED id="radio3"><span class="radio"></span> Assigned Position</label>
+                              <label for="radio3"><input name="radioposition" type="radio" data-customforms="disabled" CHECKED id="radio3"><span class="radio"></span> Assigned Position</label>
                             </div>
                           </div>
                           <div class="row">
                             <div class="form-group">
-                              <label for="radio4"><input name="radioposition" type="radio" id="radio4"><span class="radio"></span> Growth Position</label>
+                              <label for="radio4"><input name="radioposition" type="radio" data-customforms="disabled" id="radio4"><span class="radio"></span> Growth Position</label>
                             </div>
                           </div>
                           <div class="row">
                             <div class="form-group">
-                              <label for="radio5"><input name="radioposition" type="radio" id="radio5"><span class="radio"></span> Assigned or Growth Position</label>
+                              <label for="radio5"><input name="radioposition" type="radio" data-customforms="disabled" id="radio5"><span class="radio"></span> Assigned or Growth Position</label>
                             </div>
                           </div>
                         </div>
@@ -655,8 +655,8 @@
 
 </div>
 <div class="modal-footer">
-  <a class="success radius button right" href="#">OK</a>
-  <a class="secondary radius button right">Cancel</a>
+      <a class="primary radius button left" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
 </div>
 </div>
 
@@ -749,8 +749,8 @@
 
 </div>
 <div class="modal-footer">
-  <a class="success radius button right" href="#">OK</a>
-  <a class="secondary radius button right">Cancel</a>
+  <a class="primary radius button left" href="#">Save</a>
+  <a class="left cancel-link" href="#">Cancel</a>
 </div>
 </div>
 

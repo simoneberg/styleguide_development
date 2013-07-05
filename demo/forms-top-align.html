@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+-->
+
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="../stylesheets/foundation.min.css">
+<link rel="stylesheet" href="../stylesheets/app.css">
+<link rel="stylesheet" href="../stylesheets/foundation-override.css">
+<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+    <![endif]-->
+
+    <script src="../javascripts/modernizr.foundation.js"></script>
+  </head>
+  <body>
+
+    <!-- ***** PETROCORE HEADER *****-->
+
+    <nav class="top-bar">
+      <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+      <div class="logo"></div>
+      <div class="profile-container">
+        <div class="avatar"></div>
+        <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+        <div class="top-nav">
+          <ul>
+            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Role Summary</a></li>
+                <li><a href="#">Account History</a></li>
+                <li><a href="#">Role History</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Deutsch</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Italiano</a></li>
+                <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+            <li class="top-nav-links"><a href="#">Help</a></li>
+            <li><p class="bar">&#124;</p></li>
+            <li class="top-nav-links"><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ***** PETROCORE HEADER *****-->
+
+    <!-- ***** MAIN WRAPPER *****-->
+    <div class="row master-wrapper">
+
+      <!-- ***** LEFT SPLIT CONTAINER *****-->
+      <div class="three columns left-split-container">
+
+        <!-- ***** SEARCH *****-->
+        <div class="search-container">
+          <div class="row collapse search-input">
+            <div class="two mobile-one columns">
+              <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+            </div>
+            <div class="eight mobile-three columns">
+              <input type="text" />
+            </div>
+            <div class="two mobile-one columns">
+              <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
+            </div>
+          </div>
+        </div>
+        <!-- ***** SEARCH *****-->
+
+        <!-- ***** MAIN NAVIGATION *****-->
+        <div class="left-nav-container">
+          <!--This will hold the accordeon navigation-->
+          <ul class="accordion">
+            <li>
+              <div class="title">
+                <h6>Dashboard</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Goals</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines">My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html">Reports</a></h6>
+              </div>
+             <!--
+             <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          -->
+        </li>
+        <li>
+          <div class="title">
+            <h6>Administration</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>Notes</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="no-dropdown">
+          <div class="title">
+            <h6>Tools</h6>
+          </div>
+        <!--<div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>-->
+          </li>
+        </ul>
+      </div>
+      <!-- ***** MAIN NAVIGATION *****-->
+
+    </div>
+    <!-- ***** LEFT SPLIT CONTAINER *****-->
+
+    <!-- ***** RIGHT SPLIT CONTAINER *****-->
+    <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+        <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+            <li><a href="#">Subitem 4</a></li>
+            <li><a href="#">Subitem 5</a></li>
+            <li class="current"><a href="#">Subitem 6</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+        <h4>Form Example</h4>
+        <hr>
+
+        <!-- ***** ACTIVITY INFORMATION FORM *****-->
+        <form class="custom">
+          <fieldset>
+            <legend>Form Fields</legend>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Plain Text</label>
+                <div class="form-text-display-field">Text Displayed</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Plain Text with trailing icon</label>
+                <div class="form-text-display-field">Text Displayed<a class="icon-trailing-control text" href="#">&#xf08e;</a></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Link</label>
+                <div class="form-text-display-field"><a href="#">Link Label</a></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Link with trailing icon</label>
+                <div class="form-text-display-field"><a href="#">Link Label</a><a class="icon-trailing-control text" href="#">&#xf08e;</a></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Entry Field</label>
+                <input type="text" placeholder="This is placehoder text" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Entry with trailing icon</label>
+                <input class="control-with-trailing-icon" type="text" placeholder="" value="Some Editable Text"/><a class="icon-trailing-control input" href"#">&#xF002;</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Password Field</label>
+                <input type="password" placeholder="Text entered in control is not displayed" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Password with trailing icon</label>
+                <input class="control-with-trailing-icon" type="password" placeholder="Text entered in control is not displayed" /><a class="icon-trailing-control input" href="#">&#xf08e;</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Date Display</label>
+                <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Date Display with Watermark</label>
+                <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Area with Minimum height</label>
+                <textarea placeholder="" class="text-area-min-height"> A multi-line text area</textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown" class="custom-dropdown-label">Drop Down</label>
+                <!-- the select tag which is hte default HTML is not visible when 
+                in a custom form and the class custom-dropdown is used. --> 
+                <select class="custom-dropdown" id="customDropdown">
+                  <option SELECTED>Selected list item</option>
+                  <option>List item</option>
+                  <option>another list item</option>
+                  <option>yet another list item</option>
+                </select>
+                <!-- the div with class custom dropdown displays the 
+                dropdown in a Zurb custom form.
+                expand tells Zurb that the dropdown should take up 
+                as much horizontal space as possible. -->
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">
+                    Selected list item
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>list item</li>
+                    <li>another list item</li>
+                    <li>yet another list item</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown" class="custom-dropdown-label">Drop Down with trailing icon</label>
+                <!-- the select tag which is hte default HTML is not visible when 
+                in a custom form and the class custom-dropdown is used. --> 
+                <select class="custom-dropdown" id="customDropdown">
+                  <option SELECTED>Selected list item</option>
+                  <option>List item</option>
+                  <option>another list item</option>
+                  <option>yet another list item</option>
+                </select>
+                <!-- the div with class custom dropdown displays the 
+                dropdown in a Zurb custom form. -->
+                <div class="custom dropdown control-with-trailing-icon">
+                  <a href="#" class="current">
+                    Selected list item
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>list item</li>
+                    <li>another list item</li>
+                    <li>yet another list item</li>
+                  </ul>
+                </div>
+                <a class="icon-trailing-control custom" href="#">&#xf05a;</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Option (Checkbox) Buttons</label>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> First Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Second Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" disabled> Disabled Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> Selected Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Last Option</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Radio Buttons</label>
+              </div>
+            </div>
+            <div class="radio-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> First Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Second Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio3"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio3" checked> Selected Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio4"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio4" disabled> Disabled Choice</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add list control
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add grid control
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add tree control
+              </div>
+            </div>
+
+          </fieldset> <!-- ***** form field examples ***** -->
+
+          <fieldset>
+            <legend>Error States</legend>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Entry Field</label>
+                <input type="text" placeholder="This is placehoder text" class="compass-error" />
+                <small class="compass-error twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>First Entry Field</label>
+                <input type="text" placeholder="This is placehoder text" class="compass-error" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Second Entry Field</label>
+                <input type="text" placeholder="This is placehoder text" class="compass-error" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+            <small class="compass-error twelve">This is the error message - it references two controls. - like a start and end date.</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Entry Field</label>
+                <input type="text" placeholder="This is placehoder text" class="compass-error" />
+                <small class="compass-error twelve">This is a very long error message - it extends the error display downwards. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, tempore, aut, architecto, atque a doloribus porro ad est enim eius molestiae quos laborum nostrum ex!</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Entry with trailing icon</label>
+                <input class="control-with-trailing-icon compass-error" type="text" placeholder="" value="Some Editable Text"/><a class="icon-trailing-control input compass-error" href"#">&#xF002;</a>
+                <small class="compass-error control-with-trailing-icon twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Password Field</label>
+                <input class="compass-error" type="password" placeholder="Text entered in control is not displayed" />
+                <small class="compass-error twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Password with trailing icon</label>
+                <input class="control-with-trailing-icon compass-error" type="password" placeholder="Text entered in control is not displayed" /><a class="icon-trailing-control input" href="#">&#xf08e;</a>
+                <small class="compass-error control-with-trailing-icon twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Date Display</label>
+                <input class="control-with-trailing-icon  compass-error" type="text" placeholder="" value="03/28/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+                <small class="compass-error control-with-trailing-icon twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Date Display with Watermark</label>
+                <input class="control-with-trailing-icon  compass-error" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+                <small class="compass-error control-with-trailing-icon twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Text Area with Minimum height</label>
+                <textarea placeholder="" class="text-area-min-height compass-error"> A multi-line text area</textarea>
+                <small class="compass-error twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown" class="custom-dropdown-label">Drop Down</label>
+                <!-- the select tag which is hte default HTML is not visible when 
+                in a custom form and the class custom-dropdown is used. --> 
+                <select class="custom-dropdown" id="customDropdown">
+                  <option SELECTED>Selected list item</option>
+                  <option>List item</option>
+                  <option>another list item</option>
+                  <option>yet another list item</option>
+                </select>
+                <!-- the div with class custom dropdown displays the 
+                dropdown in a Zurb custom form.
+                expand tells Zurb that the dropdown should take up 
+                as much horizontal space as possible. -->
+                <div class="custom dropdown compass-error expand">
+                  <a href="#" class="current">
+                    Selected list item
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>list item</li>
+                    <li>another list item</li>
+                    <li>yet another list item</li>
+                  </ul>
+                </div>
+                <small class="compass-error custom-dropdown twelve">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown" class="custom-dropdown-label">Drop Down with trailing icon</label>
+                <!-- the select tag which is hte default HTML is not visible when 
+                in a custom form and the class custom-dropdown is used. --> 
+                <select class="custom-dropdown" id="customDropdown">
+                  <option SELECTED>Selected list item</option>
+                  <option>List item</option>
+                  <option>another list item</option>
+                  <option>yet another list item</option>
+                </select>
+                <!-- the div with class custom dropdown displays the 
+                dropdown in a Zurb custom form. -->
+                <div class="custom dropdown compass-error control-with-trailing-icon">
+                  <a href="#" class="current">
+                    Selected list item
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>list item</li>
+                    <li>another list item</li>
+                    <li>yet another list item</li>
+                  </ul>
+                </div>
+                <a class="icon-trailing-control custom" href="#">&#xf05a;</a>
+                <small class="compass-error custom-dropdown control-with-trailing-icon">This is the error message</small>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Option (Checkbox) Buttons</label>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> First Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Second Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" disabled> Disabled Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> Selected Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Last Option</label>
+                </div>
+              </div>
+              <!-- for option and radio buttons 
+              you have to set the width of the error 
+              to match the width of the form -->
+              <small class="compass-error six mobile-four">This is the error message - generic to the entire list</small>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Option (Checkbox) Buttons</label>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label class="compass-error" for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> First Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Second Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" disabled> Disabled Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> Selected Option</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Last Option</label>
+                </div>
+              </div>
+              <!-- for option and radio buttons 
+              you have to set the width of the error 
+              to match the width of the form -->
+              <small class="compass-error six mobile-four">This is the error message - specific to item</small>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Radio Buttons</label>
+              </div>
+            </div>
+            <div class="radio-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> First Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Second Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio3"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio3" checked> Selected Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio4"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio4" disabled> Disabled Choice</label>
+                </div>
+              </div>
+              <!-- for option and radio buttons 
+              you have to set the width of the error 
+              to match the width of the form -->
+              <small class="compass-error six mobile-four">This is the error message - generic to group</small>
+            </div>
+
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Radio Buttons</label>
+              </div>
+            </div>
+            <div class="radio-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> First Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Second Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label class="compass-error" for="radio3"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio3" checked> Selected Choice</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="radio4"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio4" disabled> Disabled Choice</label>
+                </div>
+              </div>
+              <!-- for option and radio buttons 
+              you have to set the width of the error 
+              to match the width of the form -->
+              <small class="compass-error six mobile-four">This is the error message - specific to item</small>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add list control
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add grid control
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                todo: add tree control
+              </div>
+            </div>
+
+          </fieldset> <!-- ***** ERROR STATES *****-->
+        </form>
+
+        <br>
+        <button class="primary radius button" href="petrocore-reports-new2.html">Save</button>
+        <a class=".cancel-link" href="petrocore-reports-new2.html">Cancel</a>
+
+      </div><!--Close Content Container-->
+
+    </div><!-- ***** RIGHT SPLIT CONTAINER *****-->
+
+  </div><!-- ***** MAIN WRAPPER *****-->
+
+  <!-- ***** FOOTER *****-->
+
+  <div class="row">
+    <div class="twelve columns petrocore-footer">
+      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
+  </div>
+  <!-- ***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+</div>
+<!--</div>-->
+<!-- CONTENT AREA -->
+
+<div id="myModal" class="reveal-modal expand">
+  <div class="modal-header">
+    <h5>This is a Pop-up</h5>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div class="popup-content-container">
+    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right" href="#">Cancel</a>
+  </div>
+</div>
+
+<!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="../javascripts/jquery.foundation.forms.js"></script>
+  <script src="../javascripts/jquery.event.move.js"></script>
+  <script src="../javascripts/jquery.event.swipe.js"></script>
+  <script src="../javascripts/jquery.foundation.reveal.js"></script>
+  <script src="../javascripts/jquery.foundation.orbit.js"></script>
+  <script src="../javascripts/jquery.foundation.navigation.js"></script>
+  <script src="../javascripts/jquery.foundation.buttons.js"></script>
+  <script src="../javascripts/jquery.foundation.tabs.js"></script>
+  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="../javascripts/jquery.foundation.accordion.js"></script>
+  <script src="../javascripts/jquery.placeholder.js"></script>
+  <script src="../javascripts/jquery.foundation.alerts.js"></script>
+  <script src="../javascripts/jquery.foundation.topbar.js"></script>
+  <script src="../javascripts/jquery.foundation.joyride.js"></script>
+  <script src="../javascripts/jquery.foundation.clearing.js"></script>
+  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+
+-->
+
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="../javascripts/app.js"></script>
+
+<script>
+$(window).load(function(){
+  $("#featured").orbit();
+});
+</script>
+
+</body>
+</html>
