@@ -4596,15 +4596,12 @@ form.custom span.custom.checkbox.checked:before{
 	display:none;
 }
 
-
 .participant a.sr-icon-plus:after,
 .participant a.sr-icon-plus:after,
 .participant a.sr-icon-plus:after,
-
 .participant a.sr-icon-x:after,
 .participant a.sr-icon-x:after,
 .participant a.sr-icon-x:after,
-
 .direct-participant a.sr-icon-x:after,
 .direct-participant a.sr-icon-x:after,
 .direct-participant a.sr-icon-x:after
@@ -4615,11 +4612,9 @@ form.custom span.custom.checkbox.checked:before{
 .participant a.sr-icon-plus:hover:after,
 .participant a.sr-icon-plus:focus:after,
 .participant a.sr-icon-plus:active:after,
-
 .participant a.sr-icon-x:hover:after,
 .participant a.sr-icon-x:focus:after,
 .participant a.sr-icon-x:active:after,
-
 .direct-participant a.sr-icon-x:hover:after,
 .direct-participant a.sr-icon-x:focus:after,
 .direct-participant a.sr-icon-x:active:after {
