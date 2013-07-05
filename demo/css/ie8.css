@@ -160,3 +160,9 @@ fieldset legend {
 .button.dropdown.split.petrocore-actions > span:active { /* Arrow down button */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */	
 }
+
+.button.silver-button:hover,
+.button.silver-button:focus,
+.button.silver-button:active {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */		
+}
