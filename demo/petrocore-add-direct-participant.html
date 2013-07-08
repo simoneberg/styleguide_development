@@ -59,8 +59,8 @@
 	}	
  
  
-	$(document).ready(function(){
-
+	$(document).ready(function(){	
+		
 		// Notification Popup window
 
 		var notifs = $("#user-notifications").text();
@@ -130,6 +130,7 @@
 		$('#relationships a.icon-.sr-icon-x').click (function() {
 			$(this).parent().remove();
 		})
+
 			
 });
 
@@ -418,18 +419,14 @@
                 <div class="button-group-bar">
                   <!-- Even Button Groups -->
                   <ul class="button-group even three-up">
-                    <li><a href="#" class="button silver-button first">All</a></li>
+                    <li><a href="#" class="button silver-button first active">All</a></li>
                     <li><a href="#" class="button silver-button">Assigned</a></li>
                     <li><a href="#" class="button silver-button last">Unassigned</a></li>
                   </ul>
                 </div>
-                <!-- END /button-group-bar -->
-                
-                
+                <!-- END /button-group-bar -->               
                 
                 <div class="search-results-relationships">
-                
-                
                 
                 <div class="sr-bottom-border">
                   <h5>Available Participants</h5>
@@ -659,11 +656,11 @@
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
   
-    <script>
+<!--    <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
     </script> 
-
+-->
 </body>
 </html>

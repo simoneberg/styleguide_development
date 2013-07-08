@@ -4519,9 +4519,11 @@ form.custom span.custom.checkbox.checked:before{
 	border-radius: 0px 5px 5px 0px;
 }
 
+ 
 .button.silver-button:hover,
 .button.silver-button:focus,
-.button.silver-button:active {
+.button.silver-button:active,
+.button.silver-button.active {
 	background: #d6d6d6; /* Old browsers */		
 	background: -moz-linear-gradient(top,  #ababab 0%, #d6d6d6 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ababab), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */

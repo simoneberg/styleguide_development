@@ -161,8 +161,13 @@ fieldset legend {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */	
 }
 
+.button.silver-button {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
+}
+
 .button.silver-button:hover,
 .button.silver-button:focus,
-.button.silver-button:active {
+.button.silver-button:active,
+.button.silver-button.active {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */		
 }
