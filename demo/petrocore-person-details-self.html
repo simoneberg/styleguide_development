@@ -131,7 +131,7 @@
                 
 			<form class="custom search-type">                  
 				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" class="custom-dropdown" id="customDropdown">
+				<select class="expand" style="display:none;" id="customDropdown">
 					<option selected="selected">Person</option>
 					<option>Group</option>
 					<option>Position</option>                            
@@ -305,13 +305,14 @@
         <br/>
         <!-- tabs to seperate out the groups of data -->
         <dl class="tabs">
-          <dd class="active"><a href="#person-detail-1">Details</a></dd>
-          <dd><a href="#person-detail-2">Profile</a></dd>
-          <dd><a href="#person-detail-3">Group Membership</a></dd>
+          <dd class="active"><a href="#person-detail-1">Personal</a></dd>
+          <dd><a href="#person-detail-2">Professional</a></dd>
+          <dd><a href="#person-detail-3">Profile</a></dd>
+          <dd><a href="#person-detail-4">Group Membership</a></dd>
         </dl>
 
         <ul class="tabs-content">
-          <!-- ***** THIS IS CONTENT FOR TAB 1 [Person Details] ***** -->
+          <!-- ***** THIS IS CONTENT FOR TAB 1 [Personal] ***** -->
           <li class="active" id="person-detail-1Tab">
 
             <!--***** FORM *****-->
@@ -323,41 +324,42 @@
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>User ID</label>
-                    <input type="text" placeholder="" value="12345678901234567890123456789012345678901234567890"/>
+                    <div class="form-text-display-field">PNADAIR</div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>New Password</label>
-                    <input type="text" placeholder="" value="12345678901234567890123456789012345678901234567890"/>
+                    <input type="password" placeholder="Enter new password to change password" value=""/>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>Repeat Password</label>
-                    <input type="text" placeholder="" value="12345678901234567890123456789012345678901234567890"/>
+                    <input type="password" placeholder="leave blank to keep existing password" value=""/>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">Account Status</label>
-                    <select class="custom-dropdown" id="customDropdown">
-                      <option selected="selected">Active</option>
-                      <option>Inactive</option>
-                      <option>Locked</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">Active</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Active</li>
-                        <li>Inactive</li>
-                        <li>Locked</li>
-                      </ul>
-                    </div>
+                    <label>Account Status</label>
+                    <div class="form-text-display-field">Active</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group three mobile-four columns">
+                    <label>Created On</label>
+                    <div class="form-text-display-field">1951-June-18</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Employee Number</label>
+                    <div class="form-text-display-field">0000000000 000001</div>
                   </div>
                 </div>
               </fieldset>
@@ -368,69 +370,170 @@
                 <div class="row">
                   <div class="form-group five mobile-four columns">
                     <label>First Name</label>
-                    <input type="text" placeholder="" value="1234567890123456789012345"/>
+                    <div class="form-text-display-field">Paul</div>
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="form-group three mobile-four columns">
                     <label>Middle Name</label>
-                    <input type="text" placeholder="" value="123456789012345"/>
+                    <div class="form-text-display-field">Neal</div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>Last Name</label>
-                    <input type="text" placeholder="" value="12345678901234567890123456789012345678901234567890"/>
+                    <div class="form-text-display-field">Adair</div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>Email</label>
-                    <input type="text" placeholder="" value="1234567890123456789012345@1234567890.com"/>
+                    <div class="form-text-display-field">red@wildwell.com</div>
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="form-group three mobile-four columns">
                     <label>Phone</label>
-                    <input type="text" placeholder="" value="123456789012345"/>
+                    <div class="form-text-display-field">1-281-784-4700x001</div>
                   </div>
                 </div>
+              </fieldset>
 
+              <fieldset>
+                <legend>Demographics</legend>
                 <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label>Created On</label>
-                    <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+                  <div class="form-group six mobile-four columns">
+                    <label>Date of Birth </label>
+                    <div class="form-text-display-field">1915-June-18</div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
-                    <label>Employee Number</label>
-                    <input type="text" placeholder="" value="1234567890 123456"/>
+                    <label>Discipline </label>
+                    <div class="form-text-display-field">Operations</div>
                   </div>
                 </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Gender </label>
+                    <div class="form-text-display-field">Male</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Nationality </label>
+                    <div class="form-text-display-field">American</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Religion </label>
+                    <div class="form-text-display-field">Not Specified</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Picture:</label>
+                    <div class="form-text-display-field"><img alt="profile picture" height="200px" width="200px" src="images/compass_default_profile_pic.png"/></div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </li>
+
+          <!-- ***** THIS IS CONTENT FOR TAB 1 [Personal] ***** -->
+          <li id="person-detail-2Tab">
+            <form class="custom">
+              <fieldset>
+                <legend>Employment</legend>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>Position</label>
-                    <input type="text" placeholder="" value="1234567890 123 123 1234 12 123456"/>
+                    <div class="form-text-display-field">President</div>
                   </div>
                 </div>
+
                 <div class="row">
                   <div class="form-group six mobile-four columns">
-                    <label>Bio</label>
-                    <textarea placeholder="Bio" rows="4">Proident enim id, pork ground round cillum t-bone ham jerky ad.
-Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiusmod.</textarea>
+                    <!-- <label for"contractor_check_box">Contractor <input class="checkbox" type="checkbox" id="contractor_check_box"></label> -->
+                    <label>Contractor</label>
+                    <div class="form-text-display-field">No</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Grade </label>
+                    <div class="form-text-display-field">value</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Hire Date </label>
+                    <div class="form-text-display-field">1997 March 21</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Years in Industry </label>
+                    <div class="form-text-display-field">since 1976-Sept- 22, 37 years</div>
                   </div>
                 </div>
               </fieldset>
-              <!-- GENERAL INFORMATION -->
 
-              <!--***** SELECT REPORT TYPE *****-->
+              <fieldset>
+                <legend>Education</legend>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Qualification </label>
+                    <div class="form-text-display-field">Degree</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Qualification Type </label>
+                    <div class="form-text-display-field">BSc</div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Geographic</legend>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Location </label>
+                    <div class="form-text-display-field">Houston</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Region </label>
+                    <div class="form-text-display-field">North America</div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Bio</label>
+                  <div class="form-text-display-field">Proident enim id, pork ground round cillum t-bone ham jerky ad. Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiusmod.</div>
+                </div>
+              </div>
+
               <fieldset>
                 <legend>Application Settings</legend>
 
@@ -481,33 +584,31 @@ Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiu
                 <div class="row">
                   <div class="form-group three mobile-four columns">
                     <label for="customDropdown">Display Style</label>
-                    <select class="custom-dropdown" id="customDropdown">
-                      <option selected="selected">Color</option>
-                      <option>Gray Scale</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">Color</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Color</li>
-                        <li>Gray Scale</li>
-                      </ul>
+
+                    <div class="radio-group">
+                      <div class="row">
+                        <div class="form-group six mobile-four columns">
+                          <label for="radio_colour"><input name="radio_group_display_style" checked="checked" type="radio" id="radio_color"> Color</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group six mobile-four columns">
+                          <label for="radio_grey"><input name="radio_group_display_style" type="radio" id="radio_grey"> Grey Scale</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-            </fieldset> <!-- SELECT REPORT TYPE -->
+            </fieldset>
           </form>
-            <!--***** OPTIONS *****-->
-
         </li>
 
-        <!-- ***** THIS IS CONTENT FOR TAB 2 [PersonProfile] ***** -->
-        <li id="person-detail-2Tab">
+        <!-- ***** THIS IS CONTENT FOR TAB 3 [Profile] ***** -->
+        <li id="person-detail-3Tab">
           <form class="custom">
             <fieldset>
-              <legend>Person Profile</legend>
-
+              <legend>Person Profile <a class="icon-" href="#" data-reveal-id="add_person_profile">&#xF067;</a></legend>
                 <div class="row">
                   <div class="form-group three mobile-four columns">
                     <label for="customDropdown">Country</label>
@@ -597,8 +698,8 @@ Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiu
           </form>
         </li>
 
-        <!-- ***** THIS IS CONTENT FOR TAB 3 [Group Membership] ***** -->
-        <li id="person-detail-3Tab">
+        <!-- ***** THIS IS CONTENT FOR TAB 4 [Group Membership] ***** -->
+        <li id="person-detail-4Tab">
           <form class="custom">
           <div class="row tree-container-with-border collapse">
             <img src="../images/step2-tree.jpg">
@@ -607,8 +708,8 @@ Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiu
         </li>
       </ul>
 
-      <button type="button" class="primary radius button">Save</button>
-      <a href="petrocore-reports-new2.html">Cancel</a>
+      <button type="button" class="primary radius button"  onclick="location.href='./petrocore-person-details-self.html'">Save</button>
+      <a href="petrocore-dashboard.html">Cancel</a>
 
       <!-- <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html">Next</a> -->
 
@@ -633,18 +734,253 @@ Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiu
 <!--</div>-->
 <!-- CONTENT AREA -->
 
-<div id="myModal" class="reveal-modal expand">
-  <div class="modal-header">
-    <h5>This is a Pop-up</h5>
-    <a class="close-reveal-modal">&#215;</a>
+<!-- person profile add dialog -->
+<div id="add_person_profile" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container"><h5>Add Person Profile</h5></div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#215;</a></li>
+      </ul>
+    </div>
   </div>
+  
   <div class="popup-content-container">
-    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <form class="custom">
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Item </label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option selected="selected">Available Profile Item</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Available Profile Item</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Value </label>
+          <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
+        </div>
+      </div>
+
+    </form>
   </div>
   <div class="modal-footer">
-    <a class="success radius button right" href="#">OK</a>
-    <a class="secondary radius button right" href="#">Cancel</a>
+
+    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+    <a class="left cancel-link" href="#" data-reveal-id="add_person_profile_demo">Show Examples</a>
+  </div>
+</div>
+
+<!-- person profile input demos -->
+<div id="add_person_profile_demo" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container"><h5>Add Person Profile</h5></div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#215;</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="popup-content-container">
+    <form class="custom">
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Item</label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option selected="selected">Item uses text entry</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Item uses text entry</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Value </label>
+          <input type="text" placeholder="" value=""/>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Item</label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option selected="selected">Item uses dropdown entry</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Item uses dropdown entry</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Enter Value </label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Value for profile item</option>
+            <option>Value for profile item</option>
+            <option>Value for profile item</option>
+            <option selected="selected">Value for profile item</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Value for profile item</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Value for profile item</li>
+              <li>Value for profile item</li>
+              <li>Value for profile item</li>
+              <li>Value for profile item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Item</label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option selected="selected">Value uses Option buttons</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Value uses Option buttons</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Value </label>
+        </div>
+      </div>
+      <div class="checkbox-group">
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="checkbox5"><input type="checkbox" id="checkbox5"> First optional value</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="checkbox5"><input type="checkbox" id="checkbox5"> Second optional value</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="checkbox5"><input type="checkbox" checked id="checkbox5"> Third optional value</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="checkbox5"><input type="checkbox" id="checkbox5"> Fourth optional value</label>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Item</label>
+          <select class="custom-dropdown" id="customDropdown">
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option>Available Profile Item</option>
+            <option selected="selected">Value uses Radio buttons</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">Value uses Radio buttons</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+              <li>Available Profile Item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Select Value </label>
+        </div>
+      </div>
+      <div class="radio-group">
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="radio1"><input name="radio1" type="radio" id="radio1"> Current</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="radio2"><input name="radio1" type="radio" id="radio2"> Pending</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label for="radio3"><input name="radio1" type="radio" id="radio3"> Expired</label>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+
+    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
   </div>
 </div>
 

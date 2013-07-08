@@ -16,6 +16,11 @@
 	margin-bottom: 8px;
 }
 
+.checkbox-group>.row,
+.radio-group>.row {
+	margin-bottom: 1px;
+}
+
 .form-group>label {
 	font-weight: bold;
 }
