@@ -4594,7 +4594,7 @@ form.custom span.custom.checkbox.checked:before{
 .direct-participant a.sr-icon-x:after,
 .direct-participant a.sr-icon-x:after,
 .direct-participant a.sr-icon-x:after {
-	color: #858585;
+	color:#858585;
 }
 
 .participant a.sr-icon-plus:hover:after,
@@ -4606,5 +4606,5 @@ form.custom span.custom.checkbox.checked:before{
 .direct-participant a.sr-icon-x:hover:after,
 .direct-participant a.sr-icon-x:focus:after,
 .direct-participant a.sr-icon-x:active:after {
-	color: #0169a0;
+	color:#0169a0;
 }
