@@ -108,33 +108,42 @@
 			ui.helper.css('background-color', '#e6edf5');
 			ui.helper.css('border', 'solid 1px #8b8b8b');
 		});
-
-		var stockArea = $('#relationships').droppable( { tolerance: 'pointer', accept: '.participant', drop: function (event, ui) {
-        	var target = $('#relationships');
-          	(target).append($(ui.draggable));	
-		  	$(ui.draggable).removeClass('participant');		  
-		  	$(ui.draggable).addClass('direct-participant');
+		
+		$('#list-direct-participants').droppable( { tolerance: 'pointer', accept: '.participant', drop: function (event, ui) {
+        	var target = $('#list-direct-participants');
+        	var source = ui.draggable;
+          	(target).append(source);	
+		  	(source).addClass('direct-participant');			
 			}
 	    });
 
-		$('.participant a.icon-.sr-icon-plus').click (function() {
-			var target = $('#relationships');
-			(target).append($(this).parent().removeClass('participant'));
-			(target).append($(this).parent().addClass('direct-participant'));
+		$('#list-participants').droppable( { tolerance: 'pointer', accept: '.direct-participant', drop: function (event, ui) {
+        	var target = $('#list-participants');
+        	var source = ui.draggable;			
+		  	(source).removeClass('direct-participant');
+		  	(source).addClass('participant');			
+          	(target).append(source);
+			}
+	    });
+				
+		$('.participant a.icon-.sr-icon-plus').on('click', function(){
+			var target = $('#list-direct-participants');
+			var source = $(this).parent();
+			(source).removeClass('participant');
+			(source).addClass('direct-participant');
+			(target).append(source);	
 		})
+		
+		$('.participant a.icon-.sr-icon-x').on('click', function(){
+			var target = $('#list-participants');
+			var source = $(this).parent();	
+			(source).removeClass('direct-participant');
+			(source).addClass('participant');
+			(source).appendTo(target);	
+		});
 
-		$('.participant a.icon-.sr-icon-x').click (function() {
-			$(this).parent().remove();
-		})
+	});
 
-		$('#relationships a.icon-.sr-icon-x').click (function() {
-			$(this).parent().remove();
-		})
-
-			
-});
-
-			
   </script>
 
 </head>
@@ -405,7 +414,7 @@
                 		<div class="row collapse search-input">
                 
                 <div class="ten mobile-three columns">
-                  <input id="initial-search" class="round-left" type="text" placeholder="Search Participants" />
+                  <input id="initial-search" class="round-left" type="text" placeholder="Search Participants" value="David" />
                 </div>
                 
                 <div class="two mobile-one columns">
@@ -426,11 +435,13 @@
                 </div>
                 <!-- END /button-group-bar -->               
                 
-                <div class="search-results-relationships">
-                
-                <div class="sr-bottom-border">
+                <div class="list-participants-title">
                   <h5>Available Participants</h5>
-				</div>
+                </div>
+                
+                <div id="list-participants" class="search-results-relationships">
+                
+
 
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
@@ -438,6 +449,7 @@
 			<div class="sr-name">Meng, David (DMKI)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
 	    </div>
+       
         
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
@@ -450,7 +462,7 @@
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Rooney, David (DRXO)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
 	    </div>    
    
 		<div class="participant sr-bottom-border">
@@ -464,7 +476,7 @@
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Washington, David (DWRI)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
 	    </div>    
         
 		</div>
@@ -475,41 +487,41 @@
             </div>
             <!-- END /six -->
             <div class="six columns">
-                        
-              <div id="relationships" class="list-relationships side-by-side">
 
                 <div class="list-relationships-title">
                   <h5>Assigned as Direct Participants</h5>
-                </div>     
-        
-		<div class="direct-participant sr-bottom-border">
+                </div>
+                        
+              <div id="list-direct-participants" class="list-relationships side-by-side">
+                
+        <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Aranda, David (DAPO)</div>        
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
         </div>
         
-		<div class="direct-participant sr-bottom-border">
+        <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Chung, David (DCKI)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>      
         </div>
         
-		<div class="direct-participant sr-bottom-border">
+        <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Masterson, David (DMSW)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
         </div>
         
-		<div class="direct-participant sr-bottom-border">
+        <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Robertson, David (DBJU)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>        </div>
         
-		<div class="direct-participant sr-bottom-border">
+        <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Slaton, David (DSLS)</div>
@@ -517,25 +529,31 @@
             
                 
                 <!-- END /list-relationships-title -->
-              <!--  <ul class="list-of-relationships">
-                  <li>Aranda, David (DAPO)</li>
-                  <li>Chung, David (DCKI)</li>
-                  <li>Masterson, David (DMSW)</li>
-                  <li>Robertson, David (DBJU)</li>
-                </ul>
-               --> 
+
               </div>
               <!-- END /list-relationships -->
+              
+
+              
             </div>
             <!-- END /six -->
           </div>
           <!-- END /row -->
-          <p>&nbsp;</p>
-          <button class="primary radius button left">Save</button>
-          <a class="cancel-link left" href="#">Cancel</a>
-          <br>
+         </form>
+          
+<div class="row">
+    <div class="same-line add-medium-space-right">
+    	<a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
+    </div>
+    <div class="same-line">
+      <a class="" href="#">Cancel</a>
+    </div>
+</div>
             
-          </form>
+
+
+
+
 
 
       </div><!--Close Content Container-->   
