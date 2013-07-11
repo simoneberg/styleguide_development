@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->  
+  <!--<meta name="viewport" content="width=device-width" />-->  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
@@ -28,14 +28,20 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-  
-  <script src="../javascripts/modernizr.foundation.js"></script>  
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>  
+    
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
 
- <script src="js/jquery-ui.js"></script>
+  <script src="../javascripts/modernizr.foundation.js"></script>    
 
-<!--    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>   -->
-      
+  <!--  <script src="../javascripts/jquery.js"></script>  -->  
+  <script src="js/jquery-1.9.1.js"></script>  
+
+  <!-- <script src="js/jquery-ui.js"></script>  -->
+  <script src="js/jquery-ui-1.9.2.js"></script> 
+    
   <script type="text/javascript">
   
 	function show_hide_advanced(id) {
@@ -146,6 +152,8 @@
 
   </script>
 
+
+
 </head>
 <body>
 
@@ -195,6 +203,8 @@
 </nav>
 <!--***** PETROCORE HEADER *****-->
 
+
+
 <!--***** MAIN WRAPPER *****-->
 <div class="row master-wrapper">
 
@@ -219,14 +229,14 @@
           
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
+      <!--***** SEARCH *****-->     
+              
 	  <div id="advanced_search" class="hide_it">
 	  <!--This is a Advanced Search panel that is hidden by default-->
                   	
 		<p><strong>Advanced Search</strong></p>
                 
-			<form class="custom search-type">                  
+			<form class="custom search-type">                 
 				<label id="search-type-label" for="customDropdown">Search Type:</label>  
 				<select class="expand" style="display:none;" id="customDropdown">
 					<option SELECTED>Person</option>
@@ -398,7 +408,7 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <form class="custom">
+        <form class="custom search-type">
           <h4>Assign Direct Relationship to John Doe</h4>
           <hr>        
 
@@ -535,18 +545,13 @@
             <!-- END /six -->
           </div>
           <!-- END /row -->
+                                                  
          </form>
           
-		<div class="row">
-		    <div class="same-line add-medium-space-right">
-    			<a class="primary radius button" href="#">Save</a>
-		    </div>
-		    <div class="same-line">
-		      <a class="" href="#">Cancel</a>
-		    </div>
-		</div>
-            
-
+		<button type="button" class="primary radius button">Save</button>
+		<a href="#">Cancel</a>
+          
+          
       </div><!--Close Content Container-->   
   </div>
  </div> 
@@ -658,13 +663,8 @@
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
   
   -->
-  
-  <!-- Included JS Files (Compressed) -->
-<!--  <script src="../javascripts/foundation.min.js"></script>  -->
-  
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-  
+
+
 <!--    <script>
     $(window).load(function(){
       $("#featured").orbit();
