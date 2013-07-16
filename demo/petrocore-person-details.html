@@ -27,6 +27,8 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
+  <script src="../javascripts/jquery.js"></script>
+
   <script src="../javascripts/modernizr.foundation.js"></script>
       
   <script type="text/javascript">
@@ -50,53 +52,99 @@
 			advanced_arrow.style.top = '7px';						
 		}
 	}	
-	
+ 
+ 
+	$(document).ready(function(){
+
+		var notifs = $("#user-notifications").text();
+		var notifs_exist = true;
+
+	   	$('#notification_btn').bind('click', function (event) {
+				
+			if (notifs_exist == true) {
+	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+			    $('.notifications-popup').css('top',event.pageY+30);
+				$('.notifications-popup').toggle();	
+				$('#overlay').show();
+				$('#overlay').click(function(){
+						$('.notifications-popup').hide();
+						$('#overlay').hide();							
+				});
+					
+			} else {
+				$('.notifications-popup').hide();
+				$('#overlay').hide();															
+				}
+	    });	
+			
+		$('.notification .anotification').click (function() {
+			$(this).parent().remove();
+			notifs = $("#user-notifications").text();				
+			$("#user-notifications").html(notifs-1);
+				
+			if (notifs == 1) {
+				notifs_exist = false;								
+			    $('.notification-btn').css('background','#c0c2c1');
+			    $('.notification-btn').css('border','1px solid #616161');
+			    $('.notification-btn').css('color','#404040');
+			    $('.notifications-area').html('You have "0" Notifications');
+			    $('.notifications-area').css('text-align','center');
+			    $('.notifications-area').css('padding','10px 0 10px 0');
+			}										
+		});
+			
+	});
+		
   </script>
 
 </head>
 <body>
 
-  <!--***** PETROCORE HEADER *****-->
-  <nav class="top-bar">
-    <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
-    <div class="logo"></div>
-    <div class="profile-container">
-      <div class="avatar"></div>
-      <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
-            <ul class="dropdown user">
-              <li><a href="petrocore-person-details-self.html">Settings</a></li>
-              <li><a href="#">Role Summary</a></li>
-              <li><a href="#">Account History</a></li>
-              <li><a href="#">Role History</a></li>
-            </ul>
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>                                                                     
+              </ul>          
           </li>
           <li><p class="bar">&#124;</p></li>
 
-          <li class="has-dropdown"><a href="#">Language</a>
-            <ul class="dropdown language">
-              <li><a href="#">English</a></li>
-              <li><a href="#">Deutsch</a></li>
-              <li><a href="#">Español</a></li>
-              <li><a href="#">Français</a></li>
-              <li><a href="#">Italiano</a></li>
-              <li><a href="#">Polski</a></li>
-            </ul>
-          </li>
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>                                                                        
+              </ul>
+            </li> 
           <li><p class="bar">&#124;</p></li>
+
 
           <li class="top-nav-links"><a href="#">Help</a></li>
           <li><p class="bar">&#124;</p></li>
           <li class="top-nav-links"><a href="#">Logout</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
-  <!--***** PETROCORE HEADER *****-->
+  </div>
+</nav>
+<!--***** PETROCORE HEADER *****-->
 
   <!--***** MAIN WRAPPER *****-->
   <div class="row master-wrapper">
@@ -131,7 +179,7 @@
                 
 			<form class="custom search-type">                  
 				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" class="custom-dropdown" id="customDropdown">
+				<select class="custom-dropdown expand" id="customDropdown">
 					<option selected="selected">Person</option>
 					<option>Group</option>
 					<option>Position</option>                            
@@ -227,7 +275,7 @@
               </ul>
             </div>
           </li>
-          <li class="active no-dropdown">
+          <li class="no-dropdown">
             <div class="title">
               <h6><a href="petrocore-reports.html">Reports</a></h6>
             </div>
@@ -654,6 +702,43 @@ Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiu
   </div>
 </div>
 
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>                
+                
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+                    
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a> 
+			<hr class="hr-notification">
+	    </div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a> 
+			<hr class="hr-notification">
+		</div>
+                        
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a> 
+		</div>                               
+
+	</div>
+</div>         
+
+  
 <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
