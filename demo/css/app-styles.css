@@ -469,6 +469,7 @@ form.custom div.custom.dropdown{
 form.custom div.custom.dropdown a.current{
    	color:#404040;	
 	border:solid #5b5b5b 1px;
+	overflow:hidden;
 }
 
 form.custom div.custom.dropdown.compass-error a.current{
@@ -476,11 +477,14 @@ form.custom div.custom.dropdown.compass-error a.current{
 }
 
 form.custom div.custom.dropdown a.selector{
-	border:solid #8a8a8a 1px; 
+	border:solid #5b5b5b 1px;
+	background-color: #fff;
 }
 
 form.custom div.custom.dropdown a.selector:after{
-	border-color:#8a8a8a transparent transparent transparent; 
+/*	border-color:#8a8a8a #fff #fff #fff; */
+	border-color:#5b5b5b #fff #fff #fff;	
+	
 }
 
 form.custom div.custom.dropdown ul{
@@ -3243,12 +3247,13 @@ a.icon-trailing-control {
 margin-bottom: 0px;
 }
 
+/*
 form.custom div.custom.dropdown {
 	float:left;
 	margin-right:12px;
 	margin-bottom: 10px;
-	/*margin-left: 3px;*/
 }
+*/
 
 form.custom div.custom.dropdown.compass-error {
 	margin-bottom: 0;
