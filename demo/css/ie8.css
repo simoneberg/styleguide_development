@@ -91,15 +91,15 @@ body {
     float:right;
     top:11px;
 }
-
+	
 /* It fixes the misalignment of the dropdown arrow box */
-form.custom.petro-dropdown div.custom.dropdown a.selector {
+form.custom div.custom.dropdown a.selector {
 	width:30px;
-	height:30px;		
+	height:30px !important;			
 	border: solid #5b5b5b 1px;
 }
 
-form.custom.petro-dropdown div.custom.dropdown a.selector:after{
+form.custom div.custom.dropdown a.selector:after{
 	border-color:#676767 transparent transparent transparent;	
 	margin-top:-2px;
 	margin-left:-5px;	
