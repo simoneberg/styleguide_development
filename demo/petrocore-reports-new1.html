@@ -117,7 +117,7 @@
 
             <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
-                <li><a href="#">Settings</a></li>
+                <li><a href="petrocore-person-details-self.html">Settings</a></li>
                 <li><a href="#">Role Summary</a></li>
                 <li><a href="#">Account History</a></li>
                 <li><a href="#">Role History</a></li>
@@ -389,26 +389,26 @@
         <br>
         <!--***** FORM *****-->
         <!--***** GENERAL INFORMATION *****-->
-        <form class="custom search-type">
+        <form class="custom">
           <fieldset>
             <legend>General Information</legend>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="infomation-text">Name: </label>
+                <label class="">Name</label>
                 <input type="text" placeholder="" value="Template Name"/>
               </div>
             </div>
             
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="inline-label">Creator: </label>
+                <label>Creator</label>
                 <div class="form-text-display-field">Bowen, Jenny (JBNX)</div>
               </div>
             </div>
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label class="inline-label">Owner: </label>
+                <label>Owner</label>
                 <div class="form-text-display-field"><a href="#">Bowen, Jenny (JBNX)</a><a class="icon-trailing-control text" href="#">&#xf08e;</a></div>
               </div>
             </div>
@@ -450,10 +450,7 @@
           
             <legend>Options</legend>
             
-            <div class="checkbox-group">
-            
-              <span class="infomation-text">Display:</span>
-            
+            <div class="checkbox-group">          
               <div class="row">
                 <div class="form-group six mobile-four columns">
                   <label for="checkbox5">
@@ -466,7 +463,7 @@
             
               <div class="row">             
               <div class="form-group eight mobile-four columns">
-                 <span class="infomation-text bold-it">Generating a report with sections for each group is limited to 25 groups. This limit is enforced when selecting groups.</span>
+                 <span class="infomation-text">Generating a report with sections for each group is limited to 25. This limit is enforced when selecting groups.</span>
                </div>
              </div>
             
@@ -478,7 +475,7 @@
             
               <div class="row">
                 <div class="form-group eight mobile-four columns">
-                 <span class="infomation-text bold-it">Generating a report with sections for each group is limited to 25 groups. This limit is enforced when selecting groups.</span>
+                 <span class="infomation-text">Generating a report with sections for each person is limited to 25. This limit is enforced when selecting people.</span>
               </div>
             </div>
             
@@ -527,13 +524,13 @@
           <!--***** DATE *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label><span class="infomation-text bold-it">Start Date:</span></label>
+              <label><span class="infomation-text bold-it">Start Date</span></label>
               <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
             </div>
           </div>
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label class=""><span class="infomation-text bold-it">End Date:</span></label>
+              <label class=""><span class="infomation-text bold-it">End Date</span></label>
               <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2014"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
             </div>
           </div>
@@ -547,8 +544,7 @@
           <!--***** TIME *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label class=""><span class="infomation-text bold-it">Time:</span></label>
-			  <span class="infomation-text">Run at:</span>
+              <label class=""><span class="infomation-text bold-it">Time</span></label>
 
               <select class="custom-dropdown" id="customDropdown">
                 <option SELECTED>12:00am</option>
@@ -574,7 +570,7 @@
           <!--***** RECURRING *****-->
           <div class="row">
             <div class="form-group six mobile-four columns">
-              <label>Recurring:</label>
+              <label>Recurring</label>
             </div>
           </div>
           <div class="radio-group">
@@ -606,40 +602,44 @@
           <!-- RECURRING -->
 
           <!--***** NOTIFICATIONS *****-->
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Notifications:</label>
-            </div>
-          </div>
-          <div class="checkbox-group">
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox11"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox11">Bowen, Jenny (JBNX)</label>
+                <label>Notifications</label>
+              </div>
+            </div>
+            <div class="checkbox-group">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox11"><input type="checkbox" data-customforms="disabled" CHECKED id="checkbox11"> Bowen, Jenny (JBNX)</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12 "> Email</label>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12 ">Email</label>
+                <img src="images/add-names.png" />
               </div>
             </div>
-          </div>
-
-          <div class="row">
-              <img src="images/add-names.png" style="float:left; padding:20px 15px 20px 0px;" />
-              <img src="images/recipients.png" style="float:left; padding:20px 15px 20px 0px;" />
-          </div>
-          
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <p>Within the notification email include:</p>
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <img src="images/recipients.png" />
+              </div>
             </div>
-          </div>
-          <div class="row with-above">
-            <div class="form-group six mobile-four columns">
-              <label class="plain with-above-large" for="checkbox13"><input type="checkbox" data-customforms="disabled">A link to the report</label>
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <p>Within the notification email include:</p>
+              </div>
             </div>
-          </div>
-          <!-- NOTIFICATIONS -->
+            <div class="row with-above">
+              <div class="form-group six mobile-four columns">
+                <label class="plain with-above-large" for="checkbox13"><input type="checkbox" data-customforms="disabled"> A link to the report</label>
+              </div>
+            </div>
+            <!-- NOTIFICATIONS -->
         </fieldset> <!-- SCHEDULE -->
       </form>
 

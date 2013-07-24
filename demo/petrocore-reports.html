@@ -28,12 +28,19 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery-1.9.1.js"></script>
   
   <script src="../javascripts/modernizr.foundation.js"></script>
+
+    <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
+
       
   <script type="text/javascript">
-  
+
 	function show_hide_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
@@ -109,638 +116,530 @@
 
 <!--***** PETROCORE HEADER *****-->
 
-<nav class="top-bar">
-  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
-  <div class="logo"></div>
-  <div class="profile-container">
-    <div class="avatar"></div>
-<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
-      <div class="top-nav">
-        <ul>
-          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+  <nav class="top-bar">
+    <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+    <div class="logo"></div>
+    <div class="profile-container">
+      <div class="avatar"></div>
+  <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+        <div class="top-nav">
+          <ul>
+            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+  		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
-         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
-              <ul class="dropdown user">
-                  <li><a href="#">Settings</a></li>
-                  <li><a href="#">Role Summary</a></li>
-                  <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>                                                                     
-              </ul>          
-          </li>
-          <li><p class="bar">&#124;</p></li>
+           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+                <ul class="dropdown user">
+                    <li><a href="petrocore-person-details-self.html">Settings</a></li>
+                    <li><a href="#">Role Summary</a></li>
+                    <li><a href="#">Account History</a></li>
+                    <li><a href="#">Role History</a></li>                                                                     
+                </ul>          
+            </li>
+            <li><p class="bar">&#124;</p></li>
 
-            <li class="has-dropdown"><a href="#">Language</a>
-              <ul class="dropdown language">
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">Deutsch</a></li>
-                  <li><a href="#">Español</a></li>
-                  <li><a href="#">Français</a></li>
-                  <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>                                                                        
-              </ul>
-            </li> 
-          <li><p class="bar">&#124;</p></li>
+              <li class="has-dropdown"><a href="#">Language</a>
+                <ul class="dropdown language">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="#">Polski</a></li>                                                                        
+                </ul>
+              </li> 
+            <li><p class="bar">&#124;</p></li>
 
 
-          <li class="top-nav-links"><a href="#">Help</a></li>
-          <li><p class="bar">&#124;</p></li>
-          <li class="top-nav-links"><a href="#">Logout</a></li>
-        </ul>
-      </div>
-  </div>
-</nav>
+            <li class="top-nav-links"><a href="#">Help</a></li>
+            <li><p class="bar">&#124;</p></li>
+            <li class="top-nav-links"><a href="#">Logout</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
 <!--***** PETROCORE HEADER *****-->
 
 <!--***** MAIN WRAPPER *****-->
-<div class="row master-wrapper">
+  <div class="row master-wrapper">
 
-  <!--***** LEFT SPLIT CONTAINER *****-->
-  <div class="three columns left-split-container">
-      
-      <!--***** SEARCH *****-->
-      <div class="search-container">
-        <div class="row collapse search-input">
+    <!--***** LEFT SPLIT CONTAINER *****-->
+    <div class="three columns left-split-container">
         
-          <div class="nine mobile-three columns">
-            <input id="initial-search" class="round-left" type="text" value="" />            
-          </div>
-                  
-          <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
-          </div>
+        <!--***** SEARCH *****-->
+        <div class="search-container">
+          <div class="row collapse search-input">
           
-          <div class="two mobile-one columns">
-            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
-          </div>
-          
-        </div>
-      </div>
-      <!--***** SEARCH *****-->   
-            
-	  <div id="advanced_search" class="hide_it">
-	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
-		<p><strong>Advanced Search</strong></p>
-                
-			<form class="custom search-type">                  
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" class="custom-dropdown" id="customDropdown">
-					<option SELECTED>Person</option>
-					<option>Group</option>
-					<option>Position</option>                            
-					<option>Map</option>
-					<option>Skill Group</option>
-					<option>Skill</option>
-					<option>Skill Description</option>
-					<option>Development Activity</option>
-				</select>                          
-                                                        
-			</form>                    
-            <div class="add-filter-container">
-
-				<!--***** ADD FILTER *****-->    
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				<!--***** ADD FILTER *****-->
+            <div class="nine mobile-three columns">
+              <input id="initial-search" class="round-left" type="text" value="" />            
+            </div>
                     
-				<div class="add-filter-area">
-                          
-					<hr class="petrocore-hr">
-                    	<ul id="filters">
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            </div>
+            
+            <div class="two mobile-one columns">
+              <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            </div>
+            
+          </div>
+        </div>
+        <!--***** SEARCH *****-->   
+              
+  	  <div id="advanced_search" class="hide_it">
+  	  <!--This is a Advanced Search panel that is hidden by default-->
+                    	
+  		  <p><strong>Advanced Search</strong></p>
+                  
+  			<form class="custom search-type">                  
+  				<label id="search-type-label" for="customDropdown">Search Type:</label>  
+  				<select class="expand" class="custom-dropdown" id="customDropdown">
+  					<option SELECTED>Person</option>
+  					<option>Group</option>
+  					<option>Position</option>                            
+  					<option>Map</option>
+  					<option>Skill Group</option>
+  					<option>Skill</option>
+  					<option>Skill Description</option>
+  					<option>Development Activity</option>
+  				</select>                          
+                                                          
+  			</form>                    
+        <div class="add-filter-container">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+  				<!--***** ADD FILTER *****-->    
+          <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+  				<!--***** ADD FILTER *****-->
+                      
+  				<div class="add-filter-area">
+                            
+  					<hr class="petrocore-hr">
+            <ul id="filters">
+              <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>              
+              <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>             
+            </ul>
+          </div>
+  			</div>
+  		</div>             
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
-             		    </ul>
-                </div>
-			</div>
-		</div>             
+        <!--***** MAIN NAVIGATION *****-->
+        <div class="left-nav-container">
+          <!--This will hold the accordeon navigation-->
+          <ul class="accordion">
+            <li>
+              <div class="title">
+                <h6>Dashboard</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Goals</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines">My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="active no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html">Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6>Notes</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6>Tools</h6>
+              </div>
+          <!--<div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>-->
+            </li>          
+          </ul>
+        </div>
+        <!--***** MAIN NAVIGATION *****-->
 
-      <!--***** MAIN NAVIGATION *****-->
-      <div class="left-nav-container">
-        <!--This will hold the accordeon navigation-->
-        <ul class="accordion">
-          <li>
-            <div class="title">
-              <h6>Dashboard</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Goals</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>My Position</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Growth Positions</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6 class="two-lines">My Team's Development</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="active no-dropdown">
-            <div class="title">
-              <h6><a href="petrocore-reports.html">Reports</a></h6>
-            </div>
-<!--             <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
- -->          </li>
-          <li>
-            <div class="title">
-              <h6>Administration</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Notes</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="no-dropdown">
-            <div class="title">
-              <h6>Tools</h6>
-            </div>
-        <!--<div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>-->
-          </li>          
-        </ul>
       </div>
-      <!--***** MAIN NAVIGATION *****-->
+    <!--***** LEFT SPLIT CONTAINER *****-->
 
-  </div>
-  <!--***** LEFT SPLIT CONTAINER *****-->
-
-  <!--***** RIGHT SPLIT CONTAINER *****-->
-  <div class="nine columns right-split-container">
+    <!--***** RIGHT SPLIT CONTAINER *****-->
+    <div class="nine columns right-split-container">
       <div class="breadcrumbs-container">
-          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Subitem 1</a></li>
-            <li><a href="#">Subitem 2</a></li>
-            <li><a href="#">Subitem 3</a></li>
-            <li><a href="#">Subitem 4</a></li>
-            <li><a href="#">Subitem 5</a></li>
-            <li class="current"><a href="#">Subitem 6</a></li>
+            <li class="current"><a href="#">Reports</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Report Templates</h4>
-            <hr>
-  
-          <!--***** CHARTS *****-->
+        <h4>Report Templates</h4>
+        <hr>
+    
+        <div class="row">
+          <div class="twelve columns visible-charts">
+            <div class="panel-wrapper-grey">                                                  
 
-            <div class="row">
-              <div class="twelve columns visible-charts">
-              <!--This is a dashboard panel-->
+              <div class="panel-header-small">
+  						  <h5>Report Types Filter</h5>
+  						  <a class="add-panel-icon icon-">&#xf0de;</a>
+  				    </div>                  
+                    
+               
+              <div class="panel-content-container">
+                <div id="report-types-filter">
+                  <ul>
+                    <li class="horizontal-list">Select: </li>
+                    <li class="horizontal-list"><a href="#">All</a></li>
+                    <li class="horizontal-list"><a href="#">None</a></li>
+                  </ul>
+                </div>
 
-                <div class="panel-wrapper-grey">                                                  
+                <hr class="petrocore-hr">
 
-					<div class="panel-header-small">
-						<h5>Report Types Filter</h5>
-						<a class="add-panel-icon icon-">&#xf0de;</a>
-				    </div>                  
-                  
-             
-                    <div class="panel-content-container">
-                      <div id="report-types-filter">
-                        <ul>
-                          <li class="horizontal-list">Select: </li>
-                          <li class="horizontal-list"><a href="#">All</a></li>
-                          <li class="horizontal-list"><a href="#">None</a></li>
-                        </ul>
-                      </div>
-
-                      <hr class="petrocore-hr">
-
-                      <div class="row filters-checklist">
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked="true"> Activity Profile</label>
-                          <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Activity Profile Excel</label>
-                          <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"> Assessment Status</label>
-                          <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"> Competency Inventory</label>
-                        </div>
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked="true"> Competency Object</label>
-                          <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6" checked="true"> Competency Status Trending</label>
-                          <label for="checkbox7"><input type="checkbox" data-customforms="disabled" id="checkbox7"> Development Plan</label>
-                          <label for="checkbox8"><input type="checkbox" data-customforms="disabled" id="checkbox8"> Export Development Data</label>
-                        </div>
-                        <div class="four columns left-margin-clear">
-                          <label for="checkbox9"><input type="checkbox" data-customforms="disabled" id="checkbox9" checked="true"> Gap Analysis</label>
-                          <label for="checkbox10"><input type="checkbox" data-customforms="disabled" id="checkbox10"> Gap Analysis Excel</label>
-                          <label for="checkbox11"><input type="checkbox" data-customforms="disabled" id="checkbox11"> History/Activity</label>
-                          <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"> Qualified Persons</label>
-                        </div>
-                    </div>
+                <div class="row filters-checklist">
+                  <div class="four columns left-margin-clear">
+                    <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked="true"> Activity Profile</label>
+                    <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Activity Profile Excel</label>
+                    <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"> Assessment Status</label>
+                    <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"> Competency Inventory</label>
+                  </div>
+                  <div class="four columns left-margin-clear">
+                    <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked="true"> Competency Object</label>
+                    <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6" checked="true"> Competency Status Trending</label>
+                    <label for="checkbox7"><input type="checkbox" data-customforms="disabled" id="checkbox7"> Development Plan</label>
+                    <label for="checkbox8"><input type="checkbox" data-customforms="disabled" id="checkbox8"> Export Development Data</label>
+                  </div>
+                  <div class="four columns left-margin-clear">
+                    <label for="checkbox9"><input type="checkbox" data-customforms="disabled" id="checkbox9" checked="true"> Gap Analysis</label>
+                    <label for="checkbox10"><input type="checkbox" data-customforms="disabled" id="checkbox10"> Gap Analysis Excel</label>
+                    <label for="checkbox11"><input type="checkbox" data-customforms="disabled" id="checkbox11"> History/Activity</label>
+                    <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"> Qualified Persons</label>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
           <hr>
-              <!--This is a dashboard panel-->
-                <div class="panel-wrapper">
- 
-                    <div class="table-header-action">
-                      <a class="primary radius button left" href="petrocore-reports-new1.html">New Report Template</a>                    
-                    </div>
-
-          <!--***** TABLE *****-->
-
-          <table id="report-templates-table" class="twelve nested-table">
-            <thead>
-              <tr>
-                <th>Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
-                <th>Type<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
-                <th># Generated<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
-                <th>Actions</th>                
-              </tr>
-            </thead>
-            <tbody>
-
-              <tr>
-                <td><a href="petrocore-reports-edit1.html">Report Template 1</a></td>
-                <td>Activity Profile</td>
-                <td>2 Reports</td>
-                <td>
-
-				<a name="action-button1"></a>
-				<div href="#action-button1" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
-				  <span></span>  
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>                 
-
-                </td>
-              </tr>
-              
-              <tr>                 
-                <td><a href="petrocore-reports-edit1.html">Report Template 2</a></td>
-                <td>Activity Profile</td>
-                <td>4 Reports</td>
-                <td>
-
-				<a name="action-button2"></a>
-				<div href="#action-button2" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp2" class="action_buttons" href="#action-button2">Actions</a>   
-				  <span></span>    
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                
-                </td>                
-              </tr>
-
-              <tr>               
-                <td><a href="petrocore-reports-edit1.html">Report Template 3</a></td>
-                <td>Activity Profile</td>
-                <td>15 Reports</td>
-                <td>
-
-				<a name="action-button3"></a>
-				<div href="#action-button3" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp3" class="action_buttons" href="#action-button3">Actions</a>   
-				  <span></span>    
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                
-                </td>                
-              </tr>
-
-              <tr>                
-                <td><a href="petrocore-reports-edit1.html">Report Template 4</a></td>
-                <td>Competency Object</td>
-                <td>9 Reports</td>
-                <td>
-
-				<a name="action-button4"></a>
-				<div href="#action-button4" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp4" class="action_buttons" href="#action-button4">Actions</a> 
-				  <span></span>                     
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                    
-                </td>                
-              </tr>
-
-              <tr>                
-                <td><a href="petrocore-reports-edit1.html">Report Template 5</a></td>
-                <td>Competency Status Trending</td>
-                <td>1 Report</td>
-                <td>
-
-				<a name="action-button5"></a>
-				<div href="#action-button5" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp5" class="action_buttons" href="#action-button5">Actions</a>
-  				  <span></span>     
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                    
-                </td>                
-
-              </tr>
-
-              <tr>                
-                <td><a href="petrocore-reports-edit1.html">Report Template 6</a></td>
-                <td>Gap Analysis</td>
-                <td>3 Reports</td>
-                <td>
-
-				<a name="action-button6"></a>
-				<div href="#action-button6" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp6" class="action_buttons" href="#action-button6">Actions</a>  
-				  <span></span>    
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                
-                </td>                
-              </tr>
-
-              <tr>               
-                <td><a href="petrocore-reports-edit1.html">Report Template 7</a></td>
-                <td>Gap Analysis</td>
-                <td>6 Reports</td>
-                <td>
-
-                <a name="action-button7"></a>
-				<div href="#action-button7" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp7" class="action_buttons" href="#action-button7">Actions</a>  
-				  <span></span>    
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                
-                </td>                
-              </tr>
-
-              <tr>               
-                <td><a href="petrocore-reports-edit1.html">Report Template 8</a></td>
-                <td>Gap Analysis</td>
-                <td>9 Reports</td>
-                <td>
-
-                <a name="action-button8"></a>
-				<div href="#action-button8" class="button dropdown split petrocore-actions">  
-				  <a id="report-temp8" class="action_buttons" href="#action-button8">Actions</a>  
-				  <span></span>    
-				  <ul>  
-				    <li><a href="#">Duplicate</a></li>
-				    <li><a href="#">Share Report Template</a></li>
-				    <li><a href="#">Generate</a></li>
-				    <li><a href="#">View History</a></li>    
-				    <li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>             
-                
-                </td>                
-              </tr>
-              
-            </tbody>
-          </table>
           
+          <div class="panel-wrapper">
+            <div class="table-header-action">
+              <a class="primary radius button left" href="petrocore-reports-new1.html">New Report Template</a>                    
+            </div>
+
+            <!--***** TABLE *****-->
+
+            <table id="report-templates-table" class="twelve nested-table">
+              <thead>
+                <tr>
+                  <th>Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                  <th>Actions</th>   
+                  <th>Type<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                  <th># Generated<a class="add-sorting-icon icon-">&#xf0dd;</a></th>                               
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr>
+                  <td><a href="petrocore-reports-edit1.html">Report Template 1</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>
+                  <td>Activity Profile</td>
+                  <td>2 Reports</td>
+                </tr>
+                
+                <tr>                 
+                  <td><a href="petrocore-reports-edit1.html">Report Template 2</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>   
+                  <td>Activity Profile</td>
+                  <td>4 Reports</td>      
+                </tr>
+
+                <tr>               
+                  <td><a href="petrocore-reports-edit1.html">Report Template 3</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>   
+                  <td>Activity Profile</td>
+                  <td>15 Reports</td>
+                         
+                </tr>
+
+                <tr>                
+                  <td><a href="petrocore-reports-edit1.html">Report Template 4</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>   
+                  <td>Competency Object</td>
+                  <td>9 Reports</td>
+                </tr>
+
+                <tr>                
+                  <td><a href="petrocore-reports-edit1.html">Report Template 5</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>
+                  <td>Competency Status Trending</td>
+                  <td>1 Report</td>
+                </tr>
+
+                <tr>                
+                  <td><a href="petrocore-reports-edit1.html">Report Template 6</a></td>
+                   <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>       
+                  <td>Gap Analysis</td>
+                  <td>3 Reports</td>
+                     
+                </tr>
+
+                <tr>               
+                  <td><a href="petrocore-reports-edit1.html">Report Template 7</a></td>
+                   <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>      
+                  <td>Gap Analysis</td>
+                  <td>6 Reports</td>
+                  
+                </tr>
+
+                <tr>               
+                  <td><a href="petrocore-reports-edit1.html">Report Template 8</a></td>
+                  <td>
+                    <a name="action-button1"></a>
+                    <div href="#action-button1" class="button dropdown split petrocore-actions">  
+                      <a id="report-temp1" class="action_buttons" href="#action-button1">Actions</a>  
+                      <span></span>  
+                      <ul>
+                        <li><a href="#">Generate Report</a></li>  
+                        <li><a href="#">Duplicate Template</a></li>
+                        <li><a href="#">View Template History</a></li>    
+                        <li><a href="#">Delete Template</a></li>    
+                      </ul>  
+                    </div>                 
+                  </td>
+                  <td>Gap Analysis</td>
+                  <td>9 Reports</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
 
 
-          <!--***** TABLE *****-->
+            <!--***** TABLE *****-->
 
-                  </div>
-                </div>
-              </div>
-               <!--This is a dashboard panel-->
+          </div>
+        </div>
+      </div>
+                 <!--This is a dashboard panel-->
 
 
-      </div><!--Close Content Container-->   
+    </div><!--Close Content Container-->   
   </div>
-  <!-- </div> -->
-  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
 
 <!--***** FOOTER *****-->
 
-<div class="row">
-  <div class="twelve columns petrocore-footer">
-      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
-      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
-      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  <div class="row">
+    <div class="twelve columns petrocore-footer">
+        <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+        <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
+        <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
   </div>
-</div>
 <!--***** FOOTER *****-->
 
-  <!-- Entire Navbar Code -->
-<!-- <ul class="nav-bar">
-  <li class="has-flyout">
-    <a href="#">Nav Item 2</a>
-    <a href="#" class="flyout-toggle"><span> </span></a>
-    <ul class="flyout">
-      <li><a href="#">Sub Nav Item 1</a></li>
-      <li><a href="#">Sub Nav Item 2</a></li>
-      <li><a href="#">Sub Nav 3</a></li>
-      <li><a href="#">Sub Nav 4</a></li>
-      <li><a href="#">Sub Nav Item 5</a></li>
-    </ul>
-  </li> -->
   
   <!-- END NAVIGATION -->
-    <!-- </div> -->
-  <!-- </div> -->
+
   <!-- CONTENT AREA -->
 
-<div id="myModal" class="reveal-modal expand">
-  <div class="modal-header">
-    <h5>This is a Pop-up</h5>
-    <a class="close-reveal-modal">&#215;</a>
-  </div>
-  <div class="popup-content-container">
-    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-  </div>
-  <div class="modal-footer">
-    <a class="success radius button right" href="#">OK</a>
-    <a class="secondary radius button right" href="#">Cancel</a>
-  </div>
-</div>
 
-<div id="overlay"></div>
+  <div id="overlay"></div>
 
-<div class="notifications-popup">
+    <div class="notifications-popup">
 
-	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
-	<div class="notifications-title">
-    	<h5>Notifications</h5>
-	</div>
-
-	<div class="notifications-area">
+    	<div class="arrow"></div>
+    	<div class="arrow-border"></div>                
                     
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
-			<hr class="hr-notification">
-	    </div>
+    	<div class="notifications-title">
+        	<h5>Notifications</h5>
+    	</div>
+
+    	<div class="notifications-area">
                         
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
-			<hr class="hr-notification">
-		</div>
-                        
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+    		<div class="notification">
+    			<a href="#" class="icon- anotification">&#xf00d;</a>
+    			<p>Report Lorem Ipsum 1 has been generated</p>
+    	        <a href="#">View Report</a> 
+    			<hr class="hr-notification">
+    	    </div>
+                            
+    		<div class="notification">
+    			<a href="#" class="icon- anotification">&#xf00d;</a>
+    			<p>Report Lorem Ipsum 2 has been generated</p>
+    			<a href="#">View Report</a> 
+    			<hr class="hr-notification">
+    		</div>
+                            
+    		<div class="notification">
+    			<a href="#" class="icon- anotification">&#xf00d;</a>
+    			<p>Report Lorem Ipsum 3 has been generated</p>
+    			<a href="#">View Report</a> 
+    		</div>                               
 
-	</div>
-</div>         
-
-  
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-  
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script> 
-
+    	</div>
+  </div>         
 </body>
 </html>

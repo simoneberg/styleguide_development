@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->  
+  <!--<meta name="viewport" content="width=device-width" />-->  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
@@ -28,10 +28,20 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-  
-  <script src="../javascripts/modernizr.foundation.js"></script>
-      
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>  
+    
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
+
+  <script src="../javascripts/modernizr.foundation.js"></script>    
+
+  <!--  <script src="../javascripts/jquery.js"></script>  -->  
+  <script src="js/jquery-1.9.1.js"></script>  
+
+  <!-- <script src="js/jquery-ui.js"></script>  -->
+  <script src="js/jquery-ui-1.9.2.js"></script> 
+    
   <script type="text/javascript">
   
 	function show_hide_advanced(id) {
@@ -53,9 +63,11 @@
 			advanced_arrow.style.top = '7px';						
 		}
 	}	
-
-  
-	$(document).ready(function(){
+ 
+ 
+	$(document).ready(function(){	
+		
+		// Notification Popup window
 
 		var notifs = $("#user-notifications").text();
 		var notifs_exist = true;
@@ -93,16 +105,57 @@
 			    $('.notifications-area').css('padding','10px 0 10px 0');
 			}										
 		});
-			
-	});
+
+		// Add Direct-Participant Page
 		
+		$('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
+
+		$('.participant').bind('drag', function(event, ui) {		 
+			ui.helper.css('background-color', '#e6edf5');
+			ui.helper.css('border', 'solid 1px #8b8b8b');
+		});
+		
+		$('#list-direct-participants').droppable( { tolerance: 'pointer', accept: '.participant', drop: function (event, ui) {
+        	var target = $('#list-direct-participants');
+        	var source = ui.draggable;
+          	(target).append(source);	
+		  	(source).addClass('direct-participant');			
+			}
+	    });
+
+		$('#list-participants').droppable( { tolerance: 'pointer', accept: '.direct-participant', drop: function (event, ui) {
+        	var target = $('#list-participants');
+        	var source = ui.draggable;			
+		  	(source).removeClass('direct-participant');
+		  	(source).addClass('participant');			
+          	(target).append(source);
+			}
+	    });
+				
+		$('.participant a.icon-.sr-icon-plus').on('click', function(){
+			var target = $('#list-direct-participants');
+			var source = $(this).parent();
+			(source).removeClass('participant');
+			(source).addClass('direct-participant');
+			(target).append(source);	
+		})
+		
+		$('.participant a.icon-.sr-icon-x').on('click', function(){
+			var target = $('#list-participants');
+			var source = $(this).parent();	
+			(source).removeClass('direct-participant');
+			(source).addClass('participant');
+			(source).appendTo(target);	
+		});
+
+	});
+
   </script>
+
+
 
 </head>
 <body>
-
-<!--***** MAIN WRAPPER *****-->
-<div class="row master-wrapper">
 
 <!--***** PETROCORE HEADER *****-->
 
@@ -120,7 +173,7 @@
 
          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
-                  <li><a href="petrocore-person-details-self.html">Settings</a></li>
+                  <li><a href="#">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
                   <li><a href="#">Role History</a></li>                                                                     
@@ -148,9 +201,12 @@
       </div>
   </div>
 </nav>
-
 <!--***** PETROCORE HEADER *****-->
 
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
@@ -173,48 +229,46 @@
           
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
-			<div id="advanced_search" class="hide_it">
-	                <!--This is a Advanced Search panel that is hidden by default-->
+      <!--***** SEARCH *****-->     
+              
+	  <div id="advanced_search" class="hide_it">
+	  <!--This is a Advanced Search panel that is hidden by default-->
                   	
-                    <p><strong>Advanced Search</strong></p>
+		<p><strong>Advanced Search</strong></p>
                 
-					<form class="custom search-type">                  
-						<label id="search-type-label" for="customDropdown">Search Type:</label>  
-						<select class="expand" class="custom-dropdown" id="customDropdown">
-							<option SELECTED>Person</option>
-							<option>Group</option>
-							<option>Position</option>                            
-							<option>Map</option>
-							<option>Skill Group</option>
-							<option>Skill</option>
-							<option>Skill Description</option>
-							<option>Development Activity</option>
-						</select>                          
-                                                          
-					</form>                    
+			<form class="custom search-type">                 
+				<label id="search-type-label" for="customDropdown">Search Type:</label>  
+				<select class="expand" style="display:none;" id="customDropdown">
+					<option SELECTED>Person</option>
+					<option>Group</option>
+					<option>Position</option>                            
+					<option>Map</option>
+					<option>Skill Group</option>
+					<option>Skill</option>
+					<option>Skill Description</option>
+					<option>Development Activity</option>
+				</select>                          
+                                                        
+			</form>                    
+            <div class="add-filter-container">
 
-	                <div class="add-filter-container">
-
-    				      <!--***** ADD FILTER *****-->
+				<!--***** ADD FILTER *****-->    
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+				<!--***** ADD FILTER *****-->
                     
-                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				          <!--***** ADD FILTER *****-->
-                    
-                    	  <div class="add-filter-area">
+				<div class="add-filter-area">
                           
-								<hr class="petrocore-hr">
-                        		<ul id="filters">
+					<hr class="petrocore-hr">
+                    	<ul id="filters">
 
 	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
 
 	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
-             		            </ul>
-                    	  </div>
-					</div>
-		     </div>             
+             		    </ul>
+                </div>
+			</div>
+		</div>             
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -280,18 +334,18 @@
               </ul>
             </div>
           </li>
-          <li class="no-dropdown">
+          <li>
             <div class="title">
               <h6><a href="petrocore-reports.html">Reports</a></h6>
             </div>
-            <!-- <div class="content">
+<!--             <div class="content">
               <ul>
                 <li><a href="#">Item 1</a></li>
                 <li><a href="#">Item 1</a></li>
                 <li><a href="#">Item 1</a></li>
               </ul>
-            </div> -->
-          </li>
+            </div>
+ -->          </li>
           <li>
             <div class="title">
               <h6>Administration</h6>
@@ -327,7 +381,7 @@
                 <li><a href="#">Item 1</a></li>
               </ul>
             </div>-->
-          </li>
+          </li>          
         </ul>
       </div>
       <!--***** MAIN NAVIGATION *****-->
@@ -342,45 +396,171 @@
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li class="current"><a href="#">Search</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+            <li><a href="#">Subitem 4</a></li>
+            <li><a href="#">Subitem 5</a></li>
+            <li class="current"><a href="#">Subitem 6</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-          <h4>Search Results Links</h4>
-            <hr class="search-results-for">
-            <div class="row">
-	            <div class="twelve columns text-center">
- 		           <h2>For Internal Use Only</h2>
-                   
-<h4>This page contains all the links of the search result pages:</h4>
+        <form class="custom search-type">
+          <h4>Assign Direct Relationship to John Doe</h4>
+          <hr>        
 
-<hr>
+          <p>Click on the plus sign or click-and-drag a participant's name to assign him/her to this Supervisor.</p>
+          <div class="row" id="ui-assign-direct-relationship">
+          
+          	<div class="six columns">
+              
+				<div class="search-relationships side-by-side">
+              
+                	<div class="search-box-relationships">
 
-<p><a href="petrocore-search-no-results.html" target="_blank">petrocore-search-no-results.html</a></p>
+                		<div class="row collapse search-input">
+                
+                <div class="ten mobile-three columns">
+                  <input id="initial-search" class="round-left" type="text" placeholder="Search Participants" value="David" />
+                </div>
+                
+                <div class="two mobile-one columns">
+            	  <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+                </div>
+						</div> 
+                                 
+             		</div>
+             		<!-- END /search-box-relationships -->
+                
+                <div class="button-group-bar">
+                  <!-- Even Button Groups -->
+                  <ul class="button-group even three-up">
+                    <li><a href="#" class="button silver-button first active">All</a></li>
+                    <li><a href="#" class="button silver-button">Assigned</a></li>
+                    <li><a href="#" class="button silver-button last">Unassigned</a></li>
+                  </ul>
+                </div>
+                <!-- END /button-group-bar -->               
+                
+                <div class="list-participants-title">
+                  <h5>Available Participants</h5>
+                </div>
+                
+                <div id="list-participants" class="search-results-relationships">
 
-<hr>
-
-<p><a href="petrocore-search-results-person.html" target="_blank">petrocore-search-results-person.html</a></p>
-<p><a href="petrocore-search-results-group.html" target="_blank">petrocore-search-results-group.html</a></p>
-<p><a href="petrocore-search-results-position.html" target="_blank">petrocore-search-results-position.html</a></p>
-<p><a href="petrocore-search-results-map.html" target="_blank">petrocore-search-results-map.html</a></p>
-<p><a href="petrocore-search-results-skill-group.html" target="_blank">petrocore-search-results-skill-group.html</a></p>
-<p><a href="petrocore-search-results-skill.html" target="_blank">petrocore-search-results-skill.html</a></p>
-<p><a href="petrocore-search-results-skill-description.html" target="_blank">petrocore-search-results-skill-description.html</a></p>
-<p><a href="petrocore-search-results-development-activity.html" target="_blank">petrocore-search-results-development-activity.html</a></p>
-
-<hr>
-
-<p><a href="petrocore-search-results-advanced.html" target="_blank">petrocore-search-results-advanced.html</a></p>
-
-
-				</div>
+		<div class="participant sr-bottom-border">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Meng, David (DMKI)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	    </div>
+        
+		<div class="participant sr-bottom-border">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Reynolds, David (DROP)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	    </div>        
+   
+		<div class="participant sr-bottom-border">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Rooney, David (DRXO)</div>
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
+	    </div>    
+   
+		<div class="participant sr-bottom-border">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Smith, David (DSLA)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	    </div>    
+   
+		<div class="participant sr-bottom-border">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Washington, David (DWRI)</div>
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
+	    </div>    
+        
+		</div>
+        <!-- END /search-results-relationships -->            
+        
+              </div>
+              <!-- END /search-relationships -->
             </div>
-    </div>      
+            <!-- END /six -->
+            <div class="six columns">
+
+                <div class="list-relationships-title">
+                  <h5>Assigned as Direct Participants</h5>
+                </div>
+                        
+              <div id="list-direct-participants" class="list-relationships side-by-side">
+                
+        <div class="participant sr-bottom-border direct-participant">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Aranda, David (DAPO)</div>        
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+        </div>
+        
+        <div class="participant sr-bottom-border direct-participant">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Chung, David (DCKI)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>      
+        </div>
+        
+        <div class="participant sr-bottom-border direct-participant">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Masterson, David (DMSW)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+        </div>
+        
+        <div class="participant sr-bottom-border direct-participant">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Robertson, David (DBJU)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+		</div>
+        
+        <div class="participant sr-bottom-border direct-participant">
+			<a href="#" class="icon- sr-icon-plus"></a>
+			<a href="#" class="icon- sr-icon-x"></a>
+			<div class="sr-name">Slaton, David (DSLS)</div>
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+		</div>        
+                
+                <!-- END /list-relationships-title -->
+
+              </div>
+              <!-- END /list-relationships -->
+                            
+            </div>
+            <!-- END /six -->
+          </div>
+          <!-- END /row -->
+                                                  
+         </form>
+          
+<div class="row">
+    <div class="same-line add-medium-space-right">
+    	<a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
+    </div>
+    <div class="same-line">
+      <a class="" href="#">Cancel</a>
+    </div>
+</div>
+          
+          
+      </div><!--Close Content Container-->   
   </div>
-  </div>
+ </div> 
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -411,7 +591,7 @@
   </li> -->
   
   <!-- END NAVIGATION -->
-    </div>
+    <!-- </div> -->
   <!-- </div> -->
   <!-- CONTENT AREA -->
 
@@ -429,10 +609,6 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
-
-
-
-
 
 <div id="overlay"></div>
 
@@ -470,9 +646,7 @@
 	</div>
 </div>         
 
-
-
-
+  
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -495,19 +669,13 @@
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
   
   -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-  
-    <script>
+
+
+<!--    <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
     </script> 
-
-
+-->
 </body>
 </html>

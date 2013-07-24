@@ -91,15 +91,15 @@ body {
     float:right;
     top:11px;
 }
-
+	
 /* It fixes the misalignment of the dropdown arrow box */
-form.custom.petro-dropdown div.custom.dropdown a.selector {
+form.custom div.custom.dropdown a.selector {
 	width:30px;
-	height:30px;		
+	height:30px !important;			
 	border: solid #5b5b5b 1px;
 }
 
-form.custom.petro-dropdown div.custom.dropdown a.selector:after{
+form.custom div.custom.dropdown a.selector:after{
 	border-color:#676767 transparent transparent transparent;	
 	margin-top:-2px;
 	margin-left:-5px;	
@@ -159,4 +159,15 @@ fieldset legend {
 .button.dropdown.split.petrocore-actions > span:focus,
 .button.dropdown.split.petrocore-actions > span:active { /* Arrow down button */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */	
+}
+
+.button.silver-button {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
+}
+
+.button.silver-button:hover,
+.button.silver-button:focus,
+.button.silver-button:active,
+.button.silver-button.active {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */		
 }
