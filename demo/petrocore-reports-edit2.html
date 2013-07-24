@@ -26,12 +26,6 @@
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
@@ -39,6 +33,11 @@
   <script src="../javascripts/jquery-1.9.1.js"></script>
 
   <script src="../javascripts/modernizr.foundation.js"></script>
+   <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
 
   <script type="text/javascript">
 
@@ -349,11 +348,6 @@
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
             <li><a href="#">Reports</a></li>
-            <li><a href="#">Subitem 1</a></li>
-            <li><a href="#">Subitem 2</a></li>
-            <li><a href="#">Subitem 3</a></li>
-            <li><a href="#">Subitem 4</a></li>
-            <li><a href="#">Subitem 5</a></li>
             <li class="current"><a href="#">Edit Report Template</a></li>
           </ul>
         </div>
@@ -419,7 +413,6 @@
           </div>
         </div>
         <br>
-
         <!--***** FORMS *****-->
         <form class="custom">
           <fieldset>
@@ -434,53 +427,36 @@
                   <h5>Options</h5>
                 </div>
                 <div class="panel-content-container">
-                  <div class="checkbox-group filters-checklist">
+                 <div class="checkbox-group filters-checklist">
                     <p class="options-description"><b>Include</b></p>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox1">
-                          <input type="checkbox" data-customforms="disabled" checked id="checkbox1">
-                          Yourself</label>
+                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Yourself</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox12">
-                          <input type="checkbox" data-customforms="disabled" id="checkbox12">
-                          Directly assigned to me</label>
-                      </div>
-                    </div>
-                  </div>
-                  <hr class="petrocore-hr">
-
-                  <div class="checkbox-group filters-checklist">
-                    <p class="options-description"><b>Exclude</b></p>
-                    <div class="row">
-                      <div class="form-group">
-                        <label for="checkbox3">
-                          <input type="checkbox" data-customforms="disabled" id="checkbox3">
-                          Supervisors</label>
+                        <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"> Directly assigned to me</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox4">
-                          <input type="checkbox" data-customforms="disabled" checked id="checkbox4">
-                          Mentors</label>
+                        <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"> Supervisors</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox5">
-                          <input type="checkbox" data-customforms="disabled" id="checkbox5">
-                          Administrators</label>
+                        <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"> Mentors</label>
                       </div>
                     </div>
                     <div class="row">
                       <div class="form-group">
-                        <label for="checkbox6">
-                          <input type="checkbox" data-customforms="disabled" id="checkbox6">
-                          Managers</label>
+                        <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"> Administrators</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group">
+                        <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Managers</label>
                       </div>
                     </div>
                   </div>
@@ -491,26 +467,13 @@
                   <hr class="petrocore-hr">
                   <div class="filter-list">
                     <ul>
-                      <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon">
-                        <p class="icon-">&#xf040;</p>
-                      </a></div>
-                      </li>
-                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon">
-                        <p class="icon-">&#xf040;</p>
-                      </a></div>
-                      </li>
-                      <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon">
-                        <p class="icon-">&#xf040;</p>
-                      </a></div>
-                      </li>
+                      <li class="filter-list-elements">Account Status is not Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
+                      <li class="filter-list-elements">Account Status is Active<div class="filter-action-icons"><a href="#" class="filter-edit-icon"><p class="icon-">&#xf040;</p></a></div></li>
                     </ul>
                   </div>
-                </div>
-                <!--Close panel wrapper grey-->
-              </div>
-              <!--Close panel content container-->
-            </div>
-            <!--Close row-->
+                </div><!--Close panel wrapper grey-->
+              </div><!--Close panel content container-->
+            </div><!--Close row-->
 
             <div class="eight columns remove-padding-custom">
               <div class="panel-wrapper-white-tree">
@@ -590,12 +553,9 @@
                     </ul>
                   </div>
 
-                </div>
-                <!--Close panel wrapper grey-->
-              </div>
-              <!--Close panel content container-->
-            </div>
-            <!--Close row-->
+                </div><!--Close panel wrapper grey-->
+              </div><!--Close panel content container-->
+            </div><!--Close row-->
 
             <div class="eight columns remove-padding-custom">
               <div class="panel-wrapper-white-tree">
@@ -650,7 +610,7 @@
 
   <!-- END NAVIGATION -->
 
-  <!--</div>-->
+
   <!-- CONTENT AREA -->
 
   <!--************** MODAL WINDOW PEOPLE ****************-->
@@ -773,18 +733,18 @@
 
           <div class="four columns">
             <select class="custom-dropdown" id="Select4">
-              <option selected>Account Status</option>
-              <option>Account Status</option>
-              <option>Account Status</option>
+              <option selected>Name </option>
+              <option>Regional ID</option>
+              <option>Sub Classifier</option>
             </select>
             <div class="custom dropdown modal-input-fields">
-              <a href="#" class="current">Account Status
+              <a href="#" class="current">Name
               </a>
               <a href="#" class="selector"></a>
               <ul class="modal-dropdown-list">
-                <li>Account Status</li>
-                <li>Account Status</li>
-                <li>Account Status</li>
+                <li>Name</li>
+                <li>Regional ID</li>
+                <li>Sub Classifier</li>
               </ul>
             </div>
           </div>
@@ -792,50 +752,33 @@
           <div class="four columns">
             <select class="custom-dropdown" id="Select5">
               <option selected>is</option>
-              <option>is</option>
-              <option>is</option>
+              <option>is not</option>
+              <option>contains</option>
+              <option>does not contain</option>
+              <option>exists</option>
+              <option>does not exist</option>
             </select>
             <div class="custom dropdown modal-input-fields">
               <a href="#" class="current">is
               </a>
               <a href="#" class="selector"></a>
               <ul class="modal-dropdown-list">
-                <li>is</li>
-                <li>is</li>
-                <li>is</li>
+                <li>is not</li>
+                <li>contains</li>
+                <li>does not contain</li>
+                <li>exists</li>
+                <li>does not exist</li>
               </ul>
             </div>
           </div>
 
           <div class="four columns">
-            <select class="custom-dropdown" id="Select6">
-              <option selected>Active</option>
-              <option>Active</option>
-              <option>Active</option>
-            </select>
-            <div class="custom dropdown modal-input-fields">
-              <a href="#" class="current">Active
-              </a>
-              <a href="#" class="selector"></a>
-              <ul class="modal-dropdown-list">
-                <li>Active</li>
-                <li>Active</li>
-                <li>Active</li>
-              </ul>
-            </div>
+            <input type="text"/>
           </div>
 
         </div>
       </form>
       <!--************** FORM ****************-->
-      <div class="row">
-        <div class="same-line add-medium-space-right">
-          <a class="primary radius button" href="petrocore-reports-edit4.html">Save</a>
-        </div>
-        <div class="same-line">
-          <a class="" href="petrocore-reports.html">Cancel</a>
-        </div>
-      </div>
     </div>
     <div class="modal-footer">
       <a class="primary radius button left" href="#">Save</a>
