@@ -2955,765 +2955,764 @@ span.dropdown-arrow {
 /* this is the section of last resort!
    use it sparingly and each item in this
    section requires a comment */
+.add-space {
+  margin-right: 5px;
+  margin-left: 11px;
+}
 
-   .add-space {
-    margin-right: 5px;
-    margin-left: 11px;
-  }
+.adjust-left {
+  padding: 0 10px 0 0;
+  margin-left: 0;
+}
 
-  .adjust-left {
-    padding: 0 10px 0 0;
-    margin-left: 0;
-  }
+.add-small-space-right {
+  padding-right: 10px;
+}
 
-  .add-small-space-right {
-    padding-right: 10px;
-  }
+.add-medium-space-right {
+  padding-right: 20px;
+}
 
-  .add-medium-space-right {
-    padding-right: 20px;
-  }
+.add-small-margin {
+  margin: 10px 10px 10px 0;
+}
 
-  .add-small-margin {
-    margin: 10px 10px 10px 0;
-  }
-
-  .add-small-margin-left {
-    margin-left: 10px;
-  }
+.add-small-margin-left {
+  margin-left: 10px;
+}
 
 /* remove-padding removes the 1 px
    differnece between a zurb custom form
    and a js tree allowing for the js tree
    to take the entire width of the form */
-   .remove-padding {
-    margin-left: -1px;
-  }
+.remove-padding {
+  margin-left: -1px;
+}
 
-  .same-line {
-    display: inline-block;
-  }
+.same-line {
+  display: inline-block;
+}
 
 /* with-above are hacks to remove space
    from an element to make it closer and
    better visually associate it with
    the item above it */
-   .with-above-small {
-    margin-top: -8px;
+.with-above-small {
+  margin-top: -8px;
+}
+
+.with-above {
+  margin-top: -15px;
+}
+
+.with-above-large {
+  margin-top: -20px;
+}
+
+/* END MISC */
+/* **************************************** */
+
+/* **************************************** */
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1168px) {
+
+}
+
+
+@media only screen and (max-width: 1168px) {
+  ul.button-group {
+    width: 100%;
+    margin: 0;
   }
 
-  .with-above {
-    margin-top: -15px;
+  ul.button-group li {
+    margin: 0;
+    width: 50%;
   }
 
-  .with-above-large {
+  ul.button-group li:first-child {
+    margin-left: 0;
+    margin-right: -1px;
+  }
+
+  .filter-action-icons {
+    float: left;
+    height: 23px;
+    /*background-color: red;*/
+    width: 100%;
+  }
+
+  .filter-edit-icon {
+    margin-left: 0;
+  }
+
+  .step-name {
+    width: 96px;
+    padding-left: 8px;
+  }
+
+  .step-name-long {
+    width: 90px;
+    margin-top: -12px;
+  }
+
+  .step-completion {
+    width: 30px;
+  }
+
+  .step-name-long {
+    width: 80px;
+    height: 53px;
+    margin-left: -1px;
+  }
+
+  .step-name-short {
+    padding-left: 7px;
+    width: 58px;
+  }
+
+  .step-number {
+    margin-left: -7px;
+    width: 24px;
+  }
+
+  .step-number p {
+    font-size: 14px;
+    padding-top: 13px;
+  }
+
+  .table-header-action {
+    height: auto;
+    padding-bottom: 1px;
+  }
+
+  .table-header-action .button {
+    width: 100%;
+    padding: 10px 20px 11px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 7px;
+  }
+
+  #step1 {
+    width: 33%;
+  }
+
+  #step2 {
+    width: 34%;
+  }
+
+  #step4 {
+    width: 33%;
+  }
+}
+
+/* landscape iPad - 10 inch tablet */
+@media only screen and (max-width: 1024px) {
+  form.custom .one.columns .control-with-trailing-icon,
+  form.custom .two.columns .control-with-trailing-icon {
+    width: 100% !important;
+  }
+  form.custom .three.columns .control-with-trailing-icon {
+    width: 77% !important;
+  }
+  form.custom .four.columns .control-with-trailing-icon {
+    width: 80% !important;
+  }
+  form.custom .five.columns .control-with-trailing-icon {
+    width: 85% !important;
+  }
+  form.custom .six.columns .control-with-trailing-icon,
+  form.custom .seven.columns .control-with-trailing-icon,
+  form.custom .eight.columns .control-with-trailing-icon,
+  form.custom .nine.columns .control-with-trailing-icon {
+    width: 90% !important;
+  }
+  form.custom .ten.columns .control-with-trailing-icon,
+  form.custom .eleven.columns .control-with-trailing-icon,
+  form.custom .twelve.columns .control-with-trailing-icon {
+    width: 95% !important;
+  }
+}
+
+/* landscape Andriod tablet ~10 inch tablet */
+@media only screen and (max-width: 960px) {
+  .footer-logo-iphone {
+    display: none;
+  }
+
+  .inside-filter-txt {
+    font-size: 12px;
+  }
+
+  .inside-filter-icon .icon- {
+    font-size: 12px;
+    line-height: 24px;
+    color: #676767;
+    vertical-align: bottom;
+  }
+
+  .top-bar ul > li {
+    float: left;
+  }
+
+  .trademark {
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 325px;
+    text-align: center;
+  }
+
+  #advanced_search {
+    padding: 10px 5px 0 5px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .tabs {
+    list-style: none;
+    border-bottom: 0;
+    display: block;
+    height: 120px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    /*background-color: pink;*/
+  }
+
+  .tabs dd, .tabs li {
+    width: 100%;
+    border: solid 1px #717171;
+    margin-left: 0;
+    margin-top: -2px;
+  }
+
+  .tabs dd.active, .tabs li.active {
+    border-top: 1px solid #717171;
+    margin-top: -1px;
+    border-bottom: 1px solid #717171;
+    border-left: 4px solid #717171;
+  }
+
+  .top-bar ul.left>li, .top-bar ul.right>li {
+    display: block;
+    float: left;
+    margin: 0 !important;
+  }
+
+  .top-bar ul > li.has-dropdown .dropdown {
+    margin: 0;
+    padding: 0;
+    background: white;
+    visibility: hidden;
+    z-index: 99 !important;
+    width: auto;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .top-bar ul>li.has-dropdown a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: #fff transparent transparent transparent;
+    margin-right: 5px;
+    margin-top: -1.5px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .top-bar {
+    overflow: visible;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 855px) {
+
+}
+
+/* portait iPad - 10 inch tablet */
+@media only screen and (max-width: 768px) {
+  button.button{
+    width: auto;
+    padding: 10px 20px 11px;
+  }
+
+  form.custom .one.columns .control-with-trailing-icon,
+  form.custom .two.columns .control-with-trailing-icon {
+    width: 100% !important;
+  }
+  form.custom .three.columns .control-with-trailing-icon,
+  form.custom .four.columns .control-with-trailing-icon{
+    width: 80% !important;
+  }
+  form.custom .five.columns .control-with-trailing-icon,
+  form.custom .six.columns .control-with-trailing-icon {
+    width: 85% !important;
+  }
+  form.custom .seven.columns .control-with-trailing-icon,
+  form.custom .eight.columns .control-with-trailing-icon,
+  form.custom .nine.columns .control-with-trailing-icon,
+  form.custom .ten.columns .control-with-trailing-icon,
+  form.custom .eleven.columns .control-with-trailing-icon,
+  form.custom .twelve.columns .control-with-trailing-icon {
+    width: 90% !important;
+  }
+
+  .avatar {
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 7px;
+    background-color: white;
+    border: 1px solid #27435a;
+    margin-top: 3px;
+  }
+
+  .breadcrumbs-container {
+    padding: 0;
+  }
+
+  .breadcrumbs-list-container {
+    float: left;
+    height: 43px;
+    width: 90%;
+    padding-top: 3px;
+  }
+
+  .button {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px 11px;
+  }
+
+  .content-container {
+    border-left: none;
+  }
+  .cancel-link{
+    line-height: 16px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom:  8px;
+  }
+
+  .dropdown-profile {
+    margin-top: -7px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .left-split-container{
+    margin-left: -100%;
+  }
+
+  .logo {
+    height: 38px;
+    width: 194px;
+    margin-top: 0;
+    background-image: url("../images/logo-phone.png");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    position: relative;
+    top: 3px;
+  }
+
+  .modal-header{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .modal-footer {
+    height:auto;
+    padding-bottom: 1px;
+    line-height: 36px;
+  }
+
+  .panel-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .panel-wrapper-grey-tree {
+    border-right: 0;
+    background-color: #f0f0f0;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    min-height: auto;
+    margin-left: 1px;
+    width: 100%;
+  }
+
+  .panel-header{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .panel-footer {
+    height:auto;
+    padding-bottom: 1px;
+  }
+
+  .panel-footer .radius.button{
+    width:100%;
+  }
+
+  .profile-container {
+    float: right;
+    height: 30px;
+    width: 50px;
+    margin-top: -34px;
+  }
+
+  .reveal-modal,
+  .reveal-modal.small,
+  .reveal-modal.medium,
+  .reveal-modal.large,
+  .reveal-modal.xlarge {
+    width: 320px;
+    top: 100px;
+    left: 50%;
+    margin-left: -40%;
+    padding: 0 0 0 0;
+    height: auto;
+  }
+
+  .reveal-modal>:first-child {
     margin-top: -20px;
   }
 
-  /* END MISC */
-  /* **************************************** */
-
-  /* **************************************** */
-  /* MEDIA QUERIES */
-
-  @media only screen and (min-width: 768px) and (max-width: 1920px) {
-
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1168px) {
-
+  .reveal-modal .close-reveal-modal:not(.button) {
+    top:10px;
   }
 
-
-  @media only screen and (max-width: 1168px) {
-    ul.button-group {
-      width: 100%;
-      margin: 0;
-    }
-
-    ul.button-group li {
-      margin: 0;
-      width: 50%;
-    }
-
-    ul.button-group li:first-child {
-      margin-left: 0;
-      margin-right: -1px;
-    }
-
-    .filter-action-icons {
-      float: left;
-      height: 23px;
-      /*background-color: red;*/
-      width: 100%;
-    }
-
-    .filter-edit-icon {
-      margin-left: 0;
-    }
-
-    .step-name {
-      width: 96px;
-      padding-left: 8px;
-    }
-
-    .step-name-long {
-      width: 90px;
-      margin-top: -12px;
-    }
-
-    .step-completion {
-      width: 30px;
-    }
-
-    .step-name-long {
-      width: 80px;
-      height: 53px;
-      margin-left: -1px;
-    }
-
-    .step-name-short {
-      padding-left: 7px;
-      width: 58px;
-    }
-
-    .step-number {
-      margin-left: -7px;
-      width: 24px;
-    }
-
-    .step-number p {
-      font-size: 14px;
-      padding-top: 13px;
-    }
-
-    .table-header-action {
-      height: auto;
-      padding-bottom: 1px;
-    }
-
-    .table-header-action .button {
-      width: 100%;
-      padding: 10px 20px 11px;
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 7px;
-    }
-
-    #step1 {
-      width: 33%;
-    }
-
-    #step2 {
-      width: 34%;
-    }
-
-    #step4 {
-      width: 33%;
-    }
+  .row .left-split-container{
+    margin-left: 0% !important;
+  }
+  .row .right-split-container{
+    width: 75% !important;
   }
 
-  /* landscape iPad - 10 inch tablet */
-  @media only screen and (max-width: 1024px) {
-    form.custom .one.columns .control-with-trailing-icon,
-    form.custom .two.columns .control-with-trailing-icon {
-      width: 100% !important;
-    }
-    form.custom .three.columns .control-with-trailing-icon {
-      width: 77% !important;
-    }
-    form.custom .four.columns .control-with-trailing-icon {
-      width: 80% !important;
-    }
-    form.custom .five.columns .control-with-trailing-icon {
-      width: 85% !important;
-    }
-    form.custom .six.columns .control-with-trailing-icon,
-    form.custom .seven.columns .control-with-trailing-icon,
-    form.custom .eight.columns .control-with-trailing-icon,
-    form.custom .nine.columns .control-with-trailing-icon {
-      width: 90% !important;
-    }
-    form.custom .ten.columns .control-with-trailing-icon,
-    form.custom .eleven.columns .control-with-trailing-icon,
-    form.custom .twelve.columns .control-with-trailing-icon {
-      width: 95% !important;
-    }
+  .row .right-split-container{
+    width: 100%;
   }
 
-  /* landscape Andriod tablet ~10 inch tablet */
-  @media only screen and (max-width: 960px) {
-    .footer-logo-iphone {
-      display: none;
-    }
-
-    .inside-filter-txt {
-      font-size: 12px;
-    }
-
-    .inside-filter-icon .icon- {
-      font-size: 12px;
-      line-height: 24px;
-      color: #676767;
-      vertical-align: bottom;
-    }
-
-    .top-bar ul > li {
-      float: left;
-    }
-
-    .trademark {
-      margin-top: 4px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 325px;
-      text-align: center;
-    }
-
-    #advanced_search {
-      padding: 10px 5px 0 5px;
-    }
+  .step-number {
+    height: 30px;
+    width: 37px;
+    margin-left: -4px;
   }
 
-  @media only screen and (max-width: 940px) {
-    .tabs {
-      list-style: none;
-      border-bottom: 0;
-      display: block;
-      height: 120px;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 20px;
-      /*background-color: pink;*/
-    }
-
-    .tabs dd, .tabs li {
-      width: 100%;
-      border: solid 1px #717171;
-      margin-left: 0;
-      margin-top: -2px;
-    }
-
-    .tabs dd.active, .tabs li.active {
-      border-top: 1px solid #717171;
-      margin-top: -1px;
-      border-bottom: 1px solid #717171;
-      border-left: 4px solid #717171;
-    }
-
-    .top-bar ul.left>li, .top-bar ul.right>li {
-      display: block;
-      float: left;
-      margin: 0 !important;
-    }
-
-    .top-bar ul > li.has-dropdown .dropdown {
-      margin: 0;
-      padding: 0;
-      background: white;
-      visibility: hidden;
-      z-index: 99 !important;
-      width: auto;
-      left: auto !important;
-      right: auto !important;
-    }
-
-    .top-bar ul>li.has-dropdown a:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 0;
-      border: solid 5px;
-      border-color: #fff transparent transparent transparent;
-      margin-right: 5px;
-      margin-top: -1.5px;
-      position: absolute;
-      top: 50%;
-    }
-
-    .top-bar {
-      overflow: visible;
-    }
+  .step-name {
+    width: 91px;
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 855px) {
-
+  .toggle-nav-mobile {
+    display: none;
   }
 
-  /* portait iPad - 10 inch tablet */
-  @media only screen and (max-width: 768px) {
-    button.button{
-      width: auto;
-      padding: 10px 20px 11px;
-    }
-
-    form.custom .one.columns .control-with-trailing-icon,
-    form.custom .two.columns .control-with-trailing-icon {
-      width: 100% !important;
-    }
-    form.custom .three.columns .control-with-trailing-icon,
-    form.custom .four.columns .control-with-trailing-icon{
-      width: 80% !important;
-    }
-    form.custom .five.columns .control-with-trailing-icon,
-    form.custom .six.columns .control-with-trailing-icon {
-      width: 85% !important;
-    }
-    form.custom .seven.columns .control-with-trailing-icon,
-    form.custom .eight.columns .control-with-trailing-icon,
-    form.custom .nine.columns .control-with-trailing-icon,
-    form.custom .ten.columns .control-with-trailing-icon,
-    form.custom .eleven.columns .control-with-trailing-icon,
-    form.custom .twelve.columns .control-with-trailing-icon {
-      width: 90% !important;
-    }
-
-    .avatar {
-      height: 30px;
-      width: 30px;
-      float: left;
-      margin-right: 7px;
-      background-color: white;
-      border: 1px solid #27435a;
-      margin-top: 3px;
-    }
-
-    .breadcrumbs-container {
-      padding: 0;
-    }
-
-    .breadcrumbs-list-container {
-      float: left;
-      height: 43px;
-      width: 90%;
-      padding-top: 3px;
-    }
-
-    .button {
-      margin-bottom: 5px;
-      display: inline-block;
-      width: auto;
-      padding: 10px 20px 11px;
-    }
-
-    .content-container {
-      border-left: none;
-    }
-    .cancel-link{
-      line-height: 16px;
-      text-align: center;
-      margin-top: 2px;
-      margin-bottom:  8px;
-    }
-
-    .dropdown-profile {
-      margin-top: -7px;
-      cursor: pointer;
-      float: left;
-    }
-
-    .left-split-container{
-      margin-left: -100%;
-    }
-
-    .logo {
-      height: 38px;
-      width: 194px;
-      margin-top: 0;
-      background-image: url("../images/logo-phone.png");
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      float: none;
-      position: relative;
-      top: 3px;
-    }
-
-    .modal-header{
-      width: 100%;
-      margin-left: 0;
-    }
-
-    .modal-footer {
-      height:auto;
-      padding-bottom: 1px;
-      line-height: 36px;
-    }
-
-    .panel-wrapper {
-      margin-bottom: 15px;
-    }
-
-    .panel-wrapper-grey-tree {
-      border-right: 0;
-      background-color: #f0f0f0;
-      height: auto;
-      overflow: hidden;
-      padding-bottom: 10px;
-      min-height: auto;
-      margin-left: 1px;
-      width: 100%;
-    }
-
-    .panel-header{
-      width: 100%;
-      margin-left: 0;
-    }
-
-    .panel-footer {
-      height:auto;
-      padding-bottom: 1px;
-    }
-
-    .panel-footer .radius.button{
-      width:100%;
-    }
-
-    .profile-container {
-      float: right;
-      height: 30px;
-      width: 50px;
-      margin-top: -34px;
-    }
-
-    .reveal-modal,
-    .reveal-modal.small,
-    .reveal-modal.medium,
-    .reveal-modal.large,
-    .reveal-modal.xlarge {
-      width: 320px;
-      top: 100px;
-      left: 50%;
-      margin-left: -40%;
-      padding: 0 0 0 0;
-      height: auto;
-    }
-
-    .reveal-modal>:first-child {
-      margin-top: -20px;
-    }
-
-    .reveal-modal .close-reveal-modal:not(.button) {
-      top:10px;
-    }
-
-    .row .left-split-container{
-      margin-left: 0% !important;
-    }
-    .row .right-split-container{
-      width: 75% !important;
-    }
-
-    .row .right-split-container{
-      width: 100%;
-    }
-
-    .step-number {
-      height: 30px;
-      width: 37px;
-      margin-left: -4px;
-    }
-
-    .step-name {
-      width: 91px;
-    }
-
-    .toggle-nav-mobile {
-      display: none;
-    }
-
-    .toggle-nav-tablet {
-      width: 48px;
-      height: 42px;
-      background-image: url("../images/toggle-nav-bgrd.png");
-      float: left;
-      border-right: 1px solid #717172;
-    }
-
-    .toggle-btn {
-      height: 26px;
-      width: 36px;
-      margin-top: 9px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      background-image: url("../images/toggle-btn.png");
-    }
-
-    .toggle-btn:active{
-      height: 26px;
-      width: 36px;
-      margin-top: 9px;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      background-image: url("../images/toggle-btn-active.png");
-    }
-
-    .top-bar {
-      height: 44px;
-      background-image: url("../images/header-bg-phone.png");
-      margin: 0;
-    }
-
-    .top-nav{
-      display: none;
-    }
-
-    .toggle-nav-mobile {
-      width: 48px;
-      height: 44px;
-      background-image: url("../images/toggle-nav-bgrd.png");
-      float: left;
-      border-right: 1px solid #717172;
-    }
-
-    #step1 {
-      width: 33%;
-    }
-
-    #step2 {
-      width: 34%;
-    }
-
-    #step4 {
-      width: 33%;
-    }
+  .toggle-nav-tablet {
+    width: 48px;
+    height: 42px;
+    background-image: url("../images/toggle-nav-bgrd.png");
+    float: left;
+    border-right: 1px solid #717172;
   }
 
-  /* portait Andriod phone >4 inch screen */
-  @media only screen and (max-width: 640px) {
-    form.custom .one.columns .control-with-trailing-icon,
-    form.custom .two.columns .control-with-trailing-icon,
-    form.custom .three.columns .control-with-trailing-icon,
-    form.custom .four.columns .control-with-trailing-icon,
-    form.custom .five.columns .control-with-trailing-icon,
-    form.custom .six.columns .control-with-trailing-icon,
-    form.custom .seven.columns .control-with-trailing-icon,
-    form.custom .eight.columns .control-with-trailing-icon,
-    form.custom .nine.columns .control-with-trailing-icon,
-    form.custom .ten.columns .control-with-trailing-icon,
-    form.custom .eleven.columns .control-with-trailing-icon,
-    form.custom .twelve.columns .control-with-trailing-icon {
-      width: 93% !important;
-    }
+  .toggle-btn {
+    height: 26px;
+    width: 36px;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-image: url("../images/toggle-btn.png");
   }
 
-  /* portait Andriod phone <4 inch screen */
-  @media only screen and (max-width: 600px) {
-
+  .toggle-btn:active{
+    height: 26px;
+    width: 36px;
+    margin-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-image: url("../images/toggle-btn-active.png");
   }
 
-  /* responsive to allow smooth transition from large to small */
-  @media only screen and (max-width: 525px) {
-
+  .top-bar {
+    height: 44px;
+    background-image: url("../images/header-bg-phone.png");
+    margin: 0;
   }
 
-  /* landscape iPhone */
-  @media only screen and (max-width: 480px) {
-    button.button {
-      width: auto;
-      padding: 10px 20px 11px;
-    }
-
-    form.custom .one.columns .control-with-trailing-icon,
-    form.custom .two.columns .control-with-trailing-icon,
-    form.custom .three.columns .control-with-trailing-icon,
-    form.custom .four.columns .control-with-trailing-icon,
-    form.custom .five.columns .control-with-trailing-icon,
-    form.custom .six.columns .control-with-trailing-icon,
-    form.custom .seven.columns .control-with-trailing-icon,
-    form.custom .eight.columns .control-with-trailing-icon,
-    form.custom .nine.columns .control-with-trailing-icon,
-    form.custom .ten.columns .control-with-trailing-icon,
-    form.custom .eleven.columns .control-with-trailing-icon,
-    form.custom .twelve.columns .control-with-trailing-icon {
-      width: 90% !important;
-    }
-
-    form.custom div.custom.dropdown {
-      float: left;
-      margin-right: 5px;
-    }
-
-    table.nested-table {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
-    .button {
-      margin-bottom: 5px;
-      display: inline-block;
-      width: auto;
-      padding: 10px 20px 11px;
-    }
-
-    .cancel-link {
-      line-height: 16px;
-      text-align: center;
-      margin-top: 2px;
-      margin-bottom: 8px;
-    }
-
-    .custom-dropdown-large {
-      width: 100% !important;
-      font-size: 12px;
-    }
-
-    .custom-dropdown-medium {
-      width: 100% !important;
-      font-size: 12px;
-    }
-
-    .custom-dropdown-small {
-      width: 100% !important;
-      font-size: 12px;
-    }
-
-    .export-print {
-      width: 52%;
-      float: right;
-      margin-right: 6px;
-      margin-top: 12px;
-    }
-
-    .icon-after-dropdown-field p {
-      margin-right: 10px;
-    }
-
-    .left-margin-clear {
-      margin-left: -15px;
-    }
-
-    .modal-footer {
-      padding-bottom: 1px;
-      line-height: 36px;
-      height: auto;
-    }
-
-    .modal-header {
-      width: 100%;
-      margin-left: 0;
-    }
-
-    .panel-wrapper {
-      margin-bottom: 15px;
-    }
-
-    .panel-wrapper-grey-tree {
-      border-right: 0;
-      background-color: #f0f0f0;
-      height: auto;
-      overflow: hidden;
-      padding-bottom: 10px;
-      min-height: auto;
-      margin-left: 1px;
-    }
-
-    .panel-header{
-      width: 100%;
-      margin-left: 0;
-    }
-
-    .panel-footer {
-      height: auto;
-      padding-bottom: 1px;
-    }
-
-    .panel-footer .radius.button {
-      width: 100%;
-    }
-
-    .result-title {
-      width: 42%;
-      float: left;
-      margin-left: 9px;
-      margin-top: 12px;
-    }
-
-    .reveal-modal,
-    .reveal-modal.small,
-    .reveal-modal.medium,
-    .reveal-modal.large,
-    .reveal-modal.xlarge {
-      width: 320px;
-      top: 100px;
-      left: 50%;
-      margin-left: -40%;
-      padding: 0 0 0 0;
-      height: auto;
-    }
-
-    .reveal-modal>:first-child {
-      margin-top: -20px;
-    }
-
-    .reveal-modal .close-reveal-modal:not(.button) {
-      top: 10px;
-    }
-
-    .save-template-btn {
-      float: none;
-      width: 100%;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
-
-    .tabs {
-      list-style: none;
-      border-bottom: 0;
-      display: block;
-      height: 120px;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 20px;
-      /*background-color: pink;*/
-    }
-
-    .tabs dd, .tabs li {
-      width: 100%;
-      border: solid 1px #717171;
-      margin-left: 0;
-      margin-top: -2px;
-    }
-
-    .tabs dd.active, .tabs li.active {
-      border-top: 1px solid #717171;
-      margin-top: -1px;
-      border-bottom: 1px solid #717171;
-      border-left: 4px solid #717171;
-    }
-
-    #step1 {
-      border-right: 1px solid #717171;
-      border-left: 1px solid #717171;
-      border-top: 1px solid #717171;
-      border-bottom: none;
-    }
-
-    #step2 {
-      border-right: 1px solid #717171;
-      border-left: 1px solid #717171;
-      border-top: 1px solid #717171;
-      border-bottom: none;
-    }
-
-    #step4 {
-      border-right: 1px solid #717171;
-      border-left: 1px solid #717171;
-      border-top: 1px solid #717171;
-      border-bottom: 1px solid #717171;
-    }
+  .top-nav{
+    display: none;
   }
 
-  /* landscape first gen Android phones */
-  @media only screen and (max-width: 470px) {
-
+  .toggle-nav-mobile {
+    width: 48px;
+    height: 44px;
+    background-image: url("../images/toggle-nav-bgrd.png");
+    float: left;
+    border-right: 1px solid #717172;
   }
 
-  /* portrait iPhone */
-  @media only screen and (max-width: 320px) {
-
+  #step1 {
+    width: 33%;
   }
+
+  #step2 {
+    width: 34%;
+  }
+
+  #step4 {
+    width: 33%;
+  }
+}
+
+/* portait Andriod phone >4 inch screen */
+@media only screen and (max-width: 640px) {
+  form.custom .one.columns .control-with-trailing-icon,
+  form.custom .two.columns .control-with-trailing-icon,
+  form.custom .three.columns .control-with-trailing-icon,
+  form.custom .four.columns .control-with-trailing-icon,
+  form.custom .five.columns .control-with-trailing-icon,
+  form.custom .six.columns .control-with-trailing-icon,
+  form.custom .seven.columns .control-with-trailing-icon,
+  form.custom .eight.columns .control-with-trailing-icon,
+  form.custom .nine.columns .control-with-trailing-icon,
+  form.custom .ten.columns .control-with-trailing-icon,
+  form.custom .eleven.columns .control-with-trailing-icon,
+  form.custom .twelve.columns .control-with-trailing-icon {
+    width: 93% !important;
+  }
+}
+
+/* portait Andriod phone <4 inch screen */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* responsive to allow smooth transition from large to small */
+@media only screen and (max-width: 525px) {
+
+}
+
+/* landscape iPhone */
+@media only screen and (max-width: 480px) {
+  button.button {
+    width: auto;
+    padding: 10px 20px 11px;
+  }
+
+  form.custom .one.columns .control-with-trailing-icon,
+  form.custom .two.columns .control-with-trailing-icon,
+  form.custom .three.columns .control-with-trailing-icon,
+  form.custom .four.columns .control-with-trailing-icon,
+  form.custom .five.columns .control-with-trailing-icon,
+  form.custom .six.columns .control-with-trailing-icon,
+  form.custom .seven.columns .control-with-trailing-icon,
+  form.custom .eight.columns .control-with-trailing-icon,
+  form.custom .nine.columns .control-with-trailing-icon,
+  form.custom .ten.columns .control-with-trailing-icon,
+  form.custom .eleven.columns .control-with-trailing-icon,
+  form.custom .twelve.columns .control-with-trailing-icon {
+    width: 90% !important;
+  }
+
+  form.custom div.custom.dropdown {
+    float: left;
+    margin-right: 5px;
+  }
+
+  table.nested-table {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .button {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px 11px;
+  }
+
+  .cancel-link {
+    line-height: 16px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 8px;
+  }
+
+  .custom-dropdown-large {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .custom-dropdown-medium {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .custom-dropdown-small {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .export-print {
+    width: 52%;
+    float: right;
+    margin-right: 6px;
+    margin-top: 12px;
+  }
+
+  .icon-after-dropdown-field p {
+    margin-right: 10px;
+  }
+
+  .left-margin-clear {
+    margin-left: -15px;
+  }
+
+  .modal-footer {
+    padding-bottom: 1px;
+    line-height: 36px;
+    height: auto;
+  }
+
+  .modal-header {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .panel-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .panel-wrapper-grey-tree {
+    border-right: 0;
+    background-color: #f0f0f0;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+    min-height: auto;
+    margin-left: 1px;
+  }
+
+  .panel-header{
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .panel-footer {
+    height: auto;
+    padding-bottom: 1px;
+  }
+
+  .panel-footer .radius.button {
+    width: 100%;
+  }
+
+  .result-title {
+    width: 42%;
+    float: left;
+    margin-left: 9px;
+    margin-top: 12px;
+  }
+
+  .reveal-modal,
+  .reveal-modal.small,
+  .reveal-modal.medium,
+  .reveal-modal.large,
+  .reveal-modal.xlarge {
+    width: 320px;
+    top: 100px;
+    left: 50%;
+    margin-left: -40%;
+    padding: 0 0 0 0;
+    height: auto;
+  }
+
+  .reveal-modal>:first-child {
+    margin-top: -20px;
+  }
+
+  .reveal-modal .close-reveal-modal:not(.button) {
+    top: 10px;
+  }
+
+  .save-template-btn {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .tabs {
+    list-style: none;
+    border-bottom: 0;
+    display: block;
+    height: 120px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    /*background-color: pink;*/
+  }
+
+  .tabs dd, .tabs li {
+    width: 100%;
+    border: solid 1px #717171;
+    margin-left: 0;
+    margin-top: -2px;
+  }
+
+  .tabs dd.active, .tabs li.active {
+    border-top: 1px solid #717171;
+    margin-top: -1px;
+    border-bottom: 1px solid #717171;
+    border-left: 4px solid #717171;
+  }
+
+  #step1 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: none;
+  }
+
+  #step2 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: none;
+  }
+
+  #step4 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: 1px solid #717171;
+  }
+}
+
+/* landscape first gen Android phones */
+@media only screen and (max-width: 470px) {
+
+}
+
+/* portrait iPhone */
+@media only screen and (max-width: 320px) {
+
+}
 
 
 /* END MEDIA QUERIES
