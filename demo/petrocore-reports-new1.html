@@ -33,27 +33,24 @@
     <script src="../javascripts/modernizr.foundation.js"></script>
 
     <script type="text/javascript">
+      function show_hide_advanced(id) {
+        var advanced_panel = document.getElementById(id);
+        advanced_arrow = document.getElementById('arrowdown');
 
-    function show_hide_advanced(id) {
-      var advanced_panel = document.getElementById(id);
-      advanced_arrow = document.getElementById('arrowdown');
-
-
-      if(advanced_panel.style.display == 'block')
-
-        {	advanced_panel.style.display = 'none';
-      document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-      advanced_arrow.style.position = 'relative';
-      advanced_arrow.style.top = '0px';
-    }
-    else
-      {	advanced_panel.style.display = 'block';
-    document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-    advanced_arrow.style.position = 'relative';
-    advanced_arrow.style.top = '7px';
-  }
-}
-
+        if(advanced_panel.style.display == 'block') {
+          advanced_panel.style.display = 'none';
+          document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+          advanced_arrow.style.position = 'relative';
+          advanced_arrow.style.top = '0px';
+        }
+        else
+        {
+          advanced_panel.style.display = 'block';
+          document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+          advanced_arrow.style.position = 'relative';
+          advanced_arrow.style.top = '7px';
+        }
+      }
 
 $(document).ready(function(){
 
