@@ -40,27 +40,22 @@
 
 
     <script type="text/javascript">
-
     function show_hide_advanced(id) {
       var advanced_panel = document.getElementById(id);
       advanced_arrow = document.getElementById('arrowdown');
 
-
-      if(advanced_panel.style.display == 'block')
-
-        { advanced_panel.style.display = 'none';
-      document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-      advanced_arrow.style.position = 'relative';
-      advanced_arrow.style.top = '0px';
+      if(advanced_panel.style.display == 'block') {
+        advanced_panel.style.display = 'none';
+        document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '0px';
+      } else {
+        advanced_panel.style.display = 'block';
+        document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '7px';
+      }
     }
-    else
-      { advanced_panel.style.display = 'block';
-    document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-    advanced_arrow.style.position = 'relative';
-    advanced_arrow.style.top = '7px';
-  }
-}
-
 
 $(document).ready(function(){
 
@@ -115,19 +110,16 @@ $(document).ready(function(){
 <body>
 
   <!--***** PETROCORE HEADER *****-->
-
   <nav class="top-bar">
     <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
     <div class="logo"></div>
     <div class="profile-container">
       <div class="avatar"></div>
-      <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+
       <div class="top-nav">
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
-
           <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
-
           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
             <ul class="dropdown user">
               <li><a href="petrocore-person-details-self.html">Settings</a></li>
@@ -136,7 +128,9 @@ $(document).ready(function(){
               <li><a href="#">Role History</a></li>
             </ul>
           </li>
-          <li><p class="bar">&#124;</p></li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
 
           <li class="has-dropdown"><a href="#">Language</a>
             <ul class="dropdown language">
@@ -148,11 +142,14 @@ $(document).ready(function(){
               <li><a href="#">Polski</a></li>
             </ul>
           </li>
-          <li><p class="bar">&#124;</p></li>
-
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
 
           <li class="top-nav-links"><a href="#">Help</a></li>
-          <li><p class="bar">&#124;</p></li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
           <li class="top-nav-links"><a href="#">Logout</a></li>
         </ul>
       </div>

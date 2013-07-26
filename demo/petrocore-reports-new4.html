@@ -33,68 +33,68 @@
       
   <script type="text/javascript">
   
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-		
-		
-		if(advanced_panel.style.display == 'block')
-		
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
-		}
-	}	
+  function show_hide_advanced(id) {
+    var advanced_panel = document.getElementById(id);
+      advanced_arrow = document.getElementById('arrowdown');
+    
+    
+    if(advanced_panel.style.display == 'block')
+    
+    { advanced_panel.style.display = 'none';
+      document.getElementById('arrowdown').innerHTML = '&#xf0dd;';  
+      advanced_arrow.style.position = 'relative';
+      advanced_arrow.style.top = '0px';           
+    }
+    else
+    { advanced_panel.style.display = 'block';
+      document.getElementById('arrowdown').innerHTML = '&#xf0de;';  
+      advanced_arrow.style.position = 'relative';
+      advanced_arrow.style.top = '7px';           
+    }
+  } 
  
  
-	$(document).ready(function(){
+  $(document).ready(function(){
 
-		var notifs = $("#user-notifications").text();
-		var notifs_exist = true;
+    var notifs = $("#user-notifications").text();
+    var notifs_exist = true;
 
-	   	$('#notification_btn').bind('click', function (event) {
-				
-			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
-				$('#overlay').show();
-				$('#overlay').click(function(){
-						$('.notifications-popup').hide();
-						$('#overlay').hide();							
-				});
-					
-			} else {
-				$('.notifications-popup').hide();
-				$('#overlay').hide();															
-				}
-	    });	
-			
-		$('.notification .anotification').click (function() {
-			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
-			$("#user-notifications").html(notifs-1);
-				
-			if (notifs == 1) {
-				notifs_exist = false;								
-			    $('.notification-btn').css('background','#c0c2c1');
-			    $('.notification-btn').css('border','1px solid #616161');
-			    $('.notification-btn').css('color','#404040');
-			    $('.notifications-area').html('You have "0" Notifications');
-			    $('.notifications-area').css('text-align','center');
-			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
-		});
-			
-	});
-			
+      $('#notification_btn').bind('click', function (event) {
+        
+      if (notifs_exist == true) {
+          $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+          $('.notifications-popup').css('top',event.pageY+30);
+        $('.notifications-popup').toggle(); 
+        $('#overlay').show();
+        $('#overlay').click(function(){
+            $('.notifications-popup').hide();
+            $('#overlay').hide();             
+        });
+          
+      } else {
+        $('.notifications-popup').hide();
+        $('#overlay').hide();                             
+        }
+      }); 
+      
+    $('.notification .anotification').click (function() {
+      $(this).parent().remove();
+      notifs = $("#user-notifications").text();       
+      $("#user-notifications").html(notifs-1);
+        
+      if (notifs == 1) {
+        notifs_exist = false;               
+          $('.notification-btn').css('background','#c0c2c1');
+          $('.notification-btn').css('border','1px solid #616161');
+          $('.notification-btn').css('color','#404040');
+          $('.notifications-area').html('You have "0" Notifications');
+          $('.notifications-area').css('text-align','center');
+          $('.notifications-area').css('padding','10px 0 10px 0');
+      }                   
+    });
+      
+  });
+      
   </script>
 
 </head>
@@ -112,7 +112,7 @@
           <ul>
             <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-		    <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+        <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
             <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -172,44 +172,44 @@
       </div>
       <!--***** SEARCH *****-->   
             
-	  <div id="advanced_search" class="display-none">
-	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
-		<p><strong>Advanced Search</strong></p>
+    <div id="advanced_search" class="display-none">
+    <!--This is a Advanced Search panel that is hidden by default-->
+                    
+    <p><strong>Advanced Search</strong></p>
                 
-			<form class="custom search-type">                  
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
-				<select class="expand" class="custom-dropdown" id="customDropdown">
-					<option SELECTED>Person</option>
-					<option>Group</option>
-					<option>Position</option>                            
-					<option>Map</option>
-					<option>Skill Group</option>
-					<option>Skill</option>
-					<option>Skill Description</option>
-					<option>Development Activity</option>
-				</select>                          
+      <form class="custom search-type">                  
+        <label id="search-type-label" for="customDropdown">Search Type:</label>  
+        <select class="expand" class="custom-dropdown" id="customDropdown">
+          <option SELECTED>Person</option>
+          <option>Group</option>
+          <option>Position</option>                            
+          <option>Map</option>
+          <option>Skill Group</option>
+          <option>Skill</option>
+          <option>Skill Description</option>
+          <option>Development Activity</option>
+        </select>                          
                                                         
-			</form>                    
+      </form>                    
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->    
+        <!--***** ADD FILTER *****-->    
                 <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-				<!--***** ADD FILTER *****-->
+        <!--***** ADD FILTER *****-->
                     
-				<div class="add-filter-area">
+        <div class="add-filter-area">
                           
-					<hr class="petrocore-hr">
-                    	<ul id="filters">
+          <hr class="petrocore-hr">
+                      <ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+     <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
+     <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
                
-             		    </ul>
+                    </ul>
                 </div>
-			</div>
-		</div>             
+      </div>
+    </div>             
 
       <!--***** MAIN NAVIGATION *****-->
         <div class="left-nav-container">
@@ -437,36 +437,36 @@
 
 <div class="notifications-popup">
 
-	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
+  <div class="arrow"></div>
+  <div class="arrow-border"></div>                
                 
-	<div class="notifications-title">
-    	<h5>Notifications</h5>
-	</div>
+  <div class="notifications-title">
+      <h5>Notifications</h5>
+  </div>
 
-	<div class="notifications-area">
+  <div class="notifications-area">
                     
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
-			<hr class="hr-notification">
-	    </div>
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 1 has been generated</p>
+          <a href="#">View Report</a> 
+      <hr class="hr-notification">
+      </div>
                         
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
-			<hr class="hr-notification">
-		</div>
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 2 has been generated</p>
+      <a href="#">View Report</a> 
+      <hr class="hr-notification">
+    </div>
                         
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 3 has been generated</p>
+      <a href="#">View Report</a> 
+    </div>                               
 
-	</div>
+  </div>
 </div>         
 
 
