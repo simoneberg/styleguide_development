@@ -582,7 +582,7 @@ h4 {
   width: auto;
 }
 
-.top-bar ul > li.has-dropdown .dropdown li: last-child {
+.top-bar ul > li.has-dropdown .dropdown li:last-child {
   padding-bottom: 0;
 }
 
@@ -1354,8 +1354,8 @@ p.form-category-title-bold {
   font-weight: normal;
 }
 
-.checkbox-group>.row: last-child,
-.radio-group>.row: last-child {
+.checkbox-group>.row:last-child,
+.radio-group>.row:last-child {
   margin-bottom: 16px;
 }
 
@@ -1526,6 +1526,14 @@ form.custom div.custom.dropdown ul li.selected:after{
 
 form.custom div.custom.dropdown ul li:hover:after{
   content: "";
+}
+
+.custom.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+.custom.dropdown.modal-input-fields {
+  width: 100% !important;
 }
 
 .modal-dropdown-list {
@@ -2251,12 +2259,16 @@ ul.button-group li {
   padding-bottom: 0;
 }
 
+.panel-content-container-dashboard {
+  padding: 0 15px 0 15px;
+  min-height:250px;
+}
+
 .step-number {
   height: 30px;
   width: 37px;
   margin-left: 5px;
   text-align: center;
-  /*background-color: red;*/
   position: relative;
   float: left;
   border-right: 1px solid #b6b6b6;
@@ -2281,7 +2293,6 @@ ul.button-group li {
 .step-name {
   height: 30px;
   width: 100px;
-  /*background-color: green;*/
   position: relative;
   float: left;
   padding-left: 10px;
@@ -2315,7 +2326,6 @@ ul.button-group li {
 .step-completion {
   height: 30px;
   width: 40px;
-  /*background-color: purple;*/
   position: relative;
   float: right;
 }
@@ -2532,6 +2542,13 @@ ul.search-result-nav .grayedout-item{
 
 .export-print a{
   color: #000;
+}
+
+.result-title {
+  width:42%;
+  float:left;
+  margin-left: 9px;
+  margin-top: 12px;
 }
 
 .result-title .adv-result-title {
@@ -3023,9 +3040,21 @@ span.dropdown-arrow {
 /* **************************************** */
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 768px) and (max-width: 1920px) {
+@media only screen and (min-width: 769px) {
+  .dropdown-profile {
+    display: none;
+  }
+
+  .row .left-split-container{
+    margin-left: 0% !important;
+  }
+
+  .row .right-split-container{
+    width: 75% !important;
+  }
 
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1168px) {
 
 }
@@ -3050,7 +3079,6 @@ span.dropdown-arrow {
   .filter-action-icons {
     float: left;
     height: 23px;
-    /*background-color: red;*/
     width: 100%;
   }
 
@@ -3121,6 +3149,7 @@ span.dropdown-arrow {
 
 /* landscape iPad - 10 inch tablet */
 @media only screen and (max-width: 1024px) {
+
   form.custom .one.columns .control-with-trailing-icon,
   form.custom .two.columns .control-with-trailing-icon {
     width: 100% !important;
@@ -3190,7 +3219,6 @@ span.dropdown-arrow {
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
-    /*background-color: pink;*/
   }
 
   .tabs dd, .tabs li {
@@ -3240,14 +3268,15 @@ span.dropdown-arrow {
   .top-bar {
     overflow: visible;
   }
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 855px) {
-
 }
 
 /* portait iPad - 10 inch tablet */
 @media only screen and (max-width: 768px) {
+
   button.button{
     width: auto;
     padding: 10px 20px 11px;
@@ -3403,13 +3432,6 @@ span.dropdown-arrow {
     top:10px;
   }
 
-  .row .left-split-container{
-    margin-left: 0% !important;
-  }
-  .row .right-split-container{
-    width: 75% !important;
-  }
-
   .row .right-split-container{
     width: 100%;
   }
@@ -3516,7 +3538,7 @@ span.dropdown-arrow {
 }
 
 /* landscape iPhone */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   button.button {
     width: auto;
     padding: 10px 20px 11px;
@@ -3554,6 +3576,10 @@ span.dropdown-arrow {
     padding: 10px 20px 11px;
   }
 
+  .breadcrumbs-container {
+    display: none;
+  }
+
   .cancel-link {
     line-height: 16px;
     text-align: center;
@@ -3583,12 +3609,45 @@ span.dropdown-arrow {
     margin-top: 12px;
   }
 
+  .feedback {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 140px;
+    text-align: center;
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-logo-iphone {
+    height: 30px;
+    width: 180px;
+    background-repeat: no-repeat;
+    margin-top: 6px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+  }
+
   .icon-after-dropdown-field p {
     margin-right: 10px;
   }
 
   .left-margin-clear {
     margin-left: -15px;
+  }
+
+  .left-split-container {
+    display: block;
+    float: left;
+    margin-left: -100%;
+    background-color: green;
   }
 
   .modal-footer {
@@ -3628,6 +3687,13 @@ span.dropdown-arrow {
 
   .panel-footer .radius.button {
     width: 100%;
+  }
+
+  .petrocore-footer {
+    height: auto;
+    background-color: #f3f3f3;
+    border-top: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
   }
 
   .result-title {
@@ -3673,21 +3739,30 @@ span.dropdown-arrow {
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
-    /*background-color: pink;*/
   }
 
-  .tabs dd, .tabs li {
+  .tabs dd,
+  .tabs li {
     width: 100%;
     border: solid 1px #717171;
     margin-left: 0;
     margin-top: -2px;
   }
 
-  .tabs dd.active, .tabs li.active {
+  .tabs dd.active,
+  .tabs li.active {
     border-top: 1px solid #717171;
     margin-top: -1px;
     border-bottom: 1px solid #717171;
     border-left: 4px solid #717171;
+  }
+
+  .trademark {
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
   }
 
   #step1 {
