@@ -954,8 +954,8 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
   line-height: 1;
   margin: 0;
-  margin-left: 0;
-  margin-right: 5px;
+  /*margin-left: 0;*/
+  /*margin-right: 5px;*/
   padding: 10px 20px 11px;
   position: relative;
   text-align: center;
@@ -2639,7 +2639,8 @@ form.custom.search-type div.custom.dropdown a.selector:after{
   margin-left: -5px;
 }
 
-form.custom.search-type div.custom.dropdown:hover a.selector:after,form.custom div.custom.dropdown.open a.selector:after{
+form.custom.search-type div.custom.dropdown:hover a.selector:after,
+form.custom div.custom.dropdown.open a.selector:after{
   content: "";
   display: block;
   width: 0;
@@ -3456,10 +3457,12 @@ span.dropdown-arrow {
     width: 91px;
   }
 
+  /*
   .toggle-nav-mobile {
     display: none;
   }
-
+  */
+  
   .toggle-nav-tablet {
     width: 48px;
     height: 42px;
@@ -3504,6 +3507,11 @@ span.dropdown-arrow {
     background-image: url("../images/toggle-nav-bgrd.png");
     float: left;
     border-right: 1px solid #717172;
+  }
+
+  .visible-charts.right-chart,
+  .visible-charts.left-chart {
+    padding: 0px;
   }
 
   #step1 {
