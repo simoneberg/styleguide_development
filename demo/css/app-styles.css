@@ -1528,6 +1528,10 @@ form.custom div.custom.dropdown ul li:hover:after{
   content: "";
 }
 
+form select.custom-dropdown {
+  display: none;
+}
+
 .custom.no-margin-bottom {
   margin-bottom: 0px;
 }
@@ -1587,6 +1591,11 @@ form.custom div.custom.dropdown ul li:hover:after{
 
 /* **************************************** */
 /* TABLES */
+.table-info-icons.icon- {
+  color:#7c7c7c;
+  font-size: 16px;
+  line-height: 24px;
+}
 
 table {
   border: 1px solid #8a8a8a;
@@ -3235,7 +3244,8 @@ span.dropdown-arrow {
     border-left: 4px solid #717171;
   }
 
-  .top-bar ul.left>li, .top-bar ul.right>li {
+  .top-bar ul.left>li,
+  .top-bar ul.right>li {
     display: block;
     float: left;
     margin: 0 !important;
