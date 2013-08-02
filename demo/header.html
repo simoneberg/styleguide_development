@@ -28,31 +28,55 @@
 <body>
 
 <!--***** PETROCORE HEADER *****-->
-<nav class="top-bar">
-  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
-  <div class="logo"></div>
-  <div class="profile-container">
-    <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></li></div>
+  <nav class="top-bar">
+    <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+    <div class="logo"></div>
+    <div class="profile-container">
+      <div class="avatar"></div>
+
       <div class="top-nav">
         <ul>
-          <li class="top-nav-links"><a href="#" class="username">John Doe</a></li>
-          <li><p class="bar">&#124;</p></li>
-          <li class="top-nav-links"><a href="#">Tools</a></li>
-          <li><p class="bar">&#124;</p></li>
-          <li class="top-nav-links"><a href="#">Settings</a></li>
-          <li><p class="bar">&#124;</p></li>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+          <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+            <ul class="dropdown user">
+              <li><a href="petrocore-person-details-self.html">Settings</a></li>
+              <li><a href="#">Role Summary</a></li>
+              <li><a href="#">Account History</a></li>
+              <li><a href="#">Role History</a></li>
+            </ul>
+          </li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
+
+          <li class="has-dropdown"><a href="#">Language</a>
+            <ul class="dropdown language">
+              <li><a href="#">English</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Français</a></li>
+              <li><a href="#">Italiano</a></li>
+              <li><a href="#">Polski</a></li>
+            </ul>
+          </li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
+
           <li class="top-nav-links"><a href="#">Help</a></li>
-          <li><p class="bar">&#124;</p></li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
           <li class="top-nav-links"><a href="#">Logout</a></li>
         </ul>
       </div>
-  </div>
-</nav>
+    </div>
+  </nav>
 <!--***** PETROCORE HEADER *****-->
 
   <!-- CHEVRON HEADER -->
-  <nav class="top-bar-chevron">
+  <nav class="top-bar-chevron display-none">
     <div class="toggle-nav"><a href="#" class="toggle-btn"></a></div>
         <div class="top-nav-chevron">
           <ul>
