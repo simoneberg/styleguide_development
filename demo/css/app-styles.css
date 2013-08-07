@@ -1627,7 +1627,7 @@ table tbody tr td {
 /* DASHBOARD */
 .panel-wrapper {
   border: 1px solid #8a8a8a;
-  margin-bottom: 111px;
+  margin-bottom: 15px;
 }
 
 .panel-wrapper-grey {
@@ -3386,9 +3386,6 @@ span.dropdown-arrow {
     line-height: 36px;
   }
 
-  .panel-wrapper {
-    margin-bottom: 15px;
-  }
 
   .panel-wrapper-grey-tree {
     border-right: 0;
@@ -3677,10 +3674,6 @@ span.dropdown-arrow {
   .modal-header {
     width: 100%;
     margin-left: 0;
-  }
-
-  .panel-wrapper {
-    margin-bottom: 15px;
   }
 
   .panel-wrapper-grey-tree {
