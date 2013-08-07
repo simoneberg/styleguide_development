@@ -7,7 +7,7 @@
 
   <!-- Set the viewport width to device width for mobile -->
   <!--<meta name="viewport" content="width=device-width" />-->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <meta name="viewport" conAtent="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
 
@@ -42,7 +42,6 @@
     function show_hide_advanced(id) {
       var advanced_panel = document.getElementById(id);
       advanced_arrow = document.getElementById('arrowdown');
-
       if(advanced_panel.style.display == 'block'){
         advanced_panel.style.display = 'none';
         document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
@@ -57,14 +56,12 @@
     }
 
     $(document).ready(function(){
-
       var notifs = $("#user-notifications").text();
       var notifs_exist = true;
 
       $('#notification_btn').bind('click', function (event) {
-
         if (notifs_exist == true) {
-          $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+          $('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
           $('.notifications-popup').css('top',event.pageY+30);
           $('.notifications-popup').toggle();
           $('#overlay').show();
@@ -94,7 +91,7 @@
         }
       });
     });
-  </script>
+</script>
 
 </head>
 <body>
@@ -353,18 +350,23 @@
               <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
             </div>
 
-            <div class="four columns" id="step2">
-              <!-- <div class="step-number"><p>2</p></div> -->
-              <div class="step-name long alternate-step-number-2"><a href="petrocore-reports-edit2.html"><p>People &amp; Position</p></a></div>
+            <a href="petrocore-reports-edit2.html">
+              <div class="four columns" id="step2">
+                <!-- <div class="step-number"><p>2</p></div> -->
+                <div class="step-name long alternate-step-number-2"><p>People &amp; Position</p></div>
 
-              <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
-            </div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            </a>
 
-            <div class="four columns" id="step4">
-              <!-- <div class="step-number"><p>4</p></div> -->
-              <div class="step-name short alternate-step-numbe4"><a href="petrocore-reports-edit4.html"><p>Reports</p></a></div>
-              <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
-            </div>
+            <a href="petrocore-reports-edit4.html">
+              <div class="four columns" id="step4">
+                <!-- <div class="step-number"><p>4</p></div> -->
+                <div class="step-name short alternate-step-numbe4"><p>Reports</p></div>
+                <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
+              </div>
+            </a>
+
           </div>
         </div>
         <br>

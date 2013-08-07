@@ -38,70 +38,61 @@
     <!-- Initialize JS Plugins -->
     <script src="../javascripts/app.js"></script>
 
-
     <script type="text/javascript">
 
     function show_hide_advanced(id) {
       var advanced_panel = document.getElementById(id);
       advanced_arrow = document.getElementById('arrowdown');
-
-
-      if(advanced_panel.style.display == 'block')
-
-        {	advanced_panel.style.display = 'none';
-      document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-      advanced_arrow.style.position = 'relative';
-      advanced_arrow.style.top = '0px';
+      if(advanced_panel.style.display == 'block') {
+        advanced_panel.style.display = 'none';
+        document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '0px';
+      } else {
+        advanced_panel.style.display = 'block';
+        document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '7px';
+      }
     }
-    else
-      {	advanced_panel.style.display = 'block';
-    document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-    advanced_arrow.style.position = 'relative';
-    advanced_arrow.style.top = '7px';
-  }
-}
 
 
-$(document).ready(function(){
+    $(document).ready(function(){
+      var notifs = $("#user-notifications").text();
+      var notifs_exist = true;
 
-  var notifs = $("#user-notifications").text();
-  var notifs_exist = true;
-
-  $('#notification_btn').bind('click', function (event) {
-
-   if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-         $('.notifications-popup').css('top',event.pageY+30);
-         $('.notifications-popup').toggle();
-         $('#overlay').show();
-         $('#overlay').click(function(){
-          $('.notifications-popup').hide();
-          $('#overlay').hide();
+      $('#notification_btn').bind('click', function (event) {
+        if (notifs_exist == true) {
+            $('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
+            $('.notifications-popup').css('top',event.pageY+30);
+            $('.notifications-popup').toggle();
+            $('#overlay').show();
+            $('#overlay').click(function(){
+              $('.notifications-popup').hide();
+              $('#overlay').hide();
+            });
+          } else {
+            $('.notifications-popup').hide();
+            $('#overlay').hide();
+          }
         });
 
-       } else {
-        $('.notifications-popup').hide();
-        $('#overlay').hide();
-      }
+      $('.notification .anotification').click (function() {
+        $(this).parent().remove();
+        notifs = $("#user-notifications").text();
+        $("#user-notifications").html(notifs-1);
+
+        if (notifs == 1) {
+          notifs_exist = false;
+          $('.notification-btn').css('background','#c0c2c1');
+          $('.notification-btn').css('border','1px solid #616161');
+          $('.notification-btn').css('color','#404040');
+          $('.notifications-area').html('You have "0" Notifications');
+          $('.notifications-area').css('text-align','center');
+          $('.notifications-area').css('padding','10px 0 10px 0');
+        }
+      });
     });
-
-  $('.notification .anotification').click (function() {
-   $(this).parent().remove();
-   notifs = $("#user-notifications").text();
-   $("#user-notifications").html(notifs-1);
-
-   if (notifs == 1) {
-    notifs_exist = false;
-    $('.notification-btn').css('background','#c0c2c1');
-    $('.notification-btn').css('border','1px solid #616161');
-    $('.notification-btn').css('color','#404040');
-    $('.notifications-area').html('You have "0" Notifications');
-    $('.notifications-area').css('text-align','center');
-    $('.notifications-area').css('padding','10px 0 10px 0');
-  }
-});
-
-});
 
 </script>
 
@@ -345,13 +336,13 @@ $(document).ready(function(){
     <div id="progress-indicator">
 
       <div class="row">
-        <div class="three columns" id="step1">
-          <a href="petrocore-reports-new1.html">
+        <a href="petrocore-reports-new1.html">
+          <div class="three columns" id="step1">
             <div class="step-number active-step-number"><p>1</p></div>
             <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-          </a>
-          <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
-        </div>
+            <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
+          </div>
+        </a>
 
         <div class="three columns active-step" id="step2">
           <div class="step-number active-step-number"><p class="highlight-step">2</p></div>
@@ -359,13 +350,13 @@ $(document).ready(function(){
           <div class="step-completion"><div class="circle circle-active"><!--<div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div>--></div></div>
         </div>
 
-        <div class="three columns" id="step4">
-          <a href="petrocore-reports-new4.html">
+        <a href="petrocore-reports-new4.html">
+          <div class="three columns" id="step4">
             <div class="step-number"><p>3</p></div>
             <div class="step-name short alternate-step-numbe4"><p>Finish</p></div>
-          </a>
-          <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
-        </div>
+            <div class="step-completion"><div class="circle"><!-- <div class="success-arrow"><img src="../images/success-arrow.png" alt="Success"></div> --></div></div>
+          </div>
+        </a>
       </div>
     </div>
 
