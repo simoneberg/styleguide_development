@@ -1408,8 +1408,8 @@ p.form-category-title-bold {
 /* for display in a form of display only text data */
 .form-text-display-field {
   display: inline-block;
-  font-size: 16px;
   margin-bottom: 12px;
+  margin-top: 8px;
 }
 
 .icon-trailing-control {
