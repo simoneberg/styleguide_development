@@ -7,19 +7,19 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->  
+<!--<meta name="viewport" content="width=device-width" />-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-  
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
+
   <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
@@ -29,73 +29,73 @@
   <![endif]-->
 
   <script src="../javascripts/jquery.js"></script>
-  
+
   <script src="../javascripts/modernizr.foundation.js"></script>
-      
+
   <script type="text/javascript">
-  
+
 	function show_hide_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
-		
-		
+
+
 		if(advanced_panel.style.display == 'block')
-		
+
 		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
+			advanced_arrow.style.top = '0px';
 		}
 		else
 		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
+			advanced_arrow.style.top = '7px';
 		}
-	}	
- 
- 
+	}
+
+
 	$(document).ready(function(){
 
 		var notifs = $("#user-notifications").text();
 		var notifs_exist = true;
 
 	   	$('#notification_btn').bind('click', function (event) {
-				
+
 			if (notifs_exist == true) {
 	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
 			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
+				$('.notifications-popup').toggle();
 				$('#overlay').show();
 				$('#overlay').click(function(){
 						$('.notifications-popup').hide();
-						$('#overlay').hide();							
+						$('#overlay').hide();
 				});
-					
+
 			} else {
 				$('.notifications-popup').hide();
-				$('#overlay').hide();															
+				$('#overlay').hide();
 				}
-	    });	
-			
+	    });
+
 		$('.notification .anotification').click (function() {
 			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
+			notifs = $("#user-notifications").text();
 			$("#user-notifications").html(notifs-1);
-				
+
 			if (notifs == 1) {
-				notifs_exist = false;								
+				notifs_exist = false;
 			    $('.notification-btn').css('background','#c0c2c1');
 			    $('.notification-btn').css('border','1px solid #616161');
 			    $('.notification-btn').css('color','#404040');
 			    $('.notifications-area').html('You have "0" Notifications');
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
+			}
 		});
-			
+
 	});
-			
+
   </script>
 
 </head>
@@ -120,8 +120,8 @@
                   <li><a href="petrocore-person-details-self.html">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>                                                                     
-              </ul>          
+                  <li><a href="#">Role History</a></li>
+              </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
 
@@ -132,9 +132,9 @@
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Français</a></li>
                   <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>                                                                        
+                  <li><a href="#">Polski</a></li>
               </ul>
-            </li> 
+            </li>
           <li><p class="bar">&#124;</p></li>
 
 
@@ -153,65 +153,65 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-      
+
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-        
+
           <div class="nine mobile-four columns">
-            <input id="initial-search" class="round-left" type="text" value="" />            
+            <input id="initial-search" class="round-left" type="text" value="" />
           </div>
-                  
+
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
           </div>
-          
+
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          
+
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
+      <!--***** SEARCH *****-->
+
 	  <div id="advanced_search" class="display-none">
 	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
+
 		<p><strong>Advanced Search</strong></p>
-                
-			<form class="custom search-type">                  
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
 				<select class="custom-dropdown expand" id="customDropdown">
 					<option SELECTED>Person</option>
 					<option>Group</option>
-					<option>Position</option>                            
+					<option>Position</option>
 					<option>Map</option>
 					<option>Skill Group</option>
 					<option>Skill</option>
 					<option>Skill Description</option>
 					<option>Development Activity</option>
-				</select>                          
-                                                        
-			</form>                    
+				</select>
+
+			</form>
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->    
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
 				<!--***** ADD FILTER *****-->
-                    
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
 				<div class="add-filter-area">
-                          
+
 					<hr class="petrocore-hr">
                     	<ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
              		    </ul>
                 </div>
 			</div>
-		</div>             
+		</div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -324,7 +324,7 @@
                 <li><a href="#">Item 1</a></li>
               </ul>
             </div>-->
-          </li>          
+          </li>
         </ul>
       </div>
       <!--***** MAIN NAVIGATION *****-->
@@ -355,7 +355,7 @@
             <hr>
           <h6>History</h6>
 
-          
+
           <!--
           <div id="progress-indicator-test">
 
@@ -364,25 +364,25 @@
                 <div class="step-name"><p>Properties</p></div>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
               </div>
-            
+
               <div id="step22">
                 <div class="step-number"><p>2</p></div>
                 <div class="step-name-long"><p>People &amp; Position</p></div>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
               </div>
-            
+
               <div id="step33">
                 <div class="step-number"><p>3</p></div>
                 <div class="step-name-short"><p>Share</p></div>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
               </div>
-            
+
               <div id="step44">
                 <div class="step-number"><p>4</p></div>
                 <div class="step-name-short"><p>Finish</p></div>
                 <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="../images/success-arrow.png"></div></div></div>
-              </div> 
-            
+              </div>
+
             </div>
           -->
 
@@ -390,14 +390,14 @@
   <!--***** FORMS *****-->
 
           <div class="form-container">
-    
+
             <div class="panel-wrapper">
 
               <!-- HISTORY TABLE -->
 
               <div class="table-content-container">
 
-            
+
               <table id="report-templates-table" class="twelve nested-table">
                 <thead>
                   <tr>
@@ -417,7 +417,23 @@
                     <td>New Report Template</td>
                     <td>Upstream TEST 450</td>
                   </tr>
-                  
+
+                  <tr>
+                    <td>Mar/20/2013</td>
+                    <td>Bowen, Jenny (JBNX)</td>
+                    <td>Activity Profile Excel</td>
+                    <td>New Report Template</td>
+                    <td>Upstream TEST 450</td>
+                  </tr>
+
+                  <tr>
+                    <td>Mar/20/2013</td>
+                    <td>Bowen, Jenny (JBNX)</td>
+                    <td>Activity Profile Excel</td>
+                    <td>New Report Template</td>
+                    <td>Upstream TEST 450</td>
+                  </tr>
+
                   <tr>
                     <td>Mar/20/2013</td>
                     <td>Bowen, Jenny (JBNX)</td>
@@ -449,7 +465,23 @@
                     <td>New Report Template</td>
                     <td>Upstream TEST 450</td>
                   </tr>
-                  
+
+                  <tr>
+                    <td>Mar/20/2013</td>
+                    <td>Bowen, Jenny (JBNX)</td>
+                    <td>Activity Profile Excel</td>
+                    <td>New Report Template</td>
+                    <td>Upstream TEST 450</td>
+                  </tr>
+
+                  <tr>
+                    <td>Mar/20/2013</td>
+                    <td>Bowen, Jenny (JBNX)</td>
+                    <td>Activity Profile Excel</td>
+                    <td>New Report Template</td>
+                    <td>Upstream TEST 450</td>
+                  </tr>
+
                   <tr>
                     <td>Mar/20/2013</td>
                     <td>Bowen, Jenny (JBNX)</td>
@@ -481,39 +513,7 @@
                     <td>New Report Template</td>
                     <td>Upstream TEST 450</td>
                   </tr>
-                  
-                  <tr>
-                    <td>Mar/20/2013</td>
-                    <td>Bowen, Jenny (JBNX)</td>
-                    <td>Activity Profile Excel</td>
-                    <td>New Report Template</td>
-                    <td>Upstream TEST 450</td>
-                  </tr>
 
-                  <tr>
-                    <td>Mar/20/2013</td>
-                    <td>Bowen, Jenny (JBNX)</td>
-                    <td>Activity Profile Excel</td>
-                    <td>New Report Template</td>
-                    <td>Upstream TEST 450</td>
-                  </tr>
-
-                  <tr>
-                    <td>Mar/20/2013</td>
-                    <td>Bowen, Jenny (JBNX)</td>
-                    <td>Activity Profile Excel</td>
-                    <td>New Report Template</td>
-                    <td>Upstream TEST 450</td>
-                  </tr>
-
-                  <tr>
-                    <td>Mar/20/2013</td>
-                    <td>Bowen, Jenny (JBNX)</td>
-                    <td>Activity Profile Excel</td>
-                    <td>New Report Template</td>
-                    <td>Upstream TEST 450</td>
-                  </tr>
-                  
                   <tr>
                     <td>Mar/20/2013</td>
                     <td>Bowen, Jenny (JBNX)</td>
@@ -543,7 +543,7 @@
 
                   </div>
                 </div>
-            
+
             <!-- HISTORY TABLE -->
 
             </div>
@@ -561,7 +561,7 @@
               <li><a href="">3</a></li>
               <li><a href="">4</a></li>
               <!-- <li class="unavailable"><a href="">&hellip;</a></li> -->
-              <li><a href="">5</a></li>            
+              <li><a href="">5</a></li>
               <li class="arrow"><a href="">&rsaquo;</a></li>
               <li class="arrow"><a href="" class="fix-margin-left">&raquo;</a></li>
             </ul>
@@ -599,7 +599,7 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-  
+
   <!-- END NAVIGATION -->
     </div>
   <!--</div>-->
@@ -625,38 +625,38 @@
 <div class="notifications-popup">
 
 	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
+	<div class="arrow-border"></div>
+
 	<div class="notifications-title">
     	<h5>Notifications</h5>
 	</div>
 
 	<div class="notifications-area">
-                    
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
+	        <a href="#">View Report</a>
 			<hr class="hr-notification">
 	    </div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
+			<a href="#">View Report</a>
 			<hr class="hr-notification">
 		</div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+			<a href="#">View Report</a>
+		</div>
 
 	</div>
-</div>         
+</div>
 
-  
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -677,20 +677,20 @@
   <script src="../javascripts/jquery.foundation.joyride.js"></script>
   <script src="../javascripts/jquery.foundation.clearing.js"></script>
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
+
   -->
-  
+
   <!-- Included JS Files (Compressed) -->
   <script src="../javascripts/foundation.min.js"></script>
-  
+
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
-  
+
     <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
+    </script>
 
 </body>
 </html>

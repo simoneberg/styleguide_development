@@ -7,19 +7,19 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->  
+<!--<meta name="viewport" content="width=device-width" />-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-  
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
+
   <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
@@ -29,87 +29,87 @@
   <![endif]-->
 
   <script src="../javascripts/jquery.js"></script>
-  
+
   <script src="../javascripts/modernizr.foundation.js"></script>
-      
+
   <script type="text/javascript">
-  
+
 	function show_hide_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
-		
-		
+
+
 		if(advanced_panel.style.display == 'block')
-		
+
 		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
+			advanced_arrow.style.top = '0px';
 		}
 		else
 		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
+			advanced_arrow.style.top = '7px';
 		}
-	}	
-	
+	}
+
 	function show_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
-		
-		
-		advanced_panel.style.display = 'block';
-		document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-		advanced_arrow.style.position = 'relative';
-		advanced_arrow.style.top = '7px';						
-	}
-	
 
-  
+
+		advanced_panel.style.display = 'block';
+		document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+		advanced_arrow.style.position = 'relative';
+		advanced_arrow.style.top = '7px';
+	}
+
+
+
 	$(document).ready(function(){
 
 		var notifs = $("#user-notifications").text();
 		var notifs_exist = true;
 
 	   	$('#notification_btn').bind('click', function (event) {
-				
+
 			if (notifs_exist == true) {
 	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
 			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
+				$('.notifications-popup').toggle();
 				$('#overlay').show();
 				$('#overlay').click(function(){
 						$('.notifications-popup').hide();
-						$('#overlay').hide();							
+						$('#overlay').hide();
 				});
-					
+
 			} else {
 				$('.notifications-popup').hide();
-				$('#overlay').hide();															
+				$('#overlay').hide();
 				}
-	    });	
-			
+	    });
+
 		$('.notification .anotification').click (function() {
 			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
+			notifs = $("#user-notifications").text();
 			$("#user-notifications").html(notifs-1);
-				
+
 			if (notifs == 1) {
-				notifs_exist = false;								
+				notifs_exist = false;
 			    $('.notification-btn').css('background','#c0c2c1');
 			    $('.notification-btn').css('border','1px solid #616161');
 			    $('.notification-btn').css('color','#404040');
 			    $('.notifications-area').html('You have "0" Notifications');
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
+			}
 		});
-			
+
 	});
-	
+
   </script>
-  
+
 </head>
 <body>
 
@@ -132,8 +132,8 @@
                   <li><a href="petrocore-person-details-self.html">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>                                                                     
-              </ul>          
+                  <li><a href="#">Role History</a></li>
+              </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
 
@@ -144,9 +144,9 @@
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Français</a></li>
                   <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>                                                                        
+                  <li><a href="#">Polski</a></li>
               </ul>
-            </li> 
+            </li>
           <li><p class="bar">&#124;</p></li>
 
 
@@ -167,30 +167,30 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-      
+
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-        
+
           <div class="nine mobile-four columns">
-            <input id="initial-search" class="round-left" type="text" value="John" />            
+            <input id="initial-search" class="round-left" type="text" value="John" />
           </div>
-                  
+
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
           </div>
-          
+
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          
+
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
+      <!--***** SEARCH *****-->
+
 			<div id="advanced_search" class="display-none">
 	                <!--This is a Advanced Search panel that is hidden by default-->
-                  	
+
                     <p><strong>Advanced Search</strong></p>
 
 
@@ -198,45 +198,45 @@
 
 
 
-					<form class="custom search-type">                  
-						<label id="search-type-label" for="customDropdown">Search Type:</label>  
+					<form class="custom search-type">
+						<label id="search-type-label" for="customDropdown">Search Type:</label>
 
-						<div id="search_type_drop">                  
+						<div id="search_type_drop">
 							<select class="custom-dropdown expand" id="customDropdown">
 								<option SELECTED>Person</option>
 								<option>Group</option>
-								<option>Position</option>                            
+								<option>Position</option>
 								<option>Map</option>
 								<option>Skill Group</option>
 								<option>Skill</option>
 								<option>Skill Description</option>
 								<option>Development Activity</option>
-							</select>                          
-						</div>              
-                                            
-					</form>                    
+							</select>
+						</div>
+
+					</form>
 
 
 	                <div class="add-filter-container">
 
     				      <!--***** ADD FILTER *****-->
-                    
-                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+
+                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
 				          <!--***** ADD FILTER *****-->
-                    
+
                     	  <div class="add-filter-area">
-                          
+
 								<hr class="petrocore-hr">
                         		<ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
              		            </ul>
                     	  </div>
 					</div>
-		     </div>             
+		     </div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -376,8 +376,8 @@
 				<div class="twelve columns">
  		           <div class="adv-results-found"><p><strong>Found 75 results with <a id="filters_applied" href="#" onclick="show_advanced('advanced_search');">2 filters applied</a> and <a id="search_type_applied" href="#" onclick="show_advanced('advanced_search');">Search Type is Person</a></strong></p></div>
 				</div>
-            
-            
+
+
 	   	        <div class="columns remove-padding adjust-twelve-columns">
 	          		<div class="left adv-result-title"><p><strong>Results 1-25 of 75</strong></p></div>
 		          	<div class="export-print right text-right"><p><i class="icon- add-space"><a href="#">&#xf019;</a></i> <a href="#">Export</a> <i class="icon- add-space"><a href="#">&#xf02f;</a></i> <a href="#">Print</a></p></div>
@@ -398,10 +398,10 @@
 
             			    <th>Fac</th>
             			    <th>Telephone</th>
-            			    <th>Mobile</th>                            
+            			    <th>Mobile</th>
             			    <th>email</th>
             			    <th>Skype</th>
-                                                                                   
+
 		        	      </tr>
 		            	</thead>
     			        <tbody>
@@ -417,8 +417,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                             
-		            	  </tr>                  
+
+		            	  </tr>
         			      <tr>
     	        		    <td><a href="#">Smith</a></td>
 		    	            <td><a href="#">John</a></td>
@@ -431,8 +431,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                         
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Washington</a></td>
                             <td><a href="#">John</a></td>
@@ -445,8 +445,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                      
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Reynolds</a></td>
                             <td><a href="#">John</a></td>
@@ -459,8 +459,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Meng</a></td>
                             <td><a href="#">John</a></td>
@@ -473,8 +473,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                         
-                          </tr>   
+
+                          </tr>
                           <tr>
                             <td><a href="#">Slaton</a></td>
                             <td><a href="#">John</a></td>
@@ -487,8 +487,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                         
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Chung</a></td>
                             <td><a href="#">John</a></td>
@@ -501,8 +501,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Rooney</a></td>
                             <td><a href="#">John</a></td>
@@ -515,8 +515,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Masterson</a></td>
                             <td><a href="#">Eva</a></td>
@@ -529,8 +529,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                       
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Aranda</a></td>
                             <td><a href="#">John</a></td>
@@ -543,8 +543,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                      
-                          </tr>    
+
+                          </tr>
                           <tr>
                             <td><a href="#">Perez</a></td>
                             <td><a href="#">John</a></td>
@@ -557,8 +557,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Morey</a></td>
                             <td><a href="#">John</a></td>
@@ -571,8 +571,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Dulin</a></td>
                             <td><a href="#">John</a></td>
@@ -585,8 +585,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                      
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Greene</a></td>
                             <td><a href="#">John</a></td>
@@ -599,8 +599,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                      
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Sienna</a></td>
                             <td><a href="#">John</a></td>
@@ -613,8 +613,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                        
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Evans</a></td>
                             <td><a href="#">John</a></td>
@@ -627,8 +627,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                       
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Peeve</a></td>
                             <td><a href="#">John</a></td>
@@ -641,8 +641,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                    
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">O'Connor</a></td>
                             <td><a href="#">John</a></td>
@@ -655,8 +655,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                    
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Rouge</a></td>
                             <td><a href="#">John</a></td>
@@ -669,8 +669,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                     
-                          </tr>                  
+
+                          </tr>
                           <tr>
                             <td><a href="#">Ramson</a></td>
                             <td><a href="#">John</a></td>
@@ -683,8 +683,8 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                 
-                          </tr>    
+
+                          </tr>
                           <tr>
                             <td><a href="#">Emerson</a></td>
                             <td><a href="#">John</a></td>
@@ -697,7 +697,7 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                     
+
                           </tr>
                           <tr>
                             <td><a href="#">Bencsik</a></td>
@@ -711,7 +711,7 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                   
+
                           </tr>
                           <tr>
                             <td><a href="#">Fannie</a></td>
@@ -725,7 +725,7 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                   
+
                           </tr>
                           <tr>
                             <td><a href="#">Martinez</a></td>
@@ -739,7 +739,7 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                            
+
                           </tr>
                           <tr>
                             <td><a href="#">Rosey</a></td>
@@ -753,31 +753,31 @@
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
     	        		    <td><a href="#">non-available</a></td>
-                                                 
-                          </tr>                                                                                                        
+
+                          </tr>
                         </tbody>
                       </table>
 					</div>
-                      <!--***** TABLE *****-->           
-            
+                      <!--***** TABLE *****-->
+
 	            </div>
-            
-				<div class="twelve columns pagination-centered">  
+
+				<div class="twelve columns pagination-centered">
 					<p>Page 1 of 3</p>
 					<ul class="pagination">
-					  <li class="arrow unavailable"><a href="">«</a></li>  
-					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>    
-					  <li class="current unavailable"><a href="">1</a></li>    
+					  <li class="arrow unavailable"><a href="">«</a></li>
+					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+					  <li class="current unavailable"><a href="">1</a></li>
 					  <li><a href="">2</a></li>
-					  <li><a href="">3</a></li>                       
+					  <li><a href="">3</a></li>
 					  <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
 					  <li class="arrow unavailable"><a href="">»</a></li>
-					</ul>       
-				</div> 
-            
+					</ul>
+				</div>
+
             </div>
 
-	      </div>      
+	      </div>
 	  </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
@@ -808,7 +808,7 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-  
+
   <!-- END NAVIGATION -->
     </div>
   <!-- </div> -->
@@ -834,38 +834,38 @@
 <div class="notifications-popup">
 
 	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
+	<div class="arrow-border"></div>
+
 	<div class="notifications-title">
     	<h5>Notifications</h5>
 	</div>
 
 	<div class="notifications-area">
-                    
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
+	        <a href="#">View Report</a>
 			<hr class="hr-notification">
 	    </div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
+			<a href="#">View Report</a>
 			<hr class="hr-notification">
 		</div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+			<a href="#">View Report</a>
+		</div>
 
 	</div>
-</div>         
+</div>
 
-    
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -886,22 +886,22 @@
   <script src="../javascripts/jquery.foundation.joyride.js"></script>
   <script src="../javascripts/jquery.foundation.clearing.js"></script>
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
+
   -->
-    
-    
+
+
   <!-- Included JS Files (Compressed) -->
   <script src="../javascripts/foundation.min.js"></script>
-  
+
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
-  
+
     <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
-    
+    </script>
+
   <script type="text/javascript">
 
 	$(document).ready(function(){
@@ -909,18 +909,18 @@
 		var userviewright = $(".right-split-container").width();
 
 		$('#table_container').css('width',userviewright-63);  // content area on the right hand side
-	
-		$('#filters_applied').click(function(){		
-			$('.added-filter').toggleClass('glowing');			
+
+		$('#filters_applied').click(function(){
+			$('.added-filter').toggleClass('glowing');
 		});
 
-		$('#search_type_applied').click(function(){	
-			$('#search_type_drop').toggleClass('glowing');	
+		$('#search_type_applied').click(function(){
+			$('#search_type_drop').toggleClass('glowing');
 		});
-						
+
 	});
-	
-  </script> 
+
+  </script>
 
 
 
