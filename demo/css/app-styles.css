@@ -186,6 +186,10 @@ ul.pagination li.current a {
   height: auto;
 }
 
+.muted {
+  color:grey;
+}
+
 .nested-no-margin-bottom {
   margin-bottom: -10px;
 }
@@ -223,7 +227,6 @@ ul.pagination li.current a {
 .side-by-side {
   border: 1px solid #8c8c8c;
 }
-
 
 /* END DISPLAY AND LAYOUT */
 /* **************************************** */
@@ -3459,7 +3462,7 @@ span.dropdown-arrow {
     display: none;
   }
   */
-  
+
   .toggle-nav-tablet {
     width: 48px;
     height: 42px;

@@ -7,20 +7,19 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-  <!--<meta name="viewport" content="width=device-width" />-->  
+  <!--<meta name="viewport" content="width=device-width" />-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-  
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
-  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
+
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -29,123 +28,123 @@
   <![endif]-->
 
   <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>  
-    
+  <script src="../javascripts/foundation.min.js"></script>
+
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
 
-  <script src="../javascripts/modernizr.foundation.js"></script>    
+  <script src="../javascripts/modernizr.foundation.js"></script>
 
-  <!--  <script src="../javascripts/jquery.js"></script>  -->  
-  <script src="js/jquery-1.9.1.js"></script>  
+  <!--  <script src="../javascripts/jquery.js"></script>  -->
+  <script src="js/jquery-1.9.1.js"></script>
 
   <!-- <script src="js/jquery-ui.js"></script>  -->
-  <script src="js/jquery-ui-1.9.2.js"></script> 
-    
+  <script src="js/jquery-ui-1.9.2.js"></script>
+
   <script type="text/javascript">
-  
+
 	function show_hide_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
-		
-		
+
+
 		if(advanced_panel.style.display == 'block')
-		
+
 		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
+			advanced_arrow.style.top = '0px';
 		}
 		else
 		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
+			advanced_arrow.style.top = '7px';
 		}
-	}	
- 
- 
-	$(document).ready(function(){	
-		
+	}
+
+
+	$(document).ready(function(){
+
 		// Notification Popup window
 
 		var notifs = $("#user-notifications").text();
 		var notifs_exist = true;
 
 	   	$('#notification_btn').bind('click', function (event) {
-				
+
 			if (notifs_exist == true) {
 	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
 			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
+				$('.notifications-popup').toggle();
 				$('#overlay').show();
 				$('#overlay').click(function(){
 						$('.notifications-popup').hide();
-						$('#overlay').hide();							
+						$('#overlay').hide();
 				});
-					
+
 			} else {
 				$('.notifications-popup').hide();
-				$('#overlay').hide();															
+				$('#overlay').hide();
 				}
-	    });	
-			
+	    });
+
 		$('.notification .anotification').click (function() {
 			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
+			notifs = $("#user-notifications").text();
 			$("#user-notifications").html(notifs-1);
-				
+
 			if (notifs == 1) {
-				notifs_exist = false;								
+				notifs_exist = false;
 			    $('.notification-btn').css('background','#c0c2c1');
 			    $('.notification-btn').css('border','1px solid #616161');
 			    $('.notification-btn').css('color','#404040');
 			    $('.notifications-area').html('You have "0" Notifications');
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
+			}
 		});
 
 		// Add Direct-Participant Page
-		
+
 		$('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
 
-		$('.participant').bind('drag', function(event, ui) {		 
+		$('.participant').bind('drag', function(event, ui) {
 			ui.helper.css('background-color', '#e6edf5');
 			ui.helper.css('border', 'solid 1px #8b8b8b');
 		});
-		
+
 		$('#list-direct-participants').droppable( { tolerance: 'pointer', accept: '.participant', drop: function (event, ui) {
         	var target = $('#list-direct-participants');
         	var source = ui.draggable;
-          	(target).append(source);	
-		  	(source).addClass('direct-participant');			
+          	(target).append(source);
+		  	(source).addClass('direct-participant');
 			}
 	    });
 
 		$('#list-participants').droppable( { tolerance: 'pointer', accept: '.direct-participant', drop: function (event, ui) {
         	var target = $('#list-participants');
-        	var source = ui.draggable;			
+        	var source = ui.draggable;
 		  	(source).removeClass('direct-participant');
-		  	(source).addClass('participant');			
+		  	(source).addClass('participant');
           	(target).append(source);
 			}
 	    });
-				
+
 		$('.participant a.icon-.sr-icon-plus').on('click', function(){
 			var target = $('#list-direct-participants');
 			var source = $(this).parent();
 			(source).removeClass('participant');
 			(source).addClass('direct-participant');
-			(target).append(source);	
+			(target).append(source);
 		})
-		
+
 		$('.participant a.icon-.sr-icon-x').on('click', function(){
 			var target = $('#list-participants');
-			var source = $(this).parent();	
+			var source = $(this).parent();
 			(source).removeClass('direct-participant');
 			(source).addClass('participant');
-			(source).appendTo(target);	
+			(source).appendTo(target);
 		});
 
 	});
@@ -176,8 +175,8 @@
                   <li><a href="#">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>                                                                     
-              </ul>          
+                  <li><a href="#">Role History</a></li>
+              </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
 
@@ -188,9 +187,9 @@
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Français</a></li>
                   <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>                                                                        
+                  <li><a href="#">Polski</a></li>
               </ul>
-            </li> 
+            </li>
           <li><p class="bar">&#124;</p></li>
 
 
@@ -210,65 +209,65 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-      
+
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-        
+
           <div class="nine mobile-four columns">
-            <input id="initial-search" class="round-left" type="text" value="" />            
+            <input id="initial-search" class="round-left" type="text" value="" />
           </div>
-                  
+
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
           </div>
-          
+
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          
+
         </div>
       </div>
-      <!--***** SEARCH *****-->     
-              
+      <!--***** SEARCH *****-->
+
 	  <div id="advanced_search" class="display-none">
 	  <!--This is a Advanced Search panel that is hidden by default-->
-                  	
+
 		<p><strong>Advanced Search</strong></p>
-                
-			<form class="custom search-type">                 
-				<label id="search-type-label" for="customDropdown">Search Type:</label>  
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
 				<select class="expand" style="display:none;" id="customDropdown">
 					<option SELECTED>Person</option>
 					<option>Group</option>
-					<option>Position</option>                            
+					<option>Position</option>
 					<option>Map</option>
 					<option>Skill Group</option>
 					<option>Skill</option>
 					<option>Skill Description</option>
 					<option>Development Activity</option>
-				</select>                          
-                                                        
-			</form>                    
+				</select>
+
+			</form>
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->    
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
 				<!--***** ADD FILTER *****-->
-                    
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
 				<div class="add-filter-area">
-                          
+
 					<hr class="petrocore-hr">
                     	<ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
              		    </ul>
                 </div>
 			</div>
-		</div>             
+		</div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -381,7 +380,7 @@
                 <li><a href="#">Item 1</a></li>
               </ul>
             </div>-->
-          </li>          
+          </li>
         </ul>
       </div>
       <!--***** MAIN NAVIGATION *****-->
@@ -410,31 +409,31 @@
         <!--This will hold the content-->
         <form class="custom search-type">
           <h4>Assign Direct Relationship to John Doe</h4>
-          <hr>        
+          <hr>
 
           <p>Click on the plus sign or click-and-drag a participant's name to assign him/her to this Supervisor.</p>
           <div class="row" id="ui-assign-direct-relationship">
-          
+
           	<div class="six columns">
-              
+
 				<div class="search-relationships side-by-side">
-              
+
                 	<div class="search-box-relationships">
 
                 		<div class="row collapse search-input">
-                
+
                 <div class="ten mobile-four columns">
                   <input id="initial-search" class="round-left" type="text" placeholder="Search Participants" value="David" />
                 </div>
-                
+
                 <div class="two mobile-one columns">
             	  <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
                 </div>
-						</div> 
-                                 
+						</div>
+
              		</div>
              		<!-- END /search-box-relationships -->
-                
+
                 <div class="button-group-bar">
                   <!-- Even Button Groups -->
                   <ul class="button-group even three-up">
@@ -443,52 +442,52 @@
                     <li><a href="#" class="button silver-button last">Unassigned</a></li>
                   </ul>
                 </div>
-                <!-- END /button-group-bar -->               
-                
+                <!-- END /button-group-bar -->
+
                 <div class="list-participants-title">
                   <h5>Available Participants</h5>
                 </div>
-                
+
                 <div id="list-participants" class="search-results-relationships">
 
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Meng, David (DMKI)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
 	    </div>
-        
+
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Reynolds, David (DROP)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
-	    </div>        
-   
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+	    </div>
+
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Rooney, David (DRXO)</div>
-	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
-	    </div>    
-   
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div>
+	    </div>
+
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Smith, David (DSLA)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div> 
-	    </div>    
-   
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
+	    </div>
+
 		<div class="participant sr-bottom-border">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Washington, David (DWRI)</div>
-	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div> 
-	    </div>    
-        
+	        <div class="sr-assigned">Unassigned<span class="sr-assignedto"></span></div>
+	    </div>
+
 		</div>
-        <!-- END /search-results-relationships -->            
-        
+        <!-- END /search-results-relationships -->
+
               </div>
               <!-- END /search-relationships -->
             </div>
@@ -498,56 +497,56 @@
                 <div class="list-relationships-title">
                   <h5>Assigned as Direct Participants</h5>
                 </div>
-                        
+
               <div id="list-direct-participants" class="list-relationships side-by-side">
-                
+
         <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
-			<div class="sr-name">Aranda, David (DAPO)</div>        
+			<div class="sr-name">Aranda, David (DAPO)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
         </div>
-        
+
         <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Chung, David (DCKI)</div>
-	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>      
+	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
         </div>
-        
+
         <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Masterson, David (DMSW)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
         </div>
-        
+
         <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Robertson, David (DBJU)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
 		</div>
-        
+
         <div class="participant sr-bottom-border direct-participant">
 			<a href="#" class="icon- sr-icon-plus"></a>
 			<a href="#" class="icon- sr-icon-x"></a>
 			<div class="sr-name">Slaton, David (DSLS)</div>
 	        <div class="sr-assigned">Currently assigned to: <span class="sr-assignedto">Diana Ross</span></div>
-		</div>        
-                
+		</div>
+
                 <!-- END /list-relationships-title -->
 
               </div>
               <!-- END /list-relationships -->
-                            
+
             </div>
             <!-- END /six -->
           </div>
           <!-- END /row -->
-                                                  
+
          </form>
-          
+
 <div class="row">
     <div class="same-line add-medium-space-right">
     	<a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
@@ -556,11 +555,11 @@
       <a class="" href="#">Cancel</a>
     </div>
 </div>
-          
-          
-      </div><!--Close Content Container-->   
+
+
+      </div><!--Close Content Container-->
   </div>
- </div> 
+ </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
@@ -589,7 +588,7 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-  
+
   <!-- END NAVIGATION -->
     <!-- </div> -->
   <!-- </div> -->
@@ -615,38 +614,38 @@
 <div class="notifications-popup">
 
 	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
+	<div class="arrow-border"></div>
+
 	<div class="notifications-title">
     	<h5>Notifications</h5>
 	</div>
 
 	<div class="notifications-area">
-                    
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
+	        <a href="#">View Report</a>
 			<hr class="hr-notification">
 	    </div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
+			<a href="#">View Report</a>
 			<hr class="hr-notification">
 		</div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+			<a href="#">View Report</a>
+		</div>
 
 	</div>
-</div>         
+</div>
 
-  
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -667,7 +666,7 @@
   <script src="../javascripts/jquery.foundation.joyride.js"></script>
   <script src="../javascripts/jquery.foundation.clearing.js"></script>
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
+
   -->
 
 
@@ -675,7 +674,7 @@
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
+    </script>
 -->
 </body>
 </html>
