@@ -1393,6 +1393,16 @@ p.form-category-title-bold {
   margin-bottom: 8px;
 }
 
+.form-group.everyday span {
+  float:left;							  
+  margin-top:8px;  
+}
+
+.form-group.everyday input {
+  float:left;
+  width:100px;	
+}
+
 /* make form labels bold - override with the class=".plain" */
 .form-group>label {
   font-weight: bold;
