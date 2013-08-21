@@ -265,6 +265,15 @@ h4 {
 *:focus {
   outline: none;
 }
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 /* END TYPOGRAPHY */
 /* **************************************** */
 
