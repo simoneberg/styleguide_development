@@ -116,3 +116,16 @@ ul.subitems {
 .support {
 	padding: 7px 0;
 }
+
+pre {
+	background: #eee;
+	border: 1px solid #ccc;
+	margin: 0 0 15px;
+	padding: 0 10px;
+}
+
+pre code {
+	background: none;
+	font-weight: normal;
+	line-height: 1.4;
+}
