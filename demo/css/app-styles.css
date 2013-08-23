@@ -1218,6 +1218,12 @@ ul.accordion>li>div.title:after {
   border-radius: 0 5px 5px 0;
 }
 
+.button.silver-button.round {
+  border-radius: 5px 5px 5px 5px;
+  padding-left: 12px;
+  padding-right: 12px;  
+}
+
 .button.silver-button:hover,
 .button.silver-button:focus,
 .button.silver-button:active,
@@ -1773,7 +1779,6 @@ table tbody tr td {
   padding-left: 15px;
   padding-right: 15px;
   background: #f0f0f0;
-
   border-bottom: 1px solid #717171;
 }
 
@@ -1945,6 +1950,38 @@ table tbody tr td {
 
 .six.columns.visible-charts.right-chart {
   padding-right: 0;
+}
+
+/* This segment displays a temporary image of a chart and widget for ticket 1352 */
+.chart-widget-container {
+  float:left;
+  width:211px;
+  height:auto;
+  margin-right:15px;
+  margin-bottom:10px;
+  margin-top:0px;
+}
+
+.chart-widget-img {
+  background-image: url(http://simplevision.ca/images/chart.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  width:209px;
+  height:191px;  
+}
+
+.scrollable_frame {
+/*  overflow: auto; */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  border: solid 0px #fff;
+  width: 100%;
+}
+
+.scrollable_area {
+  display:inline-block;
+  width:2100px;
+  padding-top:0px !important;
 }
 
 /* END DASHBOARD */
@@ -2887,6 +2924,10 @@ span.dropdown-arrow {
   border-bottom:solid 1px #cfcfcf;
 }
 
+.sr-bottom-border-dark {
+  border-bottom:solid 1px #8b8b8b;
+}
+
 .sr-assigned {
   color: #999;
   display: block;
@@ -3036,6 +3077,10 @@ span.dropdown-arrow {
 
 .add-small-margin-left {
   margin-left: 10px;
+}
+
+.add-medium-line-height {
+  line-height:28px;
 }
 
 /* remove-padding removes the 1 px
