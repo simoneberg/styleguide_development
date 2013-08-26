@@ -25,9 +25,8 @@
 
     <!-- Included CSS Files (Compressed) -->
     <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-    <link rel="stylesheet" href="../stylesheets/app.css">
-    <link rel="stylesheet" href="../stylesheets/foundation-override.css">
-    <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+
+      <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
     <link rel="stylesheet" href="../demo/css/app-styles.css">
 
     <script src="../javascripts/modernizr.foundation.js"></script>
@@ -45,14 +44,12 @@
     function show_hide_advanced(id) {
       var advanced_panel = document.getElementById(id);
       advanced_arrow = document.getElementById('arrowdown');
-
-      if (advanced_panel.style.display == 'block') {
+      if(advanced_panel.style.display == 'block'){
         advanced_panel.style.display = 'none';
         document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
         advanced_arrow.style.position = 'relative';
         advanced_arrow.style.top = '0px';
-      }
-      else {
+      } else {
         advanced_panel.style.display = 'block';
         document.getElementById('arrowdown').innerHTML = '&#xf0de;';
         advanced_arrow.style.position = 'relative';
@@ -60,49 +57,43 @@
       }
     }
 
-    $(document).ready(function () {
-
+    $(document).ready(function(){
       var notifs = $("#user-notifications").text();
       var notifs_exist = true;
 
       $('#notification_btn').bind('click', function (event) {
-
         if (notifs_exist == true) {
-          $('.notifications-popup').css('left', event.pageX - 272); // <<< use pageX and pageY
-          $('.notifications-popup').css('top', event.pageY + 30);
+          $('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
+          $('.notifications-popup').css('top',event.pageY+30);
           $('.notifications-popup').toggle();
           $('#overlay').show();
-          $('#overlay').click(function () {
+          $('#overlay').click(function(){
             $('.notifications-popup').hide();
             $('#overlay').hide();
           });
-
         } else {
           $('.notifications-popup').hide();
           $('#overlay').hide();
         }
       });
 
-      $('.notification .anotification').click(function () {
+      $('.notification .anotification').click (function() {
         $(this).parent().remove();
         notifs = $("#user-notifications").text();
-        $("#user-notifications").html(notifs - 1);
+        $("#user-notifications").html(notifs-1);
 
         if (notifs == 1) {
           notifs_exist = false;
-          $('.notification-btn').css('background', '#c0c2c1');
-          $('.notification-btn').css('border', '1px solid #616161');
-          $('.notification-btn').css('color', '#404040');
+          $('.notification-btn').css('background','#c0c2c1');
+          $('.notification-btn').css('border','1px solid #616161');
+          $('.notification-btn').css('color','#404040');
           $('.notifications-area').html('You have "0" Notifications');
-          $('.notifications-area').css('text-align', 'center');
-          $('.notifications-area').css('padding', '10px 0 10px 0');
+          $('.notifications-area').css('text-align','center');
+          $('.notifications-area').css('padding','10px 0 10px 0');
         }
       });
-
     });
-
 </script>
-
 </head>
 <body>
 
@@ -410,51 +401,45 @@
     <div id="progress-indicator">
 
       <div class="row">
-        <div class="three columns" id="step1">
-          <!-- <div class="step-number active-step-number"><p>1</p></div> -->
-          <div class="step-name alternate-step-number-1">
-            <a href="petrocore-reports-edit1.html">
-              <p>Properties</p>
-            </a>
-          </div>
-          <div class="step-completion">
-            <div class="circle">
-              <div class="success-arrow">
-                <img src="images/success-arrow.png" alt="Success">
+        <a href="petrocore-reports-edit1.html">
+          <div class="three columns" id="step1">
+            <div class="step-name alternate-step-number-1"><p>Properties</p>
+            </div>
+            <div class="step-completion">
+              <div class="circle">
+                <div class="success-arrow"><img src="images/success-arrow.png" alt="Success">
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="three columns" id="step2">
-          <!-- <div class="step-number active-step-number"><p>2</p></div> -->
-          <div class="step-name long alternate-step-number-2">
-            <a href="petrocore-reports-edit2.html">
+        <a href="petrocore-reports-edit2.html">
+          <div class="three columns" id="step2">
+            <div class="step-name long alternate-step-number-2">
               <p>People &amp; Position</p>
-            </a>
-          </div>
-          <div class="step-completion">
-            <div class="circle circle-active">
-              <div class="success-arrow">
-                <img src="images/success-arrow.png" alt="Success">
+            </div>
+            <div class="step-completion">
+              <div class="circle circle-active">
+                <div class="success-arrow"><img src="images/success-arrow.png" alt="Success">
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
         <div class="three columns  active-step" id="step4">
-          <!-- <div class="step-number active-step-number"><p class="highlight-step">4</p></div> -->
           <div class="step-name short alternate-step-numbe4">
             <p>Reports</p>
           </div>
           <div class="step-completion">
             <div class="circle">
-              <div class="success-arrow">
-                <img src="images/success-arrow.png" alt="Success">
+              <div class="success-arrow"><img src="images/success-arrow.png" alt="Success">
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 

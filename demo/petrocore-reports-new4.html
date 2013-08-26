@@ -18,371 +18,363 @@
 
 <!-- Included CSS Files (Compressed) -->
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-<link rel="stylesheet" href="../stylesheets/app.css">
+
 <link rel="stylesheet" href="../stylesheets/foundation-override.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-  <link rel="stylesheet" href="../demo/css/app-styles.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
 
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
-  <![endif]-->
+    <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-  
-  <script src="../javascripts/modernizr.foundation.js"></script>
-      
-  <script type="text/javascript">
-  
-  function show_hide_advanced(id) {
-    var advanced_panel = document.getElementById(id);
+    <script src="../javascripts/jquery.js"></script>
+
+    <script src="../javascripts/modernizr.foundation.js"></script>
+
+    <script type="text/javascript">
+
+    function show_hide_advanced(id) {
+      var advanced_panel = document.getElementById(id);
       advanced_arrow = document.getElementById('arrowdown');
-    
-    
-    if(advanced_panel.style.display == 'block')
-    
-    { advanced_panel.style.display = 'none';
-      document.getElementById('arrowdown').innerHTML = '&#xf0dd;';  
-      advanced_arrow.style.position = 'relative';
-      advanced_arrow.style.top = '0px';           
+      if(advanced_panel.style.display == 'block') {
+        advanced_panel.style.display = 'none';
+        document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '0px';
+      } else {
+        advanced_panel.style.display = 'block';
+        document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+        advanced_arrow.style.position = 'relative';
+        advanced_arrow.style.top = '7px';
+      }
     }
-    else
-    { advanced_panel.style.display = 'block';
-      document.getElementById('arrowdown').innerHTML = '&#xf0de;';  
-      advanced_arrow.style.position = 'relative';
-      advanced_arrow.style.top = '7px';           
-    }
-  } 
- 
- 
-  $(document).ready(function(){
 
-    var notifs = $("#user-notifications").text();
-    var notifs_exist = true;
+
+    $(document).ready(function(){
+      var notifs = $("#user-notifications").text();
+      var notifs_exist = true;
 
       $('#notification_btn').bind('click', function (event) {
-        
-      if (notifs_exist == true) {
-          $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-          $('.notifications-popup').css('top',event.pageY+30);
-        $('.notifications-popup').toggle(); 
-        $('#overlay').show();
-        $('#overlay').click(function(){
+        if (notifs_exist == true) {
+            $('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
+            $('.notifications-popup').css('top',event.pageY+30);
+            $('.notifications-popup').toggle();
+            $('#overlay').show();
+            $('#overlay').click(function(){
+              $('.notifications-popup').hide();
+              $('#overlay').hide();
+            });
+          } else {
             $('.notifications-popup').hide();
-            $('#overlay').hide();             
+            $('#overlay').hide();
+          }
         });
-          
-      } else {
-        $('.notifications-popup').hide();
-        $('#overlay').hide();                             
-        }
-      }); 
-      
-    $('.notification .anotification').click (function() {
-      $(this).parent().remove();
-      notifs = $("#user-notifications").text();       
-      $("#user-notifications").html(notifs-1);
-        
-      if (notifs == 1) {
-        notifs_exist = false;               
+
+      $('.notification .anotification').click (function() {
+        $(this).parent().remove();
+        notifs = $("#user-notifications").text();
+        $("#user-notifications").html(notifs-1);
+
+        if (notifs == 1) {
+          notifs_exist = false;
           $('.notification-btn').css('background','#c0c2c1');
           $('.notification-btn').css('border','1px solid #616161');
           $('.notification-btn').css('color','#404040');
           $('.notifications-area').html('You have "0" Notifications');
           $('.notifications-area').css('text-align','center');
           $('.notifications-area').css('padding','10px 0 10px 0');
-      }                   
+        }
+      });
     });
-      
-  });
-      
-  </script>
+
+</script>
 
 </head>
-  <body>
+<body>
 
-    <!--***** PETROCORE HEADER *****-->
+  <!--***** PETROCORE HEADER *****-->
 
-    <nav class="top-bar">
-      <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
-      <div class="logo"></div>
-      <div class="profile-container">
-        <div class="avatar"></div>
-        <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
-        <div class="top-nav">
-          <ul>
-            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+  <nav class="top-bar">
+    <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+    <div class="logo"></div>
+    <div class="profile-container">
+      <div class="avatar"></div>
+      <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-        <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+          <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
-            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
-              <ul class="dropdown user">
-                <li><a href="petrocore-person-details-self.html">Settings</a></li>
-                <li><a href="#">Role Summary</a></li>
-                <li><a href="#">Account History</a></li>
-                <li><a href="#">Role History</a></li>
-              </ul>
-            </li>
-            <li><p class="bar">&#124;</p></li>
+          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+            <ul class="dropdown user">
+              <li><a href="petrocore-person-details-self.html">Settings</a></li>
+              <li><a href="#">Role Summary</a></li>
+              <li><a href="#">Account History</a></li>
+              <li><a href="#">Role History</a></li>
+            </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
 
-            <li class="has-dropdown"><a href="#">Language</a>
-              <ul class="dropdown language">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Deutsch</a></li>
-                <li><a href="#">Español</a></li>
-                <li><a href="#">Français</a></li>
-                <li><a href="#">Italiano</a></li>
-                <li><a href="#">Polski</a></li>
-              </ul>
-            </li>
-            <li><p class="bar">&#124;</p></li>
+          <li class="has-dropdown"><a href="#">Language</a>
+            <ul class="dropdown language">
+              <li><a href="#">English</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Français</a></li>
+              <li><a href="#">Italiano</a></li>
+              <li><a href="#">Polski</a></li>
+            </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
 
 
-            <li class="top-nav-links"><a href="#">Help</a></li>
-            <li><p class="bar">&#124;</p></li>
-            <li class="top-nav-links"><a href="#">Logout</a></li>
-          </ul>
-        </div>
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
       </div>
-    </nav>
-    <!--***** PETROCORE HEADER *****-->
+    </div>
+  </nav>
+  <!--***** PETROCORE HEADER *****-->
 
-    <!--***** MAIN WRAPPER *****-->
-    <div class="row master-wrapper">
+  <!--***** MAIN WRAPPER *****-->
+  <div class="row master-wrapper">
 
-      <!--***** LEFT SPLIT CONTAINER *****-->
-      <div class="three columns left-split-container">
+    <!--***** LEFT SPLIT CONTAINER *****-->
+    <div class="three columns left-split-container">
 
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-        
+
           <div class="nine mobile-four columns">
-            <input id="initial-search" class="round-left" type="text" value="" />            
+            <input id="initial-search" class="round-left" type="text" value="" />
           </div>
-                  
+
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
           </div>
-          
+
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          
+
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
-    <div id="advanced_search" class="display-none">
-    <!--This is a Advanced Search panel that is hidden by default-->
-                    
-    <p><strong>Advanced Search</strong></p>
-                
-      <form class="custom search-type">                  
-        <label id="search-type-label" for="customDropdown">Search Type:</label>  
-        <select class="custom-dropdown expand" id="customDropdown">
-          <option SELECTED>Person</option>
-          <option>Group</option>
-          <option>Position</option>                            
-          <option>Map</option>
-          <option>Skill Group</option>
-          <option>Skill</option>
-          <option>Skill Description</option>
-          <option>Development Activity</option>
-        </select>                          
-                                                        
-      </form>                    
-            <div class="add-filter-container">
+      <!--***** SEARCH *****-->
 
-        <!--***** ADD FILTER *****-->    
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
-        <!--***** ADD FILTER *****-->
-                    
-        <div class="add-filter-area">
-                          
-          <hr class="petrocore-hr">
-                      <ul id="filters">
+      <div id="advanced_search" class="display-none">
+        <!--This is a Advanced Search panel that is hidden by default-->
 
-     <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+        <p><strong>Advanced Search</strong></p>
 
-     <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
-                    </ul>
-                </div>
-      </div>
-    </div>             
+        <form class="custom search-type">
+          <label id="search-type-label" for="customDropdown">Search Type:</label>
+          <select class="custom-dropdown expand" id="customDropdown">
+            <option SELECTED>Person</option>
+            <option>Group</option>
+            <option>Position</option>
+            <option>Map</option>
+            <option>Skill Group</option>
+            <option>Skill</option>
+            <option>Skill Description</option>
+            <option>Development Activity</option>
+          </select>
 
-      <!--***** MAIN NAVIGATION *****-->
-        <div class="left-nav-container">
-          <!--This will hold the accordeon navigation-->
-          <ul class="accordion">
-            <li>
-              <div class="title">
-                <h6>Dashboard</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6>Goals</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6>My Position</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6>Growth Positions</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6 class="two-lines">My Team's Development</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="active no-dropdown">
-              <div class="title">
-                <h6><a href="petrocore-reports.html">Reports</a></h6>
-              </div>
-            </li>
-          <li>
-            <div class="title">
-              <h6>Administration</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Notes</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="no-dropdown">
-            <div class="title">
-              <h6>Tools</h6>
-            </div>
-          </li>
+        </form>
+        <div class="add-filter-container">
+
+          <!--***** ADD FILTER *****-->
+          <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+          <!--***** ADD FILTER *****-->
+
+          <div class="add-filter-area">
+
+            <hr class="petrocore-hr">
+            <ul id="filters">
+
+             <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+             <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+           </ul>
+         </div>
+       </div>
+     </div>
+
+     <!--***** MAIN NAVIGATION *****-->
+     <div class="left-nav-container">
+      <!--This will hold the accordeon navigation-->
+      <ul class="accordion">
+        <li>
+          <div class="title">
+            <h6>Dashboard</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>Goals</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>My Position</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>Growth Positions</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6 class="two-lines">My Team's Development</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="active no-dropdown">
+          <div class="title">
+            <h6><a href="petrocore-reports.html">Reports</a></h6>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>Administration</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="title">
+            <h6>Notes</h6>
+          </div>
+          <div class="content">
+            <ul>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 1</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="no-dropdown">
+          <div class="title">
+            <h6>Tools</h6>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+    <div class="breadcrumbs-container">
+      <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+      <div class="breadcrumbs-list-container">
+        <ul class="breadcrumbs">
+          <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+          <li><a href="#">Reports</a></li>
+          <li class="current"><a href="#">New Report Template</a></li>
         </ul>
       </div>
-      <!--***** MAIN NAVIGATION *****-->
-
     </div>
-    <!--***** LEFT SPLIT CONTAINER *****-->
+    <div class="content-container">
+      <!--This will hold the content-->
+      <h4>New Report Template</h4>
+      <hr>
+      <div id="progress-indicator">
 
-    <!--***** RIGHT SPLIT CONTAINER *****-->
-    <div class="nine columns right-split-container">
-      <div class="breadcrumbs-container">
-        <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
-        <div class="breadcrumbs-list-container">
-          <ul class="breadcrumbs">
-            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li><a href="#">Reports</a></li>
-            <li class="current"><a href="#">New Report Template</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="content-container">
-        <!--This will hold the content-->
-        <h4>New Report Template</h4>
-        <hr>
-        <div id="progress-indicator">
-
-          <div class="row">
+        <div class="row">
+          <a href="petrocore-reports-new1.html">
             <div class="three columns" id="step1">
-              <a href="petrocore-reports-new1.html">
-                <div class="step-number active-step-number"><p>1</p></div>
-                <div class="step-name alternate-step-number-1"><p>Properties</p></div>
-              </a>
+              <div class="step-number active-step-number"><p>1</p></div>
+              <div class="step-name alternate-step-number-1"><p>Properties</p></div>
               <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
             </div>
+          </a>
 
+          <a href="petrocore-reports-new2.html">
             <div class="three columns" id="step2">
-              <a href="petrocore-reports-new2.html">
-                <div class="step-number active-step-number"><p>2</p></div>
-                <div class="step-name long alternate-step-number-2"><p>People &amp; Position</p></div>
-              </a>
+              <div class="step-number active-step-number"><p>2</p></div>
+              <div class="step-name long alternate-step-number-2"><p>People &amp; Position</p></div>
               <div class="step-completion"><div class="circle circle-active"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
             </div>
+          </a>
 
-            <div class="three columns  active-step" id="step4">
-              <div class="step-number active-step-number"><p class="highlight-step">3</p></div>
-              <div class="step-name short alternate-step-numbe4"><p>Finish</p></div>
-              <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
-            </div>
+          <div class="three columns  active-step" id="step4">
+            <div class="step-number active-step-number"><p class="highlight-step">3</p></div>
+            <div class="step-name short alternate-step-numbe4"><p>Finish</p></div>
+            <div class="step-completion"><div class="circle"><div class="success-arrow"><img src="images/success-arrow.png" alt="Success"></div></div></div>
           </div>
         </div>
+      </div>
 
-        <br>
+      <br>
 
-        <!--***** FORMS *****-->
-        <form class="custom form-remove-margin-bottom">
-          <div>
-            <label for="checkbox1">
-              <input type="checkbox" data-customforms="disabled" id="checkbox1" Checked> Generate Report on Finish</label>
+      <!--***** FORMS *****-->
+      <form class="custom form-remove-margin-bottom">
+        <div>
+          <label for="checkbox1">
+            <input type="checkbox" data-customforms="disabled" id="checkbox1" Checked> Generate Report on Finish</label>
           </div>
         </form>
-        
+
         <br>
         <div class="row">
           <div class="same-line add-medium-space-right">
-             <a class="secondary radius button" href="petrocore-reports-new2.html">Back</a>
-            <a class="primary radius button" href="petrocore-reports-edit4.html">Finish</a>
-          </div>
-          <div class="same-line">
-            <a class="" href="petrocore-reports.html">Cancel</a>
-          </div>
+           <a class="secondary radius button" href="petrocore-reports-new2.html">Back</a>
+           <a class="primary radius button" href="petrocore-reports-edit4.html">Finish</a>
+         </div>
+         <div class="same-line">
+          <a class="" href="petrocore-reports.html">Cancel</a>
         </div>
       </div>
+    </div>
 
-    </div><!--Close Content Container-->
-  </div>
+  </div><!--Close Content Container-->
+</div>
 </div>
 <!--***** RIGHT SPLIT CONTAINER *****-->
 
@@ -433,41 +425,41 @@
     </div>
   </div>
 
-<div id="overlay"></div>
+  <div id="overlay"></div>
 
-<div class="notifications-popup">
+  <div class="notifications-popup">
 
-  <div class="arrow"></div>
-  <div class="arrow-border"></div>                
-                
-  <div class="notifications-title">
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
       <h5>Notifications</h5>
-  </div>
-
-  <div class="notifications-area">
-                    
-    <div class="notification">
-      <a href="#" class="icon- anotification">&#xf00d;</a>
-      <p>Report Lorem Ipsum 1 has been generated</p>
-          <a href="#">View Report</a> 
-      <hr class="hr-notification">
-      </div>
-                        
-    <div class="notification">
-      <a href="#" class="icon- anotification">&#xf00d;</a>
-      <p>Report Lorem Ipsum 2 has been generated</p>
-      <a href="#">View Report</a> 
-      <hr class="hr-notification">
     </div>
-                        
-    <div class="notification">
-      <a href="#" class="icon- anotification">&#xf00d;</a>
-      <p>Report Lorem Ipsum 3 has been generated</p>
-      <a href="#">View Report</a> 
-    </div>                               
 
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
   </div>
-</div>         
 
 
   <!-- Included JS Files (Uncompressed) -->

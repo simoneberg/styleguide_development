@@ -7,20 +7,19 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->  
+<!--<meta name="viewport" content="width=device-width" />-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-  
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
-  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
+
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -29,73 +28,73 @@
   <![endif]-->
 
   <script src="../javascripts/jquery.js"></script>
-  
+
   <script src="../javascripts/modernizr.foundation.js"></script>
-      
+
   <script type="text/javascript">
-  
+
 	function show_hide_advanced(id) {
 		var advanced_panel = document.getElementById(id);
 			advanced_arrow = document.getElementById('arrowdown');
-		
-		
+
+
 		if(advanced_panel.style.display == 'block')
-		
+
 		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
+			advanced_arrow.style.top = '0px';
 		}
 		else
 		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
 			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
+			advanced_arrow.style.top = '7px';
 		}
-	}	
+	}
 
-  
+
 	$(document).ready(function(){
 
 		var notifs = $("#user-notifications").text();
 		var notifs_exist = true;
 
 	   	$('#notification_btn').bind('click', function (event) {
-				
+
 			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
 			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
+				$('.notifications-popup').toggle();
 				$('#overlay').show();
 				$('#overlay').click(function(){
 						$('.notifications-popup').hide();
-						$('#overlay').hide();							
+						$('#overlay').hide();
 				});
-					
+
 			} else {
 				$('.notifications-popup').hide();
-				$('#overlay').hide();															
+				$('#overlay').hide();
 				}
-	    });	
-			
+	    });
+
 		$('.notification .anotification').click (function() {
 			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
+			notifs = $("#user-notifications").text();
 			$("#user-notifications").html(notifs-1);
-				
+
 			if (notifs == 1) {
-				notifs_exist = false;								
+				notifs_exist = false;
 			    $('.notification-btn').css('background','#c0c2c1');
 			    $('.notification-btn').css('border','1px solid #616161');
 			    $('.notification-btn').css('color','#404040');
 			    $('.notifications-area').html('You have "0" Notifications');
 			    $('.notifications-area').css('text-align','center');
 			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
+			}
 		});
-			
+
 	});
-		
+
   </script>
 
 </head>
@@ -120,8 +119,8 @@
                   <li><a href="petrocore-person-details-self.html">Settings</a></li>
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
-                  <li><a href="#">Role History</a></li>                                                                     
-              </ul>          
+                  <li><a href="#">Role History</a></li>
+              </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
 
@@ -132,9 +131,9 @@
                   <li><a href="#">Español</a></li>
                   <li><a href="#">Français</a></li>
                   <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Polski</a></li>                                                                        
+                  <li><a href="#">Polski</a></li>
               </ul>
-            </li> 
+            </li>
           <li><p class="bar">&#124;</p></li>
 
 
@@ -155,67 +154,67 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-      
+
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-        
+
           <div class="nine mobile-four columns">
-            <input id="initial-search" class="round-left" type="text" value="drilling" />            
+            <input id="initial-search" class="round-left" type="text" value="drilling" />
           </div>
-                  
+
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
           </div>
-          
+
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-          
+
         </div>
       </div>
-      <!--***** SEARCH *****-->   
-            
+      <!--***** SEARCH *****-->
+
 			<div id="advanced_search" class="display-none">
 	                <!--This is a Advanced Search panel that is hidden by default-->
-                  	
+
                     <p><strong>Advanced Search</strong></p>
-                
-					<form class="custom search-type">                  
-						<label id="search-type-label" for="customDropdown">Search Type:</label>  
+
+					<form class="custom search-type">
+						<label id="search-type-label" for="customDropdown">Search Type:</label>
 						<select class="custom-dropdown expand" id="customDropdown">
 							<option SELECTED>Person</option>
 							<option>Group</option>
-							<option>Position</option>                            
+							<option>Position</option>
 							<option>Map</option>
 							<option>Skill Group</option>
 							<option>Skill</option>
 							<option>Skill Description</option>
 							<option>Development Activity</option>
-						</select>                          
-                                                          
-					</form>                    
+						</select>
+
+					</form>
 
 	                <div class="add-filter-container">
 
     				      <!--***** ADD FILTER *****-->
-                    
-                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+
+                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
 				          <!--***** ADD FILTER *****-->
-                    
+
                     	  <div class="add-filter-area">
-                          
+
 								<hr class="petrocore-hr">
                         		<ul id="filters">
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                              
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>                                     
-               
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
              		            </ul>
                     	  </div>
 					</div>
-		     </div>             
+		     </div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -355,29 +354,29 @@
 				<div class="twelve columns">
  		           <div class=""><p><strong>Found 154 results</strong></p></div>
 				</div>
-            
+
 	            <div class="columns remove-padding adjust-two-columns">
 
 				     <!--***** SEARCH RESULTS NAVIGATION *****-->
-                
+
 					<div class="twelve columns">
 						<ul class="search-result-nav">
-						  <li class="title"><p><strong>Search Types</strong></p></li>          
-						  <li class="grayedout-item">Person (0)</li>  
-						  <li class="grayedout-item">Group (0)</li> 
-						  <li class="grayedout-item">Position (0)</li>                               
-						  <li class="grayedout-item">Map (0)</li>  
-						  <li><a href="petrocore-search-results-skill-group.html">Skill Group (4)</a></li>  
-						  <li><a href="petrocore-search-results-skill.html">Skill (22)</a></li>  
-						  <li class="selected-item">Skill Description (120)</li>  
-						  <li><a href="petrocore-search-results-development-activity.html">Development Activity (8)</a></li>                
-						</ul>  
+						  <li class="title"><p><strong>Search Types</strong></p></li>
+						  <li class="grayedout-item">Person (0)</li>
+						  <li class="grayedout-item">Group (0)</li>
+						  <li class="grayedout-item">Position (0)</li>
+						  <li class="grayedout-item">Map (0)</li>
+						  <li><a href="petrocore-search-results-skill-group.html">Skill Group (4)</a></li>
+						  <li><a href="petrocore-search-results-skill.html">Skill (22)</a></li>
+						  <li class="selected-item">Skill Description (120)</li>
+						  <li><a href="petrocore-search-results-development-activity.html">Development Activity (8)</a></li>
+						</ul>
 					</div>
 
 				    <!--***** SEARCH RESULTS NAVIGATION *****-->
-                
+
     	        </div>
-            
+
        	        <div class="columns remove-padding adjust-ten-columns">
 	          		<div class="left result-title"><p><strong>Results 1-25 of 120</strong></p></div>
 		          	<div class="export-print right text-right"><p><i class="icon- add-space"><a href="#">&#xf019;</a></i> <a href="#">Export</a> <i class="icon- add-space"><a href="#">&#xf02f;</a></i> <a href="#">Print</a></p></div>
@@ -405,92 +404,92 @@
     	        		  </tr>
 		        	      <tr>
         		    	    <td><a href="#">Incorporate practical operational considerations in the drilling program.</a></td>
-            			  </tr>                  
+            			  </tr>
 		        	      <tr>
 		            	    <td><a href="#">Describe the basic objectives and elements of performance planning and the Technical Limit, to generate a Days.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Estimate the technical limit for a common situation using an offset's estimate of the technical limit and a detailed.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Monitor drilling performance for a typical well against the detailed drilling plan.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Describe the purposes of Rig and Service Company Inspection programs, including equipment, personnel and HSE.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Identify types and capabilities of major components of a typical Drilling System.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Display management / leadership ability.</a></td>
-		            	  </tr>                  
+		            	  </tr>
         			      <tr>
             			    <td><a href="#">Manage potential conflict situations.</a></td>
-		            	  </tr>                  
+		            	  </tr>
 		        	      <tr>
         		    	    <td><a href="#">Build and lead effective motivated teams to achieve drilling plans.</a></td>
-		            	  </tr>                  
+		            	  </tr>
 		        	      <tr>
         		    	    <td><a href="#">Act as a recognized role model by supervisory apprentices.</a></td>
-            			  </tr>                  
+            			  </tr>
 		        	      <tr>
 		            	    <td><a href="#">Expand experience in DS-1 through DS-1 technology for use in horizontal and extended reach drilling operations.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Analyze use of production tubing as drill string potential in horizontal wells using mudmotors.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Explain different rock types and basic aspects of downhole environment.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Identify geologic factors effect on drilling performance: Rock type / drillability, tectonic / instability, temperature profile.</a></td>
-		            	  </tr>                  
+		            	  </tr>
         			      <tr>
             			    <td><a href="#">Explain significance of fracture pressure and how it impacts well design and drilling operations.</a></td>
-		            	  </tr>                  
+		            	  </tr>
         			      <tr>
             			    <td><a href="#">Explain the significance of pore pressure and how it impacts well design and drilling operations.</a></td>
-		            	  </tr>                  
+		            	  </tr>
         			      <tr>
 		            	    <td><a href="#">For all well types in an area, monitor formation pressure to identify abnormal and / or dangerous situations.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Organize wellsite personnel to implement plans, assure appropriate contingency plans exist, vet lessons learned.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Use geologic principles to characterize the drilling pore-pressure environment.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Use advanced pore pressure prediction techniques when appropriate (i.e. sonic, density, resistivity and conductivity.</a></td>
-        		    	  </tr>                  
+        		    	  </tr>
         	    		  <tr>
 		            	    <td><a href="#">Identify and address regulatory implications of casing points, drilling fluids, operational plans, environmental.</a></td>
-        		    	  </tr>                                                                                                            
+        		    	  </tr>
         	    		</tbody>
 			          </table>
 
-                      <!--***** TABLE *****-->           
-           
+                      <!--***** TABLE *****-->
+
 	            </div>
-            
-				<div class="twelve columns pagination-centered">  
+
+				<div class="twelve columns pagination-centered">
 					<p>Page 1 of 5</p>
 					<ul class="pagination">
-					  <li class="arrow unavailable"><a href="">«</a></li>  
-					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>    
-					  <li class="current unavailable"><a href="">1</a></li>    
+					  <li class="arrow unavailable"><a href="">«</a></li>
+					  <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+					  <li class="current unavailable"><a href="">1</a></li>
 					  <li><a href="">2</a></li>
 					  <li><a href="">3</a></li>
 					  <li><a href="">4</a></li>
-					  <li><a href="">5</a></li>                        
+					  <li><a href="">5</a></li>
 					  <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
 					  <li class="arrow unavailable"><a href="">»</a></li>
-					</ul>       
-				</div>            
-            
+					</ul>
+				</div>
+
             </div>
 
-       </div>      
+       </div>
     </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
@@ -521,7 +520,7 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-  
+
   <!-- END NAVIGATION -->
     </div>
   <!-- </div> -->
@@ -547,38 +546,38 @@
 <div class="notifications-popup">
 
 	<div class="arrow"></div>
-	<div class="arrow-border"></div>                
-                
+	<div class="arrow-border"></div>
+
 	<div class="notifications-title">
     	<h5>Notifications</h5>
 	</div>
 
 	<div class="notifications-area">
-                    
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a> 
+	        <a href="#">View Report</a>
 			<hr class="hr-notification">
 	    </div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a> 
+			<a href="#">View Report</a>
 			<hr class="hr-notification">
 		</div>
-                        
+
 		<div class="notification">
 			<a href="#" class="icon- anotification">&#xf00d;</a>
 			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a> 
-		</div>                               
+			<a href="#">View Report</a>
+		</div>
 
 	</div>
-</div>         
+</div>
 
-  
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -599,20 +598,20 @@
   <script src="../javascripts/jquery.foundation.joyride.js"></script>
   <script src="../javascripts/jquery.foundation.clearing.js"></script>
   <script src="../javascripts/jquery.foundation.magellan.js"></script>
-  
+
   -->
-  
+
   <!-- Included JS Files (Compressed) -->
   <script src="../javascripts/foundation.min.js"></script>
-  
+
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
-  
+
     <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
+    </script>
 
 </body>
 </html>
