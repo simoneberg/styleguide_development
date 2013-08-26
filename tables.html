@@ -99,6 +99,91 @@ table tbody tr td {border-bottom: 1px solid black;}
       <p>A table element is used for displaying data tables. The design consists of a striping background on every other row, dark gray header to emphasize the table headers, and an arrow to indicate the sorting/filtering of a data column.</p>
       <p><img src="images/table.jpg" alt="Header"></p>
       <p><a href="demo/petrocore-reports-history.html" target="_blank">View Demo</a></p>
+      <hr>
+      <h3>Creating Compass Tables</h3>
+      <p>This is the minimum structure of a basic <code>table</code> element:</p>
+<pre>
+<code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header&lt;/th&gt;
+      &lt;th&gt;Header&lt;/th&gt;
+      &lt;th&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+      &lt;td&gt;Cell&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;  
+</code>
+</pre>
+<p>Table headers are required for every table and must be coded within this structure:</p>
+<pre>
+<code>
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header&lt;/th&gt;
+    &lt;th&gt;Header&lt;/th&gt;
+    &lt;th&gt;Header&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+</code>
+</pre>
+<p>Table data must be contained in this structure:</p>
+<pre>
+<code>
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Cell&lt;/td&gt;
+    &lt;td&gt;Cell&lt;/td&gt;
+    &lt;td&gt;Cell&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+</code>
+</pre>
+<p>To make the table expand full width, add one of the grid numbers as a class. Example:</p>
+<pre>
+<code>
+&lt;table class=&quot;twelve&quot;&gt;
+</code>
+</pre>
+
+<h4>CSS Code:</h4>
+<p>The <code>table</code> is styled with the following CSS code.</p>
+<pre>
+<code>
+table {
+  border: 1px solid #8a8a8a;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border-spacing: 0;
+}
+
+table thead tr th {
+  border-bottom: 1px solid #e1e1e1;
+  background: white;
+}
+
+/* add table row striping, works in all browsers except IE8 browser. */
+table tbody tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+table tbody tr td {
+  vertical-align: middle;
+}
+</code>
+</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
     </div>
   </div>
   <!-- CONTENT AREA -->
