@@ -1194,6 +1194,11 @@ ul.accordion>li>div.title:after {
   padding: 12px 10px 10px;
 }
 
+.link-without-button {
+  position:relative;
+  top: 10px;
+}
+
 .button.silver-button {
   font-size:12px;
   color: #333;
@@ -3911,6 +3916,11 @@ span.dropdown-arrow {
     border-top: 1px solid #717171;
     border-bottom: 1px solid #717171;
   } 
+
+  .link-without-button {
+    position:static;
+    top: 0px;
+  }
 
   .button.silver-button.round {
 	font-size:1.2em;	
