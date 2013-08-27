@@ -947,6 +947,12 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
+.tabs-content li a {
+  display:block;
+  margin-left:23px;
+  line-height:28px;  
+}
+
 /* END NAVIGATION */
 /* **************************************** */
 
@@ -995,9 +1001,10 @@ ul.accordion>li>div.title:after {
   padding: 0;
   margin: 0;
   position: relative;
-  width: 182px !important;
+  width: 170px;
+  height:auto;  
 }
-
+	
 .button.dropdown.split.petrocore-actions:hover,
 .button.dropdown.split.petrocore-actions:focus,
 .button.dropdown.split.petrocore-actions:active {
@@ -1221,7 +1228,7 @@ ul.accordion>li>div.title:after {
 .button.silver-button.round {
   border-radius: 5px 5px 5px 5px;
   padding-left: 12px;
-  padding-right: 12px;  
+  padding-right: 12px;
 }
 
 .button.silver-button:hover,
@@ -1718,7 +1725,7 @@ table tbody tr td {
   -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
   box-shadow: inset 0 1px 1px #d1d1d1;
   border-bottom: 1px solid #717171;
-  cursor: move;
+/*  cursor: move; */
 }
 
 .panel-header-small {
@@ -1811,13 +1818,13 @@ table tbody tr td {
   height: auto;
 }
 
+
 .panel-action-icons-container {
-  height: 24px;
+  height: 47px;
   display: block;
-  margin-top: 5px;
 }
 
-.panel-action-icons-list {
+.panel-action-icons-list { 
   float: right;
 }
 
@@ -1861,16 +1868,20 @@ table tbody tr td {
 .panel-header-icons.icon- {
   font-size: 20px;
   line-height: 24px;
-  margin-top: 6px;
+  margin-top: 6px; 
 }
 
 .panel-header-icons-list {
   display: block;
+  float:right;
+  position:relative;
+  top:4px;  
+  width:210px;
 }
 
 .panel-header-icons-list li {
   float: right;
-  margin-left: 10px;
+  margin-left: 5px;
   display: block;
 }
 
@@ -1884,7 +1895,7 @@ table tbody tr td {
 .panel-header-icons-collapse-up.icon- {
   font-size: 20px;
   line-height: 24px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .panel-header-icons-collapse-up-list {
@@ -1905,7 +1916,7 @@ table tbody tr td {
 }
 
 .panel-header-icons-close.icon- {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   margin-top: 10px;
 }
@@ -1928,15 +1939,19 @@ table tbody tr td {
 }
 
 .panel-title-container {
-  width: 65%;
+  width:auto;
   position: relative;
-  float: left;
 }
 
 .panel-header-icons-container {
-  width: 70px;
-  position: relative;
-  float: right;
+  width:25px;
+  right: 30px;
+  position:absolute;
+  height:48px;
+}
+
+.panel-header-icons-list .button {
+  top:3px;  
 }
 
 /* TODO: is this intended? */
@@ -2327,9 +2342,9 @@ ul.button-group li {
   padding-bottom: 0;
 }
 
-.panel-content-container-dashboard {
-  padding: 0 15px 0 15px;
-  min-height:250px;
+.panel-content-container-dashboard { 
+  padding: 25px 15px 0 15px;  
+  min-height:150px;
 }
 
 .step-number {
@@ -3296,6 +3311,8 @@ span.dropdown-arrow {
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
+	height: 90px;	
+    margin-bottom: 5px; 		
   }
 
   .tabs dd, .tabs li {
@@ -3617,6 +3634,37 @@ span.dropdown-arrow {
 /* responsive to allow smooth transition from large to small */
 @media only screen and (max-width: 525px) {
 
+  body {
+    min-width:298px;
+  }
+
+  .content-container {
+	padding-right: 4px;
+	padding-left: 4px;
+	margin:0px;
+  }
+
+  .panel-header {
+	padding-left:3px;
+	padding-left:10px;
+	height:48px;
+  }
+
+  .panel-title-container {
+    width:100%;
+    top:0px;
+  }
+
+  .panel-header-icons-container {
+    width:97%;
+    left: 5px;
+    height:46px;
+  }
+
+  .panel-action-icons-container {
+    height: 47px;
+  }
+  
 }
 
 /* landscape iPhone */
@@ -3813,10 +3861,10 @@ span.dropdown-arrow {
     list-style: none;
     border-bottom: 0;
     display: block;
-    height: 120px;
+    height: 90px;
     width: 100%;
     padding: 0;
-    margin-bottom: 20px;
+	margin-bottom: 5px;
   }
 
   .tabs dd,
@@ -3862,19 +3910,62 @@ span.dropdown-arrow {
     border-left: 1px solid #717171;
     border-top: 1px solid #717171;
     border-bottom: 1px solid #717171;
+  } 
+
+  .button.silver-button.round {
+	font-size:1.2em;	
   }
+
 }
 
 /* landscape first gen Android phones */
 @media only screen and (max-width: 470px) {
+
+  .name-classifier {
+    font-size: 0.97em;
+  }
+
+  .panel-header-icons-list {
+    width:169px;
+  }
+
+  .panel-header-icons-list li {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  
+  .button.dropdown.split.petrocore-actions {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 130px;
+  }
+
+  .button.silver-button.round {
+	font-size:1.1em;
+  }
 
 }
 
 /* portrait iPhone */
 @media only screen and (max-width: 320px) {
 
-}
+  .name-classifier {
+    font-size: 0.95em;
+  }
 
+  .panel-header-icons-list {
+    width:147px;
+  }
+
+  .button.dropdown.split.petrocore-actions {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 110px;
+  }
+
+}
 
 /* END MEDIA QUERIES
 /* **************************************** */
