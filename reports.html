@@ -10,12 +10,12 @@
   <meta name="viewport" content="width=device-width" />
 
   <title>Reports – PetroSkills Online Style Guide</title>
-  
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="stylesheets/foundation.min.css">
   <link rel="stylesheet" href="stylesheets/app.css">
@@ -64,7 +64,7 @@
     <li class="active"><a href="add-avtivity.html">Design Examples</a>
       <ul class="subitems">
           <li><a href="add-activity.html">Add Activity</a></li>
-          <li><a href="add-remove-participant.html">Add/Remove Direct Participant</a></li>          
+          <li><a href="add-remove-participant.html">Add/Remove Direct Participant</a></li>
           <li><a href="assessment-wizard.html">Assessment Wizard</a></li>
           <li><a href="dashboard.html">Dashboard</a></li>
           <li><a href="email-notifications.html">Email Notifications</a></li>
@@ -94,10 +94,37 @@
           <p>The Reports section covers as follows:</p>
           <ul class="square">
             <li>Reports Template Homepage</li>
+            <li>Progress Indicators</li>
             <li>New Report Template</li>
             <li>Edit Report Template</li>
           </ul>
           <hr>
+
+          <h3>Progess Indicators</h3>
+          <p><img src="images/petrocore-reports-progress-indicators-new.png" alt="New Report Progress Indicators" style="border: 1px solid #717171;">
+          new report progress indicators
+          </p>
+          <p><img src="images/petrocore-reports-progress-indicators-edit.png" alt="Edit Report Progress Indicators" style="border: 1px solid #717171;">
+            editing report progress indicators</p>
+
+          <p>For new reports and when editing existing reports there are three steps in template creation and modification.
+            <ol>
+              <li>Properties</li>
+              <li>People &amp; Position</li>
+              note: the second step will occasionally change title when a report type does not use people and positions.
+              <li>Finish</li>
+            </ol>
+            For step 1 and 2 only success indicators are displayed to the right of the titles. Step 3 does not have a state and therefore does not have an indicator associated.
+          </p>
+          <p>
+            These indicators have two states.
+            <ol>
+              <li>empty</li>
+              an empty indicator represents when a new report template is created and no information has been saved or validated for the step.
+              <li>green checkmark</li>
+              a green checkmark indicates that the step has been successfully completed and saved.
+            </ol>
+          </p>
 
           <h3>Report Templates</h3>
           <p><img src="images/reports-homepage.jpg" alt="Reports Homepage" style="border: 1px solid #717171;"></p>
@@ -112,6 +139,7 @@
           <hr>
 
           <h3>New Report</h3>
+
           <h4>Step 1</h4>
           <p><img src="images/new-report-step1.jpg" alt="New Report Step 1" style="border: 1px solid #717171;"></p>
           <p>In Step 1, the content displayed consists of: General Information, Select Report Type, Options, and Schedule. All sections are required form fields except for Schedule. The user can turn the schedule feature on or off.</p>
@@ -176,9 +204,11 @@
           <hr>
 
           <h3>Edit Report Template</h3>
+
           <img src="images/edit-report-step4.jpg" alt="Edit Report Step 4" style="border: 1px solid #717171;"><br><br>
           <p>This page allows the user to be able to go back and make edits to the report templates that they have created.</p>
           <p>When the user has generated some reports from their report template, the Reports tab will display a data table containing their generated reports.</p>
+
           <p><a href="demo/petrocore-reports-edit4.html" target="_blank">View Demo</a></p>
           <hr>
 
@@ -206,8 +236,8 @@
   </div>
   <!-- CONTENT AREA -->
 
-  
-  
+
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="javascripts/jquery.js"></script>
@@ -228,21 +258,21 @@
   <script src="javascripts/jquery.foundation.joyride.js"></script>
   <script src="javascripts/jquery.foundation.clearing.js"></script>
   <script src="javascripts/jquery.foundation.magellan.js"></script>
-  
+
   -->
-  
+
   <!-- Included JS Files (Compressed) -->
   <script src="javascripts/foundation.min.js"></script>
-  
+
   <!-- Initialize JS Plugins -->
   <script src="javascripts/app.js"></script>
 
-  
+
     <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
-  
+    </script>
+
 </body>
 </html>
