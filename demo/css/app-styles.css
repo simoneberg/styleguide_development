@@ -2471,9 +2471,8 @@ ul.button-group li {
 }
 
 #progress-indicator {
-  width: 100%;
-  height: 55px;
   min-width: 624px;
+  width: 100%;
 }
 
 #step1 {
@@ -2908,6 +2907,10 @@ span.dropdown-arrow {
   clear: both;
   border: solid 1px #8a8a8a;
   width: 100%;
+}
+
+#table_container.no-border {
+  border: 0;
 }
 
 /* list box/ direct participant */
@@ -3372,6 +3375,7 @@ span.dropdown-arrow {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 855px) {
+
 }
 
 /* portait iPad - 10 inch tablet */
@@ -3415,6 +3419,7 @@ span.dropdown-arrow {
 
   .breadcrumbs-container {
     padding: 0;
+    display: none;
   }
 
   .breadcrumbs-list-container {
@@ -3610,6 +3615,11 @@ span.dropdown-arrow {
 
   #step4 {
     width: 33%;
+  }
+
+  .columns.right-split-container {
+    padding: 0 15px;
+    background-color: #fff;
   }
 }
 
@@ -3924,6 +3934,10 @@ span.dropdown-arrow {
 
   .button.silver-button.round {
 	font-size:1.2em;	
+  }
+
+  #progress-indicator {
+    min-width: inherit;
   }
 
 }
