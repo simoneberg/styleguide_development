@@ -274,11 +274,6 @@ h4 {
   text-align: right;
 }
 
-h5 small {
-  font-size: 12px;
-  color: #555;
-}
-
 /* END TYPOGRAPHY */
 /* **************************************** */
 
@@ -305,7 +300,6 @@ h5 small {
   float: left;
   margin-top: 8px;
   background-image: url("../images/logo.png");
-  cursor: pointer;
 }
 
 .profile-container {
@@ -764,8 +758,7 @@ ul.accordion>li.active .content {
   background: -o-linear-gradient(top,  #eeeeee 0%,#f5f5f5 100%);
   background: -ms-linear-gradient(top,  #eeeeee 0%,#f5f5f5 100%);
   background: linear-gradient(to bottom,  #eeeeee 0%,#f5f5f5 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#f5f5f5',GradientType=0 );
-  display: block;
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#f5f5f5',GradientType=0 );display: block;
   border-left: 0;
   border-right: 0;
   -moz-box-shadow: inset 0 0 1px 1px #d1d1d1;
@@ -954,11 +947,12 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-/*.tabs-content li a {
-  display:block;
+.tabs-content li a {
+  /*display:block;
   margin-left:23px;
-  line-height:28px;  
-}*/
+  line-height:28px;  */
+  
+}
 
 /* END NAVIGATION */
 /* **************************************** */
@@ -1341,7 +1335,6 @@ form.custom .twelve.columns .control-with-trailing-icon {
 
 label {
   color: #333;
-  cursor: default;
 }
 
 input[type="text"],
@@ -1602,7 +1595,12 @@ form select.custom-dropdown {
   margin-left: 5px;
 }
 
-.text-after-dropdown {
+.cc-link {
+  float: left;
+}
+
+.cc-link p {
+  line-height: 2.4;
   margin-bottom: 0;
 }
 
@@ -1672,6 +1670,14 @@ table tbody tr:nth-child(even) {
 
 table tbody tr td {
   vertical-align: middle;
+}
+
+#competency-framework-table {
+  min-width: 700px;
+}
+
+.competency-table-adjust {
+  margin: 18px 0 15px 0;
 }
 
 /* END TABLES */
@@ -1744,10 +1750,7 @@ table tbody tr td {
   -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
   box-shadow: inset 0 1px 1px #d1d1d1;
   border-bottom: 1px solid #717171;
-}
-
-.panel-header.movable {
-  cursor: move;
+/*  cursor: move; */
 }
 
 .panel-header-small {
@@ -1920,11 +1923,6 @@ table tbody tr td {
   margin-top: 10px;
 }
 
-.panel-header-icons-collapse-down.icon- {
-    font-size: 20px;
-    line-height: 24px;
-}
-
 .panel-header-icons-collapse-up-list {
   display: block;
 }
@@ -1992,14 +1990,6 @@ table tbody tr td {
 
 .six.columns.visible-charts.right-chart {
   padding-right: 0;
-}
-
-.competency-map-list {
-  margin: 80px 0 15px;
-}
-
-.panel-content-container-close {
-  min-height: 65px;
 }
 
 /* This segment displays a temporary image of a chart and widget for ticket 1352 */
@@ -2278,16 +2268,6 @@ textarea.compass-error:focus {
 /* **************************************** */
 /* PAGE SPECIFIC */
 
-.no-bullets {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.no-bullets li {
-  line-height: 2;
-}
-
 /* report templates */
 li.horizontal-list {
   float: left;
@@ -2387,16 +2367,9 @@ ul.button-group li {
   padding-bottom: 0;
 }
 
-.panel-content-container-dashboard {
-  clear: both;
+.panel-content-container-dashboard { 
+  padding: 25px 15px 0 15px;  
   min-height:150px;
-  padding: 0 15px;
-}
-
-.panel-content-container-dashboard-options {
-  padding: 0 15px 0 15px;
-  display: none;
-  min-height: 0px;
 }
 
 .step-number {
@@ -2518,8 +2491,9 @@ ul.button-group li {
 }
 
 #progress-indicator {
-  min-width: 624px;
   width: 100%;
+  height: 55px;
+  min-width: 624px;
 }
 
 #step1 {
@@ -2956,10 +2930,6 @@ span.dropdown-arrow {
   width: 100%;
 }
 
-#table_container.no-border {
-  border: 0;
-}
-
 /* list box/ direct participant */
 #ui-assign-direct-relationship li {
   list-style: none;
@@ -3001,15 +2971,6 @@ span.dropdown-arrow {
 .sr-assigned {
   color: #999;
   display: block;
-}
-
-.list-participants-empty {
-    min-height: 31px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    text-align: center;
 }
 
 .list-relationships-title,
@@ -3431,7 +3392,6 @@ span.dropdown-arrow {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 855px) {
-
 }
 
 /* portait iPad - 10 inch tablet */
@@ -3475,7 +3435,6 @@ span.dropdown-arrow {
 
   .breadcrumbs-container {
     padding: 0;
-    display: none;
   }
 
   .breadcrumbs-list-container {
@@ -3671,11 +3630,6 @@ span.dropdown-arrow {
 
   #step4 {
     width: 33%;
-  }
-
-  .columns.right-split-container {
-    padding: 0 15px;
-    background-color: #fff;
   }
 }
 
@@ -3990,10 +3944,6 @@ span.dropdown-arrow {
 
   .button.silver-button.round {
 	font-size:1.2em;	
-  }
-
-  #progress-indicator {
-    min-width: inherit;
   }
 
 }
