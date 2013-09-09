@@ -948,9 +948,10 @@ ul.accordion>li>div.title:after {
 }
 
 .tabs-content li a {
-  display:block;
+  /*display:block;
   margin-left:23px;
-  line-height:28px;  
+  line-height:28px;  */
+  
 }
 
 /* END NAVIGATION */
@@ -1594,7 +1595,12 @@ form select.custom-dropdown {
   margin-left: 5px;
 }
 
-.text-after-dropdown {
+.cc-link {
+  float: left;
+}
+
+.cc-link p {
+  line-height: 2.4;
   margin-bottom: 0;
 }
 
@@ -1664,6 +1670,14 @@ table tbody tr:nth-child(even) {
 
 table tbody tr td {
   vertical-align: middle;
+}
+
+#competency-framework-table {
+  min-width: 700px;
+}
+
+.competency-table-adjust {
+  margin: 18px 0 15px 0;
 }
 
 /* END TABLES */
