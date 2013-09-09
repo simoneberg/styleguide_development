@@ -274,6 +274,11 @@ h4 {
   text-align: right;
 }
 
+h5 small {
+  font-size: 12px;
+  color: #555;
+}
+
 /* END TYPOGRAPHY */
 /* **************************************** */
 
@@ -947,11 +952,11 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-.tabs-content li a {
+/*.tabs-content li a {
   display:block;
   margin-left:23px;
   line-height:28px;  
-}
+}*/
 
 /* END NAVIGATION */
 /* **************************************** */
@@ -1978,6 +1983,14 @@ table tbody tr td {
   padding-right: 0;
 }
 
+.competency-map-list {
+  margin: 80px 0 15px;
+}
+
+.panel-content-container-close {
+  min-height: 65px;
+}
+
 /* This segment displays a temporary image of a chart and widget for ticket 1352 */
 .chart-widget-container {
   float:left;
@@ -2254,6 +2267,16 @@ textarea.compass-error:focus {
 /* **************************************** */
 /* PAGE SPECIFIC */
 
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.no-bullets li {
+  line-height: 2;
+}
+
 /* report templates */
 li.horizontal-list {
   float: left;
@@ -2353,9 +2376,10 @@ ul.button-group li {
   padding-bottom: 0;
 }
 
-.panel-content-container-dashboard { 
-  padding: 25px 15px 0 15px;  
+.panel-content-container-dashboard {
+  clear: both;
   min-height:150px;
+  padding: 0 15px;
 }
 
 .step-number {
