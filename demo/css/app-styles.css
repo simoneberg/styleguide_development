@@ -1341,6 +1341,7 @@ form.custom .twelve.columns .control-with-trailing-icon {
 
 label {
   color: #333;
+  cursor: default;
 }
 
 input[type="text"],
