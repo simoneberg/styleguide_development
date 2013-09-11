@@ -274,11 +274,6 @@ h4 {
   text-align: right;
 }
 
-h5 small {
-  font-size: 12px;
-  color: #555;
-}
-
 /* END TYPOGRAPHY */
 /* **************************************** */
 
@@ -954,11 +949,12 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-/*.tabs-content li a {
-  display:block;
+.tabs-content li a {
+  /*display:block;
   margin-left:23px;
-  line-height:28px;  
-}*/
+  line-height:28px;  */
+  
+}
 
 /* END NAVIGATION */
 /* **************************************** */
@@ -1602,7 +1598,12 @@ form select.custom-dropdown {
   margin-left: 5px;
 }
 
-.text-after-dropdown {
+.cc-link {
+  float: left;
+}
+
+.cc-link p {
+  line-height: 2.4;
   margin-bottom: 0;
 }
 
@@ -1672,6 +1673,14 @@ table tbody tr:nth-child(even) {
 
 table tbody tr td {
   vertical-align: middle;
+}
+
+#competency-framework-table {
+  min-width: 700px;
+}
+
+.competency-table-adjust {
+  margin: 18px 0 15px 0;
 }
 
 /* END TABLES */
@@ -1994,14 +2003,6 @@ table tbody tr td {
   padding-right: 0;
 }
 
-.competency-map-list {
-  margin: 80px 0 15px;
-}
-
-.panel-content-container-close {
-  min-height: 65px;
-}
-
 /* This segment displays a temporary image of a chart and widget for ticket 1352 */
 .chart-widget-container {
   float:left;
@@ -2278,16 +2279,6 @@ textarea.compass-error:focus {
 /* **************************************** */
 /* PAGE SPECIFIC */
 
-.no-bullets {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.no-bullets li {
-  line-height: 2;
-}
-
 /* report templates */
 li.horizontal-list {
   float: left;
@@ -2387,10 +2378,9 @@ ul.button-group li {
   padding-bottom: 0;
 }
 
-.panel-content-container-dashboard {
-  clear: both;
+.panel-content-container-dashboard { 
+  padding: 25px 15px 0 15px;  
   min-height:150px;
-  padding: 0 15px;
 }
 
 .panel-content-container-dashboard-options {
@@ -2518,8 +2508,9 @@ ul.button-group li {
 }
 
 #progress-indicator {
-  min-width: 624px;
   width: 100%;
+  height: 55px;
+  min-width: 624px;
 }
 
 #step1 {
@@ -2954,10 +2945,6 @@ span.dropdown-arrow {
   clear: both;
   border: solid 1px #8a8a8a;
   width: 100%;
-}
-
-#table_container.no-border {
-  border: 0;
 }
 
 /* list box/ direct participant */
@@ -3431,7 +3418,6 @@ span.dropdown-arrow {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 855px) {
-
 }
 
 /* portait iPad - 10 inch tablet */
@@ -3475,7 +3461,6 @@ span.dropdown-arrow {
 
   .breadcrumbs-container {
     padding: 0;
-    display: none;
   }
 
   .breadcrumbs-list-container {
@@ -3671,11 +3656,6 @@ span.dropdown-arrow {
 
   #step4 {
     width: 33%;
-  }
-
-  .columns.right-split-container {
-    padding: 0 15px;
-    background-color: #fff;
   }
 }
 
@@ -3990,10 +3970,6 @@ span.dropdown-arrow {
 
   .button.silver-button.round {
 	font-size:1.2em;	
-  }
-
-  #progress-indicator {
-    min-width: inherit;
   }
 
 }
