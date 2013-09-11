@@ -2940,7 +2940,7 @@ span.dropdown-arrow {
 
 #table_container {
   overflow: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   clear: both;
   border: solid 1px #8a8a8a;
