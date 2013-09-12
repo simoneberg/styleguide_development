@@ -3110,6 +3110,20 @@ span.dropdown-arrow {
   color:#0169a0;
 }
 
+/* Development Plan */
+
+ul.inline-list.forecast-status-list > li > *{
+  display: inline-block;
+}
+
+.button.silver-button.wide {
+  padding: 12px 42px;
+}
+
+ul.button-group.dev-plan-views li:first-child {
+margin: 0 10px 0 0;
+}
+
 /* END PAGE SPECIFIC */
 /* **************************************** */
 
