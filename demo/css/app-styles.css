@@ -1907,7 +1907,7 @@ table tbody tr td {
   float:right;
   position:relative;
   top:4px;  
-  width:210px;
+  width:220px;
 }
 
 .panel-header-icons-list li {
@@ -1988,6 +1988,10 @@ table tbody tr td {
 
 .panel-header-icons-list .button {
   top:3px;  
+}
+
+.panel-header-icons-list .button.radius.secondary {
+  padding: 8px 15px;
 }
 
 /* TODO: is this intended? */
@@ -2375,7 +2379,11 @@ ul.button-group li {
 .panel-content-container {
   padding: 0 15px 0 15px;
   height: auto;
-  padding-bottom: 0;
+}
+
+.panel-content-container-full {
+  height: auto;
+  padding: 0;
 }
 
 .panel-content-container-dashboard { 
@@ -2947,6 +2955,10 @@ span.dropdown-arrow {
   width: 100%;
 }
 
+#table_container.no-border {
+  border: 0;
+}
+
 /* list box/ direct participant */
 #ui-assign-direct-relationship li {
   list-style: none;
@@ -3120,8 +3132,59 @@ ul.inline-list.forecast-status-list > li > *{
   padding: 12px 42px;
 }
 
-ul.button-group.dev-plan-views li:first-child {
+ul.button-group.slim li:first-child {
 margin: 0 10px 0 0;
+}
+
+.scroll-horizontal {
+  height: 200px;
+  overflow: auto;
+  width: 200px;
+}
+
+.month-title {
+  background-color: #efefef;
+  border: 1px solid #8a8a8a;
+  border-width: 1px 1px 1px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 -15px;
+  padding: 6px 0;
+}
+
+.calendar-grid {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 600px;
+}
+
+.calendar-grid .row {
+  width: 800px;
+}
+
+.calendar-grid .row .one {
+  min-width: 60px;
+}
+
+.calendar-grid .one:first-child .month-title {
+  border-width: 1px;
+}
+
+.calendar-grid .one:last-child .month-title {
+  border-width: 1px;
+  margin-left: -16px;
+}
+
+.month-columns {
+  border: 1px solid #8a8a8a;
+  border-width: 0 1px 1px 0;
+  margin: 0 -15px;
+  min-height: 100px;
+}
+
+.one:first-child .month-columns {
+  border-width: 0 1px 1px 1px;
 }
 
 /* END PAGE SPECIFIC */
@@ -3228,9 +3291,21 @@ margin: 0 10px 0 0;
     width: 50%;
   }
 
+  ul.button-group.slim {
+    margin-bottom: 12px;
+  }
+
+  ul.button-group.slim li {
+    width: auto;
+  }
+
   ul.button-group li:first-child {
     margin-left: 0;
     margin-right: -1px;
+  }
+
+  ul.button-group.slim li:first-child {
+    margin: 0 -1px 0 0;
   }
 
   .filter-action-icons {
@@ -3996,7 +4071,7 @@ margin: 0 10px 0 0;
   }
 
   .panel-header-icons-list {
-    width:169px;
+    width:210px;
   }
 
   .panel-header-icons-list li {
