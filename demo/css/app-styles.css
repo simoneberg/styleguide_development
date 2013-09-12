@@ -1504,6 +1504,12 @@ div.scroll-vertical-only {
   overflow-y: scroll;
 }
 
+div.scroll-vertical-auto {
+  border: 1px solid #ccc;
+  overflow-x: none;
+  overflow-y: auto;
+}
+
 div.scroll-horizontal-only {
   border: 1px solid #ccc;
   overflow-x: scroll;
@@ -1515,7 +1521,7 @@ div.scroll-both {
   overflow: auto;
 }
 
-.set-overflow-height {
+.demo-only-set-overflow-height {
   height: 275px;
 }
 
