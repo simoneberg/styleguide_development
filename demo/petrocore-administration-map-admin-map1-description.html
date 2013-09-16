@@ -11,12 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
-
+  
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-
+  
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
   <link rel="stylesheet" href="../stylesheets/app.css">
@@ -40,7 +40,7 @@
 
 
         if(advanced_panel.style.display == 'block')
-        
+
         {    advanced_panel.style.display = 'none';
             document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
             advanced_arrow.style.position = 'relative';
@@ -58,31 +58,31 @@
     $(document).ready(function(){
 
         var notifs = $("#user-notifications").text();
-        var notifs_exist = true;
+        var notifs_exist = true;        
 
            $('#notification_btn').bind('click', function (event) {
 
             if (notifs_exist == true) {
                 $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
                 $('.notifications-popup').css('top',event.pageY+30);
-                $('.notifications-popup').toggle();
+                $('.notifications-popup').toggle();    
                 $('#overlay').show();
                 $('#overlay').click(function(){
                         $('.notifications-popup').hide();
                         $('#overlay').hide();
                 });
-
+                    
             } else {
                 $('.notifications-popup').hide();
                 $('#overlay').hide();
                 }
-        });
+        });    
 
         $('.notification .anotification').click (function() {
             $(this).parent().remove();
             notifs = $("#user-notifications").text();
             $("#user-notifications").html(notifs-1);
-                
+
             if (notifs == 1) {
                 notifs_exist = false;
                 $('.notification-btn').css('background','#c0c2c1');
@@ -91,18 +91,23 @@
                 $('.notifications-area').html('You have "0" Notifications');
                 $('.notifications-area').css('text-align','center');
                 $('.notifications-area').css('padding','10px 0 10px 0');
-            }
+            }                                        
         });
 
 
-      $('.panel-header-icons-collapse-up.icon-').click(open_close);
+      $(".action_buttons").click(function () {
+        $(this).next().trigger('click');
+      });
 
+
+      $('.panel-header-icons-collapse-up.icon-').click(open_close);
+      
       function open_close() {
 
         target_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
-                
+
                if ($(target_panel).is(':hidden'))
-                {    $(this).html('&#xf0de;');
+                {    $(this).html('&#xf0de;');    
                     $(this).css('margin-top','10px');
                 }
             else
@@ -112,6 +117,23 @@
 
         target_panel.slideToggle();
       };
+
+
+      $('#description_textarea').keyup(function(e)
+      {
+          var maxLength = 1000;
+          var textlength = this.value.length;
+          if (textlength >= maxLength)
+          {
+              this.value = this.value.substring(0, maxLength);
+              e.preventDefault();
+          }
+          else
+          {
+              $('#charactersleft').html(maxLength - textlength);
+          }
+      });
+
 
     });
 
@@ -140,7 +162,6 @@
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
                   <li><a href="#">Role History</a></li>
-
               </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
@@ -154,7 +175,7 @@
                   <li><a href="#">Italiano</a></li>
                   <li><a href="#">Polski</a></li>
               </ul>
-            </li>
+            </li> 
           <li><p class="bar">&#124;</p></li>
 
 
@@ -174,23 +195,23 @@
 
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
-
+      
       <!--***** SEARCH *****-->
       <div class="search-container">
         <div class="row collapse search-input">
-
+        
           <div class="nine mobile-three columns">
-            <input id="initial-search" class="round-left" type="text" value="" />
+            <input id="initial-search" class="round-left" type="text" value="" />            
           </div>
-
+                  
           <div class="one mobile-one columns">
             <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
           </div>
-
+          
           <div class="two mobile-one columns">
             <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
           </div>
-
+          
         </div>
       </div>
       <!--***** SEARCH *****-->
@@ -199,9 +220,9 @@
       <!--This is a Advanced Search panel that is hidden by default-->
 
         <p><strong>Advanced Search</strong></p>
-
+                
             <form class="custom search-type">
-                <label id="search-type-label" for="customDropdown">Search Type:</label>
+                <label id="search-type-label" for="customDropdown">Search Type:</label>  
                 <select class="custom-dropdown expand" id="customDropdown">
                     <option SELECTED>Person</option>
                     <option>Group</option>
@@ -217,9 +238,9 @@
             <div class="add-filter-container">
 
                 <!--***** ADD FILTER *****-->
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
                 <!--***** ADD FILTER *****-->
-
+                    
                 <div class="add-filter-area">
                           
                     <hr class="petrocore-hr">
@@ -361,70 +382,95 @@
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
             <li><a href="#">Map Administration</a></li>
-            <li class="current"><a href="#">Administrative</a></li>
+            <li><a href="#">Administrative</a></li>
+            <li><a href="#">Map 1</a></li>
+            <li class="current"><a href="#">Edit Skill Description</a></li>
           </ul>
         </div>
       </div>
-
-      <div class="content-container">
       
+      <div class="content-container">
         <!--This will hold the content-->
-          <h4>Chevron</h4>
-          <div class="save-template-btn"><a class="link-without-button" href="petrocore-administration-map.html" >Back to previous page</a></div>
-          <hr>
+        
+        <h4>Edit Skill Description</h4>
+        <hr>
+                    
+        <!-- <h6>Title goes here</h6> -->
+          
+        <!--***** THESE ARE THE TABS *****-->
 
-          <!-- <h6>Title goes here</h6> -->
+        <dl class="tabs">
+          <dd class="active">
+            <a href="#edit-skill-description">Description</a>
+          </dd>
+          <dd>
+            <a href="#edit-development-activity">Development Activity</a>
+          </dd>
+          <dd>
+            <a href="#edit-tasks">Tasks</a>
+          </dd>          
+        </dl>
+          
+        <ul class="tabs-content maps-content">
+          <!--***************************************-->
+          <!--*******THIS IS CONTENT FOR TAB 1*******-->
+          <!--***************************************-->
+          <li class="active" id="edit-skill-descriptionTab">
+          
+            <h6>Description:</h6>
+
+
+            <!-- Row Layout for forms -->
+            <form>
+              <textarea id="description_textarea" rows="10" maxlength="1000"></textarea>
+            </form>
+
+            <div class="row">
+
+              <p class="align-right"><span id="charactersleft">1000</span> characters left</p>
+
+              <div class="same-line add-medium-space-right">
+                <a class="button radius primary insidetabs" href="petrocore-administration-map-admin-map1.html">Save</a>
+              </div>
+
+              <div class="same-line">
+                  <a class="" href="petrocore-administration-map-admin-map1.html">Cancel</a>
+              </div>
+              
+            </div>
+
+
+
+
+
+          </li>
+
+          <!--***************************************-->
+          <!--*******THIS IS CONTENT FOR TAB 2*******-->
+          <!--***************************************-->
+          <li id="edit-development-activityTab">
+          
+            <p>No Content for Development Activity</p>
+            
+          </li>
+
+          <!--***************************************-->
+          <!--*******THIS IS CONTENT FOR TAB 3*******-->
+          <!--***************************************-->
+          <li id="edit-tasksTab">
+          
+            <p>No Content for tasks</p>
+            
+          </li>
+          
+        </ul>
+        <!--*******END OF TABS*******-->
+
+
+
+
 
           <!--***** FORMS *****-->
-                  
-              <!--This is dashboard panel 1 -->
-                <div id="panel1" class="panel-wrapper">
-                  <div class="panel-header">
-                    <div class="panel-title-container">
-                      <h5 class="name-classifier">Administrative</h5>
-                    </div>
-                    
-                    <div class="panel-header-icons-container">
-                      <ul class="panel-header-icons-list">
-
-                        <li class="open-close-arrow">
-  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
-                        </li>
-                    
-                        <li>
-                          <div href="#" class="button dropdown petrocore-actions">Actions
-                            <ul>
-                              <li><a href="#">Create Map</a></li>
-                              <li><a href="#">Edit Management</a></li>
-                              <li><a href="#">Policy Editor</a></li>
-                              <li><a href="#">Rename</a></li>
-                              <li><a href="#">Delete</a></li>   
-                            </ul>  
-                          </div> 
-                        </li>
-
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div class="panel-action-icons-container"></div>
-                  <div class="panel-content-container-dashboard">
-
-                    <!--This will hold the content-->
-                    <h5>Maps</h5>
-                    <hr>
-
-                    <div class="filter-list">
-                      <p><a href="petrocore-administration-map-admin-map1.html">Map 1</a></p>
-                      <p><a href="#">Map 2</a></p>
-                      <p><a href="#">Map 3</a></p>
-                      <p><a href="#">Map 4</a></p>
-                    </div>
-                         
-                  </div>
-
-                </div>
-                <!-- End of dashboard panel 1-->
 
 
             </li>
@@ -438,7 +484,7 @@
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
-
+</div>
 <!--***** FOOTER *****-->
 
 <div class="row">
@@ -518,9 +564,9 @@
         </div>
 
     </div>
-</div>
+</div>         
 
-
+  
   <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -549,16 +595,6 @@
 
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
-
-  <script>
-
-    $(window).load(function(){
-      /* This code is executed once when the page loads */
-      /* It initializes page to match the layout design */
-      $('#panel1').find('.petrocore-actions').trigger('click');
-    });
-
-  </script>
 
 </body>
 </html>
