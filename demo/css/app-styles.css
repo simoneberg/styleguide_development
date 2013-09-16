@@ -1430,6 +1430,16 @@ p.form-category-title-bold {
   margin-bottom: 8px;
 }
 
+.form-group.inline-text-control span {
+  float:left;							  
+  margin-top:8px;  
+}
+
+.form-group.inline-text-control input {
+  float:left;
+  width:100px;	
+}
+
 .form-group.everyday span {
   float:left;							  
   margin-top:8px;  
@@ -3172,7 +3182,7 @@ span.dropdown-arrow {
 }
 
 .add-small-margin {
-  margin: 10px 10px 10px 0;
+  margin: 10px 7px 10px 0;
 }
 
 .add-small-margin-left {
@@ -3229,7 +3239,10 @@ span.dropdown-arrow {
   .row .right-split-container{
     width: 75% !important;
   }
-
+  
+  form fieldset .row .set-small-input-field {
+    width: 15%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1168px) {
@@ -3691,6 +3704,10 @@ span.dropdown-arrow {
   #step4 {
     width: 33%;
   }
+
+  form fieldset .row .set-small-input-field {
+    width: 12%;
+  }
 }
 
 /* portait Andriod phone >4 inch screen */
@@ -3748,6 +3765,10 @@ span.dropdown-arrow {
 
   .panel-action-icons-container {
     height: 47px;
+  }
+
+  form fieldset .row .set-small-input-field {
+    width: 15%;
   }
   
 }
