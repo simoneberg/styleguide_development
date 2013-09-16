@@ -274,11 +274,6 @@ h4 {
   text-align: right;
 }
 
-h5 small {
-  font-size: 12px;
-  color: #555;
-}
-
 /* END TYPOGRAPHY */
 /* **************************************** */
 
@@ -957,7 +952,7 @@ ul.accordion>li>div.title:after {
 .tabs-content li a {
   display: block;
   margin-left: 23px;
-  line-height: 28px;  
+  line-height: 28px;
 }
 
 .tabs-content span a {
@@ -1488,6 +1483,16 @@ p.form-category-title-bold {
   margin-bottom: 8px;
 }
 
+.form-group.inline-text-control span {
+  float:left;							  
+  margin-top:8px;  
+}
+
+.form-group.inline-text-control input {
+  float:left;
+  width:100px;	
+}
+
 .form-group.everyday span {
   float:left;							  
   margin-top:8px;  
@@ -1558,7 +1563,41 @@ a.icon-trailing-control {
   float: left;
   margin-right: 15px;
   margin-bottom: 15px;
+}
 
+div.scroll-vertical-only {
+  border: 1px solid #ccc;
+  overflow-x: none;
+  overflow-y: scroll;
+}
+
+div.scroll-vertical-auto {
+  border: 1px solid #ccc;
+  overflow-x: none;
+  overflow-y: auto;
+}
+
+div.scroll-horizontal-only {
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+  overflow-y: none;
+}
+
+div.scroll-both {
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.demo-only-set-overflow-height {
+  height: 275px;
+}
+
+.set-height-100 {
+  height: 100px;
+}
+
+.set-width-200 {
+  width: 200px;
 }
 
 /* zurb control modifications */
@@ -1656,7 +1695,12 @@ form select.custom-dropdown {
   margin-left: 5px;
 }
 
-.text-after-dropdown {
+.cc-link {
+  float: left;
+}
+
+.cc-link p {
+  line-height: 2.4;
   margin-bottom: 0;
 }
 
@@ -1726,6 +1770,14 @@ table tbody tr:nth-child(even) {
 
 table tbody tr td {
   vertical-align: middle;
+}
+
+#competency-framework-table {
+  min-width: 700px;
+}
+
+.competency-table-adjust {
+  margin: 18px 0 15px 0;
 }
 
 /* END TABLES */
@@ -2093,14 +2145,6 @@ table tbody tr td {
   padding-right: 0;
 }
 
-.competency-map-list {
-  margin: 80px 0 15px;
-}
-
-.panel-content-container-close {
-  min-height: 65px;
-}
-
 /* This segment displays a temporary image of a chart and widget for ticket 1352 */
 .chart-widget-container {
   float:left;
@@ -2377,16 +2421,6 @@ textarea.compass-error:focus {
 /* **************************************** */
 /* PAGE SPECIFIC */
 
-.no-bullets {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.no-bullets li {
-  line-height: 2;
-}
-
 /* report templates */
 li.horizontal-list {
   float: left;
@@ -2487,9 +2521,8 @@ ul.button-group li {
 }
 
 .panel-content-container-dashboard {
-  clear: both;
-  padding: 15px 15px 0 15px;  
-  min-height: 70px;  
+  padding: 25px 15px 0 15px;
+  min-height:150px;
 }
 
 .panel-content-container-dashboard-options {
@@ -3053,7 +3086,7 @@ span.dropdown-arrow {
 
 #table_container {
   overflow: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   clear: both;
   border: solid 1px #8a8a8a;
@@ -3251,7 +3284,7 @@ span.dropdown-arrow {
 }
 
 .add-small-margin {
-  margin: 10px 10px 10px 0;
+  margin: 10px 7px 10px 0;
 }
 
 .add-small-margin-left {
@@ -3320,7 +3353,10 @@ span.dropdown-arrow {
   .row .right-split-container{
     width: 75% !important;
   }
-
+  
+  form fieldset .row .set-small-input-field {
+    width: 15%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1168px) {
@@ -3786,6 +3822,10 @@ span.dropdown-arrow {
   #step4 {
     width: 33%;
   }
+
+  form fieldset .row .set-small-input-field {
+    width: 12%;
+  }
 }
 
 /* portait Andriod phone >4 inch screen */
@@ -3853,6 +3893,10 @@ span.dropdown-arrow {
 
   .right-justify-expand-all {
     right: 5px;
+  }
+
+  form fieldset .row .set-small-input-field {
+    width: 15%;
   }
 }
 
