@@ -63,6 +63,12 @@ div.pagination-centered {
   margin-top: 20px;
 }
 
+.pagination-counter {
+  color: #757575;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
 span.prefix {
   background: #afafaf; /* Old browsers */
   background: -moz-linear-gradient(top,  #afafaf 0%, #898989 100%); /* FF3.6+ */
@@ -2055,6 +2061,11 @@ table tbody tr td {
   margin-left: -40%;
 }
 
+.reveal-modal.expand.smaller {
+  width: 50%;
+  margin-left: -25%;
+}
+
 .modal-button-container {
   padding: 0;
 }
@@ -3136,10 +3147,12 @@ ul.button-group.slim li:first-child {
 margin: 0 10px 0 0;
 }
 
-.scroll-horizontal {
-  height: 200px;
-  overflow: auto;
-  width: 200px;
+.divider {
+  width: 45px;
+}
+
+.button.dropdown.petrocore-actions.legends {
+  padding: 12px 50px 12px 20px;
 }
 
 .month-title {
@@ -3153,7 +3166,7 @@ margin: 0 10px 0 0;
   padding: 6px 0;
 }
 
-.calendar-grid {
+/*.calendar-grid {
   overflow-x: scroll;
   overflow-y: hidden;
   width: 600px;
@@ -3165,6 +3178,13 @@ margin: 0 10px 0 0;
 
 .calendar-grid .row .one {
   min-width: 60px;
+}*/
+
+.calendar-grid {
+  /*position: relative;*/
+  height: 225px;
+  overflow: hidden;
+
 }
 
 .calendar-grid .one:first-child .month-title {
@@ -3180,11 +3200,81 @@ margin: 0 10px 0 0;
   border: 1px solid #8a8a8a;
   border-width: 0 1px 1px 0;
   margin: 0 -15px;
-  min-height: 100px;
+  min-height: 180px;
 }
 
 .one:first-child .month-columns {
   border-width: 0 1px 1px 1px;
+}
+
+.calendar-toolbar {
+  background-color: #dcdcdc;
+  border: 1px solid #8a8a8a;
+  border-width: 1px 1px 0;
+  padding: 10px 0;
+}
+
+.calendar-toolbar .add-panel-icon, 
+.calendar-toolbar .add-sorting-icon {
+  float: none;
+}
+
+.calendar-toolbar ul.inline-list {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.dev-activity {
+  background-color: #eee;
+  border: 1px solid #8a8a8a;
+  border-width: 1px 0 1px 1px;
+  margin-top: 15px;
+}
+
+.week-grid .dev-activity {
+  padding: 0 15px;
+}
+
+.act-title {
+  margin-bottom: 5px;
+}
+
+.list-dev-activities {
+  position: relative;
+  top: -180px;
+  left: -1px;
+  /*position: absolute;
+  top: 40px;
+  left: 0;*/
+}
+
+.week-grid .list-dev-activities {
+  border-left: 1px solid #8a8a8a;
+}
+
+.priority-bar {
+  border-top: 3px solid #59809f;
+  margin: 0 -15px 10px;
+}
+
+ul.milestones {
+  margin-bottom: 0;
+}
+
+.week {
+  width: 20%;
+}
+
+.week:first-child {
+  border-left: 1px solid #8a8a8a;
+}
+
+.milestones li:first-child {
+  margin-left: 16px;
+}
+
+.secondary.radius.button.smaller {
+  font-size: 12px;
 }
 
 /* END PAGE SPECIFIC */
@@ -3297,6 +3387,10 @@ margin: 0 10px 0 0;
 
   ul.button-group.slim li {
     width: auto;
+  }
+
+  ul.button-group.slim li ul.list-of-legend li {
+    width: 100%;
   }
 
   ul.button-group li:first-child {
