@@ -26,131 +26,7 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-
   <script src="../javascripts/modernizr.foundation.js"></script>
-
-  <!--  <script src="../javascripts/jquery.js"></script>  -->
-  <script src="js/jquery-1.9.1.js"></script>
-
-  <!-- <script src="js/jquery-ui.js"></script>  -->
-  <script src="js/jquery-ui-1.9.2.js"></script>
-
-  <script type="text/javascript">
-
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-
-
-		if(advanced_panel.style.display == 'block')
-
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';
-		}
-	}
-
-
-	$(document).ready(function(){
-
-		// Notification Popup window
-
-		var notifs = $("#user-notifications").text();
-		var notifs_exist = true;
-
-	   	$('#notification_btn').bind('click', function (event) {
-
-			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
-			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();
-				$('#overlay').show();
-				$('#overlay').click(function(){
-						$('.notifications-popup').hide();
-						$('#overlay').hide();
-				});
-
-			} else {
-				$('.notifications-popup').hide();
-				$('#overlay').hide();
-				}
-	    });
-
-		$('.notification .anotification').click (function() {
-			$(this).parent().remove();
-			notifs = $("#user-notifications").text();
-			$("#user-notifications").html(notifs-1);
-
-			if (notifs == 1) {
-				notifs_exist = false;
-			    $('.notification-btn').css('background','#c0c2c1');
-			    $('.notification-btn').css('border','1px solid #616161');
-			    $('.notification-btn').css('color','#404040');
-			    $('.notifications-area').html('You have "0" Notifications');
-			    $('.notifications-area').css('text-align','center');
-			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}
-		});
-
-		// Add Direct-Participant Page
-
-		$('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
-
-		$('.participant').bind('drag', function(event, ui) {
-			ui.helper.css('background-color', '#e6edf5');
-			ui.helper.css('border', 'solid 1px #8b8b8b');
-		});
-
-		$('#list-direct-participants').droppable( { tolerance: 'pointer', accept: '.participant', drop: function (event, ui) {
-        	var target = $('#list-direct-participants');
-        	var source = ui.draggable;
-          	(target).append(source);
-		  	(source).addClass('direct-participant');
-			}
-	    });
-
-		$('#list-participants').droppable( { tolerance: 'pointer', accept: '.direct-participant', drop: function (event, ui) {
-        	var target = $('#list-participants');
-        	var source = ui.draggable;
-		  	(source).removeClass('direct-participant');
-		  	(source).addClass('participant');
-          	(target).append(source);
-			}
-	    });
-
-		$('.participant a.icon-.sr-icon-plus').on('click', function(){
-			var target = $('#list-direct-participants');
-			var source = $(this).parent();
-			(source).removeClass('participant');
-			(source).addClass('direct-participant');
-			(target).append(source);
-		})
-
-		$('.participant a.icon-.sr-icon-x').on('click', function(){
-			var target = $('#list-participants');
-			var source = $(this).parent();
-			(source).removeClass('direct-participant');
-			(source).addClass('participant');
-			(source).appendTo(target);
-		});
-
-	});
-
-  </script>
-
-
 
 </head>
 <body>
@@ -644,36 +520,16 @@
 	</div>
 </div>
 
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- inilaise foundaiton  -->
+<script src="../javascripts/app.js"></script>
 
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
 
-  -->
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
 
-
-<!--    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script>
--->
 </body>
 </html>
