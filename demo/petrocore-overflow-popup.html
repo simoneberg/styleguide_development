@@ -7,105 +7,447 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width" />
+<!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
-  <title>Icons – PetroSkills Online Style Guide</title>
-  
+  <title>PetroSkills Online Style Guide</title>
+
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
   -->
-  
+
   <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="stylesheets/foundation-override.css">
-  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
 
-  <script src="javascripts/modernizr.foundation.js"></script>
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/jquery.js"></script>
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+  <script type="text/javascript">
+
+	function show_hide_advanced(id) {
+		var advanced_panel = document.getElementById(id);
+			advanced_arrow = document.getElementById('arrowdown');
 
 
-<style type="text/css">
-ul {list-style-type: none;}
-</style>
+		if(advanced_panel.style.display == 'block')
 
+		{	advanced_panel.style.display = 'none';
+			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+			advanced_arrow.style.position = 'relative';
+			advanced_arrow.style.top = '0px';
+		}
+		else
+		{	advanced_panel.style.display = 'block';
+			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+			advanced_arrow.style.position = 'relative';
+			advanced_arrow.style.top = '7px';
+		}
+	}
+
+
+	$(document).ready(function(){
+
+		var notifs = $("#user-notifications").text();
+		var notifs_exist = true;
+
+	   	$('#notification_btn').bind('click', function (event) {
+
+			if (notifs_exist == true) {
+	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
+			    $('.notifications-popup').css('top',event.pageY+30);
+				$('.notifications-popup').toggle();
+				$('#overlay').show();
+				$('#overlay').click(function(){
+						$('.notifications-popup').hide();
+						$('#overlay').hide();
+				});
+
+			} else {
+				$('.notifications-popup').hide();
+				$('#overlay').hide();
+				}
+	    });
+
+		$('.notification .anotification').click (function() {
+			$(this).parent().remove();
+			notifs = $("#user-notifications").text();
+			$("#user-notifications").html(notifs-1);
+
+			if (notifs == 1) {
+				notifs_exist = false;
+			    $('.notification-btn').css('background','#c0c2c1');
+			    $('.notification-btn').css('border','1px solid #616161');
+			    $('.notification-btn').css('color','#404040');
+			    $('.notifications-area').html('You have "0" Notifications');
+			    $('.notifications-area').css('text-align','center');
+			    $('.notifications-area').css('padding','10px 0 10px 0');
+			}
+		});
+
+	});
+
+  </script>
 
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="top-bar">
-    <ul>
-      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
-      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
-    </ul>
-    <!-- <section>
-      <ul class="left">
-        <li><a href="#">Link</a></li>
-      </ul>
+<!--***** PETROCORE HEADER *****-->
 
-      <ul class="right">
-        <li><a href="#">Link</a></li>
-      </ul>
-    </section> -->
-  </nav>
-  <!-- END NAVIGATION -->
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-  <!-- PAGE TITLE -->
-  <div class="row">
-    <div class="twelve columns">
-      <h2>Building Blocks</h2>
-      <p>These elements form the content elements for the look and feel of the PetroSkills Online Products.</p>
-    </div>
-  </div>
-  <!-- END PAGE TITLE -->
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
-  <!-- CONTENT AREA -->
-  <div class="row">
-    <div class="three columns">
-    <!-- SIDE BAR -->
-  <ul class="tabs vertical">
-    <li><a href="index.html">Getting Started</a></li>
-    <li><a href="grids.html">Foundations</a></li>
-    <li class="active"><a href="building-blocks.html">Building Blocks</a>
-      <ul class="subitems">
-          <li><a href="building-blocks.html">Global Header &amp; Footer</a></li>
-          <li><a href="navigation.html">Navigation</a></li>
-          <li><a href="forms.html">Forms</a></li>
-          <li><a href="buttons.html">Buttons</a></li>
-          <li class="active"><a href="icons.html">Icons</a></li>
-          <li><a href="login.html">Login</a></li>
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-self.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
         </ul>
-    </li>
-    <li><a href="tables.html">Patterns</a></li>
-    <li><a href="add-activity.html">Design Examples</a></li>
-    <!-- <li class="active"><a href="#">Item 6</a>
-        <ul class="subitems">
-          <li class="active"><a href="#">Subitem 1</a></li>
-          <li><a href="#">Subitem 2</a></li>
-          <li><a href="#">Subitem 3</a></li>
-          <li><a href="#">Subitem 4</a></li>
-          <li><a href="#">Subitem 5</a></li>
+      </div>
+  </div>
+</nav>
+
+<!--***** PETROCORE HEADER *****-->
+
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+        <div class="row collapse search-input">
+
+          <div class="nine mobile-four columns">
+            <input id="initial-search" class="round-left" type="text" value="" />
+          </div>
+
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+          </div>
+
+          <div class="two mobile-one columns">
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+          </div>
+
+        </div>
+      </div>
+      <!--***** SEARCH *****-->
+
+	  <div id="advanced_search" class="display-none">
+	  <!--This is a Advanced Search panel that is hidden by default-->
+
+		<p><strong>Advanced Search</strong></p>
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
+				<select class="custom-dropdown expand" id="customDropdown">
+					<option SELECTED>Person</option>
+					<option>Group</option>
+					<option>Position</option>
+					<option>Map</option>
+					<option>Skill Group</option>
+					<option>Skill</option>
+					<option>Skill Description</option>
+					<option>Development Activity</option>
+				</select>
+
+			</form>
+            <div class="add-filter-container">
+
+				<!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
+				<div class="add-filter-area">
+
+					<hr class="petrocore-hr">
+                    	<ul id="filters">
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+             		    </ul>
+                </div>
+			</div>
+		</div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+          <li class="active">
+            <div class="title">
+              <h6>Dashboard</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Goals</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>My Position</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Growth Positions</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6 class="two-lines">My Team's Development</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6><a href="petrocore-reports.html">Reports</a></h6>
+            </div>
+            <!-- <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div> -->
+          </li>
+          <li>
+            <div class="title">
+              <h6>Administration</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Notes</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6>Tools</h6>
+            </div>
+        <!--<div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>-->
+          </li>
         </ul>
-    </li> -->
-    <li><a href="prototype.html">Prototype</a></li>
-      <li><a href="support.html">Support</a></li>
-  </ul>
-    <!-- END SIDE BAR -->
+      </div>
+      <!--***** MAIN NAVIGATION *****-->
 
   </div>
-    <div class="nine columns">
-       <h2>Icons</h2>
-          <p>The icons used in PetroSkills products is the <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome Icon Set</a>. There are many benefits to using this icon set:</p>
-          <ul class="square">
-            <li>One font contains over 249 icons. No need to maintain images of each icon.</li>
-            <li>Easily style the icon with CSS by changing the color, size, and shadow.</li>
-            <li>Scalable vector graphics means every icon looks sharp and crisp at any size, even on Retina Displays.</li>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Subitem 1</a></li>
+            <li><a href="#">Subitem 2</a></li>
+            <li><a href="#">Subitem 3</a></li>
+            <li><a href="#">Subitem 4</a></li>
+            <li><a href="#">Subitem 5</a></li>
+            <li class="current"><a href="#">Subitem 6</a></li>
           </ul>
-          <p><a href="http://fortawesome.github.com/Font-Awesome/#examples" target="_blank">Refer to their documentation on how to implement these icons &raquo;</a></p>
-          <hr>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+          <h4>Panels</h4>
+            <hr>
+            <div class="row">
+              <div class="six columns visible-charts left-chart">
+                <div class="dashboard-left-column">
+              <!--This is a dashboard panel-->
+                <div class="panel-wrapper">
+                   <div class="panel-header">
+                    <div class="panel-title-container"><h5>Dashboard Panel</h5></div>
+                      <div class="panel-header-icons-container">
+                       <ul class="panel-header-icons-list">
+                          <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li>
+                          <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                          <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
+                        </ul>
+                      </div>
+                  </div>
+                    <div class="panel-content-container-dashboard">
+                      <div class="panel-action-icons-container">
+                        <ul class="panel-action-icons-list" >
+                          <li><a href="#" class="panel-action-icons icon-">&#xf0db;</a></li>
+                          <li><a href="#" class="panel-action-icons icon-">&#xf0b2;</a></li>
+                          <li><a href="#" class="panel-action-icons icon-">&#xf05a;</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <a class="primary radius button left" href="#">View my Unassessed Skills</a>
+                      <a class="primary radius button right" href="#">View my Gap Analysis</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <!--This is a dashboard panel-->
+              <div class="six columns visible-charts right-chart">
+                <div class="dashboard-right-column">
+              <!--This is a dashboard panel-->
+                <div class="panel-wrapper">
+                    <div class="panel-header">
+                    <div class="panel-title-container"><h5>Supervisor Assessment</h5></div>
+                      <div class="panel-header-icons-container">
+                       <ul class="panel-header-icons-list">
+                          <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li>
+                          <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                          <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
+                        </ul>
+                      </div>
+                  </div>
+                    <div class="panel-content-container-dashboard">
+                      <div class="panel-action-icons-container">
+                        <ul class="panel-action-icons-list" >
+                          <li><a href="#" class="panel-action-icons icon-">&#xf0db;</a></li>
+                          <li><a href="#" class="panel-action-icons icon-">&#xf0b2;</a></li>
+                          <li><a href="#" class="panel-action-icons icon-">&#xf05a;</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="panel-footer">
+                      <a class="primary radius button left" href="#">View my Unassessed Skills</a>
+                      <a class="primary radius button right" href="#">View my Gap Analysis</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <!--This is a dashboard panel-->
+            </div>
+          <!--***** CHARTS *****-->
 
-          <div class="row">
+          <!--***** BUTTONS *****-->
+            <h4>Buttons</h4>
+            <hr>
+            <div class="button-gallery">
+              <a class="primary radius button" href="#">Primary</a>
+              <a class="secondary radius button" href="#">Secondary</a>
+              <a class="alert radius button" href="#">Alert</a>
+            </div>
+            <br>
+            <div class="button-gallery">
+              <a class="primary-disabled radius button" href="#">Primary</a>
+              <a class="secondary-disabled radius button" href="#">Secondary</a>
+              <a class="alert-disabled radius button" href="#">Alert</a>
+            </div>
+          <!--***** BUTTONS *****-->
+
+          <!--***** MODAL *****-->
+          <h4>Pop-ups</h4>
+          <hr>
+          <div class="modal-button-container">
+          <a href="#" data-reveal-id="myModal" class="primary radius button">Click for Pop-up</a>
+          </div>
+          <!--***** MODAL *****-->
+
+          <!--***** ICONOGRAPHY *****-->
+          <h4>Iconography</h4>
+          <hr>
+          <div class="row iconography">
             <div class="four columns">
               <ul>
               <li><i class="icon-">&#xf000;</i> icon-glass <span class="muted">(&amp;#xf000;)</span></li>
@@ -366,49 +708,188 @@ ul {list-style-type: none;}
             </div>
           </div>
 
-     
+          <!--***** ICONOGRAPHY *****-->
 
-    </div><!--CLOSE NINE COLUMNS-->
+          <!--***** TABLE *****-->
+
+          <table class="twelve">
+            <thead>
+              <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Content</td>
+                <td>This is longer content</td>
+                <td>Content</td>
+                <td>Content</td>
+              </tr>
+              <tr>
+                <td>Content</td>
+                <td>This is longer content</td>
+                <td>Content</td>
+                <td>Content</td>
+              </tr>
+              <tr>
+                <td>Content</td>
+                <td>This is longer content</td>
+                <td>Content</td>
+                <td>Content</td>
+              </tr>
+              <tr>
+                <td>Content</td>
+                <td>This is longer content</td>
+                <td>Content</td>
+                <td>Content</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!--***** TABLE *****-->
+
+      </div>
   </div>
+  </div>
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® is a registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+    </div>
+  <!-- </div> -->
   <!-- CONTENT AREA -->
 
-  
-  
+<div id="myModal" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container"><h5>This is a Pop-up</h5></div>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="popup-content-container">
+      <div class="row">
+        <p><strong>Object Type Name</strong></p>
+        <p>This is the content area of a popup. Place instructions and controls in this area.</p>
+        <div class="scroll-both demo-only-set-overflow-height">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+
+      <a class="primary radius button left" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
+
+    </div>
+  </div>
+</div>
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>
+
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a>
+			<hr class="hr-notification">
+	    </div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a>
+			<hr class="hr-notification">
+		</div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a>
+		</div>
+
+	</div>
+</div>
+
+
   <!-- Included JS Files (Uncompressed) -->
   <!--
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="javascripts/jquery.foundation.forms.js"></script>
-  <script src="javascripts/jquery.event.move.js"></script>
-  <script src="javascripts/jquery.event.swipe.js"></script>
-  <script src="javascripts/jquery.foundation.reveal.js"></script>
-  <script src="javascripts/jquery.foundation.orbit.js"></script>
-  <script src="javascripts/jquery.foundation.navigation.js"></script>
-  <script src="javascripts/jquery.foundation.buttons.js"></script>
-  <script src="javascripts/jquery.foundation.tabs.js"></script>
-  <script src="javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="javascripts/jquery.foundation.accordion.js"></script>
-  <script src="javascripts/jquery.placeholder.js"></script>
-  <script src="javascripts/jquery.foundation.alerts.js"></script>
-  <script src="javascripts/jquery.foundation.topbar.js"></script>
-  <script src="javascripts/jquery.foundation.joyride.js"></script>
-  <script src="javascripts/jquery.foundation.clearing.js"></script>
-  <script src="javascripts/jquery.foundation.magellan.js"></script>
-  
-  -->
-  
-  <!-- Included JS Files (Compressed) -->
-  <script src="javascripts/foundation.min.js"></script>
-  
-  <!-- Initialize JS Plugins -->
-  <script src="javascripts/app.js"></script>
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="../javascripts/jquery.foundation.forms.js"></script>
+  <script src="../javascripts/jquery.event.move.js"></script>
+  <script src="../javascripts/jquery.event.swipe.js"></script>
+  <script src="../javascripts/jquery.foundation.reveal.js"></script>
+  <script src="../javascripts/jquery.foundation.orbit.js"></script>
+  <script src="../javascripts/jquery.foundation.navigation.js"></script>
+  <script src="../javascripts/jquery.foundation.buttons.js"></script>
+  <script src="../javascripts/jquery.foundation.tabs.js"></script>
+  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="../javascripts/jquery.foundation.accordion.js"></script>
+  <script src="../javascripts/jquery.placeholder.js"></script>
+  <script src="../javascripts/jquery.foundation.alerts.js"></script>
+  <script src="../javascripts/jquery.foundation.topbar.js"></script>
+  <script src="../javascripts/jquery.foundation.joyride.js"></script>
+  <script src="../javascripts/jquery.foundation.clearing.js"></script>
+  <script src="../javascripts/jquery.foundation.magellan.js"></script>
 
-  
+  -->
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
+
     <script>
     $(window).load(function(){
       $("#featured").orbit();
     });
-    </script> 
-  
+    </script>
+
 </body>
 </html>

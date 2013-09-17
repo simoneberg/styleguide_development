@@ -95,28 +95,23 @@
 		});
 
 
-      $(".action_buttons").click(function () {
-        $(this).next().trigger('click');
-      });
+      $('.panel-header-icons-collapse-up.icon-').click(open_close);
 
+      function open_close() {
 
-	  $('.panel-header-icons-collapse-up.icon-').click(open_close);
-	  
-		function open_close() {
-		  
-		target_panel = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard');
-		
-       		if ($(target_panel).is(':hidden'))
-		        {	$(this).html('&#xf0de;');
-					$(this).css('margin-top','10px');
-		        }
-        	else
-				{	$(this).html('&#xf0dd;');
-					$(this).css('margin-top','2px');
-        		}
+        target_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
 
-		target_panel.slideToggle();	
-	  };
+               if ($(target_panel).is(':hidden'))
+                {    $(this).html('&#xf0de;');
+                    $(this).css('margin-top','10px');
+                }
+            else
+                {    $(this).html('&#xf0dd;');
+                    $(this).css('margin-top','2px');
+                }
+
+        target_panel.slideToggle();
+      };
 		
 	});
 			
@@ -386,33 +381,34 @@
 
           <h5>Classifiers</h5>
 
-            <!--This is a dashboard panel-->
-            <div class="panel-wrapper">
+            <!-- This is dashboard panel 1 -->
+            <div id="panel1" class="panel-wrapper">
               <div class="panel-header">
                 <div class="panel-title-container">
                   <h5 class="name-classifier">Chevron</h5>
                 </div>
+                
                 <div class="panel-header-icons-container">
                   <ul class="panel-header-icons-list">
 
-				  <div href="#" class="button dropdown split petrocore-actions">
-				    <a class="action_buttons">Actions</a>  
-					<span></span>
-					<ul>  
-					  <li><a href="#">New Sub Classifier</a></li>
-					  <li><a href="#">Edit Management</a></li>
-					  <li><a href="#">Policy Editor</a></li>
-					  <li><a href="#">Rename</a></li>    
-					  <li><a href="#">Delete</a></li>    
-					</ul>  
-				  </div>      
-                                    
-                  <li>
-	                <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
-                  </li>
+                    <li class="open-close-arrow">
+  	                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                    </li>
 
-                      
-                </ul>
+                    <li>
+                      <div href="#" class="button dropdown petrocore-actions">Actions
+                        <ul>
+                          <li><a href="#">New Sub Classifier</a></li>
+                          <li><a href="#">Edit Management</a></li>
+                          <li><a href="#">Policy Editor</a></li>
+                          <li><a href="#">Rename</a></li>    
+                          <li><a href="#">Delete</a></li>    
+                        </ul>  
+                      </div> 
+                    </li>
+
+                  </ul>
+                  
               </div>
             </div>
                   
@@ -453,38 +449,39 @@
           </div>
 
         </div>
-        <!-- End of dashboard panel-->
+        <!-- End of dashboard panel 1 -->
 
-        <!--This is a dashboard panel-->
-        <div class="panel-wrapper">
+        <!-- This is dashboard panel 2 -->
+        <div id="panel2" class="panel-wrapper">
           <div class="panel-header">
             <div class="panel-title-container">
               <h5 class="name-classifier">Petroskills</h5>
             </div>
             
             <div class="panel-header-icons-container">
-              <ul class="panel-header-icons-list">
+              <ul class="panel-header-icons-list">   
+              
+                <li class="open-close-arrow">                  
+                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                </li>
+                
+                <li>
+                  <div href="#" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>  
+                      <li><a href="#">New Sub Classifier</a></li>
+                      <li><a href="#">Edit Management</a></li>
+                      <li><a href="#">Policy Editor</a></li>
+                      <li><a href="#">Rename</a></li>    
+                      <li><a href="#">Delete</a></li>    
+                    </ul>  
+                  </div>
+                 </li>   
+                
+              </ul>
+            </div>
 
-				<div href="#" class="button dropdown split petrocore-actions">
-				  <a class="action_buttons">Actions</a>  
-				  <span></span>
-				  <ul>  
-					<li><a href="#">New Sub Classifier</a></li>
-					<li><a href="#">Edit Management</a></li>
-					<li><a href="#">Policy Editor</a></li>
-					<li><a href="#">Rename</a></li>    
-					<li><a href="#">Delete</a></li>    
-				  </ul>  
-				</div>      
-                                    
-                <!--<li><a href="#" class="panel-header-icons-close icon-">&#xf0dd;</a></li><!--collapse up-->
-              <li>
-                <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
-			  </li>
-            </ul>
           </div>
-
-        </div>
                   
 		<div class="panel-action-icons-container"></div>
         <div class="panel-content-container-dashboard">
@@ -501,9 +498,9 @@
 		  <!--*******THIS IS CONTENT FOR TAB 1*******-->
 		  <!--***************************************-->
 		    <li class="active" id="petro1Tab">
-		      <a href="petrocore-administration-map-admin.html">Administrative</a>
+		      <a href="#">Administrative</a>
         	  <a href="#">BDP&amp;C</a>
-		      <a href="petrocore-administration-map-admin.html">Administrative</a>
+		      <a href="#">Administrative</a>
         	  <a href="#">BDP&amp;C</a>
 		   	</li>
            
@@ -522,7 +519,7 @@
 		</div>
 
       </div>
-      <!-- End of dashboard panel-->
+      <!-- End of dashboard panel 2 -->
               
 
 	</li>
@@ -648,11 +645,16 @@
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
   
-    <script>
+  <script>
+
     $(window).load(function(){
-      $("#featured").orbit();
+      /* This code is executed once when the page loads */
+      /* It initializes page to match the layout design */
+      $('#panel1').find('.petrocore-actions').trigger('click');
+      $('#panel2').find('.panel-header-icons-collapse-up.icon-').filter(':first').trigger('click');
     });
-    </script> 
+
+  </script> 
 
 </body>
 </html>

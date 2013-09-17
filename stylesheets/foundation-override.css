@@ -117,6 +117,16 @@ ul.subitems {
 	padding: 7px 0;
 }
 
+.caption {
+	background-color: #333;
+	color: #eee;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: -5px;
+	padding: 3px 8px;
+}
+
 pre {
 	background: #eee;
 	border: 1px solid #ccc;
