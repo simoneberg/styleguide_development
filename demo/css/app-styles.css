@@ -3166,22 +3166,7 @@ margin: 0 10px 0 0;
   padding: 6px 0;
 }
 
-/*.calendar-grid {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 600px;
-}
-
-.calendar-grid .row {
-  width: 800px;
-}
-
-.calendar-grid .row .one {
-  min-width: 60px;
-}*/
-
 .calendar-grid {
-  /*position: relative;*/
   height: 225px;
   overflow: hidden;
 
@@ -3243,9 +3228,6 @@ margin: 0 10px 0 0;
   position: relative;
   top: -180px;
   left: -1px;
-  /*position: absolute;
-  top: 40px;
-  left: 0;*/
 }
 
 .week-grid .list-dev-activities {
@@ -3275,6 +3257,10 @@ ul.milestones {
 
 .secondary.radius.button.smaller {
   font-size: 12px;
+}
+
+.filters {
+  margin-left: 0;
 }
 
 /* END PAGE SPECIFIC */
