@@ -2156,11 +2156,9 @@ table tbody tr td {
 }
 
 .chart-widget-img {
-  background-image: url(http://simplevision.ca/images/chart.png);
-  background-repeat: no-repeat;
-  background-position: left top;
-  width:209px;
-  height:191px;  
+width:209px;
+height:auto; 
+border: 1px solid #8a8a8a;
 }
 
 .scrollable_frame {
