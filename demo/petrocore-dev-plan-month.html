@@ -347,7 +347,8 @@
             Actions
             <ul>
               <li><a href="petrocore-my-position-add-activity-existing.html">Add Activity</a></li>
-              <li><a href="#">Print</a></li>
+              <li><a href="#">Print Monthly</a></li>
+              <li><a href="#">Print Yearly</a></li>
               <li><a href="#">View History</a></li>
             </ul>
           </div>
@@ -381,22 +382,39 @@
             <div class="eight columns">
               <ul class="inline-list">
                 <li>
-                  <div class="year-selection">
-                    <span class="year-displayed"><strong>July 2013</strong></span> 
-                    <a class="add-sorting-icon icon-">&#xf0dd;</a>
+                  <div href="#year-selection" class="button dropdown petrocore-actions">
+                    2013
+                    <ul>
+                      <li><a href="#">2012</a></li>
+                      <li><a href="#">2011</a></li>
+                      <li><a href="#">2010</a></li>
+                      <li><a href="#">2009</a></li>
+                      <li><a href="#">2008</a></li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="sort-by-selection">
-                    <span class="sort-by-display"><strong>Sort By:</strong> </span> 
-                    <span class="sort-by-display-selection">Planned Start Date</span> 
-                    <a class="add-sorting-icon icon-">&#xf0dd;</a>
+                  <div href="#sort-by-year-selection" class="button dropdown petrocore-actions">
+                    Sort By: <span class="sort-by-display">Planned Start Date</span>
+                    <ul>
+                      <li><a href="#">Activity Code</a></li>
+                      <li><a href="#">Activity Name</a></li>
+                      <li><a href="#">Planned Start Date</a></li>
+                      <li><a href="#">Planned End Date</a></li>
+                      <li><a href="#">Completion Date</a></li>
+                      <li><a href="#">Target Date</a></li>
+                      <li><a href="#">Scheduling Date</a></li>
+                    </ul>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="four columns">
-              <img src="images/year-control2.png" align="right" />
+              <ul class="button-group slim float-right">
+                <li><a href="#" class="button silver-button first icon-">&#xf0d9;</a></li>
+                <li><a href="#" class="button silver-button">Current Year</a></li>
+                <li><a href="#" class="button silver-button last icon-">&#xf0da;</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -474,7 +492,7 @@
                       <th>Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
                       <th>Uploaded by<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
                       <th>Date Added<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
-                      <th>Actions<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th class="two">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -565,14 +583,14 @@
                       <th class="two">Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
                       <th>Note<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
                       <th class="two">Updated<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
-                      <th>Actions<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th class="two">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>Doe, John (DJOE)</td>
                       <td>
-                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
                       </td>
                       <td>Jul-30-2013</td>
                       <td>
@@ -588,7 +606,7 @@
                     <tr>
                       <td>Doe, John (DJOE)</td>
                       <td>
-                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
                       </td>
                       <td>Jul-30-2013</td>
                       <td>
@@ -604,7 +622,7 @@
                     <tr>
                       <td>Doe, John (DJOE)</td>
                       <td>
-                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
                       </td>
                       <td>Jul-30-2013</td>
                       <td>
@@ -924,9 +942,9 @@
 
       <div class="row">
 
-        <div class="form-group six mobile-four columns">
+        <div class="form-group twelve mobile-four columns">
           <label>Notes</label>
-          <textarea placeholder="Add notes here" class="min-height"></textarea>
+          <textarea placeholder="Add notes here" class="min-height full-width"></textarea>
         </div>
 
       </div>
@@ -964,7 +982,7 @@
 
       <div class="row">
 
-        <div class="form-group six mobile-four columns">
+        <div class="form-group twelve mobile-four columns">
           <label>Notes</label>
           <textarea placeholder="" class="min-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
         </div>

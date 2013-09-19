@@ -60,12 +60,13 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 /* **************************************** */
 /* DISPLAY AND LAYOUT */
 div.pagination-centered {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .pagination-counter {
   color: #757575;
   font-size: 12px;
+  margin-bottom: 0;
   margin-left: 15px;
 }
 
@@ -1015,7 +1016,7 @@ ul.accordion>li>div.title:after {
   padding: 0;
   margin: 0;
   position: relative;
-  width: 170px;
+  width: auto;
   height:auto;  
 }
 	
@@ -3135,16 +3136,20 @@ span.dropdown-arrow {
 
 /* Development Plan */
 
+.float-right {
+  float: right;
+}
+
 ul.inline-list.forecast-status-list > li > *{
   display: inline-block;
 }
 
-.button.silver-button.wide {
-  padding: 12px 42px;
+.calendar-toolbar ul.inline-list {
+  overflow: visible;
 }
 
-ul.button-group.slim li:first-child {
-margin: 0 10px 0 0;
+.button.silver-button.wide {
+  padding: 12px 42px;
 }
 
 .divider {
@@ -3153,6 +3158,10 @@ margin: 0 10px 0 0;
 
 .button.dropdown.petrocore-actions.legends {
   padding: 12px 50px 12px 20px;
+}
+
+.button.dropdown > ul.list-of-legend li {
+  width: 175px;
 }
 
 .month-title {
@@ -3205,8 +3214,23 @@ margin: 0 10px 0 0;
 }
 
 .calendar-toolbar ul.inline-list {
-  margin-top: 5px;
-  margin-bottom: 0;
+  margin: 0 0 0 -22px;
+}
+
+.calendar-toolbar ul.button-group {
+  margin: 0;
+}
+
+ul.button-group li {
+  margin: 0;
+}
+
+ul.button-group.slim li:first-child {
+  margin: 0 -1px 0 0;
+}
+
+ul.button-group li:last-child {
+  margin: 0 0 0 -1px;
 }
 
 .dev-activity {
@@ -3261,6 +3285,16 @@ ul.milestones {
 
 .filters {
   margin-left: 0;
+}
+
+.sort-by-display {
+  font-weight: normal;
+}
+
+.button-group .button {
+  font-family: FontAwesome;
+  padding: 9px 10px;
+  width: auto;
 }
 
 /* END PAGE SPECIFIC */
@@ -3373,10 +3407,6 @@ ul.milestones {
 
   ul.button-group.slim li {
     width: auto;
-  }
-
-  ul.button-group.slim li ul.list-of-legend li {
-    width: 100%;
   }
 
   ul.button-group li:first-child {
