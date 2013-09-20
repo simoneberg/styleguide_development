@@ -4340,6 +4340,7 @@ span.dropdown-arrow {
 
 /* **************************************** */
 /* START WIDGETS */
+
 .panel-content.slide-content {
   overflow: hidden;
   margin-bottom: 10px;
@@ -4348,5 +4349,43 @@ span.dropdown-arrow {
   padding: 15px 50px;
 }
 
+.tabs.tabs-slides {
+  border:none;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.tabs.tabs-slides .active {
+
+}
+.tabs.tabs-slides dd, .tabs.tabs-slides li {
+  border:0;
+  padding:0;
+  margin:0;
+  float:none;
+  display: inline-block;
+}
+
+.tabs.tabs-slides dd a, .tabs.tabs-slides li a {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin: 0;
+  padding:0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  border-radius: 50%;
+
+  background: red;
+  border: 1px solid black;
+
+}
+.tabs.tabs-slides dd.active a, .tabs.tabs-slides li.active a {
+  background: white;
+  border: 1px solid red;
+}
 /* END WIDGETS */
 /* **************************************** */
