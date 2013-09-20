@@ -4335,15 +4335,18 @@ span.dropdown-arrow {
 
 }
 
-/* END MEDIA QUERIES
+/* END MEDIA QUERIES */
 /* **************************************** */
 
 /* **************************************** */
-/* START WIDGETS
- 
-.slider-widget {
+/* START WIDGETS */
+.panel-content.slide-content {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.slide-content .slide {
+  padding: 15px 50px;
 }
 
-
-/* END WIDGETS
+/* END WIDGETS */
 /* **************************************** */
