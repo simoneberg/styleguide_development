@@ -1969,7 +1969,7 @@ table tbody tr td {
 }
 
 .panel-header h5 {
-  width: 100%;
+  width: auto;
   float: left;
 }
 
@@ -2049,9 +2049,9 @@ table tbody tr td {
 }
 
 .panel-header-icons-close.icon- {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .panel-header-icons-close-list {
@@ -2087,6 +2087,7 @@ table tbody tr td {
   width: 25px;
   right: 45px;
 }
+
 
 .panel-header-icons-list .button {
   top: 3px;
