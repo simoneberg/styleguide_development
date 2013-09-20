@@ -62,6 +62,24 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 
 /* **************************************** */
 /* DISPLAY AND LAYOUT */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+        display: table; /* 2 */
+      }
+      
+      .cf:after {
+        clear: both;
+    }
+    
+    /**
+     *  * For IE 6/7 only
+     *   * Include this rule to trigger hasLayout and contain floats.
+     *    */
+.clearfix {
+    *zoom: 1;
+}
+
 div.pagination-centered {
   margin-top: 20px;
 }
@@ -967,17 +985,17 @@ ul.accordion>li>div.title:after {
   margin-left: 0;
 }
 
-.tabs-content .panel-wrapper .panel-content-container-dashboard .panel-header {
-height: 48px;
+.panel-header h5 {
+  margin: 0;
+  padding: 14px 0;
 }
 
-
-.tabs-content li .panel-header-icons-collapse-up.icon- {
-  margin-top: 10px;
+.panel-content-container-dashboard .panel-header {
+  height: 48px;
 }
 
-.tabs-content .panel-wrapper .panel-content-container-dashboard .panel-header h5 {
-margin-top:12px;
+.panel-content-container-dashboard .panel-header h5 {
+  margin-top:12px;
 }
 
 .tabs-content.maps-content {			
@@ -1935,13 +1953,9 @@ table tbody tr td {
 }
 
 .panel-header {
-  /*height: 50px;*/
-  float: left;
-  width: 100%;
-  clear: both;
+  position:relative;
   margin-left: 0;
   margin-top: 0;
-  padding-top: 1px;
   padding-left: 15px;
   padding-right: 15px;
   background: #c0c0c0;
@@ -2074,11 +2088,6 @@ table tbody tr td {
   font-size: 16px;
 }
 
-.panel-header h5 {
-  width: auto;
-  float: left;
-}
-
 .panel-action-icons.icon- {
   font-size: 16px;
   line-height: 24px;
@@ -2098,44 +2107,16 @@ table tbody tr td {
 .panel-action-icons-list li a{
   color: #7c7c7c;
 }
-
-.panel-header-icons.icon- {
-  font-size: 20px;
-  line-height: 24px;
-  margin-top: 6px; 
-}
-
 .panel-header-icons-list {
-  display: block;
-  float:right;
-  position:relative;
-  top:4px;  
-  width:210px;
+  overflow:hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .panel-header-icons-list li {
   float: right;
-  margin-left: 5px;
-  display: block;
 }
 
-.panel-header-icons-list li a{
-  color: #7c7c7c;
-  font-size: 18px;
-  color: #666666;
-  text-shadow: 0 1px #e5e5e5;
-}
-
-.panel-header-icons-collapse-up.icon- {
-  font-size: 20px;
-  line-height: 24px;
-  margin-top: 10px;
-}
-
-.panel-header-icons-collapse-down.icon- {
-    font-size: 20px;
-    line-height: 24px;
-}
 
 .panel-header-icons-collapse-up-list {
   display: block;
@@ -2147,17 +2128,25 @@ table tbody tr td {
   display: block;
 }
 
-.panel-header-icons-collapse-up-list li a{
+
+.panel-header .icon- {
   color: #7c7c7c;
-  font-size: 18px;
   color: #666666;
   text-shadow: 0 1px #e5e5e5;
+  font-size: 17px;
+  padding: 14px 3px;
+  line-height: 1.1em;
+
 }
 
-.panel-header-icons-close.icon- {
-  font-size: 16px;
-  line-height: 24px;
+.panel-header .panel-header-icons-collapse-up,.panel-header .panel-header-icons-collapse-down {
+  /* compensate for font-awesomes vertical-align */
   margin-top: 6px;
+  padding-bottom: 8px;
+}
+
+.panel-header li {
+  display: block;
 }
 
 .panel-header-icons-close-list {
@@ -2183,10 +2172,9 @@ table tbody tr td {
 }
 
 .panel-header-icons-container {
-  width: 25px;
-  right: 30px;
+  top:0px;
+  right: 8px;
   position: absolute;
-  height: 48px;
 }
 
 .panel-header-icons-container.skills {
@@ -4348,4 +4336,14 @@ span.dropdown-arrow {
 }
 
 /* END MEDIA QUERIES
+/* **************************************** */
+
+/* **************************************** */
+/* START WIDGETS
+ 
+.slider-widget {
+}
+
+
+/* END WIDGETS
 /* **************************************** */
