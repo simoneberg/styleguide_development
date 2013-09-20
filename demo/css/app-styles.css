@@ -1307,6 +1307,8 @@ margin-top:12px;
 .button.silver-button:focus,
 .button.silver-button:active,
 .button.silver-button.active,
+.file-upload-btn label:hover,
+.file-upload-btn label:focus,
 .file-upload-btn label:active {
   background: #d6d6d6; /* Old browsers */
   background: -moz-linear-gradient(top,  #ababab 0%, #d6d6d6 100%); /* FF3.6+ */
@@ -1336,6 +1338,7 @@ margin-top:12px;
 
 .file-upload-btn label {
   padding: 10px;
+  cursor:pointer;
 }
 
 /* END BUTTONS */
