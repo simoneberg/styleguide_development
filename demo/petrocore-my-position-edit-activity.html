@@ -316,19 +316,19 @@
                 <fieldset>
                   <legend>Activity Information</legend>
                   <div class="row">
-                    <div class="form-group six mobile-four columns">
+                    <div class="form-group three mobile-four columns">
                       <label>Planned Start</label>
                       <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="form-group six mobile-four columns">
+                    <div class="form-group three mobile-four columns">
                       <label>Planned End</label>
                       <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="form-group six mobile-four columns">
+                    <div class="form-group three mobile-four columns">
                       <label>Priority</label>
                       <select class="custom dropdown display-none" id="customDropdown">
                         <option SELECTED>Low</option>
@@ -349,23 +349,31 @@
                   </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Milestones</legend>
+                  <legend>Milestone Dates</legend>
                   <p>
-                    <a class="button radius secondary forms" href="#" data-reveal-id="add-milestone">Add Milestone</a>
+                    <a class="button radius secondary forms" href="#" data-reveal-id="add-milestone">Add Milestone Date</a>
                   </p>
                   <div class="row">
-                    <div class="four columns">
+                    <div class="form-group three columns">
                       <label>Scheduling Date</label>
                       <ul class="filters">
-                        <li class="added-filter collapse"><div class="inside-filter-txt">Jul-05-2013</div><div class="inside-filter-icon"><a data-reveal-id="edit-milestone" href="#" class="icon-">&#xf040;</a></div></li>
+                        <li class="added-filter collapse">
+                          <a href="#" data-reveal-id="edit-milestone" class="milestone-date">
+                            <div class="inside-filter-txt">Jul-05-2013</div><div class="inside-filter-icon"><span class="icon-">&#xf040;</span></div>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="four columns">
+                    <div class="form-group three columns">
                       <label>Target Date</label>
                       <ul class="filters no-bullet">
-                        <li class="added-filter collapse"><div class="inside-filter-txt">Sep-14-2013</div><div class="inside-filter-icon"><a data-reveal-id="edit-milestone" href="#" class="icon-">&#xf040;</a></div></li>
+                        <li class="added-filter collapse">
+                          <a href="#" data-reveal-id="edit-milestone" class="milestone-date">
+                            <div class="inside-filter-txt">Sep-14-2013</div><div class="inside-filter-icon"><span class="icon-">&#xf040;</span></div>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -596,7 +604,7 @@
 
 <!--************** MODAL WINDOW Add Milestone ****************-->
 
-<div id="add-milestone" class="reveal-modal expand">
+<div id="add-milestone" class="reveal-modal expand smaller">
 
   <div class="panel-header">
     <div class="panel-title-container">
@@ -617,8 +625,8 @@
 
       <div class="row">
 
-        <div class="form-group six mobile-four columns">
-          <label>Milestone Type:</label>
+        <div class="form-group seven mobile-four columns">
+          <label>Milestone Type</label>
           <select class="custom dropdown display-none" id="customDropdown">
             <option SELECTED>Scheduling Date</option>
             <option>Target Date</option>
@@ -639,7 +647,7 @@
       </div>
 
       <div class="row">
-        <div class="form-group six mobile-four columns">
+        <div class="form-group seven mobile-four columns">
           <label>Date</label>
           <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
         </div>
@@ -659,7 +667,7 @@
 
 <!--************** MODAL WINDOW EDIT MILESTONE ****************-->
 
-<div id="edit-milestone" class="reveal-modal expand">
+<div id="edit-milestone" class="reveal-modal expand smaller">
 
   <div class="panel-header">
     <div class="panel-title-container">
@@ -681,7 +689,7 @@
       <div class="row">
 
         <div class="form-group six mobile-four columns">
-          <label>Milestone Type:</label>
+          <label>Milestone Type</label>
           <div class="form-text-display-field">Scheduling Date</div>
         </div>
 

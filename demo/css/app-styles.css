@@ -1470,7 +1470,7 @@ p.form-category-title-bold {
 }
 
 .icon-trailing-control {
-  margin-left: 16px;
+  margin-left: 7px;
   position: relative;
   float: left;
 }
@@ -3296,6 +3296,19 @@ ul.milestones {
   padding: 9px 10px;
   width: auto;
 }
+
+.milestone-date {
+  color: #222;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+a.milestone-date:hover {
+  color: #222;
+}
+
+
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
