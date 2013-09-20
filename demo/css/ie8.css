@@ -171,3 +171,15 @@ fieldset legend {
 .button.silver-button.active {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */		
 }
+
+/* File upload customized button is clickable in ie8 */
+.file-upload-btn label {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
+}
+
+.file-upload-btn label:hover,
+.file-upload-btn label:focus,
+.file-upload-btn label:active {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */
+    cursor:pointer;
+}

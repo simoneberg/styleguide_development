@@ -1256,12 +1256,16 @@ margin-top:12px;
   padding: 12px 10px 10px;
 }
 
+
+
+
 .link-without-button {
   position:relative;
   top: 10px;
 }
 
-.button.silver-button {
+.button.silver-button,
+.file-upload-btn label {
   font-size:12px;
   color: #333;
   display: block;
@@ -1292,7 +1296,8 @@ margin-top:12px;
   border-radius: 0 5px 5px 0;
 }
 
-.button.silver-button.round {
+.button.silver-button.round,
+.file-upload-btn label.round {
   border-radius: 5px 5px 5px 5px;
   padding-left: 12px;
   padding-right: 12px;
@@ -1301,7 +1306,10 @@ margin-top:12px;
 .button.silver-button:hover,
 .button.silver-button:focus,
 .button.silver-button:active,
-.button.silver-button.active {
+.button.silver-button.active,
+.file-upload-btn label:hover,
+.file-upload-btn label:focus,
+.file-upload-btn label:active {
   background: #d6d6d6; /* Old browsers */
   background: -moz-linear-gradient(top,  #ababab 0%, #d6d6d6 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ababab), color-stop(100%,#d6d6d6)); /* Chrome,Safari4+ */
@@ -1322,6 +1330,15 @@ margin-top:12px;
   float: right;
   margin-top: -34px;
   margin-bottom: 8px;
+}
+
+.file-upload-btn input{
+  display: none;
+}
+
+.file-upload-btn label {
+  padding: 10px;
+  cursor:pointer;
 }
 
 /* END BUTTONS */
