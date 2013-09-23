@@ -64,21 +64,14 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 /* DISPLAY AND LAYOUT */
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-        display: table; /* 2 */
-      }
-      
-      .cf:after {
-        clear: both;
-    }
-    
-    /**
-     *  * For IE 6/7 only
-     *   * Include this rule to trigger hasLayout and contain floats.
-     *    */
-.clearfix {
-    *zoom: 1;
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
+
+.clearfix:after {
+  clear: both;
+}
+
 
 div.pagination-centered {
   margin-top: 20px;
