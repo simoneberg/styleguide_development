@@ -33,6 +33,9 @@
    /* Working Area */
    /* THIS AREA WILL NOT BE PART OF THE DEPLOYED FILE */
 
+img.profile {
+  border: 1px #000 solid;
+}
    /* CSS is seperated by concern */
 
 /* within a section the order is:
@@ -138,7 +141,7 @@ ul.pagination li.current a {
 
 .display-none {
   /* used to hide the item from being displayed */
-  display: none;
+  display: none !important;
 }
 
 .filter-list ul {
@@ -995,6 +998,15 @@ margin-top:12px;
   padding: 0;
   line-height: normal;  
 }
+/* todo - can this be better targetted */
+.tabs-content li .form-text-display-field a {
+  margin-left: 0;
+}
+
+.tabs-content li .form-group a {
+  display: inline-block;
+  margin-left: 0;
+}
 
 /* END NAVIGATION */
 /* **************************************** */
@@ -1542,6 +1554,7 @@ p.form-category-title-bold {
   margin-top: 8px;
 }
 
+
 .icon-trailing-control {
   margin-left: 16px;
   position: relative;
@@ -1644,6 +1657,7 @@ form.custom div.custom.dropdown a.current{
   color:#404040;
   border:solid #5b5b5b 1px;
   overflow:hidden;
+  margin-left: 0;
 }
 
 form.custom div.custom.dropdown a.selector{

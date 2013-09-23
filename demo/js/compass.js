@@ -74,15 +74,27 @@ $(document).ready(function(){
   $('.panel-header-icons-collapse-up.icon-').click(open_close);
 
   function open_close() {
-    target_panel = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard');
-    if ($(target_panel).is(':hidden')) {
+    panel_header = $(this).parents('.panel-wrapper').find('.panel-header');
+    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_actions = $(this).parents('.panel-wrapper').find('.panel-action-icons-container');
+    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard');
+
+    if ($(panel_content).is(':hidden')) {
       $(this).html('&#xf0de;');
       $(this).css('margin-top','10px');
+      panel_header.css('height', '50px');
+      panel_actions.css('height', '50px');
+      panel_summary.addClass("display-none");
     } else {
       $(this).html('&#xf0dd;');
       $(this).css('margin-top','2px');
+      panel_header.css('height', '70px');
+      panel_actions.css('height', '70px');
+      panel_summary.removeClass("display-none");
     }
-    target_panel.slideToggle();
+
+    panel_content.slideToggle();
+
   };
 
   $('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
@@ -126,4 +138,39 @@ $(document).ready(function(){
     (source).addClass('participant');
     (source).appendTo(target);
   });
+
+  $('#password').on("keyup", function() {
+    if ( $(this).val().length === 0 ) {
+      $('#save-password').addClass("display-none");
+    }
+    else {
+      $('#save-password').removeClass("display-none");
+    }
+  });
+
+  $('#activate-subscription').click ( function () {
+    $('#activate-subscription-button').addClass("display-none");
+    $('#subscription-activated').removeClass("display-none");
+  });
+
+  $('#deactivate-subscription').click ( function () {
+    $('#activate-subscription-button').removeClass("display-none");
+    $('#subscription-activated').addClass("display-none");
+  });
+
+  $( 'input:radio[name=radio-group-sub-cycle]' ).change(function() {
+    $( '#weekly' ).addClass("display-none");
+    $( '#monthly' ).addClass("display-none");
+
+    if($("input:radio[id=radio-weekly]").is(":checked")){
+      $( '#weekly' ).removeClass("display-none");
+      $( '#monthly' ).addClass("display-none");
+    }
+
+    if($("input:radio[id=radio-monthly]").is(":checked")){
+      $( '#weekly' ).addClass("display-none");
+      $( '#monthly' ).removeClass("display-none");
+    }
+  });
+
 });
