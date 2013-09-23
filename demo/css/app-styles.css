@@ -3617,15 +3617,16 @@ span.dropdown-arrow {
     list-style: none;
     border-bottom: 0;
     display: block;
-    height: 120px;
+    height: auto;
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
-	height: 90px;	
     margin-bottom: 5px; 		
   }
 
   .tabs dd, .tabs li {
+    float:none;
+    height: auto;
     width: 100%;
     border: solid 1px #717171;
     margin-left: 0;
@@ -4197,10 +4198,9 @@ span.dropdown-arrow {
     list-style: none;
     border-bottom: 0;
     display: block;
-    height: 90px;
     width: 100%;
     padding: 0;
-	margin-bottom: 5px;
+    margin-bottom: 5px;
   }
 
   .tabs dd,
