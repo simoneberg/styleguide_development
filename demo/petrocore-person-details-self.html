@@ -19,7 +19,7 @@
 <!-- Included CSS Files (Compressed) -->
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-  <link rel="stylesheet" href="../demo/css/app-styles.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
 
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
@@ -267,687 +267,1031 @@
       <div class="content-container">
         <!--This will hold the content-->
         <h4>User Settings</h4>
-        <br/>
-        <!-- tabs to seperate out the groups of data -->
-        <dl class="tabs">
-          <dd class="active"><a href="#person-detail-1">Personal</a></dd>
-          <dd><a href="#person-detail-2">Professional</a></dd>
-          <dd><a href="#person-detail-3">Profile</a></dd>
-          <dd><a href="#person-detail-4">Group Membership</a></dd>
-        </dl>
+        <p><span  class="bold">Adair, Paul Neal (PNADAIR)</span><br>
+          Active <br>
+          Last updated on Sept 1, 2013 by Paul Adair</p>
 
-        <ul class="tabs-content">
-          <!-- ***** THIS IS CONTENT FOR TAB 1 [Personal] ***** -->
-          <li class="active" id="person-detail-1Tab">
+          <!-- tabs to seperate out the groups of data -->
+          <dl class="tabs">
+            <dd class="active"><a href="#person-detail-1">Person Properties</a></dd>
+            <dd><a href="#person-detail-2">Application Settings</a></dd>
+            <dd><a href="#person-detail-3">Email Subscription</a></dd>
+            <dd><a href="#person-detail-4">Person Profile</a></dd>
+            <dd><a href="#person-detail-5">Group Assignment</a></dd>
+          </dl>
 
-            <!--***** FORM *****-->
-            <!--***** GENERAL INFORMATION *****-->
-            <form class="custom">
-              <fieldset>
-                <legend>Login Information</legend>
+          <ul class="tabs-content">
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>User ID</label>
-                    <div class="form-text-display-field">PNADAIR</div>
+            <li class="active" id="person-detail-1Tab">
+
+              <!--***** FORM *****-->
+              <!--***** GENERAL INFORMATION *****-->
+              <form class="custom">
+
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Login Information
+                        <br>
+                        <small class="panel-summary display-none">User ID, Password, Account Status, Employee Number</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>User ID</label>
+                        <div class="form-text-display-field">PNADAIR</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>New Password</label>
+                        <input type="password" id="password" value="">
+                        <label>Repeat New Password</label>
+                        <input type="password" value="">
+                      </div>
+                    </div>
+
+                    <div class="display-none" id="save-password">
+                      <div class="row">
+                        <div class="form-group six mobile-four columns">
+                          <button type="button" class="primary radius button" onClick="#">Save</button>
+                          <a href="#">Cancel</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Account Status</label>
+                        <div class="form-text-display-field">Active</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Employee Number</label>
+                        <div class="form-text-display-field">0000000000 000001</div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>New Password</label>
-                    <input type="password" placeholder="Enter new password to change password" value=""/>
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Contact Information
+                        <br>
+                        <small class="panel-summary display-none">First Name, Middle Name, Family Name, Email Address, Telephone Number</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>First Name</label>
+                        <div class="form-text-display-field">Paul</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Middle Name</label>
+                        <div class="form-text-display-field">Neal</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Last Name</label>
+                        <div class="form-text-display-field">Adair</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Email Address</label>
+                        <div class="form-text-display-field">red@global-industries.com</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Telephone Number</label>
+                        <div class="form-text-display-field">1-281-555-1234x101</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Repeat Password</label>
-                    <input type="password" placeholder="leave blank to keep existing password" value=""/>
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Account Information
+                        <br>
+                        <small class="panel-summary display-none">Account Expiration Date, Created On, Development Cycle, Inactive Date, Member Type, Person Import Exempt, Trial Account</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Account Expiration Date</label>
+                        <div class="form-text-display-field">&lt;&lt;value not set&gt;&gt;</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Created On</label>
+                        <div class="form-text-display-field">1951-June-18</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Inactive Date</label>
+                        <div class="form-text-display-field">03/28/2013</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Member Type</label>
+                        <div class="form-text-display-field">External</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Exclude From Import</label>
+                        <div class="form-text-display-field">false</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Trial Account</label>
+                        <div class="form-text-display-field">No</div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label>Account Status</label>
-                    <div class="form-text-display-field">Active</div>
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Demographics
+                        <br>
+                        <small class="panel-summary display-none">Date of Birth, Gender, Nationality, Picture, Religion</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Date of Birth</label>
+                        <div class="form-text-display-field">03/28/2013</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Gender</label>
+                        <div class="form-text-display-field">Male</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Nationality</label>
+                        <div class="form-text-display-field">American</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Picture</label>
+                        <img class="profile" src="images/w1px.png" alt="" height="50" width="50" />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Religion</label>
+                        <div class="form-text-display-field">Christian</div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label>Created On</label>
-                    <div class="form-text-display-field">1951-June-18</div>
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Qualifications
+                        <br>
+                        <small class="panel-summary display-none">Qualification Level, Qualification Type</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Qualification Type</label>
+                        <div class="form-text-display-field">MSC</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label>Qualification Level</label>
+                        <div class="form-text-display-field">Masters</div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Employee Number</label>
-                    <div class="form-text-display-field">0000000000 000001</div>
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Employment
+                        <br>
+                        <small class="panel-summary display-none">Bio, Company, Contractor, CV/Resume, Discipline, Direct Mentor, Direct Supervisor, Grade, Hire Date, Job Title, Position, Years in Industry</small>
+                      </h5>
+                    </div>
+                    <div class="panel-header-icons-container">
+                      <ul class="panel-header-icons-list">
+                        <li>
+                          <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
 
-              <fieldset>
-                <legend>Contact Information</legend>
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard">
 
-                <div class="row">
-                  <div class="form-group five mobile-four columns">
-                    <label>First Name</label>
-                    <div class="form-text-display-field">Paul</div>
+                   <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Bio</label>
+                      <div class="form-text-display-field">Throughout my years, I've had the pleasure of assembling and training what I believe to be the best group of people in the world. People with the presence of mind to deal with any flare-up, including my own. People who share the belief that nothing is impossible.</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label>Middle Name</label>
-                    <div class="form-text-display-field">Neal</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Company</label>
+                      <div class="form-text-display-field">Global Industries</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Last Name</label>
-                    <div class="form-text-display-field">Adair</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Contractor</label>
+                      <div class="form-text-display-field">No</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Email</label>
-                    <div class="form-text-display-field">red@wildwell.com</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>CV/Resume</label>
+                      <div class="form-text-display-field"><a href="#">view</a></div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label>Phone</label>
-                    <div class="form-text-display-field">1-281-784-4700x001</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Discipline</label>
+                      <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
 
-              <fieldset>
-                <legend>Demographics</legend>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Date of Birth </label>
-                    <div class="form-text-display-field">1915-June-18</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Direct Mentor</label>
+                      <div class="form-text-display-field">Hansen, Asger Boots (ahansen)</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Discipline </label>
-                    <div class="form-text-display-field">Operations</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Direct Supervisor</label>
+                      <div class="form-text-display-field">Matthews, Ed Coots (ematthews)</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Gender </label>
-                    <div class="form-text-display-field">Male</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Grade</label>
+                      <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Nationality </label>
-                    <div class="form-text-display-field">American</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Hire Date</label>
+                      <div class="form-text-display-field">08/28/1965</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Religion </label>
-                    <div class="form-text-display-field">Not Specified</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Job Title</label>
+                      <div class="form-text-display-field">President</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Picture:</label>
-                    <div class="form-text-display-field"><img alt="profile picture" height="200px" width="200px" src="images/compass_default_profile_pic.png"/></div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Position</label>
+                      <div class="form-text-display-field">President</div>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
-            </form>
-          </li>
 
-          <!-- ***** THIS IS CONTENT FOR TAB 1 [Personal] ***** -->
-          <li id="person-detail-2Tab">
-            <form class="custom">
-              <fieldset>
-                <legend>Employment</legend>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Position</label>
-                    <div class="form-text-display-field">President</div>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Years in Industry</label>
+                      <div class="form-text-display-field">Since 01/01/1959 (54 years)</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <!-- <label for"contractor_check_box">Contractor <input class="checkbox" type="checkbox" id="contractor_check_box"></label> -->
-                    <label>Contractor</label>
-                    <div class="form-text-display-field">No</div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Grade </label>
-                    <div class="form-text-display-field">value</div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Hire Date </label>
-                    <div class="form-text-display-field">1997 March 21</div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Years in Industry </label>
-                    <div class="form-text-display-field">since 1976-Sept- 22, 37 years</div>
-                  </div>
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend>Education</legend>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Qualification </label>
-                    <div class="form-text-display-field">Degree</div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Qualification Type </label>
-                    <div class="form-text-display-field">BSc</div>
-                  </div>
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend>Geographic</legend>
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Location </label>
-                    <div class="form-text-display-field">Houston</div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>Region </label>
-                    <div class="form-text-display-field">North America</div>
-                  </div>
-                </div>
-              </fieldset>
-
-              <div class="row">
-                <div class="form-group six mobile-four columns">
-                  <label>Bio</label>
-                  <div class="form-text-display-field">Proident enim id, pork ground round cillum t-bone ham jerky ad. Magna in duis filet mignon nulla veniam short loin fugiat turkey boudin beef eiusmod.</div>
                 </div>
               </div>
 
-              <fieldset>
-                <legend>Application Settings</legend>
+              <div class="panel-wrapper">
+                <div class="panel-header">
+                  <div class="panel-title-container">
+                    <h5 class="name-classifier">Geographic
+                      <br>
+                      <small class="panel-summary display-none">Location, Region</small>
+                    </h5>
+                  </div>
+                  <div class="panel-header-icons-container">
+                    <ul class="panel-header-icons-list">
+                      <li>
+                        <a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="panel-action-icons-container"></div>
+                <div class="panel-content-container-dashboard">
+
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Location</label>
+                      <div class="form-text-display-field">Canada</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Region</label>
+                      <div class="form-text-display-field">North America</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </form>
+          </li>
+
+          <!-- ***** THIS IS CONTENT FOR TAB 2 ***** -->
+          <li id="person-detail-2Tab">
+
+            <form class="custom">
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">Preferred Language</label>
+                  <select class="custom dropdown display-none" id="customDropdown">
+                    <option selected="selected" value="1">English</option>
+                    <option value="2">Deutsch</option>
+                    <option value="3">Español</option>
+                    <option value="4">Français</option>
+                    <option value="5">Italiano</option>
+                    <option value="6">Polski</option>
+                  </select>
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">English</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>English</li>
+                      <li>Deutsch</li>
+                      <li>Español</li>
+                      <li>Français</li>
+                      <li>Italiano</li>
+                      <li>Polski</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">Time Zone</label>
+                  <select class="custom dropdown display-none" id="customDropdown">
+                    <option selected="selected">Central Time (US &amp; Canada) (UTC-06:00)</option>
+                    <option>Alternative Values are not loaded until the drop down is clicked</option>
+                  </select>
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">Central Time (US &amp; Canada) (UTC-06:00)</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>Central Time (US &amp; Canada) (UTC-06:00)</li>
+                      <li>Alternative Values are not loaded until the drop down is clicked</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">Display Style</label>
+                  <div class="radio-group">
+                    <div class="row">
+                      <div class="form-group six mobile-four columns">
+                        <label for="radio_colour"><input name="radio_group_display_style" checked="checked" type="radio" id="radio_color"> Color</label>
+                        <label for="radio_grey"><input name="radio_group_display_style" type="radio" id="radio_grey"> Grey Scale</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </li>
+
+          <!-- ***** THIS IS CONTENT FOR TAB 3 ***** -->
+          <li id="person-detail-3Tab">
+            <form class="custom">
+
+              <div id="activate-subscription-button">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <button type="button" class="secondary radius button" id="activate-subscription">Activate Subscription</button>
+                    <br>
+                    <div class="form-text-display-field">Options displayed when subscription is activated</div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="subscription-activated" class="display-none">
 
                 <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">Preferred Language</label>
-                    <select class="custom dropdown display-none" id="customDropdown">
-                      <option selected="selected" value="1">English</option>
-                      <option value="2">Deutsch</option>
-                      <option value="3">Español</option>
-                      <option value="4">Français</option>
-                      <option value="5">Italiano</option>
-                      <option value="6">Polski</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">English</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>English</li>
-                        <li>Deutsch</li>
-                        <li>Español</li>
-                        <li>Français</li>
-                        <li>Italiano</li>
-                        <li>Polski</li>
-                      </ul>
+                  <div class="form-group six mobile-four columns">
+                    <label>Activity Report for Direct Participants</label>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Subscription Cycle</label>
+                    <div class="radio-group">
+                      <label for="radio-daily">  <input name="radio-group-sub-cycle" type="radio" data-customforms="disabled" id="radio-daily" checked> Daily</label>
+                      <label for="radio-weekly"> <input name="radio-group-sub-cycle" type="radio" data-customforms="disabled" id="radio-weekly"> Weekly</label>
+                      <label for="radio-monthly"><input name="radio-group-sub-cycle" type="radio" data-customforms="disabled" id="radio-monthly"> Monthly</label>
                     </div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
-                    <label for="customDropdown">Time Zone</label>
+                    <label class=""><span class="infomation-text bold">Time</span></label>
+                    <span class="infomation-text">Run the report at</span>
                     <select class="custom dropdown display-none" id="customDropdown">
-                      <option selected="selected">Central Time (US &amp; Canada) (UTC-06:00)</option>
-                      <option>Alternative Values are not loaded until the drop down is clicked</option>
+                      <option selected="">12:00am</option>
+                      <option>1:00 am</option>
+                      <option>2:00 am</option>
+                    </select>
+                    <div class="custom dropdown expand" style="width: auto;">
+                      <a href="#" class="current">
+                        12:00am
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul style="width: auto;"><li class="selected">12:00am</li><li>1:00 am</li><li>2:00 am</li></ul>
+                    </div>
+                    <div><p>(UTC - 7:00) MT (US &amp; Canada)</p></div>
+                  </div>
+                </div>
+
+                <div class="row display-none" id="weekly">
+                  <div class="form-group six mobile-four columns">
+                    <label class="">Run the report every week on</label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option selected="">Monday</option>
+                      <option>Tuesday</option>
+                      <option>Wednesday</option>
                     </select>
                     <div class="custom dropdown expand">
-                      <a href="#" class="current">Central Time (US &amp; Canada) (UTC-06:00)</a>
+                      <a href="#" class="current">
+                        Monday
+                      </a>
                       <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Central Time (US &amp; Canada) (UTC-06:00)</li>
-                        <li>Alternative Values are not loaded until the drop down is clicked</li>
-                      </ul>
+                      <ul ><li class="selected">Monday</li><li>Tuesday</li><li>Wednesday</li></ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row display-none" id="monthly">
+                  <div class="form-group six mobile-four columns">
+                    <label class=""><span class="infomation-text bold">Run the report each month on the</span></label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option selected="">1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                        1
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul><li class="selected">1</li><li>2</li><li>3</li></ul>
                     </div>
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">Display Style</label>
-
-                    <div class="radio-group">
-                      <div class="row">
-                        <div class="form-group six mobile-four columns">
-                          <label for="radio_colour"><input name="radio_group_display_style" checked="checked" type="radio" id="radio_color"> Color</label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="form-group six mobile-four columns">
-                          <label for="radio_grey"><input name="radio_group_display_style" type="radio" id="radio_grey"> Grey Scale</label>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="form-group six mobile-four columns">
+                    <button type="button" class="secondary radius button" id="deactivate-subscription">Deactivate this subscription</button>
                   </div>
                 </div>
 
-            </fieldset>
-          </form>
-        </li>
+              </div>
 
-        <!-- ***** THIS IS CONTENT FOR TAB 3 [Profile] ***** -->
-        <li id="person-detail-3Tab">
-          <form class="custom">
-            <fieldset>
-              <legend>Person Profile <a class="icon-" href="#" data-reveal-id="add_person_profile">&#xF067;</a></legend>
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">Country</label>
-                    <select class="custom dropdown display-none" id="customDropdown">
-                      <option selected="selected">Canada</option>
-                      <option>United Kingdom</option>
-                      <option>United States</option>
-                      <option>Russia</option>
-                      <option>Saudi Arabia</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">Canada</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Canada</li>
-                        <li>United Kingdom</li>
-                        <li>United States</li>
-                        <li>Russia</li>
-                        <li>Saudi Arabia</li>
-                      </ul>
-                    </div>
+            </form>
+          </li>
+
+          <!-- ***** THIS IS CONTENT FOR TAB 4 ***** -->
+          <li id="person-detail-4Tab">
+            <form class="custom">
+
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Grade Level</label>
+                  <input type="text" value="">
+                </div>
+              </div>
+
+              <hr>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">Country</label>
+                  <select class="custom dropdown display-none" id="customDropdown">
+                    <option selected="selected">Canada</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>Russia</option>
+                    <option>Saudi Arabia</option>
+                  </select>
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">Canada</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>Canada</li>
+                      <li>United Kingdom</li>
+                      <li>United States</li>
+                      <li>Russia</li>
+                      <li>Saudi Arabia</li>
+                    </ul>
                   </div>
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">State / Province</label>
-                    <select class="custom dropdown display-none" id="customDropdown">
-                      <option value="1">Alberta</option>
-                      <option selected="selected" value="2">British Columbia</option>
-                      <option value="3">Manitoba</option>
-                      <option value="4">Newfoundland</option>
-                      <option value="5">New Brunswick</option>
-                      <option value="6">North West Territory</option>
-                      <option value="7">Nova Scotia</option>
-                      <option value="8">Nunivit Territory</option>
-                      <option value="9">Ontario</option>
-                      <option value="10">PEI</option>
-                      <option value="11">Quebec</option>
-                      <option value="12">Saskatchewan</option>
-                      <option value="13">Yukon Territory</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">British Columbia</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Alberta</li>
-                        <li>British Columbia</li>
-                        <li>Manitoba</li>
-                        <li>Newfoundland</li>
-                        <li>New Brunswick</li>
-                        <li>North West Territory</li>
-                        <li>Nova Scotia</li>
-                        <li>Nunivit Territory</li>
-                        <li>Ontario</li>
-                        <li>PEI</li>
-                        <li>Quebec</li>
-                        <li>Saskatchewan</li>
-                        <li>Yukon Territory</li>
-                      </ul>
-                    </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">State / Province</label>
+                  <select class="custom dropdown display-none" id="customDropdown">
+                    <option value="1">Alberta</option>
+                    <option selected="selected" value="2">British Columbia</option>
+                    <option value="3">Manitoba</option>
+                    <option value="4">Newfoundland</option>
+                    <option value="5">New Brunswick</option>
+                    <option value="6">North West Territory</option>
+                    <option value="7">Nova Scotia</option>
+                    <option value="8">Nunivit Territory</option>
+                    <option value="9">Ontario</option>
+                    <option value="10">PEI</option>
+                    <option value="11">Quebec</option>
+                    <option value="12">Saskatchewan</option>
+                    <option value="13">Yukon Territory</option>
+                  </select>
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">British Columbia</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>Alberta</li>
+                      <li>British Columbia</li>
+                      <li>Manitoba</li>
+                      <li>Newfoundland</li>
+                      <li>New Brunswick</li>
+                      <li>North West Territory</li>
+                      <li>Nova Scotia</li>
+                      <li>Nunivit Territory</li>
+                      <li>Ontario</li>
+                      <li>PEI</li>
+                      <li>Quebec</li>
+                      <li>Saskatchewan</li>
+                      <li>Yukon Territory</li>
+                    </ul>
                   </div>
                 </div>
+              </div>
 
-                <div class="row">
-                  <div class="form-group three mobile-four columns">
-                    <label for="customDropdown">City</label>
-                    <select class="custom dropdown display-none" id="customDropdown">
-                      <option>Calgary</option>
-                      <option>Edmonton</option>
-                      <option>Lethbridge</option>
-                      <option selected="selected">Prince Rupert</option>
-                    </select>
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">Prince Rupert</a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Calgary</li>
-                        <li>Edmonton</li>
-                        <li>Lethbridge</li>
-                        <li>Prince Rupert</li>
-                      </ul>
-                    </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label for="customDropdown">City</label>
+                  <select class="custom dropdown display-none" id="customDropdown">
+                    <option>Calgary</option>
+                    <option>Edmonton</option>
+                    <option>Lethbridge</option>
+                    <option selected="selected">Prince Rupert</option>
+                  </select>
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">Prince Rupert</a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>Calgary</li>
+                      <li>Edmonton</li>
+                      <li>Lethbridge</li>
+                      <li>Prince Rupert</li>
+                    </ul>
                   </div>
                 </div>
-            </fieldset> <!-- OPTIONS -->
-          </form>
-        </li>
+              </div>
+              <hr>
 
-        <!-- ***** THIS IS CONTENT FOR TAB 4 [Group Membership] ***** -->
-        <li id="person-detail-4Tab">
-          <form class="custom">
-          <div class="row tree-container-with-border collapse">
-            <img src="../images/step2-tree.jpg">
-          </div>
-          </form>
-        </li>
-      </ul>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Primary Language Spoken</label>
+                  <input type="text" value="">
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Previous Employer</label>
+                  <input type="text" value="">
+                </div>
+              </div>
 
-      <button type="button" class="primary radius button"  onclick="location.href='./petrocore-person-details-self.html'">Save</button>
-      <a href="petrocore-dashboard.html">Cancel</a>
+              <hr>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Functional Discipline</label>
+                  <input type="text" value="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <label>Job Function</label>
+                  <input type="text" value="">
+                </div>
+              </div>
+              <hr>
+            </li>
 
-      <!-- <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html">Next</a> -->
+            <!-- ***** THIS IS CONTENT FOR TAB 5 ***** -->
+            <li id="person-detail-5Tab">
+              <form class="custom">
+                <div class="row tree-container-with-border collapse">
+                  <img src="../images/step2-tree.jpg">
+                </div>
+              </form>
+            </li>
+          </ul>
 
-    </div><!--Close Content Container-->
-<!--***** RIGHT SPLIT CONTAINER *****-->
-</div>
-<!--***** MAIN WRAPPER *****-->
-</div>
-<!--***** FOOTER *****-->
+          <button type="button" class="primary radius button"  onclick="location.href='./petrocore-person-details-self.html'">Save</button>
+          <a href="petrocore-dashboard.html">Cancel</a>
 
-<div class="row">
-  <div class="twelve columns petrocore-footer">
-    <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
-    <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
-    <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+          <!-- <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html">Next</a> -->
+
+        </div><!--Close Content Container-->
+        <!--***** RIGHT SPLIT CONTAINER *****-->
+      </div>
+      <!--***** MAIN WRAPPER *****-->
+    </div>
+    <!--***** FOOTER *****-->
+
+    <div class="row">
+      <div class="twelve columns petrocore-footer">
+        <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+        <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
+        <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+      </div>
+    </div>
+    <!--***** FOOTER *****-->
+
+    <!-- END NAVIGATION -->
   </div>
-</div>
-<!--***** FOOTER *****-->
+  <!--</div>-->
+  <!-- CONTENT AREA -->
 
-<!-- END NAVIGATION -->
-</div>
-<!--</div>-->
-<!-- CONTENT AREA -->
+  <!-- person profile add dialog -->
+  <div id="add_person_profile" class="reveal-modal expand">
+    <div class="panel-header">
+      <div class="panel-title-container"><h5>Add Person Profile</h5></div>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        </ul>
+      </div>
+    </div>
 
-<!-- person profile add dialog -->
-<div id="add_person_profile" class="reveal-modal expand">
-  <div class="panel-header">
-    <div class="panel-title-container"><h5>Add Person Profile</h5></div>
-    <div class="panel-header-icons-container">
-      <ul class="panel-header-icons-list">
-        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-      </ul>
+    <div class="popup-content-container">
+      <form class="custom">
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Item </label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option selected="selected">Available Profile Item</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Available Profile Item</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Value </label>
+            <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+
+      <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
+      <a class="left cancel-link" href="#" data-reveal-id="add_person_profile_demo">Show Examples</a>
     </div>
   </div>
 
-  <div class="popup-content-container">
-    <form class="custom">
+  <!-- person profile input demos -->
+  <div id="add_person_profile_demo" class="reveal-modal expand">
+    <div class="panel-header">
+      <div class="panel-title-container"><h5>Add Person Profile</h5></div>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        </ul>
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Item </label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option selected="selected">Available Profile Item</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Available Profile Item</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-            </ul>
+    <div class="popup-content-container">
+      <form class="custom">
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Item</label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option selected="selected">Item uses text entry</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Item uses text entry</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Value </label>
-          <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Value </label>
+            <input type="text" placeholder="" value=""/>
+          </div>
         </div>
-      </div>
 
-    </form>
-  </div>
-  <div class="modal-footer">
+        <hr/>
 
-    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
-    <a class="left cancel-link" href="#">Cancel</a>
-    <a class="left cancel-link" href="#" data-reveal-id="add_person_profile_demo">Show Examples</a>
-  </div>
-</div>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Item</label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option selected="selected">Item uses dropdown entry</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Item uses dropdown entry</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-<!-- person profile input demos -->
-<div id="add_person_profile_demo" class="reveal-modal expand">
-  <div class="panel-header">
-    <div class="panel-title-container"><h5>Add Person Profile</h5></div>
-    <div class="panel-header-icons-container">
-      <ul class="panel-header-icons-list">
-        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-      </ul>
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Enter Value </label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Value for profile item</option>
+              <option>Value for profile item</option>
+              <option>Value for profile item</option>
+              <option selected="selected">Value for profile item</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Value for profile item</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Value for profile item</li>
+                <li>Value for profile item</li>
+                <li>Value for profile item</li>
+                <li>Value for profile item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Item</label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option selected="selected">Value uses Option buttons</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Value uses Option buttons</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Value </label>
+          </div>
+        </div>
+        <div class="checkbox-group">
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="checkbox5"><input type="checkbox" id="checkbox5"> First optional value</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="checkbox5"><input type="checkbox" id="checkbox5"> Second optional value</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="checkbox5"><input type="checkbox" checked id="checkbox5"> Third optional value</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="checkbox5"><input type="checkbox" id="checkbox5"> Fourth optional value</label>
+            </div>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Item</label>
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option>Available Profile Item</option>
+              <option selected="selected">Value uses Radio buttons</option>
+            </select>
+            <div class="custom dropdown expand">
+              <a href="#" class="current">Value uses Radio buttons</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+                <li>Available Profile Item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group six mobile-four columns">
+            <label>Select Value </label>
+          </div>
+        </div>
+        <div class="radio-group">
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="radio1"><input name="radio1" type="radio" id="radio1"> Current</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="radio2"><input name="radio1" type="radio" id="radio2"> Pending</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group six mobile-four columns">
+              <label for="radio3"><input name="radio1" type="radio" id="radio3"> Expired</label>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer">
+
+      <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
     </div>
   </div>
-
-  <div class="popup-content-container">
-    <form class="custom">
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Item</label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option selected="selected">Item uses text entry</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Item uses text entry</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Value </label>
-          <input type="text" placeholder="" value=""/>
-        </div>
-      </div>
-
-      <hr/>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Item</label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option selected="selected">Item uses dropdown entry</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Item uses dropdown entry</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Enter Value </label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Value for profile item</option>
-            <option>Value for profile item</option>
-            <option>Value for profile item</option>
-            <option selected="selected">Value for profile item</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Value for profile item</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Value for profile item</li>
-              <li>Value for profile item</li>
-              <li>Value for profile item</li>
-              <li>Value for profile item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <hr/>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Item</label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option selected="selected">Value uses Option buttons</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Value uses Option buttons</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Value </label>
-        </div>
-      </div>
-      <div class="checkbox-group">
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="checkbox5"><input type="checkbox" id="checkbox5"> First optional value</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="checkbox5"><input type="checkbox" id="checkbox5"> Second optional value</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="checkbox5"><input type="checkbox" checked id="checkbox5"> Third optional value</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="checkbox5"><input type="checkbox" id="checkbox5"> Fourth optional value</label>
-          </div>
-        </div>
-      </div>
-
-      <hr/>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Item</label>
-          <select class="custom dropdown display-none" id="customDropdown">
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option>Available Profile Item</option>
-            <option selected="selected">Value uses Radio buttons</option>
-          </select>
-          <div class="custom dropdown expand">
-            <a href="#" class="current">Value uses Radio buttons</a>
-            <a href="#" class="selector"></a>
-            <ul>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-              <li>Available Profile Item</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group six mobile-four columns">
-          <label>Select Value </label>
-        </div>
-      </div>
-      <div class="radio-group">
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="radio1"><input name="radio1" type="radio" id="radio1"> Current</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="radio2"><input name="radio1" type="radio" id="radio2"> Pending</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="form-group six mobile-four columns">
-            <label for="radio3"><input name="radio1" type="radio" id="radio3"> Expired</label>
-          </div>
-        </div>
-      </div>
-
-    </form>
-  </div>
-  <div class="modal-footer">
-
-    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
-    <a class="left cancel-link" href="#">Cancel</a>
-  </div>
-</div>
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
