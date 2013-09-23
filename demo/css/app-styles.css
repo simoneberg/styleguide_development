@@ -963,13 +963,13 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-.tabs-content:before,
-.tabs-content:after {
+.tabs:before,.tabs-content:before,
+.tabs:after,.tabs-content:after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
 
-.tabs-content:after {
+.tabs:after, .tabs-content:after {
   clear: both;
 }
 
