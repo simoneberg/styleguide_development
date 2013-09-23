@@ -963,10 +963,14 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-.tabs-content li a {
-  display: block;
-  margin-left: 23px;
-  line-height: 28px;
+.tabs-content:before,
+.tabs-content:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.tabs-content:after {
+  clear: both;
 }
 
 .tabs-content span a {
