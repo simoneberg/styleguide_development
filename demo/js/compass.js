@@ -71,7 +71,7 @@ $(document).ready(function(){
     $(this).next().trigger('click');
   });
 
-  $('.panel-header-icons-collapse-up.icon-').click(open_close_2);
+  $('.panel-header-icons-collapse-up.icon-').click(open_close);
 
   function open_close() {
     panel_header = $(this).parents('.panel-wrapper').find('.panel-header');
