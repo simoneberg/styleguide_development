@@ -28,32 +28,6 @@
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 
-<style>
- 	.primary-buttons-demo {
-    	margin: 10px 10px 10px 0px;
-	}
- 	.secondary-buttons-demo {
-    	margin: 10px 10px 10px 0px;
-	}
-	.single-step-forms-btn {
-		float: left;
-		width: 100%;
-		margin-bottom: 20px;
-	}
-	.button.radius.primary.forms {
-		float: left;
-		margin-right: 15px;
-	}
-	.button.radius.secondary.forms {
-		float: left;
-		margin-right: 15px;
-	}
-	.button.radius.alert.forms {
-		float: left;
-		margin-right: 15px;
-	}
-</style>
-
 </head>
 
 <body>
@@ -61,18 +35,18 @@
 <div class="content-container">
 
 	<h6>Buttons</h6>
-	<section class="secondary-buttons-demo">
+	<p>
 		<a class="primary radius button" href="">Primary</a>
 		<a class="secondary radius button" href="">Secondary</a>
 		<a class="alert radius button" href="">Alert</a>
-	</section>
-
-	<section class="primary-buttons-demo">
+	</p>
+	<p>
 		<a class="primary-disabled radius button" href="#">Primary</a>
 		<a class="secondary-disabled radius button" href="#">Secondary</a>
 		<a class="alert-disabled radius button" href="#">Alert</a>
-	</section>
-	<br>
+	</p>
+
+	<p>&nbsp;</p>
 
 	<section>
 		<h6>Page Actions</h6>
@@ -101,41 +75,65 @@
 
 	<section>
 		<h6>Single Step Forms</h6>
-		<div class="single-step-forms-btn">
-		<a class="button radius primary forms" href="">Save</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
-
-		<div class="single-step-forms-btn">
-		<a class="button radius primary forms" href="">Save</a>
-		<a class="button radius secondary forms" href="">Reset</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
-
-		<div class="single-step-forms-btn">
-		<a class="button radius primary forms" href="">Save</a>
-		<a class="button radius alert forms" href="">Reset</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
+		<div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="primary radius button" href="#">Save</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="primary radius button" href="#">Save</a> 
+				<a class="button radius secondary" href="">Reset</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
+		<br>
+    <div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="primary radius button" href="#">Save</a> 
+				<a class="button radius alert" href="">Delete</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
+		<br>
 
 		<h6>Multiple Step Forms</h6>
-		<div class="single-step-forms-btn">
-		<a class="button radius primary forms" href="">Next</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
-
-		<div class="single-step-forms-btn">
-		<a class="button radius secondary forms" href="">Back</a>
-		<a class="button radius primary forms" href="">Next</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
-
-		<div class="single-step-forms-btn">
-		<a class="button radius secondary forms" href="">Back</a>
-		<a class="button radius primary forms" href="">Finish</a>
-		<div class="link-next-to-btn"><a class="" href="">Cancel</a></div>
-		</div>
-	</section>
+		<div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="primary radius button" href="#">Next</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
+		<br>
+		<div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="secondary radius button" href="#">Back</a>
+        <a class="primary radius button" href="#">Next</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
+		<br>
+		<div class="row">
+      <div class="same-line add-medium-space-right">
+        <a class="secondary radius button" href="#">Back</a>
+        <a class="primary radius button" href="#">Finish</a>
+      </div>
+      <div class="same-line">
+        <a class="" href="#">Cancel</a>
+      </div>
+    </div>
 
 </div>
 

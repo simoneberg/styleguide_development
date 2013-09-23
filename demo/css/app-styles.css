@@ -1025,7 +1025,7 @@ margin-top:12px;
   font-family: inherit;
   font-size: 12px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1 !important;
   margin: 0;
   padding: 8px 20px 9px;
   position: relative;
@@ -1330,7 +1330,9 @@ margin-top:12px;
 }
 
 .cancel-link{
-  padding: 12px 10px 10px;
+  font-size: 13px;
+  margin-left: 5px;
+  padding: 9px 10px 10px;
 }
 
 .link-without-button {
@@ -2329,8 +2331,8 @@ border: 1px solid #8a8a8a;
   clear: both;
   margin-left: 0;
   margin-top: 10px;
-  padding-top: 6px;
-  padding-left: 7px;
+  padding-top: 9px;
+  padding-left: 15px;
   padding-right: 7px;
   background: #e3e3e3;
   background: -moz-linear-gradient(top,  #e3e3e3 0%, #d1d1d1 100%);
@@ -2353,10 +2355,10 @@ border: 1px solid #8a8a8a;
 
 .reveal-modal .close-reveal-modal:not(.button) {
   color: #666666;
-  line-height: 10px;
-  text-shadow: 0 1px #ccc;
-  /*top: -9px;*/
   font-size: 16px;
+  line-height: 10px;
+  right: -15px;
+  text-shadow: 0 1px #ccc;
 }
 
 .reveal-modal .close-reveal-modal:not(.button):hover {
@@ -2720,7 +2722,7 @@ ul.button-group li {
   clear: both;
   margin-left: 0;
   margin-top: 0;
-  padding-top: 6px;
+  padding-top: 9px;
   padding-left: 15px;
   padding-right: 15px;
   background: #f0f0f0;
@@ -3383,7 +3385,7 @@ span.dropdown-arrow {
 }
 
 .add-medium-space-right {
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .add-small-margin {
@@ -3420,7 +3422,15 @@ span.dropdown-arrow {
 
 .same-line {
   display: inline-block;
+  font-size: 13px;
 }
+
+.same-line .primary:first-child, 
+.same-line .secondary:first-child {
+  margin-right: 5px;
+}
+
+
 
 /* with-above are hacks to remove space
    from an element to make it closer and
