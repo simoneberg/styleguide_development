@@ -4335,6 +4335,7 @@ span.dropdown-arrow {
   overflow: hidden;
   margin-bottom: 10px;
 }
+
 .slide-content .slide {
   padding: 15px 50px;
 }
@@ -4347,15 +4348,13 @@ span.dropdown-arrow {
   text-align: center;
 }
 
-.tabs.tabs-slides .active {
-
-}
 .tabs.tabs-slides dd, .tabs.tabs-slides li {
-  border:0;
+  width: auto;
   padding:0;
-  margin:0;
+  margin: 0 3px;
   float:none;
   display: inline-block;
+  border:0;
 }
 
 .tabs.tabs-slides dd a, .tabs.tabs-slides li a {
@@ -4369,13 +4368,31 @@ span.dropdown-arrow {
   overflow:hidden;
   border-radius: 50%;
 
-  background: red;
-  border: 1px solid black;
+  background: #fff;
+  border: 1px solid #aaa;
 
 }
+
 .tabs.tabs-slides dd.active a, .tabs.tabs-slides li.active a {
-  background: white;
-  border: 1px solid red;
+  background: #c0c0c0;
+  background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+  background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+  -moz-box-shadow: inset 0 1px 1px #d1d1d1;
+  -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
+  box-shadow: inset 0 1px 1px #d1d1d1;
 }
+
+.panel-content {
+  padding:15px;
+}
+.panel-content .tabs-content img {
+  width: 100%;
+}
+
 /* END WIDGETS */
 /* **************************************** */
