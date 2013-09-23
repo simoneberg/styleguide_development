@@ -4266,10 +4266,6 @@ span.dropdown-arrow {
     font-size: 0.97em;
   }
 
-  .panel-header-icons-list {
-    width: 169px;
-  }
-
   .panel-header-icons-list li {
     margin-left: 3px;
     margin-right: 3px;
@@ -4322,9 +4318,6 @@ span.dropdown-arrow {
     font-size: 0.95em;
   }
 
-  .panel-header-icons-list {
-    width:147px;
-  }
 
   .button.dropdown.petrocore-actions {
     width: 110px;
