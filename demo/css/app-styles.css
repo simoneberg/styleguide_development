@@ -4346,6 +4346,8 @@ span.dropdown-arrow {
   padding: 0;
   margin: 0;
   text-align: center;
+  float:right;
+  margin-top: 14px;
 }
 
 .tabs.tabs-slides dd, .tabs.tabs-slides li {
