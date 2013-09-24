@@ -18,17 +18,25 @@
 
 <!-- Included CSS Files (Compressed) -->
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-
-<link rel="stylesheet" href="../stylesheets/foundation-override.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
 <link rel="stylesheet" href="../demo/css/app-styles.css">
 
+  <script src="../javascripts/jquery.js"></script>
+  
   <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="ie8.css">
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#fileupload_btn_label1, #fileupload_btn_label2').on('click', function(event){
+          event.preventDefault();
+          $(this).next().trigger('click');
+        });
+      });
+    </script>
+  <![endif]-->
 
     <script src="../javascripts/modernizr.foundation.js"></script>
-  </head>
+  </head>  
   <body>
 
     <!-- ***** PETROCORE HEADER *****-->
@@ -450,8 +458,19 @@
                 <input class="set-small-input-field" type="text" placeholder="" value="" />
                 <span class="add-small-margin-left">inclusive</span>
               </div>
+            </div>          
+
+            <div class="row">
+              <div class="form-group six mobile-four columns inline-text-control">
+                <label>File Upload Control</label>
+              </div>
             </div>
-           
+            <div class="row">
+              <div class="form-group two mobile-four columns file-upload-btn">
+                <label id="fileupload_btn_label1" class="round text-center" for="file">Choose a file</label>
+                <input type="file" id="file" />
+              </div>
+            </div>
             
             <div class="row">
               <div class="form-group six mobile-four columns">
@@ -793,6 +812,22 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="form-group six mobile-four columns inline-text-control">
+                <label>File Upload Control</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group two mobile-four columns file-upload-btn">
+                <label id="fileupload_btn_label2" class="round text-center" for="file">Choose a file</label>
+                <input type="file" id="file" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <small class="compass-error twelve">This is the error for File Upload</small>
+              </div>
+            </div>
 
             <div class="row">
               <div class="form-group six mobile-four columns">

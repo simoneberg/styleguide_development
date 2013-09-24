@@ -18,8 +18,6 @@
 
 <!-- Included CSS Files (Compressed) -->
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-
-<link rel="stylesheet" href="../stylesheets/foundation-override.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -28,30 +26,6 @@
   <![endif]-->
 
   <script src="../javascripts/modernizr.foundation.js"></script>
-
-  <script type="text/javascript">
-
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-
-
-		if(advanced_panel.style.display == 'block')
-
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';
-		}
-	}
-
-  </script>
 
 </head>
 <body>
@@ -699,8 +673,14 @@
         </li>
       </ul>
 
-      <button type="button" class="primary radius button"  onclick="location.href='./petrocore-person-details-self.html'">Save</button>
-      <a href="petrocore-dashboard.html">Cancel</a>
+      <div class="row">
+        <div class="same-line add-medium-space-right">
+          <a class="primary radius button" href="petrocore-person-details-self.html">Save</a>
+        </div>
+        <div class="same-line">
+          <a class="" href="petrocore-dashboard.html">Cancel</a>
+        </div>
+      </div>
 
       <!-- <a class="primary radius button" href="http://chaione.github.com/petroskills-style-guide/demo/petrocore-reports-edit2.html">Next</a> -->
 
@@ -975,40 +955,16 @@
   </div>
 </div>
 
-<!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
-
--->
-
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
-
-<!-- Initialize JS Plugins -->
+<!-- inilaise foundaiton  -->
 <script src="../javascripts/app.js"></script>
 
-<script>
-$(window).load(function(){
-  $("#featured").orbit();
-});
-</script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
 
 </body>
 </html>
