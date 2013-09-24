@@ -2065,12 +2065,9 @@ table tbody tr td {
 
 
 .panel-action-icons-container {
-  height: 47px;
-  display: block;
-}
-
-.panel-action-icons-list { 
-  float: right;
+  position:absolute;
+  top: 5px;
+  right: 10px;
 }
 
 .panel-header-small h5 {
@@ -2090,10 +2087,6 @@ table tbody tr td {
   line-height: 24px;
 }
 
-.panel-action-icons-list {
-  display: block;
-  margin-top: 10px;
-}
 
 .panel-action-icons-list li {
   float: left;
@@ -2611,6 +2604,7 @@ ul.button-group li {
 }
 
 .panel-content-container-dashboard {
+  position: relative;
   padding: 25px 15px 0 15px;
   min-height:150px;
 }
@@ -3984,9 +3978,6 @@ span.dropdown-arrow {
     height: 46px;
   }
 
-  .panel-action-icons-container {
-    height: 47px;
-  }
 
   .right-justify-expand-all {
     right: 5px;
