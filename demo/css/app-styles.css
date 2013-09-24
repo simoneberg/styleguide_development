@@ -2294,8 +2294,8 @@ border: 1px solid #8a8a8a;
 }
 
 .reveal-modal.expand {
-  width: 80%;
-  margin-left: -40%;
+  width: 546px;
+  margin-left: -273px;
 }
 
 .modal-button-container {
@@ -2367,6 +2367,22 @@ border: 1px solid #8a8a8a;
 
 .popup-content-container {
   padding: 0 15px 0 15px;
+}
+
+.reveal-modal form.custom {
+  margin-top: 32px;
+}
+
+.reveal-modal form.custom .row {
+  margin-bottom: 0;
+}
+
+.reveal-modal fieldset {
+  margin-bottom: 15px;
+}
+
+.reveal-modal fieldset legend {
+  margin-bottom: 5px;
 }
 
 /* END MODAL POPUP */
