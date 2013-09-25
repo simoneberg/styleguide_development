@@ -1048,14 +1048,6 @@ margin-top:12px;
   height: auto;  
 }
 
-
-.button.dropdown.petrocore-actions.dropdown-to-left {
-  right: 0 !important;
-  border:solid red 2px;  
-}
-
-
-
 .tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
   width: 200px;
 }
