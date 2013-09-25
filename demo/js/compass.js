@@ -191,3 +191,35 @@ $("body").on("click", ".js-act-as-tab", function(ev){
   $tab.trigger('click.fndtn');
 
 });
+
+/* custom tab like control for getting started widget */
+$(".tabs-slides-container")
+.on("click.tabs", '.navigation a', function (ev) {
+  ev.preventDefault();
+  ev.stopPropagation();
+
+  var $this = $(this),
+  $container = $this.parents('.tabs-slides-container'),
+  $activeTab = $container.find(".navigation .active"),
+  $activeContent = $container.find('.content .active'),
+  target = $this.attr('href');
+
+  $activeTab.removeClass('active'); 
+  $this.parent().addClass('active')
+
+  $activeContent.fadeOut(function(){
+    $container.find(target + 'Tab').fadeIn(function() {
+      $activeContent.removeClass('active');
+      $(this).addClass('active');
+    });
+  })
+
+}).on("click.tabs",".js-act-as-tab",function(ev){
+  ev.preventDefault();
+  ev.stopPropagation();
+
+  var $this = $(this),
+  $tab = $(".navigation a[href='" + $this.attr("href") + "']")
+
+  $tab.trigger('click.tabs');
+});

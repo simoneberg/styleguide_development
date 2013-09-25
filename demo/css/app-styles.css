@@ -4327,26 +4327,18 @@ span.dropdown-arrow {
 /* **************************************** */
 /* START WIDGETS */
 
-.panel-content.slide-content {
-  overflow: hidden;
-  margin-bottom: 10px;
-}
 
-.slide-content .slide {
-  padding: 15px 50px;
-}
-
-.tabs.tabs-slides {
+.tabs-slides-container .navigation {
   border:none;
   height: auto;
   padding: 0;
   margin: 0;
   text-align: center;
   float:right;
-  margin-top: 14px;
 }
 
-.tabs.tabs-slides dd, .tabs.tabs-slides li {
+.tabs-slides-container .navigation dd, 
+.tabs-slides-container .navigation li {
   width: auto;
   padding:0;
   margin: 0 3px;
@@ -4355,7 +4347,8 @@ span.dropdown-arrow {
   border:0;
 }
 
-.tabs.tabs-slides dd a, .tabs.tabs-slides li a {
+.tabs-slides-container .navigation dd a, 
+.tabs-slides-container .navigation li a {
   display: inline-block;
   height: 16px;
   width: 16px;
@@ -4371,7 +4364,8 @@ span.dropdown-arrow {
 
 }
 
-.tabs.tabs-slides dd.active a, .tabs.tabs-slides li.active a {
+.tabs-slides-container .navigation dd.active a, 
+.tabs-slides-container .navigation li.active a {
   background: #c0c0c0;
   background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
@@ -4385,10 +4379,19 @@ span.dropdown-arrow {
   box-shadow: inset 0 1px 1px #d1d1d1;
 }
 
+.tabs-slides-container .content li {
+  list-style: none;
+  display: none;
+}
+
+.tabs-slides-container .content li.active {
+  display: block;
+}
+
 .panel-content {
   padding:15px;
 }
-.panel-content .tabs-content img {
+.tabs-slides-container .content img {
   width: 100%;
 }
 
