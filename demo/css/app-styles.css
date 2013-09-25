@@ -2133,7 +2133,8 @@ table tbody tr td {
 
 }
 
-.panel-header .panel-header-icons-collapse-up,.panel-header .panel-header-icons-collapse-down {
+.panel-header .panel-header-icons-collapse-up,
+.panel-header .panel-header-icons-collapse-down {
   /* compensate for font-awesomes vertical-align */
   margin-top: 6px;
   padding-bottom: 8px;
