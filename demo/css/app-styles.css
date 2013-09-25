@@ -917,6 +917,7 @@ ul.accordion>li>div.title:after {
 /*************/
 .tabs {
   border-bottom: solid 1px #717171;
+  height: auto;
 }
 
 .tabs dd a,
@@ -940,12 +941,15 @@ ul.accordion>li>div.title:after {
 .tabs dd,
 .tabs li {
   border: solid 1px #717171;
+  border-bottom: 0;
   margin-left: 10px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .tabs dd.active,
 .tabs li.active {
+  position:relative;
+  top:1px;
   border-top: 1px solid #717171;
   margin-top: -1px;
   border-bottom: 0;
