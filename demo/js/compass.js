@@ -174,3 +174,20 @@ $(document).ready(function(){
   });
 
 });
+
+/* prevent hash changes on any nexted tabs*/
+$("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
+  ev.preventDefault();
+});
+
+/* getting started widget next/prev links */
+$("body").on("click", ".js-act-as-tab", function(ev){
+  ev.preventDefault();
+  ev.stopPropagation();
+
+  var $this = $(this),
+      $tab = $(".tabs a[href='" + $this.attr("href") + "']")
+
+  $tab.trigger('click.fndtn');
+
+});

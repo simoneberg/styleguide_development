@@ -400,7 +400,8 @@ $(document).ready(function(){
                       Sit id iure quasi eos voluptas. Quo esse corporis adipisci deleniti voluptatibus corrupti sint. Consequatur consequatur quam inventore quas autem adipisci. Sunt enim nostrum aperiam quaerat corporis. Aut libero nisi?
                     </p>
 
-                    <a href="#slide2" class="next">Learn more </a>
+                    <!-- any link with class=js-act-as-tab within a tab will find the nearest tab pointing to the same hash and  trigger a click -->
+                    <a href="#slide2" class="js-act-as-tab">Learn more </a>
                   
                   </li>
                   <li id="slide2Tab">
@@ -411,7 +412,8 @@ $(document).ready(function(){
                       Sit id iure quasi eos voluptas. Quo esse corporis adipisci deleniti voluptatibus corrupti sint. Consequatur consequatur quam inventore quas autem adipisci. Sunt enim nostrum aperiam quaerat corporis. Aut libero nisi?
                     </p>
 
-                    <a href="#slide3" class="next">Next: Learn more about gap analysis</a>
+                    <!-- any link with class=js-act-as-tab within a tab will find the nearest tab pointing to the same hash and  trigger a click -->
+                    <a href="#slide3" class="js-act-as-tab">Next: Learn more about gap analysis</a>
                   
                   </li>
                   <li id="slide3Tab">
@@ -1422,7 +1424,9 @@ $(document).ready(function(){
   <script src="../javascripts/foundation.min.js"></script>
 
   <!-- Initialize JS Plugins -->
+  <script src="js/jquery-ui.js"></script>
   <script src="../javascripts/app.js"></script>
+  <script src="js/compass.js"></script>
 
 </body>
 </html>
