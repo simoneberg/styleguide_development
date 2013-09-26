@@ -73,24 +73,19 @@ $(document).ready(function(){
 
   $('.panel-header-icons-collapse-up.icon-').click(open_close);
 
-  function open_close() {
+  function open_close(ev) {
+    ev.preventDefault();
     panel_header = $(this).parents('.panel-wrapper').find('.panel-header');
-    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary, .panel-footer');
     panel_actions = $(this).parents('.panel-wrapper').find('.panel-action-icons-container');
-    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard');
+    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content');
 
     if ($(panel_content).is(':hidden')) {
-      $(this).html('&#xf0de;');
-      $(this).css('margin-top','10px');
-      panel_header.css('height', '50px');
-      panel_actions.css('height', '50px');
-      panel_summary.addClass("display-none");
-    } else {
-      $(this).html('&#xf0dd;');
-      $(this).css('margin-top','2px');
-      panel_header.css('height', '70px');
-      panel_actions.css('height', '70px');
+      $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
+    } else {
+      $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
+      panel_summary.addClass("display-none");
     }
 
     panel_content.slideToggle();
@@ -191,6 +186,7 @@ $("body").on("click", ".js-act-as-tab", function(ev){
   $tab.trigger('click.fndtn');
 
 });
+
 
 
 $.widget("ps.gettingStarted", {
