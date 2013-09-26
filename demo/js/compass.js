@@ -192,34 +192,48 @@ $("body").on("click", ".js-act-as-tab", function(ev){
 
 });
 
-/* custom tab like control for getting started widget */
-$(".tabs-slides-container")
-.on("click.tabs", '.navigation a', function (ev) {
-  ev.preventDefault();
-  ev.stopPropagation();
 
-  var $this = $(this),
-  $container = $this.parents('.tabs-slides-container'),
-  $activeTab = $container.find(".navigation .active"),
-  $activeContent = $container.find('.content .active'),
-  target = $this.attr('href');
+$.widget("ps.gettingStarted", {
+  options: {},
+  _create : function() {
+    this.element.on("click.tabs", '.navigation a', function (ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
 
-  $activeTab.removeClass('active'); 
-  $this.parent().addClass('active')
+      var $this = $(this),
+    $container = $this.parents('.tabs-slides-container'),
+    $activeTab = $container.find(".navigation .active"),
+    $activeContent = $container.find('.content .active'),
+    target = $this.attr('href');
 
-  $activeContent.fadeOut(function(){
-    $container.find(target + 'Tab').fadeIn(function() {
-      $activeContent.removeClass('active');
-      $(this).addClass('active');
-    });
-  })
+    $activeTab.removeClass('active'); 
+    $this.parent().addClass('active')
 
-}).on("click.tabs",".js-act-as-tab",function(ev){
-  ev.preventDefault();
-  ev.stopPropagation();
+      $activeContent.fadeOut(function(){
+        $container.find(target + 'Tab').fadeIn(function() {
+          $activeContent.removeClass('active');
+          $(this).addClass('active');
+        });
+      })
 
-  var $this = $(this),
-  $tab = $(".navigation a[href='" + $this.attr("href") + "']")
+    })
 
-  $tab.trigger('click.tabs');
-});
+    this.element.on("click.tabs",".js-act-as-tab",function(ev){
+      ev.preventDefault();
+      ev.stopPropagation();
+
+      var $this = $(this),
+          $tab = $(".navigation a[href='" + $this.attr("href") + "']")
+
+      $tab.trigger('click.tabs');
+    })
+  },
+  _destroy: function() {
+    this.element.off("click.tabs",".navigation a, .js-act-as-tab");
+    return this._super();
+  }
+
+})
+
+$('.tabs-slides-container').gettingStarted();
+
