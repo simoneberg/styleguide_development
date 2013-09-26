@@ -101,6 +101,20 @@ span.postfix {
   box-shadow: 0 1px #c5c5c5;
 }
 
+table.wrap-cell-content {
+  table-layout: fixed;
+}
+
+table.wrap-cell-content td span.wrapword {
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 /
+  white-space: -pre-wrap; / Opera 4-6 /
+  white-space: -o-pre-wrap; / Opera 7 /
+  white-space: pre-wrap; / css-3 /
+  word-wrap: break-word; / Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
 ul.pagination {
   margin-top: -15px;
 }
