@@ -546,13 +546,10 @@ h4 {
 }
 
 .top-bar ul > li.has-dropdown:hover > .language,
-.top-bar ul > li.has-dropdown:focus > .language {
-  left: -4px;
-}
-
+.top-bar ul > li.has-dropdown:focus > .language,
 .top-bar ul > li.has-dropdown:hover > .user,
 .top-bar ul > li.has-dropdown:focus > .user {
-  left: -37px;
+  right: 0 !important;  
 }
 
 .top-bar ul > li.has-dropdown a {
@@ -590,11 +587,8 @@ h4 {
   padding: 5px 10px 7px 9px;
 }
 
+.top-bar ul > li.has-dropdown .user li a,
 .top-bar ul > li.has-dropdown .language li a {
-  width: 89px;
-}
-
-.top-bar ul > li.has-dropdown .user li a {
   width: auto;
 }
 
