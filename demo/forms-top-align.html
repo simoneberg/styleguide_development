@@ -91,14 +91,55 @@
         <!-- ***** SEARCH *****-->
         <div class="search-container">
           <div class="row collapse search-input">
-            <div class="two mobile-one columns">
-              <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+
+            <div class="nine mobile-four columns">
+              <input id="initial-search" class="round-left" type="text" value="" />
             </div>
-            <div class="eight mobile-four columns">
-              <input type="text" />
+
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
             </div>
+
             <div class="two mobile-one columns">
-              <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
+              <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            </div>
+
+          </div>
+        </div>
+      <!--***** SEARCH *****-->
+
+        <div id="advanced_search" class="display-none">
+        <!--This is a Advanced Search panel that is hidden by default-->
+
+        <p><strong>Advanced Search</strong></p>
+
+          <form class="custom search-type">
+            <label id="search-type-label" for="customDropdown">Search Type:</label>
+            <select class="custom-dropdown expand" id="customDropdown">
+              <option SELECTED>Person</option>
+              <option>Group</option>
+              <option>Position</option>
+              <option>Map</option>
+              <option>Skill Group</option>
+              <option>Skill</option>
+              <option>Skill Description</option>
+              <option>Development Activity</option>
+            </select>
+
+          </form>
+            <div class="add-filter-container">
+
+            <!--***** ADD FILTER *****-->
+            <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+            <!--***** ADD FILTER *****-->
+
+            <div class="add-filter-area">
+
+              <hr class="petrocore-hr">
+              <ul id="filters">
+                <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+                <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -108,57 +149,14 @@
         <div class="left-nav-container">
           <!--This will hold the accordeon navigation-->
           <ul class="accordion">
-            <li>
+            <li class="no-dropdown">
               <div class="title">
-                <h6>Dashboard</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
               </div>
             </li>
             <li>
               <div class="title">
-                <h6>Goals</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6>My Position</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6>Growth Positions</h6>
-              </div>
-              <div class="content">
-                <ul>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <div class="title">
-                <h6 class="two-lines">My Team's Development</h6>
+                <h6><div class="icon- navicon">&#xf0ae;</div>My Position</h6>
               </div>
               <div class="content">
                 <ul>
@@ -170,12 +168,12 @@
             </li>
             <li class="no-dropdown">
               <div class="title">
-                <h6><a href="petrocore-reports.html">Reports</a></h6>
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
               </div>
             </li>
             <li>
               <div class="title">
-                <h6>Administration</h6>
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
               </div>
               <div class="content">
                 <ul>
@@ -187,7 +185,7 @@
             </li>
             <li>
               <div class="title">
-                <h6>Notes</h6>
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
               </div>
               <div class="content">
                 <ul>
@@ -199,11 +197,48 @@
             </li>
             <li class="no-dropdown">
               <div class="title">
-                <h6>Tools</h6>
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
               </div>
             </li>
           </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
         </div>
+        
         <!-- ***** MAIN NAVIGATION *****-->
 
       </div>
@@ -863,9 +898,8 @@
   <!-- ***** FOOTER *****-->
 
   <div class="row">
-    <div class="twelve columns petrocore-footer">
-      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
-      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
+    <div class="twelve columns petrocore-footer">    
+      <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
       <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
     </div>
   </div>
