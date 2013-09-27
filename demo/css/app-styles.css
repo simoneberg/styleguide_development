@@ -62,6 +62,17 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 
 /* **************************************** */
 /* DISPLAY AND LAYOUT */
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
 div.pagination-centered {
   margin-top: 20px;
 }
@@ -924,6 +935,7 @@ ul.accordion>li>div.title:after {
 /*************/
 .tabs {
   border-bottom: solid 1px #717171;
+  height: auto;
 }
 
 .tabs dd a,
@@ -947,12 +959,15 @@ ul.accordion>li>div.title:after {
 .tabs dd,
 .tabs li {
   border: solid 1px #717171;
+  border-bottom: 0;
   margin-left: 10px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .tabs dd.active,
 .tabs li.active {
+  position:relative;
+  top:1px;
   border-top: 1px solid #717171;
   margin-top: -1px;
   border-bottom: 0;
@@ -970,10 +985,14 @@ ul.accordion>li>div.title:after {
   font-weight: bold;
 }
 
-.tabs-content li a {
-  display: block;
-  margin-left: 23px;
-  line-height: 28px;
+.tabs:before,.tabs-content:before,
+.tabs:after,.tabs-content:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.tabs:after, .tabs-content:after {
+  clear: both;
 }
 
 .tabs-content span a {
@@ -985,17 +1004,17 @@ ul.accordion>li>div.title:after {
   margin-left: 0;
 }
 
-.tabs-content .panel-wrapper .panel-content-container-dashboard .panel-header {
-height: 48px;
+.panel-header h5 {
+  margin: 0;
+  padding: 14px 0;
 }
 
-
-.tabs-content li .panel-header-icons-collapse-up.icon- {
-  margin-top: 10px;
+.panel-content-container-dashboard .panel-header {
+  height: 48px;
 }
 
-.tabs-content .panel-wrapper .panel-content-container-dashboard .panel-header h5 {
-margin-top:12px;
+.panel-content-container-dashboard .panel-header h5 {
+  margin-top:12px;
 }
 
 .tabs-content.maps-content {			
@@ -1004,7 +1023,7 @@ margin-top:12px;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baselinebaseline;
+  vertical-align: baseline;
   outline: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1953,13 +1972,9 @@ table tbody tr td {
 }
 
 .panel-header {
-  /*height: 50px;*/
-  float: left;
-  width: 100%;
-  clear: both;
+  position:relative;
   margin-left: 0;
   margin-top: 0;
-  padding-top: 1px;
   padding-left: 15px;
   padding-right: 15px;
   background: #c0c0c0;
@@ -2072,12 +2087,9 @@ table tbody tr td {
 
 
 .panel-action-icons-container {
-  height: 47px;
-  display: block;
-}
-
-.panel-action-icons-list { 
-  float: right;
+  position:absolute;
+  top: 5px;
+  right: 10px;
 }
 
 .panel-header-small h5 {
@@ -2092,20 +2104,11 @@ table tbody tr td {
   font-size: 16px;
 }
 
-.panel-header h5 {
-  width: auto;
-  float: left;
-}
-
 .panel-action-icons.icon- {
   font-size: 16px;
   line-height: 24px;
 }
 
-.panel-action-icons-list {
-  display: block;
-  margin-top: 10px;
-}
 
 .panel-action-icons-list li {
   float: left;
@@ -2116,44 +2119,16 @@ table tbody tr td {
 .panel-action-icons-list li a{
   color: #7c7c7c;
 }
-
-.panel-header-icons.icon- {
-  font-size: 20px;
-  line-height: 24px;
-  margin-top: 6px; 
-}
-
 .panel-header-icons-list {
-  display: block;
-  float:right;
-  position:relative;
-  top:4px;  
-  width:210px;
+  overflow:hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .panel-header-icons-list li {
   float: right;
-  margin-left: 5px;
-  display: block;
 }
 
-.panel-header-icons-list li a{
-  color: #7c7c7c;
-  font-size: 18px;
-  color: #666666;
-  text-shadow: 0 1px #e5e5e5;
-}
-
-.panel-header-icons-collapse-up.icon- {
-  font-size: 20px;
-  line-height: 24px;
-  margin-top: 10px;
-}
-
-.panel-header-icons-collapse-down.icon- {
-    font-size: 20px;
-    line-height: 24px;
-}
 
 .panel-header-icons-collapse-up-list {
   display: block;
@@ -2165,17 +2140,31 @@ table tbody tr td {
   display: block;
 }
 
-.panel-header-icons-collapse-up-list li a{
+
+.panel-header .icon- {
   color: #7c7c7c;
-  font-size: 18px;
   color: #666666;
   text-shadow: 0 1px #e5e5e5;
+  font-size: 17px;
+  padding: 14px 3px;
+  line-height: 1.1em;
+
 }
 
-.panel-header-icons-close.icon- {
-  font-size: 16px;
-  line-height: 24px;
+.panel-header .panel-header-icons-collapse-up {
+  /* compensate for font-awesomes vertical-align */
   margin-top: 6px;
+  padding-bottom: 8px;
+}
+
+.panel-header .panel-header-icons-collapse-down {
+  /* compensate for font-awesomes vertical-align */
+  margin-top: 0px;
+  padding-bottom: 14px;
+}
+
+.panel-header li {
+  display: block;
 }
 
 .panel-header-icons-close-list {
@@ -2201,10 +2190,9 @@ table tbody tr td {
 }
 
 .panel-header-icons-container {
-  width: 25px;
-  right: 30px;
+  top:0px;
+  right: 8px;
   position: absolute;
-  height: 48px;
 }
 
 .panel-header-icons-container.skills {
@@ -2643,6 +2631,7 @@ ul.button-group li {
 }
 
 .panel-content-container-dashboard {
+  position: relative;
   padding: 25px 15px 0 15px;
   min-height:150px;
 }
@@ -3648,15 +3637,16 @@ span.dropdown-arrow {
     list-style: none;
     border-bottom: 0;
     display: block;
-    height: 120px;
+    height: auto;
     width: 100%;
     padding: 0;
     margin-bottom: 20px;
-	height: 90px;	
     margin-bottom: 5px; 		
   }
 
   .tabs dd, .tabs li {
+    float:none;
+    height: auto;
     width: 100%;
     border: solid 1px #717171;
     margin-left: 0;
@@ -4014,9 +4004,6 @@ span.dropdown-arrow {
     height: 46px;
   }
 
-  .panel-action-icons-container {
-    height: 47px;
-  }
 
   .right-justify-expand-all {
     right: 5px;
@@ -4228,10 +4215,9 @@ span.dropdown-arrow {
     list-style: none;
     border-bottom: 0;
     display: block;
-    height: 90px;
     width: 100%;
     padding: 0;
-	margin-bottom: 5px;
+    margin-bottom: 5px;
   }
 
   .tabs dd,
@@ -4297,10 +4283,6 @@ span.dropdown-arrow {
     font-size: 0.97em;
   }
 
-  .panel-header-icons-list {
-    width: 169px;
-  }
-
   .panel-header-icons-list li {
     margin-left: 3px;
     margin-right: 3px;
@@ -4353,9 +4335,6 @@ span.dropdown-arrow {
     font-size: 0.95em;
   }
 
-  .panel-header-icons-list {
-    width:147px;
-  }
 
   .button.dropdown.petrocore-actions {
     width: 110px;
@@ -4363,5 +4342,79 @@ span.dropdown-arrow {
 
 }
 
-/* END MEDIA QUERIES
+/* END MEDIA QUERIES */
+/* **************************************** */
+
+/* **************************************** */
+/* START WIDGETS */
+
+
+.tabs-slides-container .navigation {
+  border:none;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  float:right;
+}
+
+.tabs-slides-container .navigation dd, 
+.tabs-slides-container .navigation li {
+  width: auto;
+  padding:0;
+  margin: 0 3px;
+  float:none;
+  display: inline-block;
+  border:0;
+}
+
+.tabs-slides-container .navigation dd a, 
+.tabs-slides-container .navigation li a {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin: 0;
+  padding:0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  border-radius: 50%;
+
+  background: #fff;
+  border: 1px solid #aaa;
+
+}
+
+.tabs-slides-container .navigation dd.active a, 
+.tabs-slides-container .navigation li.active a {
+  background: #c0c0c0;
+  background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+  background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+  -moz-box-shadow: inset 0 1px 1px #d1d1d1;
+  -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
+  box-shadow: inset 0 1px 1px #d1d1d1;
+}
+
+.tabs-slides-container .content li {
+  list-style: none;
+  display: none;
+}
+
+.tabs-slides-container .content li.active {
+  display: block;
+}
+
+.panel-content {
+  padding:15px;
+}
+.tabs-slides-container .content img {
+  width: 100%;
+}
+
+/* END WIDGETS */
 /* **************************************** */
