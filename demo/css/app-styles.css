@@ -4487,6 +4487,9 @@ input.round-right {
 .search-box-results > .content ul {
   list-style: none;
 }
+.search-box-results > .content li:hover {
+  background: #d6e8f6;
+}
 .search-box-results > .content ul a {
   display:block;
 }
