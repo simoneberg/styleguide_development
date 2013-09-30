@@ -4479,6 +4479,9 @@ input.round-right {
 .search-box-results  .columns,
 .search-box-results > .content .columns {
   padding: 10px 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .search-box-results > .header .columns:first-child {
    border-right: 1px solid #8a8a8a;
@@ -4492,6 +4495,7 @@ input.round-right {
 }
 .search-box-results > .content ul a {
   display:block;
+  color: #333;
 }
 .search-box-results > .content ul a:after,
 .search-box-results > .content ul a:before {
