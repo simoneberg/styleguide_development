@@ -2125,8 +2125,18 @@ table tbody tr td {
 .panel-action-icons-list li a{
   color: #7c7c7c;
 }
+
+.panel-header-icons-list:after,
+.panel-header-icons-list:before {
+  content: ' ',
+  display: table;
+}
+
+.panel-header-icons-list:after {
+ clear:both;
+}
+
 .panel-header-icons-list {
-  overflow:hidden;
   margin: 0;
   padding: 0;
 }
@@ -2211,7 +2221,7 @@ table tbody tr td {
 
 
 .panel-header-icons-list .button {
-  top: 3px;
+  top: 9px;
 }
 
 .panel-wrapper .panel-content-container-dashboard h5 {
@@ -2377,8 +2387,7 @@ border: 1px solid #8a8a8a;
   color: #666666;
   font-size: 16px;
   font-weight: normal;
-  line-height: 10px;
-  right: -15px;
+  right: 0px;
   text-shadow: 0 1px #e5e5e5;
 }
 
