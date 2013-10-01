@@ -19,7 +19,6 @@
 
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -27,75 +26,7 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-
   <script src="../javascripts/modernizr.foundation.js"></script>
-
-  <script type="text/javascript">
-
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-
-
-		if(advanced_panel.style.display == 'block')
-
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';
-		}
-	}
-
-
-	$(document).ready(function(){
-
-		var notifs = $("#user-notifications").text();
-		var notifs_exist = true;
-
-	   	$('#notification_btn').bind('click', function (event) {
-
-			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // use pageX and pageY
-			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();
-				$('#overlay').show();
-				$('#overlay').click(function(){
-						$('.notifications-popup').hide();
-						$('#overlay').hide();
-				});
-
-			} else {
-				$('.notifications-popup').hide();
-				$('#overlay').hide();
-				}
-	    });
-
-		$('.notification .anotification').click (function() {
-			$(this).parent().remove();
-			notifs = $("#user-notifications").text();
-			$("#user-notifications").html(notifs-1);
-
-			if (notifs == 1) {
-				notifs_exist = false;
-			    $('.notification-btn').css('background','#c0c2c1');
-			    $('.notification-btn').css('border','1px solid #616161');
-			    $('.notification-btn').css('color','#404040');
-			    $('.notifications-area').html('You have "0" Notifications');
-			    $('.notifications-area').css('text-align','center');
-			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}
-		});
-
-	});
-
-  </script>
 
 </head>
 <body>
@@ -216,117 +147,96 @@
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
         <!--This will hold the accordeon navigation-->
-        <ul class="accordion">
-          <li class="active no-dropdown">
-            <div class="title">
-              <h6><a href="petrocore-dashboard-system-owner.html">Dashboard</a></h6>
-            </div>
-            <!--<div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>-->
-          </li>
-          <li>
-            <div class="title">
-              <h6>Goals</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>My Position</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Growth Positions</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6 class="two-lines">My Team's Development</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="no-dropdown">
-            <div class="title">
-              <h6><a href="petrocore-reports.html">Reports</a></h6>
-            </div>
-<!--             <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
- -->          </li>
-          <li>
-            <div class="title">
-              <h6>Administration</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="title">
-              <h6>Notes</h6>
-            </div>
-            <div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="no-dropdown">
-            <div class="title">
-              <h6>Tools</h6>
-            </div>
-        <!--<div class="content">
-              <ul>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 1</a></li>
-              </ul>
-            </div>-->
-          </li>
-        </ul>
-      </div>
+          <ul class="accordion">
+            <li class="no-dropdown active">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ae;</div>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
       <!--***** MAIN NAVIGATION *****-->
 
   </div>
@@ -1250,16 +1160,15 @@
 
 <!--***** MAIN WRAPPER *****-->
 
-<!--***** FOOTER *****-->
+<!-- ***** FOOTER *****-->
 
-<div class="row">
-  <div class="twelve columns petrocore-footer">
-      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
-      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
+  <div class="row">
+    <div class="twelve columns petrocore-footer">    
+      <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
       <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
   </div>
-</div>
-<!--***** FOOTER *****-->
+<!-- ***** FOOTER *****-->
 
   <!-- Entire Navbar Code -->
 <!-- <ul class="nav-bar">
@@ -1331,41 +1240,16 @@
 	</div>
 </div>
 
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- inilaise foundaiton  -->
+<script src="../javascripts/app.js"></script>
 
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
 
-  -->
-
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-
-    <script>
-    $(window).load(function(){
-      $("#featured").orbit();
-    });
-    </script>
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
 
 </body>
 </html>

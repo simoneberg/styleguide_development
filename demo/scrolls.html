@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+-->
+
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="../stylesheets/foundation.min.css">
+<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="ie8.css">
+    <![endif]-->
+
+    <script src="../javascripts/modernizr.foundation.js"></script>
+  </head>
+  <body>
+
+    <!-- ***** PETROCORE HEADER *****-->
+
+    <nav class="top-bar">
+      <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+      <div class="logo"></div>
+      <div class="profile-container">
+        <div class="avatar"></div>
+        <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+        <div class="top-nav">
+          <ul>
+            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Role Summary</a></li>
+                <li><a href="#">Account History</a></li>
+                <li><a href="#">Role History</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Deutsch</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Italiano</a></li>
+                <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+            <li class="top-nav-links"><a href="#">Help</a></li>
+            <li><p class="bar">&#124;</p></li>
+            <li class="top-nav-links"><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ***** PETROCORE HEADER *****-->
+
+    <!-- ***** MAIN WRAPPER *****-->
+    <div class="row master-wrapper">
+
+      <!-- ***** LEFT SPLIT CONTAINER *****-->
+      <div class="three columns left-split-container">
+
+        <!-- ***** SEARCH *****-->
+        <div class="search-container">
+          <div class="row collapse search-input">
+            <div class="two mobile-one columns">
+              <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+            </div>
+            <div class="eight mobile-four columns">
+              <input type="text" />
+            </div>
+            <div class="two mobile-one columns">
+              <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
+            </div>
+          </div>
+        </div>
+        <!-- ***** SEARCH *****-->
+
+        <!-- ***** MAIN NAVIGATION *****-->
+        <div class="left-nav-container">
+          <!--This will hold the accordeon navigation-->
+          <ul class="accordion">
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ae;</div>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
+        <!-- ***** MAIN NAVIGATION *****-->
+
+      </div>
+      <!-- ***** LEFT SPLIT CONTAINER *****-->
+
+      <!-- ***** RIGHT SPLIT CONTAINER *****-->
+      <div class="nine columns right-split-container">
+        <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+          <div class="breadcrumbs-list-container">
+            <ul class="breadcrumbs">
+              <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Subitem 1</a></li>
+              <li><a href="#">Subitem 2</a></li>
+              <li><a href="#">Subitem 3</a></li>
+              <li><a href="#">Subitem 4</a></li>
+              <li><a href="#">Subitem 5</a></li>
+              <li class="current"><a href="#">Subitem 6</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-container">
+          <!--This will hold the content-->
+          <h4>Form Example</h4>
+          <hr>
+          <p>&nbsp;</p>
+          <h5>Scroll Vertical Only</h5>
+          <p><code>class="scroll-vertical-only"</code></p>
+          <div class="scroll-vertical-only set-height-100">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <br>
+<pre>
+<code>
+&lt;div class=&quot;scroll-vertical-only&quot;&gt;
+  
+&lt;/div&gt;
+</code>
+</pre>
+          <p>&nbsp;</p>
+          <h5>Scroll Vertical Auto</h5>
+          <p><code>class="scroll-vertical-auto"</code></p>
+          <div class="scroll-vertical-auto set-height-100">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <br>
+<pre>
+<code>
+&lt;div class=&quot;scroll-vertical-auto&quot;&gt;
+  
+&lt;/div&gt;
+</code>
+</pre>
+          <p>&nbsp;</p>
+          <h5>Scroll Horizontal Only</h5>
+          <p><code>class="scroll-horizontal-only"</code></p>
+          <div class="scroll-horizontal-only set-width-200">
+            <p style="width:400px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <br>
+<pre>
+<code>
+&lt;div class=&quot;scroll-horizontal-only&quot;&gt;
+  
+&lt;/div&gt;
+</code>
+</pre>
+          <p>&nbsp;</p>
+          <h5>Scroll Both Only</h5>
+          <p><code>class="scroll-both"</code></p>
+          <div class="scroll-both set-height-100 set-width-200">
+            <p style="width:400px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <br>
+<pre>
+<code>
+&lt;div class=&quot;scroll-both&quot;&gt;
+  
+&lt;/div&gt;
+</code>
+</pre>
+
+      </div><!--Close Content Container-->
+
+    </div><!-- ***** RIGHT SPLIT CONTAINER *****-->
+
+  </div><!-- ***** MAIN WRAPPER *****-->
+
+  <!-- ***** FOOTER *****-->
+
+<!-- ***** FOOTER *****-->
+
+  <div class="row">
+    <div class="twelve columns petrocore-footer">    
+      <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
+  </div>
+  <!-- ***** FOOTER *****-->
+  <!-- ***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+</div>
+<!--</div>-->
+<!-- CONTENT AREA -->
+
+<div id="myModal" class="reveal-modal expand">
+  <div class="modal-header">
+    <h5>This is a Pop-up</h5>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div class="popup-content-container">
+    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right" href="#">Cancel</a>
+  </div>
+</div>
+
+<!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="../javascripts/jquery.foundation.forms.js"></script>
+  <script src="../javascripts/jquery.event.move.js"></script>
+  <script src="../javascripts/jquery.event.swipe.js"></script>
+  <script src="../javascripts/jquery.foundation.reveal.js"></script>
+  <script src="../javascripts/jquery.foundation.orbit.js"></script>
+  <script src="../javascripts/jquery.foundation.navigation.js"></script>
+  <script src="../javascripts/jquery.foundation.buttons.js"></script>
+  <script src="../javascripts/jquery.foundation.tabs.js"></script>
+  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="../javascripts/jquery.foundation.accordion.js"></script>
+  <script src="../javascripts/jquery.placeholder.js"></script>
+  <script src="../javascripts/jquery.foundation.alerts.js"></script>
+  <script src="../javascripts/jquery.foundation.topbar.js"></script>
+  <script src="../javascripts/jquery.foundation.joyride.js"></script>
+  <script src="../javascripts/jquery.foundation.clearing.js"></script>
+  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+
+-->
+
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="../javascripts/app.js"></script>
+
+<script>
+$(window).load(function(){
+  $("#featured").orbit();
+});
+</script>
+
+</body>
+</html>

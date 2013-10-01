@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+<!--<meta name="viewport" content="width=device-width" />-->  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/app.css">
+  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/jquery.js"></script>
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+  <script type="text/javascript">
+
+    function show_hide_advanced(id) {
+        var advanced_panel = document.getElementById(id);
+            advanced_arrow = document.getElementById('arrowdown');
+
+
+        if(advanced_panel.style.display == 'block')
+
+        {    advanced_panel.style.display = 'none';
+            document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
+            advanced_arrow.style.position = 'relative';
+            advanced_arrow.style.top = '0px';
+        }
+        else
+        {    advanced_panel.style.display = 'block';
+            document.getElementById('arrowdown').innerHTML = '&#xf0de;';
+            advanced_arrow.style.position = 'relative';
+            advanced_arrow.style.top = '7px';
+        }
+    }
+
+
+    $(document).ready(function(){
+
+        var notifs = $("#user-notifications").text();
+        var notifs_exist = true;        
+
+           $('#notification_btn').bind('click', function (event) {
+
+            if (notifs_exist == true) {
+                $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
+                $('.notifications-popup').css('top',event.pageY+30);
+                $('.notifications-popup').toggle();    
+                $('#overlay').show();
+                $('#overlay').click(function(){
+                        $('.notifications-popup').hide();
+                        $('#overlay').hide();
+                });
+
+            } else {
+                $('.notifications-popup').hide();
+                $('#overlay').hide();
+                }
+        });
+
+        $('.notification .anotification').click (function() {
+            $(this).parent().remove();
+            notifs = $("#user-notifications").text();
+            $("#user-notifications").html(notifs-1);
+                
+            if (notifs == 1) {
+                notifs_exist = false;
+                $('.notification-btn').css('background','#c0c2c1');
+                $('.notification-btn').css('border','1px solid #616161');
+                $('.notification-btn').css('color','#404040');
+                $('.notifications-area').html('You have "0" Notifications');
+                $('.notifications-area').css('text-align','center');
+                $('.notifications-area').css('padding','10px 0 10px 0');
+            }
+        });
+
+
+      $('.panel-header-icons-collapse-up.icon-').click(open_close);
+      
+      function open_close() {
+
+        target_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+               if ($(target_panel).is(':hidden'))
+                {    $(this).html('&#xf0de;');    
+                    $(this).css('margin-top','10px');
+                }
+            else
+                {    $(this).html('&#xf0dd;');
+                    $(this).css('margin-top','2px');
+                }
+
+        target_panel.slideToggle();
+      };
+
+
+      $('.small.secondary.button.add-medium-margin-bottom').on('click', function(){
+
+        var section = $(this).prev();
+
+               if ($(section).is(':hidden'))
+                {
+                    $(this).html('Hide Tasks and Development Activity');
+                }
+            else
+                {
+                    $(this).html('Show Tasks and Development Activity');
+                }
+
+        $(section).toggle();
+      });
+
+
+      $('#expandall').on('click', function(){
+
+        var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+        if ($(current).is(':hidden'))
+        {
+           $(current).show();
+           $('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
+           $('.panel-header-icons-collapse-up.icon-').css('margin-top','10px');
+        }
+
+      });
+
+
+      $('#collapseall').on('click', function(){
+
+        var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+        if ($(current).is(':visible'))
+        {
+           $(current).hide();
+           $('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
+           $('.panel-header-icons-collapse-up.icon-').css('margin-top','2px');
+        }
+
+      });
+
+    });
+
+  </script>
+
+</head>
+<body>
+
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+         <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-self.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<!--***** PETROCORE HEADER *****-->
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+      
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+        <div class="row collapse search-input">
+        
+          <div class="nine mobile-three columns">
+            <input id="initial-search" class="round-left" type="text" value="" />
+          </div>
+                  
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
+          </div>
+          
+          <div class="two mobile-one columns">
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+          </div>
+          
+        </div>
+      </div>
+      <!--***** SEARCH *****-->
+            
+      <div id="advanced_search" class="display-none">
+      <!--This is a Advanced Search panel that is hidden by default-->
+                      
+        <p><strong>Advanced Search</strong></p>
+                
+            <form class="custom search-type">
+                <label id="search-type-label" for="customDropdown">Search Type:</label>
+                <select class="custom-dropdown expand" id="customDropdown">
+                    <option SELECTED>Person</option>
+                    <option>Group</option>
+                    <option>Position</option>
+                    <option>Map</option>
+                    <option>Skill Group</option>
+                    <option>Skill</option>
+                    <option>Skill Description</option>
+                    <option>Development Activity</option>
+                </select>
+
+            </form>
+            <div class="add-filter-container">
+
+                <!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+                <!--***** ADD FILTER *****-->
+
+                <div class="add-filter-area">
+
+                    <hr class="petrocore-hr">
+                        <ul id="filters">
+
+       <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+       <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+                         </ul>
+                </div>
+            </div>
+        </div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+          <ul class="accordion">
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ae;</div>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li class="active">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="#">Map Administration</a></li>
+            <li><a href="#">Administrative</a></li>
+            <li class="current"><a href="#">Map 1</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="content-container">
+        <!--This will hold the content-->
+        
+        <h4>Map 1</h4>
+        <div class="save-template-btn">
+          <a class="link-without-button" href="petrocore-administration-map-admin.html" >Back to previous page</a>
+        </div>
+        <hr>
+
+        <!-- <h6>Title goes here</h6> -->
+
+        <!--***** THESE ARE THE TABS *****-->
+
+        <dl class="tabs">
+          <dd class="active"><a href="#map1-assignment-details">Assignment Details</a></dd>
+          <dd><a href="#map1-properties">Properties</a></dd>
+        </dl>
+
+        <ul class="tabs-content maps-content">
+          <!--***************************************-->
+          <!--*******THIS IS CONTENT FOR TAB 1*******-->
+          <!--***************************************-->
+          <li class="active" id="map1-assignment-detailsTab">
+
+            <div class="panel-title-container add-medium-margin-bottom">
+
+              <div href="#action-button1" class="button dropdown petrocore-actions align-left">
+                Actions
+                <ul>
+                  <li><a href="#">Create Skill</a></li>
+                  <li><a href="#">Skill Group</a></li>
+                  <li><a href="petrocore-administration-map-admin-map1-description.html">Skill Description</a></li>
+                  <li><a href="#">Copy Map</a></li>
+                  <li><a href="#">Delete</a></li>
+                  <li><a href="#">Add Unassigned Skill Group</a></li>
+                </ul>
+              </div>
+
+              <div class="right-justify-expand-all">
+                <span><a id="expandall" href="#">Expand All</a> | <a id="collapseall" href="#">Collapse All</a></span>
+              </div>
+
+
+
+
+            </div>
+
+            <!--************************************************************-->
+            <!--************************************************************-->
+            <!--************** Dashboard panel Skill Group 1 ***************-->
+            <div id="panel1" class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Skill Group 1</h5>
+                </div>
+
+                <div class="panel-header-icons-container">
+
+                  <ul class="panel-header-icons-list">
+
+                    <li class="open-close-arrow">
+  	                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                    </li>
+
+                    <li>
+                      <div href="#" class="button dropdown petrocore-actions">Actions
+                        <ul>
+                          <li><a href="#">Create Skill</a></li>
+                          <li><a href="#">Add Unassigned Skill</a></li>
+                          <li><a href="#">Move to Unassigned</a></li>
+                          <li><a href="#">Delete</a></li>
+                          <li><a href="#">Properties</a></li>
+                          <li><a href="#">View History</a></li>  
+                        </ul>  
+                      </div> 
+                    </li>
+
+                  </ul>
+                                    
+                </div>
+              </div>
+                  
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+
+                <!--************************************************************-->
+                <!--************* (Skill Group 1) Sub-Panel Skill 1 ************-->
+                <div id="subpanel11" class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Skill 1</h5>
+                    </div>
+                    <div class="panel-header-icons-container skills">
+
+                      <ul class="panel-header-icons-list">
+
+                        <li class="open-close-arrow">
+  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+
+                        <li>
+                          <div href="#" class="button dropdown petrocore-actions">Actions
+                            <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Delete</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                            </ul>  
+                          </div> 
+                        </li>
+
+                      </ul>              
+ 
+                    </div>
+                  </div>
+                  
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard sub-panel-skills">
+
+                    <!-- (Skill Group 1) Skill 1 Awareness -->
+                    <div class="panel panel-light-gray top">
+
+                      <h5>Awareness</h5>
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+ 
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div>
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                        
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->         
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Hide Tasks and Development Activity
+                      </div>
+
+                    </div>
+                    <!-- End of Skill 1 Awareness -->
+
+                    <!-- (Skill Group 1) Skill 1 Fundamental -->
+                    <div class="panel panel-light-gray">
+
+                      <h5>Fundamental</h5>
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions larger">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+
+              
+                  </div>
+                  <!--End of header-->
+                   
+                    
+                   <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div class="display-none">
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Show Tasks and Development Activity
+                      </div>
+
+
+                    </div>
+                    <!-- End of Skill 1 Fundamental -->
+
+                  </div>
+
+                </div>
+                <!-- End of (Skill Group 1) Sub-Panel Skill 1 -->
+                <!--************************************************************-->
+
+              </div>
+
+            </div>
+            <!-- End of Dashboard panel Skill Group 1 -->
+
+
+            <!--************************************************************-->
+            <!--************************************************************-->
+            <!--************** Dashboard panel Skill Group 2 ***************-->
+            <div id="panel2" class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Skill Group 2</h5>
+                </div>
+
+                <div class="panel-header-icons-container">
+                
+                  <ul class="panel-header-icons-list">
+
+                    <li class="open-close-arrow">
+  	                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                    </li>
+
+                    <li>
+                      <div href="#" class="button dropdown petrocore-actions">Actions
+                        <ul>
+                          <li><a href="#">Create Skill</a></li>
+                          <li><a href="#">Add Unassigned Skill</a></li>
+                          <li><a href="#">Move to Unassigned</a></li>
+                          <li><a href="#">Delete</a></li>
+                          <li><a href="#">Properties</a></li>
+                          <li><a href="#">View History</a></li>  
+                        </ul>  
+                      </div> 
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+                  
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+
+                <!--************************************************************-->
+
+                <!-- (Skill Group 2) Sub-Panel Skill 1 -->
+                <div id="subpanel21" class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Skill 1</h5>
+                    </div>
+                    <div class="panel-header-icons-container skills">
+                      <ul class="panel-header-icons-list">
+
+                        <li class="open-close-arrow">
+  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+
+                        <li>
+                          <div href="#" class="button dropdown petrocore-actions">Actions
+                            <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Delete</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                            </ul>  
+                          </div> 
+                        </li>
+
+                      </ul> 
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard sub-panel-skills">
+
+                    <!-- (Skill Group 2) Skill 1 Awareness -->
+                    <div class="panel panel-light-gray top">
+
+                      <h5>Awareness</h5>    
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+                        
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div>
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Hide Tasks and Development Activity
+                      </div>
+
+                    
+                    </div>
+                    <!-- End of Skill 1 Awareness -->
+
+                    <!-- (Skill Group 2) Skill 1 Fundamental -->
+                    <div class="panel panel-light-gray">
+
+                      <h5>Fundamental</h5>   
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div class="display-none">
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+                      
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Show Tasks and Development Activity
+                      </div>
+
+                    </div>
+                    <!-- End of Skill 1 Fundamental -->
+
+                  </div>
+
+                </div>
+                <!-- End of (Skill Group 2) Sub-Panel Skill 1 -->
+                <!--************************************************************-->
+
+                <!-- (Skill Group 2) Sub-Panel Skill 2 -->
+                <div id="subpanel22" class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Skill 2</h5>
+                    </div>
+                    <div class="panel-header-icons-container skills">
+                      <ul class="panel-header-icons-list">
+
+                        <li class="open-close-arrow">
+  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+
+                        <li>
+                          <div href="#" class="button dropdown petrocore-actions">Actions
+                            <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Delete</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                            </ul>  
+                          </div> 
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard sub-panel-skills">
+
+                    <!-- (Skill Group 2) Skill 2 Awareness -->
+                    <div class="panel panel-light-gray top">
+
+                      <h5>Awareness</h5>    
+
+                      <div class="right-justify-control">
+
+                          <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div>
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Hide Tasks and Development Activity
+                      </div>
+
+
+                    </div>
+                    <!-- End of Skill 2 Awareness -->
+
+                    <!-- (Skill Group 2) Skill 2 Fundamental -->
+                    <div class="panel panel-light-gray">
+
+                      <h5>Fundamental</h5>
+
+                      <div class="right-justify-control">
+
+                         <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div class="display-none">
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Show Tasks and Development Activity
+                      </div>
+
+                    </div>
+                    <!-- End of Skill 2 Fundamental -->
+
+                  </div>
+
+                </div>
+                <!-- End of (Skill Group 2) Sub-Panel Skill 2 -->
+
+                <!--************************************************************-->
+
+              </div>
+
+            </div>
+            <!-- End of Dashboard panel Skill Group 2 -->
+
+
+            <!--************************************************************-->
+            <!--************************************************************-->
+            <!--************** Dashboard panel Skill Group 3 ***************-->
+            <div id="panel3" class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Skill Group 3</h5>
+                </div>
+
+                <div class="panel-header-icons-container">
+                
+                  <ul class="panel-header-icons-list">
+
+                    <li class="open-close-arrow">
+  	                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                    </li>
+
+                    <li>
+                      <div href="#" class="button dropdown petrocore-actions">Actions
+                        <ul>
+                          <li><a href="#">Create Skill</a></li>
+                          <li><a href="#">Add Unassigned Skill</a></li>
+                          <li><a href="#">Move to Unassigned</a></li>
+                          <li><a href="#">Delete</a></li>
+                          <li><a href="#">Properties</a></li>
+                          <li><a href="#">View History</a></li>  
+                        </ul>  
+                      </div> 
+                    </li>
+
+                  </ul>
+
+                </div>
+              </div>
+                  
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+
+                <!--************************************************************-->
+
+                <!-- (Skill Group 3) Sub-Panel Skill 1 -->
+                <div id="subpanel31" class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Skill 1</h5>
+                    </div>
+                    <div class="panel-header-icons-container skills">
+                      <ul class="panel-header-icons-list">
+
+                        <li class="open-close-arrow">
+  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+
+                        <li>
+                          <div href="#" class="button dropdown petrocore-actions">Actions
+                            <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Delete</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                            </ul>  
+                          </div> 
+                        </li>
+
+                      </ul> 
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard sub-panel-skills">
+
+                    <!-- (Skill Group 3) Skill 1 Awareness -->
+                    <div class="panel panel-light-gray top">
+
+                      <h5>Awareness</h5>    
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div>
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Hide Tasks and Development Activity
+                      </div>
+
+
+
+
+                    </div>
+                    <!-- End of Skill 1 Awareness -->
+
+                    <!-- (Skill Group 3) Skill 1 Fundamental -->
+                    <div class="panel panel-light-gray">
+
+                      <h5>Fundamental</h5>
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div class="display-none">
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Show Tasks and Development Activity
+                      </div>
+
+                    </div>
+                    <!-- End of Skill 1 Fundamental -->
+
+                  </div>
+
+                </div>
+                <!-- End of (Skill Group 3) Sub-Panel Skill 1 -->
+
+                <!--************************************************************-->
+
+              </div>
+
+            </div>
+            <!-- End of Dashboard panel Skill Group 3 -->
+
+
+            <!--************************************************************-->
+            <!--************************************************************-->
+            <!--************** Dashboard panel Skill Group 4 ***************-->
+            <div id="panel4" class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Skill Group 4</h5>
+                </div>
+
+                <div class="panel-header-icons-container">
+                  <ul class="panel-header-icons-list">
+
+                    <li class="open-close-arrow">
+  	                  <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                    </li>
+
+                    <li>
+                      <div href="#" class="button dropdown petrocore-actions">Actions
+                        <ul>
+                          <li><a href="#">Create Skill</a></li>
+                          <li><a href="#">Add Unassigned Skill</a></li>
+                          <li><a href="#">Move to Unassigned</a></li>
+                          <li><a href="#">Delete</a></li>
+                          <li><a href="#">Properties</a></li>
+                          <li><a href="#">View History</a></li>  
+                        </ul>  
+                      </div> 
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+                  
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+
+                <!--************************************************************-->
+
+                <!-- (Skill Group 4) Sub-Panel Skill 1 -->
+                <div id="subpanel41" class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5 class="name-classifier">Skill 1</h5>
+                    </div>
+                    <div class="panel-header-icons-container skills">
+                      <ul class="panel-header-icons-list">
+
+                        <li class="open-close-arrow">
+  	                      <a class="panel-header-icons-collapse-up icon-">&#xf0de;</a>
+                        </li>
+
+                        <li>
+                          <div href="#" class="button dropdown petrocore-actions">Actions
+                            <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Delete</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                            </ul>  
+                          </div> 
+                        </li>
+
+                      </ul> 
+                    </div>
+                  </div>
+
+                  <div class="panel-action-icons-container"></div>
+                  <div class="panel-content-container-dashboard sub-panel-skills">
+
+                    <!-- (Skill Group 4) Skill 1 Awareness -->
+                    <div class="panel panel-light-gray top">
+
+                      <h5>Awareness</h5>    
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div>
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Hide Tasks and Development Activity
+                      </div>
+
+
+                    </div>
+                    <!-- End of Skill 1 Awareness -->
+
+                    <!-- (Skill Group 4) Skill 1 Fundamental -->
+                    <div class="panel panel-light-gray">
+
+                      <h5>Fundamental</h5>   
+
+                      <div class="right-justify-control">
+
+                        <ul class="panel-header-icons-list">
+
+                          <li>
+                            <div href="#" class="button dropdown petrocore-actions">Edit Skill Description
+                              <ul>
+                                <li><a href="#">Move to Unassigned</a></li>
+                                <li><a href="#">Create Task</a></li>
+                                <li><a href="#">Add Development Activity</a></li>
+                                <li><a href="#">Properties</a></li>
+                                <li><a href="#">View History</a></li>
+                                <li><a href="#">Delete</a></li>
+                              </ul>  
+                            </div> 
+                          </li>
+
+                        </ul>
+
+                      </div>
+
+                    </div>
+                    <!--End of header-->
+
+
+                    <div class="add-content-padding">
+                      <h6>Description</h6>
+                      <hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.
+</p>
+                      <!-- Tasks and Development Activity Section to show and Hide -->
+                      <div class="display-none">
+
+                        <h6>Tasks</h6>
+                        <hr>
+                        <ul class="display-block">
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                          <li>Mollis pharetra cursus</li>
+                        </ul>
+
+                        <h6>Development Activity</h6>
+                        <hr>
+                        <div class="small secondary button add-small-margin-bottom">ACT.001</div>
+                      </div>
+                      <!-- End of Tasks and Development Activity Section to show and Hide -->
+
+                      <div class="small secondary button add-medium-margin-bottom">
+                        Show Tasks and Development Activity
+                      </div>
+
+                    </div>
+                    <!-- End of Skill 1 Fundamental -->
+
+                  </div>
+
+                </div>
+                <!-- End of (Skill Group 4) Sub-Panel Skill 1 -->
+
+                <!--************************************************************-->
+
+              </div>
+
+            </div>
+            <!-- End of Dashboard panel Skill Group 4 -->
+
+            <!--************************************************************-->
+            <!--************************************************************-->
+
+
+
+
+
+
+
+          </li>
+
+          <!--***************************************-->
+          <!--*******THIS IS CONTENT FOR TAB 2*******-->
+          <!--***************************************-->
+          <li id="map1-propertiesTab">
+
+            <p>No Content</p>
+
+          </li>
+
+        </ul>
+        <!--*******END OF TABS*******-->
+
+
+
+
+
+          <!--***** FORMS *****-->
+
+
+            </li>
+          </ul>
+
+
+
+      </div><!--Close Content Container-->
+  </div>
+  </div>
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+</div>
+<!--***** FOOTER *****-->
+
+<!-- ***** FOOTER *****-->
+
+  <div class="row">
+    <div class="twelve columns petrocore-footer">    
+      <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
+  </div>
+  <!-- ***** FOOTER *****-->
+<!--***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+  
+  <!-- END NAVIGATION -->
+    </div>
+  <!--</div>-->
+  <!-- CONTENT AREA -->
+
+<div id="myModal" class="reveal-modal expand">
+  <div class="modal-header">
+    <h5>This is a Pop-up</h5>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+  <div class="popup-content-container">
+    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+  </div>
+  <div class="modal-footer">
+    <a class="success radius button right" href="#">OK</a>
+    <a class="secondary radius button right" href="#">Cancel</a>
+  </div>
+</div>
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+        <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 1 has been generated</p>
+            <a href="#">View Report</a>
+            <hr class="hr-notification">
+        </div>
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 2 has been generated</p>
+            <a href="#">View Report</a>
+            <hr class="hr-notification">
+        </div>
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 3 has been generated</p>
+            <a href="#">View Report</a>
+        </div>
+
+    </div>
+</div>
+
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="../javascripts/jquery.js"></script>
+  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="../javascripts/jquery.foundation.forms.js"></script>
+  <script src="../javascripts/jquery.event.move.js"></script>
+  <script src="../javascripts/jquery.event.swipe.js"></script>
+  <script src="../javascripts/jquery.foundation.reveal.js"></script>
+  <script src="../javascripts/jquery.foundation.orbit.js"></script>
+  <script src="../javascripts/jquery.foundation.navigation.js"></script>
+  <script src="../javascripts/jquery.foundation.buttons.js"></script>
+  <script src="../javascripts/jquery.foundation.tabs.js"></script>
+  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="../javascripts/jquery.foundation.accordion.js"></script>
+  <script src="../javascripts/jquery.placeholder.js"></script>
+  <script src="../javascripts/jquery.foundation.alerts.js"></script>
+  <script src="../javascripts/jquery.foundation.topbar.js"></script>
+  <script src="../javascripts/jquery.foundation.joyride.js"></script>
+  <script src="../javascripts/jquery.foundation.clearing.js"></script>
+  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+
+  -->
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="../javascripts/app.js"></script>
+
+  <script>
+
+    $(window).load(function(){
+      /* This code is executed once when the page loads */
+      /* It initializes page to match the layout design */
+      $('#collapseall').trigger('click');
+      $('#panel1').find('.petrocore-actions').filter(':first').trigger('click');
+      $('#panel2').find('.panel-header-icons-collapse-up.icon-').filter(':first').trigger('click');
+      $('#subpanel22').find('.panel-header-icons-collapse-up.icon-').filter(':first').trigger('click');
+    });
+    
+  </script>
+
+</body>
+</html>
