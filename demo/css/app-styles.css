@@ -4456,6 +4456,12 @@ input.round-right {
   margin-bottom: 5px;
 }
 
+.search-box > .header .button.dropdown {
+  width: 100%;
+}
+.search-box > .header .button.dropdown:after {
+  border-color: #333 transparent transparent transparent;
+}
 .search-box > .content {
    margin: 0 -5px -5px;
    background: #fff;
