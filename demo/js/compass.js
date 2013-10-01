@@ -179,7 +179,6 @@ $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
 /* getting started widget next/prev links */
 $("body").on("click", ".js-act-as-tab", function(ev){
   ev.preventDefault();
-  ev.stopPropagation();
 
   var $this = $(this),
       $tab = $(".tabs a[href='" + $this.attr("href") + "']")
@@ -188,6 +187,15 @@ $("body").on("click", ".js-act-as-tab", function(ev){
 
 });
 
+$("body").on("click", ".button.dropdown.js-update-text > ul a", function(ev){
+  ev.preventDefault();
+
+  var $selected = $(this),
+    text = $selected.text(),
+    $button = $selected.parents(".button.dropdown");
+
+  $button.find("> label").text(text);
+});
 
 
 $.widget("ps.gettingStarted", {

@@ -4456,6 +4456,11 @@ input.round-right {
   margin-bottom: 5px;
 }
 
+.search-box .button.dropdown label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .search-box > .header .button.dropdown {
   width: 100%;
 }
