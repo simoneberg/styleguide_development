@@ -394,26 +394,33 @@
                 </div>
               </div>
 
-               <!--****** PRIORITY DROPDOWN ******-->
-              <label for="customDropdown"> Priority</label>
-              <div class="form-group six mobile-four columns">
-                <select class="custom dropdown display-none" id="Select1">
-                  <option >Low</option>
-                  <option SELECTED>Medium</option>
-                  <option>High</option>
-                </select>
-                <div class="custom dropdown expand">
-                  <a href="#" class="current">
-                    Medium
-                  </a>
-                  <a href="#" class="selector"></a>
-                  <ul>
-                    <li>Low </li>
-                    <li>Medium</li>
-                    <li>High</li>
-                  </ul>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="customDropdown"> Priority</label>
+                    <!-- the select tag which is hte default HTML is not visible when
+                    in a custom form and the class custom-dropdown is used. -->
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option >Low</option>
+                      <option SELECTED>Medium</option>
+                      <option>High</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                        Medium
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>Low </li>
+                        <li>Medium</li>
+                        <li>High</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
             </fieldset>
             <!--****** START/END CHUNK ******-->
