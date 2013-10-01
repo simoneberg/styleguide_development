@@ -4457,6 +4457,7 @@ input.round-right {
 }
 
 .search-box .button.dropdown label {
+  font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
