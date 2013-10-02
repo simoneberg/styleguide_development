@@ -319,14 +319,14 @@ data-customforms=&quot;disabled&quot;
 </pre>
     <p>will produce a standard checkbox in a custom form.</p>
     <h5>Button Groups</h5>
-    <p>When you have two or more checkboxes or radion buttons use:</p>
+    <p>When you have two or more checkboxes or radio buttons use:</p>
 <pre>
 <code>
 &lt;div class=&quot;radio-group&quot;&gt; or
 &lt;div class=&quot;checkbox-group&quot;&gt;
 </code>
 </pre>
-    <p>these wrappers will allow for grouping and formatting a group of control lassociated with each other.</p>
+    <p>these wrappers will allow for grouping and formatting a group of controls associated with each other.</p>
     <h4>Events</h4>
     <p>Zurb changes the events in some cases when the Zurb custom controls are used. Particularly the <code>onClick()</code> or <code>Click()</code> events. Zurb wraps the control in a <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> tag and when the user clicks on the <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> the click event is not propagated to the wrapped control. Zurb also explicitly stops event propagation.</p>
     <p>This means when using a custom control you can not rely on the click event for the wrapped control. The Zurb controls do propagate the <code>change()</code> event and you can reliably rely on that event firing when the custom controls are updated.</p>
