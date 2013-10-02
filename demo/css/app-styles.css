@@ -134,6 +134,7 @@ table.wrap-cell-content td span.wrapword {
 
 ul.pagination {
   margin-top: -15px;
+  margin-bottom: 17px;
 }
 
 ul.pagination li.current a {

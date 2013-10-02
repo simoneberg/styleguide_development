@@ -4,6 +4,26 @@
   var $doc = $(document),
       Modernizr = window.Modernizr;
 
+  function tabsCallback(){
+
+    var normalButtonHeight  = $('.button.dropdown:not(.large):not(.small):not(.tiny):visible').outerHeight() - 1,
+        largeButtonHeight   = $('.button.large.dropdown:visible').outerHeight() - 1,
+        smallButtonHeight   = $('.button.small.dropdown:visible').outerHeight() - 1,
+        tinyButtonHeight    = $('.button.tiny.dropdown:visible').outerHeight() - 1;
+
+    $('.button.dropdown:not(.large):not(.small):not(.tiny) > ul').css('top', normalButtonHeight);
+    $('.button.dropdown.large > ul').css('top', largeButtonHeight);
+    $('.button.dropdown.small > ul').css('top', smallButtonHeight);
+    $('.button.dropdown.tiny > ul').css('top', tinyButtonHeight);
+
+    $('.button.dropdown.up:not(.large):not(.small):not(.tiny) > ul').css('top', 'auto').css('bottom', normalButtonHeight - 2);
+    $('.button.dropdown.up.large > ul').css('top', 'auto').css('bottom', largeButtonHeight - 2);
+    $('.button.dropdown.up.small > ul').css('top', 'auto').css('bottom', smallButtonHeight - 2);
+    $('.button.dropdown.up.tiny > ul').css('top', 'auto').css('bottom', tinyButtonHeight - 2);
+
+    return $.foundation.customForms.appendCustomMarkup.apply(arguments);
+  }
+
   $(document).ready(function() {
     $.fn.foundationAlerts           ? $doc.foundationAlerts() : null;
     $.fn.foundationButtons          ? $doc.foundationButtons() : null;
@@ -12,7 +32,7 @@
     $.fn.foundationTopBar           ? $doc.foundationTopBar() : null;
     $.fn.foundationCustomForms      ? $doc.foundationCustomForms() : null;
     $.fn.foundationMediaQueryViewer ? $doc.foundationMediaQueryViewer() : null;
-    $.fn.foundationTabs             ? $doc.foundationTabs({callback : $.foundation.customForms.appendCustomMarkup}) : null;
+    $.fn.foundationTabs             ? $doc.foundationTabs({callback : tabsCallback}) : null;
     $.fn.foundationTooltips         ? $doc.foundationTooltips() : null;
     $.fn.foundationMagellan         ? $doc.foundationMagellan() : null;
     $.fn.foundationClearing         ? $doc.foundationClearing() : null;
