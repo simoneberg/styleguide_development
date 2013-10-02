@@ -139,3 +139,7 @@ pre code {
 	font-weight: normal;
 	line-height: 1.4;
 }
+
+img {
+	border: 1px solid #717171;
+}
