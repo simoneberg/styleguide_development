@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Development Plan – PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation-override.css">
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
+      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
+    </ul>
+    <!-- <section>
+      <ul class="left">
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </section> -->
+  </nav>
+  <!-- END NAVIGATION -->
+
+  <!-- PAGE TITLE -->
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Design Examples</h2>
+      <p>A showcase on how the design is applied throughout the user-interface.</p>
+    </div>
+  </div>
+  <!-- END PAGE TITLE -->
+
+  <!-- CONTENT AREA -->
+  <div class="row">
+    <div class="three columns">
+    <!-- SIDE BAR -->
+  <ul class="tabs vertical">
+    <li><a href="index.html">Getting Started</a></li>
+    <li><a href="grids.html">Foundations</a></li>
+    <li><a href="building-blocks.html">Building Blocks</a></li>
+    <li><a href="tables.html">Patterns</a></li>
+    <li class="active"><a href="add-activity.html">Design Examples</a>
+      <ul class="subitems">
+          <li><a href="add-activity.html">Add Activity</a></li>
+          <li><a href="add-remove-participant.html">Add/Remove Direct Participant</a></li>          
+          <li><a href="assessment-wizard.html">Assessment Wizard</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li class="active"><a href="development-plan.html">Development Plan</a></li>
+          <li><a href="email-notifications.html">Email Notifications</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="search-results.html">Search Results</a></li>
+          <li><a href="subpage.html">Subpage</a></li>
+        </ul>
+    </li>
+    <!-- <li class="active"><a href="#">Item 6</a>
+        <ul class="subitems">
+          <li class="active"><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+          <li><a href="#">Subitem 4</a></li>
+          <li><a href="#">Subitem 5</a></li>
+        </ul>
+    </li> -->
+    <li><a href="prototype.html">Prototype</a></li>
+      <li><a href="support.html">Support</a></li>
+  </ul>
+    <!-- END SIDE BAR -->
+
+  </div>
+    <div class="nine columns">
+      <h2>Development Plan</h2>
+      <p>The Development Plan is one of the core areas of Compass. This is where Development Activities assigned to a person are viewed and maintained. Participants and Supervisors primarily use this area for keeping track of activities assigned to Participants.</p>
+      <p><img src="images/development-plan-calendar-year-new-dates.jpg" /></p>
+      <p>The Development Plan consists of three areas:</p>
+      <ul class="square">
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#documents">Documents</a></li>
+        <li><a href="#notes">Notes</a></li>
+      </ul>
+      <hr>
+      <h3 id="calendar">Calendar</h3>
+      <h4>Calendar View Types</h4>
+      <p>The calendar is a major feature of the development plan. It has two view types:</p>
+      <div class="row">
+        <div class="six columns">
+          <p><img src="images/calendar-view-type-year.png" alt="" /><br><strong>Year View</strong></p>
+        </div>
+        <div class="six columns">
+          <p><img src="images/calendar-view-type-month.png" alt=""><br><strong>Month View</strong></p>
+        </div>
+      </div>
+      <p>The view types can be changed by the view type button group. The Year view is the default option.</p>
+      <p><img src="images/calendar-view-types.png" /></p>
+      <hr>
+      <h4>Legend Chart</h4>
+      <p><img src="images/legend-chart.png"></p>
+      The Legend chart is a dropdown button that displays color milestones and color priorities that are represented in the calendar.
+      <hr>
+      <h4>Calendar Toolbar</h4>
+      <p><img src="images/calendar-toolbar.png" alt=""></p>
+      <p>This toolbar is located above the calendar. It provides functionality that allows the user to navigate to a particular year or sort by criteria.</p>
+      <p><img src="images/calendar-toolbar-controls.png" alt=""></p>
+      <p>Possible options for the controls displayed above.</p>
+      <p><img src="images/calendar-toolbar-nav.png" alt=""></p>
+      <p>The calendar navigator allows you to navigate to previous years or months. The left arrow button will navigate backwards (example: going from 2013 to 2012). The right arrow button will navigate forwards (example: going from 2012 to 2013). The middle button allows the user to quickly get back to the current year or month.</p>
+      <hr>
+      <h4>Activities and Milestones</h4>
+      <p><img src="images/calendar-activity.png" alt=""></p>
+      <p>Each activity consists of three components:</p>
+      <ul class="square">
+        <li>Color Priority: displayed at the top of the activity, indicated by its color.</li>
+        <li>Activity Name</li>
+        <li>Milestone</li>
+      </ul>
+      <hr>
+      <h4>Activity Popover</h4>
+      <p><img src="images/calendar-activity-popover.png" alt=""></p>
+      <p>When the user clicks anywhere in the activity (except the milestone), the activity pop-over control shows up. This pop-over displays:</p>
+      <ul class="square">
+        <li>Activity Name with a link to allow the user to see the description of the development activity</li>
+        <li>Dates, Milestones, Priority</li>
+        <li>View/Edit Activity</li>
+      </ul>
+      <hr>
+      <h4>Milestone Tooltip</h4>
+      <p><img src="images/calendar-milestone-tooltip.png" alt=""></p>
+      <p>When the user clicks on the milestone, a tooltip shows up and displays the dates and milestone dates that are associated with it.</p>
+      <hr>
+
+      <h3 id="documents">Documents</h3>
+      <p><img src="images/dev-plan-documents.png" alt=""></p>
+      <p>Documents are attachments to the user's development plan. The user can:</p>
+      <ul class="square">
+        <li>Attach a document to their Development Plan by clicking on the [Attach Document] button at the top right.</li>
+        <li>View / download their document by clicking on the link.</li>
+        <li>Download or delete the document by clicking on the particular Actions dropdown button that is associated with the row of the document.</li>
+      </ul>
+      <h5>Attach Document Pop-up Window</h5>
+      <p><img src="images/dev-plan-attach-document.png" alt=""></p>
+      <hr>
+      <h3 id="notes">Notes</h3>
+      <p><img src="images/dev-plan-notes.png" alt=""></p>
+      <p>Notes allow users to attach notes to their development plan. The user can do the following actions.</p>
+      <h6>Notes Dropdown Button:</h6>
+      <ul class="square">
+        <li>New Note</li>
+        <li>Print</li>
+      </ul>
+      <h6>Individual Note Dropdown Button:</h6>
+      <ul class="square">
+        <li>Edit Note</li>
+        <li>Delete</li>
+      </ul>
+      <p>To view the note, the user can click on the Note link.</p>
+      <hr>
+      <h3>Edit Activity</h3>
+      <p><img src="images/development-plan-edit-activity-home.jpg" alt=""></p>
+      <p>This page is accessible by the user when they click on the [View/Edit Activity] link from the Development Plan Calendar. The controls on this page affect what's shown on the calendar.</p>
+      <hr>
+      <h4>Add Milestone</h4>
+      <p>The screenshots below show what gets displayed when the user clicks on the [Add Milestone] button.</p>
+      <p><img src="images/development-plan-edit-activity-add-milestone-menu.jpg" alt=""></p>
+      <p><img src="images/development-plan-edit-activity-add-milestone.jpg" alt=""></p>
+      <hr>
+      <h4>Edit Activity with Milestone</h4>
+      <p><img src="images/development-plan-edit-activity-with-milestone.jpg" alt=""></p>
+      <p>Screenshot showing how a milestone looks like when it's been added.</p>
+      <p><img src="images/development-plan-edit-activity-with-milestone-edit.jpg" alt=""></p>
+      <p>The dates and milestone dates can be edited once they've been added to the development activity.</p>
+      <hr>
+      <h4>Notes</h4>
+      <p><img src="images/development-plan-edit-activity-notes.jpg" alt=""></p>
+      <p>A user can attach notes per development activity. The controls are the same as the Notes on the Development Plan.</p>
+      <p>&nbsp;</p>
+    </div>
+
+  </div>
+  <!-- CONTENT AREA -->
+
+  
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  <script src="javascripts/jquery.event.move.js"></script>
+  <script src="javascripts/jquery.event.swipe.js"></script>
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/jquery.placeholder.js"></script>
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+  
+</body>
+</html>

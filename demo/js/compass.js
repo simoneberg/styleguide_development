@@ -1,17 +1,18 @@
 function show_hide_advanced(id) {
-  var advanced_panel = document.getElementById(id);
-  advanced_arrow = document.getElementById('arrowdown');
-
-  if(advanced_panel.style.display == 'block'){
-    advanced_panel.style.display = 'none';
-    document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-    advanced_arrow.style.position = 'relative';
-    advanced_arrow.style.top = '0px';
+  var advanced_panel = $('#advanced_search');
+  advanced_arrow = $('#arrowdown');
+  if (advanced_panel.is(':hidden')) {
+    advanced_panel.removeClass("display-none");
+    advanced_panel.css("display", "block");
+    advanced_arrow.html('&#xf0de;');
+    advanced_arrow.css("position", "relative");
+    advanced_arrow.css("top", "7px");
   } else {
-    advanced_panel.style.display = 'block';
-    document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-    advanced_arrow.style.position = 'relative';
-    advanced_arrow.style.top = '7px';
+    advanced_panel.addClass("display-none");
+    advanced_panel.css("display", "block");
+    advanced_arrow.html('&#xf0dd;');
+    advanced_arrow.css("position", "relative");
+    advanced_arrow.css("top", "0px");
   }
 }
 
@@ -75,17 +76,17 @@ $(document).ready(function(){
 
   function open_close(ev) {
     ev.preventDefault();
-    panel_header = $(this).parents('.panel-wrapper').find('.panel-header');
-    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary, .panel-footer');
+    panel_header  = $(this).parents('.panel-wrapper').find('.panel-header');
+    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
     panel_actions = $(this).parents('.panel-wrapper').find('.panel-action-icons-container');
-    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content');
+    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content, .panel-footer, .panel-content-container-full');
 
     if ($(panel_content).is(':hidden')) {
       $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
-      panel_summary.removeClass("display-none");
+      panel_summary.addClass("display-none");
     } else {
       $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
-      panel_summary.addClass("display-none");
+      panel_summary.removeClass("display-none");
     }
 
     panel_content.slideToggle();

@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+-->
+
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="../stylesheets/foundation.min.css">
+<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    <![endif]-->
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+</head>
+<body>
+
+  <!--***** PETROCORE HEADER *****-->
+
+  <nav class="top-bar">
+    <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+    <div class="logo"></div>
+    <div class="profile-container">
+      <div class="avatar"></div>
+
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+          <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+            <ul class="dropdown user">
+              <li><a href="petrocore-person-details-self.html">Settings</a></li>
+              <li><a href="#">Role Summary</a></li>
+              <li><a href="#">Account History</a></li>
+              <li><a href="#">Role History</a></li>
+            </ul>
+          </li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
+
+          <li class="has-dropdown"><a href="#">Language</a>
+            <ul class="dropdown language">
+              <li><a href="#">English</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Français</a></li>
+              <li><a href="#">Italiano</a></li>
+              <li><a href="#">Polski</a></li>
+            </ul>
+          </li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li>
+            <p class="bar">&#124;</p>
+          </li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--***** PETROCORE HEADER *****-->
+
+  <!--***** MAIN WRAPPER *****-->
+  <div class="row master-wrapper">
+
+    <!--***** LEFT SPLIT CONTAINER *****-->
+    <div class="three columns left-split-container">
+
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+        <div class="row collapse search-input">
+
+          <div class="nine mobile-four columns">
+            <input id="initial-search" class="round-left" type="text" value="" />
+          </div>
+
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+              <div class="search-bar-icons-dropdown">
+                <p id="arrowdown" class="icon-">&#xf0dd;</p>
+              </div>
+            </span>
+          </div>
+
+          <div class="two mobile-one columns">
+            <span class="postfix round-left">
+              <div class="search-bar-icons-loupe">
+                <p id="magnifglass" class="icon-">&#xf002;</p>
+              </div>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!--***** SEARCH *****-->
+
+      <div id="advanced_search" class="display-none">
+        <!--This is a Advanced Search panel that is hidden by default-->
+
+        <p><strong>Advanced Search</strong></p>
+
+        <form class="custom search-type">
+          <label id="search-type-label" for="customDropdown">Search Type:</label>
+          <select class="custom-dropdown expand" id="customDropdown">
+            <option selected>Person</option>
+            <option>Group</option>
+            <option>Position</option>
+            <option>Map</option>
+            <option>Skill Group</option>
+            <option>Skill</option>
+            <option>Skill Description</option>
+            <option>Development Activity</option>
+          </select>
+
+        </form>
+        <div class="add-filter-container">
+
+          <!--***** ADD FILTER *****-->
+          <p class=""><b>Filter: </b><a id="add_a_filter" href="#" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+          <!--***** ADD FILTER *****-->
+
+          <div class="add-filter-area">
+
+            <hr class="petrocore-hr">
+            <ul id="filters">
+              <li class="added-filter collapse">
+                <div class="inside-filter-txt">Facility is Houston</div>
+                <div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div>
+              </li>
+              <li class="added-filter collapse">
+                <div class="inside-filter-txt">Position Title is Manager</div>
+                <div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+          <li>
+            <div class="title">
+              <h6>Dashboard</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Goals</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>My Position</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Growth Positions</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6 class="two-lines">My Team's Development</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active no-dropdown">
+            <div class="title">
+              <h6><a href="petrocore-reports.html">Reports</a></h6>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Administration</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Notes</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6>Tools</h6>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+    </div>
+    <!--***** LEFT SPLIT CONTAINER *****-->
+
+    <!--***** RIGHT SPLIT CONTAINER *****-->
+    <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+        <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li class="current"><a href="#">Development Plan</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+        <h4>Development Plan</h4>
+        <div class="save-template-btn">
+          <a name="action-button1"></a>
+          <div href="#action-button1" class="button dropdown petrocore-actions">
+            Actions
+            <ul>
+              <li><a href="petrocore-my-position-add-activity-existing.html">Add Activity</a></li>
+              <li><a href="#">Print Monthly</a></li>
+              <li><a href="#">Print Yearly</a></li>
+              <li><a href="#">View History</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <ul class="inline-list forecast-status-list">
+          <li><strong>Development Status:</strong> 3%</li>
+          <li><strong>Forecasted Status:</strong> 15%</li>
+        </ul>
+        <ul class="button-group slim">
+          <li><a href="#" class="button silver-button wide first active">Year</a></li>
+          <li><a href="#" class="button silver-button wide last">Month</a></li>
+          <li class="divider">&nbsp;</li>
+          <li>
+            <div href="#action-button1" class="button dropdown petrocore-actions legends">
+              Legend
+              <ul class="list-of-legend">
+                <li><a href="#"><img src="images/milestone-scheduling-date.png" /> &nbsp;&nbsp;Scheduling Date</a></li>
+                <li><a href="#"><img src="images/milestone-target-date.png" /> &nbsp;&nbsp;Target Date</a></li>
+                <li><a href="#"><img src="images/milestone-completion-date.png" /> &nbsp;&nbsp;Completion Date</a></li>
+                <li><a href="#"><img src="images/milestone-multiple-dates.png" /> Multiple Date</a></li>
+                <li><a href="#"><img src="images/milestone-low-priority.png" /> &nbsp;&nbsp;Low Priority</a></li>
+                <li><a href="#"><img src="images/milestone-medium-priority.png" /> &nbsp;&nbsp;Medium Priority</a></li>
+                <li><a href="#"><img src="images/milestone-high-priority.png" /> &nbsp;&nbsp;High Priority</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="calendar-toolbar">
+          <div class="row">
+            <div class="eight columns">
+              <ul class="inline-list">
+                <li>
+                  <div href="#year-selection" class="button dropdown petrocore-actions">
+                    2013
+                    <ul>
+                      <li><a href="#">2012</a></li>
+                      <li><a href="#">2011</a></li>
+                      <li><a href="#">2010</a></li>
+                      <li><a href="#">2009</a></li>
+                      <li><a href="#">2008</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div href="#sort-by-year-selection" class="button dropdown petrocore-actions">
+                    Sort By: <span class="sort-by-display">Planned Start Date</span>
+                    <ul>
+                      <li><a href="#">Activity Code</a></li>
+                      <li><a href="#">Activity Name</a></li>
+                      <li><a href="#">Planned Start Date</a></li>
+                      <li><a href="#">Planned End Date</a></li>
+                      <li><a href="#">Completion Date</a></li>
+                      <li><a href="#">Target Date</a></li>
+                      <li><a href="#">Scheduling Date</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="four columns">
+              <ul class="button-group slim float-right">
+                <li><a href="#" class="button silver-button first icon-">&#xf0d9;</a></li>
+                <li><a href="#" class="button silver-button">Current Year</a></li>
+                <li><a href="#" class="button silver-button last icon-">&#xf0da;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /calendar-toolbar -->
+        <div class="calendar-grid year-grid">
+          <div class="row">
+            <div class="one columns">
+              <div class="month-title">Jan</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Feb</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Mar</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Apr</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">May</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Jun</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Jul</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Aug</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Sep</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Oct</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Nov</div>
+              <div class="month-columns"></div>
+            </div>
+            <div class="one columns">
+              <div class="month-title">Dec</div>
+              <div class="month-columns"></div>
+            </div>
+          </div>
+          <div class="row list-dev-activities">
+            <div class="ten columns offset-by-one dev-activity">
+              <div class="priority-bar"></div>
+              <div class="act-title">
+                <strong>IT-CERT-0054:</strong> Obtain vendor certifications
+              </div>
+              <div class="milestone-list">
+                <ul class="milestones no-bullet">
+                  <li><img src="images/milestone-scheduling-date.png" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row list-dev-activities">
+            <div class="nine columns offset-by-two dev-activity">
+              <div class="priority-bar"></div>
+              <div class="act-title">
+                <strong>IT-CERT-0054:</strong> Obtain vendor certifications
+              </div>
+              <div class="milestone-list">
+                <ul class="milestones no-bullet">
+                  <li><img src="images/milestone-scheduling-date.png" /></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- /list-dev-activities -->
+        </div>
+
+        <!--This is a full-width dashboard panel-->
+        <div class="panel-wrapper">
+          <div class="panel-header">
+            <div class="panel-title-container">
+              <h5>Documents</h5>
+            </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
+                  <li><a class="secondary radius button smaller" href="#" data-reveal-id="attach-document">Attach Document</a></li>
+                </ul>
+              </div>
+          </div>
+            <div class="panel-content-container-full">
+              <div id="table_container" class="no-border">
+                <table id="report-templates-table" class="twelve no-border nested-table">
+                  <thead>
+                    <tr>
+                      <th>Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th>Uploaded by<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th>Date Added<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th class="two">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="#">Document Number 1234</a>
+                      </td>
+                      <td>Doe, John (DJOE)</td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <a name="action-button1"></a>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Document Number 1234</a>
+                      </td>
+                      <td>Doe, John (DJOE)</td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <a name="action-button1"></a>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#">Document Number 1234</a>
+                      </td>
+                      <td>Doe, John (DJOE)</td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <a name="action-button1"></a>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!--This is a full-width dashboard panel-->
+        <!--This is a full-width dashboard panel-->
+        <div class="panel-wrapper">
+          <div class="panel-header">
+            <div class="panel-title-container">
+              <h5>Notes</h5>
+            </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
+                  <li>
+                    <div href="#action-button1" class="button dropdown petrocore-actions">
+                      Actions
+                      <ul>
+                        <li><a data-reveal-id="new-note" href="#">New Note</a></li>
+                        <li><a href="#">Print</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+            <div class="panel-content-container-full">
+              <div id="table_container" class="no-border">
+                <table id="report-templates-table" class="twelve no-border nested-table">
+                  <thead>
+                    <tr>
+                      <th class="two">Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th>Note<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th class="two">Updated<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                      <th class="two">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Doe, John (DJOE)</td>
+                      <td>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                      </td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doe, John (DJOE)</td>
+                      <td>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                      </td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doe, John (DJOE)</td>
+                      <td>
+                        <a data-reveal-id="edit-note" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                      </td>
+                      <td>Jul-30-2013</td>
+                      <td>
+                        <div href="#action-button1" class="button dropdown petrocore-actions">
+                          Actions
+                          <ul>
+                            <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                            <li><a href="#">Delete</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <p class="pagination-counter">Showing 1-3 of 9</p>
+                <div class="twelve columns pagination-centered">
+                  <p>Page 1 of 3</p>
+                  <ul class="pagination">
+                    <li class="arrow unavailable"><a href="">«</a></li>
+                    <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+                    <li class="current unavailable"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+                    <li class="arrow unavailable"><a href="">»</a></li>
+                  </ul>
+                </div>
+                <!-- /pagination -->
+              </div>
+            </div>
+          </div>
+          <!--This is a full-width dashboard panel-->
+        
+</div>
+<!--Close Content Container-->
+</div>
+</div>
+<!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+    <div class="three columns">
+      <div class="footer-logo">
+        <img src="../images/logo-footer.png" alt="Petroskills">
+      </div>
+      <div class="footer-logo-iphone">
+        <img src="../images/logo-footer-iphone.png" alt="Petroskills">
+      </div>
+    </div>
+    <div class="six columns">
+      <div class="trademark">
+        <p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p>
+      </div>
+    </div>
+    <div class="three columns">
+      <div class="feedback"><a href="#">Send us your feedback</a></div>
+    </div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+
+
+<!-- END NAVIGATION -->
+
+
+<!-- CONTENT AREA -->
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+<div id="people-filter" class="reveal-modal expand">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add a Filter</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+        <!-- <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="four columns">
+          <select class="custom dropdown display-none" id="Select1">
+            <option selected>Account Status</option>
+            <option>Account Status</option>
+            <option>Account Status</option>
+          </select>
+          <div class="custom dropdown modal-input-fields">
+            <a href="#" class="current">Account Status
+            </a>
+            <a href="#" class="selector"></a>
+            <ul class="modal-dropdown-list">
+              <li>Account Status</li>
+              <li>Account Status</li>
+              <li>Account Status</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="four columns">
+          <select class="custom dropdown display-none" id="Select2">
+            <option selected>is</option>
+            <option>is</option>
+            <option>is</option>
+          </select>
+          <div class="custom dropdown modal-input-fields">
+            <a href="#" class="current">is
+            </a>
+            <a href="#" class="selector"></a>
+            <ul class="modal-dropdown-list">
+              <li>is</li>
+              <li>is</li>
+              <li>is</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="four columns">
+          <select class="custom dropdown display-none" id="Select3">
+            <option selected>Active</option>
+            <option>Active</option>
+            <option>Active</option>
+          </select>
+          <div class="custom dropdown modal-input-fields">
+            <a href="#" class="current">Active
+            </a>
+            <a href="#" class="selector"></a>
+            <ul class="modal-dropdown-list">
+              <li>Active</li>
+              <li>Active</li>
+              <li>Active</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+
+<!--************** MODAL WINDOW POSITION ****************-->
+
+<div id="position-filter" class="reveal-modal expand">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add a Filter</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+        <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+        <!-- <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="four columns">
+          <select class="custom dropdown display-none" id="Select4">
+            <option selected>Name </option>
+            <option>Regional ID</option>
+            <option>Sub Classifier</option>
+          </select>
+          <div class="custom dropdown modal-input-fields">
+            <a href="#" class="current">Name
+            </a>
+            <a href="#" class="selector"></a>
+            <ul class="modal-dropdown-list">
+              <li>Name</li>
+              <li>Regional ID</li>
+              <li>Sub Classifier</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="four columns">
+          <select class="custom dropdown display-none" id="Select5">
+            <option selected>is</option>
+            <option>is not</option>
+            <option>contains</option>
+            <option>does not contain</option>
+            <option>exists</option>
+            <option>does not exist</option>
+          </select>
+          <div class="custom dropdown modal-input-fields">
+            <a href="#" class="current">is
+            </a>
+            <a href="#" class="selector"></a>
+            <ul class="modal-dropdown-list">
+              <li>is not</li>
+              <li>contains</li>
+              <li>does not contain</li>
+              <li>exists</li>
+              <li>does not exist</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="four columns">
+          <input type="text"/>
+        </div>
+      </div>
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW POSITION ****************-->
+
+<!--************** MODAL WINDOW ATTACH DOCUMENT ****************-->
+
+<div id="attach-document" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Attach Document</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group six mobile-four columns">
+          <label>Name</label>
+          <input type="text" placeholder="" />
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="form-group four mobile-four columns">
+          <label>Upload file</label>
+          <div class="file-upload-btn">
+            <label id="fileupload_btn_label1" class="round text-center" for="file">Choose a file</label>
+            <input type="file" id="file">
+          </div>
+          <div class="with-above form-text-display-field">path/to/selected/file/notshown/if.blank</div>
+          <div class="add-medium-space-right">
+            <a class="primary radius button" href="#">Upload File</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="form-group six mobile-four columns">
+          <label>Link to attachment</label>
+          <input type="text" placeholder="" />
+        </div>
+
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW NEW NOTE ****************-->
+
+<div id="new-note" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>New Note</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group twelve mobile-four columns">
+          <label>Notes</label>
+          <textarea placeholder="" class="min-height"> A multi-line text area</textarea>
+        </div>
+
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW EDIT NOTE ****************-->
+
+<div id="edit-note" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Edit Note</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group twelve mobile-four columns">
+          <label>Notes</label>
+          <textarea placeholder="" class="min-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+        </div>
+
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="button radius primary forms" href="">Save</a> 
+    <a class="button radius alert forms" href="">Delete</a> 
+    <a class="" href="">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+  <div class="arrow"></div>
+  <div class="arrow-border"></div>
+
+  <div class="notifications-title">
+    <h5>Notifications</h5>
+  </div>
+
+  <div class="notifications-area">
+
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 1 has been generated</p>
+      <a href="#">View Report</a>
+      <hr class="hr-notification">
+    </div>
+
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 2 has been generated</p>
+      <a href="#">View Report</a>
+      <hr class="hr-notification">
+    </div>
+
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 3 has been generated</p>
+      <a href="#">View Report</a>
+    </div>
+
+  </div>
+</div>
+<script src="../javascripts/foundation.min.js"></script>
+<!-- inilaise foundaiton  -->
+<script src="../javascripts/app.js"></script>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+</body>
+</html>

@@ -588,7 +588,7 @@
                    <div class="row">
                     <div class="form-group six mobile-four columns">
                       <label>Bio</label>
-                      <div class="form-text-display-field">Throughout my years, I've had the pleasure of assembling and training what I believe to be the best group of people in the world. People with the presence of mind to deal with any flare-up, including my own. People who share the belief that nothing is impossible.</div>
+                      <textarea placeholder="" class="min-height">Throughout my years, I've had the pleasure of assembling and training what I believe to be the best group of people in the world. People with the presence of mind to deal with any flare-up, including my own. People who share the belief that nothing is impossible.</textarea>
                     </div>
                   </div>
 
@@ -609,7 +609,15 @@
                   <div class="row">
                     <div class="form-group six mobile-four columns">
                       <label>CV/Resume</label>
-                      <div class="form-text-display-field"><a href="#">view</a></div>
+                      <div class="form-text-display-field"><a href="#">View CV/ Resume</a></div>
+                      <div class="two mobile-four file-upload-btn">
+                        <label id="fileupload_btn_label1" class="round text-center" for="file">Choose a file</label>
+                        <input type="file" id="file">
+                      </div>
+                      <div class="with-above form-text-display-field">path/to/selected/file/notshown/if.blank</div>
+                      <div class="add-medium-space-right">
+                        <a class="primary radius button" href="#">Upload File</a>
+                      </div>
                     </div>
                   </div>
 
@@ -716,32 +724,6 @@
           <li id="person-detail-2Tab">
 
             <form class="custom">
-              <div class="row">
-                <div class="form-group six mobile-four columns">
-                  <label for="customDropdown">Preferred Language</label>
-                  <select class="custom dropdown display-none" id="customDropdown">
-                    <option selected="selected" value="1">English</option>
-                    <option value="2">Deutsch</option>
-                    <option value="3">Español</option>
-                    <option value="4">Français</option>
-                    <option value="5">Italiano</option>
-                    <option value="6">Polski</option>
-                  </select>
-                  <div class="custom dropdown expand">
-                    <a href="#" class="current">English</a>
-                    <a href="#" class="selector"></a>
-                    <ul>
-                      <li>English</li>
-                      <li>Deutsch</li>
-                      <li>Español</li>
-                      <li>Français</li>
-                      <li>Italiano</li>
-                      <li>Polski</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
               <div class="row">
                 <div class="form-group six mobile-four columns">
                   <label for="customDropdown">Time Zone</label>
@@ -880,6 +862,14 @@
           <!-- ***** THIS IS CONTENT FOR TAB 4 ***** -->
           <li id="person-detail-4Tab">
             <form class="custom">
+
+              <div class="row">
+                <div class="form-group six mobile-four columns">
+                  <div class="same-line add-medium-space-right">
+                    <a class="secondary radius button" href="#" data-reveal-id="add_person_profile">Add Profile Category to Person</a>
+                  </div>
+                </div>
+              </div>
 
               <div class="row">
                 <div class="form-group six mobile-four columns">
