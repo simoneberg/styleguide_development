@@ -1042,15 +1042,6 @@ ul.accordion>li>div.title:after {
   padding: 0;
   line-height: normal;  
 }
-/* todo - can this be better targetted */
-.tabs-content li .form-text-display-field a {
-  margin-left: 0;
-}
-
-.tabs-content li .form-group a {
-  display: inline-block;
-  margin-left: 0;
-}
 
 /* END NAVIGATION */
 /* **************************************** */
