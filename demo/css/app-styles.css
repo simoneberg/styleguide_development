@@ -1744,6 +1744,11 @@ div.scroll-both {
 
 /* compass controls */
 
+label.inline {
+  display: inline;
+}
+
+
 
 /* END FORMS */
 /* **************************************** */
@@ -3216,9 +3221,19 @@ span.dropdown-arrow {
   box-shadow: inset 0 0 1px 1px #d1d1d1;
 }
 
-#initial-search.round-left {
+.search-input.round-left, 
+input.round-left {
   border: 1px solid #5b5b5b;
   border-radius: 20px 0 0 20px;
+  -moz-box-shadow: 0 0 1px #c5c5c5;
+  -webkit-box-shadow: 0 0 1px #c5c5c5;
+  box-shadow: 0 0 1px #c5c5c5;
+  padding-left: 15px;
+}
+.search-input.round-right, 
+input.round-right {
+  border: 1px solid #5b5b5b;
+  border-radius: 0 20px 20px 0;
   -moz-box-shadow: 0 0 1px #c5c5c5;
   -webkit-box-shadow: 0 0 1px #c5c5c5;
   box-shadow: 0 0 1px #c5c5c5;
@@ -4641,6 +4656,77 @@ a.milestone-date:hover {
 .tabs-slides-container .content img {
   width: 100%;
 }
+
+.search-box {
+  background-color: #b3b3b3;
+  padding: 5px;
+  border: 1px solid #8a8a8a;
+}
+.search-box > .header {
+  margin-bottom: 5px;
+}
+
+.search-box .button.dropdown label {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-box > .header .button.dropdown {
+  width: 100%;
+}
+.search-box > .header .button.dropdown:after {
+  border-color: #333 transparent transparent transparent;
+}
+.search-box > .content {
+   margin: 0 -5px -5px;
+   background: #fff;
+}
+
+.search-box-results .header {
+   background-color: #e8e8e8;
+   border-bottom: 1px solid #8a8a8a;
+   border-top: 1px solid #8a8a8a;
+   font-weight: bold;
+}
+.search-box-results .header:after,
+.search-box-results .header:before {
+  content: '  ';
+  display: table;
+}
+.search-box-results .header:after {
+  clear:both;
+}
+.search-box-results  .columns,
+.search-box-results > .content .columns {
+  padding: 10px 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-box-results > .header .columns:first-child {
+   border-right: 1px solid #8a8a8a;
+}
+
+.search-box-results > .content ul {
+  list-style: none;
+}
+.search-box-results > .content li:hover {
+  background: #d6e8f6;
+}
+.search-box-results > .content ul a {
+  display:block;
+  color: #333;
+}
+.search-box-results > .content ul a:after,
+.search-box-results > .content ul a:before {
+  content: '  ';
+  display: table;
+}
+.search-box-results > .content ul a:after {
+  clear:both;
+}
+
 
 
 

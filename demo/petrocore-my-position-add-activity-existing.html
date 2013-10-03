@@ -270,20 +270,96 @@
                           <input name="radio1" type="radio" data-customforms="disabled" id="radio2">Create New Activity</label>
                       </div>
                   </div>
-                  <div class="row">
-                      <div class="form-group six mobile-twelve columns">
-                          <label for="radio3">
-                              <input name="radio1" type="radio" data-customforms="disabled" id="radio3">Historical Activity</label>
-                      </div>
-                  </div>
               </div>
 
 
               <!--************** SEARCH ACTIVITIES****************-->
 
               <fieldset>
-                  <legend>Search Activities</legend>
-                  <img src="images/search-activity-existing.jpg">
+                <legend>Search Activities</legend>
+                <div class="row">
+                <div class="column six">
+                  
+                  <div class="ps-widget search-box">
+                    <div class="header">
+                      <div class="row collapse">
+                        <div class="one mobile-one columns">
+                          <span class="prefix "><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+                        </div>
+                        <div class="seven mobile-two columns">
+                          <input class="" type="text" placeholder="Search activities"  />
+                        </div>
+                        <div class="four mobile-one columns">
+                          <span class="postfix button dropdown js-update-text">
+                            <label>All</label>
+                            <ul>
+                              <li><a href="#">All</a></li>
+                              <li><a href="#">Assigned reading</a></li>
+                              <li><a href="#">EL-HR</a></li>
+                            </ul>
+                          </span>
+                        </div>
+                        <div class='row'>
+                          <div class='eleven columns offset-by-one mobile-three'>
+                            <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Only show activities in assigned position</label>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="ps-widget search-box-results search-box-list">
+                        <div class="header collapse">
+                          <div class="three columns mobile-one">
+                            Code
+                          </div>
+                          <div class="nine columns mobile-three">
+                            Name
+                          </div>
+                        </div>
+                        <div class="content">
+                          <ul class="row collapse">
+                            <li>
+                              <a href="#search-result">
+                                <div class="three columns mobile-one">
+                                  00011234X
+                                </div>
+                                <div class="nine columns mobile-three">
+                                  Burt Reynolds
+                                </div>
+                                  
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#search-result">
+                                <div class="three columns mobile-one">
+                                  00011234X
+                                </div>
+                                <div class="nine columns mobile-three">
+                                  Burt Reynolds
+                                </div>
+                                  
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#search-result">
+                                <div class="three columns mobile-one">
+                                  00011234X
+                                </div>
+                                <div class="nine columns mobile-three">
+                                  Burt Reynolds
+                                </div>
+                                  
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  </div>
+                </div>
               </fieldset>
 
 
@@ -323,26 +399,33 @@
                 </div>
               </div>
 
-               <!--****** PRIORITY DROPDOWN ******-->
-              <label for="customDropdown"> Priority</label>
-              <div class="form-group six mobile-four columns">
-                <select class="custom dropdown display-none" id="Select1">
-                  <option >Low</option>
-                  <option SELECTED>Medium</option>
-                  <option>High</option>
-                </select>
-                <div class="custom dropdown expand">
-                  <a href="#" class="current">
-                    Medium
-                  </a>
-                  <a href="#" class="selector"></a>
-                  <ul>
-                    <li>Low </li>
-                    <li>Medium</li>
-                    <li>High</li>
-                  </ul>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="customDropdown"> Priority</label>
+                    <!-- the select tag which is hte default HTML is not visible when
+                    in a custom form and the class custom-dropdown is used. -->
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option >Low</option>
+                      <option SELECTED>Medium</option>
+                      <option>High</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                        Medium
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>Low </li>
+                        <li>Medium</li>
+                        <li>High</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
             </fieldset>
             <!--****** START/END CHUNK ******-->
