@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+<!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+      <div class="top-nav">
+        <ul>
+           <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-self.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<!--***** PETROCORE HEADER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+        <div class="row collapse search-input">
+
+          <div class="nine mobile-four columns">
+            <input id="initial-search" class="round-left" type="text" value="" />
+          </div>
+
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+          </div>
+
+          <div class="two mobile-one columns">
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+          </div>
+
+        </div>
+      </div>
+      <!--***** SEARCH *****-->
+
+    <div id="advanced_search" class="display-none">
+    <!--This is a Advanced Search panel that is hidden by default-->
+
+    <p><strong>Advanced Search</strong></p>
+
+      <form class="custom search-type">
+        <label id="search-type-label" for="customDropdown">Search Type:</label>
+        <select class="custom-dropdown expand" id="customDropdown">
+          <option SELECTED>Person</option>
+          <option>Group</option>
+          <option>Position</option>
+          <option>Map</option>
+          <option>Skill Group</option>
+          <option>Skill</option>
+          <option>Skill Description</option>
+          <option>Development Activity</option>
+        </select>
+
+      </form>
+            <div class="add-filter-container">
+
+        <!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+        <!--***** ADD FILTER *****-->
+
+        <div class="add-filter-area">
+
+          <hr class="petrocore-hr">
+                      <ul id="filters">
+
+     <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+     <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+                    </ul>
+                </div>
+      </div>
+    </div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+          <li>
+            <div class="title">
+              <h6>Dashboard</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Goals</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="active">
+            <div class="title">
+              <h6>My Position</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Growth Positions</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6 class="two-lines">My Team's Development</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6><a href="petrocore-reports.html">Reports</a></h6>
+            </div>
+<!--             <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+ -->          </li>
+          <li>
+            <div class="title">
+              <h6>Administration</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h6>Notes</h6>
+            </div>
+            <div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="no-dropdown">
+            <div class="title">
+              <h6>Tools</h6>
+            </div>
+        <!--<div class="content">
+              <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 1</a></li>
+              </ul>
+            </div>-->
+          </li>
+        </ul>
+      </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="#">Development Plan</a></li>
+            <li class="current"><a href="#">Edit Activity</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+          <!--This will hold the content-->
+
+          <!-- <div class="form-container">-->
+
+          <form class="custom">
+            <h4>Edit Activity</h4>
+            <hr>
+
+            <dl class="tabs">
+              <dd class="active"><a href="#simple1">Details</a></dd>
+              <dd><a href="#simple2">Notes</a></dd>
+            </dl>
+            <ul class="tabs-content">
+              <li class="active" id="simple1Tab">
+                <p>
+                  <strong>IT-EXP-0050:</strong> Study pertinent Oracle Knowledge Base Topics
+                  <br>
+                  <a href="#">View Activity Description</a>
+                </p>
+                <fieldset>
+                  <legend>Activity Information</legend>
+                  <div class="row">
+                    <div class="form-group three mobile-four columns">
+                      <label>Planned Start</label>
+                      <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group three mobile-four columns">
+                      <label>Planned End</label>
+                      <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group three mobile-four columns">
+                      <label>Priority</label>
+                      <select class="custom dropdown display-none" id="customDropdown">
+                        <option SELECTED>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                      </select>
+                      <div class="custom dropdown expand">
+                        <a href="#" class="current">
+                          Low
+                        </a>
+                        <a href="#" class="selector"></a>
+                        <ul>
+                          <li>Medium</li>
+                          <li>High</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Milestone Dates</legend>
+                  <p>
+                    <a class="button radius secondary forms" href="#" data-reveal-id="add-milestone">Add Milestone Date</a>
+                  </p>
+                  <div class="row">
+                    <div class="form-group three columns">
+                      <label>Scheduling Date</label>
+                      <ul class="filters">
+                        <li class="added-filter collapse">
+                          <a href="#" data-reveal-id="edit-milestone" class="milestone-date">
+                            <div class="inside-filter-txt">Jul-05-2013</div><div class="inside-filter-icon"><span class="icon-">&#xf040;</span></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group three columns">
+                      <label>Target Date</label>
+                      <ul class="filters no-bullet">
+                        <li class="added-filter collapse">
+                          <a href="#" data-reveal-id="edit-milestone" class="milestone-date">
+                            <div class="inside-filter-txt">Sep-14-2013</div><div class="inside-filter-icon"><span class="icon-">&#xf040;</span></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Optional</legend>
+                  <div class="row">
+                    <div class="form-group six mobile-four columns">
+                      <label>Custom Property</label>
+                      <input type="text" />
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="single-step-forms-btn">
+                  <a class="button radius primary forms" href="">Save</a> 
+                  <a class="button radius alert forms" href="">Delete Activity</a> 
+                  <a class="" href="">Cancel</a>
+                </div>
+
+              </li>
+              <li id="simple2Tab">
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container">
+                      <h5>Notes</h5>
+                    </div>
+                      <div class="panel-header-icons-container">
+                        <ul class="panel-header-icons-list">
+                          <li>
+                            <div href="#action-button1" class="button dropdown petrocore-actions">
+                              Actions
+                              <ul>
+                                <li><a data-reveal-id="new-note" href="#">New Note</a></li>
+                                <li><a href="#">Print</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                    <div class="panel-content-container-full">
+                      <div id="table_container" class="no-border">
+                        <table id="report-templates-table" class="twelve no-border nested-table">
+                          <thead>
+                            <tr>
+                              <th class="two">Name<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                              <th>Note<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                              <th class="two">Updated<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                              <th>Actions<a class="add-sorting-icon icon-">&#xf0dd;</a></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Doe, John (DJOE)</td>
+                              <td>
+                                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                              </td>
+                              <td>Jul-30-2013</td>
+                              <td>
+                                <div href="#action-button1" class="button dropdown petrocore-actions">
+                                  Actions
+                                  <ul>
+                                    <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Doe, John (DJOE)</td>
+                              <td>
+                                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                              </td>
+                              <td>Jul-30-2013</td>
+                              <td>
+                                <div href="#action-button1" class="button dropdown petrocore-actions">
+                                  Actions
+                                  <ul>
+                                    <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Doe, John (DJOE)</td>
+                              <td>
+                                <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+                              </td>
+                              <td>Jul-30-2013</td>
+                              <td>
+                                <div href="#action-button1" class="button dropdown petrocore-actions">
+                                  Actions
+                                  <ul>
+                                    <li><a data-reveal-id="edit-note" href="#">Edit Note</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                        <p class="pagination-counter">Showing 1-3 of 9</p>
+                        <div class="twelve columns pagination-centered">
+                          <p>Page 1 of 3</p>
+                          <ul class="pagination">
+                            <li class="arrow unavailable"><a href="">«</a></li>
+                            <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+                            <li class="current unavailable"><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+                            <li class="arrow unavailable"><a href="">»</a></li>
+                          </ul>
+                        </div>
+                        <!-- /pagination -->
+                      </div>
+                    </div>
+                </div>
+              </li>
+            </ul>
+
+          </form>
+
+      </div>
+
+  </div>
+  <!--Close Content Container-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+      <div class="three columns"><div class="footer-logo"><img src="../images/logo-footer.png" alt="Petroskills"></div><div class="footer-logo-iphone"><img src="../images/logo-footer-iphone.png" alt="Petroskills"></div></div>
+      <div class="six columns"><div class="trademark"><p>©2013 PetroSkills, LLC. All rights reserved. PetroCore® registered trademark of PetroSkills, LLC.</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+<!--************** MODAL WINDOW NEW NOTE ****************-->
+
+<div id="new-note" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>New Note</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group six mobile-four columns">
+          <label>Notes</label>
+          <textarea placeholder="Add notes here" class="min-height"></textarea>
+        </div>
+
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW EDIT NOTE ****************-->
+
+<div id="edit-note" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Edit Note</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group six mobile-four columns">
+          <label>Notes</label>
+          <textarea placeholder="" class="min-height">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+        </div>
+
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="button radius primary forms" href="">Save</a> 
+    <a class="button radius alert forms" href="">Delete</a> 
+    <a class="" href="">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+<!--************** MODAL WINDOW Add Milestone ****************-->
+
+<div id="add-milestone" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add Milestone</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group seven mobile-four columns">
+          <label>Milestone Type</label>
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option SELECTED>Scheduling Date</option>
+            <option>Target Date</option>
+            <option>Completion Date</option>
+          </select>
+          <div class="custom dropdown expand">
+            <a href="#" class="current">
+              Scheduling Date
+            </a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Target Date</li>
+              <li>Completion Date</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="form-group seven mobile-four columns">
+          <label>Date</label>
+          <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value=""/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+        </div>
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="button radius primary forms" href="">Save</a> 
+    <a class="" href="">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+<!--************** MODAL WINDOW EDIT MILESTONE ****************-->
+
+<div id="edit-milestone" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Edit Milestone</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+
+        <div class="form-group six mobile-four columns">
+          <label>Milestone Type</label>
+          <div class="form-text-display-field">Scheduling Date</div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Date</label>
+          <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value="Jul-22-2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+        </div>
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="button radius primary forms" href="">Save</a> 
+    <a class="button radius alert forms" href="">Delete</a> 
+    <a class="" href="">Cancel</a>
+  </div>
+</div>
+
+<!--************** MODAL WINDOW PEOPLE ****************-->
+
+
+
+<div id="overlay"></div>
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+    <!--</div>-->
+  <!--</div>-->
+  <!-- CONTENT AREA -->
+
+
+<script src="../javascripts/foundation.min.js"></script>
+<!-- inilaise foundaiton  -->
+<script src="../javascripts/app.js"></script>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+
+
+
+</body>
+</html>

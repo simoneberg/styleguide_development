@@ -79,7 +79,7 @@ $(document).ready(function(){
     panel_header  = $(this).parents('.panel-wrapper').find('.panel-header');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
     panel_actions = $(this).parents('.panel-wrapper').find('.panel-action-icons-container');
-    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content, .panel-footer');
+    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content, .panel-footer, .panel-content-container-full');
 
     if ($(panel_content).is(':hidden')) {
       $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
