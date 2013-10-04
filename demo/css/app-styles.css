@@ -160,7 +160,7 @@ ul.pagination li.current a {
 
 .columns.left-split-container {
   padding: 0;
-  height: 0;
+  border-right: 1px solid #717171;
 }
 
 .content-container {
@@ -168,7 +168,7 @@ ul.pagination li.current a {
   background-color: white;
   padding: 2px 20px 20px 20px;;
   border-left: 1px solid #717171;
-  min-height: 500px;
+  min-height: 100%;
 }
 
 .display-none {
@@ -207,7 +207,7 @@ ul.pagination li.current a {
 }
 
 .master-wrapper {
-  background-color: #c2c2c2;
+  background-color: #fff;  
   overflow: hidden;
   min-height: 100%;
 }
@@ -1088,13 +1088,13 @@ ul.accordion>li>div.title:after {
 .button.dropdown.petrocore-actions:after {
   border-color: #666 transparent transparent transparent;
   margin-top: -4px;
-  right: 10px;
+  right: 10px;  
 }
 
 .actions-dropdown-btn {
   float: right;
   margin-top: -34px;
-  margin-bottom: 8px;
+  margin-bottom: 8px;  
 }
 
 .button.dropdown.petrocore-actions, 
@@ -1103,7 +1103,7 @@ ul.accordion>li>div.title:after {
   margin: 0;
   position: relative;
   width: auto;
-  height: auto;  
+  height: auto;    
 }
 
 .tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
@@ -1186,7 +1186,7 @@ ul.accordion>li>div.title:after {
   top: 50%;
   left: 50%;
   margin-left: -6px;
-  margin-top: -2px;
+  margin-top: -2px;  
 }
 
 .button.dropdown.petrocore-actions > ul {
@@ -1204,7 +1204,6 @@ ul.accordion>li>div.title:after {
   padding: 0;
   border: 1px solid #8b8b8b !important;
   min-width: 118px;
-  z-index: 40;
 }
 
 .button.dropdown.split.petrocore-actions>ul li:hover {
