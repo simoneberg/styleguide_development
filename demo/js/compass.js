@@ -55,6 +55,11 @@ $(document).ready(function(){
     }
   });
 
+  //Expands the footer when Actions button within the Table is clicked
+  $("#report-templates-table .expandable").click(function () {
+    $('.panel-wrapper').css('margin-bottom','115px');
+  });
+
   //search results advanced
   var userviewright = $(".right-split-container").width();
 
