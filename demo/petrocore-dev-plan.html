@@ -357,52 +357,52 @@
         </div>
         <!-- /calendar-toolbar -->
         <div class="calendar-grid year-grid">
-          <div class="row">
-            <div class="one columns">
+          <div class="background">
+            <div class="month-column">
               <div class="month-title">Jan</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Feb</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Mar</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Apr</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">May</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Jun</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Jul</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Aug</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Sep</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Oct</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Nov</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Dec</div>
               <div class="month-columns"></div>
             </div>
@@ -434,6 +434,9 @@
             </div>
           </div>
           <!-- /list-dev-activities -->
+        </div>
+
+        <div id="dev-plan">
         </div>
 
         <!--This is a full-width dashboard panel-->
@@ -1026,5 +1029,8 @@
 
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
+<script>
+    $("#dev-plan").devPlan();
+</script>
 </body>
 </html>

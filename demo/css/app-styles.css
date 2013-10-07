@@ -3450,6 +3450,23 @@ ul.inline-list.forecast-status-list > li > *{
   width: 175px;
 }
 
+.background .month-column,
+.background .month-column:last-child,
+.week {
+ float: left;
+ width: 8.33333%;
+ padding: 0 15px;
+}
+
+.week {
+  width: 20%;
+}
+
+.month-column:first-child,
+.week:first-child {
+ border-left: 1px solid #8a8a8a;
+}
+
 .month-title {
   background-color: #efefef;
   border: 1px solid #8a8a8a;
@@ -3553,13 +3570,6 @@ ul.milestones {
   margin-bottom: 0;
 }
 
-.week {
-  width: 20%;
-}
-
-.week:first-child {
-  border-left: 1px solid #8a8a8a;
-}
 
 .milestones li:first-child {
   margin-left: 16px;
