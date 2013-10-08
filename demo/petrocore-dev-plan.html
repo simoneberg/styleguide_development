@@ -314,6 +314,7 @@
             </div>
           </li>
         </ul>
+        <div class="development-plan-widget">
         <div class="calendar-toolbar">
           <div class="row">
             <div class="eight columns">
@@ -356,7 +357,8 @@
           </div>
         </div>
         <!-- /calendar-toolbar -->
-        <div class="calendar-grid year-grid">
+        <!-- required to manually set the background height for the overlay -->
+        <div class="calendar-grid year-grid" style="height:225px">
           <div class="background">
             <div class="month-column">
               <div class="month-title">Jan</div>
@@ -407,8 +409,8 @@
               <div class="month-columns"></div>
             </div>
           </div>
-          <div class="row list-dev-activities">
-            <div class="ten columns offset-by-one dev-activity">
+          <div class="list-dev-activities">
+            <div class="month-column month-column-9 offset-month-2 dev-activity">
               <div class="priority-bar"></div>
               <div class="act-title">
                 <strong>IT-CERT-0054:</strong> Obtain vendor certifications
@@ -421,7 +423,7 @@
             </div>
           </div>
           <div class="row list-dev-activities">
-            <div class="nine columns offset-by-two dev-activity">
+            <div class="month-column month-column-6 offset-month-3 dev-activity">
               <div class="priority-bar"></div>
               <div class="act-title">
                 <strong>IT-CERT-0054:</strong> Obtain vendor certifications
@@ -434,6 +436,7 @@
             </div>
           </div>
           <!-- /list-dev-activities -->
+        </div>
         </div>
 
         <div id="dev-plan">
