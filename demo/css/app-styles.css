@@ -160,6 +160,7 @@ ul.pagination li.current a {
 
 .columns.left-split-container {
   padding: 0;
+  height: 0;
 }
 
 .content-container {
