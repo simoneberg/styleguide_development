@@ -248,3 +248,28 @@ $.widget("ps.gettingStarted", {
 
 $('.tabs-slides-container').gettingStarted();
 
+
+(function($, undefined){
+
+  // trying to reuse the localization from jquery ui 
+  var localization = $.datepicker._defaults;
+
+  $.widget("ps.devPlan", {
+    options: {
+      monthNames: localization.monthNames,
+      monthNamesShort: localization.monthNamesShort,
+      weekHeader: localization.weekHeader,
+      //weekHeader: "Week", /* localization doesn't quite match up */
+      nextText: localization.nextText,
+      prevText: localization.prevText
+    },
+    _create : function() {
+      this._drawHeader();
+    },
+    _destroy: function() {
+      return this._super();
+    }
+  })
+
+})(jQuery);
+

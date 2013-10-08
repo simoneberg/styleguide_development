@@ -314,6 +314,7 @@
             </div>
           </li>
         </ul>
+        <div class="development-plan-widget">
         <div class="calendar-toolbar">
           <div class="row">
             <div class="eight columns">
@@ -356,59 +357,60 @@
           </div>
         </div>
         <!-- /calendar-toolbar -->
-        <div class="calendar-grid year-grid">
-          <div class="row">
-            <div class="one columns">
+        <!-- required to manually set the background height for the overlay -->
+        <div class="calendar-grid year-grid" style="height:225px">
+          <div class="background">
+            <div class="month-column">
               <div class="month-title">Jan</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Feb</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Mar</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Apr</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">May</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Jun</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Jul</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Aug</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Sep</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Oct</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Nov</div>
               <div class="month-columns"></div>
             </div>
-            <div class="one columns">
+            <div class="month-column">
               <div class="month-title">Dec</div>
               <div class="month-columns"></div>
             </div>
           </div>
-          <div class="row list-dev-activities">
-            <div class="ten columns offset-by-one dev-activity">
+          <div class="list-dev-activities">
+            <div class="month-column month-column-9 offset-month-2 dev-activity">
               <div class="priority-bar"></div>
               <div class="act-title">
                 <strong>IT-CERT-0054:</strong> Obtain vendor certifications
@@ -421,7 +423,7 @@
             </div>
           </div>
           <div class="row list-dev-activities">
-            <div class="nine columns offset-by-two dev-activity">
+            <div class="month-column month-column-6 offset-month-3 dev-activity">
               <div class="priority-bar"></div>
               <div class="act-title">
                 <strong>IT-CERT-0054:</strong> Obtain vendor certifications
@@ -434,6 +436,10 @@
             </div>
           </div>
           <!-- /list-dev-activities -->
+        </div>
+        </div>
+
+        <div id="dev-plan">
         </div>
 
         <!--This is a full-width dashboard panel-->
@@ -874,18 +880,17 @@
             <input type="file" id="file">
           </div>
           <div class="with-above form-text-display-field">path/to/selected/file/notshown/if.blank</div>
-          <div class="add-medium-space-right">
-            <a class="primary radius button" href="#">Upload File</a>
+          <div class="radio-group">
+            <label>
+              <input data-customforms='disabled' checked name="radio-group-1" type="radio"> 
+              Upload file
+            </label>
+            <label>
+              <input data-customforms='disabled' name="radio-group-1" type="radio"> 
+              Link to file
+            </label>
           </div>
         </div>
-      </div>
-      <div class="row">
-
-        <div class="form-group six mobile-four columns">
-          <label>Link to attachment</label>
-          <input type="text" placeholder="" />
-        </div>
-
       </div>
 
     </form>
@@ -1027,5 +1032,8 @@
 
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
+<script>
+    $("#dev-plan").devPlan();
+</script>
 </body>
 </html>
