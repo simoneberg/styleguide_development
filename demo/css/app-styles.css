@@ -2165,7 +2165,7 @@ table tbody tr td {
 
 .panel-header .panel-header-icons-collapse-up {
   /* compensate for font-awesomes vertical-align */
-  margin-top: 6px;
+  margin-top: 5px;
   padding-bottom: 8px;
 }
 
@@ -2384,6 +2384,8 @@ border: 1px solid #8a8a8a;
   font-size: 16px;
   font-weight: normal;
   right: 0px;
+  line-height: 10px;
+  margin-top: -3px;
   text-shadow: 0 1px #e5e5e5;
 }
 
