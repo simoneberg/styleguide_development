@@ -273,3 +273,8 @@ $('.tabs-slides-container').gettingStarted();
 
 })(jQuery);
 
+$(".toggle-nav-mobile").on("click", function(ev){
+  ev.preventDefault();
+  $("body").toggleClass("open");
+
+})

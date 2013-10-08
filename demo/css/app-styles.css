@@ -4461,7 +4461,35 @@ a.milestone-date:hover {
   }
 
   .left-split-container {
-    display: block;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: -271px;
+
+    width: 251px;
+    
+    z-index:1000;
+  }
+
+  body.open .left-split-container {
+    display:block;
+  }
+
+  .master-wrapper {
+    position: relative;
+    left: 0px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  body.open .master-wrapper {
+    left: 271px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  body.open {
+    overflow: hidden;
   }
 
   .modal-footer {
