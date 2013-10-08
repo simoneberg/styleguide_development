@@ -3792,9 +3792,6 @@ a.milestone-date:hover {
     display: none;
   }
 
-  .row .left-split-container{
-    margin-left: 0% !important;
-  }
 
   .row .right-split-container{
     width: 75% !important;
@@ -4116,9 +4113,6 @@ a.milestone-date:hover {
     float: left;
   }
 
-  .left-split-container{
-    margin-left: -100%;
-  }
 
   .logo {
     height: 42px;
@@ -4468,9 +4462,6 @@ a.milestone-date:hover {
 
   .left-split-container {
     display: block;
-    float: left;
-    margin-left: -100%;
-    background-color: green;
   }
 
   .modal-footer {
