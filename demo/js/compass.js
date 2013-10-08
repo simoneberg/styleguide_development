@@ -55,6 +55,12 @@ $(document).ready(function(){
     }
   });
 
+  //Expands the footer when Actions button within the Table is clicked
+  $('#report-templates-table .expandable').click(function () {
+    $('.panel-wrapper').css('margin-bottom','115px');
+    $(document).scrollTop( $("#report-templates-table").offset().top );	
+  });
+
   //search results advanced
   var userviewright = $(".right-split-container").width();
 
@@ -241,4 +247,29 @@ $.widget("ps.gettingStarted", {
 })
 
 $('.tabs-slides-container').gettingStarted();
+
+
+(function($, undefined){
+
+  // trying to reuse the localization from jquery ui 
+  var localization = $.datepicker._defaults;
+
+  $.widget("ps.devPlan", {
+    options: {
+      monthNames: localization.monthNames,
+      monthNamesShort: localization.monthNamesShort,
+      weekHeader: localization.weekHeader,
+      //weekHeader: "Week", /* localization doesn't quite match up */
+      nextText: localization.nextText,
+      prevText: localization.prevText
+    },
+    _create : function() {
+      this._drawHeader();
+    },
+    _destroy: function() {
+      return this._super();
+    }
+  })
+
+})(jQuery);
 
