@@ -840,6 +840,41 @@ ul.accordion>li>div.title:after {
 .collapse-menu{
   padding:20px; 
   text-shadow: 0 1px #e9e9e9;
+  cursor: pointer;
+}
+
+.master-wrapper.collapsed {
+  position: relative;
+}
+
+.master-wrapper.collapsed ul.accordion>li .title h6,
+.master-wrapper.collapsed .collapse-menu {
+  font-size: 0;
+}
+
+.master-wrapper.collapsed .left-split-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 63px;       
+  background-color: #c2c2c2;
+}
+.master-wrapper.collapsed .right-split-container {
+  width: auto !important;
+  float:none;
+  margin-left: 63px;
+}
+.master-wrapper.collapsed ul.accordion li {
+  position:relative;
+}
+
+.master-wrapper.collapsed ul.accordion .content {
+   position: absolute;
+   top: 0;
+   left: 63px;
+   z-index: 1000;
+   min-width: 300px;
+
 }
 
 .navicon{

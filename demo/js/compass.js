@@ -276,5 +276,9 @@ $('.tabs-slides-container').gettingStarted();
 $(".toggle-nav-mobile").on("click", function(ev){
   ev.preventDefault();
   $("body").toggleClass("open");
+})
 
+$(".collapse-menu").on("click", function(ev){
+  ev.preventDefault();
+  $(".master-wrapper").toggleClass("collapsed");
 })
