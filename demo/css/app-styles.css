@@ -853,6 +853,7 @@ ul.accordion>li>div.title:after {
 
 .search-bar-icons-loupe {
   color: #5b5b5b;
+  cursor: pointer;
   margin-top:-1px;
   margin-left: 3px;
   text-shadow: 0 1px #ccc;
