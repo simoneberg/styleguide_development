@@ -1463,7 +1463,7 @@ ul.accordion>li>div.title:after {
   padding: 8px 20px;
   cursor: pointer;
   font-weight: bold;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 .back-to-previous-page-link {
