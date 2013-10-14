@@ -3497,7 +3497,6 @@ ul.inline-list.forecast-status-list > li > *{
 .week {
  float: left;
  width: 8.33333%;
- position: relative;
  min-height: 1px;
  padding: 0 15px;
 }
@@ -3528,7 +3527,7 @@ ul.inline-list.forecast-status-list > li > *{
   width: 58.33333%;
 }
 .month-column-8 {
-  width: 66.666667;
+  width: 66.666667%;
 }
 .month-column-9 {
   width: 75%;
@@ -3565,7 +3564,7 @@ ul.inline-list.forecast-status-list > li > *{
   margin-left: 58.33333%;
 }
 .offset-month-8 {
-  margin-left: 66.666667;
+  margin-left: 66.666667%;
 }
 .offset-month-9 {
   margin-left: 75%;
@@ -3580,12 +3579,63 @@ ul.inline-list.forecast-status-list > li > *{
   margin-left: 100%;
 }
 
+.milestones .offset-month-1 {
+  position: absolute;
+  left: 8.33333%;
+}
+.milestones .offset-month-2 {
+  position: absolute;
+  left: 16.66667%;
+}
+.milestones .offset-month-3 {
+  position: absolute;
+  left: 25%;
+}
+.milestones .offset-month-4 {
+  position: absolute;
+  left: 33.333333%;
+}
+.milestones .offset-month-5 {
+  position: absolute;
+  left: 41.66667%;
+}
+.milestones .offset-month-6 {
+  position: absolute;
+  left: 50%;
+}
+.milestones .offset-month-7 {
+  position: absolute;
+  left: 58.33333%;
+}
+.milestones .offset-month-8 {
+  position: absolute;
+  left: 66.666667%;
+}
+.milestones .offset-month-9 {
+  position: absolute;
+  left: 75%;
+}
+.milestones .offset-month-10 {
+  position: absolute;
+  left: 83.33333%
+}
+.milestones .offset-month-11 {
+  position: absolute;
+  left: 91.66667%;
+}
+.milestones .offset-month-12 {
+  position: absolute;
+  left: 100%;
+}
+
 .background .month-column:first-child,
 .background .week:first-child {
  border-left: 1px solid #8a8a8a;
 }
 
 .month-title {
+  position: absolute;
+  width: 100%;
   background-color: #efefef;
   border: 1px solid #8a8a8a;
   border-width: 1px 1px 1px 0;
@@ -3597,20 +3647,29 @@ ul.inline-list.forecast-status-list > li > *{
 }
 
 .development-plan-widget {
-   margin-bottom: 25px;
-   border-bottom: 1px solid #8a8a8a;
+   margin-bottom: 50px;
 }
 
 .calendar-grid {
-  overflow: hidden;
+ position: relative;
+}
+.calendar-grid .background {
+  position: absolute;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+.calendar-grid .activities {
+  padding: 30px 0;
 }
 
-.calendar-grid .background,
-.calendar-grid .month-column,
-.calendar-grid .month-columns {
+.calendar-grid .background .month-column,
+.calendar-grid .background .month-columns {
+  position: relative;
   height: 100%;
   min-height: 100%;
 }
+
 
 .calendar-grid .one:first-child .month-title {
   border-width: 1px;
@@ -3667,7 +3726,6 @@ ul.button-group li:last-child {
 .dev-activity {
   background-color: #eee;
   border: 1px solid #8a8a8a;
-  border-width: 1px 0 1px 1px;
   margin-top: 15px;
 }
 
@@ -3681,8 +3739,8 @@ ul.button-group li:last-child {
 
 .list-dev-activities {
   position: relative;
-  top: -180px;
   left: -1px;
+  margin-right: -1px;
 }
 
 .week-grid .list-dev-activities {
@@ -3694,13 +3752,22 @@ ul.button-group li:last-child {
   margin: 0 -15px 10px;
 }
 
-ul.milestones {
-  margin-bottom: 0;
+.milestone-list {
+  margin: 0 -15px;
 }
 
-.milestones li:first-child {
-  margin-left: 16px;
+ul.milestones {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height:30px;
 }
+ul.milestones li {
+  margin-left: 3.33333%;
+  padding: 0;
+  list-style: none;
+}
+
 
 .secondary.radius.button.smaller {
   font-size: 12px;

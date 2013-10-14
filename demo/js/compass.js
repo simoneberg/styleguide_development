@@ -309,7 +309,6 @@ $('.tabs-slides-container').gettingStarted();
       prevText: localization.prevText
     },
     _create : function() {
-      this._drawHeader();
     },
     _destroy: function() {
       return this._super();
