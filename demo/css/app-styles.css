@@ -3652,6 +3652,7 @@ ul.inline-list.forecast-status-list > li > *{
 
 .calendar-grid {
  position: relative;
+ overflow:hidden;
 }
 .calendar-grid .background {
   position: absolute;
