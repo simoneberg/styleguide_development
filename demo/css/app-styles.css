@@ -3749,8 +3749,18 @@ ul.button-group li:last-child {
 }
 
 .priority-bar {
-  border-top: 3px solid #59809f;
+  border-top: 3px solid;
   margin: 0 -15px 10px;
+}
+
+.priority-high {
+  border-top-color: #5a80a0;
+}
+.priority-medium {
+  border-top-color: #8ea8bf;
+}
+.priority-low {
+  border-top-color: #c8d3dc;
 }
 
 .milestone-list {
