@@ -23,6 +23,55 @@
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
 <link rel="stylesheet" href="../demo/css/app-styles.css">
+	<style>
+
+	.ui-tooltip, .arrow:after {
+    background: #151515;
+    border: 1px solid #151515;
+  }
+  .ui-tooltip {
+    max-width: 250px;
+    padding: 6px 8px 10px;
+    color: white;
+    border-radius: 2px;
+    font: 14px verdana, Sans-Serif;
+    box-shadow: 0 0 2px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 35%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+	</style>
 
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
@@ -410,7 +459,7 @@
             </div>
           </div>
           <div class="activities">
-            <div class="list-dev-activities">
+            <div class="row list-dev-activities">
               <div class="month-column month-column-9 offset-month-1 dev-activity">
                 <div class="priority-bar priority-low"></div>
                 <div class="act-title">
@@ -418,13 +467,13 @@
                 </div>
                 <div class="milestone-list">
                   <ul class="milestones">
-                    <li class="offset-month-1"><img src="images/milestone-scheduling-date.png" /></li>
-                    <li class="offset-month-9"><img src="images/milestone-target-date.png" /></li>
+                    <li class="offset-month-1"><img title="Target Date:</br> 6-3-13" src="images/milestone-scheduling-date.png" /></li>
+                    <li class="offset-month-9"><img title="Completion Date:</br> 6-27-13" src="images/milestone-target-date.png" /></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="list-dev-activities">
+            <div class="row list-dev-activities">
               <div class="month-column month-column-9 offset-month-2 dev-activity">
                 <div class="priority-bar priority-high"></div>
                 <div class="act-title">
@@ -432,8 +481,8 @@
                 </div>
                 <div class="milestone-list">
                   <ul class="milestones">
-                    <li class="offset-month-2"><img src="images/milestone-scheduling-date.png" /></li>
-                    <li class="offset-month-10"><img src="images/milestone-target-date.png" /></li>
+                    <li class="offset-month-2"><img title="Target Date:</br> 6-3-13" src="images/milestone-scheduling-date.png" /></li>
+                    <li class="offset-month-10"><img title="Completion Date:</br> 6-27-13" src="images/milestone-target-date.png" /></li>
                   </ul>
                 </div>
               </div>
@@ -446,8 +495,8 @@
                 </div>
                 <div class="milestone-list">
                   <ul class="milestones">
-                    <li class="offset-month-7"><img src="images/milestone-scheduling-date.png" /></li>
-                    <li class="offset-month-12"><img src="images/milestone-target-date.png" /></li>
+                    <li class="offset-month-7"><img title="Target Date:</br> 6-3-13" src="images/milestone-scheduling-date.png" /></li>
+                    <li class="offset-month-12"><img title="Completion Date:</br> 6-27-13" src="images/milestone-target-date.png" /></li>
                   </ul>
                 </div>
               </div>
@@ -460,7 +509,7 @@
                 </div>
                 <div class="milestone-list">
                   <ul class="milestones">
-                    <li class="offset-month-5"><img src="images/milestone-multiple-dates.png" /></li>
+                    <li class="offset-month-5"><img title="Target Date:</br> 6-3-13</br>Completion Date:</br> 6-27-13" src="images/milestone-multiple-dates.png" /></li>
                   </ul>
                 </div>
               </div>
