@@ -280,6 +280,12 @@ hr {
   margin: 0 0 15px;
 }
 
+hr.small {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  width:50%;
+}
+
 h4 {
   margin-bottom: 4px;
 }
@@ -1385,7 +1391,6 @@ ul.accordion>li>div.title:after {
   font-size:12px;
   color: #333;
   display: block;
-  padding: 12px 0 12px 0;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1414,9 +1419,11 @@ ul.accordion>li>div.title:after {
 
 .button.silver-button.round,
 .file-upload-btn label.round {
-  border-radius: 5px 5px 5px 5px;
-  padding-left: 12px;
-  padding-right: 12px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .button.silver-button:hover,
@@ -1453,8 +1460,10 @@ ul.accordion>li>div.title:after {
 }
 
 .file-upload-btn label {
-  padding: 10px;
-  cursor:pointer;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px 0 0 0;
 }
 
 .back-to-previous-page-link {
