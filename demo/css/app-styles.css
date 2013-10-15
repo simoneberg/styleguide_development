@@ -207,7 +207,7 @@ ul.pagination li.current a {
 }
 
 .master-wrapper {
-  background-color: #c2c2c2;
+  background-color: #c2c2c2;  
   overflow: hidden;
   min-height: 100%;
 }
@@ -853,6 +853,7 @@ ul.accordion>li>div.title:after {
 
 .search-bar-icons-loupe {
   color: #5b5b5b;
+  cursor: pointer;
   margin-top:-1px;
   margin-left: 3px;
   text-shadow: 0 1px #ccc;
@@ -1088,13 +1089,13 @@ ul.accordion>li>div.title:after {
 .button.dropdown.petrocore-actions:after {
   border-color: #666 transparent transparent transparent;
   margin-top: -4px;
-  right: 10px;
+  right: 10px;  
 }
 
 .actions-dropdown-btn {
   float: right;
   margin-top: -34px;
-  margin-bottom: 8px;
+  margin-bottom: 8px;  
 }
 
 .button.dropdown.petrocore-actions, 
@@ -1103,7 +1104,7 @@ ul.accordion>li>div.title:after {
   margin: 0;
   position: relative;
   width: auto;
-  height: auto;  
+  height: auto;    
 }
 
 .tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
@@ -1186,7 +1187,7 @@ ul.accordion>li>div.title:after {
   top: 50%;
   left: 50%;
   margin-left: -6px;
-  margin-top: -2px;
+  margin-top: -2px;  
 }
 
 .button.dropdown.petrocore-actions > ul {
@@ -1204,7 +1205,6 @@ ul.accordion>li>div.title:after {
   padding: 0;
   border: 1px solid #8b8b8b !important;
   min-width: 118px;
-  z-index: 40;
 }
 
 .button.dropdown.split.petrocore-actions>ul li:hover {
@@ -2166,7 +2166,7 @@ table tbody tr td {
 
 .panel-header .panel-header-icons-collapse-up {
   /* compensate for font-awesomes vertical-align */
-  margin-top: 6px;
+  margin-top: 5px;
   padding-bottom: 8px;
 }
 
@@ -2385,6 +2385,8 @@ border: 1px solid #8a8a8a;
   font-size: 16px;
   font-weight: normal;
   right: 0px;
+  line-height: 10px;
+  margin-top: -3px;
   text-shadow: 0 1px #e5e5e5;
 }
 
@@ -3752,7 +3754,6 @@ ul.milestones li {
 }
 
 .button-group .button {
-  font-family: FontAwesome;
   padding: 9px 10px;
   width: auto;
 }

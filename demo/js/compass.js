@@ -55,6 +55,12 @@ $(document).ready(function(){
     }
   });
 
+  //Expands the footer when Actions button within the Table is clicked
+  $('#report-templates-table .expandable').click(function () {
+    $('.panel-wrapper').css('margin-bottom','115px');
+    $(document).scrollTop( $("#report-templates-table").offset().top );	
+  });
+
   //search results advanced
   var userviewright = $(".right-split-container").width();
 
@@ -168,6 +174,51 @@ $(document).ready(function(){
       $( '#monthly' ).removeClass("display-none");
     }
   });
+
+/* map admin map1 */
+  $('.small.secondary.button.add-medium-margin-bottom').on('click', function(){
+
+    var section = $(this).prev();
+
+    if ($(section).is(':hidden'))
+    {
+      $(this).html('Hide Tasks and Development Activity');
+    }
+    else
+    {
+      $(this).html('Show Tasks and Development Activity');
+    }
+
+    $(section).toggle();
+  });
+
+
+  $('#expandall').on('click', function(){
+
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+    if ($(current).is(':hidden'))
+    {
+     $(current).show();
+     $('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
+     $('.panel-header-icons-collapse-up.icon-').css('margin-top','10px');
+   }
+
+ });
+
+
+  $('#collapseall').on('click', function(){
+
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+    if ($(current).is(':visible'))
+    {
+     $(current).hide();
+     $('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
+     $('.panel-header-icons-collapse-up.icon-').css('margin-top','2px');
+   }
+
+ });
 
 });
 
