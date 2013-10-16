@@ -296,26 +296,37 @@ $('.tabs-slides-container').gettingStarted();
 
 (function($, undefined){
 
-  // trying to reuse the localization from jquery ui 
-  var localization = $.datepicker._defaults;
-
-  $.widget("ps.devPlan", {
-    options: {
-      monthNames: localization.monthNames,
-      monthNamesShort: localization.monthNamesShort,
-      weekHeader: localization.weekHeader,
-      //weekHeader: "Week", /* localization doesn't quite match up */
-      nextText: localization.nextText,
-      prevText: localization.prevText
+  $.widget("ps.compassPopover", $.ui.tooltip, {
+    options:{
+      position: {
+        my:"left top-35%",
+        at:"center center",
+        of:".dev-activity"
+      },
+      content: ".popover-content"
     },
     _create : function() {
+      this._on({click:"toggle"});
+
+      this.popover = this.element.find(this.options.content)
+          .appendTo("body");
+
+      this.popover.position($.extend(this.options.position, {of: this.element.find(this.options.position.of)}));
+    },
+    toggle: function(){
+      this.popover.toggle();
     },
     _destroy: function() {
+      this._off("click")
       return this._super();
     }
   })
 
 })(jQuery);
+
+$(".list-dev-activities").compassPopover();
+
+
 
 $(function() {
   $( document ).tooltip({
