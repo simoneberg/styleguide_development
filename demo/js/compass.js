@@ -312,7 +312,9 @@ $('.tabs-slides-container').gettingStarted();
           .appendTo("body");
 
       this.popover.position($.extend(this.options.position, {of: this.element.find(this.options.position.of)}));
-      this.popover.click(function(ev){ev.stopProgagation();})
+      this.popover.click(function(ev){
+        ev.stopPropagation();
+      })
 
       $("body").on("click.popover", function(ev){
         that.popover.is(":visible") && !that.clickedLatch && that.popover.hide();
@@ -331,6 +333,7 @@ $('.tabs-slides-container').gettingStarted();
   })
 
 })(jQuery);
+
 
 $(".list-dev-activities").compassPopover();
 
