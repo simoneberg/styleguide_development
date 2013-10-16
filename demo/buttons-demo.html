@@ -36,9 +36,9 @@
 
 	<h6>Buttons</h6>
 	<p>
-		<a class="primary radius button" href="">Primary</a>
-		<a class="secondary radius button" href="">Secondary</a>
-		<a class="alert radius button" href="">Alert</a>
+		<a class="primary radius button" href="#">Primary</a>
+		<a class="secondary radius button" href="#">Secondary</a>
+		<a class="alert radius button" href="#">Alert</a>
 	</p>
 	<p>
 		<a class="primary-disabled radius button" href="#">Primary</a>
@@ -68,7 +68,7 @@
 		<br>
 
 		<h4>Page Header</h4>
-		<div class="back-to-previous-page-link"><a class="" href="">Back to previous page</a></div>
+		<div class="back-to-previous-page-link"><a class="" href="#">Back to previous page</a></div>
 		<hr>
 		<br>
 	</section>
@@ -87,7 +87,7 @@
     <div class="row">
       <div class="same-line add-medium-space-right">
         <a class="primary radius button" href="#">Save</a> 
-				<a class="button radius secondary" href="">Reset</a>
+				<a class="button radius secondary" href="#">Reset</a>
       </div>
       <div class="same-line">
         <a class="" href="#">Cancel</a>
@@ -97,7 +97,7 @@
     <div class="row">
       <div class="same-line add-medium-space-right">
         <a class="primary radius button" href="#">Save</a> 
-				<a class="button radius alert" href="">Delete</a>
+				<a class="button radius alert" href="#">Delete</a>
       </div>
       <div class="same-line">
         <a class="" href="#">Cancel</a>
@@ -135,6 +135,15 @@
       </div>
     </div>
 
+    <br>
+	<h6>File Upload Button</h6>
+    <div class="row">
+      <div class="form-group file-upload-btn">
+        <label class="round text-center fileupload_btn_label" for="file">Choose a file</label>
+        <input type="file" id="file" />
+      </div>
+    </div>
+
 </div>
 
 <!-- Included JS Files (Compressed) -->
@@ -143,11 +152,15 @@
   <!-- Initialize JS Plugins -->
   <script src="../javascripts/app.js"></script>
 
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery-ui-1.9.2.js"></script>
+
+  <!-- Application specific javascript -->
+  <script src="js/compass.js"></script>
+  <script src="js/compass-ie8.js"></script>
+  
 </body>
 </html>
-
-
-
 
 
 

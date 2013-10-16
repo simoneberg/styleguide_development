@@ -175,6 +175,51 @@ $(document).ready(function(){
     }
   });
 
+/* map admin map1 */
+  $('.small.secondary.button.add-medium-margin-bottom').on('click', function(){
+
+    var section = $(this).prev();
+
+    if ($(section).is(':hidden'))
+    {
+      $(this).html('Hide Tasks and Development Activity');
+    }
+    else
+    {
+      $(this).html('Show Tasks and Development Activity');
+    }
+
+    $(section).toggle();
+  });
+
+
+  $('#expandall').on('click', function(){
+
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+    if ($(current).is(':hidden'))
+    {
+     $(current).show();
+     $('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
+     $('.panel-header-icons-collapse-up.icon-').css('margin-top','10px');
+   }
+
+ });
+
+
+  $('#collapseall').on('click', function(){
+
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+
+    if ($(current).is(':visible'))
+    {
+     $(current).hide();
+     $('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
+     $('.panel-header-icons-collapse-up.icon-').css('margin-top','2px');
+   }
+
+ });
+
 });
 
 /* prevent hash changes on any nexted tabs*/
@@ -273,3 +318,23 @@ $('.tabs-slides-container').gettingStarted();
 
 })(jQuery);
 
+$(".toggle-nav-mobile").on("click", function(ev){
+  ev.preventDefault();
+  $("body").toggleClass("open");
+})
+
+$(".collapse-menu").on("click", function(ev){
+  ev.preventDefault();
+  var wrapper = $(".master-wrapper")
+  
+  wrapper.toggleClass("collapsed");
+
+  if (wrapper.hasClass("collapsed")) {
+    $(this).find(".icon-").html("&#xf0a9;"); // text for arrow left
+    return;
+  }
+  $(this).find(".icon-").html("&#xf0a8;"); // text for arrow left
+
+  $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
+
+})
