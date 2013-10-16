@@ -296,7 +296,7 @@ $('.tabs-slides-container').gettingStarted();
 
 (function($, undefined){
 
-  $.widget("ps.compassPopover", $.ui.tooltip, {
+  $.widget("ps.compassPopover", {
     options:{
       position: {
         my:"left top-35%",
