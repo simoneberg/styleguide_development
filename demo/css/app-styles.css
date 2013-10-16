@@ -2579,6 +2579,11 @@ textarea.compass-error:focus {
   margin-bottom: 0;
 }
 
+.disabled-text {
+  color: #136593;
+  font-style:italic;
+}
+
 /* END ALERTS, LABELS, BADGES */
 /* **************************************** */
 
