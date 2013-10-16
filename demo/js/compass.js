@@ -306,15 +306,23 @@ $('.tabs-slides-container').gettingStarted();
       content: ".popover-content"
     },
     _create : function() {
-      this._on({click:"toggle"});
+      var that = this;
 
       this.popover = this.element.find(this.options.content)
           .appendTo("body");
 
       this.popover.position($.extend(this.options.position, {of: this.element.find(this.options.position.of)}));
+      this.popover.click(function(ev){ev.stopProgagation();})
+
+      $("body").on("click.popover", function(ev){
+        that.popover.is(":visible") && !that.clickedLatch && that.popover.hide();
+        that.clickedLatch = false;
+      })
+      this._on({click:"toggle"});
     },
     toggle: function(){
       this.popover.toggle();
+      this.clickedLatch = true;
     },
     _destroy: function() {
       this._off("click")
