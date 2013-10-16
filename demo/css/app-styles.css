@@ -5009,6 +5009,7 @@ a.milestone-date:hover {
   padding: 10px;
   background-color: #fff;
   border:1px solid #666;
+  border-radius: 3px;
 }
 .ui-widget.popover-content:after {
   margin: 0;
