@@ -1764,6 +1764,7 @@ label.inline {
 
 /* **************************************** */
 /* DROPDOWNS */
+
 form.custom div.custom.dropdown{
   font-size: 14px;
   height: auto;
@@ -1772,9 +1773,8 @@ form.custom div.custom.dropdown{
 
 form.custom div.custom.dropdown {
   float: left;
-  margin-right: 12px;
+  margin-right: 2px;
   margin-bottom: 10px;
-  /*margin-left: 3px;*/
 }
 
 form.custom div.custom.dropdown a.current{
@@ -1803,6 +1803,7 @@ form.custom div.custom.dropdown a.selector:after{
 
 form.custom div.custom.dropdown ul{
   border: solid 1px #999;
+  width: 100% !important;
 }
 
 form.custom div.custom.dropdown ul li{
