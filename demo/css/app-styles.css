@@ -3743,6 +3743,10 @@ ul.button-group li:last-child {
   left: -1px;
   margin-right: -1px;
 }
+.list-dev-activities .popover-content {
+  display:none;
+  
+}
 
 .week-grid .list-dev-activities {
   border-left: 1px solid #8a8a8a;
@@ -4996,6 +5000,27 @@ a.milestone-date:hover {
 .search-box-results > .content ul a:after {
   clear:both;
 }
+
+.ui-widget.popover-content {
+  position: absolute;
+  display:none;
+  width:200px;
+  padding: 10px;
+  background-color: #fff;
+  border:1px solid #666;
+}
+.ui-widget.popover-content .ui-widget-header {
+  padding: 10px;
+  background-color: #eaeaea;
+  margin: 0 -10px;
+  margin-top: -10px;
+  border-bottom: 1px solid #666;
+}
+.ui-widget.popover-content .ui-widget-content {
+  padding: 10px 0px;
+
+}
+
 
 /* END WIDGETS */
 /* ***************************************** */
