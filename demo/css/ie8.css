@@ -94,15 +94,15 @@ body {
 	
 /* It fixes the misalignment of the dropdown arrow box */
 form.custom div.custom.dropdown a.selector {
-	width:30px;
-	height:30px !important;			
+	width:28px;
+	height:28px !important;			
 	border: solid #5b5b5b 1px;
 }
 
 form.custom div.custom.dropdown a.selector:after{
 	border-color:#676767 transparent transparent transparent;	
 	margin-top:-2px;
-	margin-left:-5px;	
+	margin-left:-5px;		
 }
 
 form.custom.search-type div.custom.dropdown a.selector {

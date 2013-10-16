@@ -40,7 +40,10 @@
 		<a class="alert radius button" href="#" data-reveal-id="delete-confirm-popup">Confirm Delete</a>
 		<a class="primary radius button" href="#" data-reveal-id="navigate-away-popup">Confirm Navigation</a>
 	</p>
-
+    <p>
+        <a class="secondary radius button" href="#" data-reveal-id="file-upload-popup">File Upload Popup</a>
+    </p>    
+    
 </div>
 
 <!--************** MODAL WINDOW BASIC FORM ****************-->
@@ -153,9 +156,68 @@
 
 <!--************** MODAL WINDOW CONFIRM NAVIGATION ****************-->
 
+
+<!--*****************  MODAL WINDOW FILE UPLOAD *******************-->
+
+<div id="file-upload-popup" class="reveal-modal expand smaller">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>File Upload Control</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Upload File</label>
+          <div class="form-group file-upload-btn">
+            <label class="round text-center fileupload_btn_label" for="file">Choose a file</label>
+            <input type="file" id="file" />
+          </div>
+          <div>
+          <p>path/to/selected/file/notshown/if.blank</p>
+          </div>
+          <div class="radio-group">
+            <label>
+              <input data-customforms='disabled' checked name="radio-group-1" type="radio"> 
+              Upload file
+            </label>
+            <label>
+              <input data-customforms='disabled' name="radio-group-1" type="radio"> 
+              Link to file
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--*****************  MODAL WINDOW FILE UPLOAD *******************-->
+
+
+
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
-<!-- inilaise foundaiton  -->
+<!-- initialize foundation -->
 <script src="../javascripts/app.js"></script>
 
 <script src="js/jquery-1.9.1.js"></script>
@@ -163,6 +225,7 @@
 
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
 
 </body>
 </html>
