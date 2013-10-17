@@ -267,16 +267,28 @@
 
           <div class="row">
             <ul class="button-group slim">
+              <label>Filter:</label>
               <li><a href="#" class="button silver-button wide first active">All</a></li>
               <li><a href="#" class="button silver-button wide middle">Participants</a></li>
               <li><a href="#" class="button silver-button wide last">Management</a></li>
             </ul>
           </div>
           <div class="panel-wrapper">
-              <div class="table-header-action">
-                <a class="primary radius button left" href="petrocore-user-create.html">Create User</a>
-                <a class="alert radius button right" href="">Delete User(s)</a>
+            <div class="table-header-action">
+              <a class="primary radius button left add-medium-space-right" href="petrocore-user-create.html">Create User</a>
+              <a class="alert radius button  add-medium-space-right" href="#" data-reveal-id="delete-user">Delete User(s)</a>
+
+              <div class="four mobile-four columns search-bar-users">
+                <div class="row collapse search-input">
+                  <div class="nine mobile-four columns" style="float:left;">
+                    <input id="initial-search" class="round-left" type="text" placeholder="Search" value="">
+                  </div>
+                  <div class="three mobile-four columns" style="float:right;">
+                    <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+                  </div>
+                </div>
               </div>
+            </div>
 
               <!--***** TABLE *****-->
             <div id="table_container" class="no-border">
@@ -411,6 +423,49 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
+
+<div id="delete-user" class="reveal-modal expand">
+    <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Delete User(s)</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+    <p class="lead">Are you sure you want to delete these users?</p>
+    <div class="twelve columns">
+
+      <div id="list-direct-participants" class="list-box">
+        <div class="participant">
+          <div class="sr-name">Aranda, David (DAPO)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Chung, David (DCKI)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Masterson, David (DMSW)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Robertson, David (DBJU)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Slaton, David (DSLS)</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
 
 <div id="overlay"></div>
 
