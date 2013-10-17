@@ -3572,6 +3572,78 @@ ul.inline-list.forecast-status-list > li > *{
   margin-left: 100%;
 }
 
+.weeks-4 .week-column {
+  width: 25%;
+}
+
+.weeks-4 .week-column-1 {
+  width: 25%;
+}
+.weeks-4 .week-column-2 {
+  width: 50%;
+}
+.weeks-4 .week-column-3 {
+  width: 75%;
+}
+.weeks-4 .week-column-4 {
+  width: 100%;
+}
+
+.weeks-4 .offset-week-1 {
+  margin-left: 25%;
+}
+.weeks-4 .offset-week-2 {
+  margin-left: 50%;
+}
+.weeks-4 .offset-week-3 {
+  margin-left: 75%;
+}
+.weeks-4 .offset-week-4 {
+  margin-left: 100%;
+}
+
+.weeks-6 .week-column {
+  width: 16.666666667%;
+}
+
+.weeks-6 .week-column-1 {
+  width: 16.666666667%;
+}
+.weeks-6 .week-column-2 {
+  width: 33.33333%;
+}
+.weeks-6 .week-column-3 {
+  width: 50%;
+}
+.weeks-6 .week-column-4 {
+  width: 66.666666%;
+}
+.weeks-6 .week-column-5 {
+  width: 83.3333333%;
+}
+.weeks-6 .week-column-6 {
+  width: 100%;
+}
+
+.weeks-6 .offset-week-1 {
+  margin-left: 16.6666667%;
+}
+.weeks-6 .offset-week-2 {
+  margin-left: 33.333333%;
+}
+.weeks-6 .offset-week-3 {
+  margin-left: 50%;
+}
+.weeks-6 .offset-week-4 {
+  margin-left: 66.6666667%;
+}
+.weeks-6 .offset-week-5 {
+  margin-left: 83.3333333%;
+}
+.weeks-6 .offset-week-6 {
+  margin-left: 100%;
+}
+
 .month-column-1 {
   width: 8.33333%;
 }
