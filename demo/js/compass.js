@@ -299,7 +299,7 @@ $('.tabs-slides-container').gettingStarted();
   $.widget("ps.compassPopover", {
     options:{
       position: {
-        my:"left top-35%",
+        my:"left center",
         at:"center center",
         of:".dev-activity"
       },
