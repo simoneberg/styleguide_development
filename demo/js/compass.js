@@ -64,7 +64,6 @@ $(document).ready(function(){
   //search results advanced
   var userviewright = $(".right-split-container").width();
 
-  $('#table_container').css('width',userviewright-63);  // content area on the right hand side
 
   $('#filters_applied').click(function(){
     $('.added-filter').toggleClass('glowing');

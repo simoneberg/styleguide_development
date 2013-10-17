@@ -23,55 +23,6 @@
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
 <link rel="stylesheet" href="../demo/css/app-styles.css">
-	<style>
-
-	.ui-tooltip, .arrow:after {
-    background: #151515;
-    border: 1px solid #151515;
-  }
-  .ui-tooltip {
-    max-width: 250px;
-    padding: 6px 8px 10px;
-    color: white;
-    border-radius: 2px;
-    font: 14px verdana, Sans-Serif;
-    box-shadow: 0 0 2px black;
-  }
-  .arrow {
-    width: 70px;
-    height: 16px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    margin-left: -35px;
-    bottom: -16px;
-  }
-  .arrow.top {
-    top: -16px;
-    bottom: auto;
-  }
-  .arrow.left {
-    left: 35%;
-  }
-  .arrow:after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: -20px;
-    width: 25px;
-    height: 25px;
-    box-shadow: 6px 5px 9px -9px black;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
-  }
-  .arrow.top:after {
-    bottom: -20px;
-    top: auto;
-  }
-	</style>
 
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
@@ -366,7 +317,7 @@
         <div class="development-plan-widget">
         <div class="calendar-toolbar">
           <div class="row">
-            <div class="eight columns">
+            <div class="seven columns mobile-four">
               <ul class="inline-list">
                 <li>
                   <div href="#year-selection" class="button dropdown petrocore-actions">
@@ -396,7 +347,7 @@
                 </li>
               </ul>
             </div>
-            <div class="four columns">
+            <div class="five columns mobile-four">
               <ul class="button-group slim float-right">
                 <li><a href="#" class="button silver-button first icon-">&#xf0d9;</a></li>
                 <li><a href="#" class="button silver-button">Current Year</a></li>
@@ -600,7 +551,7 @@
                 </div>
                 <div class="milestone-list">
                   <ul class="milestones">
-                    <li class="offset-month-2"><img title="Target Date:</br> 6-3-13</br> Complete Date: 6-20-14" src="images/milestone-multiple-dates.png" /></li>
+                    <li class="offset-month-2"><img title="Target Date:</br> 6-3-13</br> Completion Date: 6-20-14" src="images/milestone-multiple-dates.png" /></li>
                   </ul>
                 </div>
               </div>
@@ -628,7 +579,7 @@
               </div>
           </div>
             <div class="panel-content-container-full">
-              <div id="table_container" class="no-border">
+              <div class="no-border row">
                 <table id="report-templates-table" class="twelve no-border nested-table">
                   <thead>
                     <tr>
@@ -719,7 +670,7 @@
               </div>
           </div>
             <div class="panel-content-container-full">
-              <div id="table_container" class="no-border">
+              <div class="no-border row">
                 <table id="report-templates-table" class="twelve no-border nested-table">
                   <thead>
                     <tr>
