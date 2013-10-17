@@ -3319,6 +3319,8 @@ input.round-right {
 .list-box {
   border: 1px solid #8c8c8c;
   margin-bottom: 1em;
+  height: 12em;
+  overflow-x: auto;
 }
 
 .list-of-search-results-relationships li,
