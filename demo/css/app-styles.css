@@ -3527,15 +3527,47 @@ ul.inline-list.forecast-status-list > li > *{
 .background .month-column,
 .background .month-column:last-child,
 .month-column,
-.week {
+.week-column {
  float: left;
  width: 8.33333%;
  min-height: 1px;
  padding: 0 15px;
 }
 
-.week {
+.weeks-5 .week-column {
   width: 20%;
+}
+
+.weeks-5 .week-column-1 {
+  width: 20%;
+}
+.weeks-5 .week-column-2 {
+  width: 40%;
+}
+.weeks-5 .week-column-3 {
+  width: 60%;
+}
+.weeks-5 .week-column-4 {
+  width: 80%;
+}
+.weeks-5 .week-column-5 {
+  width: 100%;
+}
+
+.weeks-5 .offset-week-1 {
+  margin-left: 20%;
+}
+.weeks-5 .offset-week-2 {
+  margin-left: 40%;
+}
+.weeks-5 .offset-week-3 {
+  margin-left: 60%;
+}
+.weeks-5 .offset-week-4 {
+  margin-left: 80%;
+}
+.weeks-5 .offset-week-5 {
+  margin-left: 100%;
 }
 
 .month-column-1 {
@@ -3662,11 +3694,11 @@ ul.inline-list.forecast-status-list > li > *{
 }
 
 .background .month-column:first-child,
-.background .week:first-child {
+.background .week-column:first-child {
  border-left: 1px solid #8a8a8a;
 }
 
-.month-title {
+.background .title {
   position: absolute;
   width: 100%;
   background-color: #efefef;
@@ -3687,6 +3719,7 @@ ul.inline-list.forecast-status-list > li > *{
  position: relative;
  overflow:hidden;
 }
+
 .calendar-grid .background {
   position: absolute;
   height: 100%;
@@ -3697,33 +3730,21 @@ ul.inline-list.forecast-status-list > li > *{
   padding: 30px 0;
 }
 
+.calendar-grid .background .vertical,
 .calendar-grid .background .month-column,
-.calendar-grid .background .month-columns {
+.calendar-grid .background .week-column{
   position: relative;
   height: 100%;
   min-height: 100%;
 }
 
-
-.calendar-grid .one:first-child .month-title {
-  border-width: 1px;
-}
-
-.calendar-grid .one:last-child .month-title {
-  border-width: 1px;
-  margin-left: -16px;
-}
-
-.month-columns {
+.background .vertical {
   border: 1px solid #8a8a8a;
   border-width: 0 1px 1px 0;
   margin: 0 -15px;
   min-height: 180px;
 }
 
-.one:first-child .month-columns {
-  border-width: 0 1px 1px 1px;
-}
 
 .calendar-toolbar {
   background-color: #dcdcdc;
