@@ -1686,7 +1686,6 @@ p.form-category-title-bold {
   margin-top: 8px;
 }
 
-
 .icon-trailing-control {
   margin-left: 7px;
   position: relative;
@@ -1769,8 +1768,6 @@ div.scroll-both {
 label.inline {
   display: inline;
 }
-
-
 
 /* END FORMS */
 /* **************************************** */
@@ -2111,7 +2108,6 @@ table tbody tr td {
   height: auto;
 }
 
-
 .panel-action-icons-container {
   position:absolute;
   top: 5px;
@@ -2134,7 +2130,6 @@ table tbody tr td {
   font-size: 16px;
   line-height: 24px;
 }
-
 
 .panel-action-icons-list li {
   float: left;
@@ -2165,7 +2160,6 @@ table tbody tr td {
   float: right;
 }
 
-
 .panel-header-icons-collapse-up-list {
   display: block;
 }
@@ -2175,7 +2169,6 @@ table tbody tr td {
   margin-left: 10px;
   display: block;
 }
-
 
 .panel-header .icon- {
   color: #7c7c7c;
@@ -2238,7 +2231,6 @@ table tbody tr td {
 .panel-header-icons-list .button.radius.secondary {
   padding: 8px 15px;
 }
-
 
 .panel-header-icons-list .button {
   top: 9px;
@@ -2439,8 +2431,6 @@ border: 1px solid #8a8a8a;
 
 /* END MODAL POPUP */
 /* **************************************** */
-
-
 
 
 /* **************************************** */
@@ -3708,7 +3698,6 @@ ul.milestones {
   margin-bottom: 0;
 }
 
-
 .milestones li:first-child {
   margin-left: 16px;
 }
@@ -3740,8 +3729,6 @@ ul.milestones {
 a.milestone-date:hover {
   color: #222;
 }
-
-
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
@@ -3812,8 +3799,6 @@ a.milestone-date:hover {
   margin-right: 5px;
 }
 
-
-
 /* with-above are hacks to remove space
    from an element to make it closer and
    better visually associate it with
@@ -3841,7 +3826,6 @@ a.milestone-date:hover {
   .master-wrapper.collapsed {
     position: relative;
   }
-
 
   .master-wrapper.collapsed .search-container .collapse-menu {
     width: 63px;
@@ -3887,7 +3871,6 @@ a.milestone-date:hover {
   .dropdown-profile {
     display: none;
   }
-
 
   .row .right-split-container{
     width: 75% !important;
@@ -4207,7 +4190,6 @@ a.milestone-date:hover {
     cursor: pointer;
     float: left;
   }
-
 
   .logo {
     height: 42px;
@@ -4786,7 +4768,6 @@ a.milestone-date:hover {
     font-size: 0.95em;
   }
 
-
   .button.dropdown.petrocore-actions {
     width: 110px;
   }
@@ -4798,7 +4779,6 @@ a.milestone-date:hover {
 
 /* **************************************** */
 /* START WIDGETS */
-
 
 .tabs-slides-container .navigation {
   border:none;
@@ -4904,6 +4884,7 @@ a.milestone-date:hover {
   content: '  ';
   display: table;
 }
+
 .search-box-results .header:after {
   clear:both;
 }
@@ -4933,6 +4914,7 @@ a.milestone-date:hover {
   content: '  ';
   display: table;
 }
+
 .search-box-results > .content ul a:after {
   clear:both;
 }
