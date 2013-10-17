@@ -3894,7 +3894,6 @@ a.milestone-date:hover {
 
 }
 
-
 @media only screen and (max-width: 1168px) {
   ul.button-group {
     width: 100%;
@@ -4226,7 +4225,6 @@ a.milestone-date:hover {
     line-height: 36px;
   }
 
-
   .panel-wrapper-grey-tree {
     border-right: 0;
     background-color: #f0f0f0;
@@ -4424,7 +4422,6 @@ a.milestone-date:hover {
     left: 17px;
     height: 46px;
   }
-
 
   .right-justify-expand-all {
     right: 5px;
