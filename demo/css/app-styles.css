@@ -4920,7 +4920,7 @@ a.milestone-date:hover {
   margin: 0;
   position: absolute;
   left: -12px;
-  top: 30%;
+  top: 50%;
   content: ' ';
   height: 0;
   width: 0;
@@ -4929,6 +4929,7 @@ a.milestone-date:hover {
   border-color: transparent;
   border-left-width: 0;
   border-right-color: #666;
+  margin-top: -12px;
 
 }
 .ui-widget.popover-content:before {
@@ -4936,7 +4937,7 @@ a.milestone-date:hover {
   margin: 0;
   position: absolute;
   left: -11px;
-  top: 30.4%;
+  top: 50%;
   content: ' ';
   height: 0;
   width: 0;
@@ -4945,7 +4946,7 @@ a.milestone-date:hover {
   border-color: transparent;
   border-left-width: 0;
   border-right-color: #fff;
-
+  margin-top: -11px;
 }
 .ui-widget.popover-content .ui-widget-header {
   padding: 10px;
