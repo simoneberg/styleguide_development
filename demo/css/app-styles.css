@@ -141,6 +141,52 @@ ul.pagination li.current a {
   background: #2795b6;
 }
 
+.ui-tooltip,.ui-tooltip .arrow:after {
+  background: #151515;
+  border: 1px solid #151515;
+}
+.ui-tooltip {
+  max-width: 250px;
+  padding: 6px 8px 10px;
+  color: white;
+  border-radius: 2px;
+  font: 14px verdana, Sans-Serif;
+  box-shadow: 0 0 2px black;
+}
+.ui-tooltip .arrow {
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+.ui-tooltip .arrow.top {
+  top: -16px;
+  bottom: auto;
+}
+.ui-tooltip .arrow.left {
+  left: 35%;
+}
+.ui-tooltip .arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+.ui-tooltip .arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}
 .arrow a {
   font-size: 17px;
   margin-top: 4px;
@@ -3232,6 +3278,7 @@ input.round-left {
   box-shadow: 0 0 1px #c5c5c5;
   padding-left: 15px;
 }
+
 .search-input.round-right, 
 input.round-right {
   border: 1px solid #5b5b5b;
@@ -3244,19 +3291,6 @@ input.round-right {
 
 #search_type_drop {
   height: 28px;
-}
-
-#table_container {
-  overflow: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
-  clear: both;
-  border: solid 1px #8a8a8a;
-  width: 100%;
-}
-
-#table_container.no-border {
-  border: 0;
 }
 
 /* list box/ direct participant */
@@ -3893,15 +3927,6 @@ a.milestone-date:hover {
 
 
 @media only screen and (max-width: 1168px) {
-  ul.button-group {
-    width: 100%;
-    margin: 0;
-  }
-
-  ul.button-group li {
-    margin: 0;
-    width: 50%;
-  }
 
   ul.button-group.slim {
     margin-bottom: 12px;
@@ -4127,6 +4152,16 @@ a.milestone-date:hover {
 
 /* portait iPad - 10 inch tablet */
 @media only screen and (max-width: 768px) {
+
+  ul.button-group {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.button-group li {
+    margin: 0;
+    width: 50%;
+  }
 
   button.button{
     width: auto;
