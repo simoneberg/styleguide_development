@@ -3323,6 +3323,14 @@ input.round-right {
   overflow-x: auto;
 }
 
+.list-box .participant {
+  border-bottom: solid 1px #cfcfcf;
+}
+
+.list-box .participant:last-child {
+  border-bottom: none;
+}
+
 .list-of-search-results-relationships li,
 .list-of-relationships li
 {
