@@ -1103,7 +1103,6 @@ ul.accordion>li>div.title:after {
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   color: #fff;
-  font-family: inherit;
   font-size: 12px;
   font-weight: bold;
   line-height: 1 !important;
