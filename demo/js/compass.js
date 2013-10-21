@@ -64,7 +64,6 @@ $(document).ready(function(){
   //search results advanced
   var userviewright = $(".right-split-container").width();
 
-  $('#table_container').css('width',userviewright-63);  // content area on the right hand side
 
   $('#filters_applied').click(function(){
     $('.added-filter').toggleClass('glowing');
@@ -296,28 +295,65 @@ $('.tabs-slides-container').gettingStarted();
 
 (function($, undefined){
 
-  // trying to reuse the localization from jquery ui 
-  var localization = $.datepicker._defaults;
-
-  $.widget("ps.devPlan", {
-    options: {
-      monthNames: localization.monthNames,
-      monthNamesShort: localization.monthNamesShort,
-      weekHeader: localization.weekHeader,
-      //weekHeader: "Week", /* localization doesn't quite match up */
-      nextText: localization.nextText,
-      prevText: localization.prevText
+  $.widget("ps.compassPopover", {
+    options:{
+      position: {
+        my:"left center",
+        at:"center center",
+        of:".dev-activity"
+      },
+      content: ".popover-content"
     },
     _create : function() {
-      this._drawHeader();
+      var that = this;
+
+      this.popover = this.element.find(this.options.content)
+          .appendTo("body");
+
+      this.popover.position($.extend(this.options.position, {of: this.element.find(this.options.position.of)}));
+      this.popover.click(function(ev){
+        ev.stopPropagation();
+      })
+
+      $("body").on("click.popover", function(ev){
+        that.popover.is(":visible") && !that.clickedLatch && that.popover.hide();
+        that.clickedLatch = false;
+      })
+      this._on({click:"toggle"});
+    },
+    toggle: function(){
+      this.popover.toggle();
+      this.clickedLatch = true;
     },
     _destroy: function() {
+      this._off("click")
       return this._super();
     }
   })
 
 })(jQuery);
 
+
+$(".list-dev-activities").compassPopover();
+
+
+
+$(function() {
+  $( document ).tooltip({
+    position: {
+      my: "center bottom-20",
+      at: "center top",
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+    }
+    }
+  });
+});
 $(".toggle-nav-mobile").on("click", function(ev){
   ev.preventDefault();
   $("body").toggleClass("open");
