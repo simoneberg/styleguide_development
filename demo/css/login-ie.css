@@ -22,8 +22,8 @@ span.prefix {
 /* It fixes the misalignment of the dropdown arrow box */
 
 form.custom.petro-login div.custom.dropdown a.selector {
-	width:30px;
-	height:30px;	
+	width:28px;
+	height:28px !important;	
 	border: 1px solid #717171;		
 }
 

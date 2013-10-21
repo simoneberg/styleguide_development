@@ -326,6 +326,12 @@ hr {
   margin: 0 0 15px;
 }
 
+hr.small {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  width:50%;
+}
+
 h4 {
   margin-bottom: 4px;
 }
@@ -885,6 +891,11 @@ ul.accordion>li>div.title:after {
 .collapse-menu{
   padding:20px; 
   text-shadow: 0 1px #e9e9e9;
+  cursor: pointer;
+}
+
+.search-container .collapse-menu {
+  display:none;
 }
 
 .navicon{
@@ -1429,7 +1440,6 @@ ul.accordion>li>div.title:after {
   font-size:12px;
   color: #333;
   display: block;
-  padding: 12px 0 12px 0;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1458,9 +1468,11 @@ ul.accordion>li>div.title:after {
 
 .button.silver-button.round,
 .file-upload-btn label.round {
-  border-radius: 5px 5px 5px 5px;
-  padding-left: 12px;
-  padding-right: 12px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .button.silver-button:hover,
@@ -1497,8 +1509,10 @@ ul.accordion>li>div.title:after {
 }
 
 .file-upload-btn label {
-  padding: 10px;
-  cursor:pointer;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px 0 0 0;
 }
 
 .back-to-previous-page-link {
@@ -1799,6 +1813,7 @@ label.inline {
 
 /* **************************************** */
 /* DROPDOWNS */
+
 form.custom div.custom.dropdown{
   font-size: 14px;
   height: auto;
@@ -1807,9 +1822,8 @@ form.custom div.custom.dropdown{
 
 form.custom div.custom.dropdown {
   float: left;
-  margin-right: 12px;
+  margin-right: 2px;
   margin-bottom: 10px;
-  /*margin-left: 3px;*/
 }
 
 form.custom div.custom.dropdown a.current{
@@ -1838,6 +1852,7 @@ form.custom div.custom.dropdown a.selector:after{
 
 form.custom div.custom.dropdown ul{
   border: solid 1px #999;
+  width: 100% !important;
 }
 
 form.custom div.custom.dropdown ul li{
@@ -2606,6 +2621,11 @@ input[type="url"].compass-error:focus,
 textarea.compass-error:focus {
   border: 2px solid #c60f13;
   margin-bottom: 0;
+}
+
+.disabled-text {
+  color: #136593;
+  font-style:italic;
 }
 
 /* END ALERTS, LABELS, BADGES */
@@ -4000,13 +4020,57 @@ a.milestone-date:hover {
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 769px) {
+  
+  .master-wrapper.collapsed {
+    position: relative;
+  }
+
+
+  .master-wrapper.collapsed .search-container .collapse-menu {
+    width: 63px;
+    text-align: center;
+    line-height: 40px;
+    padding: 0;
+    font-size: 16px;
+    display: inline-block;
+  }
+  .master-wrapper.collapsed .search-container .search-input {
+    display: none;
+  }
+
+  .master-wrapper.collapsed ul.accordion>li .title h6,
+  .master-wrapper.collapsed .collapse-menu {
+    font-size: 0;
+  }
+
+  .master-wrapper.collapsed .left-split-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 63px;       
+    background-color: #c2c2c2;
+  }
+  .master-wrapper.collapsed .right-split-container {
+    width: auto !important;
+    float:none;
+    margin-left: 63px;
+  }
+  .master-wrapper.collapsed ul.accordion li {
+    position:relative;
+  }
+
+  .master-wrapper.collapsed ul.accordion .content {
+     position: absolute;
+     top: 0;
+     left: 63px;
+     z-index: 1000;
+     min-width: 300px;
+
+  }
   .dropdown-profile {
     display: none;
   }
 
-  .row .left-split-container{
-    margin-left: 0% !important;
-  }
 
   .row .right-split-container{
     width: 75% !important;
@@ -4329,9 +4393,6 @@ a.milestone-date:hover {
     float: left;
   }
 
-  .left-split-container{
-    margin-left: -100%;
-  }
 
   .logo {
     height: 42px;
@@ -4827,10 +4888,35 @@ a.milestone-date:hover {
   }
 
   .left-split-container {
-    display: block;
-    float: left;
-    margin-left: -100%;
-    background-color: green;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: -271px;
+
+    width: 251px;
+    
+    z-index:1000;
+  }
+
+  body.open .left-split-container {
+    display:block;
+  }
+
+  .master-wrapper {
+    position: relative;
+    left: 0px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  body.open .master-wrapper {
+    left: 271px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  body.open {
+    overflow: hidden;
   }
 
   .modal-footer {
@@ -5240,4 +5326,4 @@ a.milestone-date:hover {
 
 
 /* END WIDGETS */
-/* **************************************** */
+/* ***************************************** */
