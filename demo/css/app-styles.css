@@ -4585,6 +4585,31 @@ a.milestone-date:hover {
   form.custom .twelve.columns .control-with-trailing-icon {
     width: 93% !important;
   }
+
+  .calendar-grid {
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  .background {
+    white-space: nowrap;
+  }
+  .background .month-column,
+  .background .month-column:last-child {
+    float:none;
+    display: inline-block;
+    width: 75px;
+    margin-left: -6px;
+  }
+  .background .month-column:first-child {
+    margin-left: 0px;
+  }
+  .background .month-column .title {
+    border-width: 1px 1px 1px 1px;
+  }
+  .background .month-column:first-child .title {
+    border-width: 1px 1px 1px 0px;
+  }
+
 }
 
 /* portait Andriod phone <4 inch screen */
