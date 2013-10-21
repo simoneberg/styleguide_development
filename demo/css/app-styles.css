@@ -4586,6 +4586,9 @@ a.milestone-date:hover {
     width: 93% !important;
   }
 
+  .panel-content-container-full {
+    overflow-x:scroll;
+  }
   .calendar-grid {
     overflow-y: hidden;
     overflow-x: scroll;
@@ -4597,7 +4600,7 @@ a.milestone-date:hover {
   .background .month-column:last-child {
     float:none;
     display: inline-block;
-    width: 75px;
+    width: 76px;
     margin-left: -6px;
   }
   .background .month-column:first-child {
@@ -4608,6 +4611,125 @@ a.milestone-date:hover {
   }
   .background .month-column:first-child .title {
     border-width: 1px 1px 1px 0px;
+  }
+  .list-dev-activities {
+    left:0px;
+  }
+  .dev-activity {
+    border-right: 0;
+  }
+
+  .month-column-1 {
+    width: 75px;
+  }
+  .month-column-2 {
+    width: 150px;
+  }
+  .month-column-3 {
+    width: 225px;
+  }
+  .month-column-4 {
+    width: 300px;
+  }
+  .month-column-5 {
+    width: 375px;
+  }
+  .month-column-6 {
+    width: 450px;
+  }
+  .month-column-7 {
+    width: 525px;
+  }
+  .month-column-8 {
+    width: 600px;
+  }
+  .month-column-9 {
+    width: 675px;
+  }
+  .month-column-10 {
+    width: 750px;
+  }
+  .month-column-11 {
+    width: 825px;
+  }
+  .month-column-12 {
+    width: 900px;
+  }
+
+  .offset-month-1 {
+    margin-left: 75px;
+  }
+  .offset-month-2 {
+    margin-left: 150px;
+  }
+  .offset-month-3 {
+    margin-left: 225px;
+  }
+  .offset-month-4 {
+    margin-left: 300px;
+  }
+  .offset-month-5 {
+    margin-left: 375px;
+  }
+  .offset-month-6 {
+    margin-left: 450px;
+  }
+  .offset-month-7 {
+    margin-left: 525px;
+  }
+  .offset-month-8 {
+    margin-left: 600px;
+  }
+  .offset-month-9 {
+    margin-left: 675px;
+  }
+  .offset-month-10 {
+    margin-left: 750px;
+  }
+  .offset-month-11 {
+    margin-left: 825px;
+  }
+  .offset-month-12 {
+    margin-left: 900px;
+  }
+  ul.milestones > li {
+    margin-left: 33px;
+  }
+  .milestones .offset-month-1 {
+    left: 75px;
+  }
+  .milestones .offset-month-2 {
+    left: 150px;
+  }
+  .milestones .offset-month-3 {
+    left: 225px;
+  }
+  .milestones .offset-month-4 {
+    left: 300px;
+  }
+  .milestones .offset-month-5 {
+    left: 375px;
+  }
+  .milestones .offset-month-6 {
+    left: 450px;
+  }
+  .milestones .offset-month-7 {
+    left: 525px;
+  }
+  .milestones .offset-month-8 {
+    left: 600px;
+  }
+  .milestones .offset-month-9 {
+    left: 675px;
+  }
+  .milestones .offset-month-10 {
+    left: 750px;
+  }
+  .milestones .offset-month-11 {
+    left: 825px;
+  }
+  .milestones .offset-month-12 {
+    left: 900px;
   }
 
 }
