@@ -3612,6 +3612,26 @@ ul.milestones > li[class^="offset-week"] {
   margin-left: 100%;
 }
 
+.weeks-4 .milestones > li {
+  position: absolute;
+}
+
+.weeks-4 .milestones .offset-week-0 {
+  left: 0%;
+}
+.weeks-4 .milestones .offset-week-1 {
+  left: 25%;
+}
+.weeks-4 .milestones .offset-week-2 {
+  left: 50%;
+}
+.weeks-4 .milestones .offset-week-3 {
+  left: 75%;
+}
+.weeks-4 .milestones .offset-week-4 {
+  left: 100%;
+}
+
 .weeks-6 .week-column {
   width: 16.666666667%;
 }
@@ -4733,6 +4753,21 @@ a.milestone-date:hover {
     margin-left: 600px;
   }
 
+  .weeks-4 .milestones .offset-week-0 {
+    left: 0;
+  }
+  .weeks-4 .milestones .offset-week-1 {
+    left: 150px;
+  }
+  .weeks-4 .milestones .offset-week-2 {
+    left: 300px;
+  }
+  .weeks-4 .milestones .offset-week-3 {
+    left: 450px;
+  }
+  .weeks-4 .milestones .offset-week-4 {
+    left: 600px;
+  }
 
   .weeks-6 .week-column-1 {
     width: 150px;
