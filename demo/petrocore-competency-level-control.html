@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
 
   <!-- Set the viewport width to device width for mobile -->
-<!--<meta name="viewport" content="width=device-width" />-->
+<!--<meta name="viewport" content="width=device-width" />-->  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
   <title>PetroSkills Online Style Guide</title>
@@ -19,13 +19,13 @@
 
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../stylesheets/app.css">
+    <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
   <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
-
   <script src="../javascripts/modernizr.foundation.js"></script>
 
 </head>
@@ -43,7 +43,7 @@
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+         <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -51,6 +51,7 @@
                   <li><a href="#">Role Summary</a></li>
                   <li><a href="#">Account History</a></li>
                   <li><a href="#">Role History</a></li>
+
               </ul>
           </li>
           <li><p class="bar">&#124;</p></li>
@@ -78,6 +79,7 @@
 
 <!--***** PETROCORE HEADER *****-->
 
+
 <!--***** MAIN WRAPPER *****-->
 <div class="row master-wrapper">
 
@@ -89,11 +91,11 @@
         <div class="row collapse search-input">
 
           <div class="nine mobile-two columns">
-            <input id="initial-search" class="round-left" type="text" value="vancouver island" />
+            <input id="initial-search" class="round-left" type="text" value="" />
           </div>
 
           <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span> 
           </div>
 
           <div class="two mobile-one columns">
@@ -104,46 +106,44 @@
       </div>
       <!--***** SEARCH *****-->
 
-			<div id="advanced_search" class="display-none">
-	                <!--This is a Advanced Search panel that is hidden by default-->
+      <div id="advanced_search" class="display-none">
+      <!--This is a Advanced Search panel that is hidden by default-->
 
-                    <p><strong>Advanced Search</strong></p>
+        <p><strong>Advanced Search</strong></p>
 
-					<form class="custom search-type">
-						<label id="search-type-label" for="customDropdown">Search Type:</label>
-						<select class="custom-dropdown expand" id="customDropdown">
-							<option SELECTED>Person</option>
-							<option>Group</option>
-							<option>Position</option>
-							<option>Map</option>
-							<option>Skill Group</option>
-							<option>Skill</option>
-							<option>Skill Description</option>
-							<option>Development Activity</option>
-						</select>
+            <form class="custom search-type">
+                <label id="search-type-label" for="customDropdown">Search Type:</label>
+                <select class="custom-dropdown expand" id="customDropdown">
+                    <option SELECTED>Person</option>
+                    <option>Group</option>
+                    <option>Position</option>
+                    <option>Map</option>
+                    <option>Skill Group</option>
+                    <option>Skill</option>
+                    <option>Skill Description</option>
+                    <option>Development Activity</option>
+                </select>
 
-					</form>
+            </form>
+            <div class="add-filter-container">
 
-	                <div class="add-filter-container">
+                <!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
+                <!--***** ADD FILTER *****-->
 
-    				      <!--***** ADD FILTER *****-->
+                <div class="add-filter-area">
+                          
+                    <hr class="petrocore-hr">
+                        <ul id="filters">
 
-                    	  <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
-				          <!--***** ADD FILTER *****-->
+       <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-                    	  <div class="add-filter-area">
+       <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
 
-								<hr class="petrocore-hr">
-                        		<ul id="filters">
-
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
-
-	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
-
-             		            </ul>
-                    	  </div>
-					</div>
-		     </div>
+                         </ul>
+                </div>
+            </div>
+        </div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -209,7 +209,7 @@
                   <li><a href="#">Activities</a></li>
                   <li><a href="#">Groups</a></li>
                   <li><a href="#">Maps</a></li>
-                  <li><a href="petrocore-user-summary.html">Users</a></li>
+                  <li><a href="#">People</a></li>
                   <li><a href="#">Positions</a></li>
                   <li><a href="#">Profiles</a></li>
                 </ul>
@@ -245,26 +245,61 @@
 
   <!--***** RIGHT SPLIT CONTAINER *****-->
   <div class="nine columns right-split-container">
-      <div class="breadcrumbs-container">
-          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
-        <div class="breadcrumbs-list-container">
-          <ul class="breadcrumbs">
-            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li class="current"><a href="#">Search</a></li>
-          </ul>
-        </div>
+    <div class="breadcrumbs-container">
+      <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+      <div class="breadcrumbs-list-container">
+        <ul class="breadcrumbs">
+          <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+          <li class="current"><a href="#">Competency Levels</a></li>
+        </ul>
       </div>
-      <div class="content-container">
-        <!--This will hold the content-->
-          <h4>Search Results for &quot;vancouver island&quot;</h4>
-            <hr class="search-results-for">
-            <div class="row">
-	            <div class="twelve columns text-center">
- 		           <p>No search results found.</p>
-				</div>
-            </div>
     </div>
-  </div>
+
+    <div class="content-container">
+    <!--This will hold the content-->
+      <h4>Competency Levels</h4>
+      <hr>
+          
+      <!-- This is dashboard panel 1 -->
+      <div id="competencelevel1" class="panel-wrapper">
+        <div class="panel-header">
+
+          <div class="panel-title-container">
+            <h5 class="name-classifier">Competence Level</h5>
+          </div>
+
+          <div class="panel-header-icons-container">
+            <ul class="panel-header-icons-list">
+              <li>
+                <a id="addcompetency" class="button secondary radius" href="#">Add Competency</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul id="competency_list">
+        <!-- List of Items to be displayed -->
+
+          <li class="row competence-level-item">
+            <div class="one mobile-one columns competence-level-number background-blue">
+              <p class="cl-number">1</p>
+            </div>
+            <div class="nine mobile-two columns cl-description">
+              <p style="width:100%;">Competence level 1</p>
+            </div>
+            <div class="two mobile-one columns cl-icons">
+              <a href="#" class="icon- cl-icon-arrow-up disabled">&#xf062;</a>
+              <a href="#" class="icon- cl-icon-arrow-down disabled">&#xf063;</a>
+              <a href="#" class="icon- cl-icon-x disabled">&#xf00d;</a>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+     </div><!--Close Content Container-->
+   </div>
   </div>
   <!--***** RIGHT SPLIT CONTAINER *****-->
 
@@ -293,10 +328,10 @@
       <li><a href="#">Sub Nav Item 5</a></li>
     </ul>
   </li> -->
-
+  
   <!-- END NAVIGATION -->
     </div>
-  <!-- </div> -->
+  <!--</div>-->
   <!-- CONTENT AREA -->
 
 <div id="myModal" class="reveal-modal expand">
@@ -314,47 +349,41 @@
   </div>
 </div>
 
-
 <div id="overlay"></div>
 
 <div class="notifications-popup">
 
-	<div class="arrow"></div>
-	<div class="arrow-border"></div>
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
 
-	<div class="notifications-title">
-    	<h5>Notifications</h5>
-	</div>
+    <div class="notifications-title">
+        <h5>Notifications</h5>
+    </div>
 
-	<div class="notifications-area">
+    <div class="notifications-area">
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a>
-			<hr class="hr-notification">
-	    </div>
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 1 has been generated</p>
+            <a href="#">View Report</a> 
+            <hr class="hr-notification">
+        </div>
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a>
-			<hr class="hr-notification">
-		</div>
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 2 has been generated</p>
+            <a href="#">View Report</a> 
+            <hr class="hr-notification">
+        </div>
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a>
-		</div>
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 3 has been generated</p>
+            <a href="#">View Report</a> 
+        </div>
 
-	</div>
+    </div>
 </div>
-
-
-
-
-
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
