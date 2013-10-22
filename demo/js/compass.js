@@ -217,7 +217,105 @@ $(document).ready(function(){
      $('.panel-header-icons-collapse-up.icon-').css('margin-top','2px');
    }
 
- });
+  });
+
+  // Add A Competency Control Item to the list
+  $('#addcompetency').click (function() {
+
+    var n = $("#competency_list li").length;
+    var newdescription = "Competence level " + (n+1);
+
+    $('#competency_list li.competence-level-item').eq(0).clone(true).appendTo('#competency_list');
+    $("#competency_list li .cl-number").eq(n).html(n+1);
+    $("#competency_list li .cl-description").eq(n).html(newdescription);
+    $('#competency_list').sortcompetency();
+  });
+
+  // Removes Competency Control Items from the list
+  $('#competency_list li .cl-icon-x').click(function(){
+    if ($("#competency_list li").length > 1) {
+      $(this).parent().parent('li').remove();
+      $('#competency_list').sortcompetency();
+    }
+  });
+
+  // Move Up Competency Control Items from the list
+  $('#competency_list li .cl-icon-arrow-up').click(function(){
+    var parent = $(this).parent().parent('li');
+    parent.insertBefore(parent.prev());
+    $('#competency_list').sortcompetency();
+  });
+
+  // Move Down Competency Control Items from the list
+  $('#competency_list li .cl-icon-arrow-down').click(function(){
+    var parent = $(this).parent().parent('li');
+    parent.insertAfter(parent.next());
+    $('#competency_list').sortcompetency();
+  });
+
+  // Custom function called by four events - Add, Remove, Move Up, and Move Down
+  jQuery.fn.sortcompetency = function(){
+    var n = $("#competency_list li").length;
+
+    $('#competency_list li').each(function( index ) {
+
+    if (n >= 2)
+    {
+      $(this).find('.cl-number').html(index+1);
+      if ( $(this).find('.cl-number').html() == 1 || $(this).find('.cl-number').html() == n )
+      {
+        $(this).find('a.cl-icon-x').removeClass('disabled').hover(function(){
+          $(this).css("color","#0169a0");},function(){
+          $(this).css("color","#858585");});
+
+          if ( $(this).find('.cl-number').html() == 1 )
+          {
+            $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+              $(this).css("color","#858585");},function(){
+              $(this).css("color","#858585");});
+
+            $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+              $(this).css("color","#0169a0");},function(){
+              $(this).css("color","#858585");});
+          }
+          else
+          {
+            $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+              $(this).css("color","#0169a0");},function(){
+              $(this).css("color","#858585");});
+
+            $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+              $(this).css("color","#858585");},function(){
+              $(this).css("color","#858585");});
+          }
+        }
+        else
+        {
+          $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+            $(this).css("color","#0169a0");},function(){
+            $(this).css("color","#858585");});
+          $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+            $(this).css("color","#0169a0");},function(){
+            $(this).css("color","#858585");});
+        }
+      }
+      else
+      {
+        $(this).find('.cl-number').html(index+1);
+        $(this).find('a.cl-icon-x').addClass('disabled').hover(function(){
+          $(this).css("color","#858585");},function(){
+          $(this).css("color","#858585");});
+        $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+          $(this).css("color","#858585");},function(){
+          $(this).css("color","#858585");});
+        $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+          $(this).css("color","#858585");},function(){
+          $(this).css("color","#858585");});
+      }
+
+    });
+
+  }
 
 });
 
