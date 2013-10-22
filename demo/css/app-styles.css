@@ -3513,6 +3513,11 @@ ul.inline-list.forecast-status-list > li > *{
  min-height: 1px;
  padding: 0 15px;
 }
+.background .week-column,
+.background .week-column:last-child {
+  float: left;
+
+}
 
 /* grrrr update my file assembla */
 
@@ -3536,6 +3541,11 @@ ul.inline-list.forecast-status-list > li > *{
   width: 100%;
 }
 
+ul.milestones > li[class^="offset-week"] {
+  position:absolute;
+  margin-left: 10%;
+}
+
 .weeks-5 .offset-week-1 {
   margin-left: 20%;
 }
@@ -3550,6 +3560,26 @@ ul.inline-list.forecast-status-list > li > *{
 }
 .weeks-5 .offset-week-5 {
   margin-left: 100%;
+}
+
+.weeks-5 .milestones .offset-week-0 {
+  left: 0%;
+}
+
+.weeks-5 .milestones .offset-week-1 {
+  left: 20%;
+}
+.weeks-5 .milestones .offset-week-2 {
+  left: 40%;
+}
+.weeks-5 .milestones .offset-week-3 {
+  left: 60%;
+}
+.weeks-5 .milestones .offset-week-4 {
+  left: 80%;
+}
+.weeks-5 .milestones .offset-week-5 {
+  left: 100%;
 }
 
 .weeks-4 .week-column {
@@ -3698,6 +3728,10 @@ ul.inline-list.forecast-status-list > li > *{
   margin-left: 100%;
 }
 
+.milestones .offset-month-0 {
+  position: absolute;
+  left: 0;
+}
 .milestones .offset-month-1 {
   position: absolute;
   left: 8.33333%;
