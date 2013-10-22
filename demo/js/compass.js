@@ -354,23 +354,29 @@ $(function() {
     }
   });
 });
-$(".toggle-nav-mobile").on("click", function(ev){
-  ev.preventDefault();
-  $("body").toggleClass("open");
-})
 
-$(".collapse-menu").on("click", function(ev){
+(function($){
+
+  $(".toggle-nav-mobile").on("click", function(ev){
+    ev.preventDefault();
+    $("body").toggleClass("open");
+  })
+
+  $(".collapse-menu").on("click", function(ev){
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
   
   wrapper.toggleClass("collapsed");
 
   if (wrapper.hasClass("collapsed")) {
-    $(this).find(".icon-").html("&#xf0a9;"); // text for arrow left
+      $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
     return;
   }
-  $(this).find(".icon-").html("&#xf0a8;"); // text for arrow left
+    $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
 
   $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
 
-})
+  })
+
+
+})(jQuery);
