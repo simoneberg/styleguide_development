@@ -431,6 +431,12 @@ $('.tabs-slides-container').gettingStarted();
 
 })(jQuery);
 
+$(".list-dev-activities").compassPopover();
+
+$(".toggle-nav-mobile").on("click", function(ev){
+  ev.preventDefault();
+  $("body").toggleClass("open");
+})
 
 $(".list-dev-activities").compassPopover();
 
@@ -478,3 +484,23 @@ $(function() {
 
 
 })(jQuery);
+})
+
+$(".list-dev-activities").compassPopover();
+
+$(function() {
+  $( document ).tooltip({
+    position: {
+      my: "center bottom-20",
+      at: "center top",
+      using: function( position, feedback ) {
+        $( this ).css( position );
+        $( "<div>" )
+          .addClass( "arrow" )
+          .addClass( feedback.vertical )
+          .addClass( feedback.horizontal )
+          .appendTo( this );
+    }
+    }
+  });
+});
