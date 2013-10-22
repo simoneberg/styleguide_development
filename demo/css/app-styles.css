@@ -3674,6 +3674,29 @@ ul.milestones > li[class^="offset-week"] {
   margin-left: 100%;
 }
 
+.weeks-6 .milestones .offset-week-0 {
+  left: 0;
+}
+
+.weeks-6 .milestones .offset-week-1 {
+  left: 16.6666667%;
+}
+.weeks-6 .milestones .offset-week-2 {
+  left: 33.333333%;
+}
+.weeks-6 .milestones .offset-week-3 {
+  left: 50%;
+}
+.weeks-6 .milestones .offset-week-4 {
+  left: 66.6666667%;
+}
+.weeks-6 .milestones .offset-week-5 {
+  left: 83.3333333%;
+}
+.weeks-6 .milestones .offset-week-6 {
+  left: 100%;
+}
+
 .month-column-1 {
   width: 8.33333%;
 }
@@ -4805,6 +4828,28 @@ a.milestone-date:hover {
   }
   .weeks-6 .offset-week-6 {
     margin-left: 900px;
+  }
+
+  .weeks-6 .milestones .offset-week-0 {
+    left: 0;
+  }
+  .weeks-6 .milestones .offset-week-1 {
+    left: 150px;
+  }
+  .weeks-6 .milestones .offset-week-2 {
+    left: 300px;
+  }
+  .weeks-6 .milestones .offset-week-3 {
+    left: 450px;
+  }
+  .weeks-6 .milestones .offset-week-4 {
+    left: 600px;
+  }
+  .weeks-6 .milestones .offset-week-5 {
+    left: 750px;
+  }
+  .weeks-6 .milestones .offset-week-6 {
+    left: 900px;
   }
 
   .month-column-1 {
