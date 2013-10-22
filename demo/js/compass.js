@@ -484,7 +484,7 @@ $(function() {
 
 
 })(jQuery);
-})
+
 
 $(".list-dev-activities").compassPopover();
 
