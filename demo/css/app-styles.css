@@ -2710,10 +2710,6 @@ textarea.compass-error:focus {
   margin-bottom: 0;
 }
 
-.disabled-text {
-  color: #136593;
-  font-style:italic;
-}
 
 /* END ALERTS, LABELS, BADGES */
 /* **************************************** */
@@ -4032,6 +4028,11 @@ a.milestone-date:hover {
   color: #222;
 }
 
+/*Manage Dev Activity*/
+.archived-activity {
+  color: #136593;
+  font-style:italic;
+}
 /* END PAGE SPECIFIC */
 /* **************************************** */
 
@@ -4115,6 +4116,11 @@ a.milestone-date:hover {
 
 .with-above-large {
   margin-top: -20px;
+}
+
+a.action-item-disabled {
+  cursor: default;
+  font-style:italic;
 }
 
 /* END MISC */
