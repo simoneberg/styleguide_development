@@ -47,13 +47,13 @@
 
             <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
-                <li><a href="#">Settings</a></li>
+                <li><a href="petrocore-person-details-self.html">Settings</a></li>
                 <li><a href="#">Role Summary</a></li>
                 <li><a href="#">Account History</a></li>
                 <li><a href="#">Role History</a></li>
-              </li>
+              </ul>
             </li>
-            <li><p class="bar">&#124;</p></li>
+            <li><p class="bar">|</p></li>
 
             <li class="has-dropdown"><a href="#">Language</a>
               <ul class="dropdown language">
@@ -63,15 +63,15 @@
                 <li><a href="#">Français</a></li>
                 <li><a href="#">Italiano</a></li>
                 <li><a href="#">Polski</a></li>
-              </li>
+              </ul>
             </li>
-            <li><p class="bar">&#124;</p></li>
+            <li><p class="bar">|</p></li>
 
 
             <li class="top-nav-links"><a href="#">Help</a></li>
-            <li><p class="bar">&#124;</p></li>
+            <li><p class="bar">|</p></li>
             <li class="top-nav-links"><a href="#">Logout</a></li>
-          </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -256,18 +256,26 @@
       <div class="content-container">
         <!--This will hold the content-->
 
-        <h4>User Settings</h4>
-        <a href="#">Back to Previous Page</a>
-        <div class="save-template-btn">
-          <div href="#" class="button dropdown petrocore-actions">
-            Actions
-            <span></span>
-            <ul class="no-hover" >
-              <li><a href="#">View History</a></li>
-              <li><a href="#">Delete User</a></li>
-            </ul>
+
+          <h4 style="margin-bottom:-15px;">User Settings</h4>
+
+
+
+<div style="float:right;margin-bottom:10px;background-color:pink;">
+
+          <a  href="#">Back to Previous Page</a>
+          <div style="margin-top:-25px;float:right;" class=" save-template-btn">
+            <div href="#" class="button dropdown petrocore-actions">
+              Actions
+              <span></span>
+              <ul class="no-hover" >
+                <li><a href="#">View History</a></li>
+                <li><a href="#">Delete User</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
+
+    </div>
         <hr>
 
         <div class="same-line">
@@ -276,7 +284,7 @@
         <div class="same-line">
           <h5>Position:</h5><span> IT Developer</span>
         </div><br>
-        <div class="same-line">
+        <div class="same-line last">
           <h5>Status:</h5><span> Active</span>
         </div>
 
@@ -289,7 +297,7 @@
                 <div class="panel-title-container"><h5>Account Settings</h5></div>
               </div>
               <div class="panel-content-container-dashboard">
-                <ul class="list no-bullet">
+                <ul class="list angle-bullet">
                   <li><a href="#">Assigned Positions</a></li>
                   <li><a href="#">Assigned Groups and Roles</a></li>
                   <li><a href="#">Assigned Direct Participants</a></li>
@@ -327,7 +335,7 @@
               <div class="panel-title-container"><h5>Properties</h5></div>
             </div>
             <div class="panel-content-container-dashboard">
-              <ul class="list no-bullet">
+              <ul class="list angle-bullet">
                 <li><a href="#">Login Information</a></li>
                 <li><a href="#">Contact Information</a></li>
                 <li><a href="#">Account Information</a></li>
@@ -350,7 +358,7 @@
               <div class="panel-title-container"><h5>Role Summary</h5></div>
             </div>
             <div class="panel-content-container-dashboard">
-              <ul class="list no-bullet">
+              <ul class="list angle-bullet">
                 <li><a href="#">Activity Administration</a></li>
                 <li><a href="#">Group Administration</a></li>
                 <li><a href="#">Map Administration</a></li>

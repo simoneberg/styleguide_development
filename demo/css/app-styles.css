@@ -83,6 +83,19 @@ div.pagination-centered {
   margin-top: 20px;
 }
 
+div.header-inline {
+  margin-top: -15px;
+  float: right;
+}
+
+div.header-inline a {
+  margin-right: 10px;
+}
+
+div.header-inline .save-template-btn {
+  margin-top: -25px;
+}
+
 span.prefix {
   background: #afafaf; /* Old browsers */
   background: -moz-linear-gradient(top,  #afafaf 0%, #898989 100%); /* FF3.6+ */
@@ -133,7 +146,24 @@ table.wrap-cell-content td span.wrapword {
 }
 
 .panel-wrapper ul.list {
-  margin-left: 15px;
+  margin-left: 1.2em;
+}
+
+.panel-wrapper ul.list li {
+  margin-top: 5px;
+}
+
+.panel-wrapper ul.list li:first-child {
+  margin-top: -8px;
+}
+
+.panel-wrapper ul.list li:last-child {
+  margin-bottom: 8px;
+}
+
+.panel-wrapper ul.list.no-bullet,
+.panel-wrapper ul.list.angle-bullet {
+  margin-left: 0;
 }
 
 ul.no-bullet,
@@ -324,6 +354,21 @@ ul.pagination li.current a {
 
 .row .row {
   margin: 0 0;
+}
+
+.same-line h4,
+.same-line h5 {
+  ddmargin-right: 10px;
+  display: inline-block;
+}
+
+.same-line h5 {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.same-line.last h5 {
+  margin-bottom: 18px;
 }
 
 .side-by-side {
