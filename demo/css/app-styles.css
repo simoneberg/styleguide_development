@@ -4687,26 +4687,134 @@ a.milestone-date:hover {
     white-space: nowrap;
   }
   .background .month-column,
-  .background .month-column:last-child {
+  .background .month-column:last-child,
+  .background .week-column,
+  .background .week-column:last-child {
     float:none;
     display: inline-block;
     width: 76px;
     margin-left: -6px;
   }
-  .background .month-column:first-child {
+  .background .week-column,
+  .background .week-column:last-child {
+    width: 151px;
+  }
+  .background .month-column:first-child,
+  .background .week-column:first-child {
     margin-left: 0px;
   }
-  .background .month-column .title {
+  .background .month-column .title,
+  .background .week-column .title {
     border-width: 1px 1px 1px 1px;
   }
-  .background .month-column:first-child .title {
+  .background .month-column:first-child .title,
+  .background .week-column:first-child .title {
     border-width: 1px 1px 1px 0px;
   }
-  .list-dev-activities {
+  .year-grid .list-dev-activities {
     left:0px;
   }
   .dev-activity {
     border-right: 0;
+  }
+
+
+  .weeks-5 .week-column-1 {
+    width: 150px;
+  }
+  .weeks-5 .week-column-2 {
+    width: 300px;
+  }
+  .weeks-5 .week-column-3 {
+    width: 450px;
+  }
+  .weeks-5 .week-column-4 {
+    width: 600px;
+  }
+  .weeks-5 .week-column-5 {
+    width: 750px;
+  }
+
+  .weeks-5 .offset-week-1 {
+    margin-left: 150px;
+  }
+  .weeks-5 .offset-week-2 {
+    margin-left: 300px;
+  }
+  .weeks-5 .offset-week-3 {
+    margin-left: 450px;
+  }
+  .weeks-5 .offset-week-4 {
+    margin-left: 600px;
+  }
+  .weeks-5 .offset-week-5 {
+    margin-left:  750px;
+  }
+
+
+  .weeks-4 .week-column-1 {
+    width: 150px;
+  }
+  .weeks-4 .week-column-2 {
+    width: 300px;
+  }
+  .weeks-4 .week-column-3 {
+    width: 450px;
+  }
+  .weeks-4 .week-column-4 {
+    width: 600px;
+  }
+
+  .weeks-4 .offset-week-1 {
+    margin-left: 150px;
+  }
+  .weeks-4 .offset-week-2 {
+    margin-left: 300px;
+  }
+  .weeks-4 .offset-week-3 {
+    margin-left: 450px;
+  }
+  .weeks-4 .offset-week-4 {
+    margin-left: 600px;
+  }
+
+
+  .weeks-6 .week-column-1 {
+    width: 150px;
+  }
+  .weeks-6 .week-column-2 {
+    width: 300px;
+  }
+  .weeks-6 .week-column-3 {
+    width: 450px;
+  }
+  .weeks-6 .week-column-4 {
+    width: 600px;
+  }
+  .weeks-6 .week-column-5 {
+    width: 750px;
+  }
+  .weeks-6 .week-column-6 {
+    width: 900px;
+  }
+
+  .weeks-6 .offset-week-1 {
+    margin-left: 150px;
+  }
+  .weeks-6 .offset-week-2 {
+    margin-left: 300px;
+  }
+  .weeks-6 .offset-week-3 {
+    margin-left: 450px;
+  }
+  .weeks-6 .offset-week-4 {
+    margin-left: 600px;
+  }
+  .weeks-6 .offset-week-5 {
+    margin-left: 750px;
+  }
+  .weeks-6 .offset-week-6 {
+    margin-left: 900px;
   }
 
   .month-column-1 {
