@@ -33,9 +33,6 @@
    /* Working Area */
    /* THIS AREA WILL NOT BE PART OF THE DEPLOYED FILE */
 
-img.profile {
-  border: 1px #000 solid;
-}
    /* CSS is seperated by concern */
 
 /* within a section the order is:
@@ -81,6 +78,10 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 
 div.pagination-centered {
   margin-top: 20px;
+}
+
+img.profile {
+  border: 1px #000 solid;
 }
 
 span.prefix {
