@@ -132,6 +132,27 @@ table.wrap-cell-content td span.wrapword {
   white-space: normal;
 }
 
+.panel-wrapper ul.list {
+  margin-left: 15px;
+}
+
+ul.no-bullet,
+ul.angle-bullet {
+  list-style-type: none;
+}
+
+ul.angle-bullet li {
+  padding-left: 1.2em;
+}
+
+ul.angle-bullet li:before {
+  content: '\f105';
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.2em;
+  width: 1.2em;
+}​
+
 ul.pagination {
   margin-top: -15px;
   margin-bottom: 17px;
