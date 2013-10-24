@@ -133,6 +133,44 @@ table.wrap-cell-content td span.wrapword {
   white-space: normal;
 }
 
+.panel-wrapper ul.list {
+  margin-left: 1.2em;
+}
+
+.panel-wrapper ul.list li {
+  margin-top: 5px;
+}
+
+.panel-wrapper ul.list li:first-child {
+  margin-top: -8px;
+}
+
+.panel-wrapper ul.list li:last-child {
+  margin-bottom: 8px;
+}
+
+.panel-wrapper ul.list.no-bullet,
+.panel-wrapper ul.list.angle-bullet {
+  margin-left: 0;
+}
+
+ul.no-bullet,
+ul.angle-bullet {
+  list-style-type: none;
+}
+
+ul.angle-bullet li {
+  padding-left: 1.2em;
+}
+
+ul.angle-bullet li:before {
+  content: '\f105';
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.2em;
+  width: 1.2em;
+}​
+
 ul.pagination {
   margin-top: -15px;
   margin-bottom: 17px;
@@ -245,6 +283,22 @@ ul.pagination li.current a {
   margin-right: -8px;
 }
 
+.header-inline a.back-to-previous-page {
+  margin-right: 10px;
+  margin-top: -17px;
+  float: right;
+  vertical-align: baseline;
+}
+
+.header-inline .save-template-btn {
+  margin-top: -28px;
+}
+
+.header-inline h4{
+  margin-top: 13px;
+  line-height: 19px;
+}
+
 .indent {
   margin-left: 25px;
 }
@@ -304,6 +358,21 @@ ul.pagination li.current a {
 
 .row .row {
   margin: 0 0;
+}
+
+.same-line h4,
+.same-line h5 {
+  ddmargin-right: 10px;
+  display: inline-block;
+}
+
+.same-line h5 {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.same-line.last h5 {
+  margin-bottom: 18px;
 }
 
 .side-by-side {
@@ -1530,11 +1599,16 @@ ul.accordion>li>div.title:after {
   margin-bottom: 15px;
 }
 
-/* END BUTTONS */
+/* END BUTTONS 23
 /* **************************************** */
 
 /* **************************************** */
-/* FORMS */
+
+.back-to-previous-page-link {
+  float: right;
+  margin-top: -23px;
+  margin-bottom: 15px;
+}/* FORMS */
 /* note: forms will have multiple subsections */
 /* note: dropdowns have a seperate section */
 fieldset {
