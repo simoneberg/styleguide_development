@@ -83,19 +83,6 @@ div.pagination-centered {
   margin-top: 20px;
 }
 
-div.header-inline {
-  margin-top: -15px;
-  float: right;
-}
-
-div.header-inline a {
-  margin-right: 10px;
-}
-
-div.header-inline .save-template-btn {
-  margin-top: -25px;
-}
-
 span.prefix {
   background: #afafaf; /* Old browsers */
   background: -moz-linear-gradient(top,  #afafaf 0%, #898989 100%); /* FF3.6+ */
@@ -293,6 +280,21 @@ ul.pagination li.current a {
 
 .fix-margin-right {
   margin-right: -8px;
+}
+
+.header-inline a {
+  margin-right: 10px;
+  margin-top: -18px;
+  float: right;
+  vertical-align: baseline;
+}
+
+.header-inline .save-template-btn {
+  margin-top: -25px;
+}
+
+.header-inline h4{
+  margin-top: 15px;
 }
 
 .indent {
