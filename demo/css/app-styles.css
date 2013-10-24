@@ -282,19 +282,20 @@ ul.pagination li.current a {
   margin-right: -8px;
 }
 
-.header-inline a {
+.header-inline a.back-to-previous-page {
   margin-right: 10px;
-  margin-top: -18px;
+  margin-top: -17px;
   float: right;
   vertical-align: baseline;
 }
 
 .header-inline .save-template-btn {
-  margin-top: -25px;
+  margin-top: -28px;
 }
 
 .header-inline h4{
-  margin-top: 15px;
+  margin-top: 13px;
+  line-height: 19px;
 }
 
 .indent {
@@ -1597,11 +1598,16 @@ ul.accordion>li>div.title:after {
   margin-bottom: 15px;
 }
 
-/* END BUTTONS */
+/* END BUTTONS 23
 /* **************************************** */
 
 /* **************************************** */
-/* FORMS */
+
+.back-to-previous-page-link {
+  float: right;
+  margin-top: -23px;
+  margin-bottom: 15px;
+}/* FORMS */
 /* note: forms will have multiple subsections */
 /* note: dropdowns have a seperate section */
 fieldset {
