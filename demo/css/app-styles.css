@@ -173,7 +173,7 @@ ul.angle-bullet li:before {
   display: inline-block;
   margin-left: -1.2em;
   width: 1.2em;
-}?
+}
 
 ul.pagination {
   margin-top: -15px;
@@ -1198,6 +1198,25 @@ ul.accordion>li.active .content>ul>li.active a {
   height: 45px;
 }
 
+.tabs-content.maps-content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tabs-content.maps-content li a {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
 /* END NAVIGATION */
 /* **************************************** */
 
@@ -2080,9 +2099,28 @@ table tbody tr:nth-child(even) {
   background: #f1f1f1;
 }
 
+table tbody tr.notification-highlight {
+  background: #c1c1c1;
+}
+
 table tbody tr td {
   vertical-align: top;
 }
+
+table.wrap-cell-content {
+  table-layout: fixed;
+}
+
+table.wrap-cell-content td span.wrapword {
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 /
+  white-space: -pre-wrap; / Opera 4-6 /
+  white-space: -o-pre-wrap; / Opera 7 /
+  white-space: pre-wrap; / css-3 /
+  word-wrap: break-word; / Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
 
 #competency-framework-table {
   min-width: 700px;
@@ -2813,6 +2851,10 @@ border: 1px solid #8a8a8a;
 
 /* **************************************** */
 /* ALERTS, LABELS, BADGES */
+a.compass-error {
+  color: #c60f13;
+  font-weight: bold !important;
+}
 
 label.compass-error {
   color: #c60f13;
