@@ -3691,6 +3691,11 @@ ul.inline-list.forecast-status-list > li > *{
  min-height: 1px;
  padding: 0 15px;
 }
+.background .week-column,
+.background .week-column:last-child {
+  float: left;
+
+}
 
 /* grrrr update my file assembla */
 
@@ -3714,6 +3719,11 @@ ul.inline-list.forecast-status-list > li > *{
   width: 100%;
 }
 
+ul.milestones > li[class^="offset-week"] {
+  position:absolute;
+  margin-left: 10%;
+}
+
 .weeks-5 .offset-week-1 {
   margin-left: 20%;
 }
@@ -3728,6 +3738,26 @@ ul.inline-list.forecast-status-list > li > *{
 }
 .weeks-5 .offset-week-5 {
   margin-left: 100%;
+}
+
+.weeks-5 .milestones .offset-week-0 {
+  left: 0%;
+}
+
+.weeks-5 .milestones .offset-week-1 {
+  left: 20%;
+}
+.weeks-5 .milestones .offset-week-2 {
+  left: 40%;
+}
+.weeks-5 .milestones .offset-week-3 {
+  left: 60%;
+}
+.weeks-5 .milestones .offset-week-4 {
+  left: 80%;
+}
+.weeks-5 .milestones .offset-week-5 {
+  left: 100%;
 }
 
 .weeks-4 .week-column {
@@ -3758,6 +3788,26 @@ ul.inline-list.forecast-status-list > li > *{
 }
 .weeks-4 .offset-week-4 {
   margin-left: 100%;
+}
+
+.weeks-4 .milestones > li {
+  position: absolute;
+}
+
+.weeks-4 .milestones .offset-week-0 {
+  left: 0%;
+}
+.weeks-4 .milestones .offset-week-1 {
+  left: 25%;
+}
+.weeks-4 .milestones .offset-week-2 {
+  left: 50%;
+}
+.weeks-4 .milestones .offset-week-3 {
+  left: 75%;
+}
+.weeks-4 .milestones .offset-week-4 {
+  left: 100%;
 }
 
 .weeks-6 .week-column {
@@ -3800,6 +3850,29 @@ ul.inline-list.forecast-status-list > li > *{
 }
 .weeks-6 .offset-week-6 {
   margin-left: 100%;
+}
+
+.weeks-6 .milestones .offset-week-0 {
+  left: 0;
+}
+
+.weeks-6 .milestones .offset-week-1 {
+  left: 16.6666667%;
+}
+.weeks-6 .milestones .offset-week-2 {
+  left: 33.333333%;
+}
+.weeks-6 .milestones .offset-week-3 {
+  left: 50%;
+}
+.weeks-6 .milestones .offset-week-4 {
+  left: 66.6666667%;
+}
+.weeks-6 .milestones .offset-week-5 {
+  left: 83.3333333%;
+}
+.weeks-6 .milestones .offset-week-6 {
+  left: 100%;
 }
 
 .month-column-1 {
@@ -3876,6 +3949,10 @@ ul.inline-list.forecast-status-list > li > *{
   margin-left: 100%;
 }
 
+.milestones .offset-month-0 {
+  position: absolute;
+  left: 0;
+}
 .milestones .offset-month-1 {
   position: absolute;
   left: 8.33333%;
@@ -4068,6 +4145,7 @@ ul.milestones {
   height:30px;
 }
 ul.milestones li {
+  position: absolute;
   margin-left: 3.33333%;
   padding: 0;
   list-style: none;
@@ -4831,6 +4909,25 @@ a.action-item-disabled {
     margin-left:  750px;
   }
 
+  .weeks-5 .milestones .offset-week-0 {
+    left: 0px;
+  }
+
+  .weeks-5 .milestones .offset-week-1 {
+    left: 150px;
+  }
+  .weeks-5 .milestones .offset-week-2 {
+    left: 300px;
+  }
+  .weeks-5 .milestones .offset-week-3 {
+    left: 450px;
+  }
+  .weeks-5 .milestones .offset-week-4 {
+    left: 600px;
+  }
+  .weeks-5 .milestones .offset-week-5 {
+    left:  750px;
+  }
 
   .weeks-4 .week-column-1 {
     width: 150px;
@@ -4858,6 +4955,21 @@ a.action-item-disabled {
     margin-left: 600px;
   }
 
+  .weeks-4 .milestones .offset-week-0 {
+    left: 0;
+  }
+  .weeks-4 .milestones .offset-week-1 {
+    left: 150px;
+  }
+  .weeks-4 .milestones .offset-week-2 {
+    left: 300px;
+  }
+  .weeks-4 .milestones .offset-week-3 {
+    left: 450px;
+  }
+  .weeks-4 .milestones .offset-week-4 {
+    left: 600px;
+  }
 
   .weeks-6 .week-column-1 {
     width: 150px;
@@ -4895,6 +5007,28 @@ a.action-item-disabled {
   }
   .weeks-6 .offset-week-6 {
     margin-left: 900px;
+  }
+
+  .weeks-6 .milestones .offset-week-0 {
+    left: 0;
+  }
+  .weeks-6 .milestones .offset-week-1 {
+    left: 150px;
+  }
+  .weeks-6 .milestones .offset-week-2 {
+    left: 300px;
+  }
+  .weeks-6 .milestones .offset-week-3 {
+    left: 450px;
+  }
+  .weeks-6 .milestones .offset-week-4 {
+    left: 600px;
+  }
+  .weeks-6 .milestones .offset-week-5 {
+    left: 750px;
+  }
+  .weeks-6 .milestones .offset-week-6 {
+    left: 900px;
   }
 
   .month-column-1 {
@@ -4970,9 +5104,21 @@ a.action-item-disabled {
   .offset-month-12 {
     margin-left: 900px;
   }
-  ul.milestones > li {
+
+  ul.milestones > li[class^="offset-month"] {
+    position:absolute;
     margin-left: 33px;
   }
+
+  ul.milestones > li[class^="offset-week"] {
+    position:absolute;
+    margin-left: 70px;
+  }
+
+  .milestones .offset-month-0 {
+    left: 0px;
+  }
+
   .milestones .offset-month-1 {
     left: 75px;
   }
