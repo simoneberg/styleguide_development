@@ -69,6 +69,77 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   clear: both;
 }
 
+#wrapper-print {
+  /* todo remove fixed width */
+  width: 960px;
+  margin: 60px auto;
+}
+
+#wrapper-print .top-bar,
+#wrapper-print .top-bar ul,
+#wrapper-print .top-bar dl,
+#wrapper-print .top-bar ul > li{
+  background: none;
+  height: auto;
+  margin: 0;
+}
+#wrapper-print .top-bar {
+  border-bottom: 1px solid #ccc;
+}
+
+#wrapper-print .top-bar .img {
+  display: inline-block;
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+#wrapper-print .top-bar .img img {
+  border: 1px solid #333;
+}
+
+#wrapper-print .top-bar dl {
+  padding-top: 9px;
+  padding-bottom: 13px;
+  padding-right: 20px;
+  color: #999;
+}
+#wrapper-print .top-bar dl dt {
+  font-size:13px;
+  color: #777;
+  font-weight: bold
+
+}
+#wrapper-print .top-bar dl dd {
+  font-size:12px;
+}
+
+#wrapper-print .development-plan-widget {
+  counter-reset: developmentplan;
+}
+#wrapper-print .development-plan-widget .activities .list-dev-activities {
+  counter-increment: developmentplan;
+}
+#wrapper-print .development-plan-widget .activities .list-dev-activities .dev-activity:before {
+  position: absolute;
+  content: counter(developmentplan);
+
+  margin-left: -30px;
+  margin-top: -10px;
+
+  display:block;
+
+  border: 1px solid #333;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background: #333;
+}
+
+
+
 .pagination-counter {
   color: #757575;
   font-size: 12px;
