@@ -2054,7 +2054,7 @@ table tbody tr:nth-child(even) {
 }
 
 table tbody tr td {
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #competency-framework-table {
