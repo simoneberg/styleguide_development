@@ -187,3 +187,12 @@ ul.inline-list li {
 .row .section.six:last-child {
    padding-left: 10px;
 }
+
+.section.notes .note-title strong {
+  display: block;
+
+}
+.section.notes .note-title small {
+  font-size: 12px;
+
+}
