@@ -83,12 +83,15 @@ $(document).ready(function(){
   function open_close(ev) {
     ev.preventDefault();
 
-    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
 
     if ($(current_panel).is(':hidden')) {
 	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
+      panel_summary.addClass("display-none");
     } else {
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
+      panel_summary.removeClass("display-none");
     }
     current_panel.slideToggle();
 
