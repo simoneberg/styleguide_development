@@ -2843,6 +2843,15 @@ ul.button-group label {
   float: left;
 }
 
+a.sorting-block { 
+  display: block; 
+  color: #000;
+  cursor: pointer;
+}
+
+a.sorting-block:hover .add-sorting-icon { color:#01669f;
+}
+
 .add-panel-icon,
 .add-sorting-icon {
   display: inline-block;
