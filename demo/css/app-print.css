@@ -31,6 +31,7 @@ h5 {
 
 #wrapper-print {
   /* todo remove fixed width */
+  width: 960px;
   margin: 60px auto;
 }
 
@@ -98,6 +99,10 @@ ul.inline-list li {
   border-left: 2px solid #BBB;
   padding-left: 5px;
   margin-left:0;
+}
+
+.calendar-grid {
+  overflow: initial;
 }
 
 .development-plan-widget { 
