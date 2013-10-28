@@ -2845,11 +2845,13 @@ ul.button-group label {
 
 a.sorting-block { 
   display: block; 
+  vertical-align:top;
   color: #000;
   cursor: pointer;
 }
 
-a.sorting-block:hover .add-sorting-icon { color:#01669f;
+a.sorting-block:hover .add-sorting-icon { 
+  color:#01669f;
 }
 
 .add-panel-icon,
