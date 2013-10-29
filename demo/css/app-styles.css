@@ -337,6 +337,19 @@ h4 {
   margin-bottom: 4px;
 }
 
+.align-center {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -354,18 +367,7 @@ h4 {
   outline: none;
 }
 
-.align-left {
-  text-align: left;
-}
 
-.align-right {
-  text-align: right;
-}
-
-.align-center {
-  text-align: center;
-  word-wrap: break-word;
-}
 
 /* END TYPOGRAPHY */
 /* **************************************** */
