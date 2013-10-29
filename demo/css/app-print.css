@@ -148,7 +148,8 @@ ul.inline-list li {
   clear: both;
 }
 .section.legend li {
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 31px;
   float: left;
   width: 16.66667%
 }
@@ -206,7 +207,7 @@ ul.inline-list li {
 
 .development-plan-summary .milestones {
   padding-top: 34px;
-  padding-bottom: 24px;
+  padding-bottom: 30px;
 }
 
 .development-plan-summary .development-plan-widget {
