@@ -1037,7 +1037,7 @@ ul.accordion>li>div.title:after {
   clear: both;
 }
 
-.filter-edit-icon {
+.filter-edit-icon { 
   margin-left: 10px;
   margin-bottom: 0;
   color: #717171;
@@ -5325,7 +5325,7 @@ a.action-item-disabled {
     bottom: 0;
     left: -271px;
 
-    width: 251px;
+    width: 251px !important;
 
     z-index:1000;
   }
