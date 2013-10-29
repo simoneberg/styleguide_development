@@ -19,8 +19,6 @@
   
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
-  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -28,116 +26,7 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery.js"></script>
-
   <script src="../javascripts/modernizr.foundation.js"></script>
-
-  <script type="text/javascript">
-
-    function show_hide_advanced(id) {
-        var advanced_panel = document.getElementById(id);
-            advanced_arrow = document.getElementById('arrowdown');
-
-
-        if(advanced_panel.style.display == 'block')
-
-        {    advanced_panel.style.display = 'none';
-            document.getElementById('arrowdown').innerHTML = '&#xf0dd;';
-            advanced_arrow.style.position = 'relative';
-            advanced_arrow.style.top = '0px';
-        }
-        else
-        {    advanced_panel.style.display = 'block';
-            document.getElementById('arrowdown').innerHTML = '&#xf0de;';
-            advanced_arrow.style.position = 'relative';
-            advanced_arrow.style.top = '7px';
-        }
-    }
-
-
-    $(document).ready(function(){
-
-        var notifs = $("#user-notifications").text();
-        var notifs_exist = true;        
-
-           $('#notification_btn').bind('click', function (event) {
-
-            if (notifs_exist == true) {
-                $('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-                $('.notifications-popup').css('top',event.pageY+30);
-                $('.notifications-popup').toggle();    
-                $('#overlay').show();
-                $('#overlay').click(function(){
-                        $('.notifications-popup').hide();
-                        $('#overlay').hide();
-                });
-                    
-            } else {
-                $('.notifications-popup').hide();
-                $('#overlay').hide();
-                }
-        });    
-
-        $('.notification .anotification').click (function() {
-            $(this).parent().remove();
-            notifs = $("#user-notifications").text();
-            $("#user-notifications").html(notifs-1);
-
-            if (notifs == 1) {
-                notifs_exist = false;
-                $('.notification-btn').css('background','#c0c2c1');
-                $('.notification-btn').css('border','1px solid #616161');
-                $('.notification-btn').css('color','#404040');
-                $('.notifications-area').html('You have "0" Notifications');
-                $('.notifications-area').css('text-align','center');
-                $('.notifications-area').css('padding','10px 0 10px 0');
-            }                                        
-        });
-
-
-      $(".action_buttons").click(function () {
-        $(this).next().trigger('click');
-      });
-
-
-      $('.panel-header-icons-collapse-up.icon-').click(open_close);
-      
-      function open_close() {
-
-        target_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
-
-               if ($(target_panel).is(':hidden'))
-                {    $(this).html('&#xf0de;');    
-                    $(this).css('margin-top','10px');
-                }
-            else
-                {    $(this).html('&#xf0dd;');
-                    $(this).css('margin-top','2px');
-                }
-
-        target_panel.slideToggle();
-      };
-
-
-      $('#description_textarea').keyup(function(e)
-      {
-          var maxLength = 1000;
-          var textlength = this.value.length;
-          if (textlength >= maxLength)
-          {
-              this.value = this.value.substring(0, maxLength);
-              e.preventDefault();
-          }
-          else
-          {
-              $('#charactersleft').html(maxLength - textlength);
-          }
-      });
-
-
-    });
-
-  </script>
 
 </head>
 <body>
@@ -175,7 +64,7 @@
                   <li><a href="#">Italiano</a></li>
                   <li><a href="#">Polski</a></li>
               </ul>
-            </li> 
+            </li>
           <li><p class="bar">&#124;</p></li>
 
 
@@ -201,7 +90,7 @@
         <div class="row collapse search-input">
         
           <div class="nine mobile-two columns">
-            <input id="initial-search" class="round-left" type="text" value="" />            
+            <input id="initial-search" class="round-left" type="text" value="" />
           </div>
                   
           <div class="one mobile-one columns">
@@ -215,14 +104,14 @@
         </div>
       </div>
       <!--***** SEARCH *****-->
-
+            
       <div id="advanced_search" class="display-none">
       <!--This is a Advanced Search panel that is hidden by default-->
-
+                      
         <p><strong>Advanced Search</strong></p>
                 
             <form class="custom search-type">
-                <label id="search-type-label" for="customDropdown">Search Type:</label>  
+                <label id="search-type-label" for="customDropdown">Search Type:</label>
                 <select class="custom-dropdown expand" id="customDropdown">
                     <option SELECTED>Person</option>
                     <option>Group</option>
@@ -238,11 +127,11 @@
             <div class="add-filter-container">
 
                 <!--***** ADD FILTER *****-->
-                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>                          
                 <!--***** ADD FILTER *****-->
-                    
+
                 <div class="add-filter-area">
-                          
+
                     <hr class="petrocore-hr">
                         <ul id="filters">
 
@@ -464,6 +353,8 @@
 
 <!--***** MAIN WRAPPER *****-->
 </div>
+<!--***** FOOTER *****-->
+
 <!-- ***** FOOTER *****-->
 
   <div class="row">
@@ -473,6 +364,7 @@
     </div>
   </div>
   <!-- ***** FOOTER *****-->
+<!--***** FOOTER *****-->
 
   <!-- Entire Navbar Code -->
 <!-- <ul class="nav-bar">
@@ -524,55 +416,46 @@
         <div class="notification">
             <a href="#" class="icon- anotification">&#xf00d;</a>
             <p>Report Lorem Ipsum 1 has been generated</p>
-            <a href="#">View Report</a> 
+            <a href="#">View Report</a>
             <hr class="hr-notification">
         </div>
 
         <div class="notification">
             <a href="#" class="icon- anotification">&#xf00d;</a>
             <p>Report Lorem Ipsum 2 has been generated</p>
-            <a href="#">View Report</a> 
+            <a href="#">View Report</a>
             <hr class="hr-notification">
         </div>
 
         <div class="notification">
             <a href="#" class="icon- anotification">&#xf00d;</a>
             <p>Report Lorem Ipsum 3 has been generated</p>
-            <a href="#">View Report</a> 
+            <a href="#">View Report</a>
         </div>
 
     </div>
-</div>         
+</div>
 
-  
-  <!-- Included JS Files (Uncompressed) -->
-  <!--
-  <script src="../javascripts/jquery.js"></script>
-  <script src="../javascripts/jquery.foundation.mediaQueryToggle.js"></script>
-  <script src="../javascripts/jquery.foundation.forms.js"></script>
-  <script src="../javascripts/jquery.event.move.js"></script>
-  <script src="../javascripts/jquery.event.swipe.js"></script>
-  <script src="../javascripts/jquery.foundation.reveal.js"></script>
-  <script src="../javascripts/jquery.foundation.orbit.js"></script>
-  <script src="../javascripts/jquery.foundation.navigation.js"></script>
-  <script src="../javascripts/jquery.foundation.buttons.js"></script>
-  <script src="../javascripts/jquery.foundation.tabs.js"></script>
-  <script src="../javascripts/jquery.foundation.tooltips.js"></script>
-  <script src="../javascripts/jquery.foundation.accordion.js"></script>
-  <script src="../javascripts/jquery.placeholder.js"></script>
-  <script src="../javascripts/jquery.foundation.alerts.js"></script>
-  <script src="../javascripts/jquery.foundation.topbar.js"></script>
-  <script src="../javascripts/jquery.foundation.joyride.js"></script>
-  <script src="../javascripts/jquery.foundation.clearing.js"></script>
-  <script src="../javascripts/jquery.foundation.magellan.js"></script>
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- initialize foundation -->
+<script src="../javascripts/app.js"></script>
 
-  -->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
 
-  <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
 
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
+    <!-- Initialize Fundamental sub-areas to meet prototype design -->
+    <!-- This segment is optional -->
+    <script>
+    $(window).load(function(){
+	  $('h5:contains("Fundamental")').parent('.panel-light-gray').next('.add-content-padding').find('.show_hide_task_dev').trigger('click');
+    });
+    </script> 
 
+                        
 </body>
 </html>
