@@ -4179,7 +4179,9 @@ a.milestone-date:hover {
 .archived-activity {
   color: #136593;
   font-style:italic;
-}/* skill groups*/
+}
+
+/* skill groups*/
 
 .legend {
 border: 1px solid #a1a1a1;
