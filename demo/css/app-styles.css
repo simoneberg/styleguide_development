@@ -1076,6 +1076,14 @@ ul.accordion>li>div.title:after {
   height: auto;
 }
 
+.tabs dd,
+.tabs li {
+  border: solid 1px #717171;
+  border-bottom: 0;
+  margin-left: 10px;
+  margin-top: -1px;
+}
+
 .tabs dd a,
 .tabs li a {
   color: #6f6f6f;
@@ -1092,14 +1100,6 @@ ul.accordion>li>div.title:after {
   background: -ms-linear-gradient(top,  #f1f1f1 0%,#e7e7e7 100%);
   background: linear-gradient(to bottom,  #f1f1f1 0%,#e7e7e7 100%);
   font-weight: bold;
-}
-
-.tabs dd,
-.tabs li {
-  border: solid 1px #717171;
-  border-bottom: 0;
-  margin-left: 10px;
-  margin-top: -1px;
 }
 
 .tabs dd.active,
@@ -1133,13 +1133,25 @@ ul.accordion>li>div.title:after {
   clear: both;
 }
 
-.tabs-content span a {
-  display: inline-block;
-}
-
 .tabs-content .display-block li {
   display: block;
   margin-left: 0;
+}
+
+.tabs-content li span a {
+  display: block;
+  margin-left: 23px;
+  line-height: 28px;
+}
+
+.tabs-content li td a {
+  display: inline;
+  margin-left: 0;
+  line-height: 18px;
+}
+
+.tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
+  width: 200px;
 }
 
 .panel-header h5 {
@@ -1153,25 +1165,7 @@ ul.accordion>li>div.title:after {
 
 .panel-content-container-dashboard .panel-header h5 {
   margin-top:12px;
-}
-
-.tabs-content.maps-content {			
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.tabs-content.maps-content li a {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
+  height: 45px;
 }
 
 /* END NAVIGATION */
@@ -1238,10 +1232,6 @@ ul.accordion>li>div.title:after {
   position: relative;
   width: auto;
   height: auto;
-}
-
-.tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
-  width: 200px;
 }
 
 .panel-wrapper .panel-header-icons-container .open-close-arrow {
@@ -2264,6 +2254,7 @@ table tbody tr td {
 .panel-header-icons-list:before {
   content: ' ',
   display: table;
+
 }
 
 .panel-header-icons-list:after {
@@ -2273,6 +2264,7 @@ table tbody tr td {
 .panel-header-icons-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .panel-header-icons-list li {
@@ -2290,25 +2282,20 @@ table tbody tr td {
 }
 
 .panel-header .icon- {
-  color: #7c7c7c;
+  margin: 0;
+  padding: 0;
   color: #666666;
   text-shadow: 0 1px #e5e5e5;
   font-size: 17px;
-  padding: 14px 3px;
-  line-height: 1.1em;
-
+  line-height:40px;
 }
 
 .panel-header .panel-header-icons-collapse-up {
-  /* compensate for font-awesomes vertical-align */
-  margin-top: 5px;
-  padding-bottom: 8px;
+  padding-top: 7px;
 }
 
 .panel-header .panel-header-icons-collapse-down {
-  /* compensate for font-awesomes vertical-align */
-  margin-top: 0px;
-  padding-bottom: 14px;
+  padding-top: 0px;
 }
 
 .panel-header li {
@@ -2344,9 +2331,9 @@ table tbody tr td {
 }
 
 .panel-header-icons-container.skills {
-  width: 25px;
-  right: 45px;
+  width: auto;
 }
+
 .panel-header-icons-list .button.radius.secondary {
   padding: 8px 15px;
 }
@@ -2900,8 +2887,8 @@ ul.button-group label {
 }
 .panel-content-container-dashboard {
   position: relative;
-  padding: 25px 15px 0 15px;
-  min-height:150px;
+  padding: 20px 15px 0 15px;
+  min-height:50px;
 }
 
 .panel-content-container-dashboard-options {

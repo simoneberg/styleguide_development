@@ -18,6 +18,7 @@ function show_hide_advanced(id) {
 
 $(document).ready(function(){
 
+  // Notification Popup Module
   var notifs = $("#user-notifications").text();
   var notifs_exist = true;
 
@@ -55,15 +56,14 @@ $(document).ready(function(){
     }
   });
 
-  //Expands the footer when Actions button within the Table is clicked
-  $('#report-templates-table .expandable').click(function () {
-    $('.panel-wrapper').css('margin-bottom','115px');
-    $(document).scrollTop( $("#report-templates-table").offset().top );	
+  // Expands the footer furtherdown when the Actions button is clicked
+  $('.expandable').click(function () {
+    $('.content-container').css('padding-bottom','160px');
+    $(document).scrollTop( $(this).offset().top );
   });
 
-  //search results advanced
+  // Advanced Search results
   var userviewright = $(".right-split-container").width();
-
 
   $('#filters_applied').click(function(){
     $('.added-filter').toggleClass('glowing');
@@ -77,27 +77,27 @@ $(document).ready(function(){
     $(this).next().trigger('click');
   });
 
+  // Open and Close Panels
   $('.panel-header-icons-collapse-up.icon-').click(open_close);
 
   function open_close(ev) {
     ev.preventDefault();
-    panel_header  = $(this).parents('.panel-wrapper').find('.panel-header');
-    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
-    panel_actions = $(this).parents('.panel-wrapper').find('.panel-action-icons-container');
-    panel_content = $(this).parents('.panel-wrapper').find('.panel-content-container-dashboard, .panel-content, .panel-footer, .panel-content-container-full');
 
-    if ($(panel_content).is(':hidden')) {
-      $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
+    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+
+    if ($(current_panel).is(':hidden')) {
+	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.addClass("display-none");
     } else {
-      $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
+	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
     }
-
-    panel_content.slideToggle();
+    current_panel.slideToggle();
 
   };
 
+  // Assign Direct Participants Relationship
   $('.participant').draggable( { containment: 'document', cursor: 'pointer', zIndex: 10000, opacity: 1.00, revert: 'invalid', helper: 'clone' } );
 
   $('.participant').bind('drag', function(event, ui) {
@@ -140,6 +140,7 @@ $(document).ready(function(){
     (source).appendTo(target);
   });
 
+  // Save Password
   $('#password').on("keyup", function() {
     if ( $(this).val().length === 0 ) {
       $('#save-password').addClass("display-none");
@@ -174,10 +175,10 @@ $(document).ready(function(){
     }
   });
 
-/* map admin map1 */
-  $('.small.secondary.button.add-medium-margin-bottom').on('click', function(){
+  // Show Hide Task Development sections
+  $('.show_hide_task_dev').on('click', function(){
 
-    var section = $(this).prev();
+    var section = $(this).parents('.add-content-padding').find('.show-and-hide-section');
 
     if ($(section).is(':hidden'))
     {
@@ -191,32 +192,27 @@ $(document).ready(function(){
     $(section).toggle();
   });
 
-
+  // Expand and Collapse Panels on Admin Map
   $('#expandall').on('click', function(){
 
     var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
 
-    if ($(current).is(':hidden'))
-    {
+    if ($(current).is(':hidden')) {
      $(current).show();
-     $('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
-     $('.panel-header-icons-collapse-up.icon-').css('margin-top','10px');
-   }
-
- });
-
+	 $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
+     $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
+    }
+  });
 
   $('#collapseall').on('click', function(){
 
     var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
 
-    if ($(current).is(':visible'))
-    {
+    if ($(current).is(':visible')) {
      $(current).hide();
-     $('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
-     $('.panel-header-icons-collapse-up.icon-').css('margin-top','2px');
-   }
-
+     $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
+     $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
+    } 
   });
 
   // Add A Competency Control Item to the list
@@ -253,8 +249,10 @@ $(document).ready(function(){
     $('#competency_list').sortcompetency();
   });
 
-  // Custom function called by four events - Add, Remove, Move Up, and Move Down
+  // Custom function called by four events - Add, Remove, Move-Up, and Move-Down
+  // Hover effect is done in jQuery to ensure compatibilty with IE8 and up
   jQuery.fn.sortcompetency = function(){
+
     var n = $("#competency_list li").length;
 
     $('#competency_list li').each(function( index ) {
