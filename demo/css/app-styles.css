@@ -25,6 +25,7 @@
      report tempate
      search results
      list box
+     skill groups
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -172,7 +173,7 @@ ul.angle-bullet li:before {
   display: inline-block;
   margin-left: -1.2em;
   width: 1.2em;
-}​
+}?
 
 ul.pagination {
   margin-top: -15px;
@@ -409,6 +410,19 @@ h4 {
   margin-bottom: 4px;
 }
 
+.align-center {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -426,13 +440,7 @@ h4 {
   outline: none;
 }
 
-.align-left {
-  text-align: left;
-}
 
-.align-right {
-  text-align: right;
-}
 
 /* END TYPOGRAPHY */
 /* **************************************** */
@@ -1083,6 +1091,14 @@ ul.accordion>li>div.title:after {
   height: auto;
 }
 
+.tabs dd,
+.tabs li {
+  border: solid 1px #717171;
+  border-bottom: 0;
+  margin-left: 10px;
+  margin-top: -1px;
+}
+
 .tabs dd a,
 .tabs li a {
   color: #6f6f6f;
@@ -1099,14 +1115,6 @@ ul.accordion>li>div.title:after {
   background: -ms-linear-gradient(top,  #f1f1f1 0%,#e7e7e7 100%);
   background: linear-gradient(to bottom,  #f1f1f1 0%,#e7e7e7 100%);
   font-weight: bold;
-}
-
-.tabs dd,
-.tabs li {
-  border: solid 1px #717171;
-  border-bottom: 0;
-  margin-left: 10px;
-  margin-top: -1px;
 }
 
 .tabs dd.active,
@@ -1140,13 +1148,25 @@ ul.accordion>li>div.title:after {
   clear: both;
 }
 
-.tabs-content span a {
-  display: inline-block;
-}
-
 .tabs-content .display-block li {
   display: block;
   margin-left: 0;
+}
+
+.tabs-content li span a {
+  display: block;
+  margin-left: 23px;
+  line-height: 28px;
+}
+
+.tabs-content li td a {
+  display: inline;
+  margin-left: 0;
+  line-height: 18px;
+}
+
+.tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
+  width: 200px;
 }
 
 .panel-header h5 {
@@ -1160,25 +1180,7 @@ ul.accordion>li>div.title:after {
 
 .panel-content-container-dashboard .panel-header h5 {
   margin-top:12px;
-}
-
-.tabs-content.maps-content {			
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.tabs-content.maps-content li a {
-  margin: 0;
-  padding: 0;
-  line-height: normal;
+  height: 45px;
 }
 
 /* END NAVIGATION */
@@ -1245,10 +1247,6 @@ ul.accordion>li>div.title:after {
   position: relative;
   width: auto;
   height: auto;
-}
-
-.tabs-content .panel-light-gray .button.dropdown.petrocore-actions {
-  width: 200px;
 }
 
 .panel-wrapper .panel-header-icons-container .open-close-arrow {
@@ -2072,6 +2070,17 @@ table tbody tr td {
   margin: 18px 0 15px 0;
 }
 
+a.sorting-block { 
+  display: block; 
+  vertical-align:top;
+  color: #000;
+  cursor: pointer;
+}
+
+a.sorting-block:hover .add-sorting-icon { 
+  color:#01669f;
+}
+
 /* END TABLES */
 /* **************************************** */
 
@@ -2271,6 +2280,7 @@ table tbody tr td {
 .panel-header-icons-list:before {
   content: ' ',
   display: table;
+
 }
 
 .panel-header-icons-list:after {
@@ -2280,6 +2290,7 @@ table tbody tr td {
 .panel-header-icons-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .panel-header-icons-list li {
@@ -2297,25 +2308,20 @@ table tbody tr td {
 }
 
 .panel-header .icon- {
-  color: #7c7c7c;
+  margin: 0;
+  padding: 0;
   color: #666666;
   text-shadow: 0 1px #e5e5e5;
   font-size: 17px;
-  padding: 14px 3px;
-  line-height: 1.1em;
-
+  line-height:40px;
 }
 
 .panel-header .panel-header-icons-collapse-up {
-  /* compensate for font-awesomes vertical-align */
-  margin-top: 5px;
-  padding-bottom: 8px;
+  padding-top: 7px;
 }
 
 .panel-header .panel-header-icons-collapse-down {
-  /* compensate for font-awesomes vertical-align */
-  margin-top: 0px;
-  padding-bottom: 14px;
+  padding-top: 0px;
 }
 
 .panel-header li {
@@ -2351,9 +2357,9 @@ table tbody tr td {
 }
 
 .panel-header-icons-container.skills {
-  width: 25px;
-  right: 45px;
+  width: auto;
 }
+
 .panel-header-icons-list .button.radius.secondary {
   padding: 8px 15px;
 }
@@ -2907,8 +2913,8 @@ ul.button-group label {
 }
 .panel-content-container-dashboard {
   position: relative;
-  padding: 25px 15px 0 15px;
-  min-height:150px;
+  padding: 20px 15px 0 15px;
+  min-height:50px;
 }
 
 .panel-content-container-dashboard-options {
@@ -4172,7 +4178,7 @@ ul.milestones li {
 }
 
 .button-group .button {
-  padding: 9px 10px;
+  padding: 8px 15px 9px 15px;
   width: auto;
 }
 
@@ -4192,7 +4198,60 @@ a.milestone-date:hover {
   color: #136593;
   font-style:italic;
 }
-/* END PAGE SPECIFIC */
+
+/* skill groups*/
+
+.legend {
+border: 1px solid #a1a1a1;
+border-radius: 5px;
+opacity: 1;
+-webkit-box-shadow: 1px 1px 4px #999999;
+box-shadow: 1px 1px 4px #999999;
+padding: 10px 0 5px 15px;
+margin: 7px 10px 0 5px;
+position: relative;
+}
+
+.skillbox {
+  border: 1px solid #a1a1a1;
+  padding: 10px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px #999999;
+  box-shadow: 1px 1px 4px #999999; 
+}
+
+.skillgroupstatus {
+	border: 1px solid #a1a1a1;
+	border-radius: 5px;
+	opacity: 1;
+	-webkit-box-shadow: 1px 1px 4px #999999;
+	box-shadow: 1px 1px 4px #999999;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+	margin: 0;
+  position: relative;
+  float:left;
+  
+}
+
+.status-competent {
+  background-color: #33CC66;
+}
+.status-not-assessed {
+  background-color: white;
+}
+
+.status-not-competent {
+	background-color: #ED4027;
+}
+
+.status-some {
+	background-color: #FFCC00;
+	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,204,0,1.00)),color-stop( 100% , rgba(237,190,2,1.00)));
+	background-image: -webkit-linear-gradient(270deg,rgba(255,204,0,1.00) 0%,rgba(237,190,2,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(255,204,0,1.00) 0%,rgba(237,190,2,1.00) 100%);
+}/* END PAGE SPECIFIC */
 /* **************************************** */
 
 
@@ -5560,7 +5619,11 @@ a.action-item-disabled {
   }
 
   .button.dropdown.petrocore-actions {
-    width: 110px;
+	width: 110px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
   }
 
 }
