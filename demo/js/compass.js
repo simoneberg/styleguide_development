@@ -317,6 +317,13 @@ $(document).ready(function(){
 
   }
 
+  // Removes Growth Position tems from the list
+  $('#growth-position-list li .cl-icon-x').click(function(){
+    if ($("#growth-position-list li").length > 1) {
+      $(this).parent().parent('li').remove();
+    }
+  }); 
+
 });
 
 /* prevent hash changes on any nexted tabs*/

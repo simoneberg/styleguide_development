@@ -4187,7 +4187,7 @@ a.milestone-date:hover {
 }
 
 /* Assigned Positions */
-#growth-position_list {
+#growth-position-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -4198,8 +4198,8 @@ a.milestone-date:hover {
   border: solid 1px #606060;
   border-top: none;
   margin: 0;
-  padding: 0;
-  height: 35px;
+  padding: 15px 0;
+  xheight: 55px;
   width: 100%;
 }
 
