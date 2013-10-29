@@ -5052,7 +5052,7 @@ position: relative;
     bottom: 0;
     left: -271px;
 
-    width: 251px;
+    width: 251px !important;
 
     z-index:1000;
   }
