@@ -2063,6 +2063,17 @@ table tbody tr td {
   margin: 18px 0 15px 0;
 }
 
+a.sorting-block { 
+  display: block; 
+  vertical-align:top;
+  color: #000;
+  cursor: pointer;
+}
+
+a.sorting-block:hover .add-sorting-icon { 
+  color:#01669f;
+}
+
 /* END TABLES */
 /* **************************************** */
 
