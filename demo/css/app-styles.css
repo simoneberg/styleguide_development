@@ -2526,6 +2526,24 @@ border: 1px solid #8a8a8a;
   cursor: default;
 }
 
+/* Assigned Position Controls*/
+#growth-position-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.growth-position-item {
+  border: solid 1px #606060;
+  border-top: none;
+  margin: 0;
+  padding: 15px 0;
+  xheight: 55px;
+  width: 100%;
+}
+
+
 /* END DASHBOARD */
 /* **************************************** */
 
@@ -4185,26 +4203,6 @@ a.milestone-date:hover {
   color: #136593;
   font-style:italic;
 }
-
-/* Assigned Positions */
-#growth-position-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: auto;
-}
-
-.growth-position-item {
-  border: solid 1px #606060;
-  border-top: none;
-  margin: 0;
-  padding: 15px 0;
-  xheight: 55px;
-  width: 100%;
-}
-
-
-
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
