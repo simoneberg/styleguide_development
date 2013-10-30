@@ -2537,8 +2537,6 @@ border: 1px solid #8a8a8a;
   margin-bottom: 0;
 }
 
-
-
 .positions-box-title {
   background-color: #e8e8e8;
   border: 1px solid #929292;
@@ -2588,11 +2586,16 @@ border: 1px solid #8a8a8a;
   border: solid 1px #606060;
   border-top: none;
   margin: 0;
-  padding: 15px 0;
+  padding: 10px 0;
   xheight: 55px;
   width: 100%;
 }
 
+.text-link-right {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 13px;
+}
 
 /* END DASHBOARD */
 /* **************************************** */
