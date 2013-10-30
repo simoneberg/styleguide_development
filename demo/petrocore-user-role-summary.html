@@ -28,6 +28,59 @@
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 
+  <style>
+  /* Assigned Position Controls*/
+
+.role-summary-control .open, .role-summary-control .close {
+  float: left;
+  margin-right: 10px;
+  text-decoration: underline;
+  color: #01669f;
+}
+
+#role-summary-accordion ul.breadcrumbs li a, ul.breadcrumbs li span {
+  font-size: 10px;
+  padding-left:4px;
+}
+
+#role-summary-accordion ul.breadcrumbs li:first-child a, #role-summary-accordion ul.breadcrumbs li:first-child span {
+  padding-left:0;
+  content: none;
+}
+
+#role-summary-accordion ul.breadcrumbs li:before {
+  content: "/";
+  font-family: FontAwesome;
+  color: #aaa;
+  font-size: 11px;
+}
+
+#role-summary-accordion ul.breadcrumbs {
+  padding:0 10px 2px;
+}
+
+#role-summary-accordion .panel-header { margin-top: 10px;}
+
+#role-summaries {}
+
+#role-summary-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.role-summary-item {
+  border: solid 1px #606060;
+  border-top: none;
+  margin: 0;
+  padding: 10px 0;
+  xheight: 55px;
+  width: 100%;
+}
+
+  </style>
+
 </head>
 <body>
 
@@ -257,38 +310,55 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <form class="custom search-type">
+
           <h4>Role Summary</h4>
           <hr>
 
-          <div class="accordion-expand-holder">
-              <button type="button" class="open">Expand all</button>
-              <button type="button" class="close">Collapse all</button>
+          <div class="role-summary-control">
+              <div class="open">Expand all</div>
+              <div class="close">Collapse all</div>
+              <div style="clear:both;"></div>
           </div>
 
           <div id="role-summary-accordion">
                <div class="panel-header">
                   <div class="panel-title-container"><h5>Activity Administration (3)</h5></div>
                   <div class="panel-header-icons-container">
-                    <ul class="panel-header-icons-list">
-                      <li>
-                        <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                      </li>
-                    </ul>
                   </div>
                 </div><!--Close panel-header-->
               <div>
-                  <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                  <ul id="role-summary-list">
+                <!-- List of Items to be displayed -->
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="breadcrumbs">
+                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Chung, David</a></li>
+                        <li class="current"><a href="#">Role Summary</a></li>
+                      </ul>
+                      <strong>IT Developer</strong>
+                      <div class="role-position">Reviewer - Reviewer</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="breadcrumbs">
+                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Chung, David</a></li>
+                        <li class="current"><a href="#">Role Summary</a></li>
+                      </ul>
+                      <strong>IT Developer</strong>
+                      <div class="role-position">Reviewer - Reviewer</div>
+                    </div>
+                  </li>
+                </ul>
               </div>
 
               <div class="panel-header">
                 <div class="panel-title-container"><h5>Group Administration (3)</h5></div>
                 <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li>
-                      <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                    </li>
-                  </ul>
                 </div>
               </div><!--Close panel-header-->
               <div>
@@ -298,11 +368,6 @@
               <div class="panel-header">
                 <div class="panel-title-container"><h5>Map Administration (0)</h5></div>
                 <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li>
-                      <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                    </li>
-                  </ul>
                 </div>
               </div><!--Close panel-header-->
               <div>
@@ -312,11 +377,6 @@
               <div class="panel-header">
                 <div class="panel-title-container"><h5>Position Administration (3)</h5></div>
                 <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li>
-                      <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                    </li>
-                  </ul>
                 </div>
               </div><!--Close panel-header-->
               <div>
@@ -327,11 +387,6 @@
               <div class="panel-header">
                 <div class="panel-title-container"><h5>Profile Administration (3)</h5></div>
                 <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li>
-                      <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                    </li>
-                  </ul>
                 </div>
               </div><!--Close panel-header-->
               <div>
@@ -343,84 +398,12 @@
           </div>
 
 
-          <div id="growth-positions" class="panel-wrapper">
 
-              <div class="panel-header">
-                <div class="panel-title-container"><h5>Growth Positions(6)</h5></div>
-                <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li>
-                      <a id="add-growth-positions" class="button secondary radius" href="#" data-reveal-id="select-growth-positions">Add</a>
-                    </li>
-                  </ul>
-                </div>
-              </div><!--Close panel-header-->
-                
-                <ul id="growth-position-list">
-                <!-- List of Items to be displayed -->
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      Front-end Developer
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
 
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      IT Developer
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
 
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      QA Test
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
-
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      Sales Representative
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
-
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      Server Developer
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
-
-                  <li class="row growth-position-item">
-                    <div class="eleven mobile-three columns gr-description">
-                      UI Engineer
-                    </div>
-                    <div class="one mobile-one columns cl-icons">
-                      <a href="#" class="icon- cl-icon-x"></a>
-                    </div>
-                  </li>
-
-                </ul>
           </div>
 
 
-
-
-
-
-        </form>
        
       </div><!--Close Content Container-->
   </div>
@@ -499,6 +482,7 @@ $(function () {
 
 
   </script>
+
 
 </body>
 </html>
