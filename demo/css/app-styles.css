@@ -4201,17 +4201,6 @@ a.milestone-date:hover {
 
 /* skill groups*/
 
-.legend {
-border: 1px solid #a1a1a1;
-border-radius: 5px;
-opacity: 1;
--webkit-box-shadow: 1px 1px 4px #999999;
-box-shadow: 1px 1px 4px #999999;
-padding: 10px 0 5px 15px;
-margin: 7px 10px 0 5px;
-position: relative;
-}
-
 .skillbox {
   border: 1px solid #a1a1a1;
   padding: 10px 30px;
