@@ -31,6 +31,10 @@
   <style>
   /* Assigned Position Controls*/
 
+.role-summary-control  {
+  margin: 10px 0;
+}
+
 .role-summary-control .open, .role-summary-control .close {
   float: left;
   margin-right: 10px;
@@ -38,27 +42,9 @@
   color: #01669f;
 }
 
-#role-summary-accordion .panel-header { margin-top: 10px;}
-
-#role-summary-accordion h5.accord-header {
-  position:relative;
-  margin-left: 0;
-  margin-top: 0;
-  padding: 14px 15px;
-  background: #c0c0c0;
-  background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
-  background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
-  -moz-box-shadow: inset 0 1px 1px #d1d1d1;
-  -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
-  box-shadow: inset 0 1px 1px #d1d1d1;
-  border-bottom: 1px solid #717171;
+.panel-content-container-dashboard.role-box {
+  padding: 0;
 }
-
 #role-summary-list {
   list-style-type: none;
   margin: 0;
@@ -67,13 +53,19 @@
 }
 
 .role-summary-item {
-  border: solid 1px #606060;
+  border-bottom: solid 1px #606060;
   border-top: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 8px 0;
   width: 100%;
 }
+ .role-summary-item:last-child {
+  border-bottom: none;
+ }
 
+ .role-position {
+  font-size:12px;
+ }
 /* role bread crumbs */
 /****************/
 ul.role-breadcrumbs {
@@ -81,6 +73,8 @@ ul.role-breadcrumbs {
   border:none;
   padding: 0 10px 2px 0;  
   margin: 0;
+  height:25px;
+  width:100%;
 }
 
 ul.role-breadcrumbs li {
@@ -90,7 +84,7 @@ ul.role-breadcrumbs li {
   list-style: none;
 }
 
-ul.role-breadcrumbs li:before {
+ul.role-breadcrumbs li:after {
   content: "/";
   font-family: FontAwesome;
   color: #aaa;
@@ -101,7 +95,7 @@ ul.role-breadcrumbs li a,
 ul.role-breadcrumbs li span {
   text-transform: none;
   font-size: 11px;
-  padding-left: 4px;
+  padding-right: 4px;
   color:#767676;
 }
 
@@ -115,21 +109,7 @@ ul.role-breadcrumbs li a:focus {
   color:#525252;
 }
 
-ul.role-breadcrumbs li:first-child:before {
-  content: "";
-}
-ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
 
-.role-breadcrumbs {
-  height:30px;
-  width:100%;
-  padding:20px;
-}
-
-.role-breadcrumbs-home.icon- {
-  font-size: 18px;
-  line-height: 24px;
-}
 
   </style>
 
@@ -372,23 +352,30 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
               <div style="clear:both;"></div>
           </div>
 
-          <div id="role-summary-accordion">
-               <h5 class="accord-header">Test accordion</h5> 
-               <div>asdfasfas</div>
-               <h5 class="accord-header">Test accordion</h5> 
-               <div>asdfasfas</div>
-               <div class="panel-header">
-                  <div class="panel-title-container"><h5>Activity Administration (3)</h5></div>
-                  <div class="panel-header-icons-container">
-                  </div>
-                </div><!--Close panel-header-->
-                <div>
-                  <ul id="role-summary-list">
+        <div class="row">
+          <div class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Activity Administration (3)</h5>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
                 <!-- List of Items to be displayed -->
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li class="current"><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li class="current"><a href="#" class="icon-">&#xf015;</a></li>
                       </ul>
                       <strong>Activity Name</strong>
                       <div class="role-position">Administrator - Administrator</div>
@@ -397,19 +384,18 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
                         <li><a href="#">Activity Group 1</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li class="current"><a href="#">Reviewer - Reviewer</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
                       </ul>
                       <strong>Activity Name</strong>
-                      <div class="role-position">Administrator - Administrator</div>
+                      <div class="role-position">Reviewer - Reviewer</div>
                     </div>
                   </li>
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
                         <li><a href="#">Users</a></li>
                         <li><a href="#">Chung, David</a></li>
                         <li class="current"><a href="#">Role Summary</a></li>
@@ -419,20 +405,35 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
                     </div>
                   </li>
                 </ul>
-              </div>
 
-              <div class="panel-header">
-                <div class="panel-title-container"><h5>Group Administration (3)</h5></div>
-                <div class="panel-header-icons-container">
-                </div>
-              </div><!--Close panel-header-->
-              <div>
-                  <ul id="role-summary-list">
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
+
+        <div class="row">
+          <div class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Group Administration (3)</h5>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
                 <!-- List of Items to be displayed -->
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
                       </ul>
                       <strong>Asia</strong>
                       <div class="role-position">Manager - Manager</div>
@@ -441,7 +442,7 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
                         <li><a href="#">Users</a></li>
                         <li><a href="#">Chung, David</a></li>
                         <li class="current"><a href="#">Role Summary</a></li>
@@ -451,114 +452,163 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
                     </div>
                   </li>
                 </ul>
+
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
+
+        <div class="row">
+          <div class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Map Administration (0)</h5>
               </div>
-              
-              <div class="panel-header">
-                <div class="panel-title-container"><h5>Map Administration (0)</h5></div>
-                <div class="panel-header-icons-container">
-                </div>
-              </div><!--Close panel-header-->
-              <div>
-                  <ul id="role-summary-list">
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
+                <!-- List of Items to be displayed -->
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <!--<ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Chung, David</a></li>
+                        <li class="current"><a href="#">Role Summary</a></li>
+                      </ul>-->
+                      <strong>No maps assigned to David Chung</strong>
+                      <!--<div class="role-position">Reviewer - Reviewer</div>-->
+                    </div>
+                  </li>
+                </ul>
+
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
+
+        <div class="row">
+          <div class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Position Administration (3)</h5>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
                 <!-- List of Items to be displayed -->
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
+                        <li class="current"><a href="#" class="icon-">&#xf015;</a></li>
+                      </ul>
+                      <strong>Position 1</strong>
+                      <div class="role-position">Administrator - Administrator</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li><a href="#">Technology</a></li>
                         <li class="current"><a href="#">Role Summary</a></li>
                       </ul>
-                      <strong>IT Developer</strong>
+                      <strong>Position 2</strong>
                       <div class="role-position">Reviewer - Reviewer</div>
                     </div>
                   </li>
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
                       </ul>
-                      <strong>IT Developer</strong>
-                      <div class="role-position">Reviewer - Reviewer</div>
+                      <strong>Position 3</strong>
+                      <div class="role-position">Subject Matter Expert - Subject Matter Expert</div>
                     </div>
                   </li>
                 </ul>
-              </div>
 
-              <div class="panel-header">
-                <div class="panel-title-container"><h5>Position Administration (3)</h5></div>
-                <div class="panel-header-icons-container">
-                </div>
-              </div><!--Close panel-header-->
-              <div>
-                  <ul id="role-summary-list">
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
+
+        <div class="row">
+          <div class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Profile Administration (3)</h5>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
                 <!-- List of Items to be displayed -->
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li class="current"><a href="#" class="icon-">&#xf015;</a></li>
                       </ul>
-                      <strong>IT Developer</strong>
+                      <strong>Profile 1</strong>
+                      <div class="role-position">Administrator - Manager</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li class="current"><a href="#">Techology</a></li>
+                      </ul>
+                      <strong>Profile 2</strong>
                       <div class="role-position">Reviewer - Reviewer</div>
                     </div>
                   </li>
                   <li class="row role-summary-item">
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li class="current"><a href="#">Techology</a></li>
                       </ul>
-                      <strong>IT Developer</strong>
-                      <div class="role-position">Reviewer - Reviewer</div>
+                      <strong>Profile 3</strong>
+                      <div class="role-position">Subject Matter Expert - Subject Matter Expert</div>
                     </div>
                   </li>
                 </ul>
-              </div>
 
-              <div class="panel-header">
-                <div class="panel-title-container"><h5>Profile Administration (3)</h5></div>
-                <div class="panel-header-icons-container">
-                </div>
-              </div><!--Close panel-header-->
-              <div>
-                  <ul id="role-summary-list">
-                <!-- List of Items to be displayed -->
-                  <li class="row role-summary-item">
-                    <div class="eleven columns">
-                      <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
-                      </ul>
-                      <strong>IT Developer</strong>
-                      <div class="role-position">Reviewer - Reviewer</div>
-                    </div>
-                  </li>
-                  <li class="row role-summary-item">
-                    <div class="eleven columns">
-                      <ul class="role-breadcrumbs">
-                        <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
-                      </ul>
-                      <strong>IT Developer</strong>
-                      <div class="role-position">Reviewer - Reviewer</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-          </div><!--Close role-summary-accordion -->
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
 
 
     </div><!--Close content-container -->
@@ -645,54 +695,6 @@ ul.role-breadcrumbs li:first-child:before a {padding-left: 0;}
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
 <script src="js/compass-ie8.js"></script>
-
-<script>
-
-  // Accordion - Expand All #01
-$(function () {
-    $("#role-summary-accordion").accordion({
-        heightStyle: "content",
-        collapsible:true,
-        active:false,
-        header: '.panel-header'
-    });
-    $(".active").trigger('click');
-    var icons = $( "#role-summary-accordion" ).accordion( "option", "icons" );
-    $('.open').click(function () {
-        $('.ui-accordion-header').removeClass('ui-corner-all').addClass('ui-accordion-header-active ui-state-active ui-corner-top').attr({
-            'aria-selected': 'true',
-            'tabindex': '0'
-        });
-        $('.ui-accordion-header-icon').removeClass(icons.header).addClass(icons.headerSelected);
-        $('.ui-accordion-content').addClass('ui-accordion-content-active').attr({
-            'aria-expanded': 'true',
-            'aria-hidden': 'false'
-        }).show();
-        $(this).attr("disabled","disabled");
-        $('.close').removeAttr("disabled");
-    });
-    $('.close').click(function () {
-        $('.ui-accordion-header').removeClass('ui-accordion-header-active ui-state-active ui-corner-top').addClass('ui-corner-all').attr({
-            'aria-selected': 'false',
-            'tabindex': '-1'
-        });
-        $('.ui-accordion-header-icon').removeClass(icons.headerSelected).addClass(icons.header);
-        $('.ui-accordion-content').removeClass('ui-accordion-content-active').attr({
-            'aria-expanded': 'false',
-            'aria-hidden': 'true'
-        }).hide();
-        $(this).attr("disabled","disabled");
-        $('.open').removeAttr("disabled");
-    });
-    $('.ui-accordion-header').click(function () {
-        $('.open').removeAttr("disabled");
-        $('.close').removeAttr("disabled");
-        
-    });
-});
-
-
-  </script>
 
 
 </body>
