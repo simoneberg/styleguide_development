@@ -265,6 +265,11 @@ ul.pagination li.current a {
   display: none !important;
 }
 
+.display-none-basic {
+  /* used to hide the item from being displayed, not important */
+  display: none;
+}
+
 .filter-list ul {
   list-style: none;
 }
