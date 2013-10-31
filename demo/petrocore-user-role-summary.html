@@ -28,91 +28,6 @@
 
   <script src="../javascripts/modernizr.foundation.js"></script>
 
-  <style>
-  /* Assigned Position Controls*/
-
-.role-summary-control  {
-  margin: 10px 0;
-}
-
-.role-summary-control .open, .role-summary-control .close {
-  float: left;
-  margin-right: 10px;
-  text-decoration: underline;
-  color: #01669f;
-}
-
-.panel-content-container-dashboard.role-box {
-  padding: 0;
-}
-#role-summary-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  height: auto;
-}
-
-.role-summary-item {
-  border-bottom: solid 1px #606060;
-  border-top: none;
-  margin: 0;
-  padding: 8px 0;
-  width: 100%;
-}
- .role-summary-item:last-child {
-  border-bottom: none;
- }
-
- .role-position {
-  font-size:12px;
- }
-/* role bread crumbs */
-/****************/
-ul.role-breadcrumbs {
-  background: none;
-  border:none;
-  padding: 0 10px 2px 0;  
-  margin: 0;
-  height:25px;
-  width:100%;
-}
-
-ul.role-breadcrumbs li {
-  float:left;
-  margin:0;
-  padding: 0 6px 0 0;
-  list-style: none;
-}
-
-ul.role-breadcrumbs li:after {
-  content: "/";
-  font-family: FontAwesome;
-  color: #aaa;
-  font-size: 12px;
-}
-
-ul.role-breadcrumbs li a,
-ul.role-breadcrumbs li span {
-  text-transform: none;
-  font-size: 11px;
-  padding-right: 4px;
-  color:#767676;
-}
-
-ul.role-breadcrumbs li.current a {
-  color:#525252;
-}
-
-ul.role-breadcrumbs li:hover a,
-ul.role-breadcrumbs li a:focus {
-  text-decoration: none;
-  color:#525252;
-}
-
-
-
-  </style>
-
 </head>
 <body>
 
@@ -346,11 +261,11 @@ ul.role-breadcrumbs li a:focus {
           <h4>Role Summary</h4>
           <hr>
 
-          <div class="role-summary-control">
-              <div class="open">Expand all</div>
-              <div class="close">Collapse all</div>
-              <div style="clear:both;"></div>
-          </div>
+        <div class="row">
+          <p>
+            <span><a id="expandall" href="#">Expand All</a> | <a id="collapseall" href="#">Collapse All</a></span>
+          </p>
+        </div>
 
         <div class="row">
           <div class="panel-wrapper">     
@@ -396,9 +311,8 @@ ul.role-breadcrumbs li a:focus {
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
                         <li><a href="#" class="icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li><a href="#">Activity Group 2</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
                       </ul>
                       <strong>Activity Name</strong>
                       <div class="role-position">Subject Matter Expert - Subject Matter Expert</div>
@@ -443,12 +357,75 @@ ul.role-breadcrumbs li a:focus {
                     <div class="eleven columns">
                       <ul class="role-breadcrumbs">
                         <li><a href="#" class="icon-">&#xf015;</a></li>
-                        <li><a href="#">Users</a></li>
-                        <li><a href="#">Chung, David</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
                       </ul>
-                      <strong>IT Developer</strong>
-                      <div class="role-position">Reviewer - Reviewer</div>
+                      <strong>IT Department</strong>
+                      <div class="role-position">Supervisor - Supervisor</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
+                      </ul>
+                      <strong>Server Department</strong>
+                      <div class="role-position">Participant - Participant</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li class="current"><a href="#" class="icon-">&#xf015;</a></li>
+                      </ul>
+                      <strong>South America</strong>
+                      <div class="role-position">Assessor - Assessor</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">South America</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
+                      </ul>
+                      <strong>IT Department</strong>
+                      <div class="role-position">Verifier - Verifier</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">South America</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
+                      </ul>
+                      <strong>Server Department</strong>
+                      <div class="role-position">Reporter - Reporter</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Taiwan</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
+                      </ul>
+                      <strong>IT Department</strong>
+                      <div class="role-position">Mentor - Mentor</div>
+                    </div>
+                  </li>
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Taiwan</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
+                      </ul>
+                      <strong>Server Department</strong>
+                      <div class="role-position">Administrator - Administrator</div>
                     </div>
                   </li>
                 </ul>
@@ -485,7 +462,7 @@ ul.role-breadcrumbs li a:focus {
                         <li><a href="#">Chung, David</a></li>
                         <li class="current"><a href="#">Role Summary</a></li>
                       </ul>-->
-                      <strong>No maps assigned to David Chung</strong>
+                      No maps assigned to David Chung
                       <!--<div class="role-position">Reviewer - Reviewer</div>-->
                     </div>
                   </li>
@@ -529,8 +506,7 @@ ul.role-breadcrumbs li a:focus {
                       <ul class="role-breadcrumbs">
                         <li><a href="#" class="icon-">&#xf015;</a></li>
                         <li><a href="#">Asia</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li class="current"><a href="#">Role Summary</a></li>
+                        <li class="current"><a href="#">Technology</a></li>
                       </ul>
                       <strong>Position 2</strong>
                       <div class="role-position">Reviewer - Reviewer</div>
@@ -695,7 +671,6 @@ ul.role-breadcrumbs li a:focus {
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
 <script src="js/compass-ie8.js"></script>
-
 
 </body>
 </html>
