@@ -259,16 +259,19 @@
         <!--This will hold the content-->
 
           <h4>Role Summary</h4>
+          <div class="back-to-previous-page-link"><a class="" href="#">Back to previous page</a></div>
           <hr>
 
         <div class="row">
-          <p>
-            <span><a id="expandall" href="#">Expand All</a> | <a id="collapseall" href="#">Collapse All</a></span>
-          </p>
+          
+          <div class="float-right">
+            <p><a id="expandall" href="#">Expand All</a> | <a id="collapseall" href="#">Collapse All</a></p>
+          </div>
+          <div class="clear:both;"></div>
         </div>
 
         <div class="row">
-          <div class="panel-wrapper">     
+          <div id="activity-administration" class="panel-wrapper">     
           <!--This is a dashboard panel-->
             <div class="panel-header">
               <div class="panel-title-container">
@@ -325,11 +328,11 @@
         </div>
 
         <div class="row">
-          <div class="panel-wrapper">     
+          <div id="group-administration" class="panel-wrapper">     
           <!--This is a dashboard panel-->
             <div class="panel-header">
               <div class="panel-title-container">
-                <h5>Group Administration (3)</h5>
+                <h5>Group Administration (8)</h5>
               </div>
               <div class="panel-header-icons-container">
                 <ul class="panel-header-icons-list">
@@ -435,7 +438,7 @@
         </div>
 
         <div class="row">
-          <div class="panel-wrapper">     
+          <div id="map-administration"  class="panel-wrapper">     
           <!--This is a dashboard panel-->
             <div class="panel-header">
               <div class="panel-title-container">
@@ -473,7 +476,45 @@
         </div>
 
         <div class="row">
-          <div class="panel-wrapper">     
+          <div id="user-administration"  class="panel-wrapper">     
+          <!--This is a dashboard panel-->
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>User Administration (0)</h5>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <!-- <li><a href="#" class="panel-header-icons-close icon-">&#xf00d;</a></li> --> 
+                  <!-- <li><a href="#" class="panel-header-icons icon-">&#xf0dd;</a></li> -->
+                  <li><a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-up">&#xf0de;</a></li>
+                  <!--collapse up icon-->
+                </ul>
+              </div>
+            </div><!--Close panel-header-->
+            <div class="panel-content-container-dashboard role-box">
+
+              <ul id="role-summary-list">
+                <!-- List of Items to be displayed -->
+                  <li class="row role-summary-item">
+                    <div class="eleven columns">
+                      <!--<ul class="role-breadcrumbs">
+                        <li><a href="#" class="icon-">&#xf015;</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Chung, David</a></li>
+                        <li class="current"><a href="#">Role Summary</a></li>
+                      </ul>-->
+                      No maps assigned to David Chung
+                      <!--<div class="role-position">Reviewer - Reviewer</div>-->
+                    </div>
+                  </li>
+                </ul>
+
+              </div><!--Close panel-content-container-dashboard-->
+          </div> <!--Close panel wrapper-->
+        </div>
+
+        <div class="row">
+          <div id="position-administration"  class="panel-wrapper">     
           <!--This is a dashboard panel-->
             <div class="panel-header">
               <div class="panel-title-container">
@@ -530,7 +571,7 @@
         </div>
 
         <div class="row">
-          <div class="panel-wrapper">     
+          <div id="profile-administration"  class="panel-wrapper">     
           <!--This is a dashboard panel-->
             <div class="panel-header">
               <div class="panel-title-container">
