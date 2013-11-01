@@ -4290,6 +4290,20 @@ a.milestone-date:hover {
   box-shadow: 1px 1px 4px #999999; 
 }
 
+.skill-container{
+  border: 1px solid #a1a1a1; 
+  padding-top:10px; 
+  padding-bottom:70px;
+  margin-bottom:10px; 
+}
+
+.skill-description-box {
+  border: 1px solid #a1a1a1;
+  padding: 15px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px #999999;
+  box-shadow: 1px 1px 4px #999999; 
+}
 .skillgroupstatus {
   border: 1px solid #a1a1a1;
   border-radius: 5px;
@@ -4302,7 +4316,6 @@ a.milestone-date:hover {
   margin: 0;
   position: relative;
   float:left;
-  
 }
 
 .status-competent {
