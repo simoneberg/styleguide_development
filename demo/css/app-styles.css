@@ -4426,6 +4426,14 @@ a.action-item-disabled {
   font-style:italic;
 }
 
+/* use when you want a right side link with a page header h4*/
+h4 .header-link {
+  float:right;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
 /* END MISC */
 /* **************************************** */
 
