@@ -22,6 +22,13 @@
   <link rel="stylesheet" href="stylesheets/foundation-override.css">
 
   <script src="javascripts/modernizr.foundation.js"></script>
+  <style>
+    .obsolete{
+      text-decoration: line-through;
+      color: #AAA;
+      opacity: 0.3;
+    }
+  </style>
 </head>
 <body>
 
@@ -80,6 +87,7 @@
         <li><a href="#section-search-results">Search Results</a></li>
         <li><a href="#section-administration">Administration</a></li>
         <li><a href="#section-usermanagement">User Management</a></li>
+        <li><a href="#section-skillstatus">Skill Status</a></li>
         <li><a href="#section-other-pages">Other Pages</a></li>
       </ul>
       <hr>
@@ -185,10 +193,6 @@
             <td>demo/petrocore-my-position-add-activity-existing.html</td>
           </tr>
           <tr>
-            <td><a href="demo/petrocore-my-position-add-activity-historical.html">Add Activity - Historical</a></td>
-            <td>demo/petrocore-my-position-add-activity-historical.html</td>
-          </tr>
-          <tr>
             <td><a href="demo/petrocore-my-position-add-activity-new.html">Add Activity - New</a></td>
             <td>demo/petrocore-my-position-add-activity-new.html</td>
           </tr>
@@ -216,13 +220,21 @@
             <td><a href="demo/petrocore-dev-plan-month.html">Dev plan (month)</a></td>
             <td>demo/petrocore-dev-plan-month.html</td>
           </tr>
-          <tr>
+          <tr class="obsolete">
             <td><a href="demo/petrocore-dev-plan-month-4-weeks.html">Dev plan (month) 4 weeks</a></td>
             <td>demo/petrocore-dev-plan-month-4-weeks.html</td>
           </tr>
-          <tr>
+          <tr class="obsolete">
             <td><a href="demo/petrocore-dev-plan-month-6-weeks.html">Dev plan (month) 6 weeks</a></td>
             <td>demo/petrocore-dev-plan-month-6-weeks.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-dev-plan-print.html">Dev plan year (print)</a></td>
+            <td>demo/petrocore-dev-plan-print.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-dev-plan-print-month.html">Dev plan month (print)</a></td>
+            <td>demo/petrocore-dev-plan-print-month.html</td>
           </tr>
         </tbody>
       </table>
@@ -333,10 +345,6 @@
         </thead>
         <tbody>
           <tr>
-            <td><a href="demo/petrocore-person-details-self.html">Person Details - Self</a></td>
-            <td>demo/petrocore-person-details-self.html</td>
-          </tr>
-          <tr>
             <td><a href="demo/petrocore-add-direct-participant.html">Add Direct participant</a></td>
             <td>demo/petrocore-person-add-direct-participant.html</td>
           </tr>
@@ -385,8 +393,8 @@
             <td></td>
           </tr>
           <tr>
-            <td><a href="">User Properties</a></td>
-            <td></td>
+            <td><a href="demo/petrocore-user-properties.html">User Properties</a></td>
+            <td>demo/petrocore-user-properties.html</td>
           </tr>
           <tr>
             <td><a href="">User Profile</a></td>
@@ -399,6 +407,64 @@
           <tr>
             <td><a href="">Assigned Groups & Roles</a></td>
             <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+      <h4 id="section-usermanagement">User Settings</h4>
+      <table width="100%">
+        <thead>
+          <tr>
+            <th style="width: 48%;">Pages</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="demo/petrocore-person-details-landing.html">User Settings Landing</a></td>
+            <td>demo/petrocore-person-details-landing.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-person-details-application.html">Appication Settings</a></td>
+            <td>demo/petrocore-person-details-application.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-person-details-email.html">Email Subscriptions</a></td>
+            <td>demo/petrocore-person-details-email.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-person-details-properties.html">User Properties</a></td>
+            <td>demo/petrocore-person-details-properties.html</td>
+          </tr>
+          <tr>
+            <td><a href="demo/petrocore-person-details-profile.html">User Profile</a></td>
+            <td>demo/petrocore-person-details-profile.html</td>
+          </tr>
+          <tr>
+            <td><a href="">Assigned Positions</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="">Assigned Groups & Roles</a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+      <h4 id="section-skillstatus">Skill Status</h4>
+      <table width="100%">
+        <thead>
+          <tr>
+            <th style="width: 48%;">Pages</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="demo/petrocore-my-position-skill-groups.html">Skill Groups</a></td>
+            <td>demo/petrocore-my-position-skill-groups.html</td>
           </tr>
         </tbody>
       </table>

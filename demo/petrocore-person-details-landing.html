@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+-->
+
+<!-- Included CSS Files (Compressed) -->
+<link rel="stylesheet" href="../stylesheets/foundation.min.css">
+<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+<link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    <![endif]-->
+
+    <script src="../javascripts/modernizr.foundation.js"></script>
+
+  </head>
+  <body>
+
+    <!--***** PETROCORE HEADER *****-->
+
+    <nav class="top-bar">
+      <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+      <div class="logo"></div>
+      <div class="profile-container">
+        <div class="avatar"></div>
+        <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+        <div class="top-nav">
+          <ul>
+            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+            <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                <li><a href="petrocore-person-details-landing.html">Settings</a></li>
+                <li><a href="#">Role Summary</a></li>
+                <li><a href="#">Account History</a></li>
+                <li><a href="#">Role History</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Deutsch</a></li>
+                <li><a href="#">Español</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Italiano</a></li>
+                <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+            <li><p class="bar">&#124;</p></li>
+
+
+            <li class="top-nav-links"><a href="#">Help</a></li>
+            <li><p class="bar">&#124;</p></li>
+            <li class="top-nav-links"><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--***** PETROCORE HEADER *****-->
+
+
+
+    <!--***** MAIN WRAPPER *****-->
+    <div class="row master-wrapper">
+
+      <!--***** LEFT SPLIT CONTAINER *****-->
+      <div class="three columns left-split-container">
+
+        <!--***** SEARCH *****-->
+        <div class="search-container">
+          <div class="row collapse search-input">
+
+            <div class="nine mobile-four columns">
+              <input id="initial-search" class="round-left" type="text" value="" />
+            </div>
+
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+            </div>
+
+            <div class="two mobile-one columns">
+              <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            </div>
+
+          </div>
+        </div>
+        <!--***** SEARCH *****-->
+
+        <div id="advanced_search" class="display-none">
+          <!--This is a Advanced Search panel that is hidden by default-->
+
+          <p><strong>Advanced Search</strong></p>
+
+          <form class="custom search-type">
+            <label id="search-type-label" for="customDropdown">Search Type:</label>
+            <select class="custom-dropdown expand" id="customDropdown">
+              <option SELECTED>Person</option>
+              <option>Group</option>
+              <option>Position</option>
+              <option>Map</option>
+              <option>Skill Group</option>
+              <option>Skill</option>
+              <option>Skill Description</option>
+              <option>Development Activity</option>
+            </select>
+
+          </form>
+          <div class="add-filter-container">
+
+            <!--***** ADD FILTER *****-->
+            <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+            <!--***** ADD FILTER *****-->
+
+            <div class="add-filter-area">
+
+              <hr class="petrocore-hr">
+              <ul id="filters">
+
+                <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+                <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!--***** MAIN NAVIGATION *****-->
+        <div class="left-nav-container">
+          <!--This will hold the accordeon navigation-->
+          <ul class="accordion">
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ae;</div>My Position</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li class="active">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="petrocore-user-summary.html">Users</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
+        <!--***** MAIN NAVIGATION *****-->
+
+      </div>
+      <!--***** LEFT SPLIT CONTAINER *****-->
+
+      <!--***** RIGHT SPLIT CONTAINER *****-->
+      <div class="nine columns right-split-container">
+        <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+          <div class="breadcrumbs-list-container">
+            <ul class="breadcrumbs">
+              <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Subitem 1</a></li>
+              <li><a href="#">Subitem 2</a></li>
+              <li><a href="#">Subitem 3</a></li>
+              <li><a href="#">Subitem 4</a></li>
+              <li><a href="#">Subitem 5</a></li>
+              <li class="current"><a href="#">Subitem 6</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-container">
+          <!--This will hold the content-->
+
+          <div class="header-inline">
+            <h4 >User Settings</h4>
+          </div>
+          <hr>
+
+          <div class="same-line">
+            <h4 >Chung, David</h4><span> (dchung12)</span>
+          </div><br>
+          <div class="same-line">
+            <h5>Position:</h5><span> IT Developer</span>
+          </div><br>
+          <div class="same-line last">
+            <h5>Status:</h5><span> Active</span>
+          </div>
+
+          <div class="row">
+            <div class="six columns visible-charts left-chart">
+              <div class="dashboard-left-column">
+                <!--This is a dashboard panel-->
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container"><h5>Application Settings</h5></div>
+                  </div>
+                  <div class="panel-content-container-dashboard">
+                    <ul class="list angle-bullet">
+                      <li><a href="petrocore-person-details-application.html">Application Settings</a></li>
+                      <li><a href="petrocore-person-details-email.html">Email Subscriptions</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--This is a dashboard panel-->
+            <div class="six columns visible-charts right-chart">
+              <div class="dashboard-right-column">
+                <!--This is a dashboard panel-->
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <a href="petrocore-person-details-profile.html">
+                    <div class="panel-title-container"><h5>Profile</h5></div>
+                    </a>
+                  </div>
+                  <div class="panel-content-container-dashboard">
+                    <ul class="list angle-bullet">
+                      <li><a href="petrocore-person-details-profile.html">5 Profile Categories Set</a></li>
+                      <li><a href="petrocore-person-details-profile.html">10 Profile Categories Available</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- row -->
+
+          <div class="row">
+            <div class="six columns visible-charts left-chart">
+              <div class="dashboard-left-column">
+
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <a href="petrocore-person-details-properties.html">
+                    <div class="panel-title-container"><h5>Properties</h5></div>
+                    </a>
+                  </div>
+                  <div class="panel-content-container-dashboard">
+                    <ul class="list angle-bullet">
+                      <li><a href="petrocore-person-details-properties.html">Contact Information</a></li>
+                      <li><a href="petrocore-person-details-properties.html#login">Login Information</a></li>
+                      <li><a href="petrocore-person-details-properties.html#account">Account Information</a></li>
+                      <li><a href="petrocore-person-details-properties.html#demographics">Demographics</a></li>
+                      <li><a href="petrocore-person-details-properties.html#qualifications">Qualifications</a></li>
+                      <li><a href="petrocore-person-details-properties.html#employment">Employment</a></li>
+                      <li><a href="petrocore-person-details-properties.html#geographic">Geographic</a></li>
+                      <li><a href="petrocore-person-details-properties.html#petrocore">Petrocore</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--This is a dashboard panel-->
+            <div class="six columns visible-charts right-chart">
+              <div class="dashboard-right-column">
+                <!--This is a dashboard panel-->
+                <div class="panel-wrapper">
+                  <div class="panel-header">
+                    <div class="panel-title-container"><h5>Role Summary</h5></div>
+                  </div>
+                  <div class="panel-content-container-dashboard">
+                    <ul class="list angle-bullet">
+                      <li><a href="#">Activity Administration</a></li>
+                      <li><a href="#">Group Administration</a></li>
+                      <li><a href="#">Map Administration</a></li>
+                      <li><a href="#">User Administration</a></li>
+                      <li><a href="#">Position Administration</a></li>
+                      <li><a href="#">Profile Administration</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- row -->
+
+        </div><!--Close Content Container-->
+      </div>
+    </div>
+  </div>
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+  <!--***** MAIN WRAPPER *****-->
+
+  <!--***** FOOTER *****-->
+
+  <div class="row">
+    <div class="twelve columns petrocore-footer">
+      <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
+      <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+    </div>
+  </div>
+  <!--***** FOOTER *****-->
+
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="../javascripts/foundation.min.js"></script>
+  <!-- initialize foundation -->
+  <script src="../javascripts/app.js"></script>
+
+  <script src="js/jquery-1.9.1.js"></script>
+  <script src="js/jquery-ui-1.9.2.js"></script>
+
+  <!-- Application specific javascript -->
+  <script src="js/compass.js"></script>
+  <script src="js/compass-ie8.js"></script>
+
+</body>
+</html>
