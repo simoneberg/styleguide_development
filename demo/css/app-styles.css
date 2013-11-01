@@ -983,6 +983,11 @@ ul.accordion>li>div.title:after {
   top: 8px;
 }
 
+ul.accordion>li.active .content>ul>li.active a {
+  font-weight: bold;
+  color:#333;
+}
+
 .collapse-menu{
   padding:20px; 
   text-shadow: 0 1px #e9e9e9;
