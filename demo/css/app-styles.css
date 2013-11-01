@@ -1997,6 +1997,13 @@ form select.custom-dropdown {
 .cc-link p {
   line-height: 2.4;
   margin-bottom: 0;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.cc-link.inactive p {
+  cursor: default;
+  font-weight: normal;
 }
 
 #add-names-container {
@@ -2979,7 +2986,8 @@ ul.button-group label {
   font-weight: bold;
 }
 
-.step-name a, p{
+.step-name a, 
+.step-name p {
   color: #222;
 }
 
