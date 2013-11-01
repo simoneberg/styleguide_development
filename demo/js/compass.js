@@ -195,10 +195,12 @@ $(document).ready(function(){
   // Expand and Collapse Panels on Admin Map
   $('#expandall').on('click', function(){
 
-    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
-
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    var panel_summary = $(current).parents().find('.panel-summary');
+	
     if ($(current).is(':hidden')) {
      $(current).show();
+     panel_summary.addClass("display-none");
 	 $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0de;');
      $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
     }
@@ -206,15 +208,17 @@ $(document).ready(function(){
 
   $('#collapseall').on('click', function(){
 
-    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard');
+    var current = $('.panel-header-icons-collapse-up.icon-').closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    var panel_summary = $(current).parents().find('.panel-summary');
 
     if ($(current).is(':visible')) {
      $(current).hide();
+     panel_summary.removeClass("display-none");
      $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;');
      $(current).siblings('.panel-header').find('.panel-header-icons-collapse-up.icon-').html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
     } 
-  });
-
+  }); 
+  
   // Add A Competency Control Item to the list
   $('#addcompetency').click (function() {
 
