@@ -19,7 +19,6 @@
   
   <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
     <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -272,10 +271,10 @@
                     
         <hr>
 		<dl class="tabs">
-			<dd class="active"><a href="#chevron1">Membership</a></dd>
-			<dd><a href="#chevron2">Assign Position</a></dd>
-			<dd><a href="#chevron2">Details</a></dd>
-			<dd><a href="#chevron2">Policy Editor</a></dd>
+			<dd class="active"><a href="#tab1">Membership</a></dd>
+			<dd><a href="#tab2">Assign Position</a></dd>
+			<dd><a href="#tab3">Details</a></dd>
+			<dd><a href="#tab4">Policy Editor</a></dd>
 		</dl>
 
 		<ul class="tabs-content">
@@ -283,7 +282,7 @@
 		<!--*******THIS IS CONTENT FOR TAB 1*******-->
 		<!--***************************************-->
 
-			<li class="active" id="chevron1Tab">
+			<li class="active" id="tab1Tab">
 			   <div id="panel2" class="panel-wrapper">
 				  <div class="panel-header">
 					<div class="panel-title-container">
@@ -391,8 +390,175 @@
 		<!--*******THIS IS CONTENT FOR TAB 2*******-->
 		<!--***************************************-->
 
-			<li id="chevron2Tab">
-				
+			<li id="tab2Tab">
+				<div id="panel2" class="panel-wrapper">
+				  <div class="panel-header">
+					<div class="panel-title-container">
+					  <h5 class="name-classifier">Assigned Users</h5>
+					</div>
+			
+					
+
+				  </div>
+				  
+					<div class="panel-content-container-full">
+						<div class="no-border row">
+
+							<table id="report-templates-table" class="twelve no-border nested-table">
+							  <thead>
+								<tr>
+								  <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+								  <th><a class="sorting-block">Position</a></th>
+								  <th class="two">Actions</th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td><a href >Burt Reynolds</a></td>
+								  <td> 
+										Blocker
+								  </td>
+								  <td>
+									<a data-reveal-id="edit-position"  href="#" class="button silver-button radius">Edit Position</a>
+									
+								  </td>
+								</tr>
+								<tr>
+								  <td><a href >Sally Fields</a></td>
+								  <td>
+										Frog
+					  
+								  </td>
+								 <td>
+									<a data-reveal-id="edit-position" href="#"  class="button silver-button radius">Edit Position</a>
+									
+								  </td>
+								</tr>
+
+							  </tbody>
+							</table>
+							<p class="pagination-counter">Showing 1-3 of 9</p>
+							<div class="twelve columns pagination-centered">
+							  <p>Page 1 of 3</p>
+							  <ul class="pagination">
+								<li class="arrow unavailable"><a href="">«</a></li>
+								<li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+								<li class="current unavailable"><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+								<li class="arrow unavailable"><a href="">»</a></li>
+							  </ul>
+							</div>
+										
+						</div>
+					</div>
+
+			  </div>
+			</li>
+			
+			
+	    <!--***************************************-->
+		<!--*******THIS IS CONTENT FOR TAB 3*******-->
+		<!--***************************************-->
+
+			<li id="tab3Tab">
+			<div class="panel-wrapper">
+				  <div class="panel-header">
+					<div class="panel-title-container">
+					  <h5 class="name-classifier">Details</h5>
+					</div>
+			
+					
+
+				  </div>
+				  
+					<div class="panel-content">
+					 <div class="row">
+
+						  <form class="custom">
+
+							  <div class="row">
+								 <div class="form-group six mobile-four columns">
+									  <label>Name</label>
+									  <input type="text" placeholder="" />
+								</div>
+							 </div>
+							<div class="row">
+								 <div class="form-group six mobile-four columns">
+									  <label>Import Identifier</label>
+									  <input type="text" placeholder="" />
+								</div>
+
+							  </div>
+							  
+							  <div class="petrocore-actions">
+								<a class="primary radius button left" href="#">Save</a>
+								<a class="cancel-link left" href="#">Cancel</a>
+							  </div>
+						  </form>	
+						</div>
+					</div>
+
+			  </div>
+			
+				<div class="panel-wrapper">
+				  <div class="panel-header">
+					<div class="panel-title-container">
+					  <h5 class="name-classifier">Statistics</h5>
+					</div>
+			
+					
+
+				  </div>
+				  
+					<div class="panel-content-container-full">
+						<div class="no-border row">
+
+							<table id="report-templates-table" class="twelve no-border nested-table">
+							  <thead>
+								<tr>
+								  <th><a class="sorting-block">Group<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+								  <th><a class="sorting-block">#</a></th>
+								</tr>
+							  </thead>
+							  <tbody>
+								<tr>
+								  <td><a href >Primary Group</a></td>
+								  <td> 
+										14
+								  </td>
+								  
+								</tr>
+								<tr>
+								  <td><a href >Secondary Group</a></td>
+								  <td>
+										2
+					  
+								  </td>
+								 
+								</tr>
+
+							  </tbody>
+							</table>
+							<p class="pagination-counter">Showing 1-3 of 9</p>
+							<div class="twelve columns pagination-centered">
+							  <p>Page 1 of 3</p>
+							  <ul class="pagination">
+								<li class="arrow unavailable"><a href="">«</a></li>
+								<li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+								<li class="current unavailable"><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li class="arrow unavailable"><a href="">&rsaquo;</a></li>
+								<li class="arrow unavailable"><a href="">»</a></li>
+							  </ul>
+							</div>
+										
+						</div>
+					</div>
+
+			  </div>
 			</li>
 
 		</ul>
@@ -446,20 +612,37 @@
   <!--</div>-->
   <!-- CONTENT AREA -->
 
-<div id="myModal" class="reveal-modal expand">
-  <div class="modal-header">
-    <h5>This is a Pop-up</h5>
-    <a class="close-reveal-modal">&#215;</a>
+
+<div id="edit-position" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Edit Position</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
   </div>
   <div class="popup-content-container">
-    <p class="lead">Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	  <form class="custom">
+
+		  <div class="row">
+
+			<div class="form-group six mobile-four columns">
+			  <strong>Current position:</strong> Blocker
+		 
+			</div>
+
+		  </div>
+      </form>
   </div>
   <div class="modal-footer">
-    <a class="success radius button right" href="#">OK</a>
-    <a class="secondary radius button right" href="#">Cancel</a>
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="cancel-link left" href="#">Cancel</a>
   </div>
 </div>
+
 
 <div id="overlay"></div>
 
