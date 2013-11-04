@@ -20,8 +20,6 @@
 
 <!-- Included CSS Files (Compressed) -->
   <link rel="stylesheet" href="../stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="../stylesheets/app.css">
-  <link rel="stylesheet" href="../stylesheets/foundation-override.css">
   <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="../demo/css/app-styles.css">
 
@@ -29,81 +27,7 @@
     <link rel="stylesheet" type="text/css" href="css/ie8.css">
   <![endif]-->
 
-  <script src="../javascripts/jquery-1.9.1.js"></script>
-
   <script src="../javascripts/modernizr.foundation.js"></script>
-    <!-- Included JS Files (Compressed) -->
-  <script src="../javascripts/foundation.min.js"></script>
-
-  <!-- Initialize JS Plugins -->
-  <script src="../javascripts/app.js"></script>
-
-      
-  <script type="text/javascript">
-  
-	function show_hide_advanced(id) {
-		var advanced_panel = document.getElementById(id);
-			advanced_arrow = document.getElementById('arrowdown');
-		
-		
-		if(advanced_panel.style.display == 'block')
-		
-		{	advanced_panel.style.display = 'none';
-			document.getElementById('arrowdown').innerHTML = '&#xf0dd;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '0px';						
-		}
-		else
-		{	advanced_panel.style.display = 'block';
-			document.getElementById('arrowdown').innerHTML = '&#xf0de;';	
-			advanced_arrow.style.position = 'relative';
-			advanced_arrow.style.top = '7px';						
-		}
-	}	
- 
- 
-	$(document).ready(function(){
-
-		var notifs = $("#user-notifications").text();
-		var notifs_exist = true;
-
-	   	$('#notification_btn').bind('click', function (event) {
-				
-			if (notifs_exist == true) {
-	    		$('.notifications-popup').css('left',event.pageX-272); // <<< use pageX and pageY
-			    $('.notifications-popup').css('top',event.pageY+30);
-				$('.notifications-popup').toggle();	
-				$('#overlay').show();
-				$('#overlay').click(function(){
-						$('.notifications-popup').hide();
-						$('#overlay').hide();							
-				});
-					
-			} else {
-				$('.notifications-popup').hide();
-				$('#overlay').hide();															
-				}
-	    });	
-			
-		$('.notification .anotification').click (function() {
-			$(this).parent().remove();
-			notifs = $("#user-notifications").text();				
-			$("#user-notifications").html(notifs-1);
-				
-			if (notifs == 1) {
-				notifs_exist = false;								
-			    $('.notification-btn').css('background','#c0c2c1');
-			    $('.notification-btn').css('border','1px solid #616161');
-			    $('.notification-btn').css('color','#404040');
-			    $('.notifications-area').html('You have "0" Notifications');
-			    $('.notifications-area').css('text-align','center');
-			    $('.notifications-area').css('padding','10px 0 10px 0');
-			}										
-		});
-			
-	});
-			
-  </script>
 
 </head>
   <body>
@@ -598,5 +522,18 @@
 
     </div>
   </div>
+
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- initialize foundation -->
+<script src="../javascripts/app.js"></script>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
+
 </body>
 </html>

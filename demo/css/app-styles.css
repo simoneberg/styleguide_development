@@ -1062,6 +1062,12 @@ ul.accordion>li.active .content>ul>li.active a {
 
 .filter-list-elements {
   width: 100%;
+  padding: 5px 10px 5px 10px;
+  clear: both;
+}
+
+.filter-list-elements-selected {
+  width: 100%;
   background-color: #e7e7e7;
   padding: 5px 10px 5px 10px;
   clear: both;
