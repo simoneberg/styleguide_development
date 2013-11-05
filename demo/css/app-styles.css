@@ -4345,6 +4345,10 @@ a.milestone-date:hover {
   margin:0px;
 }
 
+.dev-activity-control-leftmargin {
+  margin-left:20px;
+}
+
 .activity-title {
   margin: 10px 0 15px 0;  
 }
