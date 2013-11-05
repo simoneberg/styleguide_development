@@ -4321,7 +4321,7 @@ a.milestone-date:hover {
 .skillbox-detail-wrapper {
   padding:10px;
   background: filter:alpha(opacity=15); opacity:0.15;
-  background-color:#f2f2f2;
+  background-color:#e9e9e9;
   border-radius:4px;
    /* IE 8 */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";

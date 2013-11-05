@@ -258,7 +258,7 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
- 		<form class="custom">
+ 		   <form class="custom">
           <div class="header-inline">
             <h4>Drilling Engineer</h4>
             <div class="same-line save-template-btn">
@@ -692,16 +692,13 @@
             <div style="clear:both;"></div>
           </div><!--Close Activity-Objective-TwoColumns-->
 
-
-
-
 		    </form>
       </div><!--Close Content Container-->
-    </div>
-  </div>
-  <!--***** RIGHT SPLIT CONTAINER *****-->
 
-<!--***** MAIN WRAPPER *****-->
+    </div>
+    <!--***** RIGHT SPLIT CONTAINER *****-->
+  </div>
+  <!--***** MAIN WRAPPER *****-->
 
 <!--***** FOOTER *****-->
 
@@ -732,8 +729,8 @@
   <!-- </div> -->
   <!-- CONTENT AREA -->
 
- <div id="dev-plan-add-activities" class="reveal-modal large">
-    <div class="panel-header">
+<div id="dev-plan-add-activities" class="reveal-modal large">
+  <div class="panel-header">
     <div class="panel-title-container">
       <h5>Add Activities to Development Plan</h5>
     </div>
@@ -745,39 +742,87 @@
   </div>
 
   <div class="popup-content-container">
+    <form class="custom">
     <p>You are about to add the following activity(ies) to your Development Plan.</p>
-    <div class="twelve mobile-one columns">
+    <div class="xtwelve xmobile-one xcolumns">
 
-      <div id="list-direct-participants" class="list-box">
-        <div class="participant">
-          <div class="sr-name">Aranda, David (DAPO)</div>
+    <!--   <div class="panel-wrapper">
+        <div class="row" style="border-bottom:1px solid #e1e1e1; padding-top:5px; margin-bottom:8px;">
+          <div class="form-group four mobile-four columns">
+            <label>Activity Name</label>
+          </div>
+          <div class="form-group four mobile-four columns">
+            <label>Start Date</label>
+          </div>
+          <div class="form-group four mobile-four columns">
+            <label>End Date</label>
+          </div>
         </div>
-        <div class="participant">
-          <div class="sr-name">Chung, David (DCKI)</div>
+        <div class="row">
+          <div class="form-group four mobile-four columns">
+            N-CVX-002
+          </div>
+          <div class="form-group four mobile-four columns">
+            <input class="control-with-trailing-icon" type="text" placeholder="" value="1951-June-18"/>
+          <a class="icon-trailing-control input" href"#">&#xf073;</a> 
+          </div>
+          <div class="form-group four mobile-four columns">
+            <input class="control-with-trailing-icon" type="text" placeholder="" value="1951-June-18"/>
+          <a class="icon-trailing-control input" href"#">&#xf073;</a>
+          </div>
         </div>
-        <div class="participant">
-          <div class="sr-name">Masterson, David (DMSW)</div>
-        </div>
-        <div class="participant">
-          <div class="sr-name">Robertson, David (DBJU)</div>
-        </div>
-        <div class="participant">
-          <div class="sr-name">Slaton, David (DSLS)</div>
-        </div>
-        <div class="participant">
-          <div class="sr-name">Maskell, Margarette (MaskMarg)</div>
-        </div>
-        <div class="participant">
-          <div class="sr-name">Swift, Sabra (SwifSabr)</div>
-        </div>
-      </div>
+      </div>   -->
 
+      <div class="panel-wrapper">
+      <table class="twelve nested-table">
+        <thead>
+          <tr>
+            <th>Activity Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>N-CVX-002</td>
+            <td><input class="control-with-trailing-icon" style="width:85%" type="text" placeholder="" value=""/>
+          <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+            <td><input class="control-with-trailing-icon" style="width:85%" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      
       <p>The following activity(ies) are already on your Development Plan.</p>
+        
+    <div class="panel-wrapper">
+      <table class="twelve nested-table">
+        <thead>
+          <tr>
+            <th>Activity Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT_EXP_0096</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>IT_EXP_0015</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    </form>
 
     </div>
   </div>
   <div class="modal-footer">
-    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+    <a class="primary radius button left" href="#">Save</a>
     <a class="left cancel-link" href="#">Cancel</a>
   </div>
 </div>
