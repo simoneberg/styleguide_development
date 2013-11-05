@@ -26,6 +26,7 @@
      search results
      list box
      skill groups
+     user role summary
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -3796,6 +3797,78 @@ input.round-right {
 .direct-participant a.sr-icon-x:focus:after,
 .direct-participant a.sr-icon-x:active:after {
   color:#0169a0;
+}
+
+
+/* User Role Summary */
+
+.panel-content-container-dashboard.role-box {
+  padding: 0;  
+}
+
+#role-summary-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.role-summary-item {
+  border-bottom: solid 1px #606060;
+  border-top: none;
+  margin: 0;
+  padding: 8px 0;
+  min-height:50px;
+  width: 100%;
+}
+ .role-summary-item:last-child {
+  border-bottom: none;
+ }
+
+ .role-position {
+  font-size:12px;
+ }
+/* role bread crumbs */
+/****************/
+ul.role-breadcrumbs {
+  background: none;
+  border:none;
+  padding: 0 10px 2px 0;  
+  margin: 0;
+  height:25px;
+  width:100%;
+}
+
+ul.role-breadcrumbs li {
+  float:left;
+  margin:0;
+  padding: 0 6px 0 0;
+  list-style: none;
+}
+
+ul.role-breadcrumbs li:after {
+  content: "/";
+  font-family: FontAwesome;
+  color: #aaa;
+  font-size: 12px;
+}
+
+ul.role-breadcrumbs li a,
+ul.role-breadcrumbs li span {
+  text-transform: none;
+  font-size: 11px;
+  padding-right: 4px;
+  color:#767676;
+}
+
+ul.role-breadcrumbs li.current a {
+  color:#525252;
+}
+
+ul.role-breadcrumbs li:hover a,
+ul.role-breadcrumbs li a:focus {
+  text-decoration: none;
+  color:#525252;
 }
 
 /* Development Plan */
