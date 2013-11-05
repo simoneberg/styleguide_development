@@ -251,7 +251,7 @@
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li><a href="petrocore-my-position-skill-groups.html">Drilling Engineer</a></li>
+            <li><a href="petrocore-my-position-skill-groups.html">My Position</a></li>
             <li class="current"><a href="#">Defining Well Objectives</a></li>
           </ul>
         </div>
@@ -269,17 +269,17 @@
           <hr>
 
           <div class="row">
-            <div class="four columns">
+            <div class="three columns">
               <h6>Developed 34%</h6>
             </div>
-            <div class="four columns">
+            <div class="five columns">
               <ul class="button-group" >
                 <li><a href="#" class="button silver-button first">Status</a></li>
                 <li><a href="#" class="button silver-button last active">Development</a></li>
               </ul>  
             </div>
             <div class="four columns">
-                  <div class="save-template-btn">
+                  <div class="right">
                     <ul class="button-group" >
                       <li>
                          <div href="#action-button1" class="button dropdown petrocore-actions">
@@ -297,50 +297,33 @@
             </div>
           </div><!--Close row-->
 
-          <!-- <h6>Developed 34%</h6>
-          <div style="float:left;">
-            <ul class="button-group" >
-              <li><a href="#" class="button silver-button first">Status</a></li>
-              <li><a href="#" class="button silver-button last active">Development</a></li>
-            </ul>  
-         </div>
-          <div class="save-template-btn">
-          	<ul class="button-group" >
-              <li>
-                 <div href="#action-button1" class="button dropdown petrocore-actions">
-                  Legend
-                  <ul class="">
-                    <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="add-small-margin-left">Not Assessed</a></li>
-                    <li><div class="skillgroupstatus status-competent"></div><a href="#" class="add-small-margin-left">Competent</a></li>
-                    <li><div class="skillgroupstatus status-some"></div><a href="#" class="add-small-margin-left">Some</a></li>
-                    <li><div class="skillgroupstatus status-not-competent"></div><a href="#" class="add-small-margin-left">Not Yet Competent</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-		      </div> -->
           <hr>
 
           <div id="Activity-Objective-TwoColumns">
-            <div class="four columns">
+            <div id="dev-activity-control" class="four columns">
               <div class="panel-wrapper">
 
+                <div class="panel-header-small-fill">
+                  <h5>Development Activities</h5>
+                </div>
+
                 <div class="row panel-content-container-dev-activities">
-                  <div class="eleven columns">
+                  <div class="twelve columns">
                     <h6>Filter:</h6>
                     <hr>
-                    Show All<br>
-                    Recommended Activities [Settings]
-                    <h6>Activities</h6>
+                    <label for="radio1"><input name="radio" checked="" type="radio" id="radio1"> Show All</label>
+                    <label for="radio2"><input name="radio" type="radio" id="radio2"> Recommended Activities<br> <span style="margin-left:20px;">[Settings]<span></label>
+
+                    <h6>Activities:</h6>
                     <hr>
-                    <p><a href="#" class="secondary radius button">Add to Development Plan</a></p>
-                    <a href="#">Clear Selection</a>
+                    <p><a href="#" class="secondary radius button" style="width:100%;" data-reveal-id="dev-plan-add-activities">Add to Development Plan</a></p>
+                    <a style="margin-left:20px;" href="#">Clear Selection</a>
                   </div>
                 </div>
 
                   
-                <div class="panel">
-                  <h6>Available Dev. Activities (16)</h6>
+                <div class="panel-header-small-fill">
+                  <h5><strong>Available Dev. Activities</strong> (16)</h5>
                 </div>
 
                  <div class="checkbox-group">
@@ -352,7 +335,7 @@
 
                     <div class="row">
                       <div class="form-group ten mobile-three columns">
-                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> N-CVX-002</label>
+                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> N-CVX-002</label>
                       </div>
                       <div class="form-group two mobile-one columns">
                           3/3
@@ -413,15 +396,15 @@
                     </div>
                     <div class="row">
                       <div class="form-group eleven mobile-three columns">
-                        <a href="#">... More</a>
+                        <a style="margin-left:20px;" href="#">... More</a>
                       </div>
                     </div>
 
                   </div><!--Close panel-content-container-dev-activities-->
                 </div><!--Close checkbox-group-->
 
-                <div class="panel">
-                  <h6>In Progress (3)</h6>
+                <div class="panel-header-small-fill">
+                  <h5><strong>In Progress</strong> (3)</h5>
                 </div>
 
                  <div class="checkbox-group">
@@ -433,7 +416,7 @@
 
                     <div class="row">
                       <div class="form-group ten mobile-three columns">
-                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> IT-EXP-0096</label>
+                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> IT-EXP-0096</label>
                       </div>
                       <div class="form-group two mobile-one columns">
                           3/3
@@ -459,8 +442,8 @@
                   </div><!--Close panel-content-container-dev-activities-->
                 </div><!--Close checkbox-group-->
 
-                <div class="panel">
-                  <h6>Completed (8)</h6>
+                <div class="panel-header-small-fill">
+                  <h5><strong>Completed</strong> (8)</h5>
                 </div>  
 
                  <div class="checkbox-group">
@@ -481,7 +464,7 @@
 
                     <div class="row">
                       <div class="form-group ten mobile-three columns">
-                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> IT-EXP-0015</label>
+                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> IT-EXP-0015</label>
                       </div>
                       <div class="form-group two mobile-one columns">
                           1/1
@@ -548,7 +531,7 @@
 
                     <div class="row">
                       <div class="form-group ten mobile-three columns">
-                        <a href="#">... Less</a>
+                        <a style="margin-left:20px;" href="#">... Less</a>
                       </div>
                       <div class="form-group two mobile-one columns">
                       </div>
@@ -562,8 +545,17 @@
             </div><!--Close Four Column-->
 
             <div class="eight columns">
+
               <h5>Defining Well Objectives</h5>
-              Developed: 40% Development based on your selection: 60%
+              <div class="row">
+                <div class="four columns">
+                  <p>Developed: 40%</p>
+                </div>
+                <div class="eight columns">
+                 <p>Development based on your selection: 60%</p>
+               </div>
+             </div>
+
               <hr>
 
               <div class="row">
@@ -596,21 +588,12 @@
                 </div>
               </div>
               <h6>Your Skills<h6>  
-              <div class="row">        
-                <div class="panel-wrapper-grey">
-                  <div class="panel-content-container">
-
-                    <hr class="petrocore-hr">
-
-                    <div class="row filters-checklist">
-                      <div class="twelve columns ">
-                        <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Show only high importance skill descriptions</label>
-                      </div>
-                      <div class="six columns ">
-                      </div>
+              <div class="row panel-wrapper-grey" style="border-left:none; border-right:none; border-bottom:none;">
+                  <div class="filters-checklist panel-content-container-dev-activities">
+                    <div class="twelve columns ">
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Show only high importance skill descriptions</label>
                     </div>
                   </div>
-                </div>
               </div>
               <h6>Evaluation Program 40%</h6>
               <div class="row">
@@ -624,7 +607,7 @@
                   </div>
                 </div>
                 <div class="form-group three mobile-one columns ">
-                  <div class="skillbox-detail-wrapper active">
+                  <div class="skillbox-detail-wrapper">
                     <div class="skill-description-box status-some"></div>
                   </div>
                 </div>
@@ -748,6 +731,56 @@
     <!-- </div> -->
   <!-- </div> -->
   <!-- CONTENT AREA -->
+
+ <div id="dev-plan-add-activities" class="reveal-modal large">
+    <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add Activities to Development Plan</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+    <p>You are about to add the following activity(ies) to your Development Plan.</p>
+    <div class="twelve columns">
+
+      <div id="list-direct-participants" class="list-box">
+        <div class="participant">
+          <div class="sr-name">Aranda, David (DAPO)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Chung, David (DCKI)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Masterson, David (DMSW)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Robertson, David (DBJU)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Slaton, David (DSLS)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Maskell, Margarette (MaskMarg)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name">Swift, Sabra (SwifSabr)</div>
+        </div>
+      </div>
+
+      <p>The following activity(ies) are already on your Development Plan.</p>
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
 
 
 <div id="overlay"></div>
