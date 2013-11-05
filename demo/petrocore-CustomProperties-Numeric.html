@@ -309,10 +309,10 @@
                     <ul>
                       <li class="filter-list-elements"><a href="petrocore-CustomProperties-ActivityCode.html">Default Properties</a></li>
                       <li class="filter-list-elements"><a href="petrocore-CustomProperties-String.html">Custom Property Name *String</a></li>
-                      <li class="filter-list-elements"><a href="petrocore-CustomProperties-Numeric.html">Custom Property Name *Numeric</a></li>
+                      <li class="filter-list-elements-selected"><a href="petrocore-CustomProperties-Numeric.html">Custom Property Name *Numeric</a></li>
                       <li class="filter-list-elements"><a href="petrocore-CustomProperties-Date.html">Custom Property Name *Date</a></li>
                       <li class="filter-list-elements"><a href="petrocore-CustomProperties-Boolean.html">Custom Property Name *Boolean</a></li> 
-                      <li class="filter-list-elements-selected"><a href="petrocore-CustomProperties-Multiline.html">Custom Property Name *Multiline</a></li>
+                      <li class="filter-list-elements"><a href="petrocore-CustomProperties-Multiline.html">Custom Property Name *Multiline</a></li>
                     </ul>
                   </div>
                 </div><!--Close panel wrapper grey-->
@@ -340,9 +340,9 @@
                     in a custom form and the class custom-dropdown is used. --> 
                     <select class="custom-dropdown" id="customDropdown">
                       <option>Boolean</option>
-                      <option >Date</option>
-                      <option SELECTED>Multiline</option>
-                      <option >Numeric</option>
+                      <option>Date</option>
+                      <option>Multiline</option>
+                      <option SELECTED>Numeric</option>
                       <option>String</option>
                     </select>
                     <!-- the div with class custom dropdown displays the 
@@ -351,7 +351,7 @@
                     as much horizontal space as possible. -->
                     <div class="custom dropdown expand">
                       <a href="#" class="current">
-                        Multiline
+                        Numeric
                       </a>
                       <a href="#" class="selector"></a>
                       <ul>
@@ -366,7 +366,7 @@
                 <div class="row">
                   <div class="form-group six mobile-four columns">
                     <label>Default Value</label>
-                    <textarea placeholder="" class="text-area-min-height"></textarea>
+                    <input type="text" placeholder="" value="" />
                   </div>
                 </div>
                 <div class="row">
