@@ -4294,6 +4294,35 @@ a.milestone-date:hover {
 }
 
 /* skill groups*/
+.skillbox-detail-wrapper {
+  padding:10px;
+  background: filter:alpha(opacity=20); opacity:0.2;
+  background-color:#f2f2f2;
+}
+
+.skillbox-detail-wrapper.active {
+  background: filter:alpha(opacity=100); opacity:1;
+}
+
+.panel-content-container-dev-activities {
+  position: relative;
+  padding: 10px 15px 10px 15px;
+  min-height: 30px;
+}
+.activity-title {
+  margin: 10px 0 15px 0;  
+}
+
+ul.activity-code-list {
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+ul.activity-code-list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+}
 
 .skillbox {
   border: 1px solid #a1a1a1;
