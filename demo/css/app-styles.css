@@ -1007,17 +1007,13 @@ ul.accordion>li.active .content>ul>li.active a {
   left:-1px;
 }
 
-.search-bar-icons-loupe {
+.search-bar-icons-magnif {
   color: #5b5b5b;
   cursor: pointer;
   margin-top:-1px;
   margin-left: 3px;
   text-shadow: 0 1px #ccc;
   font-size:16px;
-}
-
-.search-bar-icons-loupe p {
-  font-size: 16px;
 }
 
 .search-bar-icons-dropdown {
@@ -1027,8 +1023,9 @@ ul.accordion>li.active .content>ul>li.active a {
   text-shadow: 0 1px #ccc;
 }
 
+.search-bar-icons-magnif p,
 .search-bar-icons-dropdown p {
-  font-size: 16px;
+  color:#222;
 }
 
 .search-bar-users {
@@ -3586,12 +3583,12 @@ input.round-right {
   list-style: none;
 }
 
-.search-box-relationships {
+.search-bar-box {
   background-color: #b3b3b3;
   padding: 5px;
 }
 
-.search-box-relationships input {
+.search-bar-box input {
   margin-bottom: 0;
 }
 
@@ -4979,6 +4976,7 @@ a.action-item-disabled {
   form fieldset .row .set-small-input-field {
     width: 12%;
   }
+
 }
 
 /* portait Andriod phone >4 inch screen */

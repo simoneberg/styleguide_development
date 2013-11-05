@@ -1,6 +1,6 @@
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('#arrowdown');
+  advanced_arrow = $('p.search-arrow');
   if (advanced_panel.is(':hidden')) {
     advanced_panel.removeClass("display-none");
     advanced_panel.css("display", "block");
