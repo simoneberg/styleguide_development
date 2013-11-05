@@ -800,6 +800,74 @@ h4 {
 /* inline ul */
 /****************/
 
+/* carousel */
+/****************/
+
+/* carousel view container */
+.carousel-view-container {
+	width: 100%;
+	height: 300px;
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #FFF;
+	display: block;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+/* the composition div for colums */
+.carousel-view-composition {
+	display: table;
+}
+
+/**/
+.carousel {
+	display: table-cell;
+	border-right: 1px solid #999;
+}
+
+
+.carousel:only-child {
+	border-right: 1px solid #999;
+}
+
+
+/* for carousel listing */
+.carousel ul {
+	margin: 0;
+	padding: 0;
+	height: 300px;
+	width: 250px;
+	overflow-y: auto;
+	list-style: none;
+}
+
+.carousel ul li {
+	position: relative;
+	margin: 0;
+	padding: 10px 25px 10px 10px;
+}
+
+.carousel ul li:hover {
+	cursor: pointer;
+}
+
+.carousel ul li i {
+	position: absolute;
+	top: 14px;
+	right: 5px;
+}
+
+.carousel ul li:hover, .carousel ul li.active {
+	background: #f1f1f1;
+  background: linear-gradient(to bottom, #f1f1f1 0%,#e7e7e7 100%);
+	color: #6f6f6f;
+}
+
+.carousel ul li:hover a, .carousel ul li.active a {
+	color: #6f6f6f;
+}
+
 
 /* bread crumbs */
 /****************/
