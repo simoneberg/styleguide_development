@@ -262,12 +262,12 @@ ul.pagination li.current a {
 
 .display-none {
   /* used to hide the item from being displayed */
-  display: none !important;
+  display: none;
 }
 
-.display-none-basic {
-  /* used to hide the item from being displayed, not important */
-  display: none;
+.display-none-important {
+  /* used to hide the item from being displayed with important */
+  display: none !important;
 }
 
 .filter-list ul {
