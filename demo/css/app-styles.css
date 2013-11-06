@@ -2593,7 +2593,7 @@ border: 1px solid #8a8a8a;
   color: #858585;
 }
 
-.disabled {
+.isdisabled {
   opacity: 0.5; /* Modern Browsers */
   -moz-opacity: 0.5;  /* Netscape */
   -khtml-opacity: 0.5;   /* Safari 1.x */
