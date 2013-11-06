@@ -310,9 +310,22 @@
 
                 <div class="row">
                   <div class="form-group six mobile-four columns">
-                    <label>First Name *</label>
-                    <input type="text" value="Paul">
+                    <a class="add-medium-space-right" href="#">Select All</a><a href="#">Select None</a>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+
+                    <div class="checkbox-group">
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Participant</label>
+                      <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Administrator</label>
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Manager</label>
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Mentor</label>
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Reporter</label>
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Supervisor</label>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
@@ -334,20 +347,45 @@
               </div>
 
               <div class="panel-action-icons-container"></div>
-              <div class="panel-content-container-dashboard display-none-basic">
+              <div class="panel-content-container-dashboard display-none">
 
-                <div class="row">
-                  <div class="form-group six mobile-four columns">
-                    <label>User ID *</label>
-                    <input type="text" value="PNADAIR">
+                <div class="list-box">
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Group Name 112:</label>
+                    <ul class="inline-list"><li class="inline-list-item">Manager</li><li class="inline-list-item add">added Supervisor</li></ul>
+                  </div>
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Group Name 001012:</label>
+                    <ul class="inline-list"><li class="inline-list-item">Reporter</li></ul>
+                  </div>
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Group Name a Longer name with a lot more characters in it the name is really long to display:</label>
+                    <ul class="inline-list"><li class="inline-list-item">Participant</li><li class="inline-list-item add">added Reporter</li> <li class="inline-list-item remove">removed Mentor</li></ul>
                   </div>
                 </div>
+
+                <label>These changes are not saved until the Save button is clicked</label>
 
               </div>
             </div>
 
 
           </div> <!-- row -->
+
+          <div class="row">
+            <div class="same-line add-medium-space-right">
+              <a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
+            </div>
+            <div class="same-line">
+              <a class="" href="#">Cancel</a>
+            </div>
+          </div>
 
         </div><!--Close Content Container-->
       </div>

@@ -3744,6 +3744,80 @@ input.round-right {
   border-bottom: none;
 }
 
+.list-item {
+  line-height: 18px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 8px 7px 8px;
+  margin-bottom: 3px;
+}
+
+.list-box .list-item {
+  border-bottom: solid 1px #cfcfcf;
+}
+
+.list-box .list-item ul.inline-list {
+  margin: 0;
+  padding: 0;
+}
+.list-box .list-item ul.inline-list li {
+  background-color: pink;
+  display: inline-block;
+  margin: 0;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item {
+  color: #999;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.add {
+  font-weight: bold;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.remove {
+  font-style: italic;
+}
+
+.list-box .list-item ul.inline-list li:not(:last-child):after {
+  content: ", \00a0"; /* add comma and a space after each item that is not the last */
+}
+
+.list-box .list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item .list-icon-plus,
+.list-item .list-icon-x {
+  margin: 0;
+  float:right;
+}
+
+.list-item .list-icon-plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  right: 10px;
+  top: 13px;
+  display:block;
+}
+
+.list-item .list-icon-x:after {
+  content: "\f00d";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  top: 0;
+  display:block;
+}
+
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after,
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after {
+  color:#858585;
+}
+
 .list-of-search-results-relationships li,
 .list-of-relationships li
 {
