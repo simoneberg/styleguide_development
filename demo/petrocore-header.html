@@ -32,20 +32,42 @@
 <body>
 
 <!--***** PETROCORE HEADER *****-->
+
 <nav class="top-bar">
   <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
   <div class="logo"></div>
   <div class="profile-container">
     <div class="avatar"></div>
-    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></li></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
       <div class="top-nav">
         <ul>
-          <li class="top-nav-links"><a href="#" class="username">John Doe</a></li>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-landing.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
           <li><p class="bar">&#124;</p></li>
-          <li class="top-nav-links"><a href="#">Tools</a></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
           <li><p class="bar">&#124;</p></li>
-          <li class="top-nav-links"><a href="#">Settings</a></li>
-          <li><p class="bar">&#124;</p></li>
+
+
           <li class="top-nav-links"><a href="#">Help</a></li>
           <li><p class="bar">&#124;</p></li>
           <li class="top-nav-links"><a href="#">Logout</a></li>
@@ -676,6 +698,42 @@
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
 </div>
+
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
