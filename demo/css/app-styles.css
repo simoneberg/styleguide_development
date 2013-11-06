@@ -3896,10 +3896,6 @@ ul.inline-list.forecast-status-list > li > *{
   padding: 12px 50px 12px 20px;
 }
 
-.button.dropdown > ul.list-of-legend li {
-  width: 175px;
-}
-
 .background .month-column,
 .background .month-column:last-child,
 .month-column,

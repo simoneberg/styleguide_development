@@ -232,3 +232,20 @@ fieldset legend {
      min-width: 300px;
 
   }
+
+.lt-ie9 .background .month-column {
+   float:left !important;
+   width: 8.33333% !important;
+} 
+.lt-ie9 .background .week-column {
+   float:left !important;
+   width: 20% !important;
+}
+.lt-ie9 .background .title, 
+.lt-ie9 .background .vertical, 
+.lt-ie9 .dev-activity .priority-bar {
+  margin: 0;
+}
+.lt-ie9 .development-plan-widget {
+  border-bottom: 1px solid #999;
+}
