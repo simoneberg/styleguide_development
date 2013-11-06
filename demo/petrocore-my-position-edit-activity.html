@@ -41,6 +41,10 @@
     <div class="avatar"></div>
       <div class="top-nav">
         <ul>
+         <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
                   <li><a href="petrocore-person-details-landing.html">Settings</a></li>
@@ -702,10 +706,6 @@
 
 <!--************** MODAL WINDOW PEOPLE ****************-->
 
-
-
-<div id="overlay"></div>
-
   <!-- Entire Navbar Code -->
 <!-- <ul class="nav-bar">
   <li class="has-flyout">
@@ -725,6 +725,41 @@
   <!--</div>-->
   <!-- CONTENT AREA -->
 
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
 
 <script src="../javascripts/foundation.min.js"></script>
 <!-- initialize foundation -->
