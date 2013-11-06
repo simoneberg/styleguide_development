@@ -2622,14 +2622,7 @@ border: 1px solid #8a8a8a;
   border-top: none;
   margin: 0;
   padding: 10px 0;
-  xheight: 55px;
   width: 100%;
-}
-
-.text-link-right {
-  text-align: right;
-  margin-top: 15px;
-  font-size: 14px;
 }
 
 /* END DASHBOARD */
