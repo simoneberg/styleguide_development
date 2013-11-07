@@ -3760,8 +3760,8 @@ input.round-right {
   margin: 0;
   padding: 0;
 }
+
 .list-box .list-item ul.inline-list li {
-  background-color: pink;
   display: inline-block;
   margin: 0;
 }
