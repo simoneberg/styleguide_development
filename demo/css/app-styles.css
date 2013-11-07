@@ -2107,6 +2107,10 @@ table tbody tr.notification-highlight {
   background: #c1c1c1;
 }
 
+table tbody tr:nth-child(even).override-nth {
+  background: white;
+} 
+
 table tbody tr td {
   vertical-align: top;
 }
@@ -2143,6 +2147,14 @@ a.sorting-block {
 
 a.sorting-block:hover .add-sorting-icon { 
   color:#01669f;
+}
+
+.inline-row-message {
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;   
+  font-weight: bold;
+  border-bottom: solid 2px #CCC;  
 }
 
 /* END TABLES */
