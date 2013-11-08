@@ -261,37 +261,37 @@ $(document).ready(function(){
       $(this).find('.cl-number').html(index+1);
       if ( $(this).find('.cl-number').html() == 1 || $(this).find('.cl-number').html() == n )
       {
-        $(this).find('a.cl-icon-x').removeClass('isdisabled').hover(function(){
+        $(this).find('a.cl-icon-x').removeClass('is-disabled').hover(function(){
           $(this).css("color","#0169a0");},function(){
           $(this).css("color","#858585");});
 
           if ( $(this).find('.cl-number').html() == 1 )
           {
-            $(this).find('a.cl-icon-arrow-up').addClass('isdisabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').removeClass('isdisabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
           }
           else
           {
-            $(this).find('a.cl-icon-arrow-up').removeClass('isdisabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').addClass('isdisabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
           }
         }
         else
         {
-          $(this).find('a.cl-icon-arrow-up').removeClass('isdisabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
-          $(this).find('a.cl-icon-arrow-down').removeClass('isdisabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
         }
@@ -299,13 +299,13 @@ $(document).ready(function(){
       else
       {
         $(this).find('.cl-number').html(index+1);
-        $(this).find('a.cl-icon-x').addClass('isdisabled').hover(function(){
+        $(this).find('a.cl-icon-x').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-up').addClass('isdisabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-down').addClass('isdisabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
       }
