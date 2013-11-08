@@ -1,5 +1,5 @@
 /* Compass CSS v0.1 */
-/* based on
+/* based o
    Twitter Bootstrap and
    _How to Order CSS Selectors_ by Jens 0. Meiert http: //meiert.com/en/blog/20130130/how-to-order-css-selectors/
    CSS Guidelines https://github.com/csswizardry/CSS-Guidelines */
@@ -4222,17 +4222,29 @@ a.milestone-date:hover {
 .skill-container{
   border: 1px solid #a1a1a1; 
   padding-top:10px; 
-  padding-bottom:70px;
   margin-bottom:10px; 
+  overflow: hidden;
 }
 
 .skill-description-box {
   border: 1px solid #a1a1a1;
   padding: 15px 30px;
+  margin-bottom: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 4px #999999;
   box-shadow: 1px 1px 4px #999999; 
 }
+
+.skill-description-content{
+  padding: 5px 5px 5px;
+
+}
+.skill-description-duration{
+  margin-top:-15px;
+  margin-right:-25px;
+  font-size:30px;
+}
+
 .skillgroupstatus {
   border: 1px solid #a1a1a1;
   border-radius: 5px;
@@ -4250,6 +4262,7 @@ a.milestone-date:hover {
 .status-competent {
   background-color: #33CC66;
 }
+
 .status-not-assessed {
   background-color: white;
 }
