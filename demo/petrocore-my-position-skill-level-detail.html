@@ -166,11 +166,11 @@
               <div class="content">
                 <ul>
                   <li><strong>Your Skill Groups</strong></li>
-                  <li><div class="skillgroupstatus status-some"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
-                  <li><div class="skillgroupstatus not-assessed"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
-                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
-                  <li><div class="skillgroupstatus status-non-assessed"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
-                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Casing and Cementing Planning</a></li>
+                  <li class="active"><div class="skillgroupstatus status-some"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
+                  <li><div class="skillgroupstatus status-some"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
+                  <li><div class="skillgroupstatus status-some"></div><a href="#"  class="add-small-margin-left">Casing and Cementing Planning</a></li>
                   <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling Performance Planning</a></li>
                   <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling System, Services, and Materials Selection and Management</a></li>
                 </ul>
@@ -178,7 +178,7 @@
             </li>
             <li class="no-dropdown">
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+                <h6 class="two-lines"><a href="petrocore-dev-plan.html"><div class="icon- navicon">&#xf073;</div>Development Plan</a></h6>
               </div>
             </li>
             <li>
@@ -219,9 +219,9 @@
                   <li><a href="#">Activities</a></li>
                   <li><a href="#">Groups</a></li>
                   <li><a href="#">Maps</a></li>
-                  <li><a href="#">People</a></li>
                   <li><a href="#">Positions</a></li>
                   <li><a href="#">Profiles</a></li>
+                  <li><a href="petrocore-user-summary.html">Users</a></li>
                 </ul>
               </div>
             </li>
@@ -260,52 +260,61 @@
         <div class="breadcrumbs-list-container">
           <ul class="breadcrumbs">
             <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
-            <li class="current"><a href="#">Drilling Engineer</a></li>
+            <li><a href="petrocore-my-position-skill-groups.html">Drilling Engineer</a></li>
+            <li class="current"><a href="#">Defining Well Objectives</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <form class="custom search-type">
-          <h4>Drilling Engineer</h4>
-          <div class="save-template-btn">
-          <a class="link-without-button" href="petrocore-administration-map-admin.html" >Back to previous page</a>
-        </div>
+ 		<form class="custom">
+        <div class="header-inline">
+            <h4>Drilling Engineer</h4>
+
+            <a class="back-to-previous-page" href="petrocore-my-position-skill-groups.html">Back to Previous Page</a>
+
+          </div>
+          
+
+
+            
+          
           <hr>
 
-         <h5>[Skill Name] - [Skill Level Name]</h5>
-
-          <!--Evidence dashboard panel-->
-          <div class="panel-wrapper">
-            <div class="panel-header">
-              <div class="panel-title-container">
-                <h5>Evidence - 0</h5>
-              </div>
-                <div class="panel-header-icons-container">
-                  <ul class="panel-header-icons-list">
-                    <li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li><!--collapse up icon-->
-                    <li><a class="secondary radius button smaller" href="#" data-reveal-id="attach-document">Attach Document</a></li>
-                  </ul>
-                </div>
+          <fieldset>
+          <legend>Evaluation Program - Awareness</legend>
+          <div class="row">
+            <a href="">Notes - (0)</a></li>
+            <a href="">Development Activities - (0)</a>
+            <a href="">History - (0)</a>
+            <a href="">Evidence - (0)</a>    
+          </div>
+          <div class="row">
+            <div class="form-group twelve mobile-four columns">
+              <label class="plain">Identify the fundamentals of an evaluation program, customer(s), suppliers, and equipment used, also, describe the needs and use of data acquired.</label>
             </div>
-              <div class="panel-content-container-dashboard">
-                  <table class="twelve no-border nested-table">
-                    <thead>
-                      <tr>
-                        <th><a class="sorting-block">Name</a></th>
-                        <th><a class="sorting-block">Uploaded by</a></th>
-                        <th><a class="sorting-block">Date Added</a></th>
-                        <th class="two">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                    </tbody>
-                  </table>
+          </div>
+          </fieldset>
+          <fieldset>
+          <legend>Status</legend>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label>Not Assessed</label>
               </div>
             </div>
-            <!-- end Evidence dashboard panel-->               
-        </form>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label >Self Assessment</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label >Supervisor Assessment</label>
+              </div>
+            </div>
+          </fieldset>
+                 
+		    </form>
       </div><!--Close Content Container-->
     </div>
   </div>
@@ -378,68 +387,6 @@
 
 	</div>
 </div>
-
-
-<!--************** MODAL WINDOW ATTACH DOCUMENT ****************-->
-
-<div id="attach-document" class="reveal-modal expand smaller">
-
-  <div class="panel-header">
-    <div class="panel-title-container">
-      <h5>Attach Document</h5>
-    </div>
-    <div class="panel-header-icons-container">
-      <ul class="panel-header-icons-list">
-        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="popup-content-container">
-
-
-    <!--************** FORM ****************-->
-    <form class="custom">
-
-      <div class="row">
-
-        <div class="form-group six mobile-four columns">
-          <label>Name</label>
-          <input type="text" placeholder="" />
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="form-group four mobile-four columns">
-          <label>Upload file</label>
-          <div class="file-upload-btn">
-            <label id="fileupload_btn_label1" class="round text-center" for="file">Choose a file</label>
-            <input type="file" id="file">
-          </div>
-          <div class="with-above form-text-display-field">path/to/selected/file/notshown/if.blank</div>
-          <div class="radio-group">
-            <label>
-              <input data-customforms='disabled' checked name="radio-group-1" type="radio"> 
-              Upload file
-            </label>
-            <label>
-              <input data-customforms='disabled' name="radio-group-1" type="radio"> 
-              Link to file
-            </label>
-          </div>
-        </div>
-      </div>
-    </form>
-    <!--************** FORM ****************-->
-
-  </div>
-  <div class="modal-footer">
-    <a class="primary radius button left" href="#">Save</a>
-    <a class="left cancel-link" href="#">Cancel</a>
-  </div>
-</div>
-
-
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
