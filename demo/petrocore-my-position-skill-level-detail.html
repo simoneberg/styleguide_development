@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-landing.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<!--***** PETROCORE HEADER *****-->
+
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+
+        <!-- ***** SEARCH *****-->
+        <div class="search-container">
+
+          <div class="row collapse search-input">
+                  
+            <div class="nine mobile-two columns">
+              <input class="round-left" type="text" placeholder="Search" value="" />
+            </div>
+
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+                <div class="search-bar-icons-dropdown">
+                  <p class="search-arrow icon-">&#xf0dd;</p>
+                </div>
+              </span>
+            </div>
+                    
+            <div class="two mobile-one columns">
+              <span class="postfix round-left">
+                <div class="search-bar-icons-magnif">
+                  <p class="icon-">&#xf002;</p>
+                </div>
+              </span>
+            </div>
+            
+          </div>
+
+        </div>
+      <!--***** SEARCH *****-->
+
+	  <div id="advanced_search" class="display-none">
+	  <!--This is a Advanced Search panel that is hidden by default-->
+
+		<p><strong>Advanced Search</strong></p>
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
+				<select class="custom-dropdown expand" id="customDropdown">
+					<option SELECTED>Person</option>
+					<option>Group</option>
+					<option>Position</option>
+					<option>Map</option>
+					<option>Skill Group</option>
+					<option>Skill</option>
+					<option>Skill Description</option>
+					<option>Development Activity</option>
+				</select>
+
+			</form>
+            <div class="add-filter-container">
+
+				<!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
+				<div class="add-filter-area">
+					<hr class="petrocore-hr">
+         	<ul id="filters">
+            <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+            <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+   		    </ul>
+        </div>
+			</div>
+		</div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li class="active">
+              <div class="title">
+                <h6><a href="petrocore-my-position-skill-groups.html"><div class="icon- navicon">&#xf0ae;</div>My Position</a></h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><strong>Your Skill Groups</strong></li>
+                  <li class="active"><div class="skillgroupstatus status-some"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
+                  <li><div class="skillgroupstatus status-some"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
+                  <li><div class="skillgroupstatus status-some"></div><a href="#"  class="add-small-margin-left">Casing and Cementing Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling Performance Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling System, Services, and Materials Selection and Management</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><a href="petrocore-dev-plan.html"><div class="icon- navicon">&#xf073;</div>Development Plan</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                  <li><a href="petrocore-user-summary.html">Users</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="petrocore-my-position-skill-groups.html">Drilling Engineer</a></li>
+            <li class="current"><a href="#">Defining Well Objectives</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+ 		<form class="custom">
+        <div class="header-inline">
+            <h4>Drilling Engineer</h4>
+
+            <a class="back-to-previous-page" href="petrocore-my-position-skill-groups.html">Back to Previous Page</a>
+
+          </div>
+          
+
+
+            
+          
+          <hr>
+
+          <fieldset>
+          <legend>Evaluation Program - Awareness</legend>
+          <div class="row">
+            <a href="">Notes - (0)</a></li>
+            <a href="">Development Activities - (0)</a>
+            <a href="">History - (0)</a>
+            <a href="">Evidence - (0)</a>    
+          </div>
+          <div class="row">
+            <div class="form-group twelve mobile-four columns">
+              <label class="plain">Identify the fundamentals of an evaluation program, customer(s), suppliers, and equipment used, also, describe the needs and use of data acquired.</label>
+            </div>
+          </div>
+          </fieldset>
+          <fieldset>
+          <legend>Status</legend>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label>Not Assessed</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label >Self Assessment</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label >Supervisor Assessment</label>
+              </div>
+            </div>
+          </fieldset>
+                 
+		    </form>
+      </div><!--Close Content Container-->
+    </div>
+  </div>
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+
+<!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+    <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
+    <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <!-- CONTENT AREA -->
+
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>
+
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a>
+			<hr class="hr-notification">
+	    </div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a>
+			<hr class="hr-notification">
+		</div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a>
+		</div>
+
+	</div>
+</div>
+
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- initialize foundation -->
+<script src="../javascripts/app.js"></script>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
+
+</body>
+</html>

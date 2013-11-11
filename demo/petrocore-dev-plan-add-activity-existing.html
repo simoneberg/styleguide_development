@@ -40,6 +40,10 @@
     <div class="avatar"></div>
       <div class="top-nav">
         <ul>
+         <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
            <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
                   <li><a href="petrocore-person-details-landing.html">Settings</a></li>
@@ -79,24 +83,36 @@
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
 
-      <!--***** SEARCH *****-->
-      <div class="search-container">
-        <div class="row collapse search-input">
+        <!-- ***** SEARCH *****-->
+        <div class="search-container">
 
-          <div class="nine mobile-two columns">
-            <input id="initial-search" class="round-left" type="text" value="" />
-          </div>
+          <div class="row collapse search-input">
+                  
+            <div class="nine mobile-two columns">
+              <input class="round-left" type="text" placeholder="Search" value="" />
+            </div>
 
-          <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
-          </div>
-
-          <div class="two mobile-one columns">
-            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+                <div class="search-bar-icons-dropdown">
+                  <p class="search-arrow icon-">&#xf0dd;</p>
+                </div>
+              </span>
+            </div>
+                    
+            <div class="two mobile-one columns">
+              <span class="postfix round-left">
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
+              </span>
+            </div>
+            
           </div>
 
         </div>
-      </div>
       <!--***** SEARCH *****-->
 
     <div id="advanced_search" class="display-none">
@@ -166,7 +182,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -476,6 +492,42 @@
     <!--</div>-->
   <!--</div>-->
   <!-- CONTENT AREA -->
+
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>

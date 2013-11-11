@@ -1,18 +1,13 @@
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('#arrowdown');
+  advanced_arrow = $('p.search-arrow');
+  advanced_arrow.css("position", "relative");
   if (advanced_panel.is(':hidden')) {
-    advanced_panel.removeClass("display-none");
     advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0de;');
-    advanced_arrow.css("position", "relative");
-    advanced_arrow.css("top", "7px");
+    advanced_arrow.html('&#xf0de;').css("top", "7px");
   } else {
-    advanced_panel.addClass("display-none");
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0dd;');
-    advanced_arrow.css("position", "relative");
-    advanced_arrow.css("top", "0px");
+    advanced_panel.css("display", "none");
+    advanced_arrow.html('&#xf0dd;').css("top", "0px");
   }
 }
 

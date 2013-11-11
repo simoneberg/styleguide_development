@@ -85,24 +85,36 @@
   <!--***** LEFT SPLIT CONTAINER *****-->
   <div class="three columns left-split-container">
 
-      <!--***** SEARCH *****-->
-      <div class="search-container">
-        <div class="row collapse search-input">
+        <!-- ***** SEARCH *****-->
+        <div class="search-container">
 
-          <div class="nine mobile-two columns">
-            <input id="initial-search" class="round-left" type="text" value="" />
-          </div>
+          <div class="row collapse search-input">
+                  
+            <div class="nine mobile-two columns">
+              <input class="round-left" type="text" placeholder="Search" value="" />
+            </div>
 
-          <div class="one mobile-one columns">
-            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
-          </div>
-
-          <div class="two mobile-one columns">
-            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+                <div class="search-bar-icons-dropdown">
+                  <p class="search-arrow icon-">&#xf0dd;</p>
+                </div>
+              </span>
+            </div>
+                    
+            <div class="two mobile-one columns">
+              <span class="postfix round-left">
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
+              </span>
+            </div>
+            
           </div>
 
         </div>
-      </div>
       <!--***** SEARCH *****-->
 
 			<div id="advanced_search" class="display-none">
@@ -174,7 +186,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>

@@ -32,8 +32,10 @@
         <div class="avatar"></div>
         <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
         <div class="top-nav">
-          <ul>
-            <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+         <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
             <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -74,21 +76,33 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
-          <div class="row collapse search-input">
 
-            <div class="nine mobile-four columns">
-              <input id="initial-search" class="round-left" type="text" value="" />
+          <div class="row collapse search-input">
+                  
+            <div class="nine mobile-two columns">
+              <input class="round-left" type="text" placeholder="Search" value="" />
             </div>
 
             <div class="one mobile-one columns">
-              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+                <div class="search-bar-icons-dropdown">
+                  <p class="search-arrow icon-">&#xf0dd;</p>
+                </div>
+              </span>
             </div>
-
+                    
             <div class="two mobile-one columns">
-              <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+              <span class="postfix round-left">
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
+              </span>
             </div>
-
+            
           </div>
+
         </div>
       <!--***** SEARCH *****-->
 
@@ -157,7 +171,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -574,6 +588,52 @@
 
             <hr class="small">
 
+            <div class="row">               
+              <div class="form-group seven mobile-four columns">
+                <label>Search Bar</label>
+                <p><a href="#">With and without a Box</a></p>
+                
+                <div class="search-bar-box"><!-- search-bar-box -->
+
+                  <div class="row collapse search-input">
+                    <div class="ten mobile-three columns">
+                      <input class="round-left" type="text" placeholder="Search" value="" />
+                    </div>
+                    <div class="two mobile-one columns">
+                      <span class="postfix round-left">
+                        <div class="search-bar-icons-magnif">
+                          <p class="icon-">&#xf002;</p>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+
+                </div><!-- END /search-bar-box -->
+                  
+              </div>
+            </div>
+
+            <div class="row">               
+              <div class="form-group seven mobile-four columns">
+
+                <div class="row collapse search-input">
+                  <div class="ten mobile-three columns">
+                    <input class="round-left" type="text" placeholder="Search" value="" />
+                  </div>
+                  <div class="two mobile-one columns">
+                    <span class="postfix round-left">
+                      <div class="search-bar-icons-magnif">
+                        <p class="icon-">&#xf002;</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+            
+            <hr class="small">
+
             <div class="row">
               <div class="form-group six mobile-four columns">
                 todo: add list control
@@ -949,10 +1009,68 @@
                 <small class="compass-error twelve">This is the error for File Upload</small>
               </div>
             </div>
-            
 
-            <hr>
+            <hr class="small">
+
+            <div class="row">               
+              <div class="form-group seven mobile-four columns">
+                <label>Search Bar</label>
+                <p><a href="#">With and without a Box</a></p>
+                
+                <div class="search-bar-box"><!-- search-bar-box -->
+
+                  <div class="row collapse search-input">
+                    <div class="ten mobile-three columns">
+                      <input class="round-left" type="text" placeholder="Search" value="" />
+                    </div>
+                    <div class="two mobile-one columns">
+                      <span class="postfix round-left">
+                        <div class="search-bar-icons-magnif">
+                          <p class="icon-">&#xf002;</p>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+
+                </div><!-- END /search-bar-box -->
+                  
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group seven mobile-four columns">
+                <small class="compass-error twelve">This is the error for the search box</small>
+              </div>
+            </div>
+
+
+            <div class="row">               
+              <div class="form-group seven mobile-four columns">
+
+                <div class="row collapse search-input">
+                  <div class="ten mobile-three columns">
+                    <input class="round-left" type="text" placeholder="Search" value="" />
+                  </div>
+                  <div class="two mobile-one columns">
+                    <span class="postfix round-left">
+                      <div class="search-bar-icons-magnif">
+                        <p class="icon-">&#xf002;</p>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
             
+            <div class="row">
+              <div class="form-group seven mobile-four columns">
+                <small class="compass-error twelve">This is the error for the search box</small>
+              </div>
+            </div>
+
+            <hr class="small">
+                        
             <div class="row">
               <div class="form-group six mobile-four columns">
                 todo: add list control
@@ -1026,6 +1144,42 @@
     <a class="success radius button right" href="#">OK</a>
     <a class="secondary radius button right" href="#">Cancel</a>
   </div>
+</div>
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+        <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 1 has been generated</p>
+            <a href="#">View Report</a> 
+            <hr class="hr-notification">
+        </div>
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 2 has been generated</p>
+            <a href="#">View Report</a> 
+            <hr class="hr-notification">
+        </div>
+
+        <div class="notification">
+            <a href="#" class="icon- anotification">&#xf00d;</a>
+            <p>Report Lorem Ipsum 3 has been generated</p>
+            <a href="#">View Report</a> 
+        </div>
+
+    </div>
 </div>
 
 <!-- Included JS Files (Compressed) -->

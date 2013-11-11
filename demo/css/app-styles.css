@@ -1,5 +1,5 @@
 /* Compass CSS v0.1 */
-/* based on
+/* based o
    Twitter Bootstrap and
    _How to Order CSS Selectors_ by Jens 0. Meiert http: //meiert.com/en/blog/20130130/how-to-order-css-selectors/
    CSS Guidelines https://github.com/csswizardry/CSS-Guidelines */
@@ -26,6 +26,7 @@
      search results
      list box
      skill groups
+     user role summary
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -262,12 +263,12 @@ ul.pagination li.current a {
 
 .display-none {
   /* used to hide the item from being displayed */
-  display: none !important;
+  display: none;
 }
 
-.display-none-basic {
-  /* used to hide the item from being displayed, not important */
-  display: none;
+.display-none-important {
+  /* used to hide the item from being displayed with important */
+  display: none !important;
 }
 
 .filter-list ul {
@@ -1051,6 +1052,11 @@ ul.accordion>li>div.title:after {
   top: 8px;
 }
 
+ul.accordion>li.active .content>ul>li.active a {
+  font-weight: bold;
+  color:#333;
+}
+
 .collapse-menu{
   padding:20px; 
   text-shadow: 0 1px #e9e9e9;
@@ -1070,17 +1076,13 @@ ul.accordion>li>div.title:after {
   left:-1px;
 }
 
-.search-bar-icons-loupe {
+.search-bar-icons-magnif {
   color: #5b5b5b;
   cursor: pointer;
   margin-top:-1px;
   margin-left: 3px;
   text-shadow: 0 1px #ccc;
   font-size:16px;
-}
-
-.search-bar-icons-loupe p {
-  font-size: 16px;
 }
 
 .search-bar-icons-dropdown {
@@ -1090,8 +1092,9 @@ ul.accordion>li>div.title:after {
   text-shadow: 0 1px #ccc;
 }
 
+.search-bar-icons-magnif p,
 .search-bar-icons-dropdown p {
-  font-size: 16px;
+  color:#222;
 }
 
 .search-bar-users {
@@ -1124,6 +1127,12 @@ ul.accordion>li>div.title:after {
 }
 
 .filter-list-elements {
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  clear: both;
+}
+
+.filter-list-elements-selected {
   width: 100%;
   background-color: #e7e7e7;
   padding: 5px 10px 5px 10px;
@@ -1259,6 +1268,25 @@ ul.accordion>li>div.title:after {
 .panel-content-container-dashboard .panel-header h5 {
   margin-top:12px;
   height: 45px;
+}
+
+.tabs-content.maps-content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tabs-content.maps-content li a {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
 
 /* END NAVIGATION */
@@ -2070,6 +2098,13 @@ form select.custom-dropdown {
 .cc-link p {
   line-height: 2.4;
   margin-bottom: 0;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.cc-link.inactive p {
+  cursor: default;
+  font-weight: normal;
 }
 
 #add-names-container {
@@ -2136,9 +2171,32 @@ table tbody tr:nth-child(even) {
   background: #f1f1f1;
 }
 
+table tbody tr.notification-highlight {
+  background: #c1c1c1;
+}
+
+table tbody tr:nth-child(even).override-nth {
+  background: white;
+} 
+
 table tbody tr td {
   vertical-align: top;
 }
+
+table.wrap-cell-content {
+  table-layout: fixed;
+}
+
+table.wrap-cell-content td span.wrapword {
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 /
+  white-space: -pre-wrap; / Opera 4-6 /
+  white-space: -o-pre-wrap; / Opera 7 /
+  white-space: pre-wrap; / css-3 /
+  word-wrap: break-word; / Internet Explorer 5.5+ */
+  word-break: break-all;
+  white-space: normal;
+}
+
 
 #competency-framework-table {
   min-width: 700px;
@@ -2157,6 +2215,14 @@ a.sorting-block {
 
 a.sorting-block:hover .add-sorting-icon { 
   color:#01669f;
+}
+
+.inline-row-message {
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;   
+  font-weight: bold;
+  border-bottom: solid 2px #CCC;  
 }
 
 /* END TABLES */
@@ -2678,14 +2744,7 @@ border: 1px solid #8a8a8a;
   border-top: none;
   margin: 0;
   padding: 10px 0;
-  xheight: 55px;
   width: 100%;
-}
-
-.text-link-right {
-  text-align: right;
-  margin-top: 15px;
-  font-size: 14px;
 }
 
 /* END DASHBOARD */
@@ -2770,7 +2829,7 @@ border: 1px solid #8a8a8a;
   font-weight: normal;
   right: 0px;
   line-height: 10px;
-  margin-top: -3px;
+  margin-top: 10px;
   text-shadow: 0 1px #e5e5e5;
 }
 
@@ -2869,6 +2928,10 @@ border: 1px solid #8a8a8a;
 
 /* **************************************** */
 /* ALERTS, LABELS, BADGES */
+a.compass-error {
+  color: #c60f13;
+  font-weight: bold !important;
+}
 
 label.compass-error {
   color: #c60f13;
@@ -3123,7 +3186,8 @@ ul.button-group label {
   font-weight: bold;
 }
 
-.step-name a, p{
+.step-name a, 
+.step-name p {
   color: #222;
 }
 
@@ -3641,12 +3705,12 @@ input.round-right {
   list-style: none;
 }
 
-.search-box-relationships {
+.search-bar-box {
   background-color: #b3b3b3;
   padding: 5px;
 }
 
-.search-box-relationships input {
+.search-bar-box input {
   margin-bottom: 0;
 }
 
@@ -3814,6 +3878,78 @@ input.round-right {
   color:#0169a0;
 }
 
+
+/* User Role Summary */
+
+.panel-content-container-dashboard.role-box {
+  padding: 0;  
+}
+
+#role-summary-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.role-summary-item {
+  border-bottom: solid 1px #606060;
+  border-top: none;
+  margin: 0;
+  padding: 8px 0;
+  min-height:50px;
+  width: 100%;
+}
+ .role-summary-item:last-child {
+  border-bottom: none;
+ }
+
+ .role-position {
+  font-size:12px;
+ }
+/* role bread crumbs */
+/****************/
+ul.role-breadcrumbs {
+  background: none;
+  border:none;
+  padding: 0 10px 2px 0;  
+  margin: 0;
+  height:25px;
+  width:100%;
+}
+
+ul.role-breadcrumbs li {
+  float:left;
+  margin:0;
+  padding: 0 6px 0 0;
+  list-style: none;
+}
+
+ul.role-breadcrumbs li:after {
+  content: "/";
+  font-family: FontAwesome;
+  color: #aaa;
+  font-size: 12px;
+}
+
+ul.role-breadcrumbs li a,
+ul.role-breadcrumbs li span {
+  text-transform: none;
+  font-size: 11px;
+  padding-right: 4px;
+  color:#767676;
+}
+
+ul.role-breadcrumbs li.current a {
+  color:#525252;
+}
+
+ul.role-breadcrumbs li:hover a,
+ul.role-breadcrumbs li a:focus {
+  text-decoration: none;
+  color:#525252;
+}
+
 /* Development Plan */
 
 .float-right {
@@ -3838,10 +3974,6 @@ ul.inline-list.forecast-status-list > li > *{
 
 .button.dropdown.petrocore-actions.legends {
   padding: 12px 50px 12px 20px;
-}
-
-.button.dropdown > ul.list-of-legend li {
-  width: 175px;
 }
 
 .background .month-column,
@@ -4361,17 +4493,29 @@ a.milestone-date:hover {
 .skill-container{
   border: 1px solid #a1a1a1; 
   padding-top:10px; 
-  padding-bottom:70px;
   margin-bottom:10px; 
+  overflow: hidden;
 }
 
 .skill-description-box {
   border: 1px solid #a1a1a1;
   padding: 15px 30px;
+  margin-bottom: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 4px #999999;
   box-shadow: 1px 1px 4px #999999; 
 }
+
+.skill-description-content{
+  padding: 5px 5px 5px;
+
+}
+.skill-description-duration{
+  margin-top:-15px;
+  margin-right:-25px;
+  font-size:30px;
+}
+
 .skillgroupstatus {
   border: 1px solid #a1a1a1;
   border-radius: 5px;
@@ -4389,6 +4533,7 @@ a.milestone-date:hover {
 .status-competent {
   background-color: #33CC66;
 }
+
 .status-not-assessed {
   background-color: white;
 }
@@ -4397,11 +4542,12 @@ a.milestone-date:hover {
   background-color: #ED4027;
 }
 
+.status-progress{
+  background-color: rgb(243, 143, 15);
+}
+
 .status-some {
-  background-color: #FFCC00;
-  background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(255,204,0,1.00)),color-stop( 100% , rgba(237,190,2,1.00)));
-  background-image: -webkit-linear-gradient(270deg,rgba(255,204,0,1.00) 0%,rgba(237,190,2,1.00) 100%);
-  background-image: linear-gradient(180deg,rgba(255,204,0,1.00) 0%,rgba(237,190,2,1.00) 100%);
+  background-color: #FFEB00;
 }
 
 /* END PAGE SPECIFIC */
@@ -5042,6 +5188,7 @@ h4 .header-link {
   form fieldset .row .set-small-input-field {
     width: 12%;
   }
+
 }
 
 /* portait Andriod phone >4 inch screen */
@@ -5989,4 +6136,4 @@ h4 .header-link {
 
 
 /* END WIDGETS */
-/* ***************************************** */
+/* ******************************************/

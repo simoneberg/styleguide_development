@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -14,20 +15,21 @@
   <!-- Included CSS Files (Uncompressed) -->
   <!--
   <link rel="stylesheet" href="stylesheets/foundation.css">
--->
+  -->
 
-<!-- Included CSS Files (Compressed) -->
-<link rel="stylesheet" href="../stylesheets/foundation.min.css">
-<link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-<link rel="stylesheet" href="../demo/css/app-styles.css">
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
 
   <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="ie8.css">
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
 
-    <script src="../javascripts/modernizr.foundation.js"></script>
-  </head>
-  <body>
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+</head>
+<body>
 
     <!-- ***** PETROCORE HEADER *****-->
 
@@ -38,8 +40,10 @@
         <div class="avatar"></div>
         <!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
         <div class="top-nav">
-          <ul>
+        <ul>
             <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+            <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
             <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -80,19 +84,74 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
+
           <div class="row collapse search-input">
+                  
+            <div class="nine mobile-two columns">
+              <input class="round-left" type="text" placeholder="Search" value="" />
+            </div>
+
+            <div class="one mobile-one columns">
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
+                <div class="search-bar-icons-dropdown">
+                  <p class="search-arrow icon-">&#xf0dd;</p>
+                </div>
+              </span>
+            </div>
+                    
             <div class="two mobile-one columns">
-              <span class="prefix"><div class="search-bar-icons-loupe"><p class="icon-">&#xf002;</p></div></span>
+              <span class="postfix round-left">
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
+              </span>
             </div>
-            <div class="eight mobile-four columns">
-              <input type="text" />
-            </div>
-            <div class="two mobile-one columns">
-              <span class="postfix advanced-search"><div class="search-bar-icons-dropdown"><p class="icon-">&#xf0dd;</p></div></span>
-            </div>
+            
           </div>
+
         </div>
-        <!-- ***** SEARCH *****-->
+      <!--***** SEARCH *****-->
+
+	  <div id="advanced_search" class="display-none">
+	  <!--This is a Advanced Search panel that is hidden by default-->
+
+		<p><strong>Advanced Search</strong></p>
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
+				<select class="custom-dropdown expand" id="customDropdown">
+					<option SELECTED>Person</option>
+					<option>Group</option>
+					<option>Position</option>
+					<option>Map</option>
+					<option>Skill Group</option>
+					<option>Skill</option>
+					<option>Skill Description</option>
+					<option>Development Activity</option>
+				</select>
+
+			</form>
+            <div class="add-filter-container">
+
+				<!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
+				<div class="add-filter-area">
+
+					<hr class="petrocore-hr">
+                    	<ul id="filters">
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+	   <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+
+             		    </ul>
+                </div>
+			</div>
+		</div>
 
         <!-- ***** MAIN NAVIGATION *****-->
         <div class="left-nav-container">
@@ -122,7 +181,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -325,6 +384,42 @@
   </div>
 </div>
 
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
+
 <!-- Included JS Files (Uncompressed) -->
   <!--
   <script src="../javascripts/jquery.js"></script>
@@ -350,15 +445,15 @@
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
-
-<!-- Initialize JS Plugins -->
+<!-- initialize foundation -->
 <script src="../javascripts/app.js"></script>
 
-<script>
-$(window).load(function(){
-  $("#featured").orbit();
-});
-</script>
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
 
 </body>
 </html>
