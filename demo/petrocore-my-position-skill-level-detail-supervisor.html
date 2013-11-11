@@ -302,6 +302,10 @@
           </div>
           <hr>
 
+          <div class="same-line">
+            <h5>Chung, David </h5><span> (dchung12)</span>
+          </div>
+
           <fieldset>
             <legend>Well Planning</legend>
             <div class="row">
@@ -329,6 +333,36 @@
 
           <fieldset>
             <legend>Self Assessment</legend>
+            
+            <div class="row">
+              <div class="form-group two mobile-one columns">
+                <div class="skill-description-box status-not-assesed"></div>
+              </div>
+              <div class="form-group ten mobile-three columns">
+                Not Assessed
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                  <strong>Date Assessed</strong>
+                  <p>&lt;&lt;no value set&gt;&gt;</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                  <strong>Assessed By</strong>
+                  <p>&lt;&lt;no value set&gt;&gt;</p>
+              </div>
+            </div>
+
+          </fieldset>
+
+
+
+
+          <fieldset>
+            <legend>Supervisor Assessment</legend>
             
             <div class="row">
               <div class="form-group two mobile-one columns">
@@ -381,36 +415,6 @@
 
 
 
-
-          <fieldset>
-            <legend>Supervisor Assessment</legend>
-            
-            <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
-              </div>
-              <div class="form-group ten mobile-three columns">
-                Not Assessed
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <strong>Date Assessed</strong>
-                  <p>&lt;&lt;no value set&gt;&gt;</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <strong>Assessed By</strong>
-                  <p>&lt;&lt;no value set&gt;&gt;</p>
-              </div>
-            </div>
-
-          </fieldset>
-
-
-
           <fieldset>
             <legend>Knowledge Test</legend>
             
@@ -434,10 +438,6 @@
                   <strong>Assessed By</strong>
                   <p>&lt;&lt;no value set&gt;&gt;</p>
               </div>
-            </div>
-
-            <div>
-              <a href="#">Take Practice Test</a> |  <a href="#">Take Final Test</a>
             </div>
 
           </fieldset>
@@ -491,15 +491,38 @@
             </div>
 
             <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <strong>Date Assessed</strong>
-                  <p>&lt;&lt;no value set&gt;&gt;</p>
+              <div class="form-group four mobile-four columns">
+                <label>Date Approved</label>
+                <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"><a class="icon-trailing-control input" href"#"=""></a>
               </div>
             </div>
+
             <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <strong>Assessed By</strong>
-                  <p>&lt;&lt;no value set&gt;&gt;</p>
+              <div class="form-group four mobile-four columns">
+                <label for="customDropdown" class="custom-dropdown-label">Approved by</label>
+                  <!-- the select tag which is hte default HTML is not visible when 
+                  in a custom form and the class custom-dropdown is used. --> 
+                  <select class="custom-dropdown" id="customDropdown">
+                    <option SELECTED>Approver Name</option>
+                    <option>Name 1</option>
+                    <option>Name 2</option>
+                    <option>Name 3</option>
+                  </select>
+                  <!-- the div with class custom dropdown displays the 
+                  dropdown in a Zurb custom form.
+                  expand tells Zurb that the dropdown should take up 
+                  as much horizontal space as possible. -->
+                  <div class="custom dropdown expand">
+                    <a href="#" class="current">
+                      Approver Name
+                    </a>
+                    <a href="#" class="selector"></a>
+                    <ul>
+                      <li>Name 1</li>
+                      <li>Name 2</li>
+                      <li>Name 3</li>
+                    </ul>
+                  </div>
               </div>
             </div>
 
