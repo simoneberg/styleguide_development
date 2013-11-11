@@ -3767,6 +3767,7 @@ input.round-right {
 }
 
 .list-relationships-title,
+.list-title,
 .list-participants-title {
   background-color: #e8e8e8;
   border: 1px solid #929292;
@@ -3774,16 +3775,36 @@ input.round-right {
   color: #383838;
 }
 
+.list-title,
 .list-participants-title {
   border:none;
   border-bottom: 1px solid #929292;
 }
 
+.list-title h5,
 .list-relationships-title h5,
 .list-participants-title h5 {
   font-size: 14px;
   margin: 0;
   padding: 10px;
+}
+
+ul.search-results {
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+ul.search-results li{
+  margin: 0;
+  list-style:none;
+  padding:10px 20px;
+  border-top: 1px solid #929292;
+}
+ul.search-results li label{
+  cursor: pointer;
+}
+ul.search-results li:first-child{
+  border-top: 0;
 }
 
 #list-direct-participants,
