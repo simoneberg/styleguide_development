@@ -271,32 +271,16 @@
           <div class="header-inline">
             <h4>Drilling Engineer</h4>
             <div class="same-line save-template-btn">
-              <label for="customDropdown" class="custom-dropdown-label"></label>
-                    <!-- the select tag which is hte default HTML is not visible when 
-                    in a custom form and the class custom-dropdown is used. --> 
-                    <select class="custom-dropdown" id="customDropdown">
-                      <option SELECTED>Actions</option>
-                      <option>Development Activities - (2)</option>
-                      <option>Evidence - (0)</option>
-                      <option>Notes - (0)</option>
-                      <option>History - (0)</option>
-                    </select>
-                    <!-- the div with class custom dropdown displays the 
-                    dropdown in a Zurb custom form.
-                    expand tells Zurb that the dropdown should take up 
-                    as much horizontal space as possible. -->
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">
-                        Actions
-                      </a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Development Activities - (2)</li>
-                        <li>Evidence - (0)</li>
-                        <li>Notes - (0)</li>
-                        <li>History - (0)</li>
-                      </ul>
-                    </div>
+              <a name="action-button1"></a>
+              <div href="#action-button1" class="button dropdown petrocore-actions">
+                Actions
+                <ul>
+                  <li><a href="#">Development Activities - (2)</a></li>
+                  <li><a href="#">Evidence - (0)</a></li>
+                  <li><a href="#">Notes - (0)</a></li>
+                  <li><a href="#">History - (0)</a></li>
+                </ul>
+              </div>
             </div>
               <a class="back-to-previous-page" href="#">Back to Previous Page</a>
           </div>
@@ -317,10 +301,10 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group ten mobile-three columns">
+              <div class="form-group eleven mobile-three columns">
                 Not Assessed
               </div>
             </div>
@@ -331,34 +315,20 @@
             <legend>Self Assessment</legend>
             
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group four mobile-three columns">
-                <label for="customDropdown" class="custom-dropdown-label"></label>
-                    <!-- the select tag which is hte default HTML is not visible when 
-                    in a custom form and the class custom-dropdown is used. --> 
-                    <select class="custom-dropdown" id="customDropdown">
-                      <option SELECTED>Not Assessed</option>
-                      <option>Competent</option>
-                      <option>Some</option>
-                      <option>Not Yet Competent</option>
-                    </select>
-                    <!-- the div with class custom dropdown displays the 
-                    dropdown in a Zurb custom form.
-                    expand tells Zurb that the dropdown should take up 
-                    as much horizontal space as possible. -->
-                    <div class="custom dropdown expand">
-                      <a href="#" class="current">
-                        Not Assessed
-                      </a>
-                      <a href="#" class="selector"></a>
-                      <ul>
-                        <li>Competent</li>
-                        <li>Some</li>
-                        <li>Not Yet Competent</li>
-                      </ul>
-                    </div>
+              <div class="form-group five mobile-three columns">
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                  Not Assessed
+                  <ul>
+                    <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="add-small-margin-left">Not Assessed</a></li>
+                    <li><div class="skillgroupstatus status-competent"></div><a href="#" class="add-small-margin-left">Competent</a></li>
+                    <li><div class="skillgroupstatus status-some"></div><a href="#" class="add-small-margin-left">Some</a></li>
+                    <li><div class="skillgroupstatus status-not-competent"></div><a href="#" class="add-small-margin-left">Not Yet Competent</a></li>
+                  </ul>
+                </div>
+
               </div>
               <div class="form-group six mobile-three columns">
               </div>
@@ -386,10 +356,10 @@
             <legend>Supervisor Assessment</legend>
             
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group ten mobile-three columns">
+              <div class="form-group eleven mobile-three columns">
                 Not Assessed
               </div>
             </div>
@@ -415,10 +385,10 @@
             <legend>Knowledge Test</legend>
             
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group ten mobile-three columns">
+              <div class="form-group eleven mobile-three columns">
                 Not Assessed
               </div>
             </div>
@@ -449,10 +419,10 @@
             <legend>Capability Assessment</legend>
             
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group ten mobile-three columns">
+              <div class="form-group eleven mobile-three columns">
                 Not Assessed
               </div>
             </div>
@@ -482,10 +452,10 @@
             <legend>Approver</legend>
             
             <div class="row">
-              <div class="form-group two mobile-one columns">
-                <div class="skill-description-box status-not-assesed"></div>
+              <div class="form-group one mobile-one columns">
+                <div class="skillgroupstatus status-not-assesed"></div>
               </div>
-              <div class="form-group ten mobile-three columns">
+              <div class="form-group eleven mobile-three columns">
                 Not Assessed
               </div>
             </div>
@@ -552,6 +522,38 @@
   <!-- </div> -->
   <!-- CONTENT AREA -->
 
+
+<div id="request-capability" class="reveal-modal expand">
+    <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Request Capability Assessment</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+    <p class="lead">Select Supervisor(s) to notify</p>
+    <div class="twelve columns">
+
+      <div id="list-direct-participants" class="list-box">
+        <div class="participant">
+          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox1">Aranda, David (DAPO)</div>
+        </div>
+        <div class="participant">
+          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox2">Chung, David (DCKI)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left close-reveal-modal" href="#">Send</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
 
 <div id="overlay"></div>
 
