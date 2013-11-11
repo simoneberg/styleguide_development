@@ -77,8 +77,11 @@ $(document).ready(function(){
 
   function open_close(ev) {
     ev.preventDefault();
+    var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
 
-    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
+
+    current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
 
     if ($(current_panel).is(':hidden')) {
