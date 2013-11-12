@@ -266,7 +266,7 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <form class="custom search-type">
+        <form class="custom">
 
           <div class="header-inline">
             <h4>Drilling Engineer</h4>
@@ -299,12 +299,17 @@
               </div>
             </div>
             
-
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <label>Status</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                Not Assessed
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
           </fieldset>
@@ -315,7 +320,7 @@
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                Not Assessed
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
 
@@ -345,21 +350,36 @@
 
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
 
-                 <div href="#action-button1" class="button dropdown petrocore-actions">
-                  Not Assessed
-                  <ul class="">
-                    <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="add-small-margin-left">Not Assessed</a></li>
-                    <li><div class="skillgroupstatus status-competent"></div><a href="#" class="add-small-margin-left">Competent</a></li>
-                    <li><div class="skillgroupstatus status-some"></div><a href="#" class="add-small-margin-left">Some</a></li>
-                    <li><div class="skillgroupstatus status-not-competent"></div><a href="#" class="add-small-margin-left">Not Yet Competent</a></li>
+                 <div class="inline-dropdown">
+                <!-- the select tag which is hte default HTML is not visible when
+                in a custom form and the class custom-dropdown is used. -->
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option SELECTED>Not Assessed</option>
+                  <option>Competent</option>
+                  <option>Some</option>
+                  <option>Not Yet Competent</option>
+                </select>
+                <!-- the div with class custom dropdown displays the
+                dropdown in a Zurb custom form.
+                expand tells Zurb that the dropdown should take up
+                as much horizontal space as possible. -->
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">
+                    Not Assessed
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Competent</li>
+                    <li>Some</li>
+                    <li>Not Yet Competent</li>
                   </ul>
-                  </div>
-
-
+                </div>
               </div>
 
+              </div>
             </div>
 
+           
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                   <label>Date Assessed</label>
@@ -383,7 +403,7 @@
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                Not Assessed
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
 
@@ -412,7 +432,7 @@
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                Not Assessed
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
 
@@ -446,7 +466,7 @@
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                Not Assessed
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
 
