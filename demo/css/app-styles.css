@@ -4462,6 +4462,10 @@ a.milestone-date:hover {
   float:left;
 }
 
+.skillgroupstatus.margin-right {
+  margin-right: 17px;
+}
+
 .status-competent {
   background-color: #33CC66;
 }
