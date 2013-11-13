@@ -1711,6 +1711,43 @@ form.custom .twelve.columns .control-with-trailing-icon {
   width: 95% !important;
 }
 
+.skillgroupstatus.status-leading-control {
+  margin-right: 17px;
+  margin-top: 6px;
+  position: relative;
+  float: left;
+}
+
+form.custom .control-with-leading-status {
+  float: left;
+}
+
+form.custom .one.columns .control-with-leading-status,
+form.custom .two.columns .control-with-leading-status {
+  width: 100% !important;
+}
+form.custom .three.columns .control-with-leading-status {
+  width: 78% !important;
+}
+form.custom .four.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .five.columns .control-with-leading-status,
+form.custom .six.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .seven.columns .control-with-leading-status,
+form.custom .eight.columns .control-with-leading-status {
+  width: 86% !important;
+}
+form.custom .nine.columns .control-with-leading-status,
+form.custom .ten.columns .control-with-leading-status,
+form.custom .eleven.columns .control-with-leading-status,
+form.custom .twelve.columns .control-with-leading-status {
+  width: 86% !important;
+}
+
+
 label {
   color: #333;
   cursor: default;
@@ -4468,10 +4505,6 @@ a.milestone-date:hover {
 
 .skillgroupstatus-text-inline {
   margin-top: 5px;
-}
-.inline-dropdown {
-  float: left;
-  width: 200px;
 }
 
 .status-competent {
