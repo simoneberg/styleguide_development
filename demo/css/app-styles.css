@@ -3855,6 +3855,10 @@ ul.role-breadcrumbs li {
   margin:0;
   padding: 0 6px 0 0;
   list-style: none;
+  text-transform: none;
+  font-size: 11px;
+  padding-right: 4px;
+  color:#767676;
 }
 
 ul.role-breadcrumbs li:after {
@@ -3862,24 +3866,6 @@ ul.role-breadcrumbs li:after {
   font-family: FontAwesome;
   color: #aaa;
   font-size: 12px;
-}
-
-ul.role-breadcrumbs li a,
-ul.role-breadcrumbs li span {
-  text-transform: none;
-  font-size: 11px;
-  padding-right: 4px;
-  color:#767676;
-}
-
-ul.role-breadcrumbs li.current a {
-  color:#525252;
-}
-
-ul.role-breadcrumbs li:hover a,
-ul.role-breadcrumbs li a:focus {
-  text-decoration: none;
-  color:#525252;
 }
 
 /* Development Plan */
