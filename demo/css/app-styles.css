@@ -2699,10 +2699,6 @@ border: 1px solid #8a8a8a;
   border-bottom:1px solid rgb(207, 207, 207);
 }
 
-.profile-item.subcat {
-  padding-left:36px;
-}
-
 .profile-item:last-child {
   border-bottom: none;
 }
@@ -2712,8 +2708,6 @@ border: 1px solid #8a8a8a;
 }
 .profile-highlight {
   background: #c1c1c1;
-  padding-top: 10px;
-  padding-bottom: 10px; 
 }
 
 /* END DASHBOARD */
