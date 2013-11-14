@@ -1711,13 +1711,6 @@ form.custom .twelve.columns .control-with-trailing-icon {
   width: 95% !important;
 }
 
-.skillgroupstatus.status-leading-control {
-  margin-right: 17px;
-  margin-top: 6px;
-  position: relative;
-  float: left;
-}
-
 form.custom .control-with-leading-status {
   float: left;
 }
@@ -4507,6 +4500,13 @@ a.milestone-date:hover {
   margin-top: 5px;
 }
 
+.skillgroupstatus.status-leading-control {
+  margin-right: 17px;
+  margin-top: 6px;
+  position: relative;
+  float: left;
+}
+
 .status-competent {
   background-color: #33CC66;
 }
@@ -4991,6 +4991,14 @@ a.action-item-disabled {
     margin-top: -7px;
     cursor: pointer;
     float: left;
+  }
+
+  .header-inline h4 {
+    margin-bottom:24px;
+  }
+
+  .header-inline a.back-to-previous-page {
+    margin-top:-31px;
   }
 
   .logo {
@@ -5902,6 +5910,13 @@ a.action-item-disabled {
   padding-left: 10px;
   }
 
+  .header-inline a.back-to-previous-page {
+    margin-top:0;
+    float: none;
+    margin-bottom: 10px;
+    display:block;
+
+  }
 }
 
 /* END MEDIA QUERIES */
