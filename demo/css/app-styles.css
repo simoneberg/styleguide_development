@@ -2540,7 +2540,8 @@ border: 1px solid #8a8a8a;
   height: 100%;
 }
 
-.background-blue {
+.background-blue,
+.background-blue-disabled {
   background: #5eb2e1;
   background: -moz-linear-gradient(top,  #5eb2e1 0%, #3294C3 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5eb2e1), color-stop(100%,#3294C3));
@@ -2551,6 +2552,11 @@ border: 1px solid #8a8a8a;
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5eb2e1', endColorstr='#3294C3',GradientType=0 );
 }
 
+.background-blue-disabled {
+	background: none;
+	filter: none;
+	background-color: #5eb2e1;
+}
 .competence-level-number .cl-number {
   padding-top: 6px; 
   font-weight: bold;  
