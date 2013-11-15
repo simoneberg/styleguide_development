@@ -2685,7 +2685,7 @@ border: 1px solid #8a8a8a;
 .profile-category-box {
   border: 1px solid #8c8c8c;
   margin-bottom: 1em;
-  height: 12em;
+  height: 16em;
   overflow-x: auto;
   min-height:31px;
 }
