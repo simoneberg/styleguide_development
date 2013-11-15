@@ -3801,6 +3801,9 @@ ul.search-results {
   padding: 0;
   list-style:none;
 }
+ul.search-results i {
+  line-height: 22px;
+}
 ul.search-results li{
   margin: 0;
   list-style:none;

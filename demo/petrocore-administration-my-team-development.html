@@ -317,7 +317,7 @@
 			   <div id="panel2" class="panel-wrapper">
 				  <div class="panel-header">
 					<div class="panel-title-container">
-					  <h5 ><a href="#" class="button primary radius">Add users to group</a></h5>
+					  <h5 ><a data-reveal-id="add-users-to-group" href="#" class="button primary radius">Add users to group</a></h5>
 					</div>
 			
 					<div class="panel-header-icons-container">
@@ -885,19 +885,19 @@
 
                 <ul class="search-results">
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 1</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 1</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 2</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 2</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 3</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 3</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 4</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 4</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 5</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 5</label>
                     </li>
 
                 </ul> 
@@ -914,6 +914,94 @@
     <a class="cancel-link left" href="#">Cancel</a>
   </div>
 </div>
+<div id="add-users-to-group" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add people to group</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="popup-content-container">
+    <form >
+
+		  <div class="row">
+
+          	<div class="form-group twelve">
+
+              <div class="side-by-side">
+
+                <div class="search-bar-box"><!-- search-bar-box -->
+
+                  <div class="row collapse search-input">
+                    <div class="ten mobile-three columns">
+                      <input class="round-left" type="text" placeholder="Search"  />
+                    </div>
+                    <div class="two mobile-one columns">
+                      <span class="postfix round-left">
+                        <div class="search-bar-icons-magnif">
+                          <p class="icon-">&#xf002;</p>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+
+                </div><!-- END /search-bar-box -->
+
+
+                <div class="list-title">
+                  <h5>Unassigned people</h5>
+                </div>
+
+                <ul class="search-results">
+                    <li>
+                    <label><i class="icon-plus right"></i>Chung, David (dchung12) </label>
+                    </li>
+                    <li>
+                    <label><i class="icon-plus right"></i>Masterson, Patrick (pjm)</label>
+                    </li>
+                    <li>
+                    <label><i class="icon-plus right"></i>Meng, John (jmeng999)   </label>
+                    </li>
+                    <li>
+                    <label><i class="icon-plus right"></i>Reynolds, David (dreynods) </label>
+                    </li>
+                </ul> 
+
+              </div>
+
+            </div>
+          	<div class="form-group twelve">
+
+              <div class="side-by-side">
+                <div class="list-title">
+                  <h5>Add Queue</h5>
+                </div>
+
+
+                <!-- else -->
+                <ul class="search-results">
+                    <li>
+                    <label><i class="icon-remove right"></i>Robertson, Mary Beth (mbr1341) </label>
+                    </li>
+                </ul> 
+
+              </div>
+
+            </div>
+
+		  </div>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="cancel-link left" href="#">Cancel</a>
+  </div>
+</div>
+
 
 <div id="edit-position" class="reveal-modal expand">
   <div class="panel-header">
