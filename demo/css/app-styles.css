@@ -3286,7 +3286,6 @@ ul.button-group label {
   background: -ms-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
   background: linear-gradient(to bottom,  #eaeaea 0%,#dddddd 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
-  	border:solid 2px red;
 }
 
 #step1.active-step {
