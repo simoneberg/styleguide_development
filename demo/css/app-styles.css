@@ -4544,8 +4544,10 @@ a.milestone-date:hover {
 }
 
 .skill-legend {
-  min-width: 200px!important;
+  min-width: 200px !important;
+  margin-left: 8px !important;
 }
+
 .status-competent {
   background-color: #33CC66;
 }
