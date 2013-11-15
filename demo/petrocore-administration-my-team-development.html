@@ -364,7 +364,7 @@
 									<div href="#action-button1" class="button dropdown petrocore-actions">
 									  Actions
 									  <ul>
-										<li><a href="#">Edit Role(s)</a></li>
+										<li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
 										<li><a href="#">Edit User</a></li>
 										<li><a href="#">Delete</a></li>
 									  </ul>
@@ -386,7 +386,7 @@
 									<div href="#action-button1" class="button dropdown petrocore-actions">
 									  Actions
 									  <ul>
-										<li><a href="#">Edit Role(s)</a></li>
+										<li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
 										<li><a href="#">Edit User</a></li>
 										<li><a href="#">Delete</a></li>
 									  </ul>
@@ -856,6 +856,64 @@
   <!--</div>-->
   <!-- CONTENT AREA -->
 
+<div id="edit-roles" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Edit Roles</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="popup-content-container">
+    <form >
+
+		  <div class="row">
+
+			<div class="form-group">
+			  <strong>Person:</strong> Lohr, Jodie
+		 
+			</div>
+          	<div class="form-group twelve">
+              <div class="side-by-side">
+
+                <div class="list-title">
+                  <h5>Available Roles</h5>
+                </div>
+
+                <ul class="search-results">
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 1</label>
+                    </li>
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 2</label>
+                    </li>
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 3</label>
+                    </li>
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 4</label>
+                    </li>
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Position 5</label>
+                    </li>
+
+                </ul> 
+
+              </div>
+
+            </div>
+
+		  </div>
+      </form>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="cancel-link left" href="#">Cancel</a>
+  </div>
+</div>
 
 <div id="edit-position" class="reveal-modal expand">
   <div class="panel-header">
