@@ -2470,7 +2470,9 @@ a.sorting-block:hover .add-sorting-icon {
 .panel-header li {
   display: block;
 }
-
+.panel-header .panel-header-button {
+  padding: 7px 0;
+}
 .panel-header-icons-close-list {
   display: block;
 }
