@@ -2145,6 +2145,10 @@ a.sorting-block:hover .add-sorting-icon {
   color:#01669f;
 }
 
+#add-activity-popup-table .control-with-trailing-icon{
+  width:85%;
+}
+
 /* END TABLES */
 /* **************************************** */
 
