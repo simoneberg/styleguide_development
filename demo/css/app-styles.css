@@ -162,6 +162,7 @@ table.wrap-cell-content td span.wrapword {
 ul.no-bullet,
 ul.angle-bullet {
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 ul.angle-bullet li {
@@ -4519,7 +4520,9 @@ a.milestone-date:hover {
 }
 
 .skill-description-content{
-  padding: 5px 5px 5px;
+  margin-left: 6px;
+  margin-top: -10px;
+  padding: 0px 5px 10px 10px;
 
 }
 .skill-description-duration{
@@ -4560,12 +4563,10 @@ a.milestone-date:hover {
 }
 
 .status-progress{
-  background-color: rgb(243, 143, 15);
-}
-
-.status-some {
   background-color: #FFEB00;
 }
+
+
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
