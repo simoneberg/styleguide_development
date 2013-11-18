@@ -1915,6 +1915,12 @@ p.form-category-title-bold {
   margin-top: 8px;
 }
 
+.icon-leading-control {
+  margin-right: 18px;
+  position: relative;
+  float: left;
+}
+
 .icon-trailing-control {
   margin-left: 7px;
   position: relative;
