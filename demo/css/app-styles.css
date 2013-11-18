@@ -1778,6 +1778,35 @@ form.custom .twelve.columns .control-with-trailing-icon {
   width: 95% !important;
 }
 
+form.custom .control-with-leading-status {
+  float: left;
+}
+
+form.custom .one.columns .control-with-leading-status,
+form.custom .two.columns .control-with-leading-status {
+  width: 100% !important;
+}
+form.custom .three.columns .control-with-leading-status {
+  width: 78% !important;
+}
+form.custom .four.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .five.columns .control-with-leading-status,
+form.custom .six.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .seven.columns .control-with-leading-status,
+form.custom .eight.columns .control-with-leading-status {
+  width: 86% !important;
+}
+form.custom .nine.columns .control-with-leading-status,
+form.custom .ten.columns .control-with-leading-status,
+form.custom .eleven.columns .control-with-leading-status,
+form.custom .twelve.columns .control-with-leading-status {
+  width: 86% !important;
+}
+
 label {
   color: #333;
   cursor: default;
@@ -2015,6 +2044,12 @@ form.custom div.custom.dropdown {
   margin-right: 2px;
   margin-bottom: 10px;
 }
+
+form.custom div.custom.dropdown.align-right {
+  float: right;
+  margin-right: 2px;
+  margin-bottom: 10px;
+} 
 
 form.custom div.custom.dropdown a.current{
   color:#404040;
@@ -4542,6 +4577,21 @@ a.milestone-date:hover {
   position: relative;
   float:left;
 }
+
+
+.skillgroupstatus-text-inline {
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
+.skillgroupstatus.status-leading-control {
+  margin-right: 17px;
+  margin-top: 6px;
+  position: relative;
+  float: left;
+}
+
+
 
 .skill-legend {
   min-width: 200px!important;
