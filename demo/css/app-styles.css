@@ -2029,6 +2029,90 @@ label.inline {
   display: inline;
 }
 
+/* generic list control */
+/* based off the search results */
+/* and direct participant controls */
+
+.list {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.list-name h5 {
+  background-color: #e8e8e8;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #929292;
+  border-bottom: none;
+  color: #383838;
+}
+
+.list-item {
+  line-height:normal;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 12px 7px 15px;
+  border: solid 1px #929292;
+  border-bottom: none;
+}
+
+.list-item.tall {
+  line-height: 50px;
+}
+
+.list-item-name {
+
+}
+
+.list-item-summary-name {
+  color: #999;
+  display: inline-block;
+}
+
+.list-item-summary-value {
+  color: #999;
+  display: inline-block;
+}
+
+.list-item:nth-child(odd) {
+
+}
+
+.list .list-item:last-child {
+  border-bottom: solid 1px #929292;
+}
+
+.list-item.movable {
+  cursor:move;
+}
+
+.list-icon {
+  margin: 0;
+  float:right;
+}
+
+.list-icon .plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+}
+
+.list-icon .x:after {
+  content: "\f00d";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+}
+
+.list-item a.plus:after,
+.list-item a.x:after {
+  color:#858585;
+}
+
 /* END FORMS */
 /* **************************************** */
 
