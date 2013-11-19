@@ -4616,6 +4616,9 @@ a.milestone-date:hover {
   background-color: #FFEB00;
 }
 
+.tasks-action-button {
+  float:right;
+}
 /* END PAGE SPECIFIC */
 /* **************************************** */
 
@@ -5931,6 +5934,10 @@ h4 .header-link {
   font-size:1.2em;
   }
 
+  .header-inline h4 {
+    margin-bottom: 16px;
+  }
+
 }
 
 /* landscape first gen Android phones */
@@ -5983,6 +5990,10 @@ h4 .header-link {
     left: 10px;
   }
 
+   .tasks-action-button {
+    float: none;
+  }
+
 }
 
 /* portrait iPhone */
@@ -5998,6 +6009,17 @@ h4 .header-link {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  }
+
+  .header-inline .save-template-btn {
+    margin-top: 0;
+  }
+
+  .header-inline a.back-to-previous-page {
+    float:none;
+    padding-bottom: 8px;
+    margin-top: 0;
+    display: block;
   }
 
 }
