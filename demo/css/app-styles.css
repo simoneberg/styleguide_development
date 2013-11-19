@@ -6284,14 +6284,14 @@ h4 .header-link {
   border-right-color: #fff;
   margin-top: -11px;
 }
-.ui-widget.popover-content .ui-widget-header {
+.ui-widget.popover-content .header {
   padding: 10px;
   background-color: #eaeaea;
   margin: 0 -10px;
   margin-top: -10px;
   border-bottom: 1px solid #666;
 }
-.ui-widget.popover-content .ui-widget-content {
+.ui-widget.popover-content .content {
   padding: 10px 0px;
 
 }
