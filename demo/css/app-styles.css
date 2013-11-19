@@ -1993,6 +1993,10 @@ div.scroll-both {
   height: 100px;
 }
 
+.set-height-200 {
+  height: 200px;
+}
+
 .set-width-200 {
   width: 200px;
 }
@@ -3970,8 +3974,19 @@ ul.role-breadcrumbs li:after {
 }
 
 /* Knowledge Test */
-.panel-wrapper.knowledge-test {
-  padding:16px;
+.knowledge-test-box {
+  border: 1px solid #8a8a8a;
+  margin-bottom: 15px;
+}
+.knowledge-test-box-content {
+  margin: 14px;
+}
+
+.knowledge-link-wrapper{
+  text-align: right;
+}
+.knowledge-link-wrapper .icon-trailing-control {
+  float: none;
 }
 
 .test-info {
@@ -3996,9 +4011,21 @@ ul.role-breadcrumbs li:after {
 .test-question-highlight .question-indent {
   margin-left: 30px;
 }
-.test-answer-indent {
-  margin-left: 30px;
+
+.test-summary-item {
+  margin: 5px 0 8px;
 }
+
+.test-answer-indent {
+  margin-left: 46px;
+  display: block;
+}
+
+
+.linethrough { 
+  text-decoration: line-through;
+}
+
 /* Development Plan */
 
 .float-right {
