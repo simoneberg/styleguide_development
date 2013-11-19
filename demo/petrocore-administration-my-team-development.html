@@ -206,7 +206,7 @@
               <div class="content">
                 <ul>
                   <li><a href="#">Activities</a></li>
-                  <li><a href="#">Groups</a></li>
+                  <li class="active"><a href="#">Groups</a></li>
                   <li><a href="#">Maps</a></li>
                   <li><a href="petrocore-user-summary.html">Users</a></li>
                   <li><a href="#">Positions</a></li>
@@ -318,7 +318,8 @@
 				  <div class="panel-header">
 					<div class="panel-title-container">
 					  <div class="panel-header-button" >
-              <a data-reveal-id="add-users-to-group" href="#" class="button primary radius">Add users to group</a>
+              <a data-reveal-id="add-users-to-group" href="#" class="button primary radius">Add User(s) to Group</a>
+              <a class="alert radius button add-medium-space-right" href="#" data-reveal-id="delete-user">Remove User(s)</a>
             </div>
 					</div>
 			
@@ -331,7 +332,7 @@
 						  <ul class="button-group slim">
 							<li><a href="#" class="button silver-button first active">All</a></li>
 							<li><a href="#" class="button silver-button">Participants</a></li>
-							<li><a href="#" class="button silver-button last">Managers</a></li>
+							<li><a href="#" class="button silver-button last">Management</a></li>
 							
 						  </ul>
 						 </li>   
@@ -347,58 +348,350 @@
 							<table id="report-templates-table" class="twelve no-border nested-table">
 							  <thead>
 								<tr>
+                  <th class="select-all-column"><a class="icon-">&#xf00c;</a></th>
 								  <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
 								  <th><a class="sorting-block">Role</a></th>
 								  <th class="two">Actions</th>
 								</tr>
 							  </thead>
 							  <tbody>
-								<tr>
-								  <td><a href="petrocore-user-landing.html" >Chung, David </a></td>
-								  <td> 
-										<ul class="no-bullet list">
-										  <li>Administrator</li>
-										  <li>Supervisor</li>
-										</ul>
-								  </td>
-								  <td>
-									<a name="action-button1"></a>
-									<div href="#action-button1" class="button dropdown petrocore-actions">
-									  Actions
-									  <ul>
-										<li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
-										<li><a href="#">Edit User</a></li>
-										<li><a href="#">Delete</a></li>
-									  </ul>
-									</div>
-								  </td>
-								</tr>
-								<tr>
-								  <td><a href >Lohr, Jodie</a></td>
-								  <td>
-										<ul class="no-bullet list">
-										  <li>Administrator</li>
-										  <li>Supervisor</li>
-										  <li>Mentor</li>
-										</ul>
-					  
-								  </td>
-								  <td>
-									<a name="action-button1"></a>
-									<div href="#action-button1" class="button dropdown petrocore-actions">
-									  Actions
-									  <ul>
-										<li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
-										<li><a href="#">Edit User</a></li>
-										<li><a href="#">Delete</a></li>
-									  </ul>
-									</div>
-								  </td>
-								</tr>
+								
+                <tr>
+                    <td><label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"/></label></td>
+                    <td><a href="petrocore-user-landing.html">Chung, David (dchung)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"/></label></td>
+                    <td><a href="#">Masterson, Patrick Joseph (mstersonj)</a></td>
+                    <td><a href="#">Administrator</a><br>
+                      <a href="#">Mentor</a><br>
+                      <a href="#">Supervisor</a>
+                    </td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  
+
+                  <tr>
+                    <td><label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"/></label></td>
+                    <td><a href="#">Reynolds, David (dreynolds)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"/></label></td>
+                    <td><a href="#">Robertson, Mary Beth (mbethrob)</a></td>
+                    <td>
+                      <a href="#">Administrator</a><br>
+                      <a href="#">Mentor</a>
+                    </td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"/></label></td>
+                    <td><a href="#">Tinkle, Tiffiny (TinkTiff)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox7"><input type="checkbox" data-customforms="disabled" id="checkbox7"/></label></td>
+                    <td><a href="#">Joslyn, Jessika (JoslJess)</a></td>
+                    <td><a href="#">Supervisor</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox8"><input type="checkbox" data-customforms="disabled" id="checkbox8"/></label></td>
+                    <td><a href="#">Twigg, Towanda (TwigTowa)</a></td>
+                    <td><a href="#">Mentor</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox9"><input type="checkbox" data-customforms="disabled" id="checkbox9"/></label></td>
+                    <td><a href="#">Mayr, Marcus (MayrMarc)</a></td>
+                    <td><a href="#">Participant</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox10"><input type="checkbox" data-customforms="disabled" id="checkbox10"/></label></td>
+                    <td><a href="#">Stermer, Steffanie (SterStef)</a></td>
+                    <td><a href="#">Supervisor</a><br>
+                      <a href="#">Mentor</a><br>
+                    </td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox11"><input type="checkbox" data-customforms="disabled" id="checkbox11"/></label></td>
+                    <td><a href="#">Elliff, Elias (ElliElia)</a></td>
+                    <td><a href="#">Participant</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"/></label></td>
+                    <td><a href="#">Maskell, Margarette (MaskMarg)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox13"><input type="checkbox" data-customforms="disabled" id="checkbox13"/></label></td>
+                    <td><a href="#">Schubert, Salvatore (SchuSalv)</a></td>
+                    <td><a href="#">Participant</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox14"><input type="checkbox" data-customforms="disabled" id="checkbox14"/></label></td>
+                    <td><a href="#">Lovins, Loan (LoviLoan)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox15"><input type="checkbox" data-customforms="disabled" id="checkbox15"/></label></td>
+                    <td><a href="#">Esquilin, Edgardo (EsquEdga)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox16"><input type="checkbox" data-customforms="disabled" id="checkbox16"/></label></td>
+                    <td><a href="#">Eye, Elenor (EyeElen)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox17"><input type="checkbox" data-customforms="disabled" id="checkbox17"/></label></td>
+                    <td><a href="#">Tesch, Terisa (TescTeri)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox18"><input type="checkbox" data-customforms="disabled" id="checkbox18"/></label></td>
+                    <td><a href="#">Swift, Sabra (SwifSabr)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox19"><input type="checkbox" data-customforms="disabled" id="checkbox19"/></label></td>
+                    <td><a href="#">June, Jackqueline (JuneJack)</a></td>
+                    <td><a href="#">Participant</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><label for="checkbox20"><input type="checkbox" data-customforms="disabled" id="checkbox20"/></label></td>
+                    <td><a href="#">Delima, Dotty (DeliDott)</a></td>
+                    <td><a href="#">Administrator</a></td>
+                    <td>
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                    <li><a data-reveal-id="edit-roles" href="#">Edit Role(s)</a></li>
+                    <li><a href="#">Edit User</a></li>
+                    <li><a href="#">Delete</a></li>
+                    </ul>
+                  </div>
+                  </td>
+                  </tr>
 
 							  </tbody>
 							</table>
-							<p class="pagination-counter">Showing 1-3 of 9</p>
+							<p class="pagination-counter">Showing 1-20 of 9</p>
 							<div class="twelve columns pagination-centered">
 							  <p>Page 1 of 3</p>
 							  <ul class="pagination">
@@ -426,7 +719,12 @@
 				<div id="panel2" class="panel-wrapper">
 				  <div class="panel-header">
 					<div class="panel-title-container">
-					  <h5 class="name-classifier">Assigned Users</h5>
+					  <h5 class="name-classifier">Users</h5>
+            <div class="panel-header-icons-container">
+                  <ul class="panel-header-icons-list">
+                    <li><a class="secondary radius button" href="#" data-reveal-id="attach-document">Edit Position</a></li>
+                  </ul>
+                </div>
 					</div>
 			
 					
@@ -440,35 +738,165 @@
 							  <thead>
 								<tr>
 								  <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
-								  <th><a class="sorting-block">Position</a></th>
+								  <th><a class="sorting-block">Position<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
 								  <th class="two">Actions</th>
 								</tr>
 							  </thead>
 							  <tbody>
 								<tr>
-								  <td><a href="petrocore-user-landing.html" >Chung, David </a></td>
+								  <td><a href="petrocore-user-landing.html" >Chung, David (dchung12)</a></td>
 								  <td> 
-                    Administrator
+                    <a href="petrocore-user-assigned-positions.html">Cost Engineering</a>
 								  </td>
 								  <td>
-									<a data-reveal-id="edit-position"  href="#" class="button silver-button radius">Edit Position</a>
+									<a data-reveal-id="edit-position"  href="#" class="secondary button radius">Edit Position</a>
 									
 								  </td>
 								</tr>
-								<tr>
-								  <td><a href >Lohr, Jodie</a></td>
-								  <td>
-                    Manager
-								  </td>
-								 <td>
-									<a data-reveal-id="edit-position" href="#"  class="button silver-button radius">Edit Position</a>
-									
-								  </td>
-								</tr>
+                <tr>
+                    <td><a href="#">Elliff, Elias (ElliElia)</a></td>
+                    <td><a href="#">Sales</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="petrocore-user-assigned-positions.html"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+								
+                  <tr>
+                    <td><a href="#">Esquilin, Edgardo (EsquEdga)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
 
+                  <tr>
+                    <td><a href="#">Eye, Elenor (EyeElen)</a></td>
+                    <td><a href="#">HR Staffing</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">Joslyn, Jessika (JoslJess)</a></td>
+                    <td><a href="#">Accounting</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">June, Jackqueline (JuneJack)</a></td>
+                    <td><a href="#">Sales</a></td>
+                    <td>
+                      <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                    </td>
+                  </tr>
+                  <tr>
+                  <td><a href >Lohr, Jodie (lohrj)</a></td>
+                  <td>
+                    <a href="#">Cost Engineering</a>
+                  </td>
+                  <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Lovins, Loan (LoviLoan)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Maskell, Margarette (MaskMarg)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Masterson, Patrick Joseph (mstersonj)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Mayr, Marcus (MayrMarc)</a></td>
+                    <td><a href="#">Accounting</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Meng, John (mengj)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">Stermer, Steffanie (SterStef)</a></td>
+                    <td><a href="#">Sales</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Schubert, Salvatore (SchuSalv)</a></td>
+                    <td><a href="#">Sales</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Swift, Sabra (SwifSabr)</a></td>
+                    <td><a href="#">Juggling</a></td>
+                    <td>
+                      <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Tesch, Terisa (TescTeri)</a></td>
+                    <td><a href="#">HR Unstaffing</a></td>
+                    <td>
+                      <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Tinkle, Tiffiny (TinkTiff)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">Twigg, Towanda (TwigTowa)</a></td>
+                    <td><a href="#">Animal Wrangling</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">Reynolds, David (dreynolds)</a></td>
+                    <td><a href="#">Project Management</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
+
+                  <tr>
+                    <td><a href="#">Robertson, Mary Beth (mbethrob)</a></td>
+                    <td><a href="#">HR Staffing</a></td>
+                    <td>
+                  <a data-reveal-id="edit-position" href="#"  class="secondary button radius">Edit Position</a>
+                  </td>
+                  </tr>
 							  </tbody>
 							</table>
-							<p class="pagination-counter">Showing 1-3 of 9</p>
+							<p class="pagination-counter">Showing 1-20 of 9</p>
 							<div class="twelve columns pagination-centered">
 							  <p>Page 1 of 3</p>
 							  <ul class="pagination">
@@ -875,7 +1303,7 @@
 		  <div class="row">
 
 			<div class="form-group">
-			  <strong>Person:</strong> Lohr, Jodie
+			  <strong>Person:</strong> Chung, David (dchung12)
 		 
 			</div>
           	<div class="form-group twelve">
@@ -886,22 +1314,27 @@
                 </div>
 
                 <ul class="search-results">
-                    <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 1</label>
+                                       <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Administrator</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 2</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Assessor</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 3</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Manager</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 4</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Mentor</label>
                     </li>
                     <li>
-                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Role 5</label>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Supervisor</label>
                     </li>
-
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Reporter</label>
+                    </li>
+                    <li>
+                    <label ><input type="checkbox" name="position" data-customforms="disabled"> Verifier</label>
+                    </li>
                 </ul> 
 
               </div>
