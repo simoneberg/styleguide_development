@@ -273,11 +273,6 @@
         <!--This will hold the content-->
  		<form class="custom">
 
-      <!--REMOVE --><a href="#" data-reveal-id="test-demo">test</>
-
-      
-
-
         <div class="header-inline">
             <h4>Drilling Engineer</h4>
 
@@ -1200,7 +1195,7 @@
 
 <!--*** PRACTICE KNOWLEDGE TEST INTRO ***-->
 <div id="practice-knowledge-test-intro" class="reveal-modal expand">
-    <div class="panel-header">
+  <div class="panel-header">
     <div class="panel-title-container">
       <h5>Practice Test</h5>
     </div>
@@ -1210,26 +1205,160 @@
       </ul>
     </div>
   </div>
-
   <div class="popup-content-container">
-    <p class="lead">Instructions</p>
-    <hr>
-    Four questions will be asked in this test. Summary will be shown upon completion.
-    <div class="twelve columns">
-
-      Legend
-      Information about this question
-      Correct Answer
-      Wrong Answer
-      Unsanswered Question
-    </div>
+    <form class="custom">
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <label>Instructions</label>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve mobile-four columns">
+          <p>Four questions will be asked in this test. Summary will be shown upon completion.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <label>Legend</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <div class="icon-leading-control test-info" href="#">&#xf05a;</div> Information about this question
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <div class="icon-leading-control test-correct" href="#">&#xf00c;</div>Correct Answer
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <div class="icon-leading-control test-wrong" href="#">&#xf00d;</div>Wrong Answer
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group twelve mobile-four columns">
+          <div class="icon-leading-control test-unanswered" href="#">&#xf06a;</div>Unanswered Question
+        </div>
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
-    <a class="primary radius button left close-reveal-modal" href="#" data-reveal-id="final-knowledge-test-q1">Start</a>
+    <a class="primary radius button left" href="#" data-reveal-id="practice-knowledge-test-q1">Start</a>
     <a class="left cancel-link" href="#">Cancel</a>
   </div>
 </div>
-<!--*** PRACTICE KNOWLEDGE TEST INTRO ***-->  
+<!--*** PRACTICE KNOWLEDGE TEST INTRO ***-->
+
+<!--*** PRACTICE KNOWLEDGE TEST Q1 ***-->
+<div id="practice-knowledge-test-q1" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Practice Test</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="popup-content-container">
+    <form class="custom">
+      <div class="row">
+        <div class="form-group six mobile-four columns">
+          <label>Topic</label>
+        </div>
+        <div class="form-group six mobile-four columns align-right">
+          Question 1/4
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="eight mobile-three columns">
+          <p>MA - Please match their alter egos</p>
+        </div>
+        <div class="four mobile-one columns align-right">
+          <a href="#">Show Answer</a>
+          <a class="icon-trailing-control" href="#">&#xf05a;</a> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group eight mobile-four columns">
+          <label>Superman</label>
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option selected="selected">Clark Kent</option>
+            <option>Name 2</option>
+            <option>Name 3</option>
+            <option>Name 4</option>
+          </select>
+          <div class="custom dropdown control-with-trailing-icon">
+            <a href="#" class="current">Clark Kent</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Name 2</li>
+              <li>Name 3</li>
+              <li>Name 4</li>
+            </ul>
+          </div>
+          <div class="icon-trailing-control custom test-correct">&#xf00c;</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group eight mobile-four columns">
+          <label>Spiderman</label>
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option selected="selected">Peter Parker</option>
+            <option>Name 2</option>
+            <option>Name 3</option>
+            <option>Name 4</option>
+          </select>
+          <div class="custom dropdown control-with-trailing-icon">
+            <a href="#" class="current">Peter Parker</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Name 2</li>
+              <li>Name 3</li>
+              <li>Name 4</li>
+            </ul>
+          </div>
+          <div class="icon-trailing-control custom test-correct">&#xf00c;</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group eight mobile-four columns">
+          <label>Ironman</label>
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option selected="selected">Bruce Wayne</option>
+            <option>Name 2</option>
+            <option>Name 3</option>
+            <option>Name 4</option>
+          </select>
+          <div class="custom dropdown control-with-trailing-icon">
+            <a href="#" class="current">Bruce Wayne</a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Name 2</li>
+              <li>Name 3</li>
+              <li>Name 4</li>
+            </ul>
+          </div>
+          <div class="icon-trailing-control custom test-wrong">&#xf00d;</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve mobile-four columns">
+          <div class="form-text-display-field">Bruce Wayne - Your Answer</div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#" data-reveal-id="practice-knowledge-test-q2">Next</a>
+  </div>
+</div>
+<!--*** PRACTICE KNOWLEDGE TEST Q1 ***-->
 
 <!--*** FINAL KNOWLEDGE TEST INTRO ***-->
 <div id="final-knowledge-test-intro" class="reveal-modal expand">
@@ -1252,7 +1381,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="form-group twelve mobile-four columns">
+        <div class="twelve mobile-four columns">
           <p>Four questions will be asked in this test. Summary will be shown upon completion.</p>
         </div>
       </div>
@@ -1263,22 +1392,22 @@
       </div>
       <div class="row">
         <div class="form-group twelve mobile-four columns">
-          <div class="icon-leading-control" href="#">&#xf05a;</div> Information about this question
+          <div class="icon-leading-control test-info" href="#">&#xf05a;</div> Information about this question
         </div>
       </div>
       <div class="row">
         <div class="form-group twelve mobile-four columns">
-          <div class="icon-leading-control" href="#">&#xf00c;</div>Correct Answer
+          <div class="icon-leading-control test-correct" href="#">&#xf00c;</div>Correct Answer
         </div>
       </div>
       <div class="row">
         <div class="form-group twelve mobile-four columns">
-          <div class="icon-leading-control" href="#">&#xf00d;</div>Wrong Answer
+          <div class="icon-leading-control test-wrong" href="#">&#xf00d;</div>Wrong Answer
         </div>
       </div>
       <div class="row">
         <div class="form-group twelve mobile-four columns">
-          <div class="icon-leading-control" href="#">&#xf06a;</div>Unanswered Question
+          <div class="icon-leading-control test-unanswered" href="#">&#xf06a;</div>Unanswered Question
         </div>
       </div>
     </form>
@@ -1314,10 +1443,10 @@
       </div>
       <hr>
       <div class="row">
-        <div class="form-group eleven mobile-three columns">
+        <div class="eleven mobile-three columns">
           <p>MA - Please match their alter egos</p>
         </div>
-        <div class="form-group one mobile-one columns">
+        <div class="one mobile-one columns">
           <a class="icon-trailing-control" href="#">&#xf05a;</a> 
         </div>
       </div>
@@ -1413,10 +1542,10 @@
       </div>
       <hr>
       <div class="row">
-        <div class="form-group eleven mobile-three columns">
+        <div class="eleven mobile-three columns">
           <p>MR - Which of the following are planets?</p>
         </div>
-        <div class="form-group one mobile-one columns">
+        <div class="one mobile-one columns">
           <a class="icon-trailing-control" href="#">&#xf05a;</a> 
         </div>
       </div>
@@ -1480,10 +1609,10 @@
       </div>
       <hr>
       <div class="row">
-        <div class="form-group eleven mobile-three columns">
+        <div class="eleven mobile-three columns">
           <p>MC - Which of the following is not a Ninja Turtle?</p>
         </div>
-        <div class="form-group one mobile-one columns">
+        <div class="one mobile-one columns">
           <a class="icon-trailing-control" href="#">&#xf05a;</a> 
         </div>
       </div>
@@ -1518,7 +1647,7 @@
       </div>
         </div>
         <div class="form-group six mobile-four columns">
-          Picture goes here
+          <img src="images/knowledge-test-image.jpg">
         </div>
       </div>
     </form>
@@ -1554,16 +1683,16 @@
       </div>
       <hr>
       <div class="row">
-        <div class="form-group eleven mobile-three columns">
+        <div class="eleven mobile-three columns">
           <p>SA - Alive without breath, as cold as death; never thirsty, ever drinking, all in mail never clinking. What am I?</p>
         </div>
-        <div class="form-group one mobile-one columns">
+        <div class="one mobile-one columns">
           <a class="icon-trailing-control" href="#">&#xf05a;</a> 
         </div>
       </div>
       <div class="row">
         <div class="form-group eleven mobile-three columns">
-          <p>Input box goes here</p>
+          <textarea placeholder="" class="min-height"> Apple</textarea>
         </div>
       </div>
     </form>
@@ -1596,14 +1725,112 @@
         </div>
       </div>
       <div class="row">
-        <div class="form-group twelve mobile-three columns">
+        <div class="twelve mobile-three columns">
           <p>You anwered 3/4 questions correctly and scored 75%.  Your test result will be reflected by an assessment change.</p>
       </div>
-      <div class="row">
-        <div class="form-group twelve mobile-three columns">
-          <p>SUMMARY</p>
+      </div>
+      <div class="panel-wrapper knowledge-test">
+        <div class="row">
+          <div class="form-group twelve mobile-three columns">
+            <label>Summary</label>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-question-highlight">
+            <div class="icon-leading-control test-wrong" href="#">&#xf00d;</div><div class="question-indent">1. MA - Please match their alter egos. </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <label>Superman:</label>
+            <div class="form-text-display-field">Clark Kent <div class="test-correct icon-" href="#">&#xf00c;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <label>Spiderman:</label>
+            <div class="form-text-display-field">Peter Parker <div class="test-correct icon-" href="#">&#xf00c;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <label>Ironman:</label>
+            <div class="form-text-display-field">Peter Parker <div class="test-wrong icon-" href="#">&#xf00d;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-question-highlight">
+            <div class="icon-leading-control test-correct" href="#">&#xf00c;</div><div class="question-indent">2. MR - Which of the following are planets?</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Sun</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Pluto</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Neptune <div class="test-correct icon-" href="#">&#xf00c;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Titan</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Mercury <div class="test-correct icon-" href="#">&#xf00c;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-question-highlight">
+            <div class="icon-leading-control test-wrong" href="#">&#xf00d;</div><div class="question-indent">3. MC - Which of the following is not a Ninja Turtle</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Michaelangelo</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Leonardo</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Raphael</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Donatello <div class="test-wrong icon-" href="#">&#xf00d;</div></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Slash</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-three columns test-question-highlight">
+            <div class="icon-leading-control test-correct" href="#">&#xf00c;</div><div class="question-indent">4. SA - Aive without breath, as cold as death; never thirsty, ever drinking, all in mail never clinking. What am I?</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four columns test-answer-indent">
+            <div class="form-text-display-field">Fish <div class="test-correct icon-" href="#">&#xf00c;</div></div>
+          </div>
         </div>
       </div>
+      
     </form>
   </div>
   <div class="modal-footer">

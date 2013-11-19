@@ -27,6 +27,7 @@
      list box
      skill groups
      user role summary
+     knowledge test
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -1769,13 +1770,13 @@ form.custom .six.columns .control-with-trailing-icon {
 }
 form.custom .seven.columns .control-with-trailing-icon,
 form.custom .eight.columns .control-with-trailing-icon {
-  width: 93% !important;
+  width: 90% !important;
 }
 form.custom .nine.columns .control-with-trailing-icon,
 form.custom .ten.columns .control-with-trailing-icon,
 form.custom .eleven.columns .control-with-trailing-icon,
 form.custom .twelve.columns .control-with-trailing-icon {
-  width: 95% !important;
+  width: 93% !important;
 }
 
 label {
@@ -3968,6 +3969,36 @@ ul.role-breadcrumbs li:after {
   font-size: 12px;
 }
 
+/* Knowledge Test */
+.panel-wrapper.knowledge-test {
+  padding:16px;
+}
+
+.test-info {
+  color: #767676;
+}
+.test-correct {
+  color: #33CC66;
+}
+
+.test-wrong {
+  color: #ED4027;
+}
+
+.test-unanswered {
+  color: #fea648;
+}
+
+.test-question-highlight {
+  background-color: #ddd;
+  padding: 14px;
+}
+.test-question-highlight .question-indent {
+  margin-left: 30px;
+}
+.test-answer-indent {
+  margin-left: 30px;
+}
 /* Development Plan */
 
 .float-right {
