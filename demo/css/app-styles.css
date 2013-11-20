@@ -2717,6 +2717,7 @@ border: 1px solid #8a8a8a;
   height: auto;
 }
 
+form.custom .competence-level-item,
 .competence-level-item {
   border: solid 1px #606060;
   border-top: none;
@@ -2757,6 +2758,7 @@ border: 1px solid #8a8a8a;
   text-shadow: 0px 1px 1px #daecf6;
 }
 
+form.custom .competence-level-item .cl-description,
 .competence-level-item .cl-description {
   height: 100%;
   padding: 6px 0 0 10px;
