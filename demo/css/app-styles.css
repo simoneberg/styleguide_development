@@ -1108,6 +1108,29 @@ ul.accordion>li.active .content>ul>li.active a {
   height: 32px;
 }
 
+.skillstatus li:before, .skillstatus li:after  {
+  content:"";
+  display: table;
+}
+
+.skillstatus li:after {
+  clear: both;
+}
+
+.skillstatus .skillgroupstatus { 
+  position: absolute;
+}
+
+.skillstatus li a.indent-content {
+  margin-left:35px;
+  display: inline-block;
+  line-height: 23px;
+}
+
+.skillstatus li {
+  margin: 4px 0;
+}
+
 .accordion ul {
   list-style: none;
 }
