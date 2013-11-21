@@ -166,13 +166,13 @@
               <div class="content">
                 <ul>
                   <li><strong>Your Skill Groups</strong></li>
-                  <li class="active"><div class="skillgroupstatus status-progress"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left"> 40% Defining Well Objectives</a></li>
-                  <li><div class="skillgroupstatus status-progress"></div><a href="#"  class="add-small-margin-left"> 65% Directional Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-competent"></div><a href="#"  class="add-small-margin-left">  0% Drilling Fluid System Planning</a></li>
-                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">100% Bit and Hydraulics Planning</a></li>
-                  <li><div class="skillgroupstatus status-progress"></div><a href="#"  class="add-small-margin-left"> 45% Casing and Cementing Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">  0% Drilling Performance Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">  0% Drilling System, Services, and Materials Selection and Management</a></li>
+                  <li class="active"><div class="skillgroupstatus status-some"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
+                  <li><div class="skillgroupstatus not-assessed"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
+                  <li><div class="skillgroupstatus status-non-assessed"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Casing and Cementing Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling Performance Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling System, Services, and Materials Selection and Management</a></li>
                 </ul>
               </div>
             </li>
@@ -276,31 +276,33 @@
                 Actions
                 <ul>
                   <li><a href="#">Development Activities - (2)</a></li>
-                  <li><a href="petrocore-my-position-skill-evidence-skillonly.html">Evidence - (9)</a></li>
+                  <li><a href="#">Evidence - (0)</a></li>
                   <li><a href="#">Notes - (0)</a></li>
                   <li><a href="#">History - (0)</a></li>
                 </ul>
               </div>
             </div>
-              <a class="back-to-previous-page" href="petrocore-my-position-skill.html">Back to Previous Page</a>
+              <a class="back-to-previous-page" href="#">Back to Previous Page</a>
           </div>
           <hr>
 
+          <div class="same-line">
+            <h4>Chung, David</h4><span> (dchung12)</span>
+          </div>
+
           <fieldset>
-            <legend><h5>Evaluation Program</h5></legend>
+            <legend><h5>Well Planning</h5></legend>
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                   <label>Fundamental</label>
-                  <div class="form-text-display-field">Identify the fundamentals of an evaluation program, customer(s), suppliers, and equipment used, also, describe the needs and use of data acquired.</div>
+                  <div class="form-text-display-field">Obtain all relevant historical and current geologic, seismic, and wireline logging data to include in a prospect specific well Design.</div>
               </div>
             </div>
-            
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <label>Status</label>
               </div>
             </div>
-
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                 <div class="skillgroupstatus status-not-assesed margin-right"></div>
@@ -311,30 +313,14 @@
 
           <fieldset>
             <legend>Self Assessment</legend>
+            
             <div class="row">
-              <div class="form-group six mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed status-leading-control" href="#"></div>
-                <!-- the select tag which is hte default HTML is not visible when
-                in a custom form and the class custom-dropdown is used. -->
-                <select class="custom dropdown display-none" id="customDropdown">
-                  <option selected="">Not Assessed</option>
-                  <option>Competent</option>
-                  <option>In Progress</option>
-                  <option>Not Yet Competent</option>
-                </select>
-                <!-- the div with class custom dropdown displays the
-                dropdown in a Zurb custom form. -->
-                <div class="custom dropdown control-with-leading-status">
-                  <a href="#" class="current">Not Assessed</a>
-                  <a href="#" class="selector"></a>
-                  <ul>
-                    <li>Competent</li>
-                    <li>In Progress</li>
-                    <li>Not Yet Competent</li>
-                  </ul>
-                </div>
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
+
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                   <label>Date Assessed</label>
@@ -351,12 +337,32 @@
 
           <fieldset>
             <legend>Supervisor Assessment</legend>
+
             <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
+              <div class="form-group six mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed status-leading-control" href="#"></div>
+                <!-- the select tag which is hte default HTML is not visible when
+                in a custom form and the class custom-dropdown is used. -->
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="">Not Assessed</option>
+                  <option>Competent</option>
+                  <option>Some</option>
+                  <option>Not Yet Competent</option>
+                </select>
+                <!-- the div with class custom dropdown displays the
+                dropdown in a Zurb custom form. -->
+                <div class="custom dropdown control-with-leading-status">
+                  <a href="#" class="current">Not Assessed</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Competent</li>
+                    <li>Some</li>
+                    <li>Not Yet Competent</li>
+                  </ul>
+                </div>
               </div>
             </div>
+           
             <div class="row">
               <div class="form-group twelve mobile-four columns">
                   <label>Date Assessed</label>
@@ -391,12 +397,6 @@
                   <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
               </div>
             </div>
-
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <a href="#">Take Practice Test</a> |  <a href="#">Take Final Test</a>
-              </div>
-            </div>
           </fieldset>
 
           <fieldset>
@@ -427,7 +427,7 @@
             </div>
             <div class="row">
               <div class="form-group twelve mobile-four columns">
-              <a href="#">View Capability</a> | <a href="#" data-reveal-id="request-capability">Request Capability Assessment</a>
+                <a href="#">View Capability</a> |  <a href="#" data-reveal-id="capability-assessment">Complete Capability Assessment</a>
               </div>
             </div>
           </fieldset>
@@ -441,15 +441,37 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Approved</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+              <div class="form-group four mobile-four columns">
+                <label>Date Approved</label>
+                <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"><a class="icon-trailing-control input" href"#"=""></a>
               </div>
             </div>
             <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Approved By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+              <div class="form-group four mobile-four columns">
+                <label>Approver</label>
+                <!-- the select tag which is hte default HTML is not visible when
+                in a custom form and the class custom-dropdown is used. -->
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option SELECTED>Super, Sally (ssuper)</option>
+                  <option>Name 1</option>
+                  <option>Name 2</option>
+                  <option>Name 3</option>
+                </select>
+                <!-- the div with class custom dropdown displays the
+                dropdown in a Zurb custom form.
+                expand tells Zurb that the dropdown should take up
+                as much horizontal space as possible. -->
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">
+                    Super, Sally (ssuper)
+                  </a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Name 1</li>
+                    <li>Name 2</li>
+                    <li>Name 3</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -460,7 +482,7 @@
               <a class="left cancel-link" href="#">Cancel</a>
             </div>
           </div>
-                    
+
         </form>
       </div><!--Close Content Container-->
     </div>
@@ -499,10 +521,11 @@
   <!-- CONTENT AREA -->
 
 
-<div id="request-capability" class="reveal-modal expand">
+<!-- ### Capability Assessement Popup *** -->
+<div id="capability-assessment" class="reveal-modal xlarge">
     <div class="panel-header">
     <div class="panel-title-container">
-      <h5>Request Capability Assessment</h5>
+      <h5>Complete Capability Assessment</h5>
     </div>
     <div class="panel-header-icons-container">
       <ul class="panel-header-icons-list">
@@ -510,26 +533,205 @@
       </ul>
     </div>
   </div>
-
   <div class="popup-content-container">
-    <p class="lead">Select Supervisor(s) to notify</p>
-    <div class="twelve columns">
+      <form class="custom">
+        <div class="row">
+          <div class="twelve columns">
+            <p><strong>Completion Program - Fundamental Application</strong></p>
+          </div>
+        </div>
 
-      <div id="list-direct-participants" class="list-box">
-        <div class="participant">
-          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox1">Aranda, David (DAPO)</div>
+        <div class="row">
+          <div class="form-group nine columns">
+            <label for="customDropdown">Assessed By</label>
+            <!-- the select tag which is hte default HTML is not visible when
+                        in a custom form and the class custom-dropdown is used. -->
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option SELECTED>Selected list item</option>
+              <option>List item</option>
+              <option>another list item</option>
+              <option>yet another list item</option>
+            </select>
+            <!-- the div with class custom dropdown displays the
+                        dropdown in a Zurb custom form.
+                        expand tells Zurb that the dropdown should take up
+                        as much horizontal space as possible. -->
+            <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
+              <ul>
+                <li>list item</li>
+                <li>another list item</li>
+                <li>yet another list item</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="participant">
-          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox2">Chung, David (DCKI)</div>
+
+        <div class="row">
+          <div class="form-group nine columns">
+            <label for="customDropdown">Verified By</label>
+            <!-- the select tag which is hte default HTML is not visible when
+                        in a custom form and the class custom-dropdown is used. -->
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option SELECTED>Selected list item</option>
+              <option>List item</option>
+              <option>another list item</option>
+              <option>yet another list item</option>
+            </select>
+            <!-- the div with class custom dropdown displays the
+                        dropdown in a Zurb custom form.
+                        expand tells Zurb that the dropdown should take up
+                        as much horizontal space as possible. -->
+            <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
+              <ul>
+                <li>list item</li>
+                <li>another list item</li>
+                <li>yet another list item</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+
+        <div class="row">
+          <div class="form-group nine columns">
+            <label for="customDropdown">Verifier Type</label>
+            <!-- the select tag which is hte default HTML is not visible when
+                        in a custom form and the class custom-dropdown is used. -->
+            <select class="custom dropdown display-none" id="customDropdown">
+              <option SELECTED>Selected list item</option>
+              <option>List item</option>
+              <option>another list item</option>
+              <option>yet another list item</option>
+            </select>
+            <!-- the div with class custom dropdown displays the
+                        dropdown in a Zurb custom form.
+                        expand tells Zurb that the dropdown should take up
+                        as much horizontal space as possible. -->
+            <div class="custom dropdown expand"> <a href="#" class="current"> Internal </a> <a href="#" class="selector"></a>
+              <ul>
+                <li>list item</li>
+                <li>another list item</li>
+                <li>yet another list item</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group four columns">
+            <label>Date Assessed</label>
+            <input class="control-with-trailing-icon" type="text" placeholder="" value="11/01/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+          </div>
+        </div>
+
+       
+        <div class="row">
+          <div class="form-group seven mobile-four columns">
+            <label>Capability Assessment</label>
+            <div><a href="#">View file</a></div>
+              <div class="form-group file-upload-btn">
+                <label class="round text-center fileupload_btn_label" for="file">Attach Document</label>
+                <input type="file" id="file">
+              </div>
+              <div><p>path/to/selected/file/notshown/if.blank</p></div>
+              <div class="radio-group">
+                <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file</label>
+                <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5>Additional Evidence</h5>
+              </div>
+                <div class="panel-header-icons-container">
+                  <ul class="panel-header-icons-list">
+                    <!--<li><a href="#" class="panel-header-icons-collapse-up icon-">&#xf0de;</a></li>collapse up icon-->
+                    <li><a class="secondary radius button smaller" href="#" data-reveal-id="attach-document">Attach Document</a></li>
+                  </ul>
+                </div>
+            </div>
+              <div class="panel-content-container-full">
+                <div class="no-border row">
+                  <table id="report-templates-table" class="twelve no-border nested-table">
+                    <thead>
+                      <tr>
+                        <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                        <th><a class="sorting-block">Uploaded by<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                        <th><a class="sorting-block">Date Added<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                        <th class="two">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#">Document Number 1234</a>
+                        </td>
+                        <td>Doe, John (DJOE)</td>
+                        <td>Oct-15-2013</td>
+                        <td>
+                          <a name="action-button1"></a>
+                          <div href="#action-button1" class="button dropdown petrocore-actions">
+                            Actions
+                            <ul>
+                              <li><a href="#">Download</a></li>
+                              <li><a href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#">Document Number 1234</a>
+                        </td>
+                        <td>Doe, John (DJOE)</td>
+                        <td>Oct-15-2013</td>
+                        <td>
+                          <a name="action-button1"></a>
+                          <div href="#action-button1" class="button dropdown petrocore-actions">
+                            Actions
+                            <ul>
+                              <li><a href="#">Download</a></li>
+                              <li><a href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#">Document Number 1234</a>
+                        </td>
+                        <td>Doe, John (DJOE)</td>
+                        <td>Oct-15-2013</td>
+                        <td>
+                          <a name="action-button1"></a>
+                          <div href="#action-button1" class="button dropdown petrocore-actions">
+                            Actions
+                            <ul>
+                              <li><a href="#">Download</a></li>
+                              <li><a href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div><!--Close row-->
+      </form>
   </div>
   <div class="modal-footer">
-    <a class="primary radius button left close-reveal-modal" href="#">Send</a>
-    <a class="left cancel-link" href="#">Cancel</a>
+    <a class="primary radius button" href="#">Submit Pass</a>
+    <a class="alert radius button" href="#">Submit Fail</a>
+    <a class="cancel-link" href="#">Cancel</a>
   </div>
 </div>
+<!-- ### End Capability Assessement Popup *** -->
 
 <div id="overlay"></div>
 

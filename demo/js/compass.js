@@ -77,8 +77,11 @@ $(document).ready(function(){
 
   function open_close(ev) {
     ev.preventDefault();
+    var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
 
-    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
+
+    current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
 
     if ($(current_panel).is(':hidden')) {
@@ -215,8 +218,8 @@ $(document).ready(function(){
   }); 
   
   // Add A Competency Control Item to the list
-  $('#addcompetency').click (function() {
-
+  $('#addcompetency').click (function(ev) {
+    ev.preventDefault();
     var n = $("#competency_list li").length;
     var newdescription = "Competence level " + (n+1);
 
@@ -225,9 +228,10 @@ $(document).ready(function(){
     $("#competency_list li .cl-description").eq(n).html(newdescription);
     $('#competency_list').sortcompetency();
   });
-
+  
   // Removes Competency Control Items from the list
-  $('#competency_list li .cl-icon-x').click(function(){
+  $('#competency_list li .cl-icon-x').click(function(ev){
+    ev.preventDefault();
     if ($("#competency_list li").length > 1) {
       $(this).parent().parent('li').remove();
       $('#competency_list').sortcompetency();
@@ -235,14 +239,16 @@ $(document).ready(function(){
   });
 
   // Move Up Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-up').click(function(){
+  $('#competency_list li .cl-icon-arrow-up').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertBefore(parent.prev());
     $('#competency_list').sortcompetency();
   });
 
   // Move Down Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-down').click(function(){
+  $('#competency_list li .cl-icon-arrow-down').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertAfter(parent.next());
     $('#competency_list').sortcompetency();
@@ -261,37 +267,37 @@ $(document).ready(function(){
       $(this).find('.cl-number').html(index+1);
       if ( $(this).find('.cl-number').html() == 1 || $(this).find('.cl-number').html() == n )
       {
-        $(this).find('a.cl-icon-x').removeClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-x').removeClass('is-disabled').hover(function(){
           $(this).css("color","#0169a0");},function(){
           $(this).css("color","#858585");});
 
           if ( $(this).find('.cl-number').html() == 1 )
           {
-            $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
           }
           else
           {
-            $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
           }
         }
         else
         {
-          $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
-          $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
         }
@@ -299,13 +305,13 @@ $(document).ready(function(){
       else
       {
         $(this).find('.cl-number').html(index+1);
-        $(this).find('a.cl-icon-x').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-x').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
       }
