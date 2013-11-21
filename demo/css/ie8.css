@@ -84,13 +84,6 @@ body {
     display:inline-block;
 }
 
-.reveal-modal .close-reveal-modal {
-    color:#666666;   
-    font-weight:normal;
-    cursor: pointer;
-    float:right;
-    top:11px;
-}
 	
 /* It fixes the misalignment of the dropdown arrow box */
 form.custom div.custom.dropdown a.selector {
