@@ -3977,6 +3977,7 @@ ul.role-breadcrumbs li:after {
 .knowledge-test-box {
   border: 1px solid #8a8a8a;
   margin-bottom: 15px;
+  min-height: 400px;
 }
 .knowledge-test-box-content {
   margin: 14px;
@@ -3989,9 +3990,10 @@ ul.role-breadcrumbs li:after {
   float: none;
 }
 
-.test-info {
+.test-info, a.test-info {
   color: #767676;
 }
+
 .test-correct {
   color: #33CC66;
 }
@@ -4002,6 +4004,10 @@ ul.role-breadcrumbs li:after {
 
 .test-unanswered {
   color: #fea648;
+}
+
+.test-iconsize, a.icon-trailing-control.test-iconsize {
+  font-size: 16px;
 }
 
 .test-question-highlight {
@@ -4020,7 +4026,6 @@ ul.role-breadcrumbs li:after {
   margin-left: 46px;
   display: block;
 }
-
 
 .linethrough { 
   text-decoration: line-through;
