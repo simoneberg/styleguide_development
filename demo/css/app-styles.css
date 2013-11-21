@@ -4707,6 +4707,10 @@ a.milestone-date:hover {
   margin-left: 8px !important;
 }
 
+.skill-legend div{
+  margin: 4px 0 0 5px;
+}
+
 .skillgroupstatus.margin-right {
   margin-right: 17px;
 }
