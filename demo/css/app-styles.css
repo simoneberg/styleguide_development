@@ -73,8 +73,6 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 }
 
 
-
-
 .pagination-counter {
   color: #757575;
   font-size: 12px;
@@ -819,67 +817,80 @@ h4 {
 
 /* carousel view container */
 .carousel-view-container {
-	width: 100%;
-	height: 300px;
-	padding: 0;
-	border: 1px solid #ccc;
-	background: #FFF;
-	display: block;
-	overflow-x: scroll;
-	overflow-y: hidden;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #FFF;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 /* the composition div for colums */
 .carousel-view-composition {
-	display: table;
+  display: table;
 }
 
 /**/
 .carousel {
-	display: table-cell;
-	border-right: 1px solid #999;
+  display: table-cell;
+  border-right: 1px solid #999;
 }
 
 
 .carousel:only-child {
-	border-right: 1px solid #999;
+  border-right: 1px solid #999;
 }
 
 
 /* for carousel listing */
 .carousel ul {
-	margin: 0;
-	padding: 0;
-	height: 300px;
-	width: 250px;
-	overflow-y: auto;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  width: 250px;
+  overflow-y: auto;
+  list-style: none;
 }
 
 .carousel ul li {
-	position: relative;
-	margin: 0;
-	padding: 10px 25px 10px 10px;
+  position: relative;
+  margin: 0;
+  padding: 10px 25px 10px 10px;
 }
 
 .carousel ul li:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .carousel ul li i {
-	position: absolute;
-	top: 14px;
-	right: 5px;
+  position: absolute;
+  top: 14px;
+  right: 5px;
 }
 
 .carousel ul li:hover, .carousel ul li.active {
-	background: #f1f1f1;
+  background: #f1f1f1;
   background: linear-gradient(to bottom, #f1f1f1 0%,#e7e7e7 100%);
-	color: #6f6f6f;
+  color: #6f6f6f;
+}
+
+.carousel ul li.modified {
+  background: #C4FFFF;
+  background: linear-gradient(to bottom, #C4FFFF 0%,#ABFFFF 100%);
+  color: #6f6f6f;
 }
 
 .carousel ul li:hover a, .carousel ul li.active a {
-	color: #6f6f6f;
+  color: #6f6f6f;
+}
+
+label.carousel-current-group {
+  font-weight: bold;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 18px;
 }
 
 
@@ -2760,9 +2771,9 @@ form.custom .competence-level-item,
 }
 
 .background-blue-disabled {
-	background: none;
-	filter: none;
-	background-color: #5eb2e1;
+  background: none;
+  filter: none;
+  background-color: #5eb2e1;
 }
 .competence-level-number .cl-number {
   padding-top: 6px; 
@@ -3912,6 +3923,80 @@ input.round-right {
 
 .list-box .participant:last-child {
   border-bottom: none;
+}
+
+.list-item {
+  line-height: 18px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 8px 7px 8px;
+  margin-bottom: 3px;
+}
+
+.list-box .list-item {
+  border-bottom: solid 1px #cfcfcf;
+}
+
+.list-box .list-item ul.inline-list {
+  margin: 0;
+  padding: 0;
+}
+
+.list-box .list-item ul.inline-list li {
+  display: inline-block;
+  margin: 0;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item {
+  color: #999;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.add {
+  font-weight: bold;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.remove {
+  font-style: italic;
+}
+
+.list-box .list-item ul.inline-list li:not(:last-child):after {
+  content: ", \00a0"; /* add comma and a space after each item that is not the last */
+}
+
+.list-box .list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item .list-icon-plus,
+.list-item .list-icon-x {
+  margin: 0;
+  float:right;
+}
+
+.list-item .list-icon-plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  right: 10px;
+  top: 13px;
+  display:block;
+}
+
+.list-item .list-icon-x:after {
+  content: "\f00d";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  top: 0;
+  display:block;
+}
+
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after,
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after {
+  color:#858585;
 }
 
 .list-of-search-results-relationships li,
