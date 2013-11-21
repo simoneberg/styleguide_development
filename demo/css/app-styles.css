@@ -4573,7 +4573,7 @@ a.milestone-date:hover {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-top: 10px;
-  margin: 2px 0 0 5px;
+  /*margin: 2px 0 0 5px;*/
   position: relative;
   float:left;
 }
