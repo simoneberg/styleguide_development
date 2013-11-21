@@ -27,6 +27,7 @@
      list box
      skill groups
      user role summary
+     user setting categories 
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -2878,6 +2879,35 @@ form.custom .competence-level-item .cl-description,
   margin: 0;
   padding: 10px 0;
   width: 100%;
+}
+
+/* User Setting Categories */
+
+.profile-category-box {
+  border: 1px solid #8c8c8c;
+  margin-bottom: 1em;
+  height: 16em;
+  overflow-x: auto;
+  min-height:31px;
+}
+
+.profile-item {
+  line-height:normal;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 12px 7px 15px;
+  border-bottom:1px solid rgb(207, 207, 207);
+}
+
+.profile-item:last-child {
+  border-bottom: none;
+}
+
+.profile-item .button {
+  float: right;
+}
+.profile-highlight {
+  background: #c1c1c1;
 }
 
 /* END DASHBOARD */
