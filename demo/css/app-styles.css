@@ -1331,8 +1331,10 @@ ul.accordion>li.active .content>ul>li.active a {
 }
 
 .table-header-action .button {
-  margin-right: 10px;
+  /*margin-right: 10px;*/
 }
+
+
 
 .button.dropdown.petrocore-actions:after {
   border-color: #666 transparent transparent transparent;
@@ -3058,7 +3060,7 @@ table.nested-table thead tr th {
 }
 
 th.select-all-column {
-  width: 20px;
+  width: 40px;
   color: #C8C8C8;
   text-align: center;
 }
