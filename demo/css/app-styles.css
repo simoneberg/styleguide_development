@@ -2899,12 +2899,25 @@ form.custom .competence-level-item .cl-description,
   border-bottom:1px solid rgb(207, 207, 207);
 }
 
+.profile-item:before, .profile-item:after {
+  content:"";
+  display: table;
+}
+
+.profile-item:after {
+  clear:both;
+}
+
 .profile-item:last-child {
   border-bottom: none;
 }
 
 .profile-item .button {
   float: right;
+}
+
+.profile-item .delete-remove.button {
+  margin-left:30px;
 }
 .profile-highlight {
   background: #c1c1c1;
