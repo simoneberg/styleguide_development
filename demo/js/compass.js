@@ -1,3 +1,4 @@
+
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
   advanced_arrow = $('p.search-arrow');
