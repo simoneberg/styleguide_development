@@ -27,6 +27,7 @@
      list box
      skill groups
      user role summary
+     user setting categories 
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -70,8 +71,6 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
 .clearfix:after {
   clear: both;
 }
-
-
 
 
 .pagination-counter {
@@ -162,6 +161,7 @@ table.wrap-cell-content td span.wrapword {
 ul.no-bullet,
 ul.angle-bullet {
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 ul.angle-bullet li {
@@ -641,6 +641,17 @@ h4 {
   background: none;
   z-index: 10000;
 }
+
+#overlay-loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5) url('/images/loading.gif') 50% 50% no-repeat;
+  z-index: 10000;
+}
 /* END HEADER */
 /* **************************************** */
 
@@ -806,67 +817,80 @@ h4 {
 
 /* carousel view container */
 .carousel-view-container {
-	width: 100%;
-	height: 300px;
-	padding: 0;
-	border: 1px solid #ccc;
-	background: #FFF;
-	display: block;
-	overflow-x: scroll;
-	overflow-y: hidden;
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: #FFF;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 /* the composition div for colums */
 .carousel-view-composition {
-	display: table;
+  display: table;
 }
 
 /**/
 .carousel {
-	display: table-cell;
-	border-right: 1px solid #999;
+  display: table-cell;
+  border-right: 1px solid #999;
 }
 
 
 .carousel:only-child {
-	border-right: 1px solid #999;
+  border-right: 1px solid #999;
 }
 
 
 /* for carousel listing */
 .carousel ul {
-	margin: 0;
-	padding: 0;
-	height: 300px;
-	width: 250px;
-	overflow-y: auto;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  width: 250px;
+  overflow-y: auto;
+  list-style: none;
 }
 
 .carousel ul li {
-	position: relative;
-	margin: 0;
-	padding: 10px 25px 10px 10px;
+  position: relative;
+  margin: 0;
+  padding: 10px 25px 10px 10px;
 }
 
 .carousel ul li:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .carousel ul li i {
-	position: absolute;
-	top: 14px;
-	right: 5px;
+  position: absolute;
+  top: 14px;
+  right: 5px;
 }
 
 .carousel ul li:hover, .carousel ul li.active {
-	background: #f1f1f1;
+  background: #f1f1f1;
   background: linear-gradient(to bottom, #f1f1f1 0%,#e7e7e7 100%);
-	color: #6f6f6f;
+  color: #6f6f6f;
+}
+
+.carousel ul li.modified {
+  background: #C4FFFF;
+  background: linear-gradient(to bottom, #C4FFFF 0%,#ABFFFF 100%);
+  color: #6f6f6f;
 }
 
 .carousel ul li:hover a, .carousel ul li.active a {
-	color: #6f6f6f;
+  color: #6f6f6f;
+}
+
+label.carousel-current-group {
+  font-weight: bold;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 18px;
 }
 
 
@@ -1780,6 +1804,36 @@ form.custom .twelve.columns .control-with-trailing-icon {
   width: 95% !important;
 }
 
+form.custom .control-with-leading-status {
+  float: left;
+}
+
+form.custom .one.columns .control-with-leading-status,
+form.custom .two.columns .control-with-leading-status {
+  width: 100% !important;
+}
+form.custom .three.columns .control-with-leading-status {
+  width: 78% !important;
+}
+form.custom .four.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .five.columns .control-with-leading-status,
+form.custom .six.columns .control-with-leading-status {
+  width: 80% !important;
+}
+form.custom .seven.columns .control-with-leading-status,
+form.custom .eight.columns .control-with-leading-status {
+  width: 86% !important;
+}
+form.custom .nine.columns .control-with-leading-status,
+form.custom .ten.columns .control-with-leading-status,
+form.custom .eleven.columns .control-with-leading-status,
+form.custom .twelve.columns .control-with-leading-status {
+  width: 86% !important;
+}
+
+
 label {
   color: #333;
   cursor: default;
@@ -1998,6 +2052,90 @@ div.scroll-both {
 
 label.inline {
   display: inline;
+}
+
+/* generic list control */
+/* based off the search results */
+/* and direct participant controls */
+
+.list {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.list-name h5 {
+  background-color: #e8e8e8;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #929292;
+  border-bottom: none;
+  color: #383838;
+}
+
+.list-item {
+  line-height:normal;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 12px 7px 15px;
+  border: solid 1px #929292;
+  border-bottom: none;
+}
+
+.list-item.tall {
+  line-height: 50px;
+}
+
+.list-item-name {
+
+}
+
+.list-item-summary-name {
+  color: #999;
+  display: inline-block;
+}
+
+.list-item-summary-value {
+  color: #999;
+  display: inline-block;
+}
+
+.list-item:nth-child(odd) {
+
+}
+
+.list .list-item:last-child {
+  border-bottom: solid 1px #929292;
+}
+
+.list-item.movable {
+  cursor:move;
+}
+
+.list-icon {
+  margin: 0;
+  float:right;
+}
+
+.list-icon .plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+}
+
+.list-icon .x:after {
+  content: "\f00d";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+}
+
+.list-item a.plus:after,
+.list-item a.x:after {
+  color:#858585;
 }
 
 /* END FORMS */
@@ -2606,6 +2744,7 @@ border: 1px solid #8a8a8a;
   height: auto;
 }
 
+form.custom .competence-level-item,
 .competence-level-item {
   border: solid 1px #606060;
   border-top: none;
@@ -2636,9 +2775,9 @@ border: 1px solid #8a8a8a;
 }
 
 .background-blue-disabled {
-	background: none;
-	filter: none;
-	background-color: #5eb2e1;
+  background: none;
+  filter: none;
+  background-color: #5eb2e1;
 }
 .competence-level-number .cl-number {
   padding-top: 6px; 
@@ -2646,6 +2785,7 @@ border: 1px solid #8a8a8a;
   text-shadow: 0px 1px 1px #daecf6;
 }
 
+form.custom .competence-level-item .cl-description,
 .competence-level-item .cl-description {
   height: 100%;
   padding: 6px 0 0 10px;
@@ -2754,6 +2894,48 @@ border: 1px solid #8a8a8a;
   margin: 0;
   padding: 10px 0;
   width: 100%;
+}
+
+/* User Setting Categories */
+
+.profile-category-box {
+  border: 1px solid #8c8c8c;
+  margin-bottom: 1em;
+  height: 16em;
+  overflow-x: auto;
+  min-height:31px;
+}
+
+.profile-item {
+  line-height:normal;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 12px 7px 15px;
+  border-bottom:1px solid rgb(207, 207, 207);
+}
+
+.profile-item:before, .profile-item:after {
+  content:"";
+  display: table;
+}
+
+.profile-item:after {
+  clear:both;
+}
+
+.profile-item:last-child {
+  border-bottom: none;
+}
+
+.profile-item .button {
+  float: right;
+}
+
+.profile-item .delete-remove.button {
+  margin-left:30px;
+}
+.profile-highlight {
+  background: #c1c1c1;
 }
 
 /* END DASHBOARD */
@@ -3290,7 +3472,6 @@ ul.button-group label {
   background: -ms-linear-gradient(top,  #eaeaea 0%,#dddddd 100%);
   background: linear-gradient(to bottom,  #eaeaea 0%,#dddddd 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#dddddd',GradientType=0 );
-  	border:solid 2px red;
 }
 
 #step1.active-step {
@@ -3746,6 +3927,80 @@ input.round-right {
 
 .list-box .participant:last-child {
   border-bottom: none;
+}
+
+.list-item {
+  line-height: 18px;
+  width: 100%;
+  margin-right: 10px;
+  padding: 7px 8px 7px 8px;
+  margin-bottom: 3px;
+}
+
+.list-box .list-item {
+  border-bottom: solid 1px #cfcfcf;
+}
+
+.list-box .list-item ul.inline-list {
+  margin: 0;
+  padding: 0;
+}
+
+.list-box .list-item ul.inline-list li {
+  display: inline-block;
+  margin: 0;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item {
+  color: #999;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.add {
+  font-weight: bold;
+}
+
+.list-box .list-item ul.inline-list li.inline-list-item.remove {
+  font-style: italic;
+}
+
+.list-box .list-item ul.inline-list li:not(:last-child):after {
+  content: ", \00a0"; /* add comma and a space after each item that is not the last */
+}
+
+.list-box .list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item .list-icon-plus,
+.list-item .list-icon-x {
+  margin: 0;
+  float:right;
+}
+
+.list-item .list-icon-plus:after {
+  content: "\f067";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  right: 10px;
+  top: 13px;
+  display:block;
+}
+
+.list-item .list-icon-x:after {
+  content: "\f00d";
+  font-family: FontAwesome;
+  text-decoration: none;
+  position:relative;
+  top: 0;
+  display:block;
+}
+
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after,
+.list-item a.list-icon-plus:after,
+.list-item a.list-icon-x:after {
+  color:#858585;
 }
 
 .list-of-search-results-relationships li,
@@ -4527,7 +4782,9 @@ a.milestone-date:hover {
 }
 
 .skill-description-content{
-  padding: 5px 5px 5px;
+  margin-left: 6px;
+  margin-top: -10px;
+  padding: 0px 5px 10px 10px;
 
 }
 .skill-description-duration{
@@ -4545,14 +4802,35 @@ a.milestone-date:hover {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-top: 10px;
-  margin: 2px 0 0 5px;
+  margin: 0;
   position: relative;
   float:left;
 }
 
 .skill-legend {
-  min-width: 200px!important;
+  min-width: 200px !important;
+  margin-left: 8px !important;
 }
+
+.skill-legend div{
+  margin: 4px 0 0 5px;
+}
+
+.skillgroupstatus.margin-right {
+  margin-right: 17px;
+}
+
+.skillgroupstatus-text-inline {
+  margin-top: 5px;
+}
+
+.skillgroupstatus.status-leading-control {
+  margin-right: 17px;
+  margin-top: 6px;
+  position: relative;
+  float: left;
+}
+
 .status-competent {
   background-color: #33CC66;
 }
@@ -4566,12 +4844,10 @@ a.milestone-date:hover {
 }
 
 .status-progress{
-  background-color: rgb(243, 143, 15);
-}
-
-.status-some {
   background-color: #FFEB00;
 }
+
+
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
@@ -5046,6 +5322,14 @@ h4 .header-link {
     margin-top: -7px;
     cursor: pointer;
     float: left;
+  }
+
+  .header-inline h4 {
+    margin-bottom:24px;
+  }
+
+  .header-inline a.back-to-previous-page {
+    margin-top:-31px;
   }
 
   .logo {
@@ -5957,6 +6241,13 @@ h4 .header-link {
   padding-left: 10px;
   }
 
+  .header-inline a.back-to-previous-page {
+    margin-top:0;
+    float: none;
+    margin-bottom: 10px;
+    display:block;
+
+  }
 }
 
 /* END MEDIA QUERIES */
@@ -6145,14 +6436,14 @@ h4 .header-link {
   border-right-color: #fff;
   margin-top: -11px;
 }
-.ui-widget.popover-content .ui-widget-header {
+.ui-widget.popover-content .header {
   padding: 10px;
   background-color: #eaeaea;
   margin: 0 -10px;
   margin-top: -10px;
   border-bottom: 1px solid #666;
 }
-.ui-widget.popover-content .ui-widget-content {
+.ui-widget.popover-content .content {
   padding: 10px 0px;
 
 }
