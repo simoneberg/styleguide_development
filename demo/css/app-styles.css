@@ -3974,10 +3974,15 @@ ul.role-breadcrumbs li:after {
 }
 
 /* Knowledge Test */
+
+.knowledge-test-wrapper {
+  height: 400px;
+  overflow: auto;
+}
 .knowledge-test-box {
   border: 1px solid #8a8a8a;
   margin-bottom: 15px;
-  min-height: 400px;
+  width: 97%;
 }
 .knowledge-test-box-content {
   margin: 14px;
