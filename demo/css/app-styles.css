@@ -4571,10 +4571,6 @@ ul.milestones > li[class^="offset-week"] {
   left: 100%;
 }
 
-.background .month-column:first-child,
-.background .week-column:first-child {
- border-left: 1px solid #8a8a8a;
-}
 
 .background .title {
   position: absolute;
@@ -4596,6 +4592,7 @@ ul.milestones > li[class^="offset-week"] {
 .calendar-grid {
  position: relative;
  overflow:hidden;
+ border-left: 1px solid #8a8a8a;
 }
 
 .calendar-grid .background {
@@ -4684,8 +4681,8 @@ ul.button-group li:last-child {
   position: absolute;
 }
 
-.week-grid .list-dev-activities {
-  border-left: 1px solid #8a8a8a;
+.week-grid .dev-activity {
+  border-right:0;
 }
 
 .priority-bar {
