@@ -1,4 +1,3 @@
-
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
   advanced_arrow = $('p.search-arrow');
@@ -7,6 +6,16 @@ function show_hide_advanced(id) {
     advanced_panel.css("display", "block");
     advanced_arrow.html('&#xf0de;').css("top", "7px");
   } else {
+    advanced_panel.css("display", "none");
+    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+  }
+}
+
+function hide_advanced_panel() {
+  var advanced_panel = $('#advanced_search');
+  if (advanced_panel.not(':hidden')) {
+    advanced_arrow = $('p.search-arrow');
+    advanced_arrow.css("position", "relative");
     advanced_panel.css("display", "none");
     advanced_arrow.html('&#xf0dd;').css("top", "0px");
   }
@@ -470,8 +479,8 @@ $(function() {
   $(".collapse-menu").on("click", function(ev){
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
-  
   wrapper.toggleClass("collapsed");
+  hide_advanced_panel();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
@@ -480,9 +489,8 @@ $(function() {
     $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
 
   $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
-
+  
   })
-
 
 })(jQuery);
 
