@@ -2033,6 +2033,16 @@ div.scroll-both {
   width: 200px;
 }
 
+/* for display in a form of radio/checkboxes followed by an input box */
+.text-input-with-leading-input{
+ width: 88% !important; 
+ float: right;
+}
+
+.leading_input {
+  margin-top:9px;
+}
+
 /* zurb control modifications */
 
 /* compass controls */
@@ -4742,7 +4752,16 @@ a.milestone-date:hover {
   background-color: #FFEB00;
 }
 
+/* question maintenance */
 
+.qa_controls { 
+  margin-top:8px;
+}
+
+.qa_controls a.icon- {
+  margin-right: 10px;
+  color: #858585;
+}
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
