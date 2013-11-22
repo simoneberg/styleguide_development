@@ -1355,8 +1355,10 @@ ul.accordion>li.active .content>ul>li.active a {
 }
 
 .table-header-action .button {
-  margin-right: 10px;
+  /*margin-right: 10px;*/
 }
+
+
 
 .button.dropdown.petrocore-actions:after {
   border-color: #666 transparent transparent transparent;
@@ -2608,7 +2610,9 @@ a.sorting-block:hover .add-sorting-icon {
 .panel-header li {
   display: block;
 }
-
+.panel-header .panel-header-button {
+  padding: 7px 0;
+}
 .panel-header-icons-close-list {
   display: block;
 }
@@ -3238,7 +3242,7 @@ table.nested-table thead tr th {
 }
 
 th.select-all-column {
-  width: 20px;
+  width: 40px;
   color: #C8C8C8;
   text-align: center;
 }
@@ -4055,6 +4059,9 @@ ul.search-results {
   margin: 0;
   padding: 0;
   list-style:none;
+}
+ul.search-results i {
+  line-height: 22px;
 }
 ul.search-results li{
   margin: 0;
