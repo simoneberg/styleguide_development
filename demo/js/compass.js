@@ -11,16 +11,6 @@ function show_hide_advanced(id) {
   }
 }
 
-function hide_advanced_panel() {
-  var advanced_panel = $('#advanced_search');
-  if (advanced_panel.not(':hidden')) {
-    advanced_arrow = $('p.search-arrow');
-    advanced_arrow.css("position", "relative");
-    advanced_panel.css("display", "none");
-    advanced_arrow.html('&#xf0dd;').css("top", "0px");
-  }
-}
-
 $(document).ready(function(){
 
   // Notification Popup Module
@@ -329,6 +319,17 @@ $(document).ready(function(){
 
 });
 
+// Closes the Advanced Search Panel
+function close_advanced_search() {
+  var advanced_panel = $('#advanced_search');
+  if (advanced_panel.not(':hidden')) {
+    advanced_arrow = $('p.search-arrow');
+    advanced_arrow.css("position", "relative");
+    advanced_panel.css("display", "none");
+    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+  }
+}
+
 /* prevent hash changes on any nexted tabs*/
 $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
   ev.preventDefault();
@@ -480,7 +481,8 @@ $(function() {
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
   wrapper.toggleClass("collapsed");
-  hide_advanced_panel();
+//  hide_advanced_panel();
+  close_advanced_search();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
