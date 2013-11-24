@@ -1,13 +1,14 @@
+// Show and hide Advanced Search Panel
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('p.search-arrow');
-  advanced_arrow.css("position", "relative");
+  var advanced_arrow = $('p.search-arrow').css('position', 'relative');
+
   if (advanced_panel.is(':hidden')) {
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0de;').css("top", "7px");
+    advanced_panel.show();
+    advanced_arrow.css("top", "7px").html('&#xf0de;');
   } else {
-    advanced_panel.css("display", "none");
-    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+    advanced_panel.hide();
+    advanced_arrow.css("top", "0px").html('&#xf0dd;');
   }
 }
 
@@ -251,8 +252,8 @@ $(document).ready(function(){
     $('#competency_list').sortcompetency();
   });
 
-  // Custom function called by four events - Add, Remove, Move-Up, and Move-Down
-  // Hover effect is done in jQuery to ensure compatibilty with IE8 and up
+  // Method used by four events above - Add, Remove, Move-Up, and Move-Down
+  // In order to ensure compatibilty with IE8 and up, hover effect is done in jQuery
   jQuery.fn.sortcompetency = function(){
 
     var n = $("#competency_list li").length;
@@ -312,21 +313,18 @@ $(document).ready(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
       }
-
     });
-
   }
-
+  
 });
 
-// Closes the Advanced Search Panel
-function close_advanced_search() {
+/* Closes the Advanced Search Panel */
+function close_advanced_search_panel() {
   var advanced_panel = $('#advanced_search');
-  if (advanced_panel.not(':hidden')) {
-    advanced_arrow = $('p.search-arrow');
-    advanced_arrow.css("position", "relative");
-    advanced_panel.css("display", "none");
-    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+
+  if (advanced_panel.is(':visible')) {
+    advanced_panel.hide();
+    $('p.search-arrow').css("position", "relative").css("top", "0px").html('&#xf0dd;');
   }
 }
 
@@ -481,8 +479,7 @@ $(function() {
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
   wrapper.toggleClass("collapsed");
-//  hide_advanced_panel();
-  close_advanced_search();
+  close_advanced_search_panel();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
