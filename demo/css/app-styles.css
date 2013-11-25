@@ -2590,7 +2590,8 @@ a.sorting-block:hover .add-sorting-icon {
   display: block;
 }
 
-.panel-header .icon- {
+.panel-header .icon-,
+.panel-header-fluid .icon- {
   margin: 0;
   padding: 0;
   color: #666666;
@@ -2599,11 +2600,13 @@ a.sorting-block:hover .add-sorting-icon {
   line-height:40px;
 }
 
-.panel-header .panel-header-icons-collapse-up {
+.panel-header .panel-header-icons-collapse-up,
+.panel-header-fluid .panel-header-icons-collapse-up {
   padding-top: 7px;
 }
 
-.panel-header .panel-header-icons-collapse-down {
+.panel-header .panel-header-icons-collapse-down,
+.panel-header-fluid .panel-header-icons-collapse-up {
   padding-top: 0px;
 }
 
@@ -2651,6 +2654,53 @@ a.sorting-block:hover .add-sorting-icon {
 
 .panel-header-icons-list .button {
   top: 9px;
+}
+
+.panel-header-fluid {
+  position:relative;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 9px 15px 6px;
+  background: #c0c0c0;
+  background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
+  background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
+  background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
+  -moz-box-shadow: inset 0 1px 1px #d1d1d1;
+  -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
+  box-shadow: inset 0 1px 1px #d1d1d1;
+  border-bottom: 1px solid #717171;
+}
+
+.panel-header-fluid:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.panel-header-fluid-title {
+  display: inline-block;
+}
+
+.panel-header-fluid-button {
+  float: right;
+}
+
+.panel-header-fluid-button.one-icon-margin {
+  margin-right: 20px;
+} 
+
+.panel-header-fluid-button.two-icon-margin {
+  margin-right: 40px;
+} 
+
+.panel-header-fluid h5 {
+  margin: 0;
+  padding: 6px 0 0;
+  display: inline-block;
 }
 
 .panel-wrapper .panel-content-container-dashboard h5 {
@@ -6243,6 +6293,21 @@ h4 .header-link {
     left: 10px;
   }
 
+  .panel-header-fluid{
+    padding: 9px 15px 3px;
+  }
+
+  .panel-header-fluid h5 {
+    margin-bottom: 10px;
+  }
+  
+  .panel-header-fluid-button .
+
+  .panel-header-fluid-button.one-icon-margin,
+  .panel-header-fluid-button.two-icon-margin {
+    margin-right: 0px;
+  }
+
 }
 
 /* portrait iPhone */
@@ -6258,6 +6323,14 @@ h4 .header-link {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  }
+
+  .panel-header-fluid-button {
+    float: left;
+  }
+  .panel-header-fluid-button.one-icon-margin,
+  .panel-header-fluid-button.two-icon-margin {
+    margin-right: 0px;
   }
 
   .header-inline a.back-to-previous-page {
