@@ -2364,6 +2364,9 @@ a.sorting-block:hover .add-sorting-icon {
   border-bottom: solid 2px #CCC;  
 }
 
+#add-activity-popup-table .control-with-trailing-icon {
+  width:85%;
+}
 /* END TABLES */
 /* **************************************** */
 
