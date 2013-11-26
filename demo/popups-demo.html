@@ -42,8 +42,17 @@
 	</p>
     <p>
         <a class="secondary radius button" href="#" data-reveal-id="file-upload-popup">File Upload Popup</a>
-    </p>    
-    
+    </p>
+
+    <h6>Dynamic Size Popup Examples</h6>
+    <p>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-small">Small Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-medium">Medium Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-large">Large Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-xlarge">XLarge ModalPopup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-expand">Expand Modal Popup</a>
+    </p>
+
 </div>
 
 <!--************** MODAL WINDOW BASIC FORM ****************-->
@@ -89,7 +98,7 @@
         </div>
       </fieldset>
 
-      
+
 
     </form>
     <!--************** FORM ****************-->
@@ -190,11 +199,11 @@
           </div>
           <div class="radio-group">
             <label>
-              <input data-customforms='disabled' checked name="radio-group-1" type="radio"> 
+              <input data-customforms='disabled' checked name="radio-group-1" type="radio">
               Upload file
             </label>
             <label>
-              <input data-customforms='disabled' name="radio-group-1" type="radio"> 
+              <input data-customforms='disabled' name="radio-group-1" type="radio">
               Link to file
             </label>
           </div>
@@ -213,7 +222,61 @@
 
 <!--*****************  MODAL WINDOW FILE UPLOAD *******************-->
 
+<!--************** DYNAMIC MODAL BASIC FORM ****************-->
 
+<div id="dynamic-modal" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL BASIC FORM ****************-->
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
@@ -229,10 +292,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

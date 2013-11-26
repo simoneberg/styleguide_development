@@ -507,3 +507,38 @@ $(function() {
     }
   });
 });
+
+$( "#dynamic-modal-small" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("small");
+});
+
+$( "#dynamic-modal-medium" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("medium");
+});
+
+$( "#dynamic-modal-large" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("large");
+});
+
+$( "#dynamic-modal-xlarge" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("xlarge");
+});
+
+$( "#dynamic-modal-expand" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("expand");
+});
