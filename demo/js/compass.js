@@ -508,37 +508,73 @@ $(function() {
   });
 });
 
-$( "#dynamic-modal-small" ).on("click", function() {
+/* dynamic modal size demo */
+$( "#btn-dynamic-modal-small" ).on("click", function() {
   /* the does stuff place */
   console.log("small");
   $( "#dynamic-modal" ).removeClass("small");
   $( "#dynamic-modal" ).addClass("small");
 });
 
-$( "#dynamic-modal-medium" ).on("click", function() {
+$( "#btn-dynamic-modal-medium" ).on("click", function() {
   /* the does stuff place */
   console.log("medium");
   $( "#dynamic-modal" ).removeClass("small");
   $( "#dynamic-modal" ).addClass("medium");
 });
 
-$( "#dynamic-modal-large" ).on("click", function() {
+$( "#btn-dynamic-modal-large" ).on("click", function() {
   /* the does stuff place */
   console.log("large");
   $( "#dynamic-modal" ).removeClass("small");
   $( "#dynamic-modal" ).addClass("large");
 });
 
-$( "#dynamic-modal-xlarge" ).on("click", function() {
+$( "#btn-dynamic-modal-xlarge" ).on("click", function() {
   /* the does stuff place */
   console.log("xlarge");
   $( "#dynamic-modal" ).removeClass("small");
   $( "#dynamic-modal" ).addClass("xlarge");
 });
 
-$( "#dynamic-modal-expand" ).on("click", function() {
+$( "#btn-dynamic-modal-expand" ).on("click", function() {
   /* the does stuff place */
   console.log("expand");
   $( "#dynamic-modal" ).removeClass("small");
   $( "#dynamic-modal" ).addClass("expand");
+});
+
+$( "a[data-reveal-id='dynamic-modal-small']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal-small" ).removeClass("small");
+  $( "#dynamic-modal-small" ).addClass("small");
+});
+
+$( "a[data-reveal-id='dynamic-modal-medium']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal-medium" ).removeClass("small");
+  $( "#dynamic-modal-medium" ).addClass("medium");
+});
+
+$( "a[data-reveal-id='dynamic-modal-large']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal-large" ).removeClass("small");
+  $( "#dynamic-modal-large" ).addClass("large");
+});
+
+$( "a[data-reveal-id='dynamic-modal-xlarge']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal-xlarge" ).removeClass("small");
+  $( "#dynamic-modal-xlarge" ).addClass("xlarge");
+});
+
+$( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal-expand" ).removeClass("small");
+  $( "#dynamic-modal-expand" ).addClass("expand");
 });

@@ -44,15 +44,27 @@
         <a class="secondary radius button" href="#" data-reveal-id="file-upload-popup">File Upload Popup</a>
     </p>
 
-    <h6>Dynamic Size Popup Examples</h6>
+    <h6>Dynamic Size Popup Examples (same modal)</h6>
     <p>
-      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-small">Small Modal Popup</a>
-      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-medium">Medium Modal Popup</a>
-      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-large">Large Modal Popup</a>
-      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-xlarge">XLarge ModalPopup</a>
-      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="dynamic-modal-expand">Expand Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="btn-dynamic-modal-small">Small Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="btn-dynamic-modal-medium">Medium Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="btn-dynamic-modal-large">Large Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="btn-dynamic-modal-xlarge">XLarge ModalPopup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal" id="btn-dynamic-modal-expand">Expand Modal Popup</a>
+      <br>Dialogs can get bigger but a page refresh is needed to shrink them.
+      <br>expand has been over ridden to be a fixed width in app-stypes.css
     </p>
 
+    <h6>Dynamic Size Popup Examples (unique modal)</h6>
+    
+    <p>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal-small">Small Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal-medium">Medium Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal-large">Large Modal Popup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal-xlarge">XLarge ModalPopup</a>
+      <a class="secondary radius button" href="#" data-reveal-id="dynamic-modal-expand">Expand Modal Popup</a>
+      <br>expand has been over ridden to be a fixed width in app-stypes.css
+    </p>
 </div>
 
 <!--************** MODAL WINDOW BASIC FORM ****************-->
@@ -222,7 +234,7 @@
 
 <!--*****************  MODAL WINDOW FILE UPLOAD *******************-->
 
-<!--************** DYNAMIC MODAL BASIC FORM ****************-->
+<!--************** DYNAMIC MODAL GENERIC FORM ****************-->
 
 <div id="dynamic-modal" class="reveal-modal small">
 
@@ -276,7 +288,287 @@
   </div>
 </div>
 
-<!--************** DYNAMIC MODAL BASIC FORM ****************-->
+<!--************** DYNAMIC MODAL GENERIC FORM ****************-->
+
+<!--************** DYNAMIC MODAL SMALL FORM ****************-->
+
+<div id="dynamic-modal-small" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL SMALL FORM ****************-->
+
+<!--************** DYNAMIC MODAL MEDIUM FORM ****************-->
+
+<div id="dynamic-modal-medium" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL MEDIUM FORM ****************-->
+
+<!--************** DYNAMIC MODAL LARGE FORM ****************-->
+
+<div id="dynamic-modal-large" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL LARGE FORM ****************-->
+
+<!--************** DYNAMIC MODAL XLARGE FORM ****************-->
+
+<div id="dynamic-modal-xlarge" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL XLARGE FORM ****************-->
+
+<!--************** DYNAMIC MODAL EXPAND FORM ****************-->
+
+<div id="dynamic-modal-expand" class="reveal-modal small">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Basic Form</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <fieldset>
+        <legend>Legend Title</legend>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group twelve mobile-four">
+            <label>Text Field</label>
+            <input type="text" placeholder="Type here..." />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+    </form>
+    <!--************** FORM ****************-->
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+<!--************** DYNAMIC MODAL EXPAND FORM ****************-->
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>
