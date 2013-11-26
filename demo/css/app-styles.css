@@ -2156,6 +2156,12 @@ form.custom div.custom.dropdown {
   margin-bottom: 10px;
 }
 
+form.custom div.custom.dropdown.align-right {
+  float: right;
+  margin-right: 2px;
+  margin-bottom: 10px;
+} 
+
 form.custom div.custom.dropdown a.current{
   color:#404040;
   border:solid #5b5b5b 1px;
@@ -4857,6 +4863,21 @@ a.milestone-date:hover {
   float:left;
 }
 
+
+.skillgroupstatus-text-inline {
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
+.skillgroupstatus.status-leading-control {
+  margin-right: 17px;
+  margin-top: 6px;
+  position: relative;
+  float: left;
+}
+
+
+
 .skill-legend {
   min-width: 200px !important;
   margin-left: 8px !important;
@@ -4921,6 +4942,9 @@ a.milestone-date:hover {
   margin: 4px 0;
 }
 
+.tasks-action-button {
+  float:right;
+}
 /* END PAGE SPECIFIC */
 /* **************************************** */
 
@@ -6244,6 +6268,10 @@ h4 .header-link {
   font-size:1.2em;
   }
 
+  .header-inline h4 {
+    margin-bottom: 16px;
+  }
+
 }
 
 /* landscape first gen Android phones */
@@ -6311,6 +6339,10 @@ h4 .header-link {
     margin-right: 0px;
   }
 
+   .tasks-action-button {
+    float: none;
+  }
+
 }
 
 /* portrait iPhone */
@@ -6343,6 +6375,17 @@ h4 .header-link {
     display:block;
 
   }
+  .header-inline .save-template-btn {
+    margin-top: 0;
+  }
+
+  .header-inline a.back-to-previous-page {
+    float:none;
+    padding-bottom: 8px;
+    margin-top: 0;
+    display: block;
+  }
+
 }
 
 /* END MEDIA QUERIES */
