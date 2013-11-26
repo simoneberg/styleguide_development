@@ -218,8 +218,8 @@ $(document).ready(function(){
   }); 
   
   // Add A Competency Control Item to the list
-  $('#addcompetency').click (function() {
-
+  $('#addcompetency').click (function(ev) {
+    ev.preventDefault();
     var n = $("#competency_list li").length;
     var newdescription = "Competence level " + (n+1);
 
@@ -230,7 +230,8 @@ $(document).ready(function(){
   });
   
   // Removes Competency Control Items from the list
-  $('#competency_list li .cl-icon-x').click(function(){
+  $('#competency_list li .cl-icon-x').click(function(ev){
+    ev.preventDefault();
     if ($("#competency_list li").length > 1) {
       $(this).parent().parent('li').remove();
       $('#competency_list').sortcompetency();
@@ -238,14 +239,16 @@ $(document).ready(function(){
   });
 
   // Move Up Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-up').click(function(){
+  $('#competency_list li .cl-icon-arrow-up').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertBefore(parent.prev());
     $('#competency_list').sortcompetency();
   });
 
   // Move Down Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-down').click(function(){
+  $('#competency_list li .cl-icon-arrow-down').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertAfter(parent.next());
     $('#competency_list').sortcompetency();

@@ -296,7 +296,7 @@
             <div class="row">
               <div class="form-group six mobile-four columns">
                 <div class="same-line add-medium-space-right">
-                  <a class="secondary radius button" href="#" data-reveal-id="add_person_profile">Add Profile Category</a>
+                  <a class="secondary radius button" href="#" data-reveal-id="add-profile-categories">Add Profile Categories</a>
                 </div>
               </div>
             </div>
@@ -502,9 +502,9 @@
               </div>
             </div>
             <hr>
-
+          </form>
             <div class="same-line add-medium-space-right">
-              <a class="primary radius button" href="./petrocore-person-details-self.html">Save</a>
+              <a class="primary radius button" href="./petrocore-person-details-landing.html">Save</a>
             </div>
             <div class="same-line">
               <a class="" href="petrocore-dashboard.html">Cancel</a>
@@ -530,57 +530,53 @@
     <!--</div>-->
     <!-- CONTENT AREA -->
 
-    <!-- person profile add dialog -->
-    <div id="add_person_profile" class="reveal-modal expand">
-      <div class="panel-header">
-        <div class="panel-title-container"><h5>Add Person Profile</h5></div>
-        <div class="panel-header-icons-container">
-          <ul class="panel-header-icons-list">
-            <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-          </ul>
-        </div>
+
+  <!-- *** Add Profile Categories *** -->
+  <div id="add-profile-categories" class="reveal-modal expand">
+    <div class="panel-header">
+      <div class="panel-title-container">
+        <h5>Select Profile Categories to Display</h5>
       </div>
-
-      <div class="popup-content-container">
-        <form class="custom">
-
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Item </label>
-              <select class="custom dropdown display-none" id="customDropdown">
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option selected="selected">Available Profile Item</option>
-              </select>
-              <div class="custom dropdown expand">
-                <a href="#" class="current">Available Profile Item</a>
-                <a href="#" class="selector"></a>
-                <ul>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Value </label>
-              <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
-            </div>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-
-        <a class="primary radius button left close-reveal-modal" href="#">Save</a>
-        <a class="left cancel-link" href="#">Cancel</a>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+        </ul>
       </div>
     </div>
+    <div class="twelve mobile-four columns">
+      <div class="profile-category-box">
+        <div class="profile-item">
+          <label for="checkbox1"><input type="checkbox" data-customforms="disabled"  id="checkbox1"> Age</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox2"><input type="checkbox" data-customforms="disabled"  id="checkbox2"> Development Program</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox3"><input type="checkbox" data-customforms="disabled"  id="checkbox3" disabled checked> Reporting Unit <a href="" class="delete-remove alert button radius">Delete data and Remove</a></label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox4"><input type="checkbox" data-customforms="disabled"  id="checkbox4"> Heir 1</label>
+        </div>
+        <div class="profile-item">
+          <a href="#" class="delete-remove alert button radius">Delete data and Remove</a><label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" disabled checked> Continent <i class="icon-">&#xf105;</i>  Country <i class="icon-">&#xf105;</i> State-Province <i class="icon-">&#xf105;</i> City</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"> Country <i class="icon-">&#xf105;</i> State-Province <i class="icon-">&#xf105;</i> City</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox6"><input type="checkbox" data-customforms="disabled"  id="checkbox6"> Category</label>
+        </div> 
+        <div class="profile-item">
+          <label for="checkbox7"><input type="checkbox" data-customforms="disabled"  id="checkbox7"> Heir 2</label>
+        </div>    
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
+    </div>
+  </div>
+  <!-- *** /Add Profile Categories *** -->
 
     <!-- person profile input demos -->
     <div id="add_person_profile_demo" class="reveal-modal expand">
