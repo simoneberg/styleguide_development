@@ -3049,6 +3049,7 @@ ul.button-group label {
 .panel-content-container-full {
   height: auto;
   padding: 0;
+  overflow: auto;
 }
 .panel-content-container-dashboard {
   position: relative;
