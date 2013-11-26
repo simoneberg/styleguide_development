@@ -446,11 +446,13 @@ h4 {
   outline: none;
 }
 
-
-
 .align-center {
   text-align: center;
   word-wrap: break-word;
+}
+
+.word-wrap {
+ word-wrap: break-word; 
 }
 
 /* END TYPOGRAPHY */
