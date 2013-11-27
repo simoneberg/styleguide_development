@@ -987,7 +987,9 @@ ul.accordion>li .content {
   border-bottom: 1px solid #919191;
 }
 
-ul.accordion>li.active .title {
+ul.accordion>li.active .title,
+.tabs-content .panel-header.active,
+.panel-header.active {
   background: #f7b646;
   background: -moz-linear-gradient(top,  #f7b646 0%, #f29a00 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7b646), color-stop(100%,#f29a00));
@@ -1003,6 +1005,12 @@ ul.accordion>li.active .title {
   border-top: 1px solid #ffd07f;
   text-shadow: 0 1px #ffd07f;
   -webkit-transition: background-color 0.15s ease-in-out;
+}
+
+.tabs-content .panel-header.active,
+.panel-header.active {
+  padding-top: 0;
+  text-shadow: none;
 }
 
 ul.accordion>li>div.title {
