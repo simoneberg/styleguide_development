@@ -28,6 +28,7 @@
      skill groups
      user role summary
      user setting categories 
+     knowledge test
    MISC this is the section of last resort! use it sparingly and each item in this section requires a comment
    MEDIA QUERIES
    ***************** */
@@ -1797,13 +1798,13 @@ form.custom .six.columns .control-with-trailing-icon {
 }
 form.custom .seven.columns .control-with-trailing-icon,
 form.custom .eight.columns .control-with-trailing-icon {
-  width: 93% !important;
+  width: 90% !important;
 }
 form.custom .nine.columns .control-with-trailing-icon,
 form.custom .ten.columns .control-with-trailing-icon,
 form.custom .eleven.columns .control-with-trailing-icon,
 form.custom .twelve.columns .control-with-trailing-icon {
-  width: 95% !important;
+  width: 93% !important;
 }
 
 form.custom .control-with-leading-status {
@@ -1973,6 +1974,12 @@ p.form-category-title-bold {
   margin-top: 8px;
 }
 
+.icon-leading-control {
+  margin-right: 18px;
+  position: relative;
+  float: left;
+}
+
 .icon-trailing-control {
   margin-left: 7px;
   position: relative;
@@ -2042,6 +2049,10 @@ div.scroll-both {
 
 .set-height-100 {
   height: 100px;
+}
+
+.set-height-200 {
+  height: 200px;
 }
 
 .set-width-200 {
@@ -4287,6 +4298,70 @@ ul.role-breadcrumbs li:after {
   font-size: 12px;
 }
 
+/* Knowledge Test */
+
+.knowledge-test-wrapper {
+  height: 400px;
+  overflow: auto;
+}
+.knowledge-test-box {
+  border: 1px solid #8a8a8a;
+  margin-bottom: 15px;
+  width: 97%;
+}
+.knowledge-test-box-content {
+  margin: 14px;
+}
+
+.knowledge-link-wrapper{
+  text-align: right;
+}
+
+.knowledge-link-wrapper .icon-trailing-control {
+  float: none;
+}
+
+.test-info, a.test-info {
+  color: #767676;
+}
+
+.test-correct {
+  color: #33CC66;
+}
+
+.test-wrong {
+  color: #ED4027;
+}
+
+.test-unanswered {
+  color: #fea648;
+}
+
+.test-iconsize, a.icon-trailing-control.test-iconsize {
+  font-size: 16px;
+}
+
+.test-question-highlight {
+  background-color: #ddd;
+  padding: 14px;
+}
+.test-question-highlight .question-indent {
+  margin-left: 35px;
+}
+
+.test-summary-item {
+  margin: 5px 0 8px;
+}
+
+.test-answer-indent {
+  margin-left: 50px;
+  display: block;
+}
+
+.linethrough { 
+  text-decoration: line-through;
+}
+
 /* Development Plan */
 
 .float-right {
@@ -5450,7 +5525,7 @@ h4 .header-link {
   }
 
   .modal-footer {
-    height:auto;
+    height: 56px;
     padding-bottom: 1px;
     line-height: 36px;
   }
