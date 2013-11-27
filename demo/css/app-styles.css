@@ -2988,13 +2988,13 @@ form.custom .competence-level-item .cl-description,
   border-bottom: none;
 }
 
-.profile-item .button {
+.profile-item .data-remove-notice {
+  margin-left:30px;
+  display: inline-block;
   float: right;
+  margin-bottom: 0;
 }
 
-.profile-item .delete-remove.button {
-  margin-left:30px;
-}
 .profile-highlight {
   background: #c1c1c1;
 }
@@ -5954,8 +5954,8 @@ h4 .header-link {
 
 /* responsive to allow smooth transition from large to small */
 @media only screen and (max-width: 525px) {
-
-  body {
+body
+   {
     min-width:298px;
   }
 
