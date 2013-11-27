@@ -84,7 +84,7 @@ body {
     display:inline-block;
 }
 
-.reveal-modal .close-reveal-modal {
+.reveal-modal .panel-header-icons-close .close-reveal-modal {
     color:#666666;   
     font-weight:normal;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
 /* It fixes the misalignment of the dropdown arrow box */
 form.custom div.custom.dropdown a.selector {
 	width:28px;
-	height:28px !important;			
+	height:30px !important;			
 	border: solid #5b5b5b 1px;
 }
 
