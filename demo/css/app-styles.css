@@ -4021,7 +4021,7 @@ ul.role-breadcrumbs li:after {
   padding: 14px;
 }
 .test-question-highlight .question-indent {
-  margin-left: 30px;
+  margin-left: 35px;
 }
 
 .test-summary-item {
@@ -4029,7 +4029,7 @@ ul.role-breadcrumbs li:after {
 }
 
 .test-answer-indent {
-  margin-left: 46px;
+  margin-left: 50px;
   display: block;
 }
 
@@ -5136,7 +5136,7 @@ h4 .header-link {
   }
 
   .modal-footer {
-    height:auto;
+    height: 56px;
     padding-bottom: 1px;
     line-height: 36px;
   }
