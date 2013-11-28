@@ -2817,6 +2817,7 @@ border: 1px solid #8a8a8a;
 }
 
 /* Competency Control */
+form.custom #competency_list,
 #competency_list {
   list-style-type: none;
   margin: 0;
@@ -2830,16 +2831,20 @@ form.custom .competence-level-item,
   border-top: none;
   margin: 0;
   padding: 0;
-  height: 35px;
   width: 100%;
 }
 
+form.custom .competence-level-number,
 .competence-level-number {
   border-right: solid 1px #606060;
   margin: 0;
   padding: 0;
   text-align: center;
   height: 100%;
+  min-height:40px;
+  max-height:100%;
+  line-height:40px;
+  display:block;
 }
 
 .background-blue,
@@ -2859,38 +2864,62 @@ form.custom .competence-level-item,
   filter: none;
   background-color: #5eb2e1;
 }
+
+form.custom .competence-level-number .cl-number,
 .competence-level-number .cl-number {
-  padding-top: 6px; 
-  font-weight: bold;  
+  font-weight: bold;
   text-shadow: 0px 1px 1px #daecf6;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24px;
 }
 
 form.custom .competence-level-item .cl-description,
 .competence-level-item .cl-description {
-  height: 100%;
-  padding: 6px 0 0 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  min-height:40px;
+  line-height:40px;
+  height:100%;
 }
 
+form.custom .competence-level-item .cl-description span,
+.competence-level-item .cl-description span {
+  height:100%;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+form.custom .competence-level-item .cl-icons,
 .competence-level-item .cl-icons {
   margin: 0;
   padding: 0;
   height: 100%;
   text-align: right;
   position: relative;
+  min-height: 40px;
+  line-height: 40px;
 }
 
+form.custom .competence-level-item .cl-icon-arrow-up,
 .competence-level-item .cl-icon-arrow-up {
   right: 60px;
 }
 
+form.custom .competence-level-item .cl-icon-arrow-down,
 .competence-level-item .cl-icon-arrow-down {
   right: 40px;
 }
 
+form.custom .competence-level-item .cl-icon-x,
 .competence-level-item .cl-icon-x {
   right: 10px;
 }
 
+form.custom .competence-level-item .cl-icon-arrow-up,
+form.custom .competence-level-item .cl-icon-arrow-down,
+form.custom .competence-level-item .cl-icon-x,	
 .competence-level-item .cl-icon-arrow-up,
 .competence-level-item .cl-icon-arrow-down,
 .competence-level-item .cl-icon-x {
@@ -5129,6 +5158,10 @@ h4 .header-link {
   font-weight: normal;
 }
 
+.reset-padding {
+  padding: 0 !important;
+}
+  
 /* END MISC */
 /* **************************************** */
 
@@ -5416,6 +5449,15 @@ h4 .header-link {
 
   .top-bar {
     overflow: visible;
+  }
+
+  .name-competency {
+    font-size: 0.97em;
+  }
+
+  .panel-header {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
 }
@@ -6038,12 +6080,6 @@ h4 .header-link {
   margin: 0;
   }
 
-  .panel-header {
-  padding-left: 3px;
-  padding-left: 10px;
-  height: 48px;
-  }
-
   .panel-title-container {
     width: 100%;
     top: 0;
@@ -6365,7 +6401,7 @@ h4 .header-link {
 @media only screen and (max-width: 470px) {
 
   .name-classifier {
-    font-size: 0.97em;
+    font-size: 0.95em;
   }
 
   .panel-header-icons-list li {
@@ -6428,6 +6464,25 @@ h4 .header-link {
 
    .tasks-action-button {
     float: none;
+  }
+
+  .content-container {
+    margin: 0;
+  }
+
+  .content-container h4 {
+    font-size: 1.25em;
+  }
+  
+  .panel-header.flexible {
+    padding-left: 8px;
+    height: 75px;
+  }
+
+  .competency-level-panel .panel-header .panel-header-icons-list li {
+    width: 100%;
+    margin-top: 30px;
+	float: none;
   }
 
 }
