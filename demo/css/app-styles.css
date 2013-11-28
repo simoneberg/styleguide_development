@@ -2990,6 +2990,7 @@ form.custom .competence-level-item .cl-description,
 
 .profile-item .data-remove-notice {
   margin-left:30px;
+  margin-top: 1px;
   display: inline-block;
   float: right;
   margin-bottom: 0;
@@ -2998,6 +2999,16 @@ form.custom .competence-level-item .cl-description,
 .profile-highlight {
   background: #c1c1c1;
 }
+
+.clear_text_link {
+  font-weight: normal;
+  margin-left: 25px;
+  text-decoration: underline;
+}
+label.category_save_warning {
+  font-weight: normal;
+}
+
 
 /* END DASHBOARD */
 /* **************************************** */
@@ -4949,12 +4960,6 @@ a.milestone-date:hover {
   float:right;
 }
 
-.clear_text_link {
-  font-weight: normal;
-  font-size: 13px;
-  margin-left: 25px;
-  text-decoration: underline;
-}
 
 /* END PAGE SPECIFIC */
 /* **************************************** */
