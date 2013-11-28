@@ -166,13 +166,13 @@
               <div class="content">
                 <ul>
                   <li><strong>Your Skill Groups</strong></li>
-                  <li class="active"><div class="skillgroupstatus status-progress"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left"> 40% Defining Well Objectives</a></li>
-                  <li><div class="skillgroupstatus status-progress"></div><a href="#"  class="add-small-margin-left"> 65% Directional Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-competent"></div><a href="#"  class="add-small-margin-left">  0% Drilling Fluid System Planning</a></li>
-                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">100% Bit and Hydraulics Planning</a></li>
-                  <li><div class="skillgroupstatus status-progress"></div><a href="#"  class="add-small-margin-left"> 45% Casing and Cementing Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">  0% Drilling Performance Planning</a></li>
-                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">  0% Drilling System, Services, and Materials Selection and Management</a></li>
+                  <li class="active"><div class="skillgroupstatus status-progress"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
+                  <li><div class="skillgroupstatus not-assessed"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
+                  <li><div class="skillgroupstatus status-non-assessed"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Casing and Cementing Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling Performance Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#"  class="add-small-margin-left">Drilling System, Services, and Materials Selection and Management</a></li>
                 </ul>
               </div>
             </li>
@@ -266,200 +266,142 @@
       </div>
       <div class="content-container">
         <!--This will hold the content-->
-        <form class="custom">
-
-          <div class="header-inline">
-            <h4>Drilling Engineer</h4>
-            <div class="same-line save-template-btn">
-              <a name="action-button1"></a>
-              <div href="#action-button1" class="button dropdown petrocore-actions">
-                Actions
-                <ul>
-                  <li><a href="petrocore-my-position-development-activity.html">Development Activities - (2)</a></li>
-                  <li><a href="petrocore-my-position-skill-evidence-skillonly.html">Evidence - (9)</a></li>
-                  <li><a href="#">Notes - (0)</a></li>
-                  <li><a href="#">History - (0)</a></li>
-                </ul>
-              </div>
-            </div>
-              <a class="back-to-previous-page" href="petrocore-my-position-skill.html">Back to Previous Page</a>
-          </div>
+        <form class="custom search-type">
+          <h4>Drilling Engineer</h4>
+          <div class="save-template-btn">
+          <a class="link-without-button" href="petrocore-my-position-skill-level-detail.html" >Back to previous page</a>
+        </div>
           <hr>
 
-          <fieldset>
-            <legend><h5>Evaluation Program</h5></legend>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Fundamental</label>
-                  <div class="form-text-display-field">Identify the fundamentals of an evaluation program, customer(s), suppliers, and equipment used, also, describe the needs and use of data acquired.</div>
+          <label><h5>Completion Program - Fundamental</h5></label>
+
+          <!-- *** Avail. Development Activities dashboard panel *** -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header-fluid">
+              <div class="panel-header-fluid-title">
+                <h5 class="name-classifier">Available Development Activities</h5>
+              </div>
+              
+              <div class="panel-header-fluid-button">
+                <a class="secondary radius button smaller" href="#" data-reveal-id="add-devplan-activities">Add To Development Plan</a>
               </div>
             </div>
             
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <label>Status</label>
+            <div class="panel-content-container">
+              <div id="table_container" class="competency-table-adjust scroll-both">
+                <table class="twelve nested-table">
+                  <thead>
+                    <tr>
+                      <th width="5%"></th>
+                      <th width="20%"><a class="sorting-block">Activity Code<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th width="75%"><a class="sorting-block">Description<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><div class="form-group"><label><input type="checkbox" data-customforms="disabled" id="checkbox2"></label></div></td>
+                      <td><a href="#">BDC</a></td>
+                      <td>Basic Drilling and Workover</td>
+                    </tr>
+                    <tr>
+                      <td><div class="form-group"><label><input type="checkbox" data-customforms="disabled" id="checkbox1"></label></div></td>
+                      <td><a href="#">WDE</a></td>
+                      <td>Well Design and Engineering</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Self Assessment</legend>
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed status-leading-control" href="#"></div>
-                <!-- the select tag which is hte default HTML is not visible when
-                in a custom form and the class custom-dropdown is used. -->
-                <select class="custom dropdown display-none" id="customDropdown">
-                  <option selected="">Not Assessed</option>
-                  <option>Competent</option>
-                  <option>In Progress</option>
-                  <option>Not Yet Competent</option>
-                </select>
-                <!-- the div with class custom dropdown displays the
-                dropdown in a Zurb custom form. -->
-                <div class="custom dropdown control-with-leading-status">
-                  <a href="#" class="current">Not Assessed</a>
-                  <a href="#" class="selector"></a>
-                  <ul>
-                    <li>Competent</li>
-                    <li>In Progress</li>
-                    <li>Not Yet Competent</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Assessed</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Assessed By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Supervisor Assessment</legend>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Assessed</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Assessed By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Knowledge Test</legend>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Assessed</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Assessed By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <a href="#">Take Practice Test</a> |  <a href="#">Take Final Test</a>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Capability Assessment</legend>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Assessed</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Assessed By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Verified By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-              <a href="#">View Capability</a> | <a href="#" data-reveal-id="request-capability">Request Capability Assessment</a>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Approver</legend>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                <div class="skillgroupstatus status-not-assesed margin-right"></div>
-                <div class="skillgroupstatus-text-inline">Not Assessed</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Date Approved</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group twelve mobile-four columns">
-                  <label>Approved By</label>
-                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="row">
-            <div class="form-group four mobile-four columns">
-              <a class="primary radius button left" href="#">Save</a>
-              <a class="left cancel-link" href="#">Cancel</a>
             </div>
           </div>
+          <!-- *** End Avail. Development Activities dashboard panel *** -->          
+
+          <!-- *** Planned Development Actiivies dashboard panel *** -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5 class="name-classifier">Planned Development Activities</h5>
+              </div>
+              
+              <div class="panel-header-icons-container">
+              </div>
+            </div>
+            
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container">
+              <div id="table_container" class="competency-table-adjust scroll-both">
+                <table class="twelve nested-table">
+                  <thead>
+                    <tr>
+                      <th width="5%"></th>
+                      <th width="20%"><a class="sorting-block">Activity Code<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th width="45%"><a class="sorting-block">Description<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th width="30%"><a class="sorting-block">Planned Start Date<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td><a href="#">BDC2</a></td>
+                      <td>Basic Drilling Completion and Workover 2</td>
+                      <td>15-Oct-2012</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><a href="#">WDE2</a></td>
+                      <td>Well Design and Engineering 2</td>
+                      <td>15-Oct-2012</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- *** Planned Development Actiivies dashboard panel *** -->   
+
+
+          <!-- *** Completed Development Actiivies dashboard panel *** -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <h5 class="name-classifier">Completed Development Activities</h5>
+              </div>
+              
+              <div class="panel-header-icons-container">
+              </div>
+            </div>
+            
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container">
+              <div id="table_container" class="competency-table-adjust scroll-both">
+                <table class="twelve nested-table">
+                  <thead>
+                    <tr>
+                      <th width="5%"></th>
+                      <th width="20%"><a class="sorting-block">Activity Code<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th width="45%"><a class="sorting-block">Description<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th width="30%"><a class="sorting-block">Date Completed<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td><a href="#">BDC-Basic</a></td>
+                      <td>Basic Drilling Completion and Workover Level 1</td>
+                      <td>15-Oct-2012</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><a href="#">WDE-Basic</a></td>
+                      <td>Well Design and Engineering - Basic</td>
+                      <td>15-Oct-2012</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- *** Completed Development Actiivies dashboard panel *** -->   
+
                     
         </form>
       </div><!--Close Content Container-->
@@ -499,38 +441,6 @@
   <!-- CONTENT AREA -->
 
 
-<div id="request-capability" class="reveal-modal expand">
-    <div class="panel-header">
-    <div class="panel-title-container">
-      <h5>Request Capability Assessment</h5>
-    </div>
-    <div class="panel-header-icons-container">
-      <ul class="panel-header-icons-list">
-        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="popup-content-container">
-    <p class="lead">Select Supervisor(s) to notify</p>
-    <div class="twelve columns">
-
-      <div id="list-direct-participants" class="list-box">
-        <div class="participant">
-          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox1">Aranda, David (DAPO)</div>
-        </div>
-        <div class="participant">
-          <div class="sr-name"><input type="checkbox" data-customforms="disabled"  id="checkbox2">Chung, David (DCKI)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal-footer">
-    <a class="primary radius button left close-reveal-modal" href="#">Send</a>
-    <a class="left cancel-link" href="#">Cancel</a>
-  </div>
-</div>
-
 <div id="overlay"></div>
 
 <div class="notifications-popup">
@@ -566,6 +476,68 @@
 
 	</div>
 </div>
+
+
+<!--************** MODAL WINDOW ATTACH DOCUMENT ****************-->
+
+<div id="add-devplan-activities" class="reveal-modal expand">
+
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add Activities To Development Plan</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+
+
+    <!--************** FORM ****************-->
+    <form class="custom">
+
+      <p>You are about to add the following activities.</p>
+      <table id="add-activity-popup-table">
+        <thead>
+          <tr>
+            <th>Activity Code</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><a href="#">BDC</a></td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+          </tr>
+          <tr>
+            <td><a href="#">WDE</a></td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </form>
+    <!--************** FORM ****************-->
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+
 
 <!-- Included JS Files (Compressed) -->
 <script src="../javascripts/foundation.min.js"></script>

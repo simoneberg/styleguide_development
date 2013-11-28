@@ -85,39 +85,25 @@
       <!--***** LEFT SPLIT CONTAINER *****-->
       <div class="three columns left-split-container">
 
-        <!-- ***** SEARCH *****-->
+        <!--***** SEARCH *****-->
         <div class="search-container">
-          <i class="icon-search collapse-menu"></i>
-
-
           <div class="row collapse search-input">
-                  
-            <div class="nine mobile-two columns">
-              <input class="round-left" type="text" placeholder="Search" value="" />
+
+            <div class="nine mobile-four columns">
+              <input id="initial-search" class="round-left" type="text" value="" />
             </div>
 
             <div class="one mobile-one columns">
-              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');">
-                <div class="search-bar-icons-dropdown">
-                  <p class="search-arrow icon-">&#xf0dd;</p>
-                </div>
-              </span>
+              <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
             </div>
-                    
-            <div class="two mobile-one columns">
-              <span class="postfix round-left">
-                <a href="petrocore-search-results.html">
-                  <div class="search-bar-icons-magnif">
-                    <p class="icon-">&#xf002;</p>
-                  </div>
-                </a>
-              </span>
-            </div>
-            
-          </div>
 
+            <div class="two mobile-one columns">
+              <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+            </div>
+
+          </div>
         </div>
-      <!--***** SEARCH *****-->
+        <!--***** SEARCH *****-->
 
         <div id="advanced_search" class="display-none">
           <!--This is a Advanced Search panel that is hidden by default-->
@@ -186,7 +172,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
               </div>
               <div class="content">
                 <ul>
@@ -221,7 +207,7 @@
                 <ul>
                   <li><a href="#">Activities</a></li>
                   <li><a href="#">Groups</a></li>
-                  <li><a href="#">Maps</a></li>
+                  <li><a href="petrocore-administration-map.html">Maps</a></li>
                   <li><a href="petrocore-user-summary.html">Users</a></li>
                   <li><a href="#">Positions</a></li>
                   <li><a href="#">Profiles</a></li>
@@ -277,21 +263,20 @@
           <!--This will hold the content-->
 
           <div class="header-inline">
-            <h4 >User Settings</h4>
-
+            <h4>User Settings</h4>
             <div class="same-line save-template-btn">
-              <div href="#" class="button dropdown petrocore-actions">
+              <a name="action-button1"></a>
+              <div href="#action-button1" class="button dropdown petrocore-actions">
                 Actions
-                <span></span>
-                <ul class="no-hover" >
+                <ul class="no-hover">
                   <li><a href="#">View History</a></li>
                   <li><a href="#">Delete User</a></li>
                 </ul>
               </div>
             </div>
-            <a class="back-to-previous-page" href="petrocore-user-summary.html">Back to Previous Page</a>
-
+              <a class="back-to-previous-page" href="petrocore-user-landing.html">Back to Previous Page</a>
           </div>
+
           <hr>
 
           <div class="same-line">
@@ -305,91 +290,145 @@
           </div>
 
           <div class="row">
-            <div class="six columns visible-charts left-chart">
-              <div class="dashboard-left-column">
-                <!--This is a dashboard panel-->
-                <div class="panel-wrapper">
-                  <div class="panel-header">
-                    <div class="panel-title-container"><h5>Account Settings</h5></div>
+
+            <div class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Groups
+                  </h5>
+                </div>
+
+              </div>
+
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+                <div class="carousel-view-container">
+
+                  <div class="carousel-view-composition">
+                    <div class="carousel">
+                      <ul>
+                        <li class="active">Random Group Name Facile<i class="icon-chevron-right"></i></li>
+                        <li>Random Group Name Invidus<i class="icon-chevron-right"></i></li>
+                        <li>Random Group Name Assiduitas long so it wraps group name<i class="icon-chevron-right"></i></li>
+                        <li>Random Group Name Civium</li>
+                        <li>Random Group Name Defuit</li>
+                      </ul>
+                    </div>
+                    <div class="carousel">
+                      <ul>
+                        <li>Random Sub Group Name Inmortalibus<i class="icon-chevron-right"></i></li>
+                        <li class="active">Random Sub Group Name Bella<i class="icon-chevron-right"></i></li>
+                        <li>Random Sub Group Name Aliud<i class="icon-chevron-right"></i></li>
+                        <li>Random Sub Group Name Quaerenda<i class="icon-chevron-right"></i></li>
+                      </ul>
+                    </div>
+                    <div class="carousel">
+                      <ul>
+                        <li class="active">Random Sub Group Name Maior</li>
+                        <li>Random Sub Group Name Leguntur<i class="icon-chevron-right"></i></li>
+                        <li>Random Sub Group Name Municipem<i class="icon-chevron-right"></i></li>
+                        <li>Random Sub Group Name Quot<i class="icon-chevron-right"></i></li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="panel-content-container-dashboard">
-                    <ul class="list angle-bullet">
-                      <li><a href="petrocore-user-assigned-positions.html">Assigned Positions</a></li>
-                      <li><a href="petrocore-user-assigned-groups.html">Assigned Groups and Roles</a></li>
-                      <li><a href="#">Assigned Direct Participants</a></li>
-                    </ul>
-                  </div>
+                </div>
+                <div>
+                  <label class="carousel-current-group">Random Sub Group Name Maior</label>
                 </div>
               </div>
             </div>
 
-            <!--This is a dashboard panel-->
-            <div class="six columns visible-charts right-chart">
-              <div class="dashboard-right-column">
-                <!--This is a dashboard panel-->
-                <div class="panel-wrapper">
-                  <div class="panel-header">
-                    <div class="panel-title-container"><h5>Profile</h5></div>
-                  </div>
-                  <div class="panel-content-container-dashboard">
-                    <ul class="list angle-bullet">
-                      <li><a href="petrocore-person-details-profile.html">5 Profile Categories Set</a></li>
-                      <li><a href="petrocore-person-details-profile.html">10 Profile Categories Available</a></li>
-                    </ul>
+            <div class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Roles
+                  </h5>
+                </div>
+
+              </div>
+
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard">
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <a class="add-medium-space-right" href="#">Select All</a><a href="#">Select None</a>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+
+                    <div class="checkbox-group">
+                      <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> Participant</label>
+                      <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Administrator</label>
+                      <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"> Manager</label>
+                      <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"> Mentor</label>
+                      <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"> Reporter</label>
+                      <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Supervisor</label>
+                    </div>
+                  </div>
+
+                </div>
+
               </div>
             </div>
+
+            <div class="panel-wrapper">
+              <div class="panel-header">
+                <div class="panel-title-container">
+                  <h5 class="name-classifier">Group and Role Assignments made this session (3)
+                  </h5>
+                </div>
+                <div class="panel-header-icons-container">
+                  <ul class="panel-header-icons-list">
+                    <li>
+                      <a href="#" class="panel-header-icons-collapse-up icon- panel-header-icons-collapse-down">&#xf0dd;</a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="panel-action-icons-container"></div>
+              <div class="panel-content-container-dashboard display-none">
+
+                <label>These changes are not saved until the Save button is clicked</label>
+
+                <div class="list-box">
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Random Group Name Philosophis:</label>
+                    <ul class="inline-list"><li class="inline-list-item">Manager</li><li class="inline-list-item add">added Supervisor</li></ul>
+                  </div>
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Random Group Name Ceteris:</label>
+                    <ul class="inline-list"><li class="inline-list-item add"> added Participant</li><li class="inline-list-item">Reporter</li></ul>
+                  </div>
+
+                  <div class="list-item">
+                    <a href="#" class="icon- list-icon-x"></a>
+                    <label>Random Group Name Ingenii a Longer name with a lot more characters in it the name is really long to display:</label>
+                    <ul class="inline-list"><li class="inline-list-item">Participant</li><li class="inline-list-item add">added Reporter</li> <li class="inline-list-item remove">removed Mentor</li></ul>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
           </div> <!-- row -->
 
           <div class="row">
-            <div class="six columns visible-charts left-chart">
-              <div class="dashboard-left-column">
-
-                <div class="panel-wrapper">
-                  <div class="panel-header">
-                    <a href="petrocore-user-properties.html">
-                    <div class="panel-title-container"><h5>Properties</h5></div>
-                    </a>
-                  </div>
-                  <div class="panel-content-container-dashboard">
-                    <ul class="list angle-bullet">
-                      <li><a href="petrocore-user-properties.html">Contact Information</a></li>
-                      <li><a href="petrocore-user-properties.html#login">Login Information</a></li>
-                      <li><a href="petrocore-user-properties.html#account">Account Information</a></li>
-                      <li><a href="petrocore-user-properties.html#demographics">Demographics</a></li>
-                      <li><a href="petrocore-user-properties.html#qualifications">Qualifications</a></li>
-                      <li><a href="petrocore-user-properties.html#employement">Employment</a></li>
-                      <li><a href="petrocore-user-properties.html#geographic">Geographic</a></li>
-                      <li><a href="petrocore-user-properties.html#petrocore">Petrocore</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="same-line add-medium-space-right">
+              <a class="primary radius button" href="petrocore-reports-new2.html">Save</a>
             </div>
-
-            <!--This is a dashboard panel-->
-            <div class="six columns visible-charts right-chart">
-              <div class="dashboard-right-column">
-                <!--This is a dashboard panel-->
-                <div class="panel-wrapper">
-                  <div class="panel-header">
-                    <div class="panel-title-container"><h5>Role Summary</h5></div>
-                  </div>
-                  <div class="panel-content-container-dashboard">
-                    <ul class="list angle-bullet">
-                      <li><a href="petrocore-user-role-summary.html#activity-administration">Activity Administration</a></li>
-                      <li><a href="petrocore-user-role-summary.html#group-administration">Group Administration</a></li>
-                      <li><a href="petrocore-user-role-summary.html#map-administration">Map Administration</a></li>
-                      <li><a href="petrocore-user-role-summary.html#user-administration">User Administration</a></li>
-                      <li><a href="petrocore-user-role-summary.html#position-administration">Position Administration</a></li>
-                      <li><a href="petrocore-user-role-summary.html#profile-administration">Profile Administration</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            <div class="same-line">
+              <a class="" href="#">Cancel</a>
             </div>
-          </div> <!-- row -->
+          </div>
 
         </div><!--Close Content Container-->
       </div>
