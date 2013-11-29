@@ -812,6 +812,17 @@ h4 {
   width: auto;
   float: right;
 }
+
+.left-nav-container ul.accordion>li .title h6 {
+  padding-left: 32px;
+  padding-bottom: 2px;
+}
+
+.left-nav-container ul.accordion>li .title h6 .icon- {
+  position: absolute;
+  left: 15px;
+}
+
 /* inline ul */
 /****************/
 
@@ -5177,6 +5188,11 @@ h4 .header-link {
     font-size: 0;
   }
 
+  .master-wrapper.collapsed ul.accordion>li .title h6 {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
   .master-wrapper.collapsed .left-split-container {
     position: absolute;
     top: 0;
@@ -5193,6 +5209,10 @@ h4 .header-link {
     position:relative;
   }
 
+  .master-wrapper.collapsed ul.accordion>li .title h6 .icon- {
+    position: static;
+  }
+  
   .master-wrapper.collapsed ul.accordion .content {
      position: absolute;
      top: 0;
