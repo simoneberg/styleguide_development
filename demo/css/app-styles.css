@@ -1488,7 +1488,7 @@ ul.accordion>li.active .content>ul>li.active a {
   min-width: 118px;
 }
 
-.button.dropdown.split.petrocore-actions>ul li:hover {
+.button.dropdown.split.petrocore-actions>ul li a:hover {
   background-color: #d6e8f6;
   color: #222;
 }
@@ -1501,6 +1501,20 @@ ul.accordion>li.active .content>ul>li.active a {
 .button.dropdown>ul li button {
   font-size: 12px;
   padding: 6px 10px;
+}
+
+.button.dropdown>ul li:hover {
+  color:#b8b8b8;
+}
+
+.button.dropdown>ul li a.disabled, .button.dropdown>ul li a.disabled:hover {
+  background-color:#fff; 
+  color:#b8b8b8;
+}
+
+.button.dropdown>ul li a.disabled2, .button.dropdown>ul li a.disabled2:hover {
+  background-color:#b8b8b8; 
+  color:#8d8c8c;
 }
 
 .button-gallery {
