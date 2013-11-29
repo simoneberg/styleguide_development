@@ -814,8 +814,7 @@ h4 {
 }
 
 .left-nav-container ul.accordion>li .title h6 {
-  padding-left: 32px;
-  padding-bottom: 2px;
+  padding: 0 15px 2px 32px;
 }
 
 .left-nav-container ul.accordion>li .title h6 .icon- {
@@ -5189,8 +5188,7 @@ h4 .header-link {
   }
 
   .master-wrapper.collapsed ul.accordion>li .title h6 {
-    padding-left: 0;
-    padding-bottom: 0;
+    padding: 0;
   }
 
   .master-wrapper.collapsed .left-split-container {
