@@ -813,15 +813,6 @@ h4 {
   float: right;
 }
 
-.left-nav-container ul.accordion>li .title h6 {
-  padding: 0 15px 2px 32px;
-}
-
-.left-nav-container ul.accordion>li .title h6 .icon- {
-  position: absolute;
-  left: 15px;
-}
-
 /* inline ul */
 /****************/
 
@@ -1197,6 +1188,15 @@ ul.accordion>li.active .content>ul>li.active a {
 
 .left-split-container {
   height: auto;
+}
+
+.left-nav-container ul.accordion>li .title h6 {
+  padding: 0 15px 2px 32px;
+}
+
+.left-nav-container ul.accordion>li .title h6 .icon- {
+  position: absolute;
+  left: 15px;
 }
 
 .search-container {
