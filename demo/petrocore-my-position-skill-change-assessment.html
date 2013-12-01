@@ -479,13 +479,55 @@
               <div class="form-group three mobile-one columns " >
                 <div class="skill-description-box status-not-assessed"></div>
               </div>
+              <div class="row"><!--Skill Description Row -->
+                 <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-content"> <!--this div is so you can easyly add the class display-none to hide the details of a skill-->
+                    <p>Identify the fundamentals of an evaluation program, customer(s), suppliers, and equipment used, also, describe the needs and use of data acquired.</p>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-content"> <!--this div is so you can easyly add the class display-none to hide the details of a skill-->
+                    <p>Review and discuss an evaluation program for a typical well using historical well (s) and data, explaining potential well design impact, identifing operational constraints and log qualities, also identify HSE issues.</p>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-content"> <!--this div is so you can easyly add the class display-none to hide the details of a skill-->
+                    <p>Employing historical well plans and best practices critique a normal operational plan suggesting risk and HSE mitigation options associated with quantifing effective program objectives.</p>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-content"> <!--this div is so you can easyly add the class display-none to hide the details of a skill-->
+                    <p>Develop new operational evaluation applications and/or practices for use in normal and novel situations and justify same to partners.</p>
+                  </div>
+                </div>
+              </div>
               <div class="row"> <!--Status Row -->
                 <div class="form-group three mobile-one columns " >
                   <div class="skill-description-content"> <!--this div is so you can easyly add the class display-none to hide the details of a skill-->
                     <label><strong>Status</strong></label>
                     <hr>
                     <label><strong>Self Assessment</strong></label>
-                    <label class="plain">Competent</label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option SELECTED>Competent</option>
+                      <option >In Progress</option>
+                      <option>Not Yet Competent</option>
+                      <option>Not Assessed</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                       Competent
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>In Progress</li>
+                        <li>Not Yet Competent</li>
+                        <li>Not Assessed</li>
+                      </ul>
+                    </div>
                     <label><strong>Supervisor Assessment</strong></label>
                     <label class="plain">Not Assessed</label>
                   </div>
@@ -495,7 +537,27 @@
                     <label><strong>Status</strong></label>
                     <hr>
                     <label><strong>Self Assessment</strong></label>
-                    <label class="plain">In Progress</label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option >Competent</option>
+                      <option SELECTED >In Progress</option>
+                      <option>Not Yet Competent</option>
+                      <option>Not Assessed</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                       In Progress
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>In Progress</li>
+                        <li>Not Yet Competent</li>
+                        <li>Not Assessed</li>
+                      </ul>
+                    </div>
                     <label><strong>Supervisor Assessment</strong></label>
                     <label class="plain">Not Assessed</label>
                   </div>
@@ -505,7 +567,27 @@
                     <label><strong>Status</strong></label>
                     <hr>
                     <label><strong>Self Assessment</strong></label>
-                    <label class="plain">Not Yet Competent</label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option >Competent</option>
+                      <option>In Progress</option>
+                      <option SELECTED>Not Yet Competent</option>
+                      <option >Not Assessed</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                       Not Yet Competent
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>In Progress</li>
+                        <li>Not Yet Competent</li>
+                        <li>Not Assessed</li>
+                      </ul>
+                    </div>
                     <label><strong>Supervisor Assessment</strong></label>
                     <label class="plain">Not Assessed</label>
                   </div>
@@ -515,7 +597,27 @@
                     <label><strong>Status</strong></label>
                     <hr>
                     <label><strong>Self Assessment</strong></label>
-                    <label class="plain">Not Assessed</label>
+                    <select class="custom dropdown display-none" id="customDropdown">
+                      <option >Competent</option>
+                      <option>In Progress</option>
+                      <option>Not Yet Competent</option>
+                      <option SELECTED>Not Assessed</option>
+                    </select>
+                    <!-- the div with class custom dropdown displays the
+                    dropdown in a Zurb custom form.
+                    expand tells Zurb that the dropdown should take up
+                    as much horizontal space as possible. -->
+                    <div class="custom dropdown expand">
+                      <a href="#" class="current">
+                       Not Assessed
+                      </a>
+                      <a href="#" class="selector"></a>
+                      <ul>
+                        <li>In Progress</li>
+                        <li>Not Yet Competent</li>
+                        <li>Not Assessed</li>
+                      </ul>
+                    </div>
                     <label><strong>Supervisor Assessment</strong></label>
                     <label class="plain">Not Assessed</label>
                   </div>
@@ -528,7 +630,7 @@
                     <label><strong>Actions</strong></label>
                     <hr>
                     <ul class="no-bullet">
-                      <li><a href="petrocore-my-position-skill-change-assessment.html">Change Assessment</a></li>
+                      <li><a href="#">Change Assessment</a></li>
                       <li><a href="petrocore-my-position-skill-level-detail.html">View Details</a></li>
                       <li><a href="#">Notes - (0)</a></li>
                       <li><a href="petrocore-my-position-skill-no-evidence.html">Evidence - (0)</a></li>
@@ -540,7 +642,7 @@
                     <label><strong>Actions</strong></label>
                     <hr>
                     <ul class="no-bullet">
-                      <li><a href="petrocore-my-position-skill-change-assessment.html">Change Assessment</a></li>
+                      <li><a href="#">Change Assessment</a></li>
                       <li><a href="petrocore-my-position-skill-level-detail.html">View Details</a></li>
                       <li><a href="#">Notes - (0)</a></li>
                       <li><a href="petrocore-my-position-skill-no-evidence.html">Evidence - (0)</a></li>
@@ -552,7 +654,7 @@
                     <label><strong>Actions</strong></label>
                     <hr>
                     <ul class="no-bullet">
-                      <li><a href="petrocore-my-position-skill-change-assessment.html">Change Assessment</a></li>
+                      <li><a href="#">Change Assessment</a></li>
                       <li><a href="petrocore-my-position-skill-level-detail.html">View Details</a></li>
                       <li><a href="#">Notes - (0)</a></li>
                       <li><a href="petrocore-my-position-skill-no-evidence.html">Evidence - (0)</a></li>
@@ -564,7 +666,7 @@
                     <label><strong>Actions</strong></label>
                     <hr>
                     <ul class="no-bullet">
-                      <li><a href="petrocore-my-position-skill-change-assessment.html">Change Assessment</a></li>
+                      <li><a href="#">Change Assessment</a></li>
                       <li><a href="petrocore-my-position-skill-level-detail.html">View Details</a></li>
                       <li><a href="#">Notes - (0)</a></li>
                       <li><a href="petrocore-my-position-skill-no-evidence.html">Evidence - (0)</a></li>
