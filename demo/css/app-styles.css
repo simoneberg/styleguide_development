@@ -812,6 +812,7 @@ h4 {
   width: auto;
   float: right;
 }
+
 /* inline ul */
 /****************/
 
@@ -1187,6 +1188,15 @@ ul.accordion>li.active .content>ul>li.active a {
 
 .left-split-container {
   height: auto;
+}
+
+.left-nav-container ul.accordion>li .title h6 {
+  padding: 0 15px 2px 32px;
+}
+
+.left-nav-container ul.accordion>li .title h6 .icon- {
+  position: absolute;
+  left: 15px;
 }
 
 .search-container {
@@ -5177,6 +5187,10 @@ h4 .header-link {
     font-size: 0;
   }
 
+  .master-wrapper.collapsed ul.accordion>li .title h6 {
+    padding: 0;
+  }
+
   .master-wrapper.collapsed .left-split-container {
     position: absolute;
     top: 0;
@@ -5193,6 +5207,10 @@ h4 .header-link {
     position:relative;
   }
 
+  .master-wrapper.collapsed ul.accordion>li .title h6 .icon- {
+    position: static;
+  }
+  
   .master-wrapper.collapsed ul.accordion .content {
      position: absolute;
      top: 0;
