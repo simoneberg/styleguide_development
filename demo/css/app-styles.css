@@ -1642,6 +1642,11 @@ ul.accordion>li.active .content>ul>li.active a {
   margin-bottom: 15px;
 }
 
+.button.block {
+  display: block;
+}
+
+
 /* END BUTTONS 23
 /* **************************************** */
 
