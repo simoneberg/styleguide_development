@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -414,7 +413,7 @@
                   <option>Russian</option>
                 </select>
                 <div class="custom dropdown expand">
-                  <a href="#" class="current">English</a>
+                  <a href="#" class="current"></a>
                   <a href="#" class="selector"></a>
                   <ul>
                     <li>English</li>
@@ -423,6 +422,7 @@
                     <li>Russian</li>
                   </ul>
                 </div>
+                <label class="plain">Categories without a value are removed when the profile is saved</label>
               </div>
             </div>
             <hr>
@@ -529,7 +529,7 @@
     <!--</div>-->
     <!-- CONTENT AREA -->
 
-  <!-- *** Add Profile Categories *** -->
+  <!-- *** Add Profile Categories - After State *** -->
   <div id="add-profile-categories" class="reveal-modal expand">
     <div class="panel-header">
       <div class="panel-title-container">
@@ -550,13 +550,13 @@
           <label for="checkbox2"><input type="checkbox" data-customforms="disabled"  id="checkbox2"> Development Program</label>
         </div>
         <div class="profile-item profile-highlight">
-          <label for="checkbox3"><input type="checkbox" data-customforms="disabled"  id="checkbox3" checked> Reporting Unit: Station 1 reporting unit</label>
+          <label for="checkbox3"><input type="checkbox" data-customforms="disabled"  id="checkbox3"> Reporting Unit<label class="data-remove-notice compass-error">Data will be removed on save</label></label>
         </div>
         <div class="profile-item">
           <label for="checkbox4"><input type="checkbox" data-customforms="disabled"  id="checkbox4"> Heir 1</label>
         </div>
         <div class="profile-item profile-highlight">
-          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked>  Country: Canada <i class="icon-">&#xf105;</i> State-Province: British Columbia <i class="icon-">&#xf105;</i> City: Prince Rupert</label>
+          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked> Country: Canada <i class="icon-">&#xf105;</i> State-Province: British Columbia <i class="icon-">&#xf105;</i> City: Prince Rupert</label>
         </div>
         <div class="profile-item">
           <label for="checkbox6"><input type="checkbox" data-customforms="disabled"  id="checkbox6"> Category</label>
@@ -571,7 +571,7 @@
       <a class="left cancel-link" href="#">Cancel</a>
     </div>
   </div>
-  <!-- *** /Add Profile Categories *** -->
+  <!-- *** /Add Profile Categories - After State *** -->
 
   <div id="overlay"></div>
 

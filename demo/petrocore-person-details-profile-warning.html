@@ -86,9 +86,11 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
+          <i class="icon-search collapse-menu"></i>
+
 
           <div class="row collapse search-input">
-
+                  
             <div class="nine mobile-two columns">
               <input class="round-left" type="text" placeholder="Search" value="" />
             </div>
@@ -100,7 +102,7 @@
                 </div>
               </span>
             </div>
-
+                    
             <div class="two mobile-one columns">
               <span class="postfix round-left">
                 <a href="petrocore-search-results.html">
@@ -110,7 +112,7 @@
                 </a>
               </span>
             </div>
-
+            
           </div>
 
         </div>
@@ -271,7 +273,10 @@
         </div>
         <div class="content-container">
           <!--This will hold the content-->
-          <h4>User Settings</h4>
+          <div class="header-inline">
+            <h4>User Settings</h4>
+            <a class="back-to-previous-page" href="petrocore-person-details-landing.html">Back to Previous Page</a>
+          </div>
           <hr>
 
           <div class="same-line">
@@ -291,137 +296,222 @@
             <div class="row">
               <div class="form-group six mobile-four columns">
                 <div class="same-line add-medium-space-right">
-                  <a class="secondary radius button" href="#" data-reveal-id="add_person_profile">Add Profile Category</a>
+                  <a class="secondary radius button" href="#" data-reveal-id="add-profile-categories">Add Profile Categories</a>
                 </div>
               </div>
             </div>
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Date Category Value<a href="#" class="clear_text_link">clear date</a></label>
-                <input class="control-with-trailing-icon" type="text" placeholder="MM/DD/YYYY" value="2014/Jan/28"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <label>Pick from list with three or fewer Category Values<a href="#" class="clear_text_link">clear choice</a></label>
-                <div class="form-group">
-                <div class="radio-group">
-                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1" checked> First Choice</label>
-                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Second Choice</label>
-                  <label for="radio3"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio3"> Third Choice</label>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <label>Pick from list with four or more Category Values<a href="#" class="clear_text_link">clear data</a></label>
+                <label>Grade Level</label>
                 <select class="custom dropdown display-none" id="customDropdown">
-                  <option SELECTED>First Choice</option>
-                  <option>Second Choice</option>
-                  <option>Third Choice</option>
-                  <option>Fourth Choice</option>
-                  <option>Fifth Choice</option>
+                  <option selected="selected">Value 1</option>
+                  <option>Value 2</option>
                 </select>
                 <div class="custom dropdown expand">
-                  <a href="#" class="current">
-                    First Choice
-                  </a>
+                  <a href="#" class="current"></a>
                   <a href="#" class="selector"></a>
                   <ul>
-                    <li>Second Choice</li><li>Third Choice</li><li>Fourth Choice</li><li>Fifth Choice</li>
+                    <li>Value 1</li>
+                    <li>Value 2</li>
+                  </ul>
+                </div>
+                <label class="plain">Categories without a value are removed when the profile is saved</label>
+              </div>
+            </div>
+
+            <hr>
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown">Country</label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="selected">Canada</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Russia</option>
+                  <option>Saudi Arabia</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">Canada</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Canada</li>
+                    <li>United Kingdom</li>
+                    <li>United States</li>
+                    <li>Russia</li>
+                    <li>Saudi Arabia</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown">State / Province<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option value="1">Alberta</option>
+                  <option selected="selected" value="2">British Columbia</option>
+                  <option value="3">Manitoba</option>
+                  <option value="4">Newfoundland</option>
+                  <option value="5">New Brunswick</option>
+                  <option value="6">North West Territory</option>
+                  <option value="7">Nova Scotia</option>
+                  <option value="8">Nunivit Territory</option>
+                  <option value="9">Ontario</option>
+                  <option value="10">PEI</option>
+                  <option value="11">Quebec</option>
+                  <option value="12">Saskatchewan</option>
+                  <option value="13">Yukon Territory</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">British Columbia</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Alberta</li>
+                    <li>British Columbia</li>
+                    <li>Manitoba</li>
+                    <li>Newfoundland</li>
+                    <li>New Brunswick</li>
+                    <li>North West Territory</li>
+                    <li>Nova Scotia</li>
+                    <li>Nunivit Territory</li>
+                    <li>Ontario</li>
+                    <li>PEI</li>
+                    <li>Quebec</li>
+                    <li>Saskatchewan</li>
+                    <li>Yukon Territory</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label for="customDropdown">City<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option>Calgary</option>
+                  <option>Edmonton</option>
+                  <option>Lethbridge</option>
+                  <option selected="selected">Prince Rupert</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">Prince Rupert</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Calgary</li>
+                    <li>Edmonton</li>
+                    <li>Lethbridge</li>
+                    <li>Prince Rupert</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr>
+
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Primary Language Spoken<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="selected">English</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                  <option>Russian</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">English</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>English</li>
+                    <li>Spanish</li>
+                    <li>Frensh</li>
+                    <li>Russian</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="form-group six mobile-four columns">
+                <label>Previous Employer<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="selected">Shell Oil</option>
+                  <option>Exxon</option>
+                  <option>Haliburton</option>
+                  <option>BP</option>
+                  <option>Other</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">Shell</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>Shell</li>
+                    <li>Exxon</li>
+                    <li>Haliburton</li>
+                    <li>BP</li>
+                    <li>Other</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <hr>
-
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Multiple values with six or fewer Category Values<a href="#" class="clear_text_link">clear all</a></label>
-                <div class="form-group">
-                <div class="checkbox-group">
-                  <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1" checked> First Option</label>
-                  <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Second Option</label>
-                  <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3" checked> Third Option</label>
-                  <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4" checked> Fourth Option</label>
-                  <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5"> Fifth Option</label>
-                  <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Sixth Option</label>
-                </div>
-                </div>
-              </div>
-            </div>
-
-            <hr>
-
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <label>Multiple values with seven or more Category Values<a href="#" class="clear_text_link">clear all</a></label>
-                <div class="form-group scroll-vertical-only set-height-100 twelve mobile-four columns">
-                  <div class="checkbox-group">
-                    <label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"> First Option</label>
-                    <label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"> Second Option</label>
-                    <label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3" checked> Third Option</label>
-                    <label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4" checked> Fourth Option</label>
-                    <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked> Fifth Option</label>
-                    <label for="checkbox6"><input type="checkbox" data-customforms="disabled" id="checkbox6"> Sixth Option</label>
-                    <label for="checkbox7"><input type="checkbox" data-customforms="disabled" id="checkbox7"> Seventh Option</label>
-                    <label for="checkbox8"><input type="checkbox" data-customforms="disabled" id="checkbox8"> Eighth Option</label>
-                    <label for="checkbox9"><input type="checkbox" data-customforms="disabled" id="checkbox9"> Ninth Option</label>
-                    <label for="checkbox10"><input type="checkbox" data-customforms="disabled" id="checkbox10"> Tenth Option</label>
-                    <label for="checkbox11"><input type="checkbox" data-customforms="disabled" id="checkbox11"> Eleventh Option</label>
-                    <label for="checkbox12"><input type="checkbox" data-customforms="disabled" id="checkbox12"> Twelveth Option</label>
-                    <label for="checkbox13"><input type="checkbox" data-customforms="disabled" id="checkbox13"> Thirteenth Option</label>
-                    <label for="checkbox14"><input type="checkbox" data-customforms="disabled" id="checkbox14"> Fourteenth Option</label>
-                    <label for="checkbox15"><input type="checkbox" data-customforms="disabled" id="checkbox15"> Fifteenth Option</label>
-                  </div>
+                <label>Functional Discipline<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="selected">FD 1</option>
+                  <option>FD 2</option>
+                  <option>FD 3</option>
+                  <option>FD 4</option>
+                  <option>FD 5</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">FD 1</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>FD 1</li>
+                    <li>FD 2</li>
+                    <li>FD 3</li>
+                    <li>FD 4</li>
+                    <li>FD 5</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <hr>
-
-            <!-- text values not supported in version 1.0
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Text Category Value</label>
-                <input type="text" placeholder="This is placehoder text" class="compass-error" />
-                <small class="compass-error twelve">NOT SUPPORTED IN COMPASS VERSION 1.0</small>
+                <label>Job Function<a href="#" class="clear_text_link">clear data</a></label>
+                <select class="custom dropdown display-none" id="customDropdown">
+                  <option selected="selected">JD 1</option>
+                  <option>JD 2</option>
+                  <option>JD 3</option>
+                  <option>JD 4</option>
+                  <option>JD 5</option>
+                </select>
+                <div class="custom dropdown expand">
+                  <a href="#" class="current">JD 1</a>
+                  <a href="#" class="selector"></a>
+                  <ul>
+                    <li>JD 1</li>
+                    <li>JD 2</li>
+                    <li>JD 3</li>
+                    <li>JD 4</li>
+                    <li>JD 5</li>
+                  </ul>
+                </div>
               </div>
             </div>
-
             <hr>
-
-            <div class="row">
-              <div class="form-group six mobile-four columns">
-                <label>Multiline Text Category value</label>
-                <textarea placeholder="" class="min-height compass-error"> A multi-line text area</textarea>
-                <small class="compass-error twelve">NOT SUPPORTED IN COMPASS VERSION 1.0</small>
-              </div>
+          </form>
+            <div class="same-line add-medium-space-right">
+              <a class="primary radius button" href="./petrocore-person-details-landing.html">Save</a>
+            </div>
+            <div class="same-line">
+              <a class="" href="petrocore-dashboard.html">Cancel</a>
             </div>
 
-            <hr>
-          -->
-
-          <div class="same-line add-medium-space-right">
-            <a class="primary radius button" href="./petrocore-person-details-landing.html">Save</a>
-          </div>
-          <div class="same-line">
-            <a class="" href="petrocore-dashboard.html">Cancel</a>
-          </div>
-
-      </form>
-
-        </div><!--Close Content Container-->
-
+          </div><!--Close Content Container-->
           <!--***** RIGHT SPLIT CONTAINER *****-->
         </div>
         <!--***** MAIN WRAPPER *****-->
@@ -429,7 +519,7 @@
       <!-- ***** FOOTER *****-->
 
       <div class="row">
-        <div class="twelve columns petrocore-footer">
+        <div class="twelve columns petrocore-footer">    
           <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
           <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
         </div>
@@ -441,56 +531,50 @@
     <!--</div>-->
     <!-- CONTENT AREA -->
 
-    <!-- person profile add dialog -->
-    <div id="add_person_profile" class="reveal-modal expand">
-      <div class="panel-header">
-        <div class="panel-title-container"><h5>Add Person Profile</h5></div>
-        <div class="panel-header-icons-container">
-          <ul class="panel-header-icons-list">
-            <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-          </ul>
-        </div>
+
+  <!-- *** Add Profile Categories - After State *** -->
+  <div id="add-profile-categories" class="reveal-modal expand">
+    <div class="panel-header">
+      <div class="panel-title-container">
+        <h5>Select Profile Categories to Display</h5>
       </div>
-
-      <div class="popup-content-container">
-        <form class="custom">
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Item </label>
-              <select class="custom dropdown display-none-important" id="customDropdown">
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option selected="selected">Available Profile Item</option>
-              </select>
-              <div class="custom dropdown expand">
-                <a href="#" class="current">Available Profile Item</a>
-                <a href="#" class="selector"></a>
-                <ul>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Value </label>
-              <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
-            </div>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-
-        <a class="primary radius button left close-reveal-modal" href="#">Save</a>
-        <a class="left cancel-link" href="#">Cancel</a>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+        </ul>
       </div>
     </div>
+    <div class="twelve mobile-four columns">
+      <div class="profile-category-box">
+        <div class="profile-item">
+          <label for="checkbox1"><input type="checkbox" data-customforms="disabled"  id="checkbox1"> Age</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox2"><input type="checkbox" data-customforms="disabled"  id="checkbox2"> Development Program</label>
+        </div>
+        <div class="profile-item profile-highlight">
+          <label for="checkbox3"><input type="checkbox" data-customforms="disabled"  id="checkbox3"> Reporting Unit<label class="data-remove-notice compass-error">Data will be removed on save</label></label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox4"><input type="checkbox" data-customforms="disabled"  id="checkbox4"> Heir 1</label>
+        </div>
+        <div class="profile-item profile-highlight">
+          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked> Country: Canada <i class="icon-">&#xf105;</i> State-Province: British Columbia <i class="icon-">&#xf105;</i> City: Prince Rupert</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox6"><input type="checkbox" data-customforms="disabled"  id="checkbox6"> Category</label>
+        </div> 
+        <div class="profile-item">
+          <label for="checkbox7"><input type="checkbox" data-customforms="disabled"  id="checkbox7"> Heir 2</label>
+        </div>    
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
+    </div>
+  </div>
+  <!-- *** /Add Profile Categories - After State *** -->
 
     <!-- person profile input demos -->
     <div id="add_person_profile_demo" class="reveal-modal expand">
