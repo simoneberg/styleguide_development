@@ -1,13 +1,14 @@
+// Show and hide Advanced Search Panel
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('p.search-arrow');
-  advanced_arrow.css("position", "relative");
+  var advanced_arrow = $('p.search-arrow').css('position', 'relative');
+  
   if (advanced_panel.is(':hidden')) {
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0de;').css("top", "7px");
+    advanced_panel.show();
+    advanced_arrow.css("top", "7px").html('&#xf0de;');
   } else {
-    advanced_panel.css("display", "none");
-    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+    advanced_panel.hide();
+    advanced_arrow.css("top", "0px").html('&#xf0dd;');
   }
 }
 
@@ -322,6 +323,17 @@ $(document).ready(function(){
 
 });
 
+/* Closes the Advanced Search Panel */
+ 
+function close_advanced_search_panel() {
+
+  var advanced_panel = $('#advanced_search');
+  if (advanced_panel.is(':visible')) {
+    advanced_panel.hide();
+    $('p.search-arrow').css("position", "relative").css("top", "0px").html('&#xf0dd;');
+  }
+}
+
 /* Adjust row to equal height in Competency Level Control */
 function adjust_height_competency_control() {
 
@@ -492,6 +504,7 @@ $(function() {
   var wrapper = $(".master-wrapper")
   
   wrapper.toggleClass("collapsed");
+  close_advanced_search_panel();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
