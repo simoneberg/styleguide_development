@@ -2,7 +2,7 @@
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
   var advanced_arrow = $('p.search-arrow').css('position', 'relative');
-
+  
   if (advanced_panel.is(':hidden')) {
     advanced_panel.show();
     advanced_arrow.css("top", "7px").html('&#xf0de;');
@@ -219,19 +219,20 @@ $(document).ready(function(){
   }); 
   
   // Add A Competency Control Item to the list
-  $('#addcompetency').click (function() {
-
+  $('#addcompetency').click (function(ev) {
+    ev.preventDefault();
     var n = $("#competency_list li").length;
     var newdescription = "Competence level " + (n+1);
 
     $('#competency_list li.competence-level-item').eq(0).clone(true).appendTo('#competency_list');
     $("#competency_list li .cl-number").eq(n).html(n+1);
-    $("#competency_list li .cl-description").eq(n).html(newdescription);
+    $("#competency_list li .cl-description span").eq(n).html(newdescription);
     $('#competency_list').sortcompetency();
   });
   
   // Removes Competency Control Items from the list
-  $('#competency_list li .cl-icon-x').click(function(){
+  $('#competency_list li .cl-icon-x').click(function(ev){
+    ev.preventDefault();
     if ($("#competency_list li").length > 1) {
       $(this).parent().parent('li').remove();
       $('#competency_list').sortcompetency();
@@ -239,21 +240,23 @@ $(document).ready(function(){
   });
 
   // Move Up Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-up').click(function(){
+  $('#competency_list li .cl-icon-arrow-up').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertBefore(parent.prev());
     $('#competency_list').sortcompetency();
   });
 
   // Move Down Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-down').click(function(){
+  $('#competency_list li .cl-icon-arrow-down').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertAfter(parent.next());
     $('#competency_list').sortcompetency();
   });
 
-  // Method used by four events above - Add, Remove, Move-Up, and Move-Down
-  // In order to ensure compatibilty with IE8 and up, hover effect is done in jQuery
+  // Custom function called by four events - Add, Remove, Move-Up, and Move-Down
+  // Hover effect is done in jQuery to ensure compatibilty with IE8 and up
   jQuery.fn.sortcompetency = function(){
 
     var n = $("#competency_list li").length;
@@ -313,20 +316,41 @@ $(document).ready(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
       }
+
     });
+
   }
-  
+
 });
 
 /* Closes the Advanced Search Panel */
+ 
 function close_advanced_search_panel() {
-  var advanced_panel = $('#advanced_search');
 
+  var advanced_panel = $('#advanced_search');
   if (advanced_panel.is(':visible')) {
     advanced_panel.hide();
     $('p.search-arrow').css("position", "relative").css("top", "0px").html('&#xf0dd;');
   }
 }
+
+/* Adjust row to equal height in Competency Level Control */
+function adjust_height_competency_control() {
+
+  var maxHeight = $('.cl-description').height();
+
+  $('.cl-description').each(function(index) {
+    if($('.cl-description').eq( index ).height() > maxHeight) {
+      maxHeight = $('.cl-description').eq( index ).height();
+    }
+    index++;
+  });
+  $('#competency_list .competence-level-number').height(maxHeight);
+};
+
+/* Event bound for the Competency Level Control */
+$(window).on('load', adjust_height_competency_control);
+$(window).on('resize', adjust_height_competency_control);
 
 /* prevent hash changes on any nexted tabs*/
 $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
@@ -478,6 +502,7 @@ $(function() {
   $(".collapse-menu").on("click", function(ev){
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
+  
   wrapper.toggleClass("collapsed");
   close_advanced_search_panel();
 
@@ -488,8 +513,9 @@ $(function() {
     $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
 
   $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
-  
+
   })
+
 
 })(jQuery);
 
@@ -511,4 +537,75 @@ $(function() {
     }
     }
   });
+});
+
+/* dynamic modal size demo */
+$( "#btn-dynamic-modal-small" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("small");
+});
+
+$( "#btn-dynamic-modal-medium" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("medium");
+});
+
+$( "#btn-dynamic-modal-large" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("large");
+});
+
+$( "#btn-dynamic-modal-xlarge" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("xlarge");
+});
+
+$( "#btn-dynamic-modal-expand" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("expand");
+});
+
+$( "a[data-reveal-id='dynamic-modal-small']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal-small" ).removeClass("small");
+  $( "#dynamic-modal-small" ).addClass("small");
+});
+
+$( "a[data-reveal-id='dynamic-modal-medium']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal-medium" ).removeClass("small");
+  $( "#dynamic-modal-medium" ).addClass("medium");
+});
+
+$( "a[data-reveal-id='dynamic-modal-large']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal-large" ).removeClass("small");
+  $( "#dynamic-modal-large" ).addClass("large");
+});
+
+$( "a[data-reveal-id='dynamic-modal-xlarge']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal-xlarge" ).removeClass("small");
+  $( "#dynamic-modal-xlarge" ).addClass("xlarge");
+});
+
+$( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal-expand" ).removeClass("small");
+  $( "#dynamic-modal-expand" ).addClass("expand");
 });
