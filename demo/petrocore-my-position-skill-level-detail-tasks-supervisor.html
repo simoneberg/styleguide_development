@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -43,7 +45,7 @@
         <ul>
           <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
 
-		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+     <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
 
          <li class="has-dropdown"><a href="#" class="username">John Doe</a>
               <ul class="dropdown user">
@@ -115,40 +117,40 @@
         </div>
       <!--***** SEARCH *****-->
 
-	  <div id="advanced_search" class="display-none">
-	  <!--This is a Advanced Search panel that is hidden by default-->
+    <div id="advanced_search" class="display-none">
+    <!--This is a Advanced Search panel that is hidden by default-->
 
-		<p><strong>Advanced Search</strong></p>
+    <p><strong>Advanced Search</strong></p>
 
-			<form class="custom search-type">
-				<label id="search-type-label" for="customDropdown">Search Type:</label>
-				<select class="custom-dropdown expand" id="customDropdown">
-					<option SELECTED>Person</option>
-					<option>Group</option>
-					<option>Position</option>
-					<option>Map</option>
-					<option>Skill Group</option>
-					<option>Skill</option>
-					<option>Skill Description</option>
-					<option>Development Activity</option>
-				</select>
+      <form class="custom search-type">
+        <label id="search-type-label" for="customDropdown">Search Type:</label>
+        <select class="custom-dropdown expand" id="customDropdown">
+          <option SELECTED>Person</option>
+          <option>Group</option>
+          <option>Position</option>
+          <option>Map</option>
+          <option>Skill Group</option>
+          <option>Skill</option>
+          <option>Skill Description</option>
+          <option>Development Activity</option>
+        </select>
 
-			</form>
+      </form>
             <div class="add-filter-container">
 
-				<!--***** ADD FILTER *****-->
+        <!--***** ADD FILTER *****-->
                 <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
-				<!--***** ADD FILTER *****-->
+        <!--***** ADD FILTER *****-->
 
-				<div class="add-filter-area">
-					<hr class="petrocore-hr">
-         	<ul id="filters">
+        <div class="add-filter-area">
+          <hr class="petrocore-hr">
+          <ul id="filters">
             <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
             <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
-   		    </ul>
+          </ul>
         </div>
-			</div>
-		</div>
+      </div>
+    </div>
 
       <!--***** MAIN NAVIGATION *****-->
       <div class="left-nav-container">
@@ -166,7 +168,7 @@
               <div class="content">
                 <ul>
                   <li><strong>Your Skill Groups</strong></li>
-                  <li class="active"><div class="skillgroupstatus status-progress"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
+                  <li class="active"><div class="skillgroupstatus status-some"></div><a href="petrocore-my-position-skill.html" class="add-small-margin-left">Defining Well Objectives</a></li>
                   <li><div class="skillgroupstatus not-assessed"></div><a href="#"  class="add-small-margin-left">Directional Planning</a></li>
                   <li><div class="skillgroupstatus status-competent"></div><a href="#"  class="add-small-margin-left">Drilling Fluid System Planning</a></li>
                   <li><div class="skillgroupstatus status-non-assessed"></div><a href="#"  class="add-small-margin-left">Bit and Hydraulics Planning</a></li>
@@ -275,20 +277,16 @@
               <div href="#action-button1" class="button dropdown petrocore-actions">
                 Actions
                 <ul>
-                  <li><a href="petrocore-my-position-development-activity.html">Development Activities - (2)</a></li>
+                  <li><a href="#">Development Activities - (2)</a></li>
                   <li><a href="#">Evidence - (0)</a></li>
                   <li><a href="#">Notes - (0)</a></li>
                   <li><a href="#">History - (0)</a></li>
                 </ul>
               </div>
             </div>
-              <a class="back-to-previous-page" href="#">Back to Previous Page</a>
+              <a class="back-to-previous-page" href="petrocore-my-position-skill.html">Back to Previous Page</a>
           </div>
           <hr>
-
-          <div class="same-line">
-            <h4>Chung, David</h4><span> (dchung12)</span>
-          </div>
 
           <fieldset>
             <legend><h5>Well Planning</h5></legend>
@@ -296,6 +294,52 @@
               <div class="form-group twelve mobile-four columns">
                   <label>Fundamental</label>
                   <div class="form-text-display-field">Obtain all relevant historical and current geologic, seismic, and wireline logging data to include in a prospect specific well Design.</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label>Skill Description Status</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3 Tasks</legend>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline"><a href="#task1">Identify and collect relevant geologic data (stratigraphic cross sections, cuttings and core descriptions, geologic structure maps, and fault plane maps) and incorporates into the well design parameters accordingly.</a></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline"><a href="#task2">Identify and collect relevant seismic data (profiles, interval velocity plots, high resolution seismic profiles), and offset logs provided and incorporates into the well design parameters accordingly.</a></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline"><a href="#task3">Develop a prospect-specific geologic column with potential drilling hazards identified, given complete offset drilling records and post analyses, and a prospect specific geologic prognosis.</a></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="task1">
+            <legend>Task</legend>
+            <div class="form-group twelve mobile-four columns">
+              Identify and collect relevant geologic data (stratigraphic cross sections, cuttings and core descriptions, geologic structure maps, and fault plane maps) and incorporates into the well design parameters accordingly.
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                  <label>Duration</label>
+                  <div class="form-text-display-field">365 days - begins once your task is complete</div>
               </div>
             </div>
             <div class="row">
@@ -346,7 +390,6 @@
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="">Not Assessed</option>
                   <option>Competent</option>
-                  <option>Some</option>
                   <option>Not Yet Competent</option>
                 </select>
                 <!-- the div with class custom dropdown displays the
@@ -356,7 +399,6 @@
                   <a href="#" class="selector"></a>
                   <ul>
                     <li>Competent</li>
-                    <li>Some</li>
                     <li>Not Yet Competent</li>
                   </ul>
                 </div>
@@ -373,6 +415,29 @@
               <div class="form-group twelve mobile-four columns">
                   <label>Assessed By</label>
                   <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="task2">
+            <legend>Task</legend>
+            <div class="row">
+              <div class="form-group eight mobile-four columns">
+              Identify and collect relevant seismic data (profiles, interval velocity plots, high resolution seismic profiles), and offset logs provided and incorporates into the well design parameters accordingly.
+              </div>
+              <div class="form-group four mobile-four columns">
+                <div class="tasks-action-button">
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                      <li><a href="#">Development Activities - (2)</a></li>
+                      <li><a href="#">Evidence - (0)</a></li>
+                      <li><a href="#">Notes - (0)</a></li>
+                      <li><a href="#">History - (0)</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </fieldset>
@@ -395,6 +460,46 @@
               <div class="form-group twelve mobile-four columns">
                   <label>Assessed By</label>
                   <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="task3">
+            <legend>Task</legend>
+            <div class="row">
+              <div class="form-group eight mobile-four columns">
+              Develop a prospect-specific geologic column with potential drilling hazards identified, given complete offset drilling records and post analyses, and a prospect specific geologic prognosis.
+              </div>
+              <div class="form-group four mobile-four columns">
+                <div class="tasks-action-button">
+                  <a name="action-button1"></a>
+                  <div href="#action-button1" class="button dropdown petrocore-actions">
+                    Actions
+                    <ul>
+                      <li><a href="#">Development Activities - (2)</a></li>
+                      <li><a href="#">Evidence - (0)</a></li>
+                      <li><a href="#">Notes - (0)</a></li>
+                      <li><a href="#">History - (0)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                  <label>Duration</label>
+                  <div class="form-text-display-field">365 days - begins once your task is complete</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <label>Status</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group twelve mobile-four columns">
+                <div class="skillgroupstatus status-not-assesed margin-right"></div>
+                <div class="skillgroupstatus-text-inline">Not Assessed</div>
               </div>
             </div>
           </fieldset>
@@ -425,9 +530,9 @@
                   <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
               </div>
             </div>
-            <div class="row">
+                        <div class="row">
               <div class="form-group twelve mobile-four columns">
-                <a href="#">View Capability</a> |  <a href="#" data-reveal-id="capability-assessment">Complete Capability Assessment</a>
+                <a href="#">View Capability</a> |  <a href="#" data-reveal-id="capability-assessment">Complete Capability Assignment</a>
               </div>
             </div>
           </fieldset>
@@ -441,18 +546,18 @@
               </div>
             </div>
             <div class="row">
-              <div class="form-group four mobile-four columns">
-                <label>Date Approved</label>
-                <input class="control-with-trailing-icon" type="text" placeholder="" value="03/28/2013"><a class="icon-trailing-control input" href"#"=""></a>
+              <div class="form-group twelve mobile-four columns">
+                  <label>Date Approved</label>
+                  <div class="form-text-display-field">&lt;&lt;no value set&gt;&gt;</div>
               </div>
             </div>
             <div class="row">
               <div class="form-group four mobile-four columns">
-                <label>Approver</label>
+                <label>Approved By</label>
                 <!-- the select tag which is hte default HTML is not visible when
                 in a custom form and the class custom-dropdown is used. -->
                 <select class="custom dropdown display-none" id="customDropdown">
-                  <option SELECTED>Super, Sally (ssuper)</option>
+                  <option SELECTED>Approver Name</option>
                   <option>Name 1</option>
                   <option>Name 2</option>
                   <option>Name 3</option>
@@ -463,13 +568,13 @@
                 as much horizontal space as possible. -->
                 <div class="custom dropdown expand">
                   <a href="#" class="current">
-                    Super, Sally (ssuper)
+                    ComboBox
                   </a>
                   <a href="#" class="selector"></a>
                   <ul>
-                    <li>Name 1</li>
-                    <li>Name 2</li>
-                    <li>Name 3</li>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
                   </ul>
                 </div>
               </div>
@@ -542,7 +647,7 @@
         </div>
 
         <div class="row">
-          <div class="form-group nine mobile-four columns">
+          <div class="form-group nine mobile-four  columns">
             <label for="customDropdown">Assessed By</label>
             <!-- the select tag which is hte default HTML is not visible when
                         in a custom form and the class custom-dropdown is used. -->
@@ -623,20 +728,16 @@
           </div>
         </div>
 
-       
         <div class="row">
-          <div class="form-group seven mobile-four columns">
+          <div class="form-group six mobile-four columns">
             <label>Capability Assessment</label>
-            <div><a href="#">View file</a></div>
-              <div class="form-group file-upload-btn">
-                <label class="round text-center fileupload_btn_label" for="file">Attach Document</label>
-                <input type="file" id="file">
-              </div>
-              <div class="word-wrap"><p>path/to/selected/file/notshown/if.blank</p></div>
-              <div class="radio-group">
-                <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file</label>
-                <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
-              </div>
+            <div class="form-group file-upload-btn">
+              <label class="round text-center fileupload_btn_label" for="file">Attach Document</label>
+              <input type="file" id="file" />
+            </div>
+            <div class="word-wrap">
+            <p>\\path_of_the_document\document_name</p>
+            </div>
           </div>
         </div>
 
@@ -734,36 +835,36 @@
 
 <div class="notifications-popup">
 
-	<div class="arrow"></div>
-	<div class="arrow-border"></div>
+  <div class="arrow"></div>
+  <div class="arrow-border"></div>
 
-	<div class="notifications-title">
-    	<h5>Notifications</h5>
-	</div>
+  <div class="notifications-title">
+      <h5>Notifications</h5>
+  </div>
 
-	<div class="notifications-area">
+  <div class="notifications-area">
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 1 has been generated</p>
-	        <a href="#">View Report</a>
-			<hr class="hr-notification">
-	    </div>
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 1 has been generated</p>
+          <a href="#">View Report</a>
+      <hr class="hr-notification">
+      </div>
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 2 has been generated</p>
-			<a href="#">View Report</a>
-			<hr class="hr-notification">
-		</div>
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 2 has been generated</p>
+      <a href="#">View Report</a>
+      <hr class="hr-notification">
+    </div>
 
-		<div class="notification">
-			<a href="#" class="icon- anotification">&#xf00d;</a>
-			<p>Report Lorem Ipsum 3 has been generated</p>
-			<a href="#">View Report</a>
-		</div>
+    <div class="notification">
+      <a href="#" class="icon- anotification">&#xf00d;</a>
+      <p>Report Lorem Ipsum 3 has been generated</p>
+      <a href="#">View Report</a>
+    </div>
 
-	</div>
+  </div>
 </div>
 
 <!-- Included JS Files (Compressed) -->
