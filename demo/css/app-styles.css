@@ -4541,6 +4541,12 @@ ul.activity-code-list li {
   background-image: linear-gradient(180deg,rgba(255,204,0,1.00) 0%,rgba(237,190,2,1.00) 100%);
 }
 
+.recommended-activities-box {
+  height: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 /* END PAGE SPECIFIC */
 /* **************************************** */
 
