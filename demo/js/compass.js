@@ -225,7 +225,7 @@ $(document).ready(function(){
 
     $('#competency_list li.competence-level-item').eq(0).clone(true).appendTo('#competency_list');
     $("#competency_list li .cl-number").eq(n).html(n+1);
-    $("#competency_list li .cl-description").eq(n).html(newdescription);
+    $("#competency_list li .cl-description span").eq(n).html(newdescription);
     $('#competency_list').sortcompetency();
   });
   
@@ -321,6 +321,24 @@ $(document).ready(function(){
   }
 
 });
+
+/* Adjust row to equal height in Competency Level Control */
+function adjust_height_competency_control() {
+
+  var maxHeight = $('.cl-description').height();
+
+  $('.cl-description').each(function(index) {
+    if($('.cl-description').eq( index ).height() > maxHeight) {
+      maxHeight = $('.cl-description').eq( index ).height();
+    }
+    index++;
+  });
+  $('#competency_list .competence-level-number').height(maxHeight);
+};
+
+/* Event bound for the Competency Level Control */
+$(window).on('load', adjust_height_competency_control);
+$(window).on('resize', adjust_height_competency_control);
 
 /* prevent hash changes on any nexted tabs*/
 $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
