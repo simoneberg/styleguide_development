@@ -81,6 +81,11 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   margin-left: 15px;
 }
 
+a.transformers-hidden-link * {
+  color: #222;
+  border-bottom: none;
+}
+
 div.pagination-centered {
   margin-top: 20px;
 }
@@ -360,6 +365,12 @@ ul.pagination li.current a {
 .page-of-page {
   margin-top: 10px;
   color: #555;
+}
+
+.panel.clickable,
+.panel.clickable h4,
+.panel.clickable p {
+  cursor: pointer;
 }
 
 .row {
@@ -2105,6 +2116,12 @@ label.inline {
   margin-top: 18px;
   margin-bottom: 18px;
 }
+
+.list.no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 
 .list-name h5 {
   background-color: #e8e8e8;
