@@ -38,6 +38,11 @@
    /* THIS AREA WILL NOT BE PART OF THE DEPLOYED FILE */
 
 
+a.transformers-hidden-link {
+/* this class is for use in navigating through MOCK-UP pages only and should not be used in production pages */
+  color: #222;
+}
+
    /* CSS is seperated by concern */
 
 /* within a section the order is:
@@ -370,6 +375,7 @@ ul.pagination li.current a {
 .panel.clickable,
 .panel.clickable h4,
 .panel.clickable p {
+  color: #222;
   cursor: pointer;
 }
 
