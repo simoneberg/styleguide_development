@@ -37,6 +37,7 @@
    /* Working Area */
    /* THIS AREA WILL NOT BE PART OF THE DEPLOYED FILE */
 
+
    /* CSS is seperated by concern */
 
 /* within a section the order is:
@@ -79,11 +80,6 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   font-size: 12px;
   margin-bottom: 0;
   margin-left: 15px;
-}
-
-a.transformers-hidden-link * {
-  color: #222;
-  border-bottom: none;
 }
 
 div.pagination-centered {
@@ -141,6 +137,10 @@ table.wrap-cell-content td span.wrapword {
   word-wrap: break-word; / Internet Explorer 5.5+ */
   word-break: break-all;
   white-space: normal;
+}
+
+.border {
+  border: #929292 1px solid;
 }
 
 .panel-wrapper ul.list {
@@ -2142,6 +2142,13 @@ label.inline {
   border-bottom: none;
 }
 
+.list-item.selected:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  float: left;
+  margin-right: 5px;
+}
+
 .list-item.tall {
   line-height: 50px;
 }
@@ -2401,7 +2408,6 @@ table.wrap-cell-content td span.wrapword {
   word-break: break-all;
   white-space: normal;
 }
-
 
 #competency-framework-table {
   min-width: 700px;

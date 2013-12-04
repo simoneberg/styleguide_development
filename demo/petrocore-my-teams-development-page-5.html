@@ -287,6 +287,8 @@
                     <div class="panel-header">
                       <div class="panel-title-container">
                         <h5 class="name-classifier">Step 1: Select Person
+                          <br>
+                          <small class="panel-summary display-none">No Person Selected</small>
                         </h5>
                       </div>
                       <div class="panel-header-icons-container">
@@ -300,53 +302,84 @@
 
                     <div class="panel-action-icons-container"></div>
                     <div class="panel-content-container-dashboard">
-
                       <div class="row">
-                        <div class="form-group six mobile-four columns">
+                        <div class="form-group twelve mobile-four columns">
+                          <div id="table_container" class="border">
 
-                          <div class="search-bar-box"><!-- search-bar-box -->
+                            <div class="search-bar-box"><!-- search-bar-box -->
+                              <div class="row">
+                                <div class="six columns offset-by-six mobile-four">
 
-                            <div class="row collapse search-input">
-                              <div class="ten mobile-three columns">
-                                <input class="round-left" type="text" placeholder="Search" value="" />
-                              </div>
-                              <div class="two mobile-one columns">
-                                <span class="postfix round-left">
-                                  <div class="search-bar-icons-magnif">
-                                    <p class="icon-">&#xf002;</p>
+                                  <div class="row collapse search-input">
+                                    <div class="ten mobile-three columns">
+                                      <input class="round-left" type="text" placeholder="Search" value="" />
+                                    </div>
+                                    <div class="two mobile-one columns">
+                                      <span class="postfix round-left">
+                                        <div class="search-bar-icons-magnif">
+                                          <p class="icon-">&#xf002;</p>
+                                        </div>
+                                      </span>
+                                    </div>
                                   </div>
-                                </span>
+                                </div><!-- END /search-bar-box -->
                               </div>
                             </div>
 
-                          </div><!-- END /search-bar-box -->
+                            <table id="report-templates-table" class="twelve border nested-table">
+                              <thead>
+                                <tr>
+                                  <th></th>
+                                  <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                                  <th><a class="sorting-block">Position<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                                  <th><a class="sorting-block">Percent Developed<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                                </tr>
+                              </thead>
+                              <tbody>
 
-                          <div class="list no-margin">
-                            <div class="list-name">
-                              <h5>List Name</h5>
-                            </div>
+                                <tr>
+                                  <td><label for="checkbox1"><input type="checkbox" data-customforms="disabled" id="checkbox1"/></label></td>
+                                  <td><a href="petrocore-my-teams-development-page-6.html">Avenal, Richmond (G2BS)</a></td>
+                                  <td>Drilling Engineer</td>
+                                  <td>12 %</td>
+                                </tr>
 
-                            <div class="list-item">
-                              <div class="list-item-name">Avenal, Richmond (G2BS)</div>
-                            </div>
+                                <tr>
 
-                            <div class="list-item">
-                              <div class="list-item-name">Barber, Jen (JBAR)</div>
-                            </div>
+                                  <td><label for="checkbox2"><input type="checkbox" data-customforms="disabled" id="checkbox2"/></label></td>
+                                  <td><a href="petrocore-my-teams-development-page-6.html">Barber, Jen (JBAR)</a></td>
+                                  <td>Team Lead</td>
+                                  <td>55 %</td>
+                                </tr>
 
-                            <div class="list-item">
-                              <a class="transformers-hidden-link" href="petrocore-my-teams-development-page-6.html">
-                              <div class="list-item-name">Moss, Maurice (HROY)</div>
-                              </a>
-                            </div>
+                                <tr>
+                                  <td><label for="checkbox3"><input type="checkbox" data-customforms="disabled" id="checkbox3"/></label></td>
+                                  <td><a href="petrocore-my-teams-development-page-6.html">Moss, Maurice (HROY)</a></td>
+                                  <td>Support Technician</td>
+                                  <td>100%</td>
+                                </tr>
 
+                                <tr>
+                                  <td><label for="checkbox4"><input type="checkbox" data-customforms="disabled" id="checkbox4"/></label></td>
+                                  <td><a href="petrocore-my-teams-development-page-6.html">Trenneman, Roy (OAOA)</a></td>
+                                  <td>Accountant</td>
+                                  <td>75 %</td>
+                                </tr>
 
-                            <div class="list-item">
-                              <div class="list-item-name">Trenneman, Roy (OAOA)</div>
-                            </div>
-
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="pagination-centered">
+                            <ul class="pagination">
+                              <li class="arrow unavailable"><a href="" class="fix-margin-right">&laquo;</a></li>
+                              <li class="arrow unavailable"><a href="">&lsaquo;</a></li>
+                              <li class="current"><a href="">1</a></li>
+                              <li class="arrow"><a href="">&rsaquo;</a></li>
+                              <li class="arrow"><a href="" class="fix-margin-left">&raquo;</a></li>
+                            </ul>
                           </div>
                         </div>
+
                       </div>
 
                     </div>
