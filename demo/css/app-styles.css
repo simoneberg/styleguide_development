@@ -79,6 +79,12 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   clear: both;
 }
 
+.selected:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  float: left;
+  margin-right: 5px;
+}
 
 .pagination-counter {
   color: #757575;
@@ -2146,13 +2152,6 @@ label.inline {
   padding: 7px 12px 7px 15px;
   border: solid 1px #929292;
   border-bottom: none;
-}
-
-.list-item.selected:before {
-  content: "\f00c";
-  font-family: FontAwesome;
-  float: left;
-  margin-right: 5px;
 }
 
 .list-item.tall {
