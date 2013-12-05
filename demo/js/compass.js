@@ -433,7 +433,7 @@ $('.tabs-slides-container').gettingStarted();
         at:"center center",
         of:".dev-activity"
       },
-      content: ".popover-content"
+      content: ".popover-content, .popover-content-right"
     },
     _create : function() {
       var that = this;
