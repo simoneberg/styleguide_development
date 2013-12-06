@@ -2566,7 +2566,7 @@ a.sorting-block:hover .add-sorting-icon {
   overflow: hidden;
   clear: both;
   margin-left: 0;
-  margin-top: 10px;
+ /* margin-top: 10px;*/removing the spacing between the footer and the scroll for manage dashboard(sberg)
   padding-top: 6px;
   padding-left: 15px;
   padding-right: 15px;
