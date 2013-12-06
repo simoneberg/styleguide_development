@@ -1716,6 +1716,10 @@ form.custom .twelve.columns .control-with-trailing-icon {
   width: 95% !important;
 }
 
+form.custom table.with-inputs .control-with-trailing-icon {
+  width: 85%;
+}
+
 label {
   color: #333;
   cursor: default;
@@ -1926,6 +1930,31 @@ div.scroll-both {
 
 .set-width-200 {
   width: 200px;
+}
+
+.input-columns {
+  content:"";
+  display: table;
+}
+.input-columns:after {
+  clear: both;
+}
+.input-columns input[type="radio"], .input-columns input[type="checkbox"] {
+  float: left;
+}
+.input-columns  {
+  word-wrap: break-word;
+}
+
+.input-columns-left-margin {
+  margin-left: 23px;  
+}
+
+.input-columns-radio-text {
+  margin-top: 4px;  
+}
+.input-columns-checkbox-text {
+  margin-top: 2px;  
 }
 
 /* zurb control modifications */
@@ -2772,6 +2801,12 @@ border: 1px solid #8a8a8a;
   -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
   box-shadow: inset 0 1px 1px #d1d1d1;
   border-top: 1px solid #bdbdbd;
+  content: "";
+  display:table;
+}
+
+.modal-footer:after {
+  clear: both;
 }
 
 .reveal-modal>:first-child {
@@ -4468,10 +4503,6 @@ a.milestone-date:hover {
   margin:0px;
 }
 
-.dev-activity-control-leftmargin {
-  margin-left:23px;
-}
-
 .activity-title {
   margin: 10px 0 15px 0;  
 }
@@ -4509,6 +4540,7 @@ ul.activity-code-list li {
   -webkit-box-shadow: 1px 1px 4px #999999;
   box-shadow: 1px 1px 4px #999999; 
 }
+
 .skillgroupstatus {
   border: 1px solid #a1a1a1;
   border-radius: 5px;
@@ -4968,6 +5000,10 @@ a.action-item-disabled {
   form.custom .eleven.columns .control-with-trailing-icon,
   form.custom .twelve.columns .control-with-trailing-icon {
     width: 90% !important;
+  }
+
+  form.custom table.with-inputs .control-with-trailing-icon {
+    width: 70%;
   }
 
   .avatar {
@@ -5904,6 +5940,10 @@ a.action-item-disabled {
   .panel-header-icons-container.skills {
     width: 89%;
     left: 10px;
+  }
+
+  .skill-description-box {
+    padding: 15px 8px;
   }
 
 }
