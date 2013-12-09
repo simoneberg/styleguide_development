@@ -1,0 +1,1373 @@
+
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+  <title>PetroSkills Online Style Guide</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="../stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="../demo/css/app-styles.css">
+
+  <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css">
+  <![endif]-->
+
+  <script src="../javascripts/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+<!--***** PETROCORE HEADER *****-->
+
+<nav class="top-bar">
+  <div class="toggle-nav-mobile"><a href="#" class="toggle-btn"></a></div>
+  <div class="logo"></div>
+  <div class="profile-container">
+    <div class="avatar"></div>
+<!--    <div class="dropdown-profile"><p class="icon-">&#xf0dd;</p></div>  -->
+      <div class="top-nav">
+        <ul>
+          <!-- <li class="top-nav-links"><a href="#" class="username">John Doe</a></li> -->
+
+		 <li id="notification_btn"><a class="round button notification-btn" href="#"><span id="user-notifications">3</span></a></li>
+
+         <li class="has-dropdown"><a href="#" class="username">John Doe</a>
+              <ul class="dropdown user">
+                  <li><a href="petrocore-person-details-landing.html">Settings</a></li>
+                  <li><a href="#">Role Summary</a></li>
+                  <li><a href="#">Account History</a></li>
+                  <li><a href="#">Role History</a></li>
+              </ul>
+          </li>
+          <li><p class="bar">&#124;</p></li>
+
+            <li class="has-dropdown"><a href="#">Language</a>
+              <ul class="dropdown language">
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Polski</a></li>
+              </ul>
+            </li>
+          <li><p class="bar">&#124;</p></li>
+
+
+          <li class="top-nav-links"><a href="#">Help</a></li>
+          <li><p class="bar">&#124;</p></li>
+          <li class="top-nav-links"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<!--***** PETROCORE HEADER *****-->
+
+
+
+<!--***** MAIN WRAPPER *****-->
+<div class="row master-wrapper">
+
+  <!--***** LEFT SPLIT CONTAINER *****-->
+  <div class="three columns left-split-container">
+
+      <!--***** SEARCH *****-->
+      <div class="search-container">
+      	<i class="icon-search collapse-menu"></i>
+        <div class="row collapse search-input">
+
+          <div class="nine mobile-four columns">
+            <input id="initial-search" class="round-left" type="text" value="" />
+          </div>
+
+          <div class="one mobile-one columns">
+            <span class="postfix dropdown-arrow advanced-search" onclick="show_hide_advanced('advanced_search');"><div class="search-bar-icons-dropdown"><p id="arrowdown" class="icon-">&#xf0dd;</p></div></span>
+          </div>
+
+          <div class="two mobile-one columns">
+            <span class="postfix round-left"><div class="search-bar-icons-loupe"><p id="magnifglass" class="icon-">&#xf002;</p></div></span>
+          </div>
+
+        </div>
+      </div>
+      <!--***** SEARCH *****-->
+
+	  <div id="advanced_search" class="display-none">
+	  <!--This is a Advanced Search panel that is hidden by default-->
+
+		<p><strong>Advanced Search</strong></p>
+
+			<form class="custom search-type">
+				<label id="search-type-label" for="customDropdown">Search Type:</label>
+				<select class="custom-dropdown expand" id="customDropdown">
+					<option SELECTED>Person</option>
+					<option>Group</option>
+					<option>Position</option>
+					<option>Map</option>
+					<option>Skill Group</option>
+					<option>Skill</option>
+					<option>Skill Description</option>
+					<option>Development Activity</option>
+				</select>
+
+			</form>
+            <div class="add-filter-container">
+
+				<!--***** ADD FILTER *****-->
+                <p class=""><b>Filter: </b><a id="add_a_filter" href="" data-reveal-id="people-filter" class="">Add a Filter</a></p>
+				<!--***** ADD FILTER *****-->
+
+				<div class="add-filter-area">
+					<hr class="petrocore-hr">
+         	<ul id="filters">
+            <li class="added-filter collapse"><div class="inside-filter-txt">Facility is Houston</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+            <li class="added-filter collapse"><div class="inside-filter-txt">Position Title is Manager</div><div class="inside-filter-icon"><a href="#" class="icon-">&#xf040;</a></div></li>
+   		    </ul>
+        </div>
+			</div>
+		</div>
+
+      <!--***** MAIN NAVIGATION *****-->
+      <div class="left-nav-container">
+        <!--This will hold the accordeon navigation-->
+        <ul class="accordion">
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-dashboard-manage-dashboard.html"><div class="icon- navicon">&#xf080;</div>Dashboard</a></h6>
+              </div>
+            </li>
+            <li class="active">
+              <div class="title">
+                <h6><a href="petrocore-my-position-skill-groups.html"><div class="icon- navicon">&#xf0ae;</div>My Position</a></h6>
+              </div>
+              <div class="content">
+                <ul class="skillstatus">
+                  <li><strong>Your Skill Groups</strong></li>
+                  <li><div class="skillgroupstatus status-progress"></div><a href="petrocore-my-position-skill.html" class="indent-content"> 40% Defining Well Objectives</a></li>
+                  <li><div class="skillgroupstatus status-progress"></div><a href="#" class="indent-content"> 65% Directional Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-competent"></div><a href="#" class="indent-content">  0% Drilling Fluid System Planning</a></li>
+                  <li><div class="skillgroupstatus status-competent"></div><a href="#" class="indent-content">100% Bit and Hydraulics Planning</a></li>
+                  <li><div class="skillgroupstatus status-progress"></div><a href="#" class="indent-content"> 45% Casing and Cementing Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="indent-content">  0% Drilling Performance Planning</a></li>
+                  <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="indent-content">0% Drilling System, Services, and Materials Selection and Management</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf073;</div>Development Plan</h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6 class="two-lines"><div class="icon- navicon">&#xf0c0;</div>My Team's Development</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                  <li><a href="#">Item 1</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><a href="petrocore-reports.html"><div class="icon- navicon">&#xf02f;</div>Reports</a></h6>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf085;</div>Administration</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Activities</a></li>
+                  <li><a href="#">Groups</a></li>
+                  <li><a href="#">Maps</a></li>
+                  <li><a href="#">People</a></li>
+                  <li><a href="#">Positions</a></li>
+                  <li><a href="#">Profiles</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ad;</div>Tools</h6>
+              </div>
+              <div class="content">
+                <ul>
+                  <li><a href="#">Assessor and Candidate Import</a></li>
+                  <li><a href="#">Custom Properties Editor</a></li>
+                  <li><a href="#">PetroSkills® Development Activity Update</a></li>
+                  <li><a href="#">PetroSkills® Map Update</a></li>
+                  <li><a href="#">Role Permission Set Editor</a></li>
+                  <li><a href="#">Site Configuration</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="no-dropdown">
+              <div class="title">
+                <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
+              </div>
+            </li>
+          </ul>
+          <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
+        </div>
+      <!--***** MAIN NAVIGATION *****-->
+
+  </div>
+  <!--***** LEFT SPLIT CONTAINER *****-->
+
+  <!--***** RIGHT SPLIT CONTAINER *****-->
+  <div class="nine columns right-split-container">
+      <div class="breadcrumbs-container">
+          <div class="toggle-nav-tablet"><a href="#" class="toggle-btn"></a></div>
+        <div class="breadcrumbs-list-container">
+          <ul class="breadcrumbs">
+            <li><a href="#" class="breadcrumbs-home icon-">&#xf015;</a></li>
+            <li><a href="petrocore-my-position-skill-groups.html">My Position</a></li>
+            <li class="current"><a href="#">Defining Well Objectives</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <!--This will hold the content-->
+ 		   <form class="custom">
+
+        <h4>Drilling Engineer</h4>          
+          
+          <div class="save-template-btn">
+            <a class="button secondary radius" href="#">Quick Assess</a>
+          </div>
+          
+          <hr>
+
+          <h6>Developed 34%</h6>
+            
+          <div class="save-template-btn">
+            <ul class="button-group" >
+              <li><a href="#" class="button silver-button first">Status</a></li>
+              <li><a href="#" class="button silver-button last active">Development</a></li>
+              <li>
+                 <div href="#action-button1" class="button dropdown petrocore-actions skill-legend">
+                  Legend
+                  <ul class="">
+                    <li><div class="skillgroupstatus status-not-assessed"></div><a href="#" class="indent">Not Assessed</a></li>
+                    <li><div class="skillgroupstatus status-competent"></div><a href="#" class="indent">Competent</a></li>
+                    <li><div class="skillgroupstatus status-progress"></div><a href="#" class="indent">In Progress</a></li>
+                    <li><div class="skillgroupstatus status-not-competent"></div><a href="#" class="indent">Not Yet Competent</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <hr>
+
+          <div id="Activity-Objective-TwoColumns" class="row">
+            <div id="dev-activity-control" class="four mobile-four columns">
+              <div class="panel-wrapper">
+
+                <div class="panel-header-small-fill">
+                  <h5><strong>Development Activities</strong></h5>
+                </div>
+
+                <div class="row panel-content-container-dev-activities">
+                  <div class="twelve mobile-four columns">
+                    <h6>Filter:</h6>
+                    <hr>
+
+                    <div class="input-columns">
+                      <input name="radio" checked="" type="radio" data-customforms="disabled" id="radio1">
+                      <label class="input-columns-left-margin input-columns-radio-text" for="radio1">Show All</label>
+                    </div>
+                    <div class="input-columns">
+                      <input name="radio" type="radio" data-customforms="disabled" id="radio2">
+                      <label class="input-columns-left-margin input-columns-radio-text" for="radio2"> Recommended Activities</label>
+                    </div>
+                    <div class="input-columns-left-margin"><a href="#" data-reveal-id="recommended-activities-settings">Settings</a></div>
+
+                    <h6>Activities:</h6>
+                    <hr>
+                    <p><a href="#" class="secondary radius button block" data-reveal-id="dev-plan-add-activities">Add to Development Plan</a></p>
+                    <p><a href="#">Clear Selection</a></p>
+                  </div>
+                </div>
+
+                  
+                <div class="panel-header-small-fill">
+                  <h5><strong>Available Dev. Activities</strong> (16)</h5>
+                </div>
+
+                 <div class="checkbox-group">
+                  <div class="panel-content-container-dev-activities">
+                  
+                    <div class="row">
+                      <div class="activity-title twelve mobile-four columns"><strong>BDP&amp;C</strong> (2/16)</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox1" checked>
+                          <label class="input-columns-left-margin  input-columns-checkbox-text" for="checkbox1"> N-CVX-002</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                        <div class="input-columns-checkbox-text">
+                          3/3
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox2">
+                          <label class="input-columns-left-margin  input-columns-checkbox-text" for="checkbox2"> N-CVX-003</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">3/3</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="activity-title twelve mobile-four columns"><strong>BDPRT</strong> (14/16)</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox3">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox3">N-CBX-001</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">1/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox4">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox4">N-CBX-002</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">3/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox5">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox5"> N-CBX-003</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">2/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox6">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox6">N-CBX-004</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">2/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox7">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox7"> N-CBX-005</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">1/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group eleven mobile-three columns">
+                        <a class="input-columns-left-margin" href="#">... More</a>
+                      </div>
+                    </div>
+
+                  </div><!--Close panel-content-container-dev-activities-->
+                </div><!--Close checkbox-group-->
+
+                <div class="panel-header-small-fill">
+                  <h5><strong>In Progress</strong> (3)</h5>
+                </div>
+
+                 <div class="checkbox-group">
+                  <div class="panel-content-container-dev-activities">
+                  
+                    <div class="row">
+                      <div class="activity-title twelve mobile-four columns"><strong>EL-IT</strong> (3/3)</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox8" checked>
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox8"> IT-EXP-0096</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">3/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox9">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox9">IT-EXP-0249</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">3/3</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox10">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox10">IT-EXP-0453</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">6/6</div>
+                      </div>
+                    </div>
+
+                  </div><!--Close panel-content-container-dev-activities-->
+                </div><!--Close checkbox-group-->
+
+                <div class="panel-header-small-fill">
+                  <h5><strong>Completed</strong> (8)</h5>
+                </div>  
+
+                 <div class="checkbox-group">
+                  <div class="panel-content-container-dev-activities">
+                  
+                    <div class="row">
+                      <div class="activity-title twelve mobile-four columns"><strong>ML-IT</strong> (5/8)</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox11">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox11">IT-EXP-0131</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">2/2</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox12" checked>
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox12">IT-EXP-0015</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">1/1</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox13">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox13">IT-EXP-0132</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox14">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox14">IT-EXP-0016</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">1/1</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox15">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox15">IT-EXP-0133</label>
+                        </div>
+                        
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="activity-title twelve mobile-four columns"><strong>BL-IT</strong> (8/8)</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox16">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox16">IT-EXP-0131</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">2/2</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox17">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox17">IT-EXP-0015</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">1/1</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox18">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox18">IT-EXP-0132</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox19">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox19">IT-EXP-0133</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox20">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox20"> IT-EXP-0134</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          4/4
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox21">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox21"> IT-EXP-0135</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox22">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox22">IT-EXP-0136</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <div class="input-columns">
+                          <input type="checkbox" data-customforms="disabled" id="checkbox23">
+                          <label class="input-columns-left-margin input-columns-checkbox-text" for="checkbox23">IT-EXP-0137</label>
+                        </div>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                          <div class="input-columns-checkbox-text">4/4</div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group ten mobile-three columns">
+                        <a class="input-columns-left-margin" href="#">... Less</a>
+                      </div>
+                      <div class="form-group two mobile-one columns">
+                      </div>
+                    </div>
+
+                  </div><!--Close panel-content-container-dev-activities-->
+                </div><!--Close checkbox-group-->
+
+
+              </div><!--Close panel-wrapper-->  
+            </div><!--Close Four Column-->
+
+            <div class="eight mobile-four columns">
+
+              <h5>Defining Well Objectives</h5>
+              <div class="row">
+                <div class="four columns">
+                  <p>Developed: 40%</p>
+                </div>
+                <div class="eight columns">
+                 <p>Development based on your selection: 60%</p>
+                </div>
+             </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="form-group three mobile-one columns align-center">
+                  <label>Awareness</label>
+                </div>
+                <div class="form-group three mobile-one columns align-center">
+                  <label>Fundamental Application</label>
+                </div>
+                <div class="form-group three mobile-one columns align-center">
+                  <label>Skilled Application</label>
+                </div>
+                <div class="form-group three mobile-one columns align-center">
+                  <label>Mastery</label>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="form-group three mobile-one columns">
+                  <div class="skill-description-box status-competent"></div>
+                </div>
+                <div class="form-group three mobile-one columns ">
+                  <div class="skill-description-box status-progress"></div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-box status-progress"></div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skill-description-box status-not-competent"></div>
+                </div>
+              </div>
+              <h6>Your Skills<h6>  
+              <div class="row skills-check-wrapper">
+                  <div class="filters-checklist panel-content-container-dev-activities">
+                    <div class="twelve mobile-four columns ">
+                      <div class="input-columns">
+                        <input type="checkbox" data-customforms="disabled" id="checkbox1">
+                        <label class="input-columns-left-margin" for="checkbox1"> Show only high importance skill descriptions</label>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <h6>Evaluation Program 40%</h6>
+              <div class="row">
+                <div class="form-group three mobile-one columns">
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-competent"></div>
+                    <ul class="activity-code-list">
+                      <li>N-CVX-002</li>
+                      <li>IT-EXP-0096</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns ">
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-progress"></div>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-progress"></div>
+                     <ul class="activity-code-list">
+                      <li>IT-EXP-0015</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-not-competent"></div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <h6>Testing Program: 20%</h6>
+              <div class="row">
+                <div class="form-group three mobile-one columns">
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-competent"></div>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns">
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-progress"></div>
+                    <ul class="activity-code-list">
+                      <li>N-CVX-002</li>
+                      <li>IT-EXP-0096</li>
+                      <li>IT-EXP-0015</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns">
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-not-competent"></div>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-not-competent"></div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <h6>Completion Program: 50%</h6>
+              <div class="row">
+                <div class="form-group three mobile-one columns">
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-competent"></div>
+                    <ul class="activity-code-list">
+                      <li>N-CVX-002</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns ">
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-competent"></div>
+                    <ul class="activity-code-list">
+                      <li>IT-EX-0096</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skillbox-detail-wrapper active">
+                    <div class="skill-description-box status-not-competent"></div>
+                    <ul class="activity-code-list">
+                      <li>IT-EXP-0015</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="form-group three mobile-one columns " >
+                  <div class="skillbox-detail-wrapper">
+                    <div class="skill-description-box status-not-competent"></div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+            </div><!--Close Eight Column-->
+
+          </div><!--Close Activity-Objective-TwoColumns-->
+
+		    </form>
+      </div><!--Close Content Container-->
+
+    </div>
+    <!--***** RIGHT SPLIT CONTAINER *****-->
+  </div>
+  <!--***** MAIN WRAPPER *****-->
+
+<!--***** FOOTER *****-->
+
+<div class="row">
+  <div class="twelve columns petrocore-footer">
+    <div class="nine columns"><div class="trademark"><p>Copyright© 2013 Petroskills. All rights reserved</p></div></div>
+    <div class="three columns"><div class="feedback"><a href="#">Send us your feedback</a></div></div>
+  </div>
+</div>
+<!--***** FOOTER *****-->
+
+  <!-- Entire Navbar Code -->
+<!-- <ul class="nav-bar">
+  <li class="has-flyout">
+    <a href="#">Nav Item 2</a>
+    <a href="#" class="flyout-toggle"><span> </span></a>
+    <ul class="flyout">
+      <li><a href="#">Sub Nav Item 1</a></li>
+      <li><a href="#">Sub Nav Item 2</a></li>
+      <li><a href="#">Sub Nav 3</a></li>
+      <li><a href="#">Sub Nav 4</a></li>
+      <li><a href="#">Sub Nav Item 5</a></li>
+    </ul>
+  </li> -->
+
+  <!-- END NAVIGATION -->
+    <!-- </div> -->
+  <!-- </div> -->
+  <!-- CONTENT AREA -->
+
+<div id="dev-plan-add-activities" class="reveal-modal large">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Add Activities to Development Plan</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+    <form class="custom">
+    <p>You are about to add the following activity(ies) to your Development Plan.</p>
+      <table class="twelve with-inputs">
+        <thead>
+          <tr>
+            <th>Activity Code</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>N-CVX-002</td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+          <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+            <td><input class="control-with-trailing-icon" type="text" placeholder="" value=""/>
+            <a class="icon-trailing-control input" href"#">&#xf073;</a> </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>The following activity(ies) are already on your Development Plan.</p>
+        
+      <table class="twelve">
+        <thead>
+          <tr>
+            <th>Activity Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>IT_EXP_0096</td>
+            <td>In Progress</td>
+          </tr>
+          <tr>
+            <td>IT_EXP_0015</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </form>
+
+  </div>
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+
+
+<!-- Recommended Activities Settings -->
+<div id="recommended-activities-settings" class="reveal-modal expand">
+  <div class="panel-header">
+    <div class="panel-title-container">
+      <h5>Recommended Activities</h5>
+    </div>
+    <div class="panel-header-icons-container">
+      <ul class="panel-header-icons-list">
+        <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="popup-content-container">
+    <p>The following options will be used when selecting the recommended Development Activities</p>
+    <form class="custom">
+
+      <div class="form-group">
+        <label>Filter by:</label>
+      </div>
+
+      <div class="recommended-activities-box scroll-vertical-auto">
+
+          <!-- Dashboard Panel -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <label for="checkbox_CCT"><h5 class="name-classifier"><input type="checkbox" data-customforms="disabled" id="checkbox_CCT"> Chevron Classroom Training <span class="plain">1/2</span></h5></label>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li class="open-close-arrow">
+                    <a class="panel-header-icons-collapse-up icon-"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container-dashboard">
+              <!--This will hold the content-->
+              <div class="checkbox-group">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_c1"><input type="checkbox" data-customforms="disabled" id="checkbox_c1"> BDP&amp;C</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_c2"><input type="checkbox" data-customforms="disabled" id="checkbox_c2" checked> IT</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dashboard Panel -->
+
+          <!-- Dashboard Panel -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <label for="checkbox_EL"><h5 class="name-classifier"><input type="checkbox" data-customforms="disabled" id="checkbox_EL" checked> Experiential Learning <span class="plain">16/16</span></h5></label>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li class="open-close-arrow">
+                    <a class="panel-header-icons-collapse-up icon-"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container-dashboard">
+              <!--This will hold the content-->
+              <div class="checkbox-group">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp1"><input type="checkbox" data-customforms="disabled" id="checkbox_exp1" checked> Item 1</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp2"><input type="checkbox" data-customforms="disabled" id="checkbox_exp2" checked> Item 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp3"><input type="checkbox" data-customforms="disabled" id="checkbox_exp3" checked> Item 3</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp4"><input type="checkbox" data-customforms="disabled" id="checkbox_exp4" checked> Item 4</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp5"><input type="checkbox" data-customforms="disabled" id="checkbox_exp5" checked> Item 5</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp6"><input type="checkbox" data-customforms="disabled" id="checkbox_exp6" checked> Item 6</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp7"><input type="checkbox" data-customforms="disabled" id="checkbox_exp7" checked> Item 7</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp8"><input type="checkbox" data-customforms="disabled" id="checkbox_exp8" checked> Item 8</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp9"><input type="checkbox" data-customforms="disabled" id="checkbox_exp9" checked> Item 9</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp10"><input type="checkbox" data-customforms="disabled" id="checkbox_exp10" checked> Item 10</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp11"><input type="checkbox" data-customforms="disabled" id="checkbox_exp11" checked> Item 11</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp12"><input type="checkbox" data-customforms="disabled" id="checkbox_exp12" checked> Item 12</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp13"><input type="checkbox" data-customforms="disabled" id="checkbox_exp13" checked> Item 13</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp14"><input type="checkbox" data-customforms="disabled" id="checkbox_exp14" checked> Item 14</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp15"><input type="checkbox" data-customforms="disabled" id="checkbox_exp15" checked> Item 15</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_exp16"><input type="checkbox" data-customforms="disabled" id="checkbox_exp16" checked> Item 16</label>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <!-- Dashboard Panel -->
+
+          <!-- Dashboard Panel -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <label for="checkbox_BD"><h5 class="name-classifier"><input type="checkbox" data-customforms="disabled" id="checkbox_BD"> Basics of Drilling <span class="plain">0/6</span></h5></label>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li class="open-close-arrow">
+                    <a class="panel-header-icons-collapse-up icon-"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container-dashboard">
+              <!--This will hold the content-->
+              <div class="checkbox-group">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic1"><input type="checkbox" data-customforms="disabled" id="checkbox_basic1"> Item 1</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic2"><input type="checkbox" data-customforms="disabled" id="checkbox_basic2"> Item 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic3"><input type="checkbox" data-customforms="disabled" id="checkbox_basic3"> Item 3</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic4"><input type="checkbox" data-customforms="disabled" id="checkbox_basic4"> Item 4</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic5"><input type="checkbox" data-customforms="disabled" id="checkbox_basic5"> Item 5</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_basic6"><input type="checkbox" data-customforms="disabled" id="checkbox_basic6"> Item 6</label>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <!-- Dashboard Panel --> 
+
+          <!-- Dashboard Panel -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <label for="checkbox_DCL"><h5 class="name-classifier"><input type="checkbox" data-customforms="disabled" id="checkbox_DCL"> Digital Classroom Learning <span class="plain">2/8</span></h5></label>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li class="open-close-arrow">
+                    <a class="panel-header-icons-collapse-up icon-"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container-dashboard">
+              <!--This will hold the content-->
+              <div class="checkbox-group">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl1"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl1" checked> Item 1</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl2"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl2" checked> Item 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl3"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl3"> Item 3</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl4"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl4"> Item 4</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl5"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl5"> Item 5</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl6"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl6"> Item 6</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl7"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl7"> Item 7</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_dcl8"><input type="checkbox" data-customforms="disabled" id="checkbox_dcl8"> Item 8</label>
+                  </div>
+                </div>
+              </div>                  
+            </div>
+          </div>
+          <!-- Dashboard Panel -->       
+
+          <!-- Dashboard Panel -->
+          <div id="panel1" class="panel-wrapper">
+            <div class="panel-header">
+              <div class="panel-title-container">
+                <label for="checkbox_DE"><h5 class="name-classifier"><input type="checkbox" data-customforms="disabled" id="checkbox_DE" checked > Drilling for Engineers <span class="plain">12/12</span></h5></label>
+              </div>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li class="open-close-arrow">
+                    <a class="panel-header-icons-collapse-up icon-"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel-action-icons-container"></div>
+            <div class="panel-content-container-dashboard">
+              <!--This will hold the content-->
+              <div class="checkbox-group">
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill1"><input type="checkbox" data-customforms="disabled" id="checkbox_drill1" checked> Item 1</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill2"><input type="checkbox" data-customforms="disabled" id="checkbox_drill2" checked> Item 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill3"><input type="checkbox" data-customforms="disabled" id="checkbox_drill3" checked> Item 3</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill4"><input type="checkbox" data-customforms="disabled" id="checkbox_drill4" checked> Item 4</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill5"><input type="checkbox" data-customforms="disabled" id="checkbox_drill5" checked> Item 5</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill6"><input type="checkbox" data-customforms="disabled" id="checkbox_drill6" checked> Item 6</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill7"><input type="checkbox" data-customforms="disabled" id="checkbox_drill7" checked> Item 7</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill8"><input type="checkbox" data-customforms="disabled" id="checkbox_drill8" checked> Item 8</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill9"><input type="checkbox" data-customforms="disabled" id="checkbox_drill9" checked> Item 9</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill10"><input type="checkbox" data-customforms="disabled" id="checkbox_drill10" checked> Item 10</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill11"><input type="checkbox" data-customforms="disabled" id="checkbox_drill11" checked> Item 11</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label for="checkbox_drill12"><input type="checkbox" data-customforms="disabled" id="checkbox_drill12" checked> Item 12</label>
+                  </div>
+                </div>
+              </div>                  
+            </div>
+          </div>
+          <!-- Dashboard Panel -->                      
+
+
+
+      </div>
+
+      <div class="row">
+        <div class="form-group four mobile-four columns">
+          <label for="customDropdown">Select the best</label>
+          <!-- the select tag which is hte default HTML is not visible when
+          in a custom form and the class custom-dropdown is used. -->
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option SELECTED>5</option>
+            <option>item 2</option>
+            <option>item 3</option>
+            <option>item 4</option>
+          </select>
+          <!-- the div with class custom dropdown displays the
+          dropdown in a Zurb custom form.
+          expand tells Zurb that the dropdown should take up
+          as much horizontal space as possible. -->
+          <div class="custom dropdown expand">
+            <a href="#" class="current">
+              5
+            </a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>item 2</li>
+              <li>item 3</li>
+              <li>item 4</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve mobile-four columns ">
+            <label for="checkboxShow"><input type="checkbox" data-customforms="disabled" id="checkboxShow"> Show only High Importance</label>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
+  </div>
+</div>
+<!-- Recommended Activities Settings -->
+
+
+
+<div id="overlay"></div>
+
+<div class="notifications-popup">
+
+	<div class="arrow"></div>
+	<div class="arrow-border"></div>
+
+	<div class="notifications-title">
+    	<h5>Notifications</h5>
+	</div>
+
+	<div class="notifications-area">
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 1 has been generated</p>
+	        <a href="#">View Report</a>
+			<hr class="hr-notification">
+	    </div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 2 has been generated</p>
+			<a href="#">View Report</a>
+			<hr class="hr-notification">
+		</div>
+
+		<div class="notification">
+			<a href="#" class="icon- anotification">&#xf00d;</a>
+			<p>Report Lorem Ipsum 3 has been generated</p>
+			<a href="#">View Report</a>
+		</div>
+
+	</div>
+</div>
+
+<!-- Included JS Files (Compressed) -->
+<script src="../javascripts/foundation.min.js"></script>
+<!-- initialize foundation -->
+<script src="../javascripts/app.js"></script>
+
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.9.2.js"></script>
+
+<!-- Application specific javascript -->
+<script src="js/compass.js"></script>
+<script src="js/compass-ie8.js"></script>
+
+</body>
+</html>
