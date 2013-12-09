@@ -1,18 +1,14 @@
+// Show and hide Advanced Search Panel
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('p.search-arrow');
+  var advanced_arrow = $('p.search-arrow').css('position', 'relative');
+  
   if (advanced_panel.is(':hidden')) {
-    advanced_panel.removeClass("display-none");
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0de;');
-    advanced_arrow.css("position", "relative");
-    advanced_arrow.css("top", "7px");
+    advanced_panel.show();
+    advanced_arrow.css("top", "7px").html('&#xf0de;');
   } else {
-    advanced_panel.addClass("display-none");
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0dd;');
-    advanced_arrow.css("position", "relative");
-    advanced_arrow.css("top", "0px");
+    advanced_panel.hide();
+    advanced_arrow.css("top", "0px").html('&#xf0dd;');
   }
 }
 
@@ -82,8 +78,11 @@ $(document).ready(function(){
 
   function open_close(ev) {
     ev.preventDefault();
+    var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
 
-    current_panel = $(this).closest('div:has(.panel-content-container-dashboard)').children('.panel-content-container-dashboard, .panel-footer');
+    var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
+
+    current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
 
     if ($(current_panel).is(':hidden')) {
@@ -220,19 +219,20 @@ $(document).ready(function(){
   }); 
   
   // Add A Competency Control Item to the list
-  $('#addcompetency').click (function() {
-
+  $('#addcompetency').click (function(ev) {
+    ev.preventDefault();
     var n = $("#competency_list li").length;
     var newdescription = "Competence level " + (n+1);
 
     $('#competency_list li.competence-level-item').eq(0).clone(true).appendTo('#competency_list');
     $("#competency_list li .cl-number").eq(n).html(n+1);
-    $("#competency_list li .cl-description").eq(n).html(newdescription);
+    $("#competency_list li .cl-description span").eq(n).html(newdescription);
     $('#competency_list').sortcompetency();
   });
-
+  
   // Removes Competency Control Items from the list
-  $('#competency_list li .cl-icon-x').click(function(){
+  $('#competency_list li .cl-icon-x').click(function(ev){
+    ev.preventDefault();
     if ($("#competency_list li").length > 1) {
       $(this).parent().parent('li').remove();
       $('#competency_list').sortcompetency();
@@ -240,14 +240,16 @@ $(document).ready(function(){
   });
 
   // Move Up Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-up').click(function(){
+  $('#competency_list li .cl-icon-arrow-up').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertBefore(parent.prev());
     $('#competency_list').sortcompetency();
   });
 
   // Move Down Competency Control Items from the list
-  $('#competency_list li .cl-icon-arrow-down').click(function(){
+  $('#competency_list li .cl-icon-arrow-down').click(function(ev){
+    ev.preventDefault();
     var parent = $(this).parent().parent('li');
     parent.insertAfter(parent.next());
     $('#competency_list').sortcompetency();
@@ -266,37 +268,37 @@ $(document).ready(function(){
       $(this).find('.cl-number').html(index+1);
       if ( $(this).find('.cl-number').html() == 1 || $(this).find('.cl-number').html() == n )
       {
-        $(this).find('a.cl-icon-x').removeClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-x').removeClass('is-disabled').hover(function(){
           $(this).css("color","#0169a0");},function(){
           $(this).css("color","#858585");});
 
           if ( $(this).find('.cl-number').html() == 1 )
           {
-            $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
           }
           else
           {
-            $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
               $(this).css("color","#0169a0");},function(){
               $(this).css("color","#858585");});
 
-            $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+            $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
               $(this).css("color","#858585");},function(){
               $(this).css("color","#858585");});
           }
         }
         else
         {
-          $(this).find('a.cl-icon-arrow-up').removeClass('disabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-up').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
-          $(this).find('a.cl-icon-arrow-down').removeClass('disabled').hover(function(){
+          $(this).find('a.cl-icon-arrow-down').removeClass('is-disabled').hover(function(){
             $(this).css("color","#0169a0");},function(){
             $(this).css("color","#858585");});
         }
@@ -304,13 +306,13 @@ $(document).ready(function(){
       else
       {
         $(this).find('.cl-number').html(index+1);
-        $(this).find('a.cl-icon-x').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-x').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-up').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-up').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
-        $(this).find('a.cl-icon-arrow-down').addClass('disabled').hover(function(){
+        $(this).find('a.cl-icon-arrow-down').addClass('is-disabled').hover(function(){
           $(this).css("color","#858585");},function(){
           $(this).css("color","#858585");});
       }
@@ -320,6 +322,35 @@ $(document).ready(function(){
   }
 
 });
+
+/* Closes the Advanced Search Panel */
+ 
+function close_advanced_search_panel() {
+
+  var advanced_panel = $('#advanced_search');
+  if (advanced_panel.is(':visible')) {
+    advanced_panel.hide();
+    $('p.search-arrow').css("position", "relative").css("top", "0px").html('&#xf0dd;');
+  }
+}
+
+/* Adjust row to equal height in Competency Level Control */
+function adjust_height_competency_control() {
+
+  var maxHeight = $('.cl-description').height();
+
+  $('.cl-description').each(function(index) {
+    if($('.cl-description').eq( index ).height() > maxHeight) {
+      maxHeight = $('.cl-description').eq( index ).height();
+    }
+    index++;
+  });
+  $('#competency_list .competence-level-number').height(maxHeight);
+};
+
+/* Event bound for the Competency Level Control */
+$(window).on('load', adjust_height_competency_control);
+$(window).on('resize', adjust_height_competency_control);
 
 /* prevent hash changes on any nexted tabs*/
 $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
@@ -402,7 +433,7 @@ $('.tabs-slides-container').gettingStarted();
         at:"center center",
         of:".dev-activity"
       },
-      content: ".popover-content"
+      content: ".popover-content, .popover-content-right"
     },
     _create : function() {
       var that = this;
@@ -473,6 +504,7 @@ $(function() {
   var wrapper = $(".master-wrapper")
   
   wrapper.toggleClass("collapsed");
+  close_advanced_search_panel();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
@@ -505,4 +537,75 @@ $(function() {
     }
     }
   });
+});
+
+/* dynamic modal size demo */
+$( "#btn-dynamic-modal-small" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("small");
+});
+
+$( "#btn-dynamic-modal-medium" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("medium");
+});
+
+$( "#btn-dynamic-modal-large" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("large");
+});
+
+$( "#btn-dynamic-modal-xlarge" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("xlarge");
+});
+
+$( "#btn-dynamic-modal-expand" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("expand");
+});
+
+$( "a[data-reveal-id='dynamic-modal-small']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal-small" ).removeClass("small");
+  $( "#dynamic-modal-small" ).addClass("small");
+});
+
+$( "a[data-reveal-id='dynamic-modal-medium']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal-medium" ).removeClass("small");
+  $( "#dynamic-modal-medium" ).addClass("medium");
+});
+
+$( "a[data-reveal-id='dynamic-modal-large']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal-large" ).removeClass("small");
+  $( "#dynamic-modal-large" ).addClass("large");
+});
+
+$( "a[data-reveal-id='dynamic-modal-xlarge']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal-xlarge" ).removeClass("small");
+  $( "#dynamic-modal-xlarge" ).addClass("xlarge");
+});
+
+$( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal-expand" ).removeClass("small");
+  $( "#dynamic-modal-expand" ).addClass("expand");
 });

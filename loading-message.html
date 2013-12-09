@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Calendar – PetroSkills Online Style Guide</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/foundation-override.css">
+
+  <script src="javascripts/modernizr.foundation.js"></script>
+
+<!--<style type="text/css">
+table {border-top: 1px solid black; border-right: 1px solid black; border-left: 1px solid black; border-radius:0px; border-spacing: 0px;}
+table thead, table tfoot {background-color:#925d01 !important;}
+table tbody tr td {border-bottom: 1px solid black;}
+</style>-->
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="top-bar">
+    <ul>
+      <li class="name"><h1><a href="index.html">PetroSkills Online Style Guide</a></h1></li>
+      <!-- <li class="toggle-topbar"><a href="#"></a></li> -->
+    </ul>
+    <!-- <section>
+      <ul class="left">
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </section> -->
+  </nav>
+  <!-- END NAVIGATION -->
+
+  <!-- PAGE TITLE -->
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Patterns</h2>
+      <p>These elements alter page content when users interact with them.</p>
+    </div>
+  </div>
+  <!-- END PAGE TITLE -->
+
+  <!-- CONTENT AREA -->
+  <div class="row">
+    <div class="three columns">
+    <!-- SIDE BAR -->
+  <ul class="tabs vertical">
+    <li><a href="index.html">Getting Started</a></li>
+    <li><a href="grids.html">Foundations</a></li>
+    <li><a href="building-blocks.html">Building Blocks</a></li>
+    <li class="active"><a href="tables.html">Patterns</a>
+      <ul class="subitems">
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="charts.html">Charts</a></li>
+          <li><a href="context-menu.html">Context Menu</a></li>
+          <li class="active"><a href="loading-message.html">Loading Message</a></li>
+          <li><a href="notifications.html">Notifications</a></li>
+          <li><a href="popups.html">Pop-ups</a></li>
+          <li><a href="tables.html">Tables</a></li>
+          <li><a href="tabs.html">Tabs</a></li>
+          <li><a href="tooltips.html">Tooltips</a></li>
+        </ul>
+    </li>
+    <li><a href="add-activity.html">Design Examples</a></li>
+    <!-- <li class="active"><a href="#">Item 6</a>
+        <ul class="subitems">
+          <li class="active"><a href="#">Subitem 1</a></li>
+          <li><a href="#">Subitem 2</a></li>
+          <li><a href="#">Subitem 3</a></li>
+          <li><a href="#">Subitem 4</a></li>
+          <li><a href="#">Subitem 5</a></li>
+        </ul>
+    </li> -->
+    <li><a href="prototype.html">Prototype</a></li>
+      <li><a href="support.html">Support</a></li>
+  </ul>
+    <!-- END SIDE BAR -->
+
+  </div>
+    <div class="nine columns">
+      <h2>Loading Message</h2>
+      <p>When pages take longer to load, the system displays a Loading Message to keep users informed that there is a process in progress.</p>
+      <p><img src="images/loading-message.png" alt="Loading Message"></p>
+      &nbsp;
+    </div>
+  </div>
+  <!-- CONTENT AREA -->
+
+  
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  <script src="javascripts/jquery.event.move.js"></script>
+  <script src="javascripts/jquery.event.swipe.js"></script>
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  <script src="javascripts/jquery.placeholder.js"></script>
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+
+  
+    <script>
+    $(window).load(function(){
+      $("#featured").orbit();
+    });
+    </script> 
+  
+</body>
+</html>

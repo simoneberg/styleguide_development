@@ -88,6 +88,8 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
+          <i class="icon-search collapse-menu"></i>
+
 
           <div class="row collapse search-input">
                   
@@ -105,9 +107,11 @@
                     
             <div class="two mobile-one columns">
               <span class="postfix round-left">
-                <div class="search-bar-icons-magnif">
-                  <p class="icon-">&#xf002;</p>
-                </div>
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
               </span>
             </div>
             
@@ -183,7 +187,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -218,8 +222,8 @@
                 <ul>
                   <li><a href="#">Activities</a></li>
                   <li><a href="#">Groups</a></li>
-                  <li><a href="#">Maps</a></li>
-                  <li><a href="#">People</a></li>
+                  <li><a href="petrocore-administration-map.html">Maps</a></li>
+                  <li><a href="petrocore-user-summary.html">Users</a></li>
                   <li><a href="#">Positions</a></li>
                   <li><a href="#">Profiles</a></li>
                 </ul>
@@ -269,49 +273,64 @@
     <!--This will hold the content-->
       <h4>Competency Levels</h4>
       <hr>
+
+      <div class="row">
+        <div class="eight mobile-four columns reset-padding">
+
+          <!-- ********************************************************************************* -->
+          <!-- ********************** This is the Competency Levels panel ********************** -->
+          <!-- ********************************************************************************* -->
+          <div id="competencelevel" class="panel-wrapper competency-level-panel"><!-- ********** -->
           
-      <!-- This is dashboard panel 1 -->
-      <div id="competencelevel1" class="panel-wrapper">
-        <div class="panel-header">
+            <div class="panel-header flexible">
 
-          <div class="panel-title-container">
-            <h5 class="name-classifier">Competence Level</h5>
-          </div>
+              <div class="panel-title-container">
+                <h5 class="name-competency">Competence Level</h5>
+              </div>
 
-          <div class="panel-header-icons-container">
-            <ul class="panel-header-icons-list">
-              <li>
-                <a id="addcompetency" class="button secondary radius" href="#">Add Competency</a>
+              <div class="panel-header-icons-container">
+                <ul class="panel-header-icons-list">
+                  <li>
+                    <a id="addcompetency" class="button secondary radius" href="#">Add Competency Levels</a>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+
+            <ul id="competency_list">
+            <!-- List of Items to be displayed -->
+
+              <li class="row competence-level-item">
+                <div class="one mobile-one columns competence-level-number background-blue">
+                  <span class="cl-number">1</span>
+                </div>
+
+               <div class="nine mobile-two columns cl-description">
+                 <span>Competence level 1</span>
+               </div>
+ 
+                <div class="two mobile-one columns cl-icons">
+                  <a href="#" class="icon- cl-icon-arrow-up is-disabled">&#xf062;</a>
+                  <a href="#" class="icon- cl-icon-arrow-down is-disabled">&#xf063;</a>
+                  <a href="#" class="icon- cl-icon-x is-disabled">&#xf00d;</a>
+                </div>
+
               </li>
+
             </ul>
-          </div>
+            
+          <!-- ********************************************************** -->
+          </div><!-- ********** End of Competency Levels panel ********** -->
+          <!-- ********************************************************** -->
+          
         </div>
-
-        <ul id="competency_list">
-        <!-- List of Items to be displayed -->
-
-          <li class="row competence-level-item">
-            <div class="one mobile-one columns competence-level-number background-blue">
-              <p class="cl-number">1</p>
-            </div>
-            <div class="nine mobile-two columns cl-description">
-              <p style="width:100%;">Competence level 1</p>
-            </div>
-            <div class="two mobile-one columns cl-icons">
-              <a href="#" class="icon- cl-icon-arrow-up disabled">&#xf062;</a>
-              <a href="#" class="icon- cl-icon-arrow-down disabled">&#xf063;</a>
-              <a href="#" class="icon- cl-icon-x disabled">&#xf00d;</a>
-            </div>
-          </li>
-
-        </ul>
-
       </div>
 
-     </div><!--Close Content Container-->
-   </div>
+    </div><!--Close Content Container-->
   </div>
-  <!--***** RIGHT SPLIT CONTAINER *****-->
+</div>
+<!--***** RIGHT SPLIT CONTAINER *****-->
 
 <!--***** MAIN WRAPPER *****-->
 

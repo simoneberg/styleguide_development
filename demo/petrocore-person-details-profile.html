@@ -86,6 +86,8 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
+          <i class="icon-search collapse-menu"></i>
+
 
           <div class="row collapse search-input">
                   
@@ -103,9 +105,11 @@
                     
             <div class="two mobile-one columns">
               <span class="postfix round-left">
-                <div class="search-bar-icons-magnif">
-                  <p class="icon-">&#xf002;</p>
-                </div>
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
               </span>
             </div>
             
@@ -179,7 +183,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -269,7 +273,10 @@
         </div>
         <div class="content-container">
           <!--This will hold the content-->
-          <h4>User Settings</h4>
+          <div class="header-inline">
+            <h4>User Settings</h4>
+            <a class="back-to-previous-page" href="petrocore-person-details-landing.html">Back to Previous Page</a>
+          </div>
           <hr>
 
           <div class="same-line">
@@ -289,14 +296,14 @@
             <div class="row">
               <div class="form-group six mobile-four columns">
                 <div class="same-line add-medium-space-right">
-                  <a class="secondary radius button" href="#" data-reveal-id="add_person_profile">Add Profile Category</a>
+                  <a class="secondary radius button" href="#" data-reveal-id="add-profile-categories">Add Profile Categories</a>
                 </div>
               </div>
             </div>
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Grade Level</label>
+                <label>Grade Level<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">Value 1</option>
                   <option>Value 2</option>
@@ -315,7 +322,7 @@
             <hr>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="customDropdown">Country</label>
+                <label for="customDropdown">Country<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">Canada</option>
                   <option>United Kingdom</option>
@@ -339,7 +346,7 @@
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="customDropdown">State / Province</label>
+                <label for="customDropdown">State / Province<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option value="1">Alberta</option>
                   <option selected="selected" value="2">British Columbia</option>
@@ -379,7 +386,7 @@
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label for="customDropdown">City</label>
+                <label for="customDropdown">City<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option>Calgary</option>
                   <option>Edmonton</option>
@@ -402,7 +409,7 @@
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Primary Language Spoken</label>
+                <label>Primary Language Spoken<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">English</option>
                   <option>Spanish</option>
@@ -424,7 +431,7 @@
             <hr>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Previous Employer</label>
+                <label>Previous Employer<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">Shell Oil</option>
                   <option>Exxon</option>
@@ -449,7 +456,7 @@
             <hr>
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Functional Discipline</label>
+                <label>Functional Discipline<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">FD 1</option>
                   <option>FD 2</option>
@@ -473,7 +480,7 @@
 
             <div class="row">
               <div class="form-group six mobile-four columns">
-                <label>Job Function</label>
+                <label>Job Function<a href="#" class="clear_text_link">clear data</a></label>
                 <select class="custom dropdown display-none" id="customDropdown">
                   <option selected="selected">JD 1</option>
                   <option>JD 2</option>
@@ -495,9 +502,9 @@
               </div>
             </div>
             <hr>
-
+          </form>
             <div class="same-line add-medium-space-right">
-              <a class="primary radius button" href="./petrocore-person-details-self.html">Save</a>
+              <a class="primary radius button" href="./petrocore-person-details-landing.html">Save</a>
             </div>
             <div class="same-line">
               <a class="" href="petrocore-dashboard.html">Cancel</a>
@@ -523,57 +530,50 @@
     <!--</div>-->
     <!-- CONTENT AREA -->
 
-    <!-- person profile add dialog -->
-    <div id="add_person_profile" class="reveal-modal expand">
-      <div class="panel-header">
-        <div class="panel-title-container"><h5>Add Person Profile</h5></div>
-        <div class="panel-header-icons-container">
-          <ul class="panel-header-icons-list">
-            <li><a class="panel-header-icons-close icon- close-reveal-modal">&#xf00d;</a></li>
-          </ul>
-        </div>
+
+  <!-- *** Add Profile Categories *** -->
+  <div id="add-profile-categories" class="reveal-modal expand">
+    <div class="panel-header">
+      <div class="panel-title-container">
+        <h5>Select Profile Categories to Display</h5>
       </div>
-
-      <div class="popup-content-container">
-        <form class="custom">
-
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Item </label>
-              <select class="custom dropdown display-none" id="customDropdown">
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option>Available Profile Item</option>
-                <option selected="selected">Available Profile Item</option>
-              </select>
-              <div class="custom dropdown expand">
-                <a href="#" class="current">Available Profile Item</a>
-                <a href="#" class="selector"></a>
-                <ul>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                  <li>Available Profile Item</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="form-group six mobile-four columns">
-              <label>Select Value </label>
-              <input disabled type="text" placeholder="disabled until an entry is made above" value=""/>
-            </div>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-
-        <a class="primary radius button left close-reveal-modal" href="#">Save</a>
-        <a class="left cancel-link" href="#">Cancel</a>
+      <div class="panel-header-icons-container">
+        <ul class="panel-header-icons-list">
+          <li><a class="panel-header-icons-close icon- close-reveal-modal"></a></li>
+        </ul>
       </div>
     </div>
+    <div class="twelve mobile-four columns">
+      <div class="profile-category-box">
+        <div class="profile-item">
+          <label for="checkbox1"><input type="checkbox" data-customforms="disabled"  id="checkbox1"> Age</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox2"><input type="checkbox" data-customforms="disabled"  id="checkbox2"> Development Program</label>
+        </div>
+        <div class="profile-item profile-highlight">
+          <label for="checkbox3"><input type="checkbox" data-customforms="disabled"  id="checkbox3" checked> Reporting Unit: Station 1 reporting unit</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox4"><input type="checkbox" data-customforms="disabled"  id="checkbox4"> Heir 1</label>
+        </div>
+        <div class="profile-item profile-highlight">
+          <label for="checkbox5"><input type="checkbox" data-customforms="disabled" id="checkbox5" checked>  Country: Canada <i class="icon-">&#xf105;</i> State-Province: British Columbia <i class="icon-">&#xf105;</i> City: Prince Rupert</label>
+        </div>
+        <div class="profile-item">
+          <label for="checkbox6"><input type="checkbox" data-customforms="disabled"  id="checkbox6"> Category</label>
+        </div> 
+        <div class="profile-item">
+          <label for="checkbox7"><input type="checkbox" data-customforms="disabled"  id="checkbox7"> Heir 2</label>
+        </div>    
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="primary radius button left close-reveal-modal" href="#">Save</a>
+      <a class="left cancel-link" href="#">Cancel</a>
+    </div>
+  </div>
+  <!-- *** /Add Profile Categories *** -->
 
     <!-- person profile input demos -->
     <div id="add_person_profile_demo" class="reveal-modal expand">
@@ -778,6 +778,42 @@
         </div>
       </div>
     </div>
+
+  <div id="overlay"></div>
+
+  <div class="notifications-popup">
+
+    <div class="arrow"></div>
+    <div class="arrow-border"></div>
+
+    <div class="notifications-title">
+      <h5>Notifications</h5>
+    </div>
+
+    <div class="notifications-area">
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 1 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 2 has been generated</p>
+        <a href="#">View Report</a>
+        <hr class="hr-notification">
+      </div>
+
+      <div class="notification">
+        <a href="#" class="icon- anotification">&#xf00d;</a>
+        <p>Report Lorem Ipsum 3 has been generated</p>
+        <a href="#">View Report</a>
+      </div>
+
+    </div>
+  </div>
 
     <!-- Included JS Files (Compressed) -->
     <script src="../javascripts/foundation.min.js"></script>

@@ -87,6 +87,8 @@
 
         <!-- ***** SEARCH *****-->
         <div class="search-container">
+          <i class="icon-search collapse-menu"></i>
+
 
           <div class="row collapse search-input">
                   
@@ -104,9 +106,11 @@
                     
             <div class="two mobile-one columns">
               <span class="postfix round-left">
-                <div class="search-bar-icons-magnif">
-                  <p class="icon-">&#xf002;</p>
-                </div>
+                <a href="petrocore-search-results.html">
+                  <div class="search-bar-icons-magnif">
+                    <p class="icon-">&#xf002;</p>
+                  </div>
+                </a>
               </span>
             </div>
             
@@ -182,7 +186,7 @@
             </li>
             <li>
               <div class="title">
-                <h6 class="two-lines"><div class="icon- navicon">&#xf012;</div>Growth Positions</h6>
+                <h6 class="two-lines"><a href="petrocore-growth-position-landing-page.html"><div class="icon- navicon">&#xf012;</div>Growth Positions</a></h6>
               </div>
               <div class="content">
                 <ul>
@@ -270,16 +274,9 @@
 
       <div class="content-container">
         <!--This will hold the content-->
-          <div class="row">
-            <div class="nine columns">
-              <h4>Assigned Positions</h4>
-            </div>
-            <div clas="three columns">
-             <div class="text-link-right"><a href="petrocore-user-landing.html">Back to Previous Page</a></div>
-            </div>
-        </div>
+          <h4>Assigned Positions</h4>
+          <div class="save-template-btn"><a class="link-without-button" href="petrocore-user-landing.html" >Back to previous page</a></div>
           <hr>
-
 
           <div class="panel-wrapper">
               <div class="panel-header">
@@ -292,13 +289,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="row panel-content-container growth-position-item">
-                <div class="twelve columns" style="padding: 10px 0;">
-                  <div class="twelve columns">
-                    <div>IT Developer</div>
-                  </div>
-                </div>
-              </div> <!--Close panel-content-container-dashboard-->
+              <ul id="growth-position-list">
+                <!-- List of Items to be displayed -->
+                  <li class="row growth-position-item">
+                    <div class="eleven mobile-three columns gr-description">
+                      IT Developer
+                    </div>
+                    <div class="one mobile-one columns cl-icons">
+                    </div>
+                  </li><!--Close position list-->
 
    
               </div><!--Close panel-wrapper-->
@@ -403,7 +402,7 @@
     </div>
 
     <div class="popup-content-container">
-      <div class="twelve columns">
+      <div class="twelve mobile-four columns">
 
         <div class="search-box-positions">
             <div class="row collapse search-input">
@@ -463,7 +462,7 @@
     </div>
 
     <div class="popup-content-container">
-      <div class="twelve columns">
+      <div class="twelve mobile-four columns">
 
         <div class="search-box-positions">
             <div class="row collapse search-input">
@@ -508,6 +507,8 @@
     </div>
 
 </div><!--Close select-growth-position modal-->
+
+<div id="overlay"></div>
 
 <div class="notifications-popup">
 

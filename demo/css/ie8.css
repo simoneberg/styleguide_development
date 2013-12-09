@@ -84,7 +84,7 @@ body {
     display:inline-block;
 }
 
-.reveal-modal .close-reveal-modal {
+.reveal-modal .panel-header-icons-close .close-reveal-modal {
     color:#666666;   
     font-weight:normal;
     cursor: pointer;
@@ -95,7 +95,7 @@ body {
 /* It fixes the misalignment of the dropdown arrow box */
 form.custom div.custom.dropdown a.selector {
 	width:28px;
-	height:28px !important;			
+	height:30px !important;			
 	border: solid #5b5b5b 1px;
 }
 
@@ -232,3 +232,20 @@ fieldset legend {
      min-width: 300px;
 
   }
+
+.lt-ie9 .background .month-column {
+   float:left !important;
+   width: 8.33333% !important;
+} 
+.lt-ie9 .background .week-column {
+   float:left !important;
+   width: 20% !important;
+}
+.lt-ie9 .background .title, 
+.lt-ie9 .background .vertical, 
+.lt-ie9 .dev-activity .priority-bar {
+  margin: 0;
+}
+.lt-ie9 .development-plan-widget {
+  border-bottom: 1px solid #999;
+}
