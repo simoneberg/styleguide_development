@@ -4497,6 +4497,11 @@ a.milestone-date:hover {
   min-height: 30px;
 }
 
+.skills-check-wrapper {
+  border-top:1px solid #8a8a8a;
+  background-color:#f0f0f0;
+}
+
 #dev-activity-control h5 { 
   font-weight: normal;
   font-size:13px;
