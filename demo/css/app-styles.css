@@ -2624,7 +2624,7 @@ a.sorting-block:hover .add-sorting-icon {
   overflow: hidden;
   clear: both;
   margin-left: 0;
- /* margin-top: 10px;*/removing the spacing between the footer and the scroll for manage dashboard(sberg)
+  margin-top: 10px;
   padding-top: 6px;
   padding-left: 15px;
   padding-right: 15px;
@@ -2894,10 +2894,10 @@ border: 1px solid #8a8a8a;
 }
 
 .scrollable_frame {
-/*  overflow: auto; */
+  border: solid #fff 1px;
+  margin-bottom: -10px;
   overflow-x: scroll;
   overflow-y: hidden;
-  border: solid #fff 0px;
   width: 100%;
 }
 
