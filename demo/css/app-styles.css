@@ -2146,6 +2146,12 @@ label.inline {
 /* based off the search results */
 /* and direct participant controls */
 
+.list-container {
+  border: 1px solid #929292;
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
 .list {
   margin-top: 18px;
   margin-bottom: 18px;
@@ -2162,7 +2168,7 @@ label.inline {
 }
 
 .list-item {
-  line-height:normal;
+  line-height: 18px;
   width: 100%;
   margin-right: 10px;
   padding: 7px 12px 7px 15px;
@@ -2174,9 +2180,10 @@ label.inline {
   line-height: 50px;
 }
 
-.list-item-name {
-
+.list-item:last-child {
+  border-bottom: none;
 }
+
 
 .list-item-summary-name {
   color: #999;
@@ -2200,30 +2207,65 @@ label.inline {
   cursor:move;
 }
 
-.list-icon {
+.icon-plus:before {
   margin: 0;
-  float:right;
-}
-
-.list-icon .plus:after {
+  float: right;
   content: "\f067";
   font-family: FontAwesome;
   text-decoration: none;
-  position:relative;
-  display:inline-block;
+  position: relative;
+  display: inline;
+  margin-left: 12px;
 }
 
-.list-icon .x:after {
+.icon-x:before {
+  margin: 0;
+  float: right;
   content: "\f00d";
   font-family: FontAwesome;
   text-decoration: none;
-  position:relative;
-  display:inline-block;
+  position: relative;
+  display: inline;
+  margin-left: 12px;
 }
 
-.list-item a.plus:after,
-.list-item a.x:after {
+.list-item a.icon-plus:before,
+.list-item a.icon-x:before,
+.list-item a.icon-plus:before,
+.list-item a.icon-x:before {
   color:#858585;
+}
+
+.list-item.tall .icon-plus:before,
+.list-item.tall .icon-x:before {
+  margin-top: 22px;
+}
+
+/* inline unordered list */
+ul.inline-list {
+  margin: 0;
+  padding: 0;
+}
+
+ul.inline-list li {
+  display: inline-block;
+  margin: 0;
+}
+
+ul.inline-list li.inline-list-item {
+  color: #999;
+}
+
+ul.inline-list li.inline-list-item.add {
+  font-weight: bold;
+}
+
+ul.inline-list li.inline-list-item.remove {
+  font-style: italic;
+}
+
+ul.inline-list li:not(:last-child):after {
+  content: ", \00a0"; /* add comma and a space after each item that is not the last */
 }
 
 /* END FORMS */
@@ -4128,13 +4170,7 @@ input.round-right {
   padding: 0 15px;
 }
 
-.list-box {
-  border: 1px solid #8c8c8c;
-  margin-bottom: 1em;
-  height: 12em;
-  overflow-x: auto;
-}
-
+/*
 .list-box .participant {
   border-bottom: solid 1px #cfcfcf;
 }
@@ -4142,80 +4178,7 @@ input.round-right {
 .list-box .participant:last-child {
   border-bottom: none;
 }
-
-.list-item {
-  line-height: 18px;
-  width: 100%;
-  margin-right: 10px;
-  padding: 7px 8px 7px 8px;
-  margin-bottom: 3px;
-}
-
-.list-box .list-item {
-  border-bottom: solid 1px #cfcfcf;
-}
-
-.list-box .list-item ul.inline-list {
-  margin: 0;
-  padding: 0;
-}
-
-.list-box .list-item ul.inline-list li {
-  display: inline-block;
-  margin: 0;
-}
-
-.list-box .list-item ul.inline-list li.inline-list-item {
-  color: #999;
-}
-
-.list-box .list-item ul.inline-list li.inline-list-item.add {
-  font-weight: bold;
-}
-
-.list-box .list-item ul.inline-list li.inline-list-item.remove {
-  font-style: italic;
-}
-
-.list-box .list-item ul.inline-list li:not(:last-child):after {
-  content: ", \00a0"; /* add comma and a space after each item that is not the last */
-}
-
-.list-box .list-item:last-child {
-  border-bottom: none;
-}
-
-.list-item .list-icon-plus,
-.list-item .list-icon-x {
-  margin: 0;
-  float:right;
-}
-
-.list-item .list-icon-plus:after {
-  content: "\f067";
-  font-family: FontAwesome;
-  text-decoration: none;
-  position:relative;
-  right: 10px;
-  top: 13px;
-  display:block;
-}
-
-.list-item .list-icon-x:after {
-  content: "\f00d";
-  font-family: FontAwesome;
-  text-decoration: none;
-  position:relative;
-  top: 0;
-  display:block;
-}
-
-.list-item a.list-icon-plus:after,
-.list-item a.list-icon-x:after,
-.list-item a.list-icon-plus:after,
-.list-item a.list-icon-x:after {
-  color:#858585;
-}
+*/
 
 .list-of-search-results-relationships li,
 .list-of-relationships li
