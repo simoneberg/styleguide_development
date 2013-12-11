@@ -249,3 +249,19 @@ fieldset legend {
 .lt-ie9 .development-plan-widget {
   border-bottom: 1px solid #999;
 }
+
+.milestone-scheduling-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-scheduling-date.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-scheduling-date.png', sizingMethod='scale')";
+
+}
+
+.milestone-multiple-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-multiple-dates.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-multiple-dates.png', sizingMethod='scale')";
+
+}
