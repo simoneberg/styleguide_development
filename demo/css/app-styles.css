@@ -37,6 +37,12 @@
    /* Working Area */
    /* THIS AREA WILL NOT BE PART OF THE DEPLOYED FILE */
 
+
+a.transformers-hidden-link {
+/* this class is for use in navigating through MOCK-UP pages only and should not be used in production pages */
+  color: #222;
+}
+
    /* CSS is seperated by concern */
 
 /* within a section the order is:
@@ -73,6 +79,12 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   clear: both;
 }
 
+.selected:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  float: left;
+  margin-right: 5px;
+}
 
 .pagination-counter {
   color: #757575;
@@ -136,6 +148,10 @@ table.wrap-cell-content td span.wrapword {
   word-wrap: break-word; / Internet Explorer 5.5+ */
   word-break: break-all;
   white-space: normal;
+}
+
+.border {
+  border: #929292 1px solid;
 }
 
 .panel-wrapper ul.list {
@@ -360,6 +376,13 @@ ul.pagination li.current a {
 .page-of-page {
   margin-top: 10px;
   color: #555;
+}
+
+.panel.clickable,
+.panel.clickable h4,
+.panel.clickable p {
+  color: #222;
+  cursor: pointer;
 }
 
 .row {
@@ -2157,6 +2180,12 @@ label.inline {
   margin-bottom: 18px;
 }
 
+.list.no-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
 .list-name h5 {
   background-color: #e8e8e8;
   font-size: 14px;
@@ -2471,7 +2500,6 @@ table.wrap-cell-content td span.wrapword {
   word-break: break-all;
   white-space: normal;
 }
-
 
 #competency-framework-table {
   min-width: 700px;
