@@ -5605,14 +5605,18 @@ h4 .header-link {
 /* portait iPad - 10 inch tablet */
 @media only screen and (max-width: 768px) {
 
-  ul.button-group {
-    width: 100%;
-    margin: 0;
+  body.open {
+    overflow: hidden;
   }
 
-  ul.button-group li {
-    margin: 0;
-    width: 50%;
+  body.open .left-split-container {
+    display:block;
+  }
+
+  body.open .master-wrapper {
+    left: 271px;
+    overflow: initial;
+    transition: left 0.5s;
   }
 
   button.button{
@@ -5641,8 +5645,35 @@ h4 .header-link {
     width: 90% !important;
   }
 
-  form.custom table.with-inputs .control-with-trailing-icon {
-    width: 70%;
+  form.custom div.custom.dropdown {
+    float: left;
+    margin-right: 5px;
+  }
+
+  form fieldset .row .set-small-input-field {
+    width: 12%;
+  }
+
+  table.nested-table {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  ul.button-group {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.button-group li {
+    margin: 0;
+    width: 50%;
+  }
+
+  .actions-dropdown-btn {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
 
   .avatar {
@@ -5656,7 +5687,7 @@ h4 .header-link {
   }
 
   .breadcrumbs-container {
-    padding: 0;
+    display: none;
   }
 
   .breadcrumbs-list-container {
@@ -5676,11 +5707,27 @@ h4 .header-link {
   .content-container {
     border-left: none;
   }
+
   .cancel-link{
     line-height: 16px;
     text-align: center;
     margin-top: 2px;
     margin-bottom:  8px;
+  }
+
+  .custom-dropdown-large {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .custom-dropdown-medium {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .custom-dropdown-small {
+    width: 100% !important;
+    font-size: 12px;
   }
 
   .dropdown-profile {
@@ -5689,12 +5736,56 @@ h4 .header-link {
     float: left;
   }
 
+  .export-print {
+    width: 52%;
+    float: right;
+    margin-right: 6px;
+    margin-top: 12px;
+  }
+
+  .feedback {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 140px;
+    text-align: center;
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
   .header-inline h4 {
     margin-bottom:24px;
   }
 
   .header-inline a.back-to-previous-page {
     margin-top:-31px;
+  }
+
+  .icon-after-dropdown-field p {
+    margin-right: 10px;
+  }
+
+  .left-margin-clear {
+    margin-left: -15px;
+  }
+
+  .left-split-container {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: -271px;
+    width: 251px !important;
+    z-index:1000;
+  }
+
+  .link-without-button {
+    position:static;
+    top: 0;
   }
 
   .logo {
@@ -5710,7 +5801,14 @@ h4 .header-link {
     top: 3px;
   }
 
-  .modal-header{
+  .master-wrapper {
+    position: relative;
+    left: 0px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  .modal-header {
     width: 100%;
     margin-left: 0;
   }
@@ -5719,6 +5817,10 @@ h4 .header-link {
     height: 56px;
     padding-bottom: 1px;
     line-height: 36px;
+  }
+
+  .panel-content-container-full {
+    overflow-x:scroll;
   }
 
   .panel-wrapper-grey-tree {
@@ -5746,11 +5848,25 @@ h4 .header-link {
     width:100%;
   }
 
+  .petrocore-footer {
+    height: auto;
+    background-color: #f3f3f3;
+    border-top: 1px solid #8a8a8a;
+    border-bottom: 1px solid #8a8a8a;
+  }
+
   .profile-container {
     float: right;
     height: 30px;
     width: 50px;
     margin-top: -34px;
+  }
+
+  .result-title {
+    width: 42%;
+    float: left;
+    margin-left: 9px;
+    margin-top: 12px;
   }
 
   .reveal-modal,
@@ -5778,6 +5894,13 @@ h4 .header-link {
     width: 100%;
   }
 
+  .save-template-btn {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
   .step-number {
     height: 30px;
     width: 37px;
@@ -5788,11 +5911,30 @@ h4 .header-link {
     width: 91px;
   }
 
-  /*
-  .toggle-nav-mobile {
-    display: none;
+  .tabs {
+    list-style: none;
+    border-bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 5px;
   }
-  */
+
+  .tabs dd,
+  .tabs li {
+    width: 100%;
+    border: solid 1px #717171;
+    margin-left: 0;
+    margin-top: -2px;
+  }
+
+  .tabs dd.active,
+  .tabs li.active {
+    border-top: 1px solid #717171;
+    margin-top: -1px;
+    border-bottom: 1px solid #717171;
+    border-left: 4px solid #717171;
+  }
 
   .toggle-nav-tablet {
     width: 48px;
@@ -5840,29 +5982,41 @@ h4 .header-link {
     border-right: 1px solid #717172;
   }
 
+  .trademark {
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+  }
+
   .visible-charts.right-chart,
   .visible-charts.left-chart {
     padding: 0;
   }
 
   #step1 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: none;
     width: 33%;
   }
 
   #step2 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: none;
     width: 34%;
   }
 
   #step4 {
+    border-right: 1px solid #717171;
+    border-left: 1px solid #717171;
+    border-top: 1px solid #717171;
+    border-bottom: 1px solid #717171;
     width: 33%;
-  }
-
-  form fieldset .row .set-small-input-field {
-    width: 12%;
-  }
-
-  .panel-content-container-full {
-    overflow-x:scroll;
   }
 
 }
@@ -5922,7 +6076,6 @@ h4 .header-link {
   .dev-activity {
     border-right: 0;
   }
-
 
   .weeks-5 .week-column-1 {
     width: 150px;
@@ -6247,9 +6400,9 @@ body
   }
 }
 
-/* landscape iPhone */
-@media only screen and (max-width: 767px) {
-  button.button {
+@media only screen and (max-width: 568px) {
+
+  button.button{
     width: auto;
     padding: 10px 20px 11px;
   }
@@ -6269,176 +6422,18 @@ body
     width: 90% !important;
   }
 
-  form.custom div.custom.dropdown {
-    float: left;
-    margin-right: 5px;
+  .button.silver-button.round {
+  font-size:1.2em;
   }
 
-  table.nested-table {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .button {
-    margin-bottom: 5px;
-    display: inline-block;
-    width: auto;
-    padding: 10px 20px 11px;
-  }
-
-  .actions-dropdown-btn {
-    float: none;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 8px;
-  }
-
-  .breadcrumbs-container {
-    display: none;
-  }
-
-  .cancel-link {
-    line-height: 16px;
-    text-align: center;
-    margin-top: 2px;
-    margin-bottom: 8px;
-  }
-
-  .custom-dropdown-large {
-    width: 100% !important;
-    font-size: 12px;
-  }
-
-  .custom-dropdown-medium {
-    width: 100% !important;
-    font-size: 12px;
-  }
-
-  .custom-dropdown-small {
-    width: 100% !important;
-    font-size: 12px;
-  }
-
-  .export-print {
-    width: 52%;
-    float: right;
-    margin-right: 6px;
-    margin-top: 12px;
-  }
-
-  .feedback {
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 140px;
-    text-align: center;
-    float: none;
-    margin-bottom: 10px;
-  }
-
-  .footer-logo {
-    display: none;
-  }
-
-  .footer-logo-iphone {
-    height: 30px;
-    width: 180px;
-    background-repeat: no-repeat;
-    margin-top: 6px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-  }
-
-  .icon-after-dropdown-field p {
-    margin-right: 10px;
-  }
-
-  .left-margin-clear {
-    margin-left: -15px;
-  }
-
-  .left-split-container {
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    left: -271px;
-
-    width: 251px !important;
-
-    z-index:1000;
-  }
-
-  body.open .left-split-container {
-    display:block;
-  }
-
-  .master-wrapper {
-    position: relative;
-    left: 0px;
-    overflow: initial;
-    transition: left 0.5s;
-  }
-
-  body.open .master-wrapper {
-    left: 271px;
-    overflow: initial;
-    transition: left 0.5s;
-  }
-
-  body.open {
-    overflow: hidden;
+  .header-inline h4 {
+    margin-bottom: 16px;
   }
 
   .modal-footer {
     padding-bottom: 1px;
     line-height: 36px;
     height: auto;
-  }
-
-  .modal-header {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .panel-wrapper-grey-tree {
-    border-right: 0;
-    background-color: #f0f0f0;
-    height: auto;
-    overflow: hidden;
-    padding-bottom: 10px;
-    min-height: auto;
-    margin-left: 1px;
-  }
-
-  .panel-header{
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .panel-footer {
-    height: auto;
-    padding-bottom: 1px;
-  }
-
-  .panel-footer .radius.button {
-    width: 100%;
-  }
-
-  .petrocore-footer {
-    height: auto;
-    background-color: #f3f3f3;
-    border-top: 1px solid #8a8a8a;
-    border-bottom: 1px solid #8a8a8a;
-  }
-
-  .result-title {
-    width: 42%;
-    float: left;
-    margin-left: 9px;
-    margin-top: 12px;
   }
 
   .reveal-modal,
@@ -6454,86 +6449,10 @@ body
     height: auto;
   }
 
-  .reveal-modal>:first-child {
-    margin-top: -20px;
-  }
-
-  .reveal-modal .close-reveal-modal:not(.button) {
-    top: 10px;
-  }
-
-  .save-template-btn {
-    float: none;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 8px;
-  }
-
-  .tabs {
-    list-style: none;
-    border-bottom: 0;
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 5px;
-  }
-
-  .tabs dd,
-  .tabs li {
-    width: 100%;
-    border: solid 1px #717171;
-    margin-left: 0;
-    margin-top: -2px;
-  }
-
-  .tabs dd.active,
-  .tabs li.active {
-    border-top: 1px solid #717171;
-    margin-top: -1px;
-    border-bottom: 1px solid #717171;
-    border-left: 4px solid #717171;
-  }
-
-  .trademark {
-    margin-top: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    text-align: center;
-  }
-
-  #step1 {
-    border-right: 1px solid #717171;
-    border-left: 1px solid #717171;
-    border-top: 1px solid #717171;
-    border-bottom: none;
-  }
-
-  #step2 {
-    border-right: 1px solid #717171;
-    border-left: 1px solid #717171;
-    border-top: 1px solid #717171;
-    border-bottom: none;
-  }
-
+  #step1,
+  #step2,
   #step4 {
-    border-right: 1px solid #717171;
-    border-left: 1px solid #717171;
-    border-top: 1px solid #717171;
-    border-bottom: 1px solid #717171;
-  }
-
-  .link-without-button {
-    position:static;
-    top: 0;
-  }
-
-  .button.silver-button.round {
-  font-size:1.2em;
-  }
-
-  .header-inline h4 {
-    margin-bottom: 16px;
+    width: 88% !important;
   }
 
 }
