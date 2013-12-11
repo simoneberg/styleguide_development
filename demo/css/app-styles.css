@@ -2176,6 +2176,10 @@ label.inline {
   border-bottom: none;
 }
 
+.list-item.no-border {
+  border: none;
+}
+
 .list-item.tall {
   line-height: 50px;
 }
