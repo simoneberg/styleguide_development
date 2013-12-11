@@ -2209,11 +2209,6 @@ label.inline {
   line-height: 50px;
 }
 
-.list-item:last-child {
-  border-bottom: none;
-}
-
-
 .list-item-summary-name {
   color: #999;
   display: inline-block;
@@ -2224,12 +2219,10 @@ label.inline {
   display: inline-block;
 }
 
-.list-item:nth-child(odd) {
-
-}
-
+.list .list-item.last-item,
 .list .list-item:last-child {
   border-bottom: solid 1px #929292;
+  margin-bottom: 8px;
 }
 
 .list-item.movable {
