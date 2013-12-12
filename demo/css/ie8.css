@@ -250,12 +250,39 @@ fieldset legend {
   border-bottom: 1px solid #999;
 }
 
+.milestone-start-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-start-date.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-start-date.png', sizingMethod='scale')";
+}
+
+.milestone-end-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-end-date.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-end-date.png', sizingMethod='scale')";
+}
+
 .milestone-scheduling-print {
   background: none;
   background-size:cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-scheduling-date.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-scheduling-date.png', sizingMethod='scale')";
+}
 
+.milestone-target-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-target-date.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-target-date.png', sizingMethod='scale')";
+}
+
+.milestone-completion-print {
+  background: none;
+  background-size:cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-completion-date.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-completion-date.png', sizingMethod='scale')";
 }
 
 .milestone-multiple-print {
@@ -263,5 +290,4 @@ fieldset legend {
   background-size:cover;
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-multiple-dates.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='images/milestone-multiple-dates.png', sizingMethod='scale')";
-
 }

@@ -5128,10 +5128,59 @@ a.milestone-date:hover {
   color: #222;
 }
 
+
+.milestone-start-print {
+  width: 26px;
+  height: 26px;
+  background: url('../images/milestone-start-date.png') no-repeat;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center; 
+  background-size:cover;
+  padding-top: 4px;
+  background-size: 26px 26px;
+}
+
+.milestone-end-print {
+  width: 26px;
+  height: 26px;
+  background: url('../images/milestone-end-date.png') no-repeat;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center; 
+  background-size:cover;
+  padding-top: 4px;
+  background-size: 26px 26px;
+}
+
 .milestone-scheduling-print {
   width: 26px;
   height: 26px;
   background: url('../images/milestone-scheduling-date.png') no-repeat;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center; 
+  background-size:cover;
+  padding-top: 4px;
+  background-size: 26px 26px;
+}
+
+.milestone-target-print {
+  width: 26px;
+  height: 26px;
+  background: url('../images/milestone-target-date.png') no-repeat;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center; 
+  background-size:cover;
+  padding-top: 4px;
+  background-size: 26px 26px;
+}
+
+.milestone-completion-print {
+  width: 26px;
+  height: 26px;
+  background: url('../images/milestone-completion-date.png') no-repeat;
   font-size: 11px;
   font-weight: bold;
   text-align: center; 
