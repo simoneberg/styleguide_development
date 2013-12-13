@@ -2547,8 +2547,10 @@ a.sorting-block:hover .add-sorting-icon {
   border-right: 1px solid #8a8a8a;
   background-color: #f0f0f0;
   height: auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding-bottom: 10px;
+  max-height: 519px;
   min-height: 519px;
   margin-left: 1px;
 }
@@ -2556,8 +2558,10 @@ a.sorting-block:hover .add-sorting-icon {
 .panel-wrapper-white-tree {
   /*border-left: 1px solid #8a8a8a;*/
   background-color: #fff;
+  max-height: 519px;
   min-height: 519px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   padding: 15px;
 }
@@ -5845,10 +5849,12 @@ h4 .header-link {
   }
 
   .panel-wrapper-grey-tree {
+    border-bottom: 1px solid #8a8a8a;
     border-right: 0;
     background-color: #f0f0f0;
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-bottom: 10px;
     min-height: auto;
     margin-left: 1px;
