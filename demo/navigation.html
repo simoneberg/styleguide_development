@@ -173,9 +173,32 @@
               </div>
               <div class="content">
                 <ul class="nav-bar vertical">
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 1</a></li>
+                  <div class="flyout-title"><h6>My Position</h6></div>
+                  <li><a href="#">Skill Analysis</a></li>
+                  <li class="has-flyout"><a href="#">Activity Profile</a>
+                    <a href="#" class="flyout-toggle"><span> </span></a>
+
+                    <ul class="flyout">
+                      <li><a href="#">Item 1</a></li>
+                      <li class="has-subnav"><a href="#">Item 2</a>
+                          
+                          <ul class="subnav">
+                            <li><a href="#">Item 2.1</a></li>
+                            <li><a href="#">Item 2.2</a></li>
+                            <li><a href="#">Item 2.3</a></li>
+                            <li class="has-subnav"><a href="#">Item 2.4</a><ul class="subnav">
+                              <li>asdfa</li>
+                              <li>asdfa</li>
+                              <li>asdfa</li>
+                            </ul>
+                            </li>
+                          </ul>
+                      
+                      </li>
+                    </ul>
+                  </li>
+
+
                 </ul>
               </div>
             </li>
@@ -247,6 +270,7 @@
               <div class="title">
                 <h6><div class="icon- navicon">&#xf0ac;</div>Custom Links</h6>
               </div>
+
               <div class="content">
 
                 <ul class="nav-bar vertical">
@@ -254,20 +278,20 @@
                   <li><a href="#">Link 1</a></li>
                   <li><a href="#">Link 2</a></li>
                   
-                  <li class="has-flyout">
-                    <a href="#">Link 3</a>
+                  <li class="has-flyout"><a href="#">Link 3</a>
                     <a href="#" class="flyout-toggle"><span> </span></a>
+
                     <ul class="flyout">
                       <li><a href="#">Item 1</a></li>
-                      <li class="has-flyout">
-                        <a href="#">Item 2</a>
-                        <a href="#" class="flyout-toggle"><span> </span></a>
-                          <ul class="flyout">
+                      <li class="has-subnav"><a href="#">Item 2</a>
+                          
+                          <ul class="subnav">
                             <li><a href="#">Item 2.1</a></li>
                             <li><a href="#">Item 2.2</a></li>
                             <li><a href="#">Item 2.3</a></li>
                             <li><a href="#">Item 2.4</a></li>
                           </ul>
+                      
                       </li>
                     </ul>
                   </li>
@@ -275,26 +299,7 @@
 
               </div>
 
-<!--               <div class="content">
-                <ul>
-                  <li><a href="#">Link 1</a></li>
-                  <li><a href="#">Link 2</a></li>
-                  <li><a href="#">Link 3</a>
-                      <ul class="subcontent">
-                        <li><a href="#">Item 1</a></li>
-                        <li><a href="#">Item 2</a>
-                             <ul class="subsubcontent">
-                              <li><a href="#">Item 2.1</a></li>
-                              <li><a href="#">Item 2.2</a></li>
-                              <li><a href="#">Item 2.3</a></li>
-                              <li><a href="#">Item 2.4</a></li>
-                            </ul>
-                        </li>
-                      </ul>
-                  </li>
-                </ul>
-              </div>
- -->            </li>
+            </li>
           </ul>
           <div class="collapse-menu"><div class="icon- navicon">&#xf0a8;</div>Collapse Menu</div>
         </div>
@@ -325,9 +330,8 @@
 
           <div class="header-inline">
             <h4 >Dashboard</h4>
-            <p style="height:900px;">&nbsp;</p>
 
-            
+            <p style="height:900px;">&nbsp;</p>
 
       </div><!--Close Content Container-->
     </div>
