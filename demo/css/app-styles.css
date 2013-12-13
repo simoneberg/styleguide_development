@@ -388,6 +388,7 @@ ul.pagination li.current a {
 .row {
   /*width: 1260px;*/
   width: 100%;
+  min-width: 300px;
 }
 
 .row .row {
