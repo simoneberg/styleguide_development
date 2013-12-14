@@ -5845,13 +5845,7 @@ h4 .header-link {
   }
 
   .panel-wrapper-grey-tree {
-    border-right: 0;
-    background-color: #f0f0f0;
-    height: auto;
-    overflow: hidden;
-    padding-bottom: 10px;
-    min-height: auto;
-    margin-left: 1px;
+    border-bottom:	solid 1px #8a8a8a;
     width: 100%;
   }
 
@@ -5920,6 +5914,11 @@ h4 .header-link {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 8px;
+  }
+
+  #progress-indicator {
+    width: 100%;
+    min-width: 100%;
   }
 
   .step-number {
@@ -6468,12 +6467,6 @@ body
     margin-left: -40%;
     padding: 0 0 0 0;
     height: auto;
-  }
-
-  #step1,
-  #step2,
-  #step4 {
-    width: 88% !important;
   }
 
 }
