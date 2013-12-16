@@ -6052,6 +6052,11 @@ h4 .header-link {
     margin-bottom: 8px;
   }
 
+  #progress-indicator {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .step-number {
     height: 30px;
     width: 37px;
