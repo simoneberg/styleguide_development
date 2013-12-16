@@ -2275,6 +2275,7 @@ ul.inline-list {
 ul.inline-list li {
   display: inline-block;
   margin: 0;
+  margin-right: 6px;
 }
 
 ul.inline-list li.inline-list-item {
@@ -2289,7 +2290,7 @@ ul.inline-list li.inline-list-item.remove {
   font-style: italic;
 }
 
-ul.inline-list li:not(:last-child):after {
+ul.inline-list .inline-list-item:not(:last-child):after {
   content: ", \00a0"; /* add comma and a space after each item that is not the last */
 }
 
@@ -5015,9 +5016,6 @@ ul.milestones > li[class^="offset-week"] {
   float: none;
 }
 
-.calendar-toolbar ul.inline-list {
-  margin: 0 0 0 -22px;
-}
 
 .calendar-toolbar ul.button-group {
   margin: 0;
