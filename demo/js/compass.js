@@ -321,6 +321,85 @@ $(document).ready(function(){
 
   }
 
+  // Function that Cancels Modal Window
+  function cancel_modal_window () {
+    $('.reveal-modal-bg').trigger('click');
+  }
+
+  // Modal Window Cancel Link
+  $('.modal-footer a.cancel-link').on('click', cancel_modal_window);
+
+  // Create and Add a New Group to the Organization Structure
+  $("a[data-reveal-id='create-group']").on( "click",function() {
+
+    var $this = $(this);
+    $('input[data-group-name]').val('');
+   
+    if ($this.is('#group-action-dropdown')) {
+     var target = $('.panel-wrapper.panel-wrapper-group.display-none').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');	 
+     $('span[data-source-parent]').html('None');
+	}
+	else
+	{
+      var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');
+      var target_parent = $(target).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-header.panel-header-group');	 
+      var target_parent_name = $(target_parent).find('.name-classifier').text();	 
+	  $('span[data-source-parent]').html(target_parent_name);
+	}
+
+    $('.modal-footer a.save-button').one('click', function(ev) {
+      ev.preventDefault();
+      var new_group = $( ".panel-wrapper.panel-wrapper-group.display-none" ).clone("withDataAndEvents").removeClass("display-none").addClass("panel-status-valid");
+      var new_group_name = $('input[data-group-name]').val();
+
+      if ($this.is('#group-action-dropdown') && (new_group_name.length > 0 )) {
+        $(target).closest('.content-container').append( new_group );
+        new_group.find('.name-classifier').html(new_group_name);
+      } else if (new_group_name.length > 0 ) {
+		$(target).last().append( new_group );
+        new_group.find('.name-classifier').html(new_group_name);
+      }
+
+      $('input[data-group-name]').val('');
+      cancel_modal_window();
+
+    });
+
+  });
+
+  // Edit Group Name from the Organization Structure
+  $("a[data-reveal-id='edit-group-name']").on( "click",function() {
+
+    var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid');
+	var target_name = $(target).find('.name-classifier:first').text();
+    var new_group_name = $('input[data-edit-group-name]').val(target_name);
+
+    $('.modal-footer a.edit-replace-button').one('click', function(ev) {
+      ev.preventDefault();
+      $(target).find('h5.name-classifier:first').html(new_group_name.val());
+      cancel_modal_window();
+    });
+	
+  });
+
+
+  // Delete Group from the Organization Structure
+  $("a[data-reveal-id='delete-group']").on( "click",function() {
+
+    var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid');
+	var target_name = $(target).find('.name-classifier:first').text();
+
+    $('h5[data-group-title]').html('Delete ' + target_name);
+
+    $('.modal-footer a.delete-button').one('click', function(ev) {
+      ev.preventDefault();	
+      $(target).remove();
+      cancel_modal_window();
+    });
+	
+  });
+
+
 });
 
 /* Closes the Advanced Search Panel */
