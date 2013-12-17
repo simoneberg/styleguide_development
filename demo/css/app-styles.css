@@ -5776,6 +5776,14 @@ h4 .header-link {
 
 /* landscape Andriod tablet ~10 inch tablet */
 @media only screen and (max-width: 960px) {
+  .petrocore-footer {
+    height: auto;
+  }
+
+  .footer-logo {
+   width: auto;
+  }
+
   .footer-logo-iphone {
     display: none;
   }
