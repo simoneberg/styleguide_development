@@ -2870,7 +2870,7 @@ a.sorting-block:hover .add-sorting-icon {
 }
 
 .panel-action-icons-container {
-  position:relative;
+  position:absolute;
   top: 5px;
   right: 10px;
 }
@@ -3099,6 +3099,10 @@ a.sorting-block:hover .add-sorting-icon {
 
 .six.columns.visible-charts.right-chart {
   padding-right: 0;
+}
+
+.chart-grey-bg {
+	background-color: #e0e0e0;
 }
 
 .panel-header-fluid {
@@ -5567,7 +5571,11 @@ h4 .header-link {
 .reset-padding {
   padding: 0 !important;
 }
-  
+
+.break-long-word {
+  word-wrap: break-word;
+}
+
 /* END MISC */
 /* **************************************** */
 
