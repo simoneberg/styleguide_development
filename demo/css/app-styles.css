@@ -2482,7 +2482,6 @@ form.custom div.custom.dropdown a.selector:after{
 
 form.custom div.custom.dropdown ul{
   border: solid 1px #999;
-  width: 100% !important;
 }
 
 form.custom div.custom.dropdown ul li{
@@ -2522,9 +2521,6 @@ form select.custom-dropdown {
   width: 100% !important;
 }
 
-.modal-dropdown-list {
-  width: 100% !important;
-}
 
 .nested-dropdown-left {
   margin-left: 5px;
@@ -7235,6 +7231,11 @@ body
 
 .ui-widget.popover-content .ui-widget-content {
   padding: 10px 0px;
+}
+
+.modal-dropdown-list[style] {
+  min-width: 100%;
+  width: auto !important;
 }
 
 /* END WIDGETS */
