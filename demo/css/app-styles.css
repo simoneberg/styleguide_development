@@ -5201,6 +5201,18 @@ a.milestone-date:hover {
   background-size: 42px 26px;
 }
 
+/*this is the blank print milestone background will be inserted using javascript*/
+.milestone-print {
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center; 
+  background-size:cover;
+  padding-top: 4px;
+  background-size: 26px 26px;
+}
+
 /*Manage Dev Activity*/
 .archived-activity {
   color: #136593;
