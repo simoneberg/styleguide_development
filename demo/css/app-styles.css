@@ -5427,6 +5427,12 @@ ul.activity-code-list li {
 }
 
 /* affects only accordion sub items */
+.skillstatus {
+max-height: 420px;
+overflow-y: scroll;
+position: relative;
+}
+
 .skillstatus li:before, .skillstatus li:after  {
   content:"";
   display: table;
