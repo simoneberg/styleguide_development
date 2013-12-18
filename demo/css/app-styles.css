@@ -6405,6 +6405,10 @@ h4 .header-link {
     width: 33%;
   }
 
+  .inline-row-message a.secondary.button {
+    margin-top: 10px;
+  }
+  
 }
 
 /* portait Andriod phone >4 inch screen */
@@ -6918,6 +6922,10 @@ body
   }
 
   .page-header-fluid-button .button {
+    display: block;
+  }
+
+  .inline-row-message a.secondary.button {
     display: block;
   }
 
