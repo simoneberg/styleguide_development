@@ -2660,6 +2660,9 @@ a.sorting-block:hover .add-sorting-icon {
   padding-top: 20px;
   padding-bottom: 20px;   
   font-weight: bold;
+  
+}
+.inline-row-border {
   border-bottom: solid 2px #CCC;  
 }
 
