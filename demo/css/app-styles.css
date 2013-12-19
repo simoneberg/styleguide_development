@@ -762,6 +762,8 @@ h4 {
 .top-bar ul > li.has-dropdown:hover > .user,
 .top-bar ul > li.has-dropdown:focus > .user {
   right: 0 !important;  
+  max-width: 500px;
+  overflow-x: auto;
 }
 
 .top-bar ul > li.has-dropdown a {
@@ -2482,7 +2484,11 @@ form.custom div.custom.dropdown a.selector:after{
 
 form.custom div.custom.dropdown ul{
   border: solid 1px #999;
+  min-width: 100%;
+  width: auto !important;
+  max-width: 500px;
 }
+
 
 form.custom div.custom.dropdown ul li{
   font-size: 12px;
@@ -6662,6 +6668,12 @@ h4 .header-link {
 
 /* responsive to allow smooth transition from large to small */
 @media only screen and (max-width: 525px) {
+
+
+.modal-dropdown-list[style] {
+  max-width: 300pxmax-width: 300px;;
+}
+
 body
    {
     min-width:298px;
@@ -7235,6 +7247,7 @@ body
 
 .modal-dropdown-list[style] {
   min-width: 100%;
+  max-width: 500px;
   width: auto !important;
 }
 
