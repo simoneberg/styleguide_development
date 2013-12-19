@@ -3102,7 +3102,7 @@ a.sorting-block:hover .add-sorting-icon {
 }
 
 .chart-grey-bg {
-	background-color: #e0e0e0;
+	background-color: #e0e0e0 !important;
 }
 
 .panel-header-fluid {
