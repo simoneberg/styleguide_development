@@ -86,6 +86,10 @@ https: //www.assembla.com/spaces/compass_ps/wiki/Design_Team_Code_Standards_and_
   margin-right: 5px;
 }
 
+.multi-panel-pagination {
+  margin-bottom: 30px;
+}
+
 .pagination-counter {
   color: #757575;
   font-size: 12px;

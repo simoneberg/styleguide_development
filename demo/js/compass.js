@@ -661,3 +661,14 @@ $( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
   $( "#dynamic-modal-expand" ).removeClass("small");
   $( "#dynamic-modal-expand" ).addClass("expand");
 });
+
+
+/* Toggle pagination visibility for individual multi panels - selected by ID*/
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'none')
+      e.style.display = 'block';
+   else
+      e.style.display = 'none';
+}
+
