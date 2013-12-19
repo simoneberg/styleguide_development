@@ -336,15 +336,15 @@ $(document).ready(function(){
     $('input[data-group-name]').val('');
    
     if ($this.is('#group-action-dropdown')) {
-     var target = $('.panel-wrapper.panel-wrapper-group.display-none').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');	 
-     $('span[data-source-parent]').html('None');
+      var target = $('.panel-wrapper.panel-wrapper-group.display-none').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');	 
+      $('p[data-source-parent]').html('None');
 	}
 	else
 	{
       var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');
       var target_parent = $(target).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-header.panel-header-group');	 
-      var target_parent_name = $(target_parent).find('.name-classifier').text();	 
-	  $('span[data-source-parent]').html(target_parent_name);
+      var target_parent_name = $(target_parent).find('.name-classifier').text();
+	  $('p[data-source-parent]').html(target_parent_name);
 	}
 
     $('.modal-footer a.save-button').one('click', function(ev) {
