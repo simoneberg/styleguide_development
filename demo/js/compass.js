@@ -337,16 +337,17 @@ $(document).ready(function(){
    
     if ($this.is('#group-action-dropdown')) {
       var target = $('.panel-wrapper.panel-wrapper-group.display-none').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');	 
-      $('p[data-source-parent]').html('None');
+	  var target_parent_name = 'None';
 	}
 	else
 	{
       var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');
       var target_parent = $(target).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-header.panel-header-group');	 
       var target_parent_name = $(target_parent).find('.name-classifier').text();
-	  $('p[data-source-parent]').html(target_parent_name);
 	}
 
+	$('p[data-source-parent]').html(target_parent_name);
+	  
     $('.modal-footer a.save-button').one('click', function(ev) {
       ev.preventDefault();
       var new_group = $( ".panel-wrapper.panel-wrapper-group.display-none" ).clone("withDataAndEvents").removeClass("display-none").addClass("panel-status-valid");
