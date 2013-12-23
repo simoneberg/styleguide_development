@@ -79,18 +79,24 @@ $(document).ready(function(){
   function open_close(ev) {
     ev.preventDefault();
     var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
-
     var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
 
     current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_pagination = $(current_panel).parents('.panel-wrapper').next('.multi-panel-pagination');
 
     if ($(current_panel).is(':hidden')) {
+
 	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.addClass("display-none");
+      panel_pagination.removeClass("display-none");
+	  
     } else {
+		
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
+      panel_pagination.addClass("display-none")
+
     }
     current_panel.slideToggle();
 
@@ -661,14 +667,3 @@ $( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
   $( "#dynamic-modal-expand" ).removeClass("small");
   $( "#dynamic-modal-expand" ).addClass("expand");
 });
-
-
-/* Toggle pagination visibility for individual multi panels - selected by ID*/
-function toggle_visibility(id) {
-   var e = document.getElementById(id);
-   if(e.style.display == 'none')
-      e.style.display = 'block';
-   else
-      e.style.display = 'none';
-}
-
