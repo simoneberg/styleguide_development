@@ -431,6 +431,13 @@ function adjust_height_competency_control() {
 $(window).on('load', adjust_height_competency_control);
 $(window).on('resize', adjust_height_competency_control);
 
+/* Drop-down closes once a drop-down item is clicked or selected */
+$('.button.dropdown.petrocore-actions ul li').on('click', function() {
+  $(this).parents('.button.dropdown.petrocore-actions').trigger('click', function(ev) {
+    ev.stopPropagation();
+  });
+});
+
 /* prevent hash changes on any nexted tabs*/
 $("body").on("click.fndtn", ".tabs-content .tabs a", function(ev){
   ev.preventDefault();
