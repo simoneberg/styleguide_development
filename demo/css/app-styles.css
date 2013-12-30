@@ -1015,9 +1015,7 @@ ul.accordion>li .content {
   border-bottom: 1px solid #919191;
 }
 
-ul.accordion>li.active .title,
-.tabs-content .panel-header.active,
-.panel-header.active {
+ul.accordion>li.active .title {
   background: #f7b646;
   background: -moz-linear-gradient(top,  #f7b646 0%, #f29a00 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7b646), color-stop(100%,#f29a00));
@@ -1037,7 +1035,15 @@ ul.accordion>li.active .title,
 
 .tabs-content .panel-header.active,
 .panel-header.active {
-  padding-top: 0;
+  background: #f7b646;
+  background: -moz-linear-gradient(top,  #f7b646 0%, #f29a00 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7b646), color-stop(100%,#f29a00));
+  background: -webkit-linear-gradient(top,  #f7b646 0%,#f29a00 100%);
+  background: -o-linear-gradient(top,  #f7b646 0%,#f29a00 100%);
+  background: -ms-linear-gradient(top,  #f7b646 0%,#f29a00 100%);
+  background: linear-gradient(to bottom,  #f7b646 0%,#f29a00 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f7b646', endColorstr='#f29a00',GradientType=0 );
+  -webkit-transition: background-color 0.15s ease-in-out;
   text-shadow: none;
 }
 
