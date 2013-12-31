@@ -2950,6 +2950,7 @@ a.sorting-block:hover .add-sorting-icon {
   text-shadow: 0 1px #e5e5e5;
   font-size: 18px;
   line-height:40px;
+  width: 36px;
 }
 
 .panel-header .panel-header-icons-collapse-up,
@@ -2958,11 +2959,9 @@ a.sorting-block:hover .add-sorting-icon {
 }
 
 .panel-header .panel-header-icons-collapse-down,
-.panel-header-fluid .panel-header-icons-collapse-down 
-.panel-header-fluid .panel-header-icons-collapse-up {
+.panel-header-fluid .panel-header-icons-collapse-down {
   padding-top: 0px;
 }
-
 
 .panel-header li {
   display: block;
@@ -3036,7 +3035,10 @@ a.sorting-block:hover .add-sorting-icon {
 }
 
 .panel-header-fluid-title {
-  display: inline-block;
+  display: block;
+  word-wrap: break-word;
+  position: relative;
+  padding-right: 20px;
 }
 
 .panel-header-fluid-button {
@@ -3044,17 +3046,26 @@ a.sorting-block:hover .add-sorting-icon {
 }
 
 .panel-header-fluid-button.one-icon-margin {
-  margin-right: 20px;
+  margin-right: 33px;
 } 
 
 .panel-header-fluid-button.two-icon-margin {
-  margin-right: 40px;
+  margin-right: 66px;
 } 
 
 .panel-header-fluid h5 {
-  margin: 0;
+  margin: 0 0 8px 0;
   padding: 6px 0 0;
+  display: block;
+}
+
+.panel-header-fluid-button ul.button-group.slim, .fluid-button-group-bar ul.button-group {
   display: inline-block;
+  margin: 0 0 -12px;
+}
+.fluid-button-group-bar  {
+  display: inline-block;
+  width: auto;
 }
 
 .panel-wrapper .panel-content-container-dashboard h5 {
@@ -3112,64 +3123,6 @@ a.sorting-block:hover .add-sorting-icon {
 
 .chart-grey-bg {
 	background-color: #e0e0e0 !important;
-}
-
-.panel-header-fluid {
-  position: relative;
-  padding: 9px 15px 6px;
-  margin-left: 0;
-  margin-top: 0;
-  background: #c0c0c0;
-  background: -moz-linear-gradient(top,  #c0c0c0 0%, #a1a1a1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c0c0c0), color-stop(100%,#a1a1a1));
-  background: -webkit-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: -o-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: -ms-linear-gradient(top,  #c0c0c0 0%,#a1a1a1 100%);
-  background: linear-gradient(to bottom,  #c0c0c0 0%,#a1a1a1 100%);	
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c0c0c0', endColorstr='#a1a1a1',GradientType=0 );
-  -moz-box-shadow: inset 0 1px 1px #d1d1d1;
-  -webkit-box-shadow: inset 0 1px 1px #d1d1d1;
-  box-shadow: inset 0 1px 1px #d1d1d1;
-}
-
-.panel-header-fluid:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.panel-header-fluid-title {
-  display: block;
-  word-wrap: break-word;
-  position: relative;
-  padding-right: 20px;
-}
- 
-.panel-header-fluid-button {
-  float: right;
-}
-
-.panel-header-fluid-button.one-icon-margin {
-  margin-right: 20px;
-} 
-
-.panel-header-fluid-button.two-icon-margin {
-  margin-right: 42px;
-} 
-
-.panel-header-fluid h5 {
-  margin: 0 0 8px 0;
-  padding: 6px 0 0;
-  display: block;
-}
-
-.panel-header-fluid-button ul.button-group.slim, .fluid-button-group-bar ul.button-group {
-  display: inline-block;
-  margin: 0 0 -12px;
-}
-.fluid-button-group-bar  {
-  display: inline-block;
-  width: auto;
 }
 
 /* This segment displays a temporary image of a chart and widget for ticket 1352 */
@@ -6819,10 +6772,6 @@ body
     width: 15%;
   }
 
-  .panel-header .icon-,
-  .panel-header-fluid .icon- {
-    width: 30px;
-  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -6963,6 +6912,34 @@ body
     width: 100%;
   }
 
+  .page-header-fluid-button {
+    float: none;
+  }
+
+  .page-header-fluid-button ul.button-group.slim, .fluid-button-group-bar ul.button-group {
+    display: block;
+  }
+
+  .back-to-previous-fluid {
+    margin-right: 0px;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .panel-header-fluid-title {
+    padding-right: 60px;
+  }
+  
+  .page-header-fluid-button .button {
+    display: block;
+  }
+
+  .page-header-fluid-button .button.dropdown.petrocore-actions {
+    width: 100%;
+  }
+
   .panel-header-fluid-button {
     float: none;
   }
@@ -7061,8 +7038,6 @@ body
     margin-bottom: 10px;
   }
   
-  .panel-header-fluid-button .
-
   .panel-header-fluid-button.one-icon-margin,
   .panel-header-fluid-button.two-icon-margin {
     margin-right: 0px;
@@ -7088,7 +7063,7 @@ body
   .competency-level-panel .panel-header .panel-header-icons-list li {
     width: 100%;
     margin-top: 30px;
-	float: none;
+	 float: none;
   }
 
   .skill-description-box {
@@ -7110,14 +7085,6 @@ body
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  }
-
-  .panel-header-fluid-button {
-    float: left;
-  }
-  .panel-header-fluid-button.one-icon-margin,
-  .panel-header-fluid-button.two-icon-margin {
-    margin-right: 0px;
   }
 
   .header-inline a.back-to-previous-page {
