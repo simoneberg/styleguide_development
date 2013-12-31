@@ -95,11 +95,10 @@ $(document).ready(function(){
 		
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
-      panel_pagination.addClass("display-none")
+      panel_pagination.addClass("display-none");
 
     }
     current_panel.slideToggle();
-
   };
 
   // Assign Direct Participants Relationship
