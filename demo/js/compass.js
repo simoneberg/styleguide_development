@@ -79,21 +79,26 @@ $(document).ready(function(){
   function open_close(ev) {
     ev.preventDefault();
     var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
-
     var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
 
     current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_pagination = $(current_panel).parents('.panel-wrapper').next('.multi-panel-pagination');
 
     if ($(current_panel).is(':hidden')) {
+
 	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.addClass("display-none");
+      panel_pagination.removeClass("display-none");
+	  
     } else {
+		
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
+      panel_pagination.addClass("display-none");
+
     }
     current_panel.slideToggle();
-
   };
 
   // Assign Direct Participants Relationship
