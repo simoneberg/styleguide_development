@@ -7113,6 +7113,7 @@ body
   ul.pagination li a {
     padding: 1px 0px 1px;
   }
+}
 
 /* portrait iPhone */
 @media only screen and (max-width: 320px) {
