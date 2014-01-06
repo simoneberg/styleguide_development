@@ -22,7 +22,6 @@
 <!-- Included CSS Files (Compressed) -->
 <link rel="stylesheet" href="../stylesheets/foundation.min.css">
 <link rel="stylesheet" href="../stylesheets/font-awesome.min.css">
-<link rel="stylesheet" href="../demo/css/petroskills-theme/jquery-ui-1.10.1.custom.css">
 <link rel="stylesheet" href="../demo/css/app-styles.css">
 
   <!--[if IE 8]>
@@ -303,23 +302,23 @@
           <li><strong>Forecasted Status:</strong> 15%</li>
         </ul>
         <ul class="button-group slim">
-          <li><a href="#" class="button silver-button wide first active">Year</a></li>
+          <li><a href="petrocore-dev-plan.html" class="button silver-button wide first">Year</a></li>
           <li><a href="petrocore-dev-plan-month.html" class="button silver-button wide ">Month</a></li>
-          <li><a href="petrocore-dev-plan-week.html" class="button silver-button wide last">Month</a></li>
+          <li><a href="#" class="button silver-button wide last active">Week</a></li>
           <li class="divider">&nbsp;</li>
           <li>
             <div href="#action-button1" class="button dropdown petrocore-actions legends">
-              Legend
-              <ul class="list-of-legend">
-                <li><a href="#"><img src="images/milestone-scheduling-date.png" /> &nbsp;&nbsp;Scheduling Date</a></li>
-                <li><a href="#"><img src="images/milestone-target-date.png" /> &nbsp;&nbsp;Target Date</a></li>
-                <li><a href="#"><img src="images/milestone-completion-date.png" /> &nbsp;&nbsp;Completion Date</a></li>
-                <li><a href="#"><img src="images/milestone-multiple-dates.png" /> Multiple Date</a></li>
-                <li><a href="#"><img src="images/milestone-low-priority.png" /> &nbsp;&nbsp;Low Priority</a></li>
-                <li><a href="#"><img src="images/milestone-medium-priority.png" /> &nbsp;&nbsp;Medium Priority</a></li>
-                <li><a href="#"><img src="images/milestone-high-priority.png" /> &nbsp;&nbsp;High Priority</a></li>
-              </ul>
-            </div>
+            Legend
+            <ul class="list-of-legend">
+              <li><a href="#"><img src="images/milestone-scheduling-date.png" /> &nbsp;&nbsp;Scheduling Date</a></li>
+              <li><a href="#"><img src="images/milestone-target-date.png" /> &nbsp;&nbsp;Target Date</a></li>
+              <li><a href="#"><img src="images/milestone-completion-date.png" /> &nbsp;&nbsp;Completion Date</a></li>
+              <li><a href="#"><img src="images/milestone-multiple-dates.png" /> Multiple Date</a></li>
+              <li><a href="#"><img src="images/milestone-low-priority.png" /> &nbsp;&nbsp;Low Priority</a></li>
+              <li><a href="#"><img src="images/milestone-medium-priority.png" /> &nbsp;&nbsp;Medium Priority</a></li>
+              <li><a href="#"><img src="images/milestone-high-priority.png" /> &nbsp;&nbsp;High Priority</a></li>
+            </ul>
+        </div>
           </li>
         </ul>
         <div class="development-plan-widget">
@@ -328,14 +327,11 @@
             <div class="seven columns mobile-four">
               <ul class="inline-list">
                 <li>
-                  <div href="#year-selection" class="button dropdown petrocore-actions">
-                    2013
+                  <div  class="button dropdown petrocore-actions">
+                    July 21- July 27
                     <ul>
-                      <li><a href="#">2012</a></li>
-                      <li><a href="#">2011</a></li>
-                      <li><a href="#">2010</a></li>
-                      <li><a href="#">2009</a></li>
-                      <li><a href="#">2008</a></li>
+                      <li><a href="#">July 28 - August 3</a></li>
+                      <li><a href="#">August 4 - August 11</a></li>
                     </ul>
                   </div>
                 </li>
@@ -358,115 +354,46 @@
             <div class="five columns mobile-four">
               <ul class="button-group slim float-right">
                 <li><a href="#" class="button silver-button first icon-">&#xf0d9;</a></li>
-                <li><a href="#" class="button silver-button">Current Year</a></li>
+                <li><a href="#" class="button silver-button">Current Week</a></li>
                 <li><a href="#" class="button silver-button last icon-">&#xf0da;</a></li>
               </ul>
             </div>
           </div>
         </div>
         <!-- /calendar-toolbar -->
-        <!-- required to manually set the background height for the overlay -->
-        <div class="calendar-grid year-grid">
+        <div class="calendar-grid day-grid ">
           <div class="background">
-            <div class="month-column">
-              <div class="title">Jan</div>
+            <div class="day-column">
+              <div class="title">Sunday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">Feb</div>
+            <div class="day-column">
+              <div class="title">Monday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">Mar</div>
+            <div class="day-column">
+              <div class="title">Tuesday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">Apr</div>
+            <div class="day-column">
+              <div class="title">Wednesday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">May</div>
+            <div class="day-column">
+              <div class="title">Thursday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">Jun</div>
+            <div class="day-column">
+              <div class="title">Friday</div>
               <div class="vertical"></div>
             </div>
-            <div class="month-column">
-              <div class="title">Jul</div>
-              <div class="vertical"></div>
-            </div>
-            <div class="month-column">
-              <div class="title">Aug</div>
-              <div class="vertical"></div>
-            </div>
-            <div class="month-column">
-              <div class="title">Sep</div>
-              <div class="vertical"></div>
-            </div>
-            <div class="month-column">
-              <div class="title">Oct</div>
-              <div class="vertical"></div>
-            </div>
-            <div class="month-column">
-              <div class="title">Nov</div>
-              <div class="vertical"></div>
-            </div>
-            <div class="month-column">
-              <div class="title">Dec</div>
+            <div class="day-column">
+              <div class="title">Saturday</div>
               <div class="vertical"></div>
             </div>
           </div>
           <div class="activities">
-            <div class="row list-dev-activities">
-              <div class="popover-content-right ui-widget">
-                <div class="header">
-                  <p>
-                  <strong>IT-CERT-0054:</strong> Obtain vendor certifications
-                  </p>
-                  <div>
-                    <a href="#">View details</a>
-                  </div>
-                </div>
-                <div class="content">
-
-                  <p>
-                    <strong>
-                      Planned start date:
-                    </strong>
-                    Feb-05-2013 
-                  </p>
-                  <p>
-                    <strong>
-                      Planned end date:
-                    </strong>
-                    Sep-30-2013 
-                  </p>
-                  <hr></hr>
-                  <p>
-                    <strong>
-                      Priority:
-                    </strong>
-                    Low
-                  </p>
-                  <hr></hr>
-                  <a href="petrocore-dev-plan-edit-activity.html">View/Edit activity</a>
-                </div>
-              </div>
-              <div class="month-column month-column-9 offset-month-0 dev-activity">
-                <div class="priority-bar priority-low"></div>
-                <div class="act-title">
-                  <strong>IT-CERT-0054:</strong> Obtain vendor certifications
-                </div>
-                <div class="milestone-list">
-                  <ul class="milestones">
-                    <li class="offset-month-0"><img title="Target Date:</br> 6-3-13" src="images/milestone-scheduling-date.png" /></li>
-                    <li class="offset-month-8"><img title="Completion Date:</br> 6-27-13" src="images/milestone-target-date.png" /></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="row list-dev-activities">
+          <div class="row list-dev-activities">
               <div class="popover-content ui-widget">
                 <div class="header">
                   <p>
@@ -501,22 +428,20 @@
                   <a href="petrocore-dev-plan-edit-activity.html">View/Edit activity</a>
                 </div>
               </div>
-
-              <div class="month-column month-column-9 offset-month-2 dev-activity">
-                <div class="priority-bar priority-medium"></div>
-                <div class="act-title">
-                  <strong>IT-CERT-0054:</strong> Obtain vendor certifications
-                </div>
-                <div class="milestone-list">
-                  <ul class="milestones">
-                    <li class="offset-month-2"><img title="Target Date:</br> 6-3-13" src="images/milestone-scheduling-date.png" /></li>
-                    <li class="offset-month-10"><img title="Completion Date:</br> 6-27-13" src="images/milestone-target-date.png" /></li>
-                  </ul>
-                </div>
+            <div class="day-column day-column-5 dev-activity">
+              <div class="priority-bar priority-medium"></div>
+              <div class="act-title">
+                <strong>IT-CERT-0054:</strong> Obtain vendor certifications
+              </div>
+              <div class="milestone-list">
+                <ul class="milestones no-bullet">
+                  <li class="offset-day-0"><img src="images/milestone-scheduling-date.png" /></li>
+                  <li class="offset-day-4"><img src="images/milestone-target-date.png" /></li>
+                </ul>
               </div>
             </div>
-            
-            <div class="row list-dev-activities">
+          </div>
+          <div class="row list-dev-activities">
               <div class="popover-content ui-widget">
                 <div class="header">
                   <p>
@@ -551,26 +476,22 @@
                   <a href="petrocore-dev-plan-edit-activity.html">View/Edit activity</a>
                 </div>
               </div>
-
-              <div class="month-column month-column-1 offset-month-2 dev-activity">
-                <div class="priority-bar priority-high"></div>
-                <div class="act-title">
-                  <strong>IT-CERT-0054:</strong> Obtain vendor 
-                </div>
-                <div class="milestone-list">
-                  <ul class="milestones">
-                    <li class="offset-month-2"><img title="Target Date:</br> 6-3-13</br> Completion Date: 6-20-14" src="images/milestone-multiple-dates.png" /></li>
-                  </ul>
-                </div>
+            <div class="day-column day-column-3 offset-day-1 dev-activity">
+              <div class="priority-bar priority-high"></div>
+              <div class="act-title">
+                <strong>IT-CERT-0054:</strong> Obtain vendor certifications
+              </div>
+              <div class="milestone-list">
+                <ul class="milestones no-bullet">
+                  <li class="offset-day-1"><img src="images/milestone-scheduling-date.png" /></li>
+                  <li class="offset-day-3"><img src="images/milestone-target-date.png" /></li>
+                </ul>
               </div>
             </div>
-            
           </div>
           <!-- /list-dev-activities -->
         </div>
         </div>
-
-        <div id="dev-plan">
         </div>
 
         <!--This is a full-width dashboard panel-->
@@ -587,13 +508,13 @@
               </div>
           </div>
             <div class="panel-content-container-full">
-              <div class="no-border row">
+              <div id="table_container" class="row no-border">
                 <table id="report-templates-table" class="twelve no-border nested-table">
                   <thead>
                     <tr>
                       <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
                       <th><a class="sorting-block">Uploaded by<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
-                      <th><a class="sorting-block">Date Added<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                      <th><a class="sorting-block">Date Added<a class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
                       <th class="two">Actions</th>
                     </tr>
                   </thead>
@@ -678,7 +599,7 @@
               </div>
           </div>
             <div class="panel-content-container-full">
-              <div class="no-border row">
+              <div id="table_container" class=" row no-border">
                 <table id="report-templates-table" class="twelve no-border nested-table">
                   <thead>
                     <tr>
@@ -835,15 +756,6 @@
         <div class="four columns">
           <select class="custom dropdown display-none" id="Select1">
             <option selected>Account Status</option>
-            <option>Account Status Option with longer text</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
-            <option>Account Status</option>
             <option>Account Status</option>
             <option>Account Status</option>
           </select>
@@ -990,8 +902,6 @@
   </div>
 </div>
 
-<!--************** MODAL WINDOW POSITION ****************-->
-
 <!--************** MODAL WINDOW ATTACH DOCUMENT ****************-->
 
 <div id="attach-document" class="reveal-modal expand smaller">
@@ -1041,7 +951,6 @@
           </div>
         </div>
       </div>
-
     </form>
     <!--************** FORM ****************-->
 
@@ -1077,7 +986,7 @@
 
         <div class="form-group twelve mobile-four columns">
           <label>Notes</label>
-          <textarea placeholder="" class="min-height"> A multi-line text area</textarea>
+          <textarea placeholder="Add notes here" class="min-height full-width"></textarea>
         </div>
 
       </div>
@@ -1127,15 +1036,12 @@
 
   </div>
   <div class="modal-footer">
-    <a class="button radius primary forms" href="">Save</a> 
-    <a class="button radius alert forms" href="">Delete</a> 
-    <a class="" href="">Cancel</a>
+    <a class="primary radius button left" href="#">Save</a>
+    <a class="left cancel-link" href="#">Cancel</a>
   </div>
 </div>
 
 <!--************** MODAL WINDOW PEOPLE ****************-->
-
-
 
 <div id="overlay"></div>
 
@@ -1182,7 +1088,5 @@
 <!-- Application specific javascript -->
 <script src="js/compass.js"></script>
 <script src="js/compass-ie8.js"></script>
-<script>
-</script>
 </body>
 </html>
