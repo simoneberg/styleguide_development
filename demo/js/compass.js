@@ -1,13 +1,14 @@
+// Show and hide Advanced Search Panel
 function show_hide_advanced(id) {
   var advanced_panel = $('#advanced_search');
-  advanced_arrow = $('p.search-arrow');
-  advanced_arrow.css("position", "relative");
+  var advanced_arrow = $('p.search-arrow').css('position', 'relative');
+  
   if (advanced_panel.is(':hidden')) {
-    advanced_panel.css("display", "block");
-    advanced_arrow.html('&#xf0de;').css("top", "7px");
+    advanced_panel.show();
+    advanced_arrow.css("top", "7px").html('&#xf0de;');
   } else {
-    advanced_panel.css("display", "none");
-    advanced_arrow.html('&#xf0dd;').css("top", "0px");
+    advanced_panel.hide();
+    advanced_arrow.css("top", "0px").html('&#xf0dd;');
   }
 }
 
@@ -78,21 +79,26 @@ $(document).ready(function(){
   function open_close(ev) {
     ev.preventDefault();
     var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
-
     var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
 
     current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_pagination = $(current_panel).parents('.panel-wrapper').next('.multi-panel-pagination');
 
     if ($(current_panel).is(':hidden')) {
+
 	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.addClass("display-none");
+      panel_pagination.removeClass("display-none");
+	  
     } else {
+		
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
+      panel_pagination.addClass("display-none");
+
     }
     current_panel.slideToggle();
-
   };
 
   // Assign Direct Participants Relationship
@@ -225,7 +231,7 @@ $(document).ready(function(){
 
     $('#competency_list li.competence-level-item').eq(0).clone(true).appendTo('#competency_list');
     $("#competency_list li .cl-number").eq(n).html(n+1);
-    $("#competency_list li .cl-description").eq(n).html(newdescription);
+    $("#competency_list li .cl-description span").eq(n).html(newdescription);
     $('#competency_list').sortcompetency();
   });
   
@@ -320,6 +326,122 @@ $(document).ready(function(){
 
   }
 
+  // Function that Cancels Modal Window
+  function cancel_modal_window () {
+    $('.reveal-modal-bg').trigger('click');
+  }
+
+  // Modal Window Cancel Link
+  $('.modal-footer a.cancel-link').on('click', cancel_modal_window);
+
+  // Create and Add a New Group to the Organization Structure
+  $("a[data-reveal-id='create-group']").on( "click",function() {
+
+    var $this = $(this);
+    $('input[data-group-name]').val('');
+   
+    if ($this.is('#group-action-dropdown')) {
+      var target = $('.panel-wrapper.panel-wrapper-group.display-none').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');	 
+	  var target_parent_name = 'None';
+	}
+	else
+	{
+      var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-content-container-dashboard.panel-content-container-dashboard-group');
+      var target_parent = $(target).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid').children('.panel-header.panel-header-group');	 
+      var target_parent_name = $(target_parent).find('.name-classifier').text();
+	}
+
+	$('p[data-source-parent]').html(target_parent_name);
+	  
+    $('.modal-footer a.save-button').one('click', function(ev) {
+      ev.preventDefault();
+      var new_group = $( ".panel-wrapper.panel-wrapper-group.display-none" ).clone("withDataAndEvents").removeClass("display-none").addClass("panel-status-valid");
+      var new_group_name = $('input[data-group-name]').val();
+
+      if ($this.is('#group-action-dropdown') && (new_group_name.length > 0 )) {
+        $(target).closest('.content-container').append( new_group );
+        new_group.find('.name-classifier').html(new_group_name);
+      } else if (new_group_name.length > 0 ) {
+		$(target).last().append( new_group );
+        new_group.find('.name-classifier').html(new_group_name);
+      }
+
+      $('input[data-group-name]').val('');
+      cancel_modal_window();
+
+    });
+
+  });
+
+  // Edit Group Name from the Organization Structure
+  $("a[data-reveal-id='edit-group-name']").on( "click",function() {
+
+    var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid');
+	var target_name = $(target).find('.name-classifier:first').text();
+    var new_group_name = $('input[data-edit-group-name]').val(target_name);
+
+    $('.modal-footer a.edit-replace-button').one('click', function(ev) {
+      ev.preventDefault();
+      $(target).find('h5.name-classifier:first').html(new_group_name.val());
+      cancel_modal_window();
+    });
+	
+  });
+
+
+  // Delete Group from the Organization Structure
+  $("a[data-reveal-id='delete-group']").on( "click",function() {
+
+    var target = $(this).closest('.panel-wrapper.panel-wrapper-group.panel-status-valid');
+	var target_name = $(target).find('.name-classifier:first').text();
+
+    $('h5[data-group-title]').html('Delete ' + target_name);
+
+    $('.modal-footer a.delete-button').one('click', function(ev) {
+      ev.preventDefault();	
+      $(target).remove();
+      cancel_modal_window();
+    });
+	
+  });
+
+
+});
+
+/* Closes the Advanced Search Panel */
+ 
+function close_advanced_search_panel() {
+
+  var advanced_panel = $('#advanced_search');
+  if (advanced_panel.is(':visible')) {
+    advanced_panel.hide();
+    $('p.search-arrow').css("position", "relative").css("top", "0px").html('&#xf0dd;');
+  }
+}
+
+/* Adjust row to equal height in Competency Level Control */
+function adjust_height_competency_control() {
+
+  var maxHeight = $('.cl-description').height();
+
+  $('.cl-description').each(function(index) {
+    if($('.cl-description').eq( index ).height() > maxHeight) {
+      maxHeight = $('.cl-description').eq( index ).height();
+    }
+    index++;
+  });
+  $('#competency_list .competence-level-number').height(maxHeight);
+};
+
+/* Event bound for the Competency Level Control */
+$(window).on('load', adjust_height_competency_control);
+$(window).on('resize', adjust_height_competency_control);
+
+/* Drop-down closes once a drop-down item is clicked or selected */
+$('.button.dropdown.petrocore-actions ul li').on('click', function() {
+  $(this).parents('.button.dropdown.petrocore-actions').trigger('click', function(ev) {
+    ev.stopPropagation();
+  });
 });
 
 /* prevent hash changes on any nexted tabs*/
@@ -403,7 +525,7 @@ $('.tabs-slides-container').gettingStarted();
         at:"center center",
         of:".dev-activity"
       },
-      content: ".popover-content"
+      content: ".popover-content, .popover-content-right"
     },
     _create : function() {
       var that = this;
@@ -420,9 +542,9 @@ $('.tabs-slides-container').gettingStarted();
         that.popover.is(":visible") && !that.clickedLatch && that.popover.hide();
         that.clickedLatch = false;
       })
-      this._on({click:"toggle"});
+      this.element.find(".dev-activity").on('click', $.proxy(this.toggle, this))
     },
-    toggle: function(){
+    toggle: function(ev){
       this.popover.toggle();
       this.clickedLatch = true;
     },
@@ -435,15 +557,6 @@ $('.tabs-slides-container').gettingStarted();
 })(jQuery);
 
 $(".list-dev-activities").compassPopover();
-
-$(".toggle-nav-mobile").on("click", function(ev){
-  ev.preventDefault();
-  $("body").toggleClass("open");
-})
-
-$(".list-dev-activities").compassPopover();
-
-
 
 $(function() {
   $( document ).tooltip({
@@ -474,6 +587,7 @@ $(function() {
   var wrapper = $(".master-wrapper")
   
   wrapper.toggleClass("collapsed");
+  close_advanced_search_panel();
 
   if (wrapper.hasClass("collapsed")) {
       $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
@@ -489,21 +603,74 @@ $(function() {
 })(jQuery);
 
 
-$(".list-dev-activities").compassPopover();
 
-$(function() {
-  $( document ).tooltip({
-    position: {
-      my: "center bottom-20",
-      at: "center top",
-      using: function( position, feedback ) {
-        $( this ).css( position );
-        $( "<div>" )
-          .addClass( "arrow" )
-          .addClass( feedback.vertical )
-          .addClass( feedback.horizontal )
-          .appendTo( this );
-    }
-    }
-  });
+/* dynamic modal size demo */
+$( "#btn-dynamic-modal-small" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("small");
+});
+
+$( "#btn-dynamic-modal-medium" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("medium");
+});
+
+$( "#btn-dynamic-modal-large" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("large");
+});
+
+$( "#btn-dynamic-modal-xlarge" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("xlarge");
+});
+
+$( "#btn-dynamic-modal-expand" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal" ).removeClass("small");
+  $( "#dynamic-modal" ).addClass("expand");
+});
+
+$( "a[data-reveal-id='dynamic-modal-small']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("small");
+  $( "#dynamic-modal-small" ).removeClass("small");
+  $( "#dynamic-modal-small" ).addClass("small");
+});
+
+$( "a[data-reveal-id='dynamic-modal-medium']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("medium");
+  $( "#dynamic-modal-medium" ).removeClass("small");
+  $( "#dynamic-modal-medium" ).addClass("medium");
+});
+
+$( "a[data-reveal-id='dynamic-modal-large']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("large");
+  $( "#dynamic-modal-large" ).removeClass("small");
+  $( "#dynamic-modal-large" ).addClass("large");
+});
+
+$( "a[data-reveal-id='dynamic-modal-xlarge']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("xlarge");
+  $( "#dynamic-modal-xlarge" ).removeClass("small");
+  $( "#dynamic-modal-xlarge" ).addClass("xlarge");
+});
+
+$( "a[data-reveal-id='dynamic-modal-expand']" ).on("click", function() {
+  /* the does stuff place */
+  console.log("expand");
+  $( "#dynamic-modal-expand" ).removeClass("small");
+  $( "#dynamic-modal-expand" ).addClass("expand");
 });

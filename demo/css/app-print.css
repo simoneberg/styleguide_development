@@ -148,15 +148,24 @@ ul.inline-list li {
   clear: both;
 }
 .section.legend li {
-  font-size: 12px;
-  line-height: 31px;
   float: left;
   width: 16.66667%
 }
+
+.section.legend .ltitle {
+  font-size: 12px;
+  line-height: 31px;
+}
+
+
 .section.legend img {
   float: left;
   padding:3px;
 }
+
+.section .milestone-inline {
+  float:left;
+  margin-right: 5px}
 
 .development-plan-summary {
   counter-reset: developmentsummary;

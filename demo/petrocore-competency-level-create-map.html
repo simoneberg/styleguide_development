@@ -350,16 +350,17 @@
             <input type="hidden" id="hiddenEnabledCustomPropFlagMap" />
 
             <div class="row">
-              <div class="six mobile-four columns">
+              <div class="eight mobile-four columns">
 
-                <!-- ************************************************************* -->
-                <!-- ************ This is the Competency Levels panel ************ -->
-                <!-- ************************************************************* -->
-                <div id="competencelevel1" class="panel-wrapper"><!-- ************ -->
-                  <div class="panel-header">
+                <!-- ********************************************************************************* -->
+                <!-- ********************** This is the Competency Levels panel ********************** -->
+                <!-- ********************************************************************************* -->
+                <div id="competencelevel" class="panel-wrapper competency-level-panel"><!-- ********** -->
+
+                  <div class="panel-header flexible">
 
                     <div class="panel-title-container">
-                      <h5 class="name-classifier">Competence Level</h5>
+                      <h5 class="name-competency">Competence Level</h5>
                     </div>
 
                     <div class="panel-header-icons-container">
@@ -369,6 +370,7 @@
                         </li>
                       </ul>
                     </div>
+                    
                   </div>
 
                   <ul id="competency_list">
@@ -376,10 +378,10 @@
 
                     <li class="row competence-level-item">
                       <div class="one mobile-one columns competence-level-number background-blue">
-                        <p class="cl-number">1</p>
+                        <span class="cl-number">1</span>
                       </div>
                       <div class="nine mobile-two columns cl-description">
-                        <p>Awareness</p>
+                        <span>Awareness</span>
                       </div>
                       <div class="two mobile-one columns cl-icons">
                         <a href="#" class="icon- cl-icon-arrow-up is-disabled">&#xf062;</a>
@@ -389,7 +391,7 @@
                     </li>
 
                   </ul>
-            
+           
                 <!-- ********************************************************** -->
                 </div><!-- ********** End of Competency Levels panel ********** -->
                 <!-- ********************************************************** -->
@@ -500,11 +502,11 @@
   $(window).load(function(){
     var n = $("#competency_list li").length;
     $("#addcompetency").trigger('click');  
-    $("#competency_list li .cl-description").eq(n).html('Fundamental Application');
+    $("#competency_list li .cl-description span").eq(n).html('Fundamental Application');
     $("#addcompetency").trigger('click');  
-    $("#competency_list li .cl-description").eq(n+1).html('Skilled Application');
+    $("#competency_list li .cl-description span").eq(n+1).html('Skilled Application');
     $("#addcompetency").trigger('click');  
-    $("#competency_list li .cl-description").eq(n+2).html('Mastery');
+    $("#competency_list li .cl-description span").eq(n+2).html('Mastery');
   });
 </script>
 
