@@ -687,6 +687,39 @@ h4 {
   background: rgba(0,0,0,0.5) url('/images/loading.gif') 50% 50% no-repeat;
   z-index: 10000;
 }
+
+/* chevron header */
+
+
+#chevron.top-bar {
+  background: none;
+  border-top:solid 1px #ccc;
+  border-bottom:solid 1px #ccc;
+  height: 117px;
+}
+
+#chevron.top-bar .logo {
+  height: 45px;
+  width: 198px;
+  float: none;
+  margin-top: 0px;
+  margin-left: 20px;
+  background-image: url("../images/chevron-compass-logo.png");
+  cursor: pointer;
+}
+
+#chevron.top-bar .chevron-logo {
+  height: 62px;
+  width: 56px;
+  margin-top: 33px;
+  margin-right:20px;
+  background-image: url("../images/chevron-logo.png");
+  cursor: pointer;
+  float: right;
+}
+
+
+
 /* END HEADER */
 /* **************************************** */
 
@@ -844,6 +877,92 @@ h4 {
   width: 200px !important;
 }
 
+
+
+/* chevron navigation */
+
+
+#chevron.top-bar .profile-container {
+  float: none;
+  margin-top: 0px;
+  margin-left: 13px;
+  height:32px;
+  max-width: 450px;
+  display: inline-block;
+}
+#chevron .top-nav {
+  float: none;
+  height: 32px;
+}
+
+#chevron .top-nav .bar {
+  color:#000;
+  margin-top: 5px;
+}
+#chevron.top-bar ul > li a:not(.button) {
+  color: #010101;
+}
+
+#chevron.top-bar ul > li a:not(.button).username {
+  color: #010101;
+}
+
+#chevron.top-bar ul > li:not(.name):hover,
+#chevron.top-bar ul > li:not(.name).active,
+#chevron.top-bar ul > li:not(.name):focus {
+  background: none;
+}
+
+#chevron.top-bar ul > li:not(.name):hover a.username,
+#chevron.top-bar ul > li:not(.name).active a.username,
+#chevron.top-bar ul > li:not(.name):focus a.username {
+  color: #d9d9d9;
+}
+
+
+#chevron.top-bar ul > li.has-dropdown:hover > .dropdown,
+#chevron.top-bar ul > li.has-dropdown:focus > .dropdown {
+  display: block;
+  visibility: visible;
+  border: solid 1px #8a8a8a;
+  height: auto;
+  position: absolute;
+  top: 31px;
+}
+
+#chevron.top-bar ul>li.has-dropdown a:after {
+  border-color: #000 transparent transparent transparent;
+}
+
+#chevron.top-bar ul > li {
+  height: 32px;
+  line-height: 32px;
+}
+
+#chevron.top-bar ul > li a:not(.button) {
+  height: 32px;
+  line-height: 32px;
+}
+
+#chevron.top-bar ul {
+  height: 32px;
+}
+
+#chevron.top-bar ul > li.has-dropdown .dropdown li {
+  background: #fff;
+  line-height: 1;
+  padding-bottom: 0;
+  height: auto;
+  min-height: 100%;
+}
+
+#chevron.top-bar ul > li.has-dropdown .dropdown li a {
+  font-weight: normal;
+  color: #343537;
+  height: 100%;
+  line-height: 1;
+  padding: 5px 10px 7px 9px;
+}
 /* inline ul */
 /****************/
 
@@ -3632,6 +3751,36 @@ form.custom .competence-level-item .cl-icon-x,
   margin-bottom: 5px;
 }
 
+
+/* chevron footer */
+.chevron-footer {
+  border-top: 1px solid #8a8a8a;
+  border-bottom: 1px solid #8a8a8a;
+}
+.chevron-footer .footer-top {
+  margin-top: 40px;
+  margin-bottom: 8px;
+
+}
+.chevron-footer .footer-bottom {
+  margin-bottom: 30px;
+}
+
+.chevron-footer-hr {
+  margin-bottom: 8px;
+}
+
+.chevron-footer-links {
+  margin:0;
+}
+
+.chevron-footer-links li {
+  list-style: none;
+  display: inline;
+  margin-right: 30px;
+  font-size: 12px;
+}
+
 /* END FOOTER */
 /* **************************************** */
 
@@ -6011,6 +6160,8 @@ h4 .header-link {
     overflow: visible;
   }
 
+  #chevron.top-bar ul>li.has-dropdown a:after {
+  border-color: #000 transparent transparent transparent;
   .save-template-btn {
     float: right;
     width: 100%;
@@ -6027,6 +6178,8 @@ h4 .header-link {
     padding-left: 8px;
     padding-right: 8px;
   }
+
+}
 
 }
 
@@ -6231,6 +6384,19 @@ h4 .header-link {
     position: relative;
     top: 3px;
   }
+  #chevron.top-bar {
+    height: 44px;
+  }
+  #chevron.top-bar .logo {
+    height: 36px;
+    width: 160px;
+    float: none;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../images/chevron-compass-mobile.png");
+    position: relative;
+  }
 
   .master-wrapper {
     position: relative;
@@ -6240,6 +6406,21 @@ h4 .header-link {
   }
 
   .modal-header {
+  #chevron.top-bar .profile-container {
+    display:none;
+  }
+
+  #chevron.top-bar .chevron-logo {
+    height: 34px;
+    width: 34px;
+    margin-top: 5px;
+    margin-right:10px;
+    background-image: url("../images/chevron-logo-small.png");
+    cursor: pointer;
+    float: right;
+  }
+
+  .modal-header{
     width: 100%;
     margin-left: 0;
   }
@@ -7162,6 +7343,7 @@ body
     margin-bottom: 10px;
     display:block;
   }
+  }
   
   .header-inline .save-template-btn {
     margin-top: 0;
@@ -7171,6 +7353,8 @@ body
     float:none;
     padding-bottom: 8px;
     margin-top: 0;
+    display: block;
+  .chevron-footer-links li {
     display: block;
   }
 
