@@ -3655,7 +3655,7 @@ small.compass-error {
   background: #c60f13;
   color: #fff;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 14px;  
   font-weight: bold;
   -moz-border-radius-bottomleft: 2px;
   -webkit-border-bottom-left-radius: 2px;
@@ -3671,6 +3671,24 @@ small.compass-error.control-with-trailing-icon {
 
 small.compass-error.custom-dropdown {
   display: inline-block;
+}
+
+.panel-wrapper .compass-error {
+  display: block;
+  padding: 6px 4px;
+  margin-top: 12px;
+  margin-bottom: 0px;
+  background: #c60f13;
+  color: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 form.custom div.custom.dropdown.compass-error {
