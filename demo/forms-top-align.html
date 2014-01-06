@@ -555,37 +555,56 @@
             <hr class="small">
 
             <div class="row">
-              <div class="form-group seven mobile-four columns">
+
+              <div class="form-group file-upload-control file-upload-line-width">
+              
                 <label>Link or Upload Control</label>
                 <div><a href="#">View file</a></div>
-                <div class="form-group file-upload-btn">
-                  <label class="round text-center fileupload_btn_label" for="file">Choose a file</label>
-                  <input type="file" id="file">
+                <div class="form-group three mobile-two columns file-upload-btn">
+                  <label class="round text-center fileupload_btn_label" for="file" data-stored-file-name >Choose a file</label>
+                  <input id="file1" type="file">
                 </div>
-                <div><p>path/to/selected/file/notshown/if.blank</p></div>
-                <div class="radio-group">
-                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file</label>
-                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
+                <div class="file-upload-text-same-line nine mobile-two columns">
+                  <a class="file-upload-text-links" href="#">Unlink file</a>
+                </div> 
+
+                <div class="file-upload-options">
+                  <div><p>path/to/selected/file/notshown/if.blank</p></div>
+                  <div class="radio-group">
+                    <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file</label>
+                    <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
+                  </div>
                 </div>
+   
               </div>
             </div>
 
             <hr class="small">
 
+
             <div class="row">
-              <div class="form-group seven mobile-four columns">
-                <label>label</label>
+
+              <div class="form-group file-upload-control file-upload-line-width">
+              
+                <label>Label</label>
                 <div><a href="#">preview - optional</a></div>
-                <div class="form-group file-upload-btn">
-                  <label class="round text-center fileupload_btn_label" for="file">Choose a file</label>
-                  <input type="file" id="file">
+                <div class="form-group three mobile-two columns file-upload-btn">
+                  <label class="round text-center fileupload_btn_label" for="file" data-stored-file-name >Choose a file</label>
+                  <input type="file" id="file2">
                 </div>
-                <div><p>selected file path - optional</p></div>
-                <div><p>advice/ instruction - optional</p></div>
-                <div class="radio-group">
-                  <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file - optional</label>
-                  <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file - optional</label>
+                <div class="file-upload-text-same-line nine mobile-two columns">
+                  <a class="file-upload-text-links" href="#">Delete file</a>
+                </div> 
+
+                <div class="file-upload-options">
+                  <div><p>selected file path - optional</p></div>
+                  <div><p>advice/ instruction - optional</p></div>
+                  <div class="radio-group">
+                    <label for="radio1"><input name="radio-group-2" type="radio" data-customforms="disabled" id="radio3"> Upload file - optional</label>
+                    <label for="radio2"><input name="radio-group-2" type="radio" data-customforms="disabled" id="radio4"> Link to file - optional</label>
+                  </div>
                 </div>
+   
               </div>
             </div>
 

@@ -408,8 +408,29 @@ $(document).ready(function(){
 
 });
 
+/* File upload button stores the file name in data-stored-file */
+$('.file-upload-btn .fileupload_btn_label').on('click', function(ev) {
+  ev.preventDefault();
+
+  $(this).next().change(function(ev){
+    ev.preventDefault();
+    var file_name = $(this).val();
+	if ( file_name != '' && file_name != null ) {
+      $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val(file_name);
+      $(this).parents('.form-group.file-upload-control').find('.file-upload-text-same-line .file-upload-text-links').css('display','inline-block');
+      file_name = null;
+	}
+  });
+});
+
+/* File Upload Delete Link clears the file name stored in data-stored-file */
+$('a.file-upload-text-links').on('click', function(ev) {
+  ev.preventDefault();
+  $(this).css('display','none');
+  $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+});
+
 /* Closes the Advanced Search Panel */
- 
 function close_advanced_search_panel() {
 
   var advanced_panel = $('#advanced_search');
