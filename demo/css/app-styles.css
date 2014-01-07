@@ -266,7 +266,7 @@ ul.pagination li.current a {
 }
 
 .columns.right-split-container {
-  padding: 0;
+  padding: 0 0 410px;
   border-left: 1px solid #717171;
   background-color: #ffffff;
 }
@@ -5692,10 +5692,6 @@ h4 .header-link {
 
 @media only screen and (min-width: 769px) {
 
-  .columns.right-split-container {
-    padding-bottom: 360px;
-  }
-
   .master-wrapper.collapsed {
     position: relative;
   }
@@ -6448,6 +6444,11 @@ h4 .header-link {
 
 /* portait Andriod phone >4 inch screen */
 @media only screen and (max-width: 640px) {
+
+  .columns.right-split-container {
+    padding-bottom: 0px;
+  }
+  
   form.custom .one.columns .control-with-trailing-icon,
   form.custom .two.columns .control-with-trailing-icon,
   form.custom .three.columns .control-with-trailing-icon,
