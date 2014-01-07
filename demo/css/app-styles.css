@@ -442,7 +442,8 @@ hr {
 hr.small {
   border: 0;
   border-bottom: 1px dashed #ccc;
-  width:50%;
+  width: 50%;
+  text-align: left;
 }
 
 h4 {
@@ -1959,10 +1960,23 @@ ul.flyout li a, .nav-bar li ul li a:hover {
   text-shadow: 0 1px rgb(255, 102, 106);
 }
 
-.cancel-link{
+.file-upload-control {
+  padding-left: 6px;
+}
+
+.file-upload-text-links,
+.cancel-link {
   font-size: 13px;
   margin-left: 5px;
   padding: 9px 10px 10px;
+}
+
+.file-upload-text-links {
+  display: none;
+}
+
+.file-upload-line-width {
+  width: 100%;
 }
 
 .link-without-button {
@@ -1973,6 +1987,15 @@ ul.flyout li a, .nav-bar li ul li a:hover {
 .link-next-to-btn {
   font-size: 12px;
   margin-top: 10px;
+}
+
+.file-upload-control .file-upload-options {
+  clear:both;
+}
+				
+.file-upload-btn {
+  padding-left: 0px !important;
+  max-width: 246px;
 }
 
 .button.silver-button,
@@ -2336,7 +2359,8 @@ a.icon-trailing-control {
   margin-top: 8px;
 }
 
-.icon-trailing-control.input{
+.file-upload-text-same-line,
+.icon-trailing-control.input {
   margin-top: 8px;
 }
 
@@ -7166,6 +7190,9 @@ h4 .header-link {
     left: 900px;
   }
 
+  .file-upload-line-width {
+    min-width: 100%;
+  }
 }
 
 /* portait Andriod phone <4 inch screen */
