@@ -19,64 +19,64 @@ body {
 /* -------- Header Menu IE8 Fixes ------- */
 
 .lt-ie9 .top-bar ul li a {
-	color: white;
-	display: block;
-	font-weight:normal;
-	font-size: 13px;
-	height: 50px;	
-	line-height: 50px;	
-	padding-top: 1px;	
-	padding-right: 0px;	
-	padding-left: 0px;			
+  color: white;
+  display: block;
+  font-weight:normal;
+  font-size: 13px;
+  height: 50px;
+  line-height: 50px;
+  padding-top: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .lt-ie9 .top-bar ul li a.button {
-	height: auto;
-	line-height: 30px;
-	margin-top: 7px;
+  height: auto;
+  line-height: 30px;
+  margin-top: 7px;
 }
 
 .lt-ie9 .top-bar ul li a img {
-	margin-top: -5px;
-	vertical-align: middle;
+  margin-top: -5px;
+  vertical-align: middle;
 }
 
 .lt-ie9 .top-bar ul > li a:hover, .lt-ie9 .top-bar ul > li a:focus, .lt-ie9 .top-bar ul > li a:active {
-	color: #d9d9d9;
+  color: #d9d9d9;
 }
 
 .lt-ie9 .top-bar ul li.has-dropdown {
-	padding-right: 24px;
+  padding-right: 24px;
 }
 
 .lt-ie9 .top-bar .username {
-	font-size:14px; 
-	font-weight: bold;
+  font-size:14px;
+  font-weight: bold;
 }
 
 /* Fixes IE checkboxes in Steps Reports section display incorrectly when resizing */
 #progress-indicator {
-	min-width: 745px;
+  min-width: 745px;
 }
 
 #step1, #step2, #step3, #step4 {
-	border-right:solid 1px #717171;	
-	padding-left: 0px;
-	padding-right: 0px;
+  border-right:solid 1px #717171;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Footer */
 .petrocore-footer {
-	height:auto; 
+  height:auto;
 }
 
 .trademark {
-	width: auto;
-	height:auto;
+  width: auto;
+  height:auto;
 }
 
 .feedback {
-	float:right;
+  float:right;
 }
 
 /* It fixes the x closing button on a modal pop-up window in IE8 */
@@ -85,50 +85,50 @@ body {
 }
 
 .reveal-modal .panel-header-icons-close .close-reveal-modal {
-    color:#666666;   
+    color:#666666;
     font-weight:normal;
     cursor: pointer;
     float:right;
     top:11px;
 }
-	
+
 /* It fixes the misalignment of the dropdown arrow box */
 form.custom div.custom.dropdown a.selector {
-	width:28px;
-	height:30px !important;			
-	border: solid #5b5b5b 1px;
+  width:28px;
+  height:30px !important;
+  border: solid #5b5b5b 1px;
 }
 
 form.custom div.custom.dropdown a.selector:after{
-	border-color:#676767 transparent transparent transparent;	
-	margin-top:-2px;
-	margin-left:-5px;		
+  border-color:#676767 transparent transparent transparent;
+  margin-top:-2px;
+  margin-left:-5px;
 }
 
 form.custom.search-type div.custom.dropdown a.selector {
-	width:30px;
-	height:30px;
-	border: 1px solid #717171;		
+  width:30px;
+  height:30px;
+  border: 1px solid #717171;
 }
 
-form.custom.search-type div.custom.dropdown a.selector:after{	
-	border-color:#676767 transparent transparent transparent;		
-	margin-top:-2px;
-	margin-left:-5px;
+form.custom.search-type div.custom.dropdown a.selector:after{
+  border-color:#676767 transparent transparent transparent;
+  margin-top:-2px;
+  margin-left:-5px;
 }
 
 /* It adds bottom space to legend tags */
 fieldset legend {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* It preserves size of horizontal filters */
 .added-filter {
-	min-width:204px;
+  min-width:204px;
 }
 
 .footer-logo {
-	margin-bottom:6px;
+  margin-bottom:6px;
 }
 
 /* Avanced Search Results */
@@ -137,39 +137,39 @@ fieldset legend {
 }
 
 #search_type_drop {
-	padding-bottom:28px;
+  padding-bottom:28px;
 }
 
 /* Notification clickable overlay */
-#overlay {	
+#overlay {
     background: #000;
     filter: alpha(opacity=1);
 }
 
 /***** Report Templates  ******/
 .button.dropdown.split.petrocore-actions > span {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */	
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
 }
 
 .button.dropdown.split.petrocore-actions > a { /* Left area of the Button on hover */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */	
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
 }
 
 .button.dropdown.split.petrocore-actions > span:hover,
 .button.dropdown.split.petrocore-actions > span:focus,
 .button.dropdown.split.petrocore-actions > span:active { /* Arrow down button */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */	
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */
 }
 
 .button.silver-button {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ababab',GradientType=0 ); /* IE8 */
 }
 
 .button.silver-button:hover,
 .button.silver-button:focus,
 .button.silver-button:active,
 .button.silver-button.active {
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */		
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ababab', endColorstr='#d6d6d6',GradientType=0 ); /* IE8 */
 }
 
 /* File upload customized button is clickable in ie8 */
@@ -212,7 +212,7 @@ fieldset legend {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 63px;       
+    width: 63px;
     background-color: #c2c2c2;
   }
   .master-wrapper.collapsed .right-split-container {
@@ -236,13 +236,13 @@ fieldset legend {
 .lt-ie9 .background .month-column {
    float:left !important;
    width: 8.33333% !important;
-} 
+}
 .lt-ie9 .background .week-column {
    float:left !important;
    width: 20% !important;
 }
-.lt-ie9 .background .title, 
-.lt-ie9 .background .vertical, 
+.lt-ie9 .background .title,
+.lt-ie9 .background .vertical,
 .lt-ie9 .dev-activity .priority-bar {
   margin: 0;
 }
