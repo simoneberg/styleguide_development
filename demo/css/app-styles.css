@@ -266,12 +266,13 @@ ul.pagination li.current a {
 }
 
 .columns.right-split-container {
-  padding: 0;
+  padding: 0 0 410px;
+  border-left: 1px solid #717171;
+  background-color: #ffffff;
 }
 
 .columns.left-split-container {
   padding: 0;
-  height: 0;
 }
 
 .columns.no-padding {
@@ -282,7 +283,6 @@ ul.pagination li.current a {
   height: 100%;
   background-color: white;
   padding: 2px 20px 20px 20px;;
-  border-left: 1px solid #717171;
   min-height: 500px;
 }
 
@@ -344,7 +344,6 @@ ul.pagination li.current a {
 
 .master-wrapper {
   background-color: #c2c2c2;
-  overflow: hidden;
   min-height: 100%;
 }
 
@@ -1098,7 +1097,6 @@ ul.breadcrumbs li a:focus {
   border-top: 1px solid #717171;
   border-bottom: 1px solid #717171;
   padding: 3px 10px 0 10px;
-  border-left: 1px solid #717171;
 }
 
 .breadcrumbs {
@@ -3762,7 +3760,6 @@ form.custom .competence-level-item .cl-icon-x,
   border-top: 1px solid #8a8a8a;
   border-bottom: 1px solid #8a8a8a;
 }
-
 .trademark {
   margin-top: 13px;
   margin-right: auto;
@@ -6757,6 +6754,11 @@ h4 .header-link {
 
 /* portait Andriod phone >4 inch screen */
 @media only screen and (max-width: 640px) {
+
+  .columns.right-split-container {
+    padding-bottom: 0px;
+  }
+  
   form.custom .one.columns .control-with-trailing-icon,
   form.custom .two.columns .control-with-trailing-icon,
   form.custom .three.columns .control-with-trailing-icon,
