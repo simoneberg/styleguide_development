@@ -294,7 +294,7 @@
             <legend><h5>Well Planning</h5></legend>
             <div class="row">
               <div class="form-group twelve mobile-four columns">
-                  <label>Fundamental</label>
+                 <label>Fundamental</label>
                   <div class="form-text-display-field">Obtain all relevant historical and current geologic, seismic, and wireline logging data to include in a prospect specific well Design.</div>
               </div>
             </div>
@@ -519,11 +519,11 @@
     <!-- </div> -->
   <!-- </div> -->
   <!-- CONTENT AREA -->
-
-
+                  
 <!-- ### Capability Assessement Popup *** -->
 <div id="capability-assessment" class="reveal-modal xlarge">
-    <div class="panel-header">
+
+  <div class="panel-header">
     <div class="panel-title-container">
       <h5>Complete Capability Assessment</h5>
     </div>
@@ -533,203 +533,220 @@
       </ul>
     </div>
   </div>
+  
   <div class="popup-content-container">
-      <form class="custom">
-        <div class="row">
-          <div class="twelve columns">
-            <p><strong>Completion Program - Fundamental Application</strong></p>
+    <form class="custom">
+      <div class="row">
+        <div class="twelve columns">
+          <p><strong>Completion Program - Fundamental Application</strong></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group nine mobile-four columns">
+          <label for="customDropdown">Assessed By</label>
+          <!-- the select tag which is hte default HTML is not visible when in a custom form and the class custom-dropdown is used. -->
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option SELECTED>Selected list item</option>
+            <option>List item</option>
+            <option>another list item</option>
+            <option>yet another list item</option>
+          </select>
+          <!-- the div with class custom dropdown displays the dropdown in a Zurb custom form.
+               expand tells Zurb that the dropdown should take up as much horizontal space as possible. -->
+          <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
+            <ul>
+              <li>list item</li>
+              <li>another list item</li>
+              <li>yet another list item</li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="form-group nine mobile-four columns">
-            <label for="customDropdown">Assessed By</label>
-            <!-- the select tag which is hte default HTML is not visible when
-                        in a custom form and the class custom-dropdown is used. -->
-            <select class="custom dropdown display-none" id="customDropdown">
-              <option SELECTED>Selected list item</option>
-              <option>List item</option>
-              <option>another list item</option>
-              <option>yet another list item</option>
-            </select>
-            <!-- the div with class custom dropdown displays the
-                        dropdown in a Zurb custom form.
-                        expand tells Zurb that the dropdown should take up
-                        as much horizontal space as possible. -->
-            <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
-              <ul>
-                <li>list item</li>
-                <li>another list item</li>
-                <li>yet another list item</li>
-              </ul>
+      <div class="row">
+        <div class="form-group nine mobile-four columns">
+          <label for="customDropdown">Verified By</label>
+          <!-- the select tag which is hte default HTML is not visible when in a custom form and the class custom-dropdown is used. -->
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option SELECTED>Selected list item</option>
+            <option>List item</option>
+            <option>another list item</option>
+            <option>yet another list item</option>
+          </select>
+          <!-- the div with class custom dropdown displays the dropdown in a Zurb custom form.
+               expand tells Zurb that the dropdown should take up as much horizontal space as possible. -->
+          <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
+            <ul>
+              <li>list item</li>
+              <li>another list item</li>
+              <li>yet another list item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group nine mobile-four columns">
+          <label for="customDropdown">Verifier Type</label>
+          <!-- the select tag which is hte default HTML is not visible when in a custom form and the class custom-dropdown is used. -->
+          <select class="custom dropdown display-none" id="customDropdown">
+            <option SELECTED>Selected list item</option>
+            <option>List item</option>
+            <option>another list item</option>
+            <option>yet another list item</option>
+          </select>
+          <!-- the div with class custom dropdown displays the dropdown in a Zurb custom form.
+               expand tells Zurb that the dropdown should take up as much horizontal space as possible. -->
+          <div class="custom dropdown expand"> <a href="#" class="current"> Internal </a> <a href="#" class="selector"></a>
+            <ul>
+              <li>list item</li>
+              <li>another list item</li>
+              <li>yet another list item</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group four mobile-four columns">
+          <label>Date Assessed</label>
+          <input class="control-with-trailing-icon" type="text" placeholder="" value="11/01/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="form-group file-upload-control file-upload-line-width add-small-margin-left">
+
+          <label>Capability Assessment</label>                
+          <div><a href="#">View file</a></div>
+          <div class="form-group three mobile-two columns file-upload-btn">
+            <label class="round text-center fileupload_btn_label" for="file" data-stored-file-name >Attach Document</label>
+            <input id="file5" type="file">
+          </div>
+
+          <div class="file-upload-text-same-line nine mobile-two columns">
+            <a class="file-upload-text-links" href="#">Unlink file</a>
+          </div> 
+
+          <div class="file-upload-options">
+            <div><p>path/to/selected/file/notshown/if.blank</p></div>
+            <div class="radio-group">
+              <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1" checked> Upload file</label>
+              <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
             </div>
           </div>
+
         </div>
 
-        <div class="row">
-          <div class="form-group nine mobile-four  columns">
-            <label for="customDropdown">Verified By</label>
-            <!-- the select tag which is hte default HTML is not visible when
-                        in a custom form and the class custom-dropdown is used. -->
-            <select class="custom dropdown display-none" id="customDropdown">
-              <option SELECTED>Selected list item</option>
-              <option>List item</option>
-              <option>another list item</option>
-              <option>yet another list item</option>
-            </select>
-            <!-- the div with class custom dropdown displays the
-                        dropdown in a Zurb custom form.
-                        expand tells Zurb that the dropdown should take up
-                        as much horizontal space as possible. -->
-            <div class="custom dropdown expand"> <a href="#" class="current"> Supervisor, Sally (ssally) </a> <a href="#" class="selector"></a>
-              <ul>
-                <li>list item</li>
-                <li>another list item</li>
-                <li>yet another list item</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <div class="row">
-          <div class="form-group nine mobile-four  columns">
-            <label for="customDropdown">Verifier Type</label>
-            <!-- the select tag which is hte default HTML is not visible when
-                        in a custom form and the class custom-dropdown is used. -->
-            <select class="custom dropdown display-none" id="customDropdown">
-              <option SELECTED>Selected list item</option>
-              <option>List item</option>
-              <option>another list item</option>
-              <option>yet another list item</option>
-            </select>
-            <!-- the div with class custom dropdown displays the
-                        dropdown in a Zurb custom form.
-                        expand tells Zurb that the dropdown should take up
-                        as much horizontal space as possible. -->
-            <div class="custom dropdown expand"> <a href="#" class="current"> Internal </a> <a href="#" class="selector"></a>
-              <ul>
-                <li>list item</li>
-                <li>another list item</li>
-                <li>yet another list item</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div class="row">
+ 
+        <div id="add_evidence_panel" class="panel-wrapper">
+          <div class="panel-header-fluid">
 
-        <div class="row">
-          <div class="form-group four mobile-four columns">
-            <label>Date Assessed</label>
-            <input class="control-with-trailing-icon" type="text" placeholder="" value="11/01/2013"/><a class="icon-trailing-control input" href"#">&#xf073;</a>
-          </div>
-        </div>
-
-       
-        <div class="row">
-          <div class="form-group seven mobile-four columns">
-            <label>Capability Assessment</label>
-            <div><a href="#">View file</a></div>
-              <div class="form-group file-upload-btn">
-                <label class="round text-center fileupload_btn_label" for="file">Attach Document</label>
-                <input type="file" id="file">
-              </div>
-              <div class="word-wrap"><p>path/to/selected/file/notshown/if.blank</p></div>
-              <div class="radio-group">
-                <label for="radio1"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio1"> Upload file</label>
-                <label for="radio2"><input name="radio-group-1" type="radio" data-customforms="disabled" id="radio2"> Link to file</label>
-              </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="panel-wrapper">
-            <div class="panel-header-fluid">
+            <div class="eight mobile-four columns no-padding">
               <div class="panel-header-fluid-title">
                 <h5 class="name-classifier">Additional Evidence</h5>
               </div>
+            </div>
+
+            <div class="four mobile-four columns no-padding">
               <div class="panel-header-fluid-button">
-                <a class="secondary radius button smaller" href="#" data-reveal-id="attach-document">Attach Document</a>
+                <a id="add_evidence_document_btn" class="secondary radius button smaller">Add Evidence</a>
               </div>
             </div>
-              <div class="panel-content-container-full">
-                <div class="no-border row">
-                  <table id="report-templates-table" class="twelve no-border nested-table">
-                    <thead>
-                      <tr>
-                        <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
-                        <th><a class="sorting-block">Uploaded by<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
-                        <th><a class="sorting-block">Date Added<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
-                        <th class="two">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <a href="#">Document Number 1234</a>
-                        </td>
-                        <td>Doe, John (DJOE)</td>
-                        <td>Oct-15-2013</td>
-                        <td>
-                          <a name="action-button1"></a>
-                          <div href="#action-button1" class="button dropdown petrocore-actions">
-                            Actions
-                            <ul>
-                              <li><a href="#">Download</a></li>
-                              <li><a href="#">Delete</a></li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#">Document Number 1234</a>
-                        </td>
-                        <td>Doe, John (DJOE)</td>
-                        <td>Oct-15-2013</td>
-                        <td>
-                          <a name="action-button1"></a>
-                          <div href="#action-button1" class="button dropdown petrocore-actions">
-                            Actions
-                            <ul>
-                              <li><a href="#">Download</a></li>
-                              <li><a href="#">Delete</a></li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="#">Document Number 1234</a>
-                        </td>
-                        <td>Doe, John (DJOE)</td>
-                        <td>Oct-15-2013</td>
-                        <td>
-                          <a name="action-button1"></a>
-                          <div href="#action-button1" class="button dropdown petrocore-actions">
-                            Actions
-                            <ul>
-                              <li><a href="#">Download</a></li>
-                              <li><a href="#">Delete</a></li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
+            
+          </div>
 
-                    </tbody>
-                  </table>
+          <div class="panel-content-container-full">
+            <div class="no-border row">
+
+              <div id="document_details_edit_area" class="document-details-hidden-area display-none">
+              <!--This is the Document Details Edit Area that is hidden by default-->
+
+                <div class="row">
+
+                  <div class="form-group file-upload-control file-upload-line-width add-small-margin-left">
+
+                    <div class="form-group three mobile-two columns file-upload-btn">
+                      <label class="round text-center fileupload_btn_label" for="file" data-stored-file-name >Attach Document</label>
+                      <input id="file5" type="file">
+                    </div>
+
+                    <div class="file-upload-text-same-line nine mobile-two columns">
+                      <a class="file-upload-text-links" href="#">Unlink file</a>
+                    </div>
+
+                    <div class="file-upload-options">
+                      <div class="radio-group">
+                        <label for="radio3"><input name="radio-group-2" type="radio" data-customforms="disabled" id="radio3" checked> Upload file</label>
+                        <label for="radio4"><input name="radio-group-2" type="radio" data-customforms="disabled" id="radio4"> Link to file</label>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
+
+                <div class="row">
+                  <div class="form-group six mobile-four columns">
+                    <label>Name</label>
+                    <div class="control-with-trailing-icon document-label-input">
+                      <input type="text" placeholder="" value="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group seven mobile-four columns">
+                    <div class="same-line add-medium-space-right">
+                      <a id="document_details_save_btn" class="primary radius button">Save</a>
+                    </div>
+                    <div class="same-line no-href">
+                      <a id="document_details_cancel_lnk">Cancel</a>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+      
+            
+              <table id="report-templates-table" class="twelve no-border nested-table">
+                <thead>
+                  <tr>
+                    <th><a class="sorting-block">Name<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    <th><a class="sorting-block">Uploaded by<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    <th><a class="sorting-block">Date Added<span class="add-sorting-icon icon-">&#xf0dd;</span></a></th>
+                    <th class="two">Actions</th>
+                  </tr>
+                </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
               </div>
             </div>
-          </div><!--Close row-->
+          </div>
+        </div><!--Close row-->
       </form>
-  </div>
-  <div class="modal-footer">
-    <a class="primary radius button" href="#">Submit Pass</a>
-    <a class="alert radius button" href="#">Submit Fail</a>
-    <a class="cancel-link" href="#">Cancel</a>
-  </div>
-</div>
-<!-- ### End Capability Assessement Popup *** -->
+    </div>
 
+    <div class="modal-footer">
+      <div class="same-line add-small-space-right">
+        <a class="primary radius button" href="#">Submit Pass</a>
+      </div>
+      <div class="same-line">
+        <a class="alert radius button" href="#">Submit Fail</a>
+      </div>
+      <a class="cancel-link" href="">Cancel</a>
+    </div>
+  </div>
+  <!-- ### End Capability Assessement Popup *** -->
+
+            
 <div id="overlay"></div>
 
 <div class="notifications-popup">
