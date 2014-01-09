@@ -415,9 +415,14 @@ $('.file-upload-btn .fileupload_btn_label').on('click', function(ev) {
   $(this).next().change(function(ev){
     ev.preventDefault();
     var file_name = $(this).val();
+
 	if ( file_name != '' && file_name != null ) {
       $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val(file_name);
       $(this).parents('.form-group.file-upload-control').find('.file-upload-text-same-line .file-upload-text-links').css('display','inline-block');
+
+      if ($(".document-label-input")){
+        $(".document-label-input input").val(file_name);
+      }
       file_name = null;
 	}
   });
@@ -425,9 +430,70 @@ $('.file-upload-btn .fileupload_btn_label').on('click', function(ev) {
 
 /* File Upload Delete Link clears the file name stored in data-stored-file */
 $('a.file-upload-text-links').on('click', function(ev) {
-  ev.preventDefault();
+  ev.preventDefault();  
   $(this).css('display','none');
   $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+
+  if ($(".document-label-input")){
+    $(".document-label-input input").val('');
+  }
+});
+
+/* Add a new row to the Additional Evidence Table */
+$('#add_evidence_document_btn').on('click', function () {
+	
+  $('#report-templates-table').find('tbody').append('<tr><td><a class="secondary radius button smaller document-details-btn">Document Details</a></td><td>Doe, John (DJOE)</td><td>Oct-15-2013</td><td><a name="action-button1"></a><div href="#action-button1" class="button dropdown petrocore-actions">Actions<ul><li><a href="#">Download</a></li><li><a href="#">Delete</a></li><li><a href="#">Edit</a></li></ul></div></td></tr>');				  					  
+
+});
+
+/* Document Detail button from the Additional Evidence Table */
+$('#report-templates-table').on('click', '.document-details-btn', function () {
+
+  var selectedDocDetailsBtn = $(this);
+  var selectedDocDetailsBtnTD = $(this).parent('td');
+
+  $(this).parents('#document_details_edit_area').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+  $(this).parents('#document_details_edit_area').find('.file-upload-text-same-line a.file-upload-text-links').css('display','none');
+  $(this).parents('#document_details_edit_area').find('.document-label-input input').val('');
+
+  $('#report-templates-table, #add_evidence_document_btn').hide();
+  $('#document_details_edit_area').show('slow');
+
+  /* Save Button */
+  $('#document_details_save_btn').on('click', function () {
+    $('#report-templates-table, #add_evidence_document_btn').show();
+    $('#document_details_edit_area').hide('slow');	
+	
+    var newFileName = $(this).parents('#document_details_edit_area').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val();
+
+    if ( newFileName != '' && newFileName != null ) {
+      $(selectedDocDetailsBtnTD).html('<a class="no-href">' + newFileName + '</a>');
+      $(selectedDocDetailsBtn).hide();
+      newFileName = null;
+	}
+
+    $(this).parents('#document_details_edit_area').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+    $(this).parents('#document_details_edit_area').find('.file-upload-text-same-line a.file-upload-text-links').css('display','none');
+    $(this).parents('#document_details_edit_area').find('.document-label-input input').val('');
+    $(selectedDocDetailsBtn) = null;
+    $(selectedDocDetailsBtnTD) = null;
+  });
+
+
+  /* Cancel link */
+  $('#document_details_cancel_lnk').on('click', function () {
+
+    $('#report-templates-table, #add_evidence_document_btn').show();
+    $('#document_details_edit_area').hide('slow');
+	
+	$(this).parents('#document_details_edit_area').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+	$(this).parents('#document_details_edit_area').find('.file-upload-text-same-line a.file-upload-text-links').css('display','none');
+    $(this).parents('#document_details_edit_area').find('.document-label-input input').val('');
+    $(selectedDocDetailsBtn) = null;
+    $(selectedDocDetailsBtnTD) = null;
+	newFileName = null;
+  });  
+  
 });
 
 /* Closes the Advanced Search Panel */
