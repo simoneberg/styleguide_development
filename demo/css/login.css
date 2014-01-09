@@ -249,8 +249,7 @@ form.custom div.custom.dropdown ul li:hover:after{
 /* -- End of overwriting and reconfiguring -- */
 
 
-
-.disclaimer > * {
+.disclaimer > *:not(b, em, h1, h2, h3, h4, h5, h6, hr, i, img, p, s, strong, u, url) {
 	color: #aaa;
 	font-size: 12px;
 }
