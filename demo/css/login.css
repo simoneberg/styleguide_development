@@ -1,249 +1,249 @@
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
-	font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
+  font-family: Verdana,"Helvetica", Helvetica, Arial, sans-serif;
 }
 
 body {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
-.login-top, 
-.login-company-name, 
-.login-header, 
-.login-content,   
-.login-info, 
+.login-top,
+.login-company-name,
+.login-header,
+.login-content,
+.login-info,
 .login-footer {
-	margin: 0 auto;
-	width: 350px;
+  margin: 0 auto;
+  width: 350px;
 }
 
 .login-row {
-	clear: both;
-	overflow: hidden;
-	padding: 0 15px;
-	width: 350px;
+  clear: both;
+  overflow: hidden;
+  padding: 0 15px;
+  width: 350px;
 }
 
 .login-row .columns {
-	padding: 0;
+  padding: 0;
 }
 
 .login-two {
-	width: 53px !important;
+  width: 53px !important;
 }
 
 .login-ten {
-	width: 267px !important;
+  width: 267px !important;
 }
 
 img.login_logo {
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .login-company-name h1 {
-	font-size: 18px;
-	text-align: center;
+  font-size: 18px;
+  text-align: center;
 }
 
 .page-login h2 {
-	background-color: #ddd;
-	border: 1px solid #ccc;
-	border-width: 1px 1px 0 1px;
-	font-size: 13px;
-	line-height: 1.5;
-	margin: 0 0 0 2px;
-	padding: 8px 5px;
-	text-align: center;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  border-width: 1px 1px 0 1px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 0 2px;
+  padding: 8px 5px;
+  text-align: center;
 }
 
 span.prefix {
-	background: #fff;
-	border: 1px solid #ccc;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	-ms-border-radius: 0;
-	-o-border-radius: 0;
-	border-radius: 0;
-	border-width: 1px 0 0 1px;
-	-webkit-box-shadow: 0 0;
-	-moz-box-shadow: 0 0;
-	box-shadow: 0 0;
-	color: #bbb;
-	height: 42px;
-	line-height: 42px;
+  background: #fff;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border-width: 1px 0 0 1px;
+  -webkit-box-shadow: 0 0;
+  -moz-box-shadow: 0 0;
+  box-shadow: 0 0;
+  color: #bbb;
+  height: 42px;
+  line-height: 42px;
 }
 
-input[type="text"], 
-input[type="password"], 
-input[type="date"], 
-input[type="datetime"], 
-input[type="email"], 
-input[type="number"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="time"], 
-input[type="url"], 
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
 textarea {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	-ms-border-radius: 0;
-	-o-border-radius: 0;
-	border-radius: 0;
-	border-width: 1px 1px 0 0;
-	-webkit-box-shadow: 0 0;
-	-moz-box-shadow: 0 0;
-	box-shadow: 0 0;
-	font-size: 12px;
-	margin: 0;
-	padding: 20px 12px;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
-	transition: none;
-	outline: none;
-	-webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border-width: 1px 1px 0 0;
+  -webkit-box-shadow: 0 0;
+  -moz-box-shadow: 0 0;
+  box-shadow: 0 0;
+  font-size: 12px;
+  margin: 0;
+  padding: 20px 12px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  outline: none;
+  -webkit-appearance: none;
 }
 
-.login-info-content input[type="text"], 
-.login-info-content input[type="password"], 
-.login-info-content input[type="date"], 
-.login-info-content input[type="datetime"], 
-.login-info-content input[type="email"], 
-.login-info-content input[type="number"], 
-.login-info-content input[type="search"], 
-.login-info-content input[type="tel"], 
-.login-info-content input[type="time"], 
-.login-info-content input[type="url"], 
+.login-info-content input[type="text"],
+.login-info-content input[type="password"],
+.login-info-content input[type="date"],
+.login-info-content input[type="datetime"],
+.login-info-content input[type="email"],
+.login-info-content input[type="number"],
+.login-info-content input[type="search"],
+.login-info-content input[type="tel"],
+.login-info-content input[type="time"],
+.login-info-content input[type="url"],
 .login-info-content textarea {
-	border-width: 1px;
+  border-width: 1px;
 }
 
 .end-border {
-	border-top: 1px solid #ddd;
-	height: 1px;
-	margin: 0 0 15px 2px;
+  border-top: 1px solid #ddd;
+  height: 1px;
+  margin: 0 0 15px 2px;
 }
 
 .login-button {
-	display: block;
+  display: block;
 }
 
 p.centered {
-	margin: 15px 0;
-	text-align: center;
+  margin: 15px 0;
+  text-align: center;
 }
 
 .forgot_pw_link {
-	color: #999;
-	font-size: 13px;
+  color: #999;
+  font-size: 13px;
 }
 
 .faded {
-	color: #ccc;
-	font-size: 12px;
+  color: #ccc;
+  font-size: 12px;
 }
 
 .login-info-content {
-	border: 1px solid #ccc;
-	margin: 0 0 20px 2px;
-	padding: 10px 15px;
+  border: 1px solid #ccc;
+  margin: 0 0 20px 2px;
+  padding: 10px 15px;
 }
 
 .login-info-content p {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .or_label {
-	background-color: #fff;
-	font-weight: bold;
-	margin: -25px auto 8px;
-	position: relative;
-	text-align: center;
-	width: 30px;
+  background-color: #fff;
+  font-weight: bold;
+  margin: -25px auto 8px;
+  position: relative;
+  text-align: center;
+  width: 30px;
 }
 
 /* -- Multi-Language selection dropdown box  -- */
 
 #language-wrapper {
-	margin:0 auto;
-	width:218px;
+  margin:0 auto;
+  width:218px;
 }
 
 #language-label {
-	position:relative;
-	top:23px;	
-	left:0px;
-	width:85px;
-	padding-right:4px;
-	font-size: 12px;
-	color: #999;
-	text-align:right;
+  position:relative;
+  top:23px;
+  left:0px;
+  width:85px;
+  padding-right:4px;
+  font-size: 12px;
+  color: #999;
+  text-align:right;
 }
 
 #language-container {
-	position:relative;
-	top:0px;	
-	left:86px;
-	width:130px;
-	padding-left: 4px;
+  position:relative;
+  top:0px;
+  left:86px;
+  width:130px;
+  padding-left: 4px;
 }
 
 #drop-selection {
-	display:none;
+  display:none;
 }
- 
+
 /* -- The following segment overwrites and reconfigures the dropdown control from foundation.min.css */
 /* -- For a grayed out border dropdown language selection, change the color #8a8a8a by #ddd -- */
 form.custom div.custom.dropdown{
-	font-size:12px; /* This is the font-size for the language once selected, English is the default  */
-	height:auto;
-	border:solid 1px #fff;
+  font-size:12px; /* This is the font-size for the language once selected, English is the default  */
+  height:auto;
+  border:solid 1px #fff;
 }
 
 form.custom div.custom.dropdown a.current{
-   	color:#999;  /* Font color gray to match theme page for the language once selected, English is the default  */
-	border:solid #8a8a8a 1px;  /* dropdown border color is dark gray */
+    color:#999;  /* Font color gray to match theme page for the language once selected, English is the default  */
+  border:solid #8a8a8a 1px;  /* dropdown border color is dark gray */
 }
 
 form.custom div.custom.dropdown a.selector{
-	border:solid #8a8a8a 1px;  /* dropdown arrow square box border color is dark gray */
+  border:solid #8a8a8a 1px;  /* dropdown arrow square box border color is dark gray */
 }
 
 form.custom div.custom.dropdown a.selector:after{
-	border-color:#8a8a8a transparent transparent transparent;   /* Actual dropdown arrow color is dark gray */
+  border-color:#8a8a8a transparent transparent transparent;   /* Actual dropdown arrow color is dark gray */
 }
 
 
 /* -- This is the actual dropdown menu on the login page -- */
 form.custom div.custom.dropdown ul{
-	border:solid 1px #999;  /* Dropdown menu border color to match theme page */
+  border:solid 1px #999;  /* Dropdown menu border color to match theme page */
 }
 
 /* --  Dropdown item list -- */
 form.custom div.custom.dropdown ul li{
-	font-size:12px;	 /* Dropdown menu items font size */
-	color:#999;  /* Dropdown menu items font color olor to match theme page */	
+  font-size:12px;  /* Dropdown menu items font size */
+  color:#999;  /* Dropdown menu items font color olor to match theme page */
 }
 
 form.custom div.custom.dropdown ul li.selected{
-	color:#808080;  /* Darker gray font color when language is selected within the dropdown menu */
+  color:#808080;  /* Darker gray font color when language is selected within the dropdown menu */
 }
 
 form.custom div.custom.dropdown ul li:hover{
-	color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
+  color:#808080;  /* Darker gray font color on dropdown menu items when mouse over */
 
 }
 
 form.custom div.custom.dropdown ul li.selected:hover{
-	color:#808080;  /* Darker gray font color on menu item already selected when mouse over */
+  color:#808080;  /* Darker gray font color on menu item already selected when mouse over */
 }
 
 /* The following segment is to standardize the dropdown box menu across all browsers */
 form.custom div.custom.dropdown ul li.selected:after{
-	content:"";
+  content:"";
 }
 
 form.custom div.custom.dropdown ul li:hover:after{
-	content:"";
+  content:"";
 }
 
 /* -- End of overwriting and reconfiguring -- */
@@ -251,27 +251,27 @@ form.custom div.custom.dropdown ul li:hover:after{
 
 
 .disclaimer > * {
-	color: #aaa;
-	font-size: 12px;
+  color: #aaa;
+  font-size: 12px;
 }
 
-.compass-error span.prefix, 
-.compass-error input, 
+.compass-error span.prefix,
+.compass-error input,
 .compass-error input:focus {
-	border: 1px solid #c60f13;
+  border: 1px solid #c60f13;
 }
 
 .compass-error span.prefix {
-	border-width: 2px 0 0 2px;
+  border-width: 2px 0 0 2px;
 }
 
-.compass-error input, 
+.compass-error input,
 .compass-error input:focus {
-	border-width: 2px 2px 0 0;
+  border-width: 2px 2px 0 0;
 }
 
 small.compass-error {
-	clear: both;
+  clear: both;
   display: block;
   padding: 6px 4px;
   background: #c60f13;
@@ -288,9 +288,9 @@ small.compass-error {
 }
 
 small.compass-error.twelve {
-	margin: 0 0 0 2px;
-	padding: 10px;
-	width: 99.5%;
+  margin: 0 0 0 2px;
+  padding: 10px;
+  width: 99.5%;
 }
 
 input[type="text"].compass-error,
@@ -330,87 +330,87 @@ textarea.compass-error:focus {
 }
 
 /*
-.login-content .error input, 
-.login-content input.error, 
-.login-content .error textarea, 
-.login-content textarea.error, 
-.login-content .error input:focus, 
-.login-content input.error:focus, 
-.login-content .error textarea:focus, 
+.login-content .error input,
+.login-content input.error,
+.login-content .error textarea,
+.login-content textarea.error,
+.login-content .error input:focus,
+.login-content input.error:focus,
+.login-content .error textarea:focus,
 .login-content textarea.error:focus {
-	border-color: #ccc;
+  border-color: #ccc;
 }
 
-.error small, 
+.error small,
 small.error {
-	margin-top: 0;
+  margin-top: 0;
 }*/
 
 /******BUTTONS*******/
 
 .button-gallery {
-	padding: 20px;
+  padding: 20px;
 }
 
 .button.radius.primary {
-	background: #2f94ce
+  background: #2f94ce
 }
 
 .button.radius.primary:hover {
-	background: #1a7eb7;
+  background: #1a7eb7;
 }
 
 .button.radius.secondary {
-	background: #dddddd;
-	border:1px solid #aaaaaa;
+  background: #dddddd;
+  border:1px solid #aaaaaa;
 }
 
 .button.radius.secondary:hover {
-	background: #cccccc;
+  background: #cccccc;
 }
 
 .button.radius.success {
-	background: #59a02e;
-	border:1px solid #347c09;
+  background: #59a02e;
+  border:1px solid #347c09;
 }
 
 .button.radius.success:hover {
-	background: #47891f;
+  background: #47891f;
 }
 
 .button.radius.alert {
-	background: #e72828;
-	border:1px solid #ab0404;
+  background: #e72828;
+  border:1px solid #ab0404;
 }
 
 .button.radius.alert:hover {
-	background: #d12525;
+  background: #d12525;
 }
 
 @media only screen and (max-width: 767px) {
 
-	.column, .columns {
-		float: left !important;
-	}
+  .column, .columns {
+    float: left !important;
+  }
 
-	.login-top, 
-	.login-company-name, 
-	.login-header, 
-	.login-content, 
-	.login-info, 
-	.login-footer {
-		margin: 0 auto;
-		width: auto;
-	}
+  .login-top,
+  .login-company-name,
+  .login-header,
+  .login-content,
+  .login-info,
+  .login-footer {
+    margin: 0 auto;
+    width: auto;
+  }
 
-	.login-row {
-		margin: 0 auto;
-	    padding: 0;
-	    width: 280px;
-	}
+  .login-row {
+    margin: 0 auto;
+      padding: 0;
+      width: 280px;
+  }
 
-	.login-ten {
-	    width: 227px !important;
-	}
+  .login-ten {
+      width: 227px !important;
+  }
 
 }
