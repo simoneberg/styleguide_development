@@ -79,21 +79,26 @@ $(document).ready(function(){
   function open_close(ev) {
     ev.preventDefault();
     var panelClasses = [".panel-content",".panel-content-container-dashboard",".panel-content-container-full"];
-
     var hasSelector = $.map(panelClasses,function(c){return "div:has(" + c + ")"}).join(",");
 
     current_panel = $(this).closest(hasSelector).children(panelClasses.join(",") + ', .panel-footer');
     panel_summary = $(this).parents('.panel-wrapper').find('.panel-summary');
+    panel_pagination = $(current_panel).parents('.panel-wrapper').next('.multi-panel-pagination');
 
     if ($(current_panel).is(':hidden')) {
+
 	  $(this).html('&#xf0de;').removeClass('panel-header-icons-collapse-down');
       panel_summary.addClass("display-none");
+      panel_pagination.removeClass("display-none");
+	  
     } else {
+		
 	  $(this).html('&#xf0dd;').addClass('panel-header-icons-collapse-down');
       panel_summary.removeClass("display-none");
+      panel_pagination.addClass("display-none");
+
     }
     current_panel.slideToggle();
-
   };
 
   // Assign Direct Participants Relationship
@@ -403,8 +408,29 @@ $(document).ready(function(){
 
 });
 
+/* File upload button stores the file name in data-stored-file */
+$('.file-upload-btn .fileupload_btn_label').on('click', function(ev) {
+  ev.preventDefault();
+
+  $(this).next().change(function(ev){
+    ev.preventDefault();
+    var file_name = $(this).val();
+	if ( file_name != '' && file_name != null ) {
+      $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val(file_name);
+      $(this).parents('.form-group.file-upload-control').find('.file-upload-text-same-line .file-upload-text-links').css('display','inline-block');
+      file_name = null;
+	}
+  });
+});
+
+/* File Upload Delete Link clears the file name stored in data-stored-file */
+$('a.file-upload-text-links').on('click', function(ev) {
+  ev.preventDefault();
+  $(this).css('display','none');
+  $(this).parents('.form-group.file-upload-control').find('.form-group.file-upload-btn .fileupload_btn_label[data-stored-file-name]').val('');
+});
+
 /* Closes the Advanced Search Panel */
- 
 function close_advanced_search_panel() {
 
   var advanced_panel = $('#advanced_search');
