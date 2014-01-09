@@ -877,8 +877,6 @@ h4 {
   width: 200px !important;
 }
 
-
-
 /* chevron navigation */
 
 
@@ -963,6 +961,7 @@ h4 {
   line-height: 1;
   padding: 5px 10px 7px 9px;
 }
+
 /* inline ul */
 /****************/
 
@@ -1990,7 +1989,7 @@ ul.flyout li a, .nav-bar li ul li a:hover {
 .file-upload-control .file-upload-options {
   clear:both;
 }
-				
+
 .file-upload-btn {
   padding-left: 0px !important;
   max-width: 246px;
@@ -3760,6 +3759,7 @@ form.custom .competence-level-item .cl-icon-x,
   border-top: 1px solid #8a8a8a;
   border-bottom: 1px solid #8a8a8a;
 }
+
 .trademark {
   margin-top: 13px;
   margin-right: auto;
@@ -3771,7 +3771,6 @@ form.custom .competence-level-item .cl-icon-x,
   font-size: 11px;
   margin-bottom: 5px;
 }
-
 
 /* chevron footer */
 .chevron-footer {
@@ -5010,7 +5009,6 @@ ul.inline-list.forecast-status-list > li > *{
 .background .day-column {
   width: 14.285714%;
 }
-/* grrrr update my file assembla */
 
 .day-grid .day-column-1 {
   width: 14.285714%;
@@ -5431,7 +5429,7 @@ ul.milestones > li[class^="offset-week"] {
 .calendar-grid .background .vertical,
 .calendar-grid .background .month-column,
 .calendar-grid .background .week-column,
-.calendar-grid .background .day-column{
+.calendar-grid .background .day-column {
   position: relative;
   height: 100%;
   min-height: 100%;
@@ -6269,7 +6267,8 @@ h4 .header-link {
   }
 
   #chevron.top-bar ul>li.has-dropdown a:after {
-  border-color: #000 transparent transparent transparent;
+    border-color: #000 transparent transparent transparent;
+  }
   .save-template-btn {
     float: right;
     width: 100%;
@@ -6286,8 +6285,6 @@ h4 .header-link {
     padding-left: 8px;
     padding-right: 8px;
   }
-
-}
 
 }
 
@@ -6492,9 +6489,11 @@ h4 .header-link {
     position: relative;
     top: 3px;
   }
+
   #chevron.top-bar {
     height: 44px;
   }
+
   #chevron.top-bar .logo {
     height: 36px;
     width: 160px;
@@ -6506,14 +6505,6 @@ h4 .header-link {
     position: relative;
   }
 
-  .master-wrapper {
-    position: relative;
-    left: 0px;
-    overflow: initial;
-    transition: left 0.5s;
-  }
-
-  .modal-header {
   #chevron.top-bar .profile-container {
     display:none;
   }
@@ -6528,7 +6519,14 @@ h4 .header-link {
     float: right;
   }
 
-  .modal-header{
+  .master-wrapper {
+    position: relative;
+    left: 0px;
+    overflow: initial;
+    transition: left 0.5s;
+  }
+
+  .modal-header {
     width: 100%;
     margin-left: 0;
   }
@@ -6758,7 +6756,7 @@ h4 .header-link {
   .columns.right-split-container {
     padding-bottom: 0px;
   }
-  
+
   form.custom .one.columns .control-with-trailing-icon,
   form.custom .two.columns .control-with-trailing-icon,
   form.custom .three.columns .control-with-trailing-icon,
@@ -7559,7 +7557,6 @@ body
     margin-bottom: 10px;
     display:block;
   }
-  }
   
   .header-inline .save-template-btn {
     margin-top: 0;
@@ -7570,6 +7567,8 @@ body
     padding-bottom: 8px;
     margin-top: 0;
     display: block;
+  }
+
   .chevron-footer-links li {
     display: block;
   }
