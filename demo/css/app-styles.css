@@ -3262,16 +3262,16 @@ a.sorting-block:hover .add-sorting-icon {
 #document_details_edit_area {
   padding: 8px;
 }
-
+/*
 .document-pre-label {
   width: 10%;
   min-width: 42px;
   max-width: 60px;
 }
-
+*/
 .document-label-input {
-  width: 50%;
-  max-width: 300px;
+  width: 90%;
+  max-width: 300px; 
 }
 
 /* TODO: is this intended? */
