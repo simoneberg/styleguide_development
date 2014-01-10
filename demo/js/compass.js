@@ -668,6 +668,7 @@ $(function() {
     ev.preventDefault();
     if (! $("body").hasClass("open")) {
       $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+      $(".master-wrapper").removeClass("collapsed");
     }
     $("body").toggleClass("open");
   })
@@ -681,12 +682,12 @@ $(function() {
 
   if (wrapper.hasClass("collapsed")) {
     $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow right
-    $("body").toggleClass("open");
+    $("body").removeClass("open");
     return;
-  } $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+  }
 
-  $("body").toggleClass("open");
-
+  $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+  $("body").removeClass("open");
   $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
 
   })
