@@ -666,21 +666,26 @@ $(function() {
 
   $(".toggle-nav-mobile").on("click", function(ev){
     ev.preventDefault();
+    if (! $("body").hasClass("open")) {
+      $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+    }
     $("body").toggleClass("open");
   })
 
   $(".collapse-menu").on("click", function(ev){
   ev.preventDefault();
   var wrapper = $(".master-wrapper")
-  
+
   wrapper.toggleClass("collapsed");
   close_advanced_search_panel();
 
   if (wrapper.hasClass("collapsed")) {
-      $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow left
+    $(".collapse-menu .icon-").html("&#xf0a9;"); // text for arrow right
+    $("body").toggleClass("open");
     return;
-  }
-    $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+  } $(".collapse-menu .icon-").html("&#xf0a8;"); // text for arrow left
+
+  $("body").toggleClass("open");
 
   $(this).hasClass("icon-search") && $(".search-input :input:first").focus();
 
