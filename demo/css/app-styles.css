@@ -3785,7 +3785,9 @@ label.compass-error {
   font-weight: bold !important;
 }
 
-small.compass-error {
+small.compass-error,
+small.compass-error div,
+small.compass-error ul li {
   display: block;
   padding: 6px 4px;
   margin-top: 0;
@@ -3801,6 +3803,10 @@ small.compass-error {
   -moz-border-radius-bottomright: 2px;
   -webkit-border-bottom-right-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+small.compass-error ul {
+  margin-bottom: 0;
 }
 
 small.compass-error.control-with-trailing-icon {

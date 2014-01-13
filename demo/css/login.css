@@ -269,7 +269,9 @@ form.custom div.custom.dropdown ul li:hover:after{
   border-width: 2px 2px 0 0;
 }
 
-small.compass-error {
+small.compass-error,
+small.compass-error div,
+small.compass-error ul li {
   clear: both;
   display: block;
   padding: 6px 4px;
@@ -284,6 +286,10 @@ small.compass-error {
   -moz-border-radius-bottomright: 2px;
   -webkit-border-bottom-right-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+small.compass-error ul {
+  margin-bottom: 0;
 }
 
 small.compass-error.twelve {
