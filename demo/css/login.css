@@ -392,7 +392,7 @@ small.error {
   background: #d12525;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 
   .column, .columns {
     float: left !important;
@@ -410,8 +410,12 @@ small.error {
 
   .login-row {
     margin: 0 auto;
-      padding: 0;
-      width: 280px;
+    padding: 0;
+    width: 280px;
+  }
+
+  .login-two {
+    width: 52px !important;
   }
 
   .login-ten {
