@@ -5669,6 +5669,15 @@ ul.activity-code-list li {
   box-shadow: 1px 1px 4px #999999; 
 }
 
+.skillbox-percentage {
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px #999999;
+  box-shadow: 1px 1px 4px #999999; 
+  width: 100%;
+  overflow: hidden;
+}
+
 .skill-container{
   border: 1px solid #a1a1a1; 
   padding-top:10px; 
@@ -5710,7 +5719,6 @@ ul.activity-code-list li {
   float:left;
 }
 
-
 .skillgroupstatus-text-inline {
   margin-top: 5px;
   margin-left: 45px;
@@ -5722,8 +5730,6 @@ ul.activity-code-list li {
   position: relative;
   float: left;
 }
-
-
 
 .skill-legend {
   min-width: 200px !important;
@@ -5763,6 +5769,16 @@ ul.activity-code-list li {
 
 .status-progress{
   background-color: #FFEB00;
+}
+
+.percent-skill-description { 
+  float: left; 
+  height: 30px;
+}
+
+.percent-skill { 
+  float: left; 
+  height: 20px;
 }
 
 /* affects only accordion sub items */
