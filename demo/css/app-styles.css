@@ -265,6 +265,14 @@ ul.pagination li.current a {
   width: 80%;
 }
 
+.assessment-text {
+  line-height=16px;
+}
+
+.assessment-text label.assessment-text {
+  margin-top 8px;
+}
+
 .columns.right-split-container {
   padding: 0 0 410px;
   border-left: 1px solid #717171;
