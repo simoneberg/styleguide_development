@@ -265,6 +265,14 @@ ul.pagination li.current a {
   width: 80%;
 }
 
+.assessment-text {
+  line-height=16px;
+}
+
+.assessment-text label.assessment-text {
+  margin-top 8px;
+}
+
 .columns.right-split-container {
   padding: 0 0 410px;
   border-left: 1px solid #717171;
@@ -2190,6 +2198,22 @@ form.custom .twelve.columns .control-with-leading-status {
   width: 86% !important;
 }
 
+form.custom .one.columns .control-with-leading-status.in-grid,
+form.custom .two.columns .control-with-leading-status.in-grid,
+form.custom .three.columns .control-with-leading-status.in-grid {
+  width: 100% !important;
+}
+form.custom .four.columns .control-with-leading-status.in-grid,
+form.custom .five.columns .control-with-leading-status.in-grid,
+form.custom .six.columns .control-with-leading-status.in-grid,
+form.custom .seven.columns .control-with-leading-status.in-grid,
+form.custom .eight.columns .control-with-leading-status.in-grid,
+form.custom .nine.columns .control-with-leading-status.in-grid,
+form.custom .ten.columns .control-with-leading-status.in-grid,
+form.custom .eleven.columns .control-with-leading-status.in-grid,
+form.custom .twelve.columns .control-with-leading-status.in-grid {
+  width: 75% !important;
+}
 
 form.custom table.with-inputs .control-with-trailing-icon {
   width: 85%;
@@ -6133,6 +6157,22 @@ h4 .header-link {
     width: 95% !important;
   }
 
+  form.custom .one.columns .control-with-leading-status.in-grid,
+  form.custom .two.columns .control-with-leading-status.in-grid,
+  form.custom .three.columns .control-with-leading-status.in-grid {
+    width: 100% !important;
+  }
+  form.custom .four.columns .control-with-leading-status.in-grid,
+  form.custom .five.columns .control-with-leading-status.in-grid,
+  form.custom .six.columns .control-with-leading-status.in-grid,
+  form.custom .seven.columns .control-with-leading-status.in-grid,
+  form.custom .eight.columns .control-with-leading-status.in-grid,
+  form.custom .nine.columns .control-with-leading-status.in-grid,
+  form.custom .ten.columns .control-with-leading-status.in-grid,
+  form.custom .eleven.columns .control-with-leading-status.in-grid,
+  form.custom .twelve.columns .control-with-leading-status.in-grid {
+    width: 70% !important;
+  }
 }
 
 /* landscape Andriod tablet ~10 inch tablet */
@@ -6263,6 +6303,22 @@ h4 .header-link {
     padding-right: 8px;
   }
 
+  form.custom .one.columns .control-with-leading-status.in-grid,
+  form.custom .two.columns .control-with-leading-status.in-grid,
+  form.custom .three.columns .control-with-leading-status.in-grid,
+  form.custom .four.columns .control-with-leading-status.in-grid,
+  form.custom .five.columns .control-with-leading-status.in-grid,
+  form.custom .six.columns .control-with-leading-status.in-grid,
+  form.custom .seven.columns .control-with-leading-status.in-grid,
+  form.custom .eight.columns .control-with-leading-status.in-grid,
+  form.custom .nine.columns .control-with-leading-status.in-grid {
+    width: 100% !important;
+  }
+  form.custom .ten.columns .control-with-leading-status.in-grid,
+  form.custom .eleven.columns .control-with-leading-status.in-grid,
+  form.custom .twelve.columns .control-with-leading-status.in-grid {
+    width: 65% !important;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 855px) {
@@ -6747,6 +6803,21 @@ h4 .header-link {
   form.custom .eleven.columns .control-with-trailing-icon,
   form.custom .twelve.columns .control-with-trailing-icon {
     width: 93% !important;
+  }
+
+  form.custom .one.columns .control-with-leading-status.in-grid,
+  form.custom .two.columns .control-with-leading-status.in-grid,
+  form.custom .three.columns .control-with-leading-status.in-grid,
+  form.custom .four.columns .control-with-leading-status.in-grid,
+  form.custom .five.columns .control-with-leading-status.in-grid,
+  form.custom .six.columns .control-with-leading-status.in-grid,
+  form.custom .seven.columns .control-with-leading-status.in-grid,
+  form.custom .eight.columns .control-with-leading-status.in-grid,
+  form.custom .nine.columns .control-with-leading-status.in-grid
+  form.custom .ten.columns .control-with-leading-status.in-grid,
+  form.custom .eleven.columns .control-with-leading-status.in-grid,
+  form.custom .twelve.columns .control-with-leading-status.in-grid {
+    width: 95% !important;
   }
 
   .calendar-grid {
