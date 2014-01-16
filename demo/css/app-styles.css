@@ -5724,11 +5724,32 @@ ul.activity-code-list li {
   padding: 0px 5px 10px 10px;
 
 }
+
 .skill-description-duration{
   margin-top:-15px;
   margin-right:-25px;
   font-size:30px;
 }
+
+.skill-description-box-indicator {
+  border: 1px solid #a1a1a1;
+  padding: 1px 1px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px #999999;
+  box-shadow: 1px 1px 4px #999999;
+}
+
+.skill-description-box-indicator-large {
+  height: 25px;
+  float: left;
+}
+
+.skill-description-box-indicator-small {
+  height: 15px;
+  float: left;
+}
+
 .skillgroupstatus {
   border: 1px solid #a1a1a1;
   border-radius: 5px;
