@@ -1142,6 +1142,9 @@ ul.accordion>li a:hover {
 ul.accordion>li .content {
   padding: 10px 0 10px 15px;
   border-bottom: 1px solid #919191;
+  max-height: 420px;
+  overflow-y: auto;
+  position: relative;
 }
 
 ul.accordion>li.active .title {
@@ -5818,13 +5821,6 @@ ul.activity-code-list li {
 .percent-skill { 
   float: left; 
   height: 20px;
-}
-
-/* affects only accordion sub items */
-.skillstatus {
-max-height: 420px;
-overflow-y: scroll;
-position: relative;
 }
 
 .skillstatus li:before, .skillstatus li:after  {
